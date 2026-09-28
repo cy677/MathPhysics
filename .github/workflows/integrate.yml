@@ -15,7 +15,7 @@ permissions:
   contents: write
 concurrency:
   group: mathphysics-integrate
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   integrate:
     if: ${{ !contains(github.event.head_commit.message, '[assets]') }}
@@ -35,6 +35,13 @@ jobs:
         run: python scripts/import_upstream.py
       - name: Check inventory and local links
         run: node --test tests/catalog.test.mjs
+      - name: Prepare full snapshot for reproducible diagnostics
+        run: python scripts/package.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MathPhysics-unverified-snapshot
+          path: dist/MathPhysics-offline.zip
+          retention-days: 7
       - name: Install browser test dependency
         run: npm install --ignore-scripts && npx playwright install --with-deps chromium
       - name: Browser smoke tests
@@ -54,7 +61,7 @@ jobs:
             git commit -m 'build: vendor complete licensed activities and verify inventory [assets]'
             git push origin HEAD:main
           fi
-      - name: Build offline distribution
+      - name: Build verified offline distribution
         run: python scripts/package.py
       - uses: actions/upload-artifact@v4
         if: always()
