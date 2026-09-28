@@ -22,7 +22,17 @@ jobs:
         with:
           python-version: '3.12'
       - name: Verify and install reviewed source snapshot
-        run: python .github/classroom-install/install.py
+        run: |
+          python .github/classroom-install/install.py
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('tests/classroom-browser.py')
+          source = path.read_text()
+          before = "str(OUT/'host-'+id+'.png')"
+          after = "str(OUT/('host-'+id+'.png'))"
+          assert source.count(before) == 1
+          path.write_text(source.replace(before, after))
+          PY
       - name: Test mathematics, inventory, licensing and settings migration
         run: |
           npm install --ignore-scripts
