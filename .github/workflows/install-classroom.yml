@@ -26,12 +26,25 @@ jobs:
           python .github/classroom-install/install.py
           python - <<'PY'
           from pathlib import Path
-          path = Path('tests/classroom-browser.py')
-          source = path.read_text()
-          before = "str(OUT/'host-'+id+'.png')"
-          after = "str(OUT/('host-'+id+'.png'))"
-          assert source.count(before) == 1
-          path.write_text(source.replace(before, after))
+          patches = {
+            'tests/classroom-browser.py': [
+              ("str(OUT/'host-'+id+'.png')", "str(OUT/('host-'+id+'.png'))"),
+              ("elif id=='geometry-proofs':page.frame_locator('iframe').locator('.back-home').click()", "elif id=='geometry-proofs':page.frame_locator('iframe').locator('#back-home').click()"),
+              ("     assert page.locator('iframe').count()==0", "     page.wait_for_selector('iframe',state='detached');assert page.locator('iframe').count()==0")
+            ],
+            'lessons/geometric-proofs/app.js': [
+              ("if(window.parent!==window||location.protocol==='file:')el('back-home').hidden=true;", "if(window.parent===window&&location.protocol==='file:')el('back-home').hidden=true;"),
+              ("const homeLink=document.querySelector('.back-home');", "const homeLink=el('back-home');"),
+              ("。数值核对不代替一般证明。", "。试着改变一个条件，再算一算。")
+            ]
+          }
+          for name, replacements in patches.items():
+            path = Path(name)
+            source = path.read_text()
+            for before, after in replacements:
+              assert source.count(before) == 1, (name, before)
+              source = source.replace(before, after)
+            path.write_text(source)
           PY
       - name: Test mathematics, inventory, licensing and settings migration
         run: |
