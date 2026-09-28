@@ -2,10 +2,28 @@
   "schemaVersion": 1,
   "title": "科学小岛",
   "openIds": [
+    "jsxgraph-playground",
+    "tangram-flat",
+    "matter-slingshot",
+    "spaceflight",
+    "geometry-proofs",
+    "matter-bridge",
+    "matter-car",
+    "matter-newtonsCradle",
+    "matter-catapult",
+    "matter-friction",
+    "matter-restitution",
+    "matter-ballPool",
+    "matter-pyramid",
+    "matter-cloth",
+    "matter-chains",
+    "matter-constraints",
+    "matter-stack",
+    "matter-gravity",
     "area-builder",
     "forces-and-motion-basics",
-    "vector-addition",
-    "geometry-proofs"
+    "energy-skate-park-basics",
+    "vector-addition"
   ],
-  "note": "仅控制活动入口，不删除任何内容，不限制PhET原版内部页面与关卡。年级是推荐筛选而非访问权限。"
+  "revision": "2026-09-v04"
 }

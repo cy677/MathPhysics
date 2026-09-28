@@ -31,10 +31,10 @@ try{
   await fs.mkdir('docs/screenshots',{recursive:true});
   let page=await context.newPage();const hostErrors=[];page.on('pageerror',e=>hostErrors.push(e.message));
   try{
-    await page.goto(base);await page.waitForSelector('[data-activity]');assert.equal(await page.locator('[data-activity]').count(),inventory.activities.length);
+    await page.goto(base);await page.waitForSelector('[data-activity]');await page.locator('#only-open').uncheck();assert.equal(await page.locator('[data-activity]').count(),inventory.activities.length);
     await page.screenshot({path:'docs/screenshots/home-desktop.png',fullPage:true});
     await page.screenshot({path:'docs/screenshots/home-overview.png'});
-    await page.locator('#teacher-open').click();await page.locator('#open-all').click();await page.locator('[data-close="teacher-dialog"]').click();await page.reload();await page.waitForSelector('[data-activity]');assert.equal(await page.locator('button.locked').count(),0);
+    await page.locator('#teacher-open').click();await page.locator('#open-all').click();await page.locator('[data-close="teacher-dialog"]').click();await page.reload();await page.waitForSelector('[data-activity]');await page.locator('#only-open').uncheck();assert.equal(await page.locator('button.locked').count(),0);
     await page.locator('[data-launch="area-builder"]').click();await page.waitForFunction(()=>document.getElementById('loading').hidden,null,{timeout:65000});
     await page.screenshot({path:'docs/screenshots/host-area-builder.png'});
     await page.locator('#player-back').click();assert.equal(await page.locator('iframe').count(),0);
@@ -58,7 +58,7 @@ try{
   const touch=await browser.newContext({viewport:{width:1024,height:768},hasTouch:true,isMobile:true});
   await touch.route('**/*',route=>new URL(route.request().url()).origin===new URL(base).origin?route.continue():route.abort());page=await touch.newPage();
   try{
-    await page.goto(base);await page.waitForSelector('[data-activity]');await page.locator('[data-zone="geometry"]').first().tap();assert.ok(await page.locator('[data-activity="area-builder"]').isVisible());
+    await page.goto(base);await page.waitForSelector('[data-activity]');await page.locator('#only-open').uncheck();await page.locator('[data-zone="geometry"]').first().tap();assert.ok(await page.locator('[data-activity="area-builder"]').isVisible());
     await page.screenshot({path:'docs/screenshots/tablet.png',fullPage:true});record({id:'tablet-host-navigation',passed:true});
   }catch(e){await captureFailure(page,'tablet-host-navigation',e);}
   await touch.close();

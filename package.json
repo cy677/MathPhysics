@@ -1,1 +1,25 @@
-{"name":"mathphysics-science-island","version":"0.2.0","private":true,"type":"module","description":"Complete upstream activities and original visual geometry proofs for elementary math and physics","license":"MIT","scripts":{"start":"python3 scripts/serve.py","import":"python3 scripts/import_upstream.py","test":"node --test tests/*.test.mjs","test:browser":"node tests/smoke.mjs","test:geometry":"node --test tests/geometry.test.mjs","package":"python3 scripts/package.py","standalone:geometry":"python3 scripts/build_geometry_standalone.py"},"devDependencies":{"playwright":"1.56.0"}}
+{
+  "name": "mathphysics-science-island",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Interactive primary-school geometry, physics and spaceflight classroom",
+  "license": "MIT",
+  "scripts": {
+    "start": "python3 scripts/serve.py",
+    "import": "python3 scripts/import_upstream.py",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/smoke.mjs",
+    "test:geometry": "node --test tests/geometry.test.mjs",
+    "package": "python3 scripts/package.py",
+    "standalone:geometry": "python3 scripts/build_geometry_standalone.py",
+    "test:spaceflight": "python3 tests/spaceflight-browser.py",
+    "build:spaceflight": "python3 scripts/build_spaceflight_standalone.py",
+    "build:playground": "python3 scripts/build_playground_standalone.py",
+    "test:classroom": "python3 tests/classroom-browser.py",
+    "test:classroom:inline": "python3 tests/classroom-browser.py --inline"
+  },
+  "devDependencies": {
+    "playwright": "1.56.0"
+  }
+}

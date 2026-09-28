@@ -20,8 +20,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Scope: This license covers the newly authored MathPhysics host, adapters,
-scripts and documentation only. Files under vendor/ and upstream content
+Scope: This license covers the newly authored MathPhysics host, MIT-designated
+lessons, scripts and documentation only. The GPL-derived flat Tangram adapter
+in lessons/tangram-flat/ is GPL-3.0, not MIT. Files under vendor/ and upstream content
 retain their own licenses. It does NOT relicense PhET HTML simulations,
 GPL source code, third-party code, images, logos, audio or other assets.
 See THIRD_PARTY_NOTICES.md and the preserved upstream notices.

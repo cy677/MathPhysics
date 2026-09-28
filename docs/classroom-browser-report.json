@@ -1,0 +1,329 @@
+{
+  "suite": "v0.4 actual HTTP, all activities, interactions and file:// bundles",
+  "results": [
+    {
+      "id": "host-library-and-five-adapters",
+      "passed": true,
+      "defaultEntries": 22,
+      "nonPhET": 18,
+      "allEntries": 57
+    },
+    {
+      "id": "legacy-migration-custom-empty-and-persistence",
+      "passed": true
+    },
+    {
+      "id": "activity-area-builder",
+      "passed": true
+    },
+    {
+      "id": "activity-forces-and-motion-basics",
+      "passed": true
+    },
+    {
+      "id": "activity-energy-skate-park-basics",
+      "passed": true
+    },
+    {
+      "id": "activity-vector-addition",
+      "passed": true
+    },
+    {
+      "id": "activity-tangram",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-airFriction",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-avalanche",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-ballPool",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-bridge",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-car",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-catapult",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-chains",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-circleStack",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-cloth",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-collisionFiltering",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-compositeManipulation",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-compound",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-compoundStack",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-concave",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-constraints",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-doublePendulum",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-events",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-friction",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-gravity",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-gyro",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-manipulation",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-mixed",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-newtonsCradle",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-ragdoll",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-pyramid",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-raycasting",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-restitution",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-rounded",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-remove",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-renderResize",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-sensors",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-sleeping",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-slingshot",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-softBody",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-sprites",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-stack",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-staticFriction",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-stats",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-stress",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-stress2",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-stress3",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-stress4",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-substep",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-svg",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-terrain",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-timescale",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-views",
+      "passed": true
+    },
+    {
+      "id": "activity-matter-wreckingBall",
+      "passed": true
+    },
+    {
+      "id": "activity-geometry-proofs",
+      "passed": true
+    },
+    {
+      "id": "activity-spaceflight",
+      "passed": true
+    },
+    {
+      "id": "activity-jsxgraph-playground",
+      "passed": true
+    },
+    {
+      "id": "activity-tangram-flat",
+      "passed": true
+    },
+    {
+      "id": "geometry-triangle",
+      "passed": true,
+      "pointerDrag": true,
+      "keyboardAlternative": true,
+      "challengeCheck": true
+    },
+    {
+      "id": "geometry-mirror",
+      "passed": true,
+      "pointerDrag": true,
+      "keyboardAlternative": true,
+      "challengeCheck": true
+    },
+    {
+      "id": "geometry-rotate",
+      "passed": true,
+      "pointerDrag": true,
+      "keyboardAlternative": true,
+      "challengeCheck": true
+    },
+    {
+      "id": "geometry-scale",
+      "passed": true,
+      "pointerDrag": true,
+      "keyboardAlternative": true,
+      "challengeCheck": true
+    },
+    {
+      "id": "geometry-vectors",
+      "passed": true,
+      "pointerDrag": true,
+      "keyboardAlternative": true,
+      "challengeCheck": true
+    },
+    {
+      "id": "geometry-linear",
+      "passed": true,
+      "pointerDrag": true,
+      "keyboardAlternative": true,
+      "challengeCheck": true
+    },
+    {
+      "id": "tangram-square",
+      "passed": true
+    },
+    {
+      "id": "tangram-creative",
+      "passed": true
+    },
+    {
+      "id": "layout-1024",
+      "passed": true
+    },
+    {
+      "id": "layout-390",
+      "passed": true
+    },
+    {
+      "id": "file-MathPhysics-Playground.html",
+      "passed": true
+    },
+    {
+      "id": "file-MathPhysics-Tangram.html",
+      "passed": true
+    },
+    {
+      "id": "file-MathPhysics-Geometry-Proofs.html",
+      "passed": true
+    },
+    {
+      "id": "file-MathPhysics-Spaceflight.html",
+      "passed": true
+    },
+    {
+      "id": "touch-navigation-and-point-move",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Touch emulation is not a physical iPad Safari test.",
+    "Smoke tests verify execution, not every randomized upstream challenge."
+  ],
+  "total": 74,
+  "passed": true,
+  "blockedExternalRequestCount": 17
+}

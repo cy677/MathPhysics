@@ -79,8 +79,8 @@ test('numeric answers accept two decimals/fractions and reject malformed or infi
  assert.equal(checkAnswer('1/2',.5),true);assert.equal(checkAnswer('3.14',Math.PI),true);assert.equal(checkAnswer('3.1',Math.PI),false);
 });
 test('new local catalog is separate from upstream, bundled, and marked original MIT',()=>{
- const local=JSON.parse(fs.readFileSync('config/local-activities.json','utf8'));assert.equal(local.activities.length,1);
- const a=local.activities[0];assert.equal(a.id,'geometry-proofs');assert.equal(a.lessonCount,LESSONS.length);assert.equal(a.completeUpstream,false);assert.equal(a.origin,'original');assert.ok(fs.existsSync(a.entry));
+ const local=JSON.parse(fs.readFileSync('config/local-activities.json','utf8'));assert.equal(local.activities.filter(a=>a.id==='geometry-proofs').length,1);
+ const a=local.activities.find(a=>a.id==='geometry-proofs');assert.equal(a.id,'geometry-proofs');assert.equal(a.lessonCount,LESSONS.length);assert.equal(a.completeUpstream,false);assert.equal(a.origin,'original');assert.ok(fs.existsSync(a.entry));
  const upstream=JSON.parse(fs.readFileSync('config/inventory.json','utf8'));assert.equal(upstream.activities.length,53);assert.ok(upstream.activities.some(a=>a.id==='vector-addition'));
  assert.ok(fs.readFileSync('scripts/package.py','utf8').includes("'lessons'"));
 });

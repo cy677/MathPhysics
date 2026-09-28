@@ -33,12 +33,28 @@ Simulation by PhET Interactive Simulations, University of Colorado Boulder, lice
 
 DennisWeiss/linear-transform-visualizer：未发现明确仓库许可证，暂不复制其代码与资源。本版向量内容由完整 Vector Addition 覆盖，不假装已整合未授权项目。
 
-Phaser、JSXGraph：此前列为可能使用的开发框架，不是选定的课程关卡库。本版仅做统一入口整合，没有引入它们及其所有技术示例。
+Phaser：备选游戏框架，本版未引入。JSXGraph 已在 v0.4 引入，见下方说明。
 
 ## 修改边界
 
-新增入口、配置管理、适配器和测试为本项目原创 MIT 代码；上游独立文件继续适用原许可证。iframe 是兼容性隔离，不作为不可信代码的安全沙箱。teacherPreview 是本地展示开关，不是身份鉴别或访问控制系统。
+新增入口、配置管理、MIT 标注的课堂与测试采用 MIT；基于 GPL Tangram 的平面适配器采用 GPL-3.0。上游独立文件继续适用原许可证。iframe 是兼容性隔离，不作为不可信代码的安全沙箱。teacherPreview 是本地展示开关，不是身份鉴别或访问控制系统。
 
 ## v0.2 Original geometry proofs
 
 `lessons/geometric-proofs/` and its single-file build contain original MathPhysics code, SVG constructions and Chinese explanations under the root MIT license. Mathematical references are links, not copied course assets. No Mathigon textbooks source/content (whose package.json is UNLICENSED), or PhET Area Model Algebra code, is included in this module. Existing PhET, Tangram and Matter.js licenses are unchanged. Vector Addition GPL-3.0 source was already included in v0.1.
+
+
+## v0.3 Original spaceflight classroom
+
+`lessons/spaceflight/`, its standalone build, and the new classroom tests contain original MathPhysics code, schematic Canvas drawings, and Chinese teaching text under the root MIT license. Public agency and manufacturer references are linked, not copied wholesale. No external photographs, logos, font files or third-party rocket simulation code are embedded in this new module. Descriptive vehicle and organization names do not imply endorsement. Existing vendored resources keep their own licenses; the full distribution is not relicensed uniformly as MIT.
+
+
+## v0.4 JSXGraph 图形实验与平面七巧板
+
+JSXGraph 1.12.2 来自 https://github.com/jsxgraph/jsxgraph 的 npm 发行包，选择 MIT 许可使用。发行包文件位于 `vendor/jsxgraph/`，完整 MIT 版权和许可见 `vendor/jsxgraph/LICENSE.MIT`。导入校验与每个文件哈希见 `config/libraries-lock.json`。包中的字体文件不分发。
+
+`lessons/jsxgraph-playground/` 是本项目基于 JSXGraph 独立编写的六个中文课堂活动，不是从上游复制的六个现成关卡；本模块原创部分 MIT。单文件版内嵌原库版权头和 MIT 许可。
+
+`lessons/tangram-flat/` 是原 Tangram 几何内核和内置快照的 SVG 适配，整体按 GPL-3.0 分发，完整许可见该目录 LICENSE。原始 `vendor/tangram/` 未改动。方形热身使用原七块的标准分割，创意轮廓使用原内置快照；这不是新增两个上游题库。单文件七巧板版内嵌原内核及 GPL 许可。
+
+界面文字整理不删除法定版权标识。PhET 活动画面及其品牌标识保持可见，播放页保留所需署名。Matter 的 48 个原始示例代码保留，修改的 `demo/mathphysics.html` 是先前由本项目生成的加载器，并非上游示例。

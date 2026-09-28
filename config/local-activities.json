@@ -1,20 +1,128 @@
 {
   "schemaVersion": 1,
-  "activities": [{
-    "id": "geometry-proofs",
-    "title": "看见公式 · 几何证明题集",
-    "zone": "geometry",
-    "kind": "proof",
-    "adapter": "proofs",
-    "grades": [1, 2, 3, 4, 5, 6],
-    "description": "24 个独立编写的互动演示：三角形比例、平方公式、主要图形面积与立体体积。每题含步骤、参数、例题与证明前提。",
-    "content": ["24个演示完整保留", "剪拼与等积变换", "比例与相似", "(a+b)²", "面积与体积", "原理和适用条件"],
-    "entry": "lessons/geometric-proofs/index.html",
-    "source": "https://github.com/cy677/MathPhysics",
-    "license": "MIT (original MathPhysics code and lesson descriptions)",
-    "progressMode": "visit-only",
-    "lessonCount": 24,
-    "completeUpstream": false,
-    "origin": "original"
-  }]
+  "activities": [
+    {
+      "id": "geometry-proofs",
+      "title": "看见公式",
+      "zone": "geometry",
+      "kind": "proof",
+      "adapter": "proofs",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "description": "把图形剪开再拼好，看见面积、比例和体积的秘密。",
+      "content": [
+        "剪拼与等积变换",
+        "比例与相似",
+        "(a+b)²",
+        "面积与体积",
+        "原理和适用条件"
+      ],
+      "entry": "lessons/geometric-proofs/index.html",
+      "source": "https://github.com/cy677/MathPhysics",
+      "license": "MIT (original MathPhysics code and lesson descriptions)",
+      "progressMode": "visit-only",
+      "lessonCount": 24,
+      "completeUpstream": false,
+      "origin": "original",
+      "playHint": "选一道题，拖动滑块改变条件，再播放变换。试着解释每一步。"
+    },
+    {
+      "id": "spaceflight",
+      "title": "从地球出发",
+      "zone": "physics",
+      "kind": "mission",
+      "adapter": "spaceflight",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "description": "发射火箭、接近空间站，再带宇航员安全回家。",
+      "content": [
+        "4条任务路线",
+        "发射、分离、入轨与返回",
+        "近距离对接小游戏",
+        "8个原理实验",
+        "7套飞行器结构图解",
+        "分年级讲解"
+      ],
+      "entry": "lessons/spaceflight/index.html",
+      "source": "https://github.com/cy677/MathPhysics",
+      "license": "MIT (original classroom code and schematic graphics)",
+      "progressMode": "visit-only",
+      "completeUpstream": false,
+      "origin": "original",
+      "routeCount": 4,
+      "stageCount": 62,
+      "labCount": 8,
+      "playHint": "选择一条任务路线。暂停看清每个阶段，也可以到实验室亲手对接。"
+    },
+    {
+      "id": "jsxgraph-playground",
+      "title": "图形会变魔术",
+      "description": "拖动顶点找对称，转动图形，试试让整张网格变形。",
+      "playHint": "拖动彩色圆点。也可以选择一个点，用下方方向按钮移动它。",
+      "zone": "geometry",
+      "kind": "construction",
+      "adapter": "jsxgraph",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content": [
+        "拖动",
+        "变换",
+        "小挑战"
+      ],
+      "entry": "lessons/jsxgraph-playground/index.html",
+      "source": "https://github.com/jsxgraph/jsxgraph",
+      "license": "MIT",
+      "origin": "original-on-open-source",
+      "completeUpstream": false,
+      "progressMode": "visit-only",
+      "lessonCount": 6
+    },
+    {
+      "id": "tangram-flat",
+      "title": "七巧板拼图",
+      "description": "转动七块拼板，拼出方形和小兔轮廓。",
+      "playHint": "先选一块拼板，再拖动或旋转。打开提示，找一找每块拼板的位置。",
+      "zone": "geometry",
+      "kind": "puzzle",
+      "adapter": "tangram-flat",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content": [
+        "拖动",
+        "变换",
+        "小挑战"
+      ],
+      "entry": "lessons/tangram-flat/index.html",
+      "source": "https://github.com/iliagrigorevdev/tangram",
+      "license": "GPL-3.0",
+      "origin": "adapted",
+      "completeUpstream": false,
+      "progressMode": "visit-only",
+      "lessonCount": 2
+    }
+  ]
 }

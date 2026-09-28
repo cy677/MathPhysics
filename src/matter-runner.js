@@ -13,10 +13,11 @@ document.addEventListener('visibilitychange',function(){if(document.hidden)stop(
 window.addEventListener('pagehide',stop);
 async function start(){
   var response=await fetch('../../../config/inventory.json');if(!response.ok)throw Error('Missing complete inventory');
-  var inventory=await response.json();var id=new URLSearchParams(location.search).get('example')||'mixed';
+  var inventory=await response.json();
+  var display=await fetch('../../../config/presentation.json').then(function(r){return r.json();});var id=new URLSearchParams(location.search).get('example')||'mixed';
   var activity=inventory.activities.find(function(a){return a.id==='matter-'+id&&a.adapter==='matter';});
   if(!activity||!/^[A-Za-z0-9]+$/.test(id))throw Error('Unknown example');
-  document.getElementById('title').textContent=activity.title+' · 原版 Matter.js';
+  document.getElementById('title').textContent=display.activities[activity.id]?.title||activity.title;
   await new Promise(function(resolve,reject){var script=document.createElement('script');script.src='../examples/'+id+'.js';script.onload=resolve;script.onerror=function(){reject(Error('Missing example script '+id));};document.body.appendChild(script);});
   if(typeof window.Example?.[id]!=='function')throw Error('Upstream entry not available');
   context=window.Example[id]();window.__mpContext=context;

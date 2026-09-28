@@ -6,6 +6,10 @@ import {pathToFileURL} from 'node:url';
 import assert from 'node:assert/strict';
 import {LESSONS} from '../lessons/geometric-proofs/catalog.js';
 const server=spawn('python3',['scripts/serve.py','--port','8768'],{stdio:'ignore'}),base='http://127.0.0.1:8768/';
+const upstreamCatalog=JSON.parse(await fs.readFile('config/inventory.json','utf8'));
+const localCatalog=JSON.parse(await fs.readFile('config/local-activities.json','utf8'));
+const initialDefaults=JSON.parse(await fs.readFile('config/defaults.json','utf8'));
+const activityCount=upstreamCatalog.activities.length+localCatalog.activities.length;
 const report={suite:'Geometry proofs: real HTTP host, local module and file:// standalone',results:[],limitations:['Viewport emulation is not physical iPad Safari testing.','Numerical invariants and browser checks do not constitute a formally verified proof.','Previously vendored assets are hash-checked, not reauthored.']};
 let browser;
 const record=(id,extra={})=>{report.results.push({id,passed:true,...extra});console.log('PASS',id);};
@@ -29,12 +33,12 @@ try{
   record(l.id,{checks:['all three steps','slider extremes','answer validation','stale feedback invalidated']});
  }
  for(const name of ['square-sum','triangle-ratio','circle','sphere']){await page.goto(base+'lessons/geometric-proofs/index.html?lesson='+name);await page.locator('[data-step="2"]').click();await page.screenshot({path:shots+'/'+name+'.png',fullPage:true});}
- await page.goto(base);await page.waitForSelector('[data-activity]');assert.equal(await page.locator('[data-activity]').count(),54);
+ await page.goto(base);await page.waitForSelector('[data-activity]');await page.locator('#only-open').uncheck();assert.equal(await page.locator('[data-activity]').count(),activityCount);
  await page.locator('[data-launch="geometry-proofs"]').click();await page.waitForFunction(()=>document.getElementById('loading').hidden);
  assert.equal(await page.frameLocator('#stage iframe').locator('[data-lesson]').count(),24);await page.locator('#player-back').click();assert.equal(await page.locator('iframe').count(),0);
- await page.locator('#teacher-open').click();await page.locator('#open-all').click();await page.locator('[data-close="teacher-dialog"]').click();await page.reload();await page.waitForSelector('[data-activity]');assert.equal(await page.locator('button.locked').count(),0);
- await page.locator('#teacher-open').click();await page.locator('#restore-defaults').click();await page.locator('[data-close="teacher-dialog"]').click();assert.equal(await page.locator('button.locked').count(),50);
- record('host-integration',{activities:54,innerLessons:24});
+ await page.locator('#teacher-open').click();await page.locator('#open-all').click();await page.locator('[data-close="teacher-dialog"]').click();await page.reload();await page.waitForSelector('[data-activity]');await page.locator('#only-open').uncheck();assert.equal(await page.locator('button.locked').count(),0);
+ await page.locator('#teacher-open').click();await page.locator('#restore-defaults').click();await page.locator('[data-close="teacher-dialog"]').click();assert.equal(await page.locator('button.locked').count(),activityCount-initialDefaults.openIds.length);
+ record('host-integration',{activities:activityCount,innerLessons:24});
  for(const size of [{width:1024,height:768},{width:390,height:844}]){
   await page.setViewportSize(size);await page.goto(base+'lessons/geometric-proofs/index.html?lesson=square-sum');await page.locator('[data-step="2"]').click();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);await page.screenshot({path:shots+'/width-'+size.width+'.png',fullPage:true});record('viewport-'+size.width);
  }

@@ -14,6 +14,6 @@ with zipfile.ZipFile(output,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6
         path=root/name
         files=[path] if path.is_file() else path.rglob('*')
         for file in files:
-            if file.is_file() and '__pycache__' not in file.parts and file.suffix.lower() not in {'.ttf','.otf','.woff','.woff2'}:
+            if file.is_file() and '__pycache__' not in file.parts and file.suffix.lower() not in {'.ttf','.otf','.woff','.woff2','.eot'}:
                 z.write(file,'MathPhysics/'+str(file.relative_to(root)))
 print(str(output),output.stat().st_size,flush=True)

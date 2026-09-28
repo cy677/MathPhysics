@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "order": [
+    "jsxgraph-playground",
+    "tangram-flat",
+    "matter-slingshot",
+    "spaceflight",
+    "geometry-proofs",
+    "matter-bridge",
+    "matter-car",
+    "matter-newtonsCradle",
+    "matter-catapult",
+    "matter-friction",
+    "matter-restitution",
+    "matter-ballPool",
+    "matter-pyramid",
+    "matter-cloth",
+    "matter-chains",
+    "matter-constraints",
+    "matter-stack",
+    "matter-gravity",
+    "area-builder",
+    "forces-and-motion-basics",
+    "energy-skate-park-basics",
+    "vector-addition"
+  ],
+  "activities": {
+    "jsxgraph-playground": {
+      "title": "图形会变魔术",
+      "description": "拖动顶点找对称，转动图形，试试让整张网格变形。",
+      "playHint": "拖动彩色圆点。也可以选择一个点，用下方方向按钮移动它。"
+    },
+    "tangram-flat": {
+      "title": "七巧板拼图",
+      "description": "转动七块拼板，拼出方形和创意轮廓。",
+      "playHint": "先选一块拼板，再拖动或旋转。打开提示，找一找每块拼板的位置。"
+    },
+    "tangram": {
+      "title": "立体七巧板",
+      "description": "拖动拼板，沿着角旋转，组合出新的形状。",
+      "playHint": "点击右下角拼装按钮，拖动拼板，拖住拼板的角旋转。"
+    },
+    "geometry-proofs": {
+      "title": "看见公式",
+      "description": "把图形剪开再拼好，看见面积、比例和体积的秘密。",
+      "playHint": "选一道题，拖动滑块改变条件，再播放变换。试着解释每一步。"
+    },
+    "spaceflight": {
+      "title": "从地球出发",
+      "description": "发射火箭、接近空间站，再带宇航员安全回家。",
+      "playHint": "选择一条任务路线。暂停看清每个阶段，也可以到实验室亲手对接。"
+    },
+    "area-builder": {
+      "title": "围栏花园",
+      "description": "拼出花园，数一数面积，量一量围栏。",
+      "playHint": "拖动方块拼图形；选“游戏”挑战不同的面积与周长。"
+    },
+    "forces-and-motion-basics": {
+      "title": "推拉小车",
+      "description": "改变推力和货物，看看小车怎么动。",
+      "playHint": "拖动人物或货物，调节推力。先比较两个方向的力，再观察运动。"
+    },
+    "energy-skate-park-basics": {
+      "title": "轨道游乐场",
+      "description": "换一条轨道，看看滑板能到多高。",
+      "playHint": "把滑板手放在轨道上，改变起点高度和摩擦，再比较速度。"
+    },
+    "vector-addition": {
+      "title": "箭头导航",
+      "description": "把箭头接在一起，看看最后到了哪里。",
+      "playHint": "从工具箱拖出箭头，改变方向和长度，查看合起来的结果。"
+    },
+    "matter-airFriction": {
+      "title": "空气阻力",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-avalanche": {
+      "title": "滚落的积木",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-ballPool": {
+      "title": "彩色小球池",
+      "description": "抓起一个小球，看看它会和谁碰在一起。",
+      "playHint": "抓起一个小球，看看它会和谁碰在一起。"
+    },
+    "matter-bridge": {
+      "title": "吊桥实验",
+      "description": "拖起积木放到桥上，看看桥面会怎样变化。",
+      "playHint": "拖起积木放到桥上，看看桥面会怎样变化。"
+    },
+    "matter-car": {
+      "title": "小车越野",
+      "description": "拖动小车越过障碍，观察车轮怎样转动。",
+      "playHint": "拖动小车越过障碍，观察车轮怎样转动。"
+    },
+    "matter-catapult": {
+      "title": "跷跷板投石机",
+      "description": "把重物压到一边，看看另一边的小球怎样飞出去。",
+      "playHint": "把重物压到一边，看看另一边的小球怎样飞出去。"
+    },
+    "matter-chains": {
+      "title": "摇摆链条",
+      "description": "拉动链条的一端，观察力量怎样传到另一端。",
+      "playHint": "拉动链条的一端，观察力量怎样传到另一端。"
+    },
+    "matter-circleStack": {
+      "title": "圆球堆叠",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-cloth": {
+      "title": "会动的布",
+      "description": "拉一拉布料，观察柔软的网格怎样变化。",
+      "playHint": "拉一拉布料，观察柔软的网格怎样变化。"
+    },
+    "matter-collisionFiltering": {
+      "title": "碰撞分类",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-compositeManipulation": {
+      "title": "组合物体变换",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-compound": {
+      "title": "复合形状",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-compoundStack": {
+      "title": "复合积木堆叠",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-concave": {
+      "title": "凹形积木",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-constraints": {
+      "title": "弹簧与连杆",
+      "description": "拖动被连接的物体，看一看弹簧和连杆的不同。",
+      "playHint": "拖动被连接的物体，看一看弹簧和连杆的不同。"
+    },
+    "matter-doublePendulum": {
+      "title": "双摆",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-events": {
+      "title": "碰撞事件",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-friction": {
+      "title": "摩擦力滑道",
+      "description": "拖动物块，比较它们在斜面上滑得有多快。",
+      "playHint": "拖动物块，比较它们在斜面上滑得有多快。"
+    },
+    "matter-gravity": {
+      "title": "重力游乐场",
+      "description": "拖动物体再松手，观察它们落向哪里。",
+      "playHint": "拖动物体再松手，观察它们落向哪里。"
+    },
+    "matter-gyro": {
+      "title": "陀螺",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-manipulation": {
+      "title": "物体操作",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-mixed": {
+      "title": "形状游乐场",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-newtonsCradle": {
+      "title": "牛顿摆",
+      "description": "拉开一侧的小球再松手，猜猜另一侧会动几个。",
+      "playHint": "拉开一侧的小球再松手，猜猜另一侧会动几个。"
+    },
+    "matter-ragdoll": {
+      "title": "布偶",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-pyramid": {
+      "title": "积木金字塔",
+      "description": "拖走一块积木，猜猜金字塔还能站稳吗。",
+      "playHint": "拖走一块积木，猜猜金字塔还能站稳吗。"
+    },
+    "matter-raycasting": {
+      "title": "射线探测",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-restitution": {
+      "title": "弹跳小球",
+      "description": "把小球拖高再放开，比较反弹的高度。",
+      "playHint": "把小球拖高再放开，比较反弹的高度。"
+    },
+    "matter-rounded": {
+      "title": "圆角积木",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-remove": {
+      "title": "添加与移除",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-renderResize": {
+      "title": "自适应画布",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-sensors": {
+      "title": "传感器",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-sleeping": {
+      "title": "静止与唤醒",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-slingshot": {
+      "title": "弹弓挑战",
+      "description": "向后拉小球再放开，试着击倒积木塔。",
+      "playHint": "向后拉小球再放开，试着击倒积木塔。"
+    },
+    "matter-softBody": {
+      "title": "软体结构",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-sprites": {
+      "title": "贴图物体",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-stack": {
+      "title": "积木搭高高",
+      "description": "移动底部的积木，试着让高塔保持平衡。",
+      "playHint": "移动底部的积木，试着让高塔保持平衡。"
+    },
+    "matter-staticFriction": {
+      "title": "静摩擦",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-stats": {
+      "title": "运行统计",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-stress": {
+      "title": "压力测试一",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-stress2": {
+      "title": "压力测试二",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-stress3": {
+      "title": "压力测试三",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-stress4": {
+      "title": "压力测试四",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-substep": {
+      "title": "时间子步",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-svg": {
+      "title": "SVG形状",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-terrain": {
+      "title": "凹形地形",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-timescale": {
+      "title": "时间快慢",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-views": {
+      "title": "移动视野",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "matter-wreckingBall": {
+      "title": "拆除球",
+      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
+      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    }
+  }
+}

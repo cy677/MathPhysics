@@ -1,97 +1,83 @@
 # MathPhysics · 科学小岛
 
-面向小学一年级至六年级的 HTML 互动内容整合。三个主题：**几何工坊、动力车间、箭头港口**。
+通过拖动、拼图和小实验，认识几何、力与运动、太空飞行。面向小学一年级至六年级，按主题和推荐年级选择活动。
 
-**v0.1 完整保留上游内容；v0.2 新增原创几何证明题集，不改写原有题目和游戏机制。**
+## 开始使用
 
-## v0.2：看见公式
-
-新增 **24 个中文互动几何证明示例**，包含主要面积公式、同高三角形比例、相似面积比、(a+b)²、平方差、勾股定理、柱锥球体积与表面积展开图。参数可调，支持逐步播放、数值例题和证明依据。详见 [完整题集说明](docs/geometry-proofs.md)。
-
-保留原有 53 个上游活动，另以 `config/local-activities.json` 登记 1 个原创模块；首页现在共 **54 个入口**。新安装默认开放该模块；已有浏览器的设置不被覆盖，可在“老师 / 家长”中启用。
-
-生成可独立打开的单文件：`python scripts/build_geometry_standalone.py`，输出 `dist/MathPhysics-Geometry-Proofs.html`。该独立题集代码、SVG 与中文讲解为 MIT；原有第三方授权不变。
-
-> Vector Addition 源码确实是 GPL-3.0，且已在 v0.1 收录。未复制的是另一个无明确许可证的 linear-transform-visualizer。
-
-![科学小岛首页](docs/screenshots/home-desktop.png)
-
-## 内容范围
-
-四个完整中文 PhET 模拟（Area Builder、Forces and Motion: Basics、Energy Skate Park: Basics、Vector Addition），完整 Tangram，以及 Matter.js 0.20.0 的全部注册示例与依赖。精确清单、数量与文件 SHA256 由导入脚本生成，见 [整合报告](docs/import-report.md) 和 [活动清单](config/inventory.json)。
-
-Area Builder 保留所有6个难度等级与随机出题逻辑；其他 PhET 项目是多页面实验，不冒充固定关卡。Matter 的48个条目是物理/开发示例，不冒充48个教学关卡。Tangram 仓库只有1个内置快照，上游“更多图形”服务未完成。本版完整保留实际存在的内容，不虚构题目数量。
-
-无明确许可证的 linear-transform-visualizer 未复制。Phaser、JSXGraph 是候选开发框架，不是已选择的课程库，本版不引入。
-
-## 运行
-
-已经完成资产导入的仓库或离线包，无需 npm、CDN、账号或后端数据库：
+下载包含资源的完整包并解压，在项目目录运行：
 
 ```bash
 python scripts/serve.py --open
 ```
 
-打开 http://127.0.0.1:8000 。Windows 安装 Python 3 后可运行 `START_WINDOWS.bat`。不能直接双击 index.html：浏览器 file:// 模式不能可靠加载模块、JSON 和本地 SVG。
+Windows 安装 Python 3 后也可运行 `START_WINDOWS.bat`。宿主使用本地静态服务，不要直接双击根目录 index.html。它不需要账号、CDN、数据库或 npm 运行依赖。局域网平板使用 `python scripts/serve.py --host 0.0.0.0 --port 8000`，通过电脑的局域网 IP:8000 访问；只在可信网络使用此开发服务器。
 
-局域网平板访问：
+独立课堂可以构建为无需静态服务的单文件 HTML：
 
 ```bash
-python scripts/serve.py --host 0.0.0.0 --port 8000
+python scripts/build_geometry_standalone.py
+python scripts/build_spaceflight_standalone.py
+python scripts/build_playground_standalone.py
 ```
 
-随后在同一网络访问电脑的局域网 IP:8000；需自行配置操作系统防火墙。仅在可信局域网使用此开发服务器，公网应使用正式静态服务器。GitHub Pages/Nginx 可直接托管仓库根目录；相对路径支持 `/MathPhysics/` 子路径。
+输出在 dist/：`MathPhysics-Geometry-Proofs.html`、`MathPhysics-Spaceflight.html`、`MathPhysics-Playground.html`、`MathPhysics-Tangram.html`。使用支持脚本的浏览器打开；文件预览器不等同于浏览器。
 
-`vendor/` 是实际本地内容，不是运行时跳转远程网站的链接。首次导入需要网络；已经随包提供资源后，课堂运行不依赖外部网络。原第三方程序可能尝试统计/帮助网络请求；测试会阻断外部请求，确认核心活动仍能启动。本项目不上传学生姓名或学习记录。
+## 活动
 
-## 首批开放与后续启用
+| 主题 | 内容 |
+|---|---|
+| 几何工坊 | 面积拼图、24题几何证明、平面七巧板、拖动三角形与轴对称 |
+| 动力车间 | 弹弓、吊桥、小车、牛顿摆、摩擦、碰撞、空间飞行课堂 |
+| 箭头港口 | 向量相加、旋转、缩放、线性变换网格 |
 
-默认开放围栏花园、搬运挑战、箭头导航、看见公式题集四项。其他已整合内容仍显示在内容库中，可在“老师 / 家长”工作台逐项开放、全部开放或临时预览。配置支持导入导出，本地探索记录不会因开放配置导入而清除。
+v0.4 合计 **57个活动入口**。其中4个 PhET、48个 Matter.js 原始示例、1个原 Tangram，以及4个课堂/适配入口。Matter.js 条目不是48个教学关卡；几何证明课堂内有24题、JSXGraph课堂内有6个实验、平面七巧板有方形热身和原内置创意轮廓。
 
-全局默认值在 `config/defaults.json` 的 `openIds` 中修改。既有浏览器的本地设置优先；修改默认文件不会暗中覆盖用户已保存设置，可通过“恢复首批开放”应用新默认值。
+首次打开推荐 **22项活动，其中18项非PhET**，包括14个 Matter.js 示例和4个课堂/适配入口。首页取消“只看可玩的活动”即可看到全部目录。“老师 / 家长”可以逐项选择、开放推荐活动、全部开放或导入导出配置。
 
-**本版开放控制粒度为活动/模块。**进入 PhET 后仍保留完整原版导航，不对内部某一级强制锁定。年级是推荐筛选，不是权限系统。已探索表示成功启动过活动，不是通关、成绩或知识掌握；不将 iframe 打开事件伪装成完成关卡。
+原上游内容没有删减：Area Builder 的6个难度和随机出题逻辑保留；其他 PhET 原导航保留；原三维 Tangram 也保留。平面七巧板另提供无需 WebGL 的入口。
 
-## 完整导入与测试
+## 已有用户更新
+
+沿用 `mathphysics.state.v1` 本地存储。未调整过旧首批开放列表的用户，会升级到22项推荐活动，并保留浏览记录。自定义列表（包括刻意全部关闭）不覆盖；可点击“开放推荐活动”补充新内容。年级是推荐筛选，不是权限系统。浏览记录不等于通关成绩。
+
+儿童界面只保留操作和学习引导；实现边界、来源及维护说明放在文档和资料面板。必要的数学前提与版权署名不隐藏。
+
+## 目录与维护
+
+```text
+index.html                       首页
+src/                             宿主、状态、加载器
+config/inventory.json             原上游清单和文件哈希
+config/local-activities.json      新课堂与适配入口
+config/presentation.json          首页排序、儿童文案和操作提示
+config/defaults.json              推荐开放列表和迁移版本
+config/libraries-lock.json        JSXGraph校验清单
+lessons/geometric-proofs/         24题几何证明
+lessons/spaceflight/              太空飞行课堂
+lessons/jsxgraph-playground/      6个基于JSXGraph编写的实验
+lessons/tangram-flat/             原Tangram内核的SVG适配（GPL）
+vendor/                          上游资源与各自许可证
+tests/                           数学、内容完整性和浏览器检查
+scripts/                         服务、导入与打包
+docs/                            来源、修改说明、验证结果
+```
+
+完整活动文件在本地，不靠点击后跳转外部网站。仅创建当前活动的运行实例，退出后移除 iframe。首次导入或升级上游依赖需要网络，已经准备好的资源包运行不依赖外网。不得删除锁文件后仍声称版本固定。
 
 ```bash
-python scripts/import_upstream.py
 npm install --ignore-scripts
 npm test
-npx playwright install chromium
-npm run test:browser
+python -m pip install playwright==1.56.0
+python -m playwright install chromium
+python tests/classroom-browser.py
+node tests/geometry-browser.mjs
 python scripts/package.py
 ```
 
-首次导入解析并固定上游提交，保存完整源码与原始压缩包、官方中文模拟 HTML、依赖和全部内容清单。之后按锁文件校验字节，不自动跟随 latest 覆盖资源；哈希不符时停止。更新上游需显式评审锁文件，不能删除题目后仍宣称完整。
-
-GitHub Actions 会执行导入、静态与浏览器测试；通过后提交 vendor 和生成清单，并提供 `MathPhysics-offline` 下载包。实际测试结果见 [测试报告](docs/test-report.json)。查看 Actions 的最终状态，不以 README 代替实际测试结论。
-
-## 目录
-
-```text
-index.html                 统一科学小岛入口
-src/app.js                 活动目录、筛选、加载与设置
-src/state.js               本地状态验证与持久化
-src/adapters/matter.html    独立原版示例加载页面
-src/matter-runner.js        Matter依赖映射与生命周期
-config/defaults.json       默认开放内容
-config/inventory.json      全量活动与文件哈希（生成）
-config/upstream-lock.json  上游提交与原始下载哈希（生成）
-vendor/                    完整本地上游内容，分别保留原许可证
-scripts/                   导入、静态服务、打包
-tests/                     目录完整性、状态与浏览器启动测试
-docs/                      报告、维护说明与截图
-```
-
-## 范围与限制
-
-保留原版界面，所以当前各活动的视觉风格尚未统一成单一游戏。尚无统一积分、自动通关判定、章节内逐题锁定、跨设备同步、个人账号或全课程教学验证；这些不属于第一版“只整合”的范围。
-
-仓库保留完整资源，但不会同时启动全部模拟。进入活动时才创建一个 iframe，退出即销毁，避免后台物理循环占用平板资源。压力测试完整收录但默认关闭。
-
-Chromium 自动化/触屏模拟不等同于实机 iPad Safari 验收；任意随机题目的教育准确性不由启动测试保证。建议课堂使用前对实际设备与课件选题进行检查。
+`docs/classroom-browser-report.json` 记录真实 HTTP、file://、所有入口及关键交互的检查结果；`classroom-inline-report.json` 仅记录独立 HTML 的内存载入检查。以实际报告的 passed 字段为准，不能用截图或本说明代替验收。触屏模拟不等于真实 iPad Safari 测试。
 
 ## 授权
 
-新增宿主代码为 MIT，不对第三方资源重新授权。PhET 官方 HTML 成品按当前 **CC BY-NC 4.0，非商业用途**处理；源码主要 GPL。Tangram 为 GPL-3.0；Matter.js 代码 MIT；其他依赖和素材遵循原声明。详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。任何收费、广告支持或商业分发需先重新核对授权。
+宿主、几何/航天原创课堂、JSXGraph课堂原创部分采用 MIT。JSXGraph 使用其 MIT 许可。平面七巧板与原 Tangram 为 GPL-3.0。Matter.js 代码 MIT，素材及其他依赖按原声明。PhET源码主要GPL，而随包官方 HTML 成品按 CC BY-NC 4.0 处理；全量包不能统一改成MIT。详见 [第三方来源与授权](THIRD_PARTY_NOTICES.md)。
+
+[几何题集说明](docs/geometry-proofs.md) · [航天课堂说明](docs/spaceflight.md) · [v0.4修改说明](docs/v0.4-changes.md)

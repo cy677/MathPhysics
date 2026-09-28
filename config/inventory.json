@@ -1525,8 +1525,8 @@
       "sha256": "09da3cd8424e32816eef0c1e65578379c8f6819c165c74c1b6f0f4d67321a40b"
     },
     "vendor/matter/demo/mathphysics.html": {
-      "bytes": 1320,
-      "sha256": "0c610b616ab00c924adbbf364814b68ba18eac856f73314cd7bacab45a34f86c"
+      "bytes": 1307,
+      "sha256": "a8d734af00b08284b760afd549414f6282f1f1bcae603e5ea968b6ed936b7b6c"
     },
     "vendor/matter/demo/src/Compare.js": {
       "bytes": 5578,
