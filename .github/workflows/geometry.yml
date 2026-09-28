@@ -1,0 +1,42 @@
+name: Geometry proofs verification
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'lessons/**'
+      - 'src/**'
+      - 'config/**'
+      - 'tests/**'
+      - 'scripts/build_geometry_standalone.py'
+      - '.github/workflows/geometry.yml'
+  pull_request:
+    paths: ['lessons/**', 'src/**', 'config/**', 'tests/**']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm install --ignore-scripts
+      - run: npm test
+      - run: python scripts/build_geometry_standalone.py
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/geometry-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: MathPhysics-geometry-proofs
+          path: |
+            dist/MathPhysics-Geometry-Proofs.html
+            docs/geometry-browser-report.json
+            docs/geometry-screenshots/
+          retention-days: 30
