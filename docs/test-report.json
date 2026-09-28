@@ -225,6 +225,22 @@
       "passed": true
     },
     {
+      "id": "geometry-proofs",
+      "passed": true
+    },
+    {
+      "id": "spaceflight",
+      "passed": true
+    },
+    {
+      "id": "jsxgraph-playground",
+      "passed": true
+    },
+    {
+      "id": "tangram-flat",
+      "passed": true
+    },
+    {
       "id": "tablet-host-navigation",
       "passed": true
     }
@@ -235,5 +251,5 @@
     "Original simulations keep their own navigation; host records visits, not completion."
   ],
   "passed": true,
-  "total": 55
+  "total": 59
 }

@@ -1424,6 +1424,1802 @@
       "bytes": 3209,
       "sha256": "aa237ead983d9e0855046d26f45e948852185f7993a05da48c6169114b56a176"
     },
+    "vendor/jsxgraph/CHANGELOG.md": {
+      "bytes": 87095,
+      "sha256": "fe9ef83f6221b4096e4c5cc451c0f847767b9a7578226da2ae40cc4873513459"
+    },
+    "vendor/jsxgraph/LICENSE.LGPL": {
+      "bytes": 7652,
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+    },
+    "vendor/jsxgraph/LICENSE.MIT": {
+      "bytes": 1201,
+      "sha256": "43e325001487de7f09745fbe086b054bb1b70d4ab58060e87153849365b23ff1"
+    },
+    "vendor/jsxgraph/README.md": {
+      "bytes": 5608,
+      "sha256": "7547491b3878117d0d030fa7ef96bf1e9b6541326c0d2c732f1e8d7819ceb79f"
+    },
+    "vendor/jsxgraph/distrib/JessieScript.js": {
+      "bytes": 40577,
+      "sha256": "bb2c9a223e2bc6b57600252c198e58f9d0623c6c76f9adddf0b230352d20b1cf"
+    },
+    "vendor/jsxgraph/distrib/LICENSE.LGPL": {
+      "bytes": 7652,
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+    },
+    "vendor/jsxgraph/distrib/LICENSE.MIT": {
+      "bytes": 1201,
+      "sha256": "43e325001487de7f09745fbe086b054bb1b70d4ab58060e87153849365b23ff1"
+    },
+    "vendor/jsxgraph/distrib/README.md": {
+      "bytes": 5608,
+      "sha256": "7547491b3878117d0d030fa7ef96bf1e9b6541326c0d2c732f1e8d7819ceb79f"
+    },
+    "vendor/jsxgraph/distrib/docs/files.html": {
+      "bytes": 46130,
+      "sha256": "c9bbb17d0e82c5f1741717c3db990b94d7ef0a706eef74bd032205e1f4c313ea"
+    },
+    "vendor/jsxgraph/distrib/docs/index.html": {
+      "bytes": 56072,
+      "sha256": "704d70a8127d3ed44aea299ba093006d04e258d387df76c83be0f4014cd7b7b8"
+    },
+    "vendor/jsxgraph/distrib/docs/static/expandable.gif": {
+      "bytes": 85,
+      "sha256": "7ef42bce354d40a9fb5d88e789a8d7155ff8eb69dabccb5a791345a2327c0b10"
+    },
+    "vendor/jsxgraph/distrib/docs/static/jquery.min.js": {
+      "bytes": 87533,
+      "sha256": "fc9a93dd241f6b045cbff0481cf4e1901becd0e12fb45166a8f17f95823f0b1a"
+    },
+    "vendor/jsxgraph/distrib/docs/static/jsxgraph.css": {
+      "bytes": 4767,
+      "sha256": "7ab6241b7d2287094b48aea09540121fa3dc76394fdd96c06784ca2ba6d88c9f"
+    },
+    "vendor/jsxgraph/distrib/docs/static/jsxgraphcore.js": {
+      "bytes": 961680,
+      "sha256": "4a7e1ac3303d76f9ae84a4205e275beef5b45354b3e39f6037c30bf2743c975b"
+    },
+    "vendor/jsxgraph/distrib/docs/static/logo.gif": {
+      "bytes": 830,
+      "sha256": "f6927a0aab5da0bcde4d9d5bcce6200f1534b75da29b06f7127704e7d02c85fe"
+    },
+    "vendor/jsxgraph/distrib/docs/static/logo.png": {
+      "bytes": 3556,
+      "sha256": "c341aa1654c556f4ab14c7099170f9d701ef7d4f2744a8b9ee9701f625d0de68"
+    },
+    "vendor/jsxgraph/distrib/docs/static/logo_tw.png": {
+      "bytes": 13510,
+      "sha256": "5f3092b2540dc7f2276ac2de18aa13c48873e1d703d21de5c437afc172d1d571"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Angle.html": {
+      "bytes": 79951,
+      "sha256": "beb7808bfab4461cd967990fa924d56d4ab2098edbfdcf45acde485162c07d76"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Arc.html": {
+      "bytes": 73014,
+      "sha256": "29d8db3147ddadf9c634ec4612c5832cde6f6872f7e312a33fd7b7ac16994c15"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Arrow.html": {
+      "bytes": 54280,
+      "sha256": "b4a26862d64a089d2311f78fe8927adc48c6f9dc7f2b7115d15504af2fdfe791"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Arrowparallel.html": {
+      "bytes": 54685,
+      "sha256": "1a40714e2364ae0358d8ee8f9d43eb530598011bc8a9fb8f0349dbd4fd86d21a"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Axes3D.html": {
+      "bytes": 28974,
+      "sha256": "65a796e5803d83bd5847e98a176ac37da6f00c5adddcacb7581190bbc99eec6f"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Axis.html": {
+      "bytes": 75798,
+      "sha256": "d8bb60b14ceb9cab141baa5634c154065a47b5626f5673587351178896c284f6"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Axis3D.html": {
+      "bytes": 52590,
+      "sha256": "94aac5a824fd58551e43da6593cb22e45918264d2e0904c7e2045266b3263e1f"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Bisector.html": {
+      "bytes": 54606,
+      "sha256": "b235afd0833ba049c19154814aea7c2279a12ad34761376532c58e1750a38296"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Bisectorlines.html": {
+      "bytes": 34938,
+      "sha256": "87f54739708f737557e3a5ebd7a11bebe67f2ae973693e12c6fcc7fe5ac701c2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Boxplot.html": {
+      "bytes": 58359,
+      "sha256": "ad3023a2aa95cdffb36372ab4b61f272ee0e67c178565fc5a305dcb54174d647"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Button.html": {
+      "bytes": 67453,
+      "sha256": "e9a3552af1f5aefb56bfe7d5fef5862d7e098b5669f08b67dc2adb6372cb7d25"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Cardinalspline.html": {
+      "bytes": 58971,
+      "sha256": "09d395fd0561cff9f9414f8736395d8bbf19cae181825bfa863ce95cb943c963"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Chart.html": {
+      "bytes": 63009,
+      "sha256": "49e53ebabd3a143817ea502b9b283533964a5eebb379c62a344310769fb36c9a"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Checkbox.html": {
+      "bytes": 68360,
+      "sha256": "1433b8ba3576a368eec80f9b7650bef1848a4aa286177d5bef72516a7655e07d"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Circle.html": {
+      "bytes": 61715,
+      "sha256": "a9fdc59e9eb14b572a9d3af959aff464e208454f96f38826fbcbfb8d8b61a415"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Circle3D.html": {
+      "bytes": 53242,
+      "sha256": "4bef24c845ad6e81aeba71b5cb9af15ab3ddb76eef9cfabcae50024be9c95dd0"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Circumcenter.html": {
+      "bytes": 57159,
+      "sha256": "dc512f15f6f37a4c113b23b2d94067ef082b0c15fc05ffca7a76e4cddab22a6a"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Circumcircle.html": {
+      "bytes": 54079,
+      "sha256": "83b7fbf9f559d7114860dd2691a49db3543ef18081c4602c04b671012d8752e1"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/CircumcircleArc.html": {
+      "bytes": 56920,
+      "sha256": "6c8c388643bbb07235fe2b4391ccb3cf5de4ed6fe66e1667659519ae2535187a"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/CircumcircleSector.html": {
+      "bytes": 56591,
+      "sha256": "bf75d1c139500d9089be88e51d9b2b4f2eee7810e49020f29f8027ddce91d1ca"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Comb.html": {
+      "bytes": 61506,
+      "sha256": "dd7051878cc14d993c90d99ade9a7dc618324a4e5b9a8ebaf1b9bc95924d23d5"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Conic.html": {
+      "bytes": 59018,
+      "sha256": "3270dfc6a7ae42e800465d602860ca8078a5ad44ee90f320cfe6c27d449f6459"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Curve.html": {
+      "bytes": 78061,
+      "sha256": "51c4d003832a2477f35510cb6cffda930422770e67c1efbdd2138b5472c3d08c"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Curve3D.html": {
+      "bytes": 55822,
+      "sha256": "af50efd4296083aa22716f7f443fef38b3b1dc194071e308e9c2c830c9fc02ad"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/CurveDifference.html": {
+      "bytes": 53650,
+      "sha256": "88dc2b2f1f6d5fb82cd125351f50cda6e11915d82d9a67379132a032c3b56fe1"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/CurveIntersection.html": {
+      "bytes": 53625,
+      "sha256": "87804eab56bafd2bd5a8693cfad8ef34c05b8756b2db974964df179a1e17f922"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/CurveUnion.html": {
+      "bytes": 53544,
+      "sha256": "3690a4ce91cc8429129ad37c75f76ddb0b38b81c02ea2536884d77ab5bee3d42"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Derivative.html": {
+      "bytes": 52819,
+      "sha256": "8e6c1d20cafe866821d1985877eacf77913e6e5b2b6f21bccd0d9d426ca99806"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Ellipse.html": {
+      "bytes": 56201,
+      "sha256": "c382258832b51e1e5b738be9bc0db2380edbd0d414d7823379f0c916166dc258"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Face3D.html": {
+      "bytes": 67220,
+      "sha256": "518287852aaeb6b7e25e776c25c676d7a24c9d2f04c6fdf8ea6e748e0dc918e7"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/ForeignObject.html": {
+      "bytes": 64171,
+      "sha256": "6fb3573fc490d65700ce40c22d6390beeea47a36b2ceaf71b241e5511a556796"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Functiongraph.html": {
+      "bytes": 54086,
+      "sha256": "93a3b078e9fa189a7bb1a3b9c7a54460bc63473837efef64d8005f5baf6be684"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Functiongraph3D.html": {
+      "bytes": 55706,
+      "sha256": "8227945f2f0627e6ead96cd2e1cde23c1237fcbbe7b4d10536226eaefb006a7f"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Glider.html": {
+      "bytes": 67702,
+      "sha256": "99e8b25438905a36ec1195d6ab1fb64e4c684ef47f790eb13392756cec1e17dc"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Grid.html": {
+      "bytes": 87269,
+      "sha256": "a52b913abcc0cc0583022790b1e11f79332b5a1f3973306cae37377d31bd75da"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Group.html": {
+      "bytes": 47428,
+      "sha256": "a6aabe6126ffc43ef3e182415af42ad038ab1bf303b8afb24662e3f575e94a34"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Hatch.html": {
+      "bytes": 57494,
+      "sha256": "1f419ecb42c845451a258391b8ee77a5438bd0b327569b0fcb99fb12bc66b067"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Hyperbola.html": {
+      "bytes": 55330,
+      "sha256": "bc90362a2ebed71e4fd114edb8769108e5cc1dc1e0607467b984cb72edd7dc79"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Image.html": {
+      "bytes": 67252,
+      "sha256": "9d52b7959ca51c4af89612a0ee998e01b65a19cacd594feb164199aae8b41e34"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/ImplicitCurve.html": {
+      "bytes": 83447,
+      "sha256": "0a109e2bc5485aa8b047b86341e2bee33d2dc572ea48c5f42c84f748073ebfed"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Incenter.html": {
+      "bytes": 56713,
+      "sha256": "fa98adc914891c2737459364ecca2bac888157bcf6c2ae7c3b5eab81c51f38b0"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Incircle.html": {
+      "bytes": 54060,
+      "sha256": "bf2769988c44ee2c28c98af45e64327e9a6aaaf8037aeb9d2fc937d424c8cda4"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Inequality.html": {
+      "bytes": 56747,
+      "sha256": "4c21da291552d6725a3f0c7a43ea3428d39f9880709f213478992c7129d407d2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Input.html": {
+      "bytes": 74101,
+      "sha256": "bf7793505df9edbbb535f7bf98ff64d696a93b03b6580db62d771c8ebc0da85e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Integral.html": {
+      "bytes": 64882,
+      "sha256": "ed82fbb4bb1e24572594a310d3384159992af156be93480f0b3ff44f9d8fd495"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Intersection.html": {
+      "bytes": 60533,
+      "sha256": "eb1e5be0a68d683871a29b50d485817fcf141bcc2d7fc0e6e00180d6b6979e13"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/IntersectionCircle3D.html": {
+      "bytes": 53920,
+      "sha256": "090ed42f9a6860ad5f51d8e1ca9b9bd26a195f74bfe244b92fe6a650b3eb2905"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/IntersectionLine3D.html": {
+      "bytes": 51761,
+      "sha256": "84f6ddbfd551857a80e017543b8b60a3fa39aa7355bf3705f32771c4665a9571"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.AbstractRenderer.html": {
+      "bytes": 234493,
+      "sha256": "554d42137faee0a19527ac37cc38473e1863ef7ed3578cfb90ac62f1c1011115"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Board.html": {
+      "bytes": 510002,
+      "sha256": "575d19ffaae0bee50ce78613f5d49a45087db90c2b2d31c18e9e77a70a880ba8"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Board.infobox.html": {
+      "bytes": 33258,
+      "sha256": "a328ad1976fd928ab83dcbc6909be47889ae027126be913b353d0fdf289f7503"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.C.html": {
+      "bytes": 45343,
+      "sha256": "47a13a7da5a95647f9d2d590c01cda7d6b63ee24c18de38111ece7fa96567ea7"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.CA.html": {
+      "bytes": 33177,
+      "sha256": "9584b6ced8f8c38c7586936aebed9a5d23f131e43ba2e432f67307269c13dbf8"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.CanvasRenderer.html": {
+      "bytes": 65071,
+      "sha256": "ae6183c6b08a0c406295f8839d34e4c43abaf4209736ea0386a788e3609f1d38"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Chart.html": {
+      "bytes": 77123,
+      "sha256": "fcfde7b557d27f9746c32946052b7547831ed83b2d48fecf76a79c1d77b9a23c"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Circle.html": {
+      "bytes": 85236,
+      "sha256": "f6e962f8d5f246720c26b1e7416870b899b8a43902215c55540c6af3dd129a50"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Circle3D.html": {
+      "bytes": 57477,
+      "sha256": "9fb9e1e98512588dafd58412b06f00c5532eaba8ae4d3c594a43706fe5ec01f1"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Complex.html": {
+      "bytes": 43722,
+      "sha256": "ea1d06080079cbe8ec4f5fcb3af4bcc537acc337a1d147c5aa8c69172e217c7c"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Composition.html": {
+      "bytes": 43860,
+      "sha256": "635872963fd207dc607a649deb079fe704959e9232c7d5e92af5a1fcff72b098"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Coords.html": {
+      "bytes": 47702,
+      "sha256": "a219d34e853ef4a1344226602dc457549e2b66efcc38fd99b3961f7738de7639"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.CoordsElement.html": {
+      "bytes": 147675,
+      "sha256": "cc35c51e6f86be3c9897344579c5e859a22481ae194d2b949a1c117dec85e304"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Curve.html": {
+      "bytes": 102317,
+      "sha256": "3a09d390bb3e94b0ad49ad3ecffd14bc1ad06654c083544d9d372cfc612f88b0"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Curve3D.html": {
+      "bytes": 64281,
+      "sha256": "4340b2972aed8e478c571520bbf1a1d7fab1e9eefd7e910ba29c807c6dadb6bd"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Dump.html": {
+      "bytes": 48752,
+      "sha256": "2ef10e547836f8bd45ca35eec800d4b93703362eaa362db92f22cc491d9995a4"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.EventEmitter.html": {
+      "bytes": 39278,
+      "sha256": "77cde2fe0f35ad09a7736f38e074afce642b676020680ef9fc2cb3951cf82fa8"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Expect.html": {
+      "bytes": 35492,
+      "sha256": "7d1e2ca0f380195c87254e164432f6256b65680c06c2c0facbf15e747adc2c18"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Face3D.html": {
+      "bytes": 50558,
+      "sha256": "94eb10511ff1609d4adf7371d1aca9a531b304c61c542f3f15682b39db61620a"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.ForeignObject.html": {
+      "bytes": 67393,
+      "sha256": "06001d69917ada8b75bce31a5d17e55db5b7e6c2bff6e99c3716e655f86c5146"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.GeometryElement.html": {
+      "bytes": 291724,
+      "sha256": "a00b9739e2593b909883fbad7f7b82f7823be1cbc0974eabe377c059023c6dd6"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.GeometryElement3D.html": {
+      "bytes": 51502,
+      "sha256": "7aed04af356aaed14a050dd2320a76aaa90c8d0473f492713be8d46a91e8efe9"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.GeonextParser.html": {
+      "bytes": 44598,
+      "sha256": "e13896d828a2da70ae402350a077a0bd64925f0970ecdd14b90ef114d5fb6ba3"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Group.html": {
+      "bytes": 81019,
+      "sha256": "580bb859c7458cc49ca2a6aa5623ad469857c3bd7cbc26f9e35196efbbedc09f"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Image.html": {
+      "bytes": 69605,
+      "sha256": "fd14edd5816e291fabebfb9402628ce2f9666bc6cf1bc215668d9a96a6389d37"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.JSXGraph.html": {
+      "bytes": 62520,
+      "sha256": "36dc65b58ddae72a2f9eca79df0c9171b0564c29b1dc3c623abb442e700aa2fc"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.JessieCode.html": {
+      "bytes": 160088,
+      "sha256": "19910e434bbce5bb97a0fe6eede7893de7d008ac63608c54da2003ee134d0463"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Legend.html": {
+      "bytes": 51348,
+      "sha256": "c0092b36b6c945de3942efd911bd5612ec4b21352db4041274407fdf74d38637"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Line.html": {
+      "bytes": 86403,
+      "sha256": "98626e53a8a3fc0bacaf46572cb188cefb064d614fdbc1b6408a4205ef9bb6da"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Line3D.html": {
+      "bytes": 50200,
+      "sha256": "970c049a56ea3f8942fda74eca9cd2c5e6a34fe9672df34c6d1376afa2bad1da"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.BoxQuadtree.html": {
+      "bytes": 51942,
+      "sha256": "fa3a3be1164b4668591940a51c5fd9519f0d89c16b287c8fd357d175132fc7f1"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Clip.html": {
+      "bytes": 104268,
+      "sha256": "022e565b0f68f4b717c23ab1c575a5665ce4024db75804a771a6b694e4c2d7f2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Extrapolate.html": {
+      "bytes": 51201,
+      "sha256": "b90d904199edf85582ef3e946b676572285c7247e325b58218a0362ec786c79d"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Geometry.html": {
+      "bytes": 277736,
+      "sha256": "902ab34d2c0aa6ad22d1abf9aa0b4e64daea98d708a9eb6cd19f3bdc27619c35"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.ImplicitPlot.html": {
+      "bytes": 61046,
+      "sha256": "7cfc0c868f38b8034daf214a7a613db4e86b0fa61d17c1c962800326266b44dd"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.IntervalArithmetic.html": {
+      "bytes": 119127,
+      "sha256": "2d1ee39164e419cea6bbbd06745566321109010f545d54a6dc2b87630e51fce9"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Metapost.html": {
+      "bytes": 52597,
+      "sha256": "a2fe5beb113693e30d6377998269339779c54ea03333d8c6f494ff8af3a9f34f"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Nlp.html": {
+      "bytes": 40135,
+      "sha256": "ab36054d78f67d4674df2e72774e671e5aec40596a8f8acc578a9266fc2d4ac2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Numerics.html": {
+      "bytes": 221540,
+      "sha256": "ef2f3665848ca53584d3cdc4335575b14d7fae037f5a3aa2f2483141bdaf7877"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Plot.html": {
+      "bytes": 126528,
+      "sha256": "dba1493757e8c2960448dd9e0629bd1358530295e8879fb39875662b9b79fa95"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Poly.Monomial.html": {
+      "bytes": 31548,
+      "sha256": "f4864787fdf2527a764fcaf39e5fdfceff514c72b2c774f40a964e737f79d496"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Poly.Polynomial.html": {
+      "bytes": 39065,
+      "sha256": "7ccaef2a70cfca461d0fa469f87076d68f26b4f33fe13ec114190018b1c7dea6"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Poly.Ring.html": {
+      "bytes": 28270,
+      "sha256": "d537d988639b525273249626f31f8ab9267684793be8cdd968f72d9007d70f28"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Poly.html": {
+      "bytes": 32457,
+      "sha256": "cb2a57f8a24b51548103fd5ed57595c596c81abe35efae267ba5fbd08456a45e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.ProbFuncs.html": {
+      "bytes": 56547,
+      "sha256": "95034613b8bbd6dddeeb99af093f31471ae5f15a81ff8c42399fd9463c74b2e0"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Quadtree.html": {
+      "bytes": 44993,
+      "sha256": "ce3c4a9b00432ed80518d7e011eba760849be448775726aabc4a232fad987352"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.Statistics.html": {
+      "bytes": 117523,
+      "sha256": "26020e157d802babc0f4559bcf164c51b77ead3ff8a023cd1937131ec01ce76a"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Math.html": {
+      "bytes": 165370,
+      "sha256": "b98452854a8b9c1062b5ebfc2adbffdf6e0eda34b805c52a82bbc315f6b5b643"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.NoRenderer.html": {
+      "bytes": 39132,
+      "sha256": "fbbb7f306a0ab7cdfc8204b222778ee4caba9323ae9c8c15c22766abe7134660"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Options.html": {
+      "bytes": 34322,
+      "sha256": "ae58f893158eb0876dc9e54b97398c3e9d69121721530819e8b909a0ea2abfe1"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Parse3D.html": {
+      "bytes": 34875,
+      "sha256": "036d6f1496f2cb16f3050e817d3ae8b0f737b4742787f30062ddc678bf08d72f"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Plane3D.html": {
+      "bytes": 50752,
+      "sha256": "8bfeecbdee011c8cd121d1a6ce73f16fd315b1ec706675de4125b9126bb55860"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Point.html": {
+      "bytes": 73518,
+      "sha256": "154f344b6eda9a9ec85398c23d5e1d8b2e46d2d9b84eda42d056dd5ccea935e0"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Point3D.html": {
+      "bytes": 69341,
+      "sha256": "52ffe15f92ab007e66fc39ae1dd14e9ebda65edc20bc1d5f5988dc26d5b17df0"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Polygon.html": {
+      "bytes": 92188,
+      "sha256": "237ba172e1ff62ff7dba618beb82b757196898b8667a3cb76649ad253cb8c14a"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Polygon3D.html": {
+      "bytes": 51851,
+      "sha256": "8b819b33fd26d458ab8d9bcd9b352eb03588f62aa9063319263f3c1cef9fbf41"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.PrefixParser.html": {
+      "bytes": 37821,
+      "sha256": "27b13c19364e7967e223673803cb29a3b921093ae706fcedee58f093eb61156a"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.SVGRenderer.html": {
+      "bytes": 85725,
+      "sha256": "69d379ea6a44823c34bbe2658f04bddabf09e5fac9bd2f7e0ecb16ef81e69184"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Sphere3D.html": {
+      "bytes": 61362,
+      "sha256": "2be8185d76c73541ee1d6c3602cbbcededc3d03f2ff9c65f518fa4ba628c8a2e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Surface3D.html": {
+      "bytes": 68739,
+      "sha256": "0d44babb12d1cb1f4ac1f88bdcef0e281d3cdd1b5a870e11303433df622444ab"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Text.html": {
+      "bytes": 110476,
+      "sha256": "3af0576a852d35326f03142e07efdb7aaf2586b547bdc21c3d724fde10f7dba5"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Text3D.html": {
+      "bytes": 54198,
+      "sha256": "e50b4d8d64fad254b617e64724c12259e32b43685b4355e3b4a94bb752ecc690"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Ticks.html": {
+      "bytes": 100369,
+      "sha256": "df8a3a3563a2d4783f350a5ed60ae652996c67cc751e9cabb997feb03745c582"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Transformation.html": {
+      "bytes": 58488,
+      "sha256": "488cd431c6af5e56ff9fbee0ffb377dfd9ebf60064c0d7743eb2a127d69e1d48"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Turtle.html": {
+      "bytes": 90595,
+      "sha256": "bfb19b3b40e3e761e9bac3a8910cdac3124378d738e4716ad904b6b34deba561"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Util.Base64.html": {
+      "bytes": 38302,
+      "sha256": "e9914787313cce79210c07017480b09e026645dd310e590c324a25e6c09f3363"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Util.UTF8.html": {
+      "bytes": 33627,
+      "sha256": "afbeab94540c076031059f6367728f061134338b1d0e721c6d85ee7b7cac6249"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Util.Unzip.html": {
+      "bytes": 31394,
+      "sha256": "ca63ce8ecd72aa0c5a07e5d657fd66dd446379e5b24d4b45a5fd57401b44a073"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.Util.html": {
+      "bytes": 27762,
+      "sha256": "ca0db6bb1c176c46525b0c91a9258a6239b3e63ee75d03ac51307e8ce0d1cf87"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.VMLRenderer.html": {
+      "bytes": 41825,
+      "sha256": "a89f348e437f676eee49c0f8b0d5b74892ee80b18647850097c130993b94a008"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.View3D.html": {
+      "bytes": 127437,
+      "sha256": "b29d79c0e8530ea61861352efc43cac2955cf67ef355fe6c136f9213a4157251"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.XML.html": {
+      "bytes": 31170,
+      "sha256": "8ae737f3d0c0b8a700d5539b6eb701a183f8e8c84f198ea41bfd33de1e0bcb04"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/JXG.html": {
+      "bytes": 366172,
+      "sha256": "1a66a307fc683db4ad5f5cbe6b8b0ad2fe703e20e72e9e7656c645c1cc75a541"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Label.html": {
+      "bytes": 80804,
+      "sha256": "605d3ec012c945ea8a20dc0b6b8435122cd49cd356059ae1642a551ddcd34052"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Legend.html": {
+      "bytes": 62727,
+      "sha256": "07be86f75963e17219e04616a93c49d932f63eb50d1cfe96277816df9a4591c3"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Line.html": {
+      "bytes": 86338,
+      "sha256": "3e083ef240b031bcea7a7fc81f1d9c67e92674586cf2a0722dfa1e3cfc689c71"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Line3D.html": {
+      "bytes": 75866,
+      "sha256": "2c86e62c32fee9f68cfa42f335a0133f594e726de5113e69edd4394b5424c9a5"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/MajorArc.html": {
+      "bytes": 54423,
+      "sha256": "282a89db758baf5bc9c18516818184dcef98f84cfd8e3c19dc08c4a08ec35dba"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/MajorSector.html": {
+      "bytes": 54426,
+      "sha256": "9eabcb0b3acd4aec656970c2b7502398368612f7d9d94c59e83cd3282c1297da"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Measurement.html": {
+      "bytes": 82246,
+      "sha256": "f13a6b2d32d3b68a2f2e6c0c5a77cbd535a9165679bc4343cc98f4a627db2283"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Mesh3D.html": {
+      "bytes": 56114,
+      "sha256": "8f6bd9a22d507c503dd84a0d984698e74d50914747355f1d6a53ddef5249dcb2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Metapostspline.html": {
+      "bytes": 60531,
+      "sha256": "13bcfef9787f7395396ce72c1ebcc02a82c715df3aa416e5c16cdd5e1bc9748b"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Midpoint.html": {
+      "bytes": 57367,
+      "sha256": "0d613995086fe731c78140d5c1eb1ed36028a468711ff3f095ef18a4647bf5bc"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/MinorArc.html": {
+      "bytes": 54414,
+      "sha256": "52e5a73d6858db74099c37700bbfe277ea13b96933617be02e85dd822995c913"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/MinorSector.html": {
+      "bytes": 55766,
+      "sha256": "b1680ddf03c84588f5f7179f9301fc3edc551365341b99fabc6a72c5060f4e37"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/MirrorElement.html": {
+      "bytes": 53663,
+      "sha256": "e046ddec60146b9a4b52312df31adaa635bb4dad017f926fa60fd6591987772f"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/MirrorPoint.html": {
+      "bytes": 56773,
+      "sha256": "d112e94db1497762c573c5184232f65818f24284b3b3971ed8c7e7b1f61b5ce1"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/NonReflexAngle.html": {
+      "bytes": 56595,
+      "sha256": "60f4cb228a7a89bba5e082ae00ae5ef9c99f2fffba815f2cb5cd260074cfb218"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Normal.html": {
+      "bytes": 55511,
+      "sha256": "afbaa4c1988a4dfd3b469d969017b978e6e7c8790910b9a17f4c5b6f317ad2c5"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Orthogonalprojection.html": {
+      "bytes": 56943,
+      "sha256": "bd57930bd7303c72a477953028d97d843b8718aedf039d660ca85553e5221a1e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/OtherIntersection.html": {
+      "bytes": 61478,
+      "sha256": "25c35015c4814505b0b0a0803b213d62d6f6cd092c48c8f2582724d4765477e7"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Parabola.html": {
+      "bytes": 54289,
+      "sha256": "ec4ed0e54a5e401b00a1418043e9be097e002719d68408fd57b5904174f6137a"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Parallel.html": {
+      "bytes": 56707,
+      "sha256": "0c9111d88f8f376fd6ac96284bcae5d4525e36380630be99a5978abfcf8788ec"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Parallelogram.html": {
+      "bytes": 54333,
+      "sha256": "3db6d0dda9bf5bcd627eb4104b44503cc1d3ab401a4bcf0fe9d1a476a583157f"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Parallelpoint.html": {
+      "bytes": 57609,
+      "sha256": "06d23eb07fb0b37fefc34c6b980ceeb8244b57ff4a2c861e7de7dc059cb86f48"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/ParametricSurface3D.html": {
+      "bytes": 58117,
+      "sha256": "4feed8a9c28723a33d3f10834fb604b0b1ed03511e30054946aaeb38199e9fac"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Perpendicular.html": {
+      "bytes": 54015,
+      "sha256": "450d16dd1d0a2483265860c493e92aeac7940d45997b3fafd92b2a162fc8a4c2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/PerpendicularPoint.html": {
+      "bytes": 57074,
+      "sha256": "9083b22a566308b387e77f82becedf12a510ac582ada4b35dd2b203ae518e881"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/PerpendicularSegment.html": {
+      "bytes": 55462,
+      "sha256": "d34003eca79d90b9b1c3be39e903419485d9fd0515cf171c4420f30ac43b8d5d"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Plane3D.html": {
+      "bytes": 91919,
+      "sha256": "5bb0afc54d9989ce3636e3d12b53ac20a761314323a2c474a79f70e5177ce74c"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Point.html": {
+      "bytes": 87937,
+      "sha256": "68c68b7da77731ee31fe3515462f25e83023f8ec2c9742e3c48a1bd14ad06fa4"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Point3D.html": {
+      "bytes": 69380,
+      "sha256": "86a44fc8b6eca09d1dcbb31181da15f24afcfff232a4433e291999296655fe79"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/PolarLine.html": {
+      "bytes": 55708,
+      "sha256": "21679cf0e7491ace5b3349919c5a2c8fc76f02946f3fe69b689f50e56c48fa12"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/PolePoint.html": {
+      "bytes": 59400,
+      "sha256": "7e98b697b9d446928bb8816ce9afe076c0aba478e4c7015f25da99d4c29e7494"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Polygon.html": {
+      "bytes": 62260,
+      "sha256": "f0352e52aca21e6e9519485e792b75b9e396d429199db2f9545fd0ffd6ed1417"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Polygon3D.html": {
+      "bytes": 50233,
+      "sha256": "581b7d655b6ec9e4b20a1b2eb2c0b176bb7a4dad6cf117091214d0676c1a0fb3"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/PolygonalChain.html": {
+      "bytes": 53163,
+      "sha256": "6d71496c7607795b12687474edc7190dd83cf8e2deaa43a5fc3e71f85ecd6391"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Polyhedron3D.html": {
+      "bytes": 65797,
+      "sha256": "a33d2480c780d6bc9efc94affacf9f6c246a80bcf6820863722bbc20e549ae23"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/RadicalAxis.html": {
+      "bytes": 54408,
+      "sha256": "f5b034ff4c9f6ad78f4df61bd161bdd158407ca56b3211513ddde0704c2500aa"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Reflection.html": {
+      "bytes": 57068,
+      "sha256": "4c964029f53fc4b6fccbd8c8f1c0ff6b2e8fc69fcd15cdf649561930eeda8428"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/ReflexAngle.html": {
+      "bytes": 56563,
+      "sha256": "16cda2352f29ea3ed33074dd8a77e8fd4d573fa31ad22960e9700cdc521148f1"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/RegularPolygon.html": {
+      "bytes": 59585,
+      "sha256": "71d4baf73be0b26fb8c81d663674169323405ba637a8c0f26f395efa060c5404"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Riemannsum.html": {
+      "bytes": 57580,
+      "sha256": "c6c7cb063faa878685d1bbc1de822207e5de7eec90a5e203e2f27883c087a43a"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Sector.html": {
+      "bytes": 82130,
+      "sha256": "082445128569bdf30eec9e1539594461f653148cc8f258f977805bfd2b7721b2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Segment.html": {
+      "bytes": 55775,
+      "sha256": "37a66558c547ec8adf575b734efafd5c59be6bca78ba33cf4b1d903298381f0e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Semicircle.html": {
+      "bytes": 57754,
+      "sha256": "411414a17649e7b49b1c408ff7647ac2a22945cf3eb11e82660033d0b4d10694"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Slider.html": {
+      "bytes": 93318,
+      "sha256": "27929cb83ffbda26a7aefa9391b345d481af133fc21ee8e816b26184a5e00578"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Slopefield.html": {
+      "bytes": 60943,
+      "sha256": "024ac63d738ff12a31bcf5537d6f4dbad0c83043132d7c485f22dfe7acab9124"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Slopetriangle.html": {
+      "bytes": 62681,
+      "sha256": "d45c7fcde207e6becea25ac1d3766d8348eb64ac0ab674669b086e7e48450316"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Smartlabel.html": {
+      "bytes": 75319,
+      "sha256": "5ed4dab1aa1f39f659a44c96cd6577e9a473ce261d5b4339761a1b169208db42"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Sphere3D.html": {
+      "bytes": 55781,
+      "sha256": "29f46e54b39dc3cdeda1e3291cd5df1af645a2a8b611492cf348b481f998c2c4"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Spline.html": {
+      "bytes": 54404,
+      "sha256": "bc4f20302598e56277be8478387f4690b579b0d0e895d5cba3f33e7caf44d0fa"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Stepfunction.html": {
+      "bytes": 53028,
+      "sha256": "1ca4863edea2411ccda1128d0cec834e2c4e9eda3bcd6d47f1f4d2fd1ee468a2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Tangent.html": {
+      "bytes": 54026,
+      "sha256": "c8c1453777bc758add56e3669d44b00034f2ac7e18831f2115d4f6ed14757c70"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/TangentTo.html": {
+      "bytes": 57351,
+      "sha256": "c8d0ad98853ddacc37f4c7bc46c5067675fc02d6afc09926960713b84a392f55"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Tapemeasure.html": {
+      "bytes": 63549,
+      "sha256": "0fab2af13c9fba4638cf14b0899b02da032534910b30f224af77721e86ad12f2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Text.html": {
+      "bytes": 122653,
+      "sha256": "7608b227936143de9c9ae38117539ce01fd413f094ce52781a03918bfe58e7d7"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Text3D.html": {
+      "bytes": 68853,
+      "sha256": "df11a86b0316fe8e6fceea80818d50a3f4741c091c0083458baa67397f9a8855"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Ticks.html": {
+      "bytes": 115312,
+      "sha256": "a66e7cabe58b29d87ab15b0d0f9ffa5677d335feacb46dd2ca36c5c7c60e5d54"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Ticks3D.html": {
+      "bytes": 53693,
+      "sha256": "782207ee2bfb098c5002f10fc71503075d3858d6f036d975051327de9c753950"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Tracecurve.html": {
+      "bytes": 54585,
+      "sha256": "a38187cd1bcece39a8a6d72a8325223f5a1630bfa6e4910c887ab0bff25d9c22"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Transformation.html": {
+      "bytes": 47497,
+      "sha256": "256afbcfe502137ba3f3cd3eeace009838fe52a85d8d0e6a10d7f3172966f174"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Transformation3D.html": {
+      "bytes": 36187,
+      "sha256": "52443936a4140a0ca614e4775eb525f70c0aa2f3207f433adcdb2678f09c0e95"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Turtle.html": {
+      "bytes": 37074,
+      "sha256": "0022a8931eff4de16198b241b3a98f457bef2cb4b199a537d566298125b499e4"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Vectorfield.html": {
+      "bytes": 61904,
+      "sha256": "bcf7af611a557d452fd94f9c36c5b4feb0e6df9603b5ef9e037379d53fb04f46"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/Vectorfield3D.html": {
+      "bytes": 59641,
+      "sha256": "a3eef4272bb4340a7f58ddb639f9642e13f6d843c25dd905c3f474995c973b9b"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/View3D.html": {
+      "bytes": 131519,
+      "sha256": "e5b158dfe8950b3aefacb0f61ebc5674afc1dddb8ac69e3c8d4d31cd001087a9"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/_global_.html": {
+      "bytes": 27686,
+      "sha256": "f90b525260f1c7cb415947ba462453f92bd7bd6b7d34f47dd2893e9e1d7e6afe"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_box3d.js.html": {
+      "bytes": 116315,
+      "sha256": "97c20fb3fb6f668e20fc8a8a6c85973246bd34d0f7e37249ce5ec99a6d2eac90"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_circle3d.js.html": {
+      "bytes": 71406,
+      "sha256": "7175424a9a32b3dfae281d799c48499914c489b025ea5687134e2e606de871fb"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_curve3d.js.html": {
+      "bytes": 152991,
+      "sha256": "38ad945af34c1323ee408b6f84b26dd3484e33a6af5dbddf367f602f66947a06"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_element3d.js.html": {
+      "bytes": 44701,
+      "sha256": "65fb028263e5b3ea1f32447ba90b2af4422a7d15f6f8f9062bc3cd3b87f8c29f"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_face3d.js.html": {
+      "bytes": 84723,
+      "sha256": "ca10fb95b7663363f10adc0a1b3b189ee27e4d1a20051f12b89263ef1751775f"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_linspace3d.js.html": {
+      "bytes": 334317,
+      "sha256": "9840feb1da4316ddf570a96f6c3b317f437426a064c9524837a9fc7f7db44b99"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_point3d.js.html": {
+      "bytes": 151906,
+      "sha256": "a6a64e85e7a43cfdba1183c13b1476ac688169fbfb78c6ddff87e8d218640b06"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_polygon3d.js.html": {
+      "bytes": 45264,
+      "sha256": "41b2e7facfef043caf25c5990a51a4d02f8a5c2790402bad1d0dacf27a2e94f2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_polyhedron3d.js.html": {
+      "bytes": 82290,
+      "sha256": "5ce3ae56a63100f8349a91fce0d2ba4a049deeb74750026b7319eb93729e4243"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_sphere3d.js.html": {
+      "bytes": 123581,
+      "sha256": "febf505572e8714de68b793614591dfc8db96d8e40aa51ec209591f210216d42"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_surface3d.js.html": {
+      "bytes": 113939,
+      "sha256": "5b1e51abac53f0f234390ed4c1ccdf39535a8b4b7f8cb7dae16a50faf45a370d"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_text3d.js.html": {
+      "bytes": 79612,
+      "sha256": "5ffb19246c2ed746d099fb143dcc96ea092fa174aec04f77c0c2254b5176a474"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_ticks3d.js.html": {
+      "bytes": 56606,
+      "sha256": "67a0ea68eb96b560a5a335d4ce1c1cfd9d1ed1321523492cbfadb974f7ae9e95"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_3d_view3d.js.html": {
+      "bytes": 627613,
+      "sha256": "f517186916dfbc4dd62ff11de6cfb16753a8cfb24b0c13fff847794b8ffdf5c5"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_board.js.html": {
+      "bytes": 1755692,
+      "sha256": "4b26745d10cfffe929d7d634312733720ab211a64e8f0e7f74df31d0a710abea"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_chart.js.html": {
+      "bytes": 334650,
+      "sha256": "fb001f6b4019756a3abdb933dc668070c709a6aade0abc03fdd26a03a8321866"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_circle.js.html": {
+      "bytes": 225420,
+      "sha256": "4e56f479f7f4b049e95180a3cf8e360070ced1bdfffa314127d2571d04eed02e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_composition.js.html": {
+      "bytes": 44483,
+      "sha256": "5af3dd41625acc481b52da6a3f664d6eb1b6a01e8f0d6839eb8f2d95155d7aa4"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_constants.js.html": {
+      "bytes": 27858,
+      "sha256": "a6a1151585c0c6e2d40a0ca604ab9dac3d8f01c046b1e8add1c437019e4fd04d"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_coords.js.html": {
+      "bytes": 54229,
+      "sha256": "af7fb290aed6c95c94858e08022374ef469a200efca048b37ddfba84d8fa13ba"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_coordselement.js.html": {
+      "bytes": 565608,
+      "sha256": "d2deba7f9f1e252bac87f7b72b91470cae3b2c569e4bad5d4fed6d0f80de82e6"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_curve.js.html": {
+      "bytes": 678191,
+      "sha256": "1fe68af5859f7f04195f1c42366b2b8b80e1ab70171d3fda98e18f1dba1d321e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_element.js.html": {
+      "bytes": 555152,
+      "sha256": "469705deeef033f87c49e27e37a829afe338d595ed126a05596789870452afcd"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_foreignobject.js.html": {
+      "bytes": 89112,
+      "sha256": "dc6d000de63d3226c1bcd6ebad6fee418c21f95d323f0476c5635e627a5f5d22"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_group.js.html": {
+      "bytes": 189204,
+      "sha256": "9961d3754afb4da074a8c08869df262b48ad9af419cc578929187f149f03ed28"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_image.js.html": {
+      "bytes": 84375,
+      "sha256": "aaea4e40dc795322b8954d4b197c779d06609b11de3db179be419793bfcfff86"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_line.js.html": {
+      "bytes": 732361,
+      "sha256": "472f9c039d4f32301fde7d92a5f871e031edd8acf35e4d49ae20c0ae95239803"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_point.js.html": {
+      "bytes": 179782,
+      "sha256": "9318c648239fc04f715c61e8877b44562b1beb9ca29b100385b73a991953394d"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_polygon.js.html": {
+      "bytes": 303778,
+      "sha256": "a4a2dd92ecdac96299952122f0bafbcbeaa8f3c841f413f3fadb72527fed251d"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_text.js.html": {
+      "bytes": 375571,
+      "sha256": "7b73cb880e98c88336d31e6fe2aff10dedb21ffe047de226c4ea727fe5f1a64b"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_ticks.js.html": {
+      "bytes": 424526,
+      "sha256": "505315d2fa8157654c10548dc7b77879bb8e356c0af28f22bead728487f546e8"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_transformation.js.html": {
+      "bytes": 218570,
+      "sha256": "3fc0cd85250a644b939e967671032f0ef4e7a54bc424724465ca2667a882e96b"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_base_turtle.js.html": {
+      "bytes": 176869,
+      "sha256": "ec957f6b3f639382657f889d0ba4a9c600d85e8c18138c2b993fecb0e0359068"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_arc.js.html": {
+      "bytes": 129674,
+      "sha256": "180056046f1369588f4e6a4e06ecd83eaf2e753a4e18ca777883321cbfadcd39"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_button.js.html": {
+      "bytes": 35356,
+      "sha256": "2a371311cafb3051ede9f1b6663fe55400976a326483026e8be50896cc613c7e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_checkbox.js.html": {
+      "bytes": 28687,
+      "sha256": "cd09722e1a89e8a0fe31efbb1ba192b0646a50ead7776cad515a0de18cd170b0"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_comb.js.html": {
+      "bytes": 51860,
+      "sha256": "5dcfcc149c911a03f4adfa486c9c6a17690ca329ff7ca4a5c823b8273e164020"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_composition.js.html": {
+      "bytes": 624545,
+      "sha256": "7b3f4664c860f72bb312c93a145f0e0cfc84127ac99ad46a1e54eb1f729275a8"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_conic.js.html": {
+      "bytes": 304545,
+      "sha256": "0785d095d930d447533a449c650354fc8374081812e5ef233e93164a81bbdd5b"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_grid.js.html": {
+      "bytes": 308029,
+      "sha256": "13147174151c4f4f525b500c5b22b2e8d31402a9e49e82d27e0975ed1034649e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_input.js.html": {
+      "bytes": 46614,
+      "sha256": "7a7493e386947ec1411f4cce96ad3cc091a036d788b491965e2ab5f7ad5ce8e5"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_measure.js.html": {
+      "bytes": 94442,
+      "sha256": "0a58e62a566c62dd28919f9806a9c3bdbb77b2c4d1c8471df8067211a5207dfc"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_sector.js.html": {
+      "bytes": 394703,
+      "sha256": "0fbef23afb36c36e9af53e138b03b6bbb6a81de9e615c05b26c44769deb27f5f"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_slider.js.html": {
+      "bytes": 99847,
+      "sha256": "a7fc42f644d4b27b56ef661c495351417fa94138029e498dc6d603cd0c7c5e56"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_slopetriangle.js.html": {
+      "bytes": 53700,
+      "sha256": "05c1fdfb2826d1fa82c7dd24b1ca90294a6b624667f2ef786b27099acf8c20ec"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_smartlabel.js.html": {
+      "bytes": 108199,
+      "sha256": "acbd572b5e0cc2452ea649478bf61ca4fd1953778c14d4a1db544a59899d1ed0"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_element_vectorfield.js.html": {
+      "bytes": 71752,
+      "sha256": "e00c2661e51f417944ad10a591f6a4e4eda4ede4d8240c73f35a008f23b1f8a5"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_jsxgraph.js.html": {
+      "bytes": 186363,
+      "sha256": "5022f45e8bd3879dd76893151499547cc03158554f3976d39822d8218c841d2e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_jxg.js.html": {
+      "bytes": 61943,
+      "sha256": "cafe057e633420141f2e0517b20fba4d52ab84849ad15949008bee49eb891d42"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_bqdt.js.html": {
+      "bytes": 108482,
+      "sha256": "afee4f2907c123650b8243a5b81134c31c6383a532957ea33da96c04f161c098"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_clip.js.html": {
+      "bytes": 472674,
+      "sha256": "79c0403e213925f8c127b9dadd021eecae38bb3e13ad35eba40277171fde3251"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_complex.js.html": {
+      "bytes": 53501,
+      "sha256": "106540e4f0bdc3fa57871640d4b807ebb6e7b9eb39335c37e08aff746e66913e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_extrapolate.js.html": {
+      "bytes": 94651,
+      "sha256": "52380c0f50efd95b8b10f1891d6e03cfc0b4667d91044fe7118aa70d88e21b3b"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_geometry.js.html": {
+      "bytes": 1178103,
+      "sha256": "e87129529f653e245cb1e662133662deb48f0883189f1a9a8deff2bfbfc920d7"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_ia.js.html": {
+      "bytes": 396824,
+      "sha256": "177f259057cc04b5c0f66b78978f7df501a24b7a4164c7d766a214283f1b74c1"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_implicitplot.js.html": {
+      "bytes": 252502,
+      "sha256": "75db7cd1e8622efa379151afc33e8a1f530d9011bfd6f49632ef1a7f2dc234fa"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_math.js.html": {
+      "bytes": 301082,
+      "sha256": "fad486ae4235b511ae7777db8f58eda5bee3a5777646054561b8ffb7c980795a"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_metapost.js.html": {
+      "bytes": 214196,
+      "sha256": "c0f03b082494ece4fb83c8889c563c012d01e30e110ce7d5c293fe25006eab63"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_nlp.js.html": {
+      "bytes": 417873,
+      "sha256": "8c1086968cbee8708cd7f7266fd3cff53d9871b4ab93e12bc83703e1971c51bb"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_numerics.js.html": {
+      "bytes": 1204664,
+      "sha256": "7b1d538b2e055cfeb2e3177d0c456b73d44f00aac4f1dfa37ba47b42b4b584c9"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_plot.js.html": {
+      "bytes": 680878,
+      "sha256": "d7c6b597ed6a44abb138baf2ce5fe9a353c5b202b9094451e7bede903cab79c2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_poly.js.html": {
+      "bytes": 51149,
+      "sha256": "23b4672d8481554d736a384eeb967f78c8e25287929155f2b4d7cfb07137d19e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_probfuncs.js.html": {
+      "bytes": 100645,
+      "sha256": "3a5de580ee17feb38e8e1d1a961ae29aae82bce27c6099b54b102a88eae769a2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_qdt.js.html": {
+      "bytes": 64162,
+      "sha256": "6d7d181d9e97a1ae30a798c132a53fffcd0faa0c8c8f8649438cc0ad43d5bcf1"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_math_statistics.js.html": {
+      "bytes": 262791,
+      "sha256": "9989f9c13029d572afe33fe4ebd4e2a5dfff5a29e446c9f52be20a0e6fcdec0e"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_options.js.html": {
+      "bytes": 1071874,
+      "sha256": "cd63b357c5c69b65de4011a04b7710eba662895ed38916bb00647817bdb22ae9"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_options3d.js.html": {
+      "bytes": 191472,
+      "sha256": "1f9bf48fa8c873b875024ab34deb7351043240664fbdff465668d00f3ce21c12"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_parser_3dmodels.js.html": {
+      "bytes": 32564,
+      "sha256": "fbb625e4a7c9622dda82ab276e04c9608fd7bc17a71b655e042510f6d481e499"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_parser_ca.js.html": {
+      "bytes": 392930,
+      "sha256": "874d15d91573ba4d84f003384ec9876be8df57bb23bd74e9021154e4fcc3d45c"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_parser_datasource.js.html": {
+      "bytes": 54124,
+      "sha256": "6f0b7663a9f5e2e59da43a618614092e0457050db8768f6b57b4d17355e19809"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_parser_geonext.js.html": {
+      "bytes": 139278,
+      "sha256": "fff13f25b87e48a81e80b8488f004c9f275e8fd7a7eb4f965b163dbb41005edd"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_parser_jessiecode.js.html": {
+      "bytes": 1311809,
+      "sha256": "4573a7b5377849066424df2c20423ee89292191fe447cd5634749bf46dc34862"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_parser_prefix.js.html": {
+      "bytes": 86250,
+      "sha256": "8215d0281b23a6ab1e764eb87da70c67a7fa3e5bee4c7e75f9a04f2893267bf6"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_reader_file.js.html": {
+      "bytes": 51186,
+      "sha256": "dba8ef58a3308972d530a772968ca3bc40ebff7fd7ad68273e90fca8351bf1c7"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_renderer_abstract.js.html": {
+      "bytes": 466514,
+      "sha256": "63c4c2bfc94087063d9e9c0e6a1160141ad9128754eee7e0d5ba5910f4884f88"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_renderer_canvas.js.html": {
+      "bytes": 468660,
+      "sha256": "72051344ef36420c6912725691e75463853751494428f8422c0b0d89f4547232"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_renderer_no.js.html": {
+      "bytes": 40611,
+      "sha256": "caa05a6e8174de216bb63fb642481da728289460c4a05386bd9f82a16c9b5f45"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_renderer_svg.js.html": {
+      "bytes": 609002,
+      "sha256": "a64060645523d72ec48db8537a3642e7dac01afbfa10d3d45db799f30a250979"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_renderer_vml.js.html": {
+      "bytes": 353823,
+      "sha256": "6b70c2e354bc9f402a905cb2de4a8889e1d2d85d39287e322ac41c31b7c25cfc"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_themes_mono_thin.js.html": {
+      "bytes": 79535,
+      "sha256": "e2d7ab46ecbfff6a778dcbea77aef267a3477a913032e8174b45bee117f7ac54"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_utils_base64.js.html": {
+      "bytes": 47215,
+      "sha256": "7ea6987b5874215934e78b11e1092065abaade4498b195044dfd921ac1505cfb"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_utils_color.js.html": {
+      "bytes": 255741,
+      "sha256": "609b4d7d9b0bc834ce087cdec0a07b5ccb02b929fb6c3c383aeea341bef72b0d"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_utils_dump.js.html": {
+      "bytes": 99135,
+      "sha256": "38d019865b0746b81d1f77ae292a389561dbc2bcec95bd2d3c9cc625831f3fc6"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_utils_encoding.js.html": {
+      "bytes": 78506,
+      "sha256": "17282babc011d522f587a842b897fb4a9422a5df93078e437b4b1aae2edc6af2"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_utils_env.js.html": {
+      "bytes": 219691,
+      "sha256": "9b6718b687d47efce48d279a769a034385a81bf3d1a657e65505820e7919e462"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_utils_event.js.html": {
+      "bytes": 26751,
+      "sha256": "4698c6e6a6d8d52cb50d8f205f2d739bcc07040c12419e425e6fa8ea268fadbf"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_utils_expect.js.html": {
+      "bytes": 19205,
+      "sha256": "93c8f0873d051728ec8d208ff05ccea466366f708649ad9095ebc3014f0425fa"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_utils_type.js.html": {
+      "bytes": 424232,
+      "sha256": "9cd81a80f73ddbc531caf4e9a1c0fac9eee8eed272620f95ab5af93ea49e050b"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_utils_uuid.js.html": {
+      "bytes": 13429,
+      "sha256": "cc2e45442afc1478c60892da57ec77eb19b2f5db3171ce3b886d0a8942f27cba"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_utils_xml.js.html": {
+      "bytes": 15391,
+      "sha256": "a58a60664f9f80f939948b3b339c5178b56ebe36c153f607704099366b0a9bc6"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/src_utils_zip.js.html": {
+      "bytes": 224269,
+      "sha256": "71a3c384706fec6304758c8f689d84a81ae47f76f7797883993c3a2094a9179a"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/static/expandable.gif": {
+      "bytes": 85,
+      "sha256": "7ef42bce354d40a9fb5d88e789a8d7155ff8eb69dabccb5a791345a2327c0b10"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/static/logo.gif": {
+      "bytes": 830,
+      "sha256": "f6927a0aab5da0bcde4d9d5bcce6200f1534b75da29b06f7127704e7d02c85fe"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/static/logo.png": {
+      "bytes": 3556,
+      "sha256": "c341aa1654c556f4ab14c7099170f9d701ef7d4f2744a8b9ee9701f625d0de68"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/src/static/logo_tw.png": {
+      "bytes": 13510,
+      "sha256": "5f3092b2540dc7f2276ac2de18aa13c48873e1d703d21de5c437afc172d1d571"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/static/expandable.gif": {
+      "bytes": 85,
+      "sha256": "7ef42bce354d40a9fb5d88e789a8d7155ff8eb69dabccb5a791345a2327c0b10"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/static/logo.gif": {
+      "bytes": 830,
+      "sha256": "f6927a0aab5da0bcde4d9d5bcce6200f1534b75da29b06f7127704e7d02c85fe"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/static/logo.png": {
+      "bytes": 3556,
+      "sha256": "c341aa1654c556f4ab14c7099170f9d701ef7d4f2744a8b9ee9701f625d0de68"
+    },
+    "vendor/jsxgraph/distrib/docs/symbols/static/logo_tw.png": {
+      "bytes": 13510,
+      "sha256": "5f3092b2540dc7f2276ac2de18aa13c48873e1d703d21de5c437afc172d1d571"
+    },
+    "vendor/jsxgraph/distrib/geogebra.min.js": {
+      "bytes": 52547,
+      "sha256": "3d234f17b1c38ccee84b05ec40e60ab7a5a177d6610e56170e35eb1a0b44f197"
+    },
+    "vendor/jsxgraph/distrib/geonext.min.js": {
+      "bytes": 26397,
+      "sha256": "349ee974965a1ff0e873e858f2907e55cd87276d0b2ddcb5f6c17116317d8e97"
+    },
+    "vendor/jsxgraph/distrib/index.d.ts": {
+      "bytes": 208648,
+      "sha256": "e6e0ade3140f16f143e0aa45f815404af007a6cfc0a4604480089a2459e8f0b9"
+    },
+    "vendor/jsxgraph/distrib/intergeo.min.js": {
+      "bytes": 19889,
+      "sha256": "a2241463f6ee58547dfb8663b6a7c09c847b9639bd8b664201b293f3d165c773"
+    },
+    "vendor/jsxgraph/distrib/jsxcompressor.zip": {
+      "bytes": 371258,
+      "sha256": "b2fda1cc31e3afa01ceb9bfedd427b39b8505fa16ec67188bccd31e45a48582d"
+    },
+    "vendor/jsxgraph/distrib/jsxgraph.css": {
+      "bytes": 4767,
+      "sha256": "7ab6241b7d2287094b48aea09540121fa3dc76394fdd96c06784ca2ba6d88c9f"
+    },
+    "vendor/jsxgraph/distrib/jsxgraphcore.js": {
+      "bytes": 961680,
+      "sha256": "4a7e1ac3303d76f9ae84a4205e275beef5b45354b3e39f6037c30bf2743c975b"
+    },
+    "vendor/jsxgraph/distrib/jsxgraphcore.js.LICENSE.txt": {
+      "bytes": 127,
+      "sha256": "7f15c10b7ed23971076d2eae092f817ff481e14cfe9fd9ecf61be5345e9981ca"
+    },
+    "vendor/jsxgraph/distrib/jsxgraphcore.js.map": {
+      "bytes": 4511451,
+      "sha256": "758e615ce149759efc8ebc818363b9c0d61a254145bbd564a6fe26e74c3cb698"
+    },
+    "vendor/jsxgraph/distrib/jsxgraphcore.mjs": {
+      "bytes": 963151,
+      "sha256": "d04938441559994e68ccb5e8299ad07faeaefc15d85eda521b63322e3fac63e7"
+    },
+    "vendor/jsxgraph/distrib/jsxgraphcore.mjs.LICENSE.txt": {
+      "bytes": 127,
+      "sha256": "7f15c10b7ed23971076d2eae092f817ff481e14cfe9fd9ecf61be5345e9981ca"
+    },
+    "vendor/jsxgraph/distrib/jsxgraphcore.mjs.map": {
+      "bytes": 5660556,
+      "sha256": "f5565105acbe81ddebdf65e016330fdfacdf78b985e8279269adb38d537cdf45"
+    },
+    "vendor/jsxgraph/distrib/jsxgraphsrc.js": {
+      "bytes": 4391586,
+      "sha256": "58ce9dd20d87daea55cf46217ef7d78e88f2ad079d9835b7d4505030c74fedd6"
+    },
+    "vendor/jsxgraph/distrib/jsxgraphsrc.js.map": {
+      "bytes": 4086012,
+      "sha256": "823dc298dd8a03e4c38e67c47f6416200f4554e2107c6c4b5ad96afcc8afc136"
+    },
+    "vendor/jsxgraph/distrib/jsxgraphsrc.mjs": {
+      "bytes": 4393962,
+      "sha256": "943a3814d641c1d5438de47e1df9c5cff60e65d10e28789a8ea81a4b40690a20"
+    },
+    "vendor/jsxgraph/distrib/jsxgraphsrc.mjs.map": {
+      "bytes": 5118663,
+      "sha256": "07c774e00c9e31c644c1d17115fb5eda0b9c2eeb2abefe6e77affa4c92a55a33"
+    },
+    "vendor/jsxgraph/distrib/sketch.min.js": {
+      "bytes": 44906,
+      "sha256": "9371ce553a082a883bb6d2367929413781260d93350a669cacfde2e6b6a948e5"
+    },
+    "vendor/jsxgraph/distrib/themes/dark.js": {
+      "bytes": 3646,
+      "sha256": "4c4239389eafcdeea174005e3c421f3d20507eb57eb100f74e75a3ced988794b"
+    },
+    "vendor/jsxgraph/distrib/themes/gui.js": {
+      "bytes": 6893,
+      "sha256": "96b4cc620cd59362e3c9400fb764ab83a9ea6b9658b1101cb7c51bbc332bbda9"
+    },
+    "vendor/jsxgraph/distrib/themes/mono_thin.js": {
+      "bytes": 10999,
+      "sha256": "d0349bbfdaba92fc1aeb7b76333b3bcc4fede1cfd00c1343e1d1a4ad7697f7d3"
+    },
+    "vendor/jsxgraph/extensions/README.md": {
+      "bytes": 1896,
+      "sha256": "a4c0d824b8ac2a30ea0277f7ca8e5e06831881f9676ca4dc3a22341c6a611dc8"
+    },
+    "vendor/jsxgraph/extensions/centroid.js": {
+      "bytes": 4585,
+      "sha256": "80de4409c660f007c8c7166a6235aeec6b8311b79fa92401ff1b4ea6bc9032eb"
+    },
+    "vendor/jsxgraph/extensions/square.js": {
+      "bytes": 5545,
+      "sha256": "b18eeebd21cec2e1a4a28f5d523e1ed74755a3ef8e8d992996458892d570b3d7"
+    },
+    "vendor/jsxgraph/extensions/triangle.js": {
+      "bytes": 3617,
+      "sha256": "83deff2c098b200ac42533d8b5cdec90e90489a31637ea08ed05dc3ec59577a2"
+    },
+    "vendor/jsxgraph/package.json": {
+      "bytes": 2420,
+      "sha256": "aca9884b2f36c3820d714d97651d66b3373e9cce2a63013fc8fab846daa65ba4"
+    },
+    "vendor/jsxgraph/src/3d/box3d.js": {
+      "bytes": 13489,
+      "sha256": "432e3f580e61dea2a56cf986df1fdf6618a6729187a3a2f27036933903e34df1"
+    },
+    "vendor/jsxgraph/src/3d/circle3d.js": {
+      "bytes": 14558,
+      "sha256": "3aa3222560205e326fd89bb9bbbd8704cf0c21656cc6b4a6947c745d01c909fa"
+    },
+    "vendor/jsxgraph/src/3d/curve3d.js": {
+      "bytes": 22600,
+      "sha256": "99c9c477061001a7434f0061aca42f793f172f663d44c213c88fb37263e89a56"
+    },
+    "vendor/jsxgraph/src/3d/element3d.js": {
+      "bytes": 7418,
+      "sha256": "7ef1ce875c27376081c92e437b57fd100b2d09ec38cb366322cd062fcbb547c0"
+    },
+    "vendor/jsxgraph/src/3d/face3d.js": {
+      "bytes": 12226,
+      "sha256": "49b270623725b4462c47795ffa2398399fb9e2266369ac7f05f1e307dffd515c"
+    },
+    "vendor/jsxgraph/src/3d/linspace3d.js": {
+      "bytes": 64657,
+      "sha256": "081c75073511c090cad8ec0c28cef23290901804c87d0e20f9bde919db9d015b"
+    },
+    "vendor/jsxgraph/src/3d/point3d.js": {
+      "bytes": 32584,
+      "sha256": "7e44e1f63aecbefa34b6dc829e77d586302f4805877d0e8c90ece7d7fce3e9d3"
+    },
+    "vendor/jsxgraph/src/3d/polygon3d.js": {
+      "bytes": 7192,
+      "sha256": "eab06ede8d5fe03a44dc85513d3c25b13e9fa7ccd378bb733378fbbf54785c84"
+    },
+    "vendor/jsxgraph/src/3d/polyhedron3d.js": {
+      "bytes": 20604,
+      "sha256": "593e8fbb51cc340fdf6b507bc17a62323188b37682abeb66d5d5e7ce9aa03e6c"
+    },
+    "vendor/jsxgraph/src/3d/sphere3d.js": {
+      "bytes": 23193,
+      "sha256": "8b7c6ecb09eb0adfb746bff3d3dce078b48d0acc77baac423b7484a4c90402cb"
+    },
+    "vendor/jsxgraph/src/3d/surface3d.js": {
+      "bytes": 18463,
+      "sha256": "9e18674dbdafc66a2f68df1685403edc88fabaf8fb772c48d0f78f97ece7ea50"
+    },
+    "vendor/jsxgraph/src/3d/text3d.js": {
+      "bytes": 15800,
+      "sha256": "a549d00a0c6697f2d0813ed2d3b2ff96162e4613af1e67e5c0405a0649b8b588"
+    },
+    "vendor/jsxgraph/src/3d/ticks3d.js": {
+      "bytes": 6465,
+      "sha256": "25cb4ea59abbc9c5cb80dbf992207c45e431d1d323d77fbe4a75e3b10e72dedc"
+    },
+    "vendor/jsxgraph/src/3d/view3d.js": {
+      "bytes": 99137,
+      "sha256": "0877a7c8e768d0fdac3cc93c1777703652d4f63764cfdd3ed76a280eea9720c4"
+    },
+    "vendor/jsxgraph/src/base/board.js": {
+      "bytes": 322314,
+      "sha256": "41cceb9205840fdadabbd86b929234de6cbb5f467d7a6099ca7d64bcbde6d3ee"
+    },
+    "vendor/jsxgraph/src/base/chart.js": {
+      "bytes": 60296,
+      "sha256": "da0854c58cbe34e099ba5495cca617c16884368300728768963d7883e10bcb6f"
+    },
+    "vendor/jsxgraph/src/base/circle.js": {
+      "bytes": 39282,
+      "sha256": "20a07112e94828d5771011a6de16cf43f6ffce4bc55a0280a89511348a91e98f"
+    },
+    "vendor/jsxgraph/src/base/composition.js": {
+      "bytes": 9592,
+      "sha256": "e4be412aaa0ef28245f5338fc2a020b44aeea571b2bd25135d39887e9151d039"
+    },
+    "vendor/jsxgraph/src/base/constants.js": {
+      "bytes": 7452,
+      "sha256": "d619d2b01229a912fbc4812c0d0c511a1b73297df3105ef52bb2f3ae60b578de"
+    },
+    "vendor/jsxgraph/src/base/coords.js": {
+      "bytes": 9287,
+      "sha256": "a17b77e0c8de8e2e9111debf54acf5de02084787f86b949cf00c77bf73d8c5b7"
+    },
+    "vendor/jsxgraph/src/base/coordselement.js": {
+      "bytes": 104373,
+      "sha256": "6f4bf0f721156f832d53f1b7bd414618dc4877ce6078360f0435a34b877c6e20"
+    },
+    "vendor/jsxgraph/src/base/curve.js": {
+      "bytes": 134091,
+      "sha256": "fc985a828b34e89dea56e8ff7a23d84be55088cfc7ed2de7d84ff6aed0145c49"
+    },
+    "vendor/jsxgraph/src/base/element.js": {
+      "bytes": 107712,
+      "sha256": "1bf4e70fe71c5d4bbbd5ba64570749360569a856fba456705a75b5bcaf3b47bf"
+    },
+    "vendor/jsxgraph/src/base/foreignobject.js": {
+      "bytes": 17992,
+      "sha256": "5253f9760c8bc9c710f3d15fc084316fefa9a0064f28ef04f47ffdde032c56c0"
+    },
+    "vendor/jsxgraph/src/base/group.js": {
+      "bytes": 42231,
+      "sha256": "a3cb458bc31223d9e6dea1a19a9d511ab32a5a801897eb9f1969fc2976a255ae"
+    },
+    "vendor/jsxgraph/src/base/image.js": {
+      "bytes": 16255,
+      "sha256": "424d25bc8edabf5428932ba3bec90e5db3854699146b8d937137bc89cddf2f68"
+    },
+    "vendor/jsxgraph/src/base/line.js": {
+      "bytes": 118210,
+      "sha256": "f0e2d4f944c1f6efef799a3fd76208679988236c1dbe8d3fd8e6d25ef8cf0534"
+    },
+    "vendor/jsxgraph/src/base/point.js": {
+      "bytes": 44035,
+      "sha256": "53532d6e7bfb02ccdc975f61b999e32669a688b0fdc99a24112a04099a0f6ab2"
+    },
+    "vendor/jsxgraph/src/base/polygon.js": {
+      "bytes": 61569,
+      "sha256": "9fdc6e084d9521b736b1a0e5caad5d5d75ebb78356ea251fc3f4826cde634a95"
+    },
+    "vendor/jsxgraph/src/base/text.js": {
+      "bytes": 70353,
+      "sha256": "39ffde3199fdb6425cab25a3c3a1f4c073a9aa0d8f570bc65cca2d9724a91cc4"
+    },
+    "vendor/jsxgraph/src/base/ticks.js": {
+      "bytes": 78120,
+      "sha256": "03774f6d1ae9715d1ab6eedb901e757d39d1cade1248f9a9bcfd0bbf5a2f1f5c"
+    },
+    "vendor/jsxgraph/src/base/transformation.js": {
+      "bytes": 50073,
+      "sha256": "1fddb2c4677a65babc4379bfe6017ceaa3bef28bb50bb623799bb3301cf73bef"
+    },
+    "vendor/jsxgraph/src/base/turtle.js": {
+      "bytes": 29550,
+      "sha256": "4f56775b545e76f45931620e73c00da8fde484bcfae8f5078a7a46b9eeec1a60"
+    },
+    "vendor/jsxgraph/src/compressor.js": {
+      "bytes": 329,
+      "sha256": "d6fca4955d2fe0f6120457155d5166edbcaf0499d41e164269f803383adebc80"
+    },
+    "vendor/jsxgraph/src/element/arc.js": {
+      "bytes": 24160,
+      "sha256": "92fa7fbb7233d6452cfb1fbf7f27233059e1b70943309d0aeba5f817231bdbf1"
+    },
+    "vendor/jsxgraph/src/element/button.js": {
+      "bytes": 10380,
+      "sha256": "e1c99c99de77484502e064d39d424406ff55c24aab97f8d714b815c25030bcd3"
+    },
+    "vendor/jsxgraph/src/element/checkbox.js": {
+      "bytes": 8764,
+      "sha256": "674b208767a7b62181c3e6ea971f52d498f2522e92d507d0aa2ebe2beebe0f98"
+    },
+    "vendor/jsxgraph/src/element/comb.js": {
+      "bytes": 9535,
+      "sha256": "777de71eff47803816d900323fef04230017f417f466e4d6760543c48d6b198d"
+    },
+    "vendor/jsxgraph/src/element/composition.js": {
+      "bytes": 111337,
+      "sha256": "6c6a2ed6e7d140390581dfe930a147c3b8e24ee77b126a752ae4678c867e3221"
+    },
+    "vendor/jsxgraph/src/element/conic.js": {
+      "bytes": 38434,
+      "sha256": "da3ce6053f54697c7ae7185611768ea2a40c791ec59c8da56822393ea7ceab09"
+    },
+    "vendor/jsxgraph/src/element/grid.js": {
+      "bytes": 44757,
+      "sha256": "a07f4a9a5d29dc842e95958acc74396720cdccf3d91ed843def57b7cefd0c4fe"
+    },
+    "vendor/jsxgraph/src/element/input.js": {
+      "bytes": 14448,
+      "sha256": "296d87782d1b4657760978abcc7db2ad0d0e08354a96e190a8a01fc11cb3d2da"
+    },
+    "vendor/jsxgraph/src/element/measure.js": {
+      "bytes": 15543,
+      "sha256": "c55d6ab4e52273bae05842652aa54c908d4749fde4f6e96357c4b7fa92c24aa3"
+    },
+    "vendor/jsxgraph/src/element/sector.js": {
+      "bytes": 69970,
+      "sha256": "16d0d1e667a097b819e5e7c26fb60c4137dba1f05f569bb5e62955a9d09f46ae"
+    },
+    "vendor/jsxgraph/src/element/slider.js": {
+      "bytes": 19258,
+      "sha256": "f3aede3983846c3c401522823dc3a13b89c4f816e8b03cbf076f3bb9a9e41aca"
+    },
+    "vendor/jsxgraph/src/element/slopetriangle.js": {
+      "bytes": 9376,
+      "sha256": "39307fa83f9a1b1bf59fdcfe0d33989854a96b742a9efcede05c1ab4ac17fed7"
+    },
+    "vendor/jsxgraph/src/element/smartlabel.js": {
+      "bytes": 18498,
+      "sha256": "b1b41fe692455be604a8b83f399430735a9fb98c252c8485baba221357b23c25"
+    },
+    "vendor/jsxgraph/src/element/vectorfield.js": {
+      "bytes": 14950,
+      "sha256": "b584e3bfb9f48d10a87fb661c807c84072aa389354471161986b406b6071e362"
+    },
+    "vendor/jsxgraph/src/index.d.ts": {
+      "bytes": 208648,
+      "sha256": "e6e0ade3140f16f143e0aa45f815404af007a6cfc0a4604480089a2459e8f0b9"
+    },
+    "vendor/jsxgraph/src/index.js": {
+      "bytes": 9119,
+      "sha256": "f46304602fda3b6ffa3a4fc801a9f3ede499b63b76a33a98f9e24575874a6c6a"
+    },
+    "vendor/jsxgraph/src/jsxgraph.js": {
+      "bytes": 35006,
+      "sha256": "c540bcae94d4847e18fe004eb3d9c27b972fec9cef8e908d74670a9eef25a89f"
+    },
+    "vendor/jsxgraph/src/jxg.js": {
+      "bytes": 13180,
+      "sha256": "3059f85d8f09cd406c29cdb47b17cf536dde15d09b3fdb0f0bc975c2e2bd610b"
+    },
+    "vendor/jsxgraph/src/math/bqdt.js": {
+      "bytes": 16510,
+      "sha256": "2a616efceb61dca26993538c30c39d130862824d71750cfa64bd643c2fbafc78"
+    },
+    "vendor/jsxgraph/src/math/clip.js": {
+      "bytes": 84514,
+      "sha256": "a3b038971eae79be4499039642eb1e98c38b0f3e266016e53e19d989df569d9e"
+    },
+    "vendor/jsxgraph/src/math/complex.js": {
+      "bytes": 10404,
+      "sha256": "6cceda9f135cbdb8daa47baf066aefda297abe6a5e96a5656ac998e674086ebc"
+    },
+    "vendor/jsxgraph/src/math/extrapolate.js": {
+      "bytes": 14580,
+      "sha256": "22dfbb90068db9a9f739d61996ae0b288725329ae8693331dede933e36649b3d"
+    },
+    "vendor/jsxgraph/src/math/geometry.js": {
+      "bytes": 180261,
+      "sha256": "90fae061ad1ff964c254e4bfdbd1e59486e5eb271e07dab2f6e5ab91ef44a2b1"
+    },
+    "vendor/jsxgraph/src/math/geometry1.12.0.js": {
+      "bytes": 171387,
+      "sha256": "ecffec15bd657227d50594cb44ba6a31506bc9fa2997f84b08f922e471747a48"
+    },
+    "vendor/jsxgraph/src/math/ia.js": {
+      "bytes": 46340,
+      "sha256": "b854176850fe7ab05f71d257bc6441817671b109a389be988592a931d335c7e1"
+    },
+    "vendor/jsxgraph/src/math/implicitplot.js": {
+      "bytes": 38523,
+      "sha256": "cef005ac495f6ddbd67dc27a8dfbe8662484d496487090f34d63b09ce0fb68ad"
+    },
+    "vendor/jsxgraph/src/math/math.js": {
+      "bytes": 38896,
+      "sha256": "2a931902017c49a1b08948073e7a94e806245bb7bc8a4e5041d5ee659249f3eb"
+    },
+    "vendor/jsxgraph/src/math/metapost.js": {
+      "bytes": 26137,
+      "sha256": "d0606cebf0232007da487e229b8d79e511f4bc4eab562b26f0601b89c1389ddf"
+    },
+    "vendor/jsxgraph/src/math/nlp.js": {
+      "bytes": 62743,
+      "sha256": "965d4fc01e6f5740eb577fc2190b85b284c63d81d3fbe65a2dd8f10d5d740910"
+    },
+    "vendor/jsxgraph/src/math/numerics.js": {
+      "bytes": 176991,
+      "sha256": "85112e38f0f7ff76d47684c5659df1c3dcb1e70d29da08f929251ec2b37fb3b0"
+    },
+    "vendor/jsxgraph/src/math/plot.js": {
+      "bytes": 90111,
+      "sha256": "2c0e84dbcca84ec68b70983d3c1a8f55c45f59132edd9a66ea12f6c18d99a651"
+    },
+    "vendor/jsxgraph/src/math/poly.js": {
+      "bytes": 9076,
+      "sha256": "4332fd712c64030ea2a825c37d31d9e4c1d3d3777bc63acd34b38226ac5fdb77"
+    },
+    "vendor/jsxgraph/src/math/probfuncs.js": {
+      "bytes": 16989,
+      "sha256": "b0c9e4290e3d77baa980253c923148163a7a299822c4aa9cf86eb01776c69609"
+    },
+    "vendor/jsxgraph/src/math/qdt.js": {
+      "bytes": 10976,
+      "sha256": "a3ffb479a7c2ceb332b8332396d75cc40f3b30fe62864a8a29fb253b1223a454"
+    },
+    "vendor/jsxgraph/src/math/statistics.js": {
+      "bytes": 46535,
+      "sha256": "56b728ee940e7009f33bee8cdd525460a2579083c90d19f5a4462577deef689a"
+    },
+    "vendor/jsxgraph/src/options.js": {
+      "bytes": 353863,
+      "sha256": "f9ec8cbb27566285b38212d57ed56f346a26f2e688b729dd6841ec34dd011a56"
+    },
+    "vendor/jsxgraph/src/options3d.js": {
+      "bytes": 49956,
+      "sha256": "5049137c64067012650230cc4a6e8cc0d74e247cf34484247d1353974f2efbf3"
+    },
+    "vendor/jsxgraph/src/parser/3dmodels.js": {
+      "bytes": 9579,
+      "sha256": "e18089ab2697860f6c291c63292bc0543bda8097feb976bb47652abcf575dd82"
+    },
+    "vendor/jsxgraph/src/parser/ca.js": {
+      "bytes": 68390,
+      "sha256": "9e631c52abf03a7dc014d89a44c5ca3c59bfe3007793055d507afc2f29e03374"
+    },
+    "vendor/jsxgraph/src/parser/datasource.js": {
+      "bytes": 7246,
+      "sha256": "0f026ae8c894b628eb271044b11ac498a742f7ff4ff2830041cde56e6a422ab3"
+    },
+    "vendor/jsxgraph/src/parser/geonext.js": {
+      "bytes": 19169,
+      "sha256": "6333063e6b1c8a8f3429c394b944081c6f8b4b2b379356323d40de7bbfcadbc2"
+    },
+    "vendor/jsxgraph/src/parser/jessiecode.js": {
+      "bytes": 148530,
+      "sha256": "5e2d701d78a968d57bf6f386d8283b3f2ccfa4ed6a1a749a24ec7c40385d5f01"
+    },
+    "vendor/jsxgraph/src/parser/jessiescript.js": {
+      "bytes": 45561,
+      "sha256": "def53d5914bd5037bbf31852838a2e0da4fe368acde66e722d40bd3550008ac0"
+    },
+    "vendor/jsxgraph/src/parser/prefix.js": {
+      "bytes": 13310,
+      "sha256": "3b19abf475721fa22e28ef420faba4d0534ad99d7b04f871a21cab7fd00a0b09"
+    },
+    "vendor/jsxgraph/src/plot.js": {
+      "bytes": 75,
+      "sha256": "a44d1d2401f4aa2821574e5cf64322a5bbfe85fa7637859a064e29171a97b2ad"
+    },
+    "vendor/jsxgraph/src/reader/cinderella.js": {
+      "bytes": 46049,
+      "sha256": "5d9c761785f003d1e4df21a3dcf00187893c6d3d6fdbcd4ba3a1e51d766458f7"
+    },
+    "vendor/jsxgraph/src/reader/file.js": {
+      "bytes": 10652,
+      "sha256": "520c98134ad1e969dfcbe516c344ccdab83f0504447e2277dba1174170787b8e"
+    },
+    "vendor/jsxgraph/src/reader/geogebra.js": {
+      "bytes": 210669,
+      "sha256": "43616a4ded768553f49882ad6afcaf67e6f14f1f18401bcac72d18599a9d3414"
+    },
+    "vendor/jsxgraph/src/reader/geonext.js": {
+      "bytes": 77235,
+      "sha256": "f1c5fa2ada6ebb696b25d774a86f79909c52989ac75b362c3e7d9404a9db1672"
+    },
+    "vendor/jsxgraph/src/reader/graph.js": {
+      "bytes": 10062,
+      "sha256": "a39908692c9de74b402dafa21a6e9756ca2ad6568138295a8ddc6200dd3c7aa7"
+    },
+    "vendor/jsxgraph/src/reader/intergeo.js": {
+      "bytes": 45004,
+      "sha256": "a725f5d0842808015944ad78de3977ead9ba40e0e43555f8cf289c812d8c1d93"
+    },
+    "vendor/jsxgraph/src/reader/tracenpoche.js": {
+      "bytes": 41003,
+      "sha256": "e811df5669a09aea39d8a2ca8e93972a94bb3c4fcf803a4d20ac2e3026190b29"
+    },
+    "vendor/jsxgraph/src/renderer/abstract.js": {
+      "bytes": 97445,
+      "sha256": "f00329bd62eca1b04c60a3c6d3dc1a2ef89da3d81c244467468980a03e607b32"
+    },
+    "vendor/jsxgraph/src/renderer/canvas.js": {
+      "bytes": 62441,
+      "sha256": "61066ffdcfc09968a897cb6794764e74b6593598b8f61bd37a26009d5daf326d"
+    },
+    "vendor/jsxgraph/src/renderer/no.js": {
+      "bytes": 6239,
+      "sha256": "85249d989815ba8df81122139c0ab796605dcb95326b9fe6ec2cc8a8f47fcfdc"
+    },
+    "vendor/jsxgraph/src/renderer/svg.js": {
+      "bytes": 95650,
+      "sha256": "b3b41ec4d599c056a0a8299b62968fe7e4166548cbf3d514ac31f1b0c8b82d1a"
+    },
+    "vendor/jsxgraph/src/renderer/vml.js": {
+      "bytes": 47681,
+      "sha256": "bd637c32e759955e737d7e201b4f8451d6a028790374efe71d7fbba2350a8f75"
+    },
+    "vendor/jsxgraph/src/themes/dark.js": {
+      "bytes": 3646,
+      "sha256": "4c4239389eafcdeea174005e3c421f3d20507eb57eb100f74e75a3ced988794b"
+    },
+    "vendor/jsxgraph/src/themes/gui.js": {
+      "bytes": 6893,
+      "sha256": "96b4cc620cd59362e3c9400fb764ab83a9ea6b9658b1101cb7c51bbc332bbda9"
+    },
+    "vendor/jsxgraph/src/themes/mono_thin.js": {
+      "bytes": 10999,
+      "sha256": "d0349bbfdaba92fc1aeb7b76333b3bcc4fede1cfd00c1343e1d1a4ad7697f7d3"
+    },
+    "vendor/jsxgraph/src/tsconfig.json": {
+      "bytes": 177,
+      "sha256": "1f30fa31535a4524b40651442d5a936aa1d2046f9b6f16fa4348c77cf9dfe7b7"
+    },
+    "vendor/jsxgraph/src/unused/bst.js": {
+      "bytes": 8763,
+      "sha256": "7b384f2cad09692438cf80efe406dff2bb0c6ed8666cece5762a187597eb2bcc"
+    },
+    "vendor/jsxgraph/src/unused/heap.js": {
+      "bytes": 3183,
+      "sha256": "4de34c96933dcdd646a4da7ba9a9df4f974ccc9d30a62470102ce1ae07bb97ac"
+    },
+    "vendor/jsxgraph/src/unused/locus.js": {
+      "bytes": 5377,
+      "sha256": "7f36b8e5ffd5ae4d3ee8301836d4d8bd284bd99db5251ec0cd2519bc5c1ab675"
+    },
+    "vendor/jsxgraph/src/unused/server/JXG.py": {
+      "bytes": 2585,
+      "sha256": "e9840f94be3e1d4dd7b6bbbbefb75c354141265cd7f7633d94c7798653471c0c"
+    },
+    "vendor/jsxgraph/src/unused/server/JXGServer.py": {
+      "bytes": 2252,
+      "sha256": "73a72822ac00859ae162068acd5e13aa8ca7af622c19fb18b3c686954736b18e"
+    },
+    "vendor/jsxgraph/src/unused/server/JXGServerModule.py": {
+      "bytes": 148,
+      "sha256": "fdda313dd26953e8ba8d57f1d25e04ec8a3e289b9d859ed281cf9b96b7006a0c"
+    },
+    "vendor/jsxgraph/src/unused/server/README.md": {
+      "bytes": 2354,
+      "sha256": "d862c052d2bed079cbf10755574e44a1f3b644808a0202bb5bfe029eae4c6f9d"
+    },
+    "vendor/jsxgraph/src/unused/server/RStats.py": {
+      "bytes": 1087,
+      "sha256": "aebdb605927949a85912dc991e37a9222a7ea4071b414c49dd6f8b18932698af"
+    },
+    "vendor/jsxgraph/src/unused/server/YahooFinance.py": {
+      "bytes": 2738,
+      "sha256": "02905a2bce38146d81ca4b3b9fcd54947fb75c8012073ee75f1c5dd4b3bc3ec8"
+    },
+    "vendor/jsxgraph/src/unused/server/fft.py": {
+      "bytes": 4431,
+      "sha256": "86a0b5972aaca548350fa9423bae166405c341d3b9799723876c989c3a4d22b4"
+    },
+    "vendor/jsxgraph/src/unused/server/geoloci.py": {
+      "bytes": 6928,
+      "sha256": "d7356aada678d5c1c3f28e99e6cb515526c5a679b5ea130c64d475530b997c9a"
+    },
+    "vendor/jsxgraph/src/unused/server/jxggroebner.py": {
+      "bytes": 5943,
+      "sha256": "df7d5d3413179d1db43c3d93516dab52afcb058c46cf03bb0683f0cdc90b0b23"
+    },
+    "vendor/jsxgraph/src/unused/server/jxgtestplugin.py": {
+      "bytes": 431,
+      "sha256": "3c0adb31812fa99c28cc42a59a9a98ecf43bba5bef856f50c5ef5837ef2d61ec"
+    },
+    "vendor/jsxgraph/src/unused/server/server.js": {
+      "bytes": 10183,
+      "sha256": "083b383f0a482e9d6834fa6dc41338abceeb084e6a5d2246d719ea41f877d96e"
+    },
+    "vendor/jsxgraph/src/unused/sketch.js": {
+      "bytes": 137480,
+      "sha256": "6ff03e1080f82026f2b879e75f1b235434f6c011f85c42e95d2e1288ecabe1a5"
+    },
+    "vendor/jsxgraph/src/unused/symbolic.js": {
+      "bytes": 14116,
+      "sha256": "138aa892929c830787521d0af951a4fd3c96dc98ea2d3d8b0d3f1d9fbfdb8b7b"
+    },
+    "vendor/jsxgraph/src/utils/base64.js": {
+      "bytes": 6643,
+      "sha256": "ee5395971a006cd0f1772cbbb0617a933c0cdff7f919b0d35b19b1d63239869c"
+    },
+    "vendor/jsxgraph/src/utils/color.js": {
+      "bytes": 32451,
+      "sha256": "db36207a0b09092cedccedfd754f9761b4bd01b1c4a0b28cbd326e5d774a2491"
+    },
+    "vendor/jsxgraph/src/utils/dump.js": {
+      "bytes": 13568,
+      "sha256": "40d0f3f295e3f7f4a0943162c72516835c2fab710991a445e46b405a260b4331"
+    },
+    "vendor/jsxgraph/src/utils/encoding.js": {
+      "bytes": 7619,
+      "sha256": "0a7083b738b83ab34186bc6a2eb65b51f646b0c5d6a59a7aa3ee855679e2aa43"
+    },
+    "vendor/jsxgraph/src/utils/env.js": {
+      "bytes": 38635,
+      "sha256": "fd502e2611e84108ebf88750d2329e66f293f8bdda9a4d79539dc4ec738dcfd0"
+    },
+    "vendor/jsxgraph/src/utils/event.js": {
+      "bytes": 4869,
+      "sha256": "bde3b15824cc9205c410bbf8776ce3a988ca6206e48efad9f8eafaaa8e009a09"
+    },
+    "vendor/jsxgraph/src/utils/expect.js": {
+      "bytes": 3471,
+      "sha256": "c65921cf69b8be1ba54f579c4974232036c57e50272da65c084fc47c439a6fea"
+    },
+    "vendor/jsxgraph/src/utils/type.js": {
+      "bytes": 70594,
+      "sha256": "d9da6460d633a1dbede882e5634f8f7bb74b12969efa336236b78f1354622338"
+    },
+    "vendor/jsxgraph/src/utils/uuid.js": {
+      "bytes": 1379,
+      "sha256": "d7d4a1d36c9643612e03e8527fa2edb4e33e9bc663b6171102313ce3bfbba25d"
+    },
+    "vendor/jsxgraph/src/utils/xml.js": {
+      "bytes": 2907,
+      "sha256": "2a811ba93f944847ed921d52319b1483356d7e0e95b54fe5d505535ca5f8cd8f"
+    },
+    "vendor/jsxgraph/src/utils/zip.js": {
+      "bytes": 24996,
+      "sha256": "e119436bf8daff835056e0d5a03cd581afc373d0095b0bc340fd855c025de8d5"
+    },
     "vendor/matter/.eslintignore": {
       "bytes": 19,
       "sha256": "3455de78af781beeff4d99e6002b4bb04c09d93422053fd637d7a666e37ff7ab"
