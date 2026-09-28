@@ -1,12 +1,14 @@
 import {loadState,saveState,parseSettings} from './state.js';
+import {isReady} from './readiness.js';
 const $=id=>document.getElementById(id);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const storage={getItem:key=>window.localStorage.getItem(key),setItem:(key,value)=>window.localStorage.setItem(key,value)};
 const zones={geometry:'几何工坊',physics:'动力车间',vectors:'箭头港口'};
 const kinds={game:'原版闯关',simulation:'互动实验',puzzle:'拼图探索',example:'物理示例'};
 const art={geometry:'△ ◇ ○',physics:'● ↗ ▰',vectors:'↗ ＋ →'};
 let inventory,defaults,state,ids,activities,zone='all',grade='all',query='',onlyOpen=false,current=null,frame=null,generation=0,timer,toastTimer;
 function toast(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4000);}
-function persist(){if(!saveState(localStorage,state))toast('浏览器未能保存设置，本次更改只在当前页面有效。');}
+function persist(){if(!saveState(storage,state))toast('浏览器未能保存设置，本次更改只在当前页面有效。');}
 function isOpen(a){return state.teacherPreview||state.openIds.includes(a.id);}
 function gradesLabel(a){return a.grades.length===6?'全年级':Math.min(...a.grades)+'—'+Math.max(...a.grades)+'年级';}
 function draw(){
@@ -47,14 +49,6 @@ function markReady(token){
   clearTimeout(timer);$('loading').hidden=true;
   state.visited[current.id]=Date.now();persist();draw();
 }
-function frameReady(a,f){
-  try{
-    const w=f.contentWindow,d=f.contentDocument;
-    if(a.adapter==='matter')return w.__mpReady===true;
-    if(a.adapter==='phet')return !!w.phet?.joist?.sim && d.querySelectorAll('canvas').length>0;
-    return !!d.querySelector('canvas') && d.querySelector('canvas').width>0;
-  }catch{return false;}
-}
 async function openActivity(id){
   const a=activities.find(x=>x.id===id);if(!a)return;
   if(!isOpen(a)){toast('内容已完整收录。老师或家长可在工作台开放此活动。');return;}
@@ -71,8 +65,8 @@ async function openActivity(id){
     if(token!==generation)return;
     frame=document.createElement('iframe');frame.title=a.title;frame.allow='fullscreen';frame.setAttribute('referrerpolicy','no-referrer');frame.src=a.entry;
     const f=frame;const started=Date.now();
-    function check(){if(token!==generation)return;if(frameReady(a,f)){markReady(token);return;}if(Date.now()-started>45000){$('loading').textContent='活动启动时间较长。可点击“重新开始”重试；若持续失败，请查看浏览器控制台和本地资源是否完整。';$('loading').className='error';return;}timer=setTimeout(check,300);}
-    f.addEventListener('load',check,{once:true});$('stage').append(f);
+    function check(){if(token!==generation||f!==frame)return;if(isReady(a.adapter,f.contentWindow)){markReady(token);return;}if(Date.now()-started>60000){$('loading').textContent='活动启动时间较长。可点击“重新开始”重试；若持续失败，请查看浏览器控制台和本地资源是否完整。';$('loading').className='error';return;}timer=setTimeout(check,300);}
+    $('stage').append(f);timer=setTimeout(check,150);
   }catch(error){if(token!==generation)return;$('loading').textContent=error.message;$('loading').className='error';}
 }
 function closeActivity(){++generation;clearTimeout(timer);frame?.remove();frame=null;current=null;$('player').hidden=true;document.body.classList.remove('playing');history.replaceState(null,'','#library');$('library').scrollIntoView();$('search').focus({preventScroll:true});}
@@ -99,7 +93,7 @@ function wire(){
   $('player-reset').onclick=()=>{if(current)openActivity(current.id);};
   $('player-help').onclick=()=>$('player-tip').hidden=!$('player-tip').hidden;
   $('player-fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if($('player').requestFullscreen)await $('player').requestFullscreen();else toast('当前浏览器不支持网页全屏，请横屏查看。');}catch{toast('当前浏览器未允许网页全屏，请横屏查看。');}};
-  window.addEventListener('message',e=>{if(!frame||e.source!==frame.contentWindow||e.origin!==location.origin)return;if(e.data?.type==='mp-ready')markReady(generation);if(e.data?.type==='mp-error'){$('loading').hidden=false;$('loading').className='error';$('loading').textContent='活动启动失败：'+String(e.data.message);}});
+  window.addEventListener('message',e=>{if(!frame||e.source!==frame.contentWindow||e.origin!==location.origin)return;if(e.data?.type==='mp-ready')markReady(generation);if(e.data?.type==='mp-error'){clearTimeout(timer);$('loading').hidden=false;$('loading').className='error';$('loading').textContent='活动启动失败：'+String(e.data.message);}});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&current&&!document.querySelector('dialog[open]'))closeActivity();});
   window.addEventListener('hashchange',()=>{if(location.hash.startsWith('#activity/'))openActivity(decodeURIComponent(location.hash.slice(10)));else if(current)closeActivity();});
 }
@@ -107,7 +101,7 @@ async function init(){
   if(location.protocol==='file:')throw Error('请通过本地服务器打开：运行 python scripts/serve.py，然后访问 http://localhost:8000。双击HTML不能可靠加载模块与资源。');
   [inventory,defaults]=await Promise.all(['config/inventory.json','config/defaults.json'].map(async path=>{const r=await fetch(path);if(!r.ok)throw Error('内容库尚未导入，请先运行 python scripts/import_upstream.py，或下载已经包含内容的离线包。');return r.json();}));
   validateInventory(inventory);activities=inventory.activities;ids=activities.map(a=>a.id);
-  state=loadState(localStorage,ids,defaults.openIds);wire();draw();
+  state=loadState(storage,ids,defaults.openIds);wire();draw();
   if(location.hash.startsWith('#activity/'))await openActivity(decodeURIComponent(location.hash.slice(10)));
 }
 init().catch(error=>{$('cards').textContent=error.message;$('stats').textContent='内容库未就绪';console.error(error);});

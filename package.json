@@ -6,5 +6,5 @@
   "description": "Complete upstream activity integration for elementary math and physics",
   "license": "MIT",
   "scripts": {"start":"python3 scripts/serve.py", "import":"python3 scripts/import_upstream.py", "test":"node --test tests/catalog.test.mjs", "test:browser":"node tests/smoke.mjs", "package":"python3 scripts/package.py"},
-  "devDependencies": {"playwright":"1.51.1"}
+  "devDependencies": {"playwright":"1.56.0"}
 }
