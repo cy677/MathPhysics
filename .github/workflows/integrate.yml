@@ -41,9 +41,15 @@ jobs:
         run: node tests/smoke.mjs
       - name: Commit verified assets and inventory
         run: |
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" != "$GITHUB_SHA" ]; then
+            echo 'A newer source commit exists; its run will publish the current assets.'
+            exit 0
+          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add vendor config/upstream-lock.json config/inventory.json docs/import-report.md docs/test-report.json
+          git add -f vendor
+          git add config/upstream-lock.json config/inventory.json docs/import-report.md docs/test-report.json docs/screenshots package-lock.json
           if ! git diff --cached --quiet; then
             git commit -m 'build: vendor complete licensed activities and verify inventory [assets]'
             git push origin HEAD:main
@@ -51,6 +57,17 @@ jobs:
       - name: Build offline distribution
         run: python scripts/package.py
       - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: MathPhysics-test-evidence
+          path: |
+            docs/test-report.json
+            docs/screenshots/
+            docs/import-report.md
+            config/inventory.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: success()
         with:
           name: MathPhysics-offline
           path: dist/MathPhysics-offline.zip
