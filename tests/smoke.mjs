@@ -4,6 +4,9 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {isReady} from '../src/readiness.js';
 const inventory=JSON.parse(await fs.readFile('config/inventory.json','utf8'));
+const local=JSON.parse(await fs.readFile('config/local-activities.json','utf8'));
+inventory.activities.push(...local.activities);
+const defaults=JSON.parse(await fs.readFile('config/defaults.json','utf8'));
 const server=spawn('python3',['scripts/serve.py','--port','8765'],{stdio:'ignore'});
 const base='http://127.0.0.1:8765/';
 let browser;
@@ -35,7 +38,7 @@ try{
     await page.locator('[data-launch="area-builder"]').click();await page.waitForFunction(()=>document.getElementById('loading').hidden,null,{timeout:65000});
     await page.screenshot({path:'docs/screenshots/host-area-builder.png'});
     await page.locator('#player-back').click();assert.equal(await page.locator('iframe').count(),0);
-    await page.locator('#teacher-open').click();await page.locator('#restore-defaults').click();await page.locator('[data-close="teacher-dialog"]').click();assert.equal(await page.locator('button.locked').count(),inventory.activities.length-3);
+    await page.locator('#teacher-open').click();await page.locator('#restore-defaults').click();await page.locator('[data-close="teacher-dialog"]').click();assert.equal(await page.locator('button.locked').count(),inventory.activities.length-defaults.openIds.length);
     assert.deepEqual(hostErrors,[]);record({id:'host-controls',passed:true,checks:['full catalog','open all persists','initial subset restored','PhET iframe ready','iframe removed on return']});
   }catch(e){await captureFailure(page,'host-controls',e,{errors:hostErrors});}
   await page.close();

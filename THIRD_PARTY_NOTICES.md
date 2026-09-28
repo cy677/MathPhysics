@@ -38,3 +38,7 @@ Phaser、JSXGraph：此前列为可能使用的开发框架，不是选定的课
 ## 修改边界
 
 新增入口、配置管理、适配器和测试为本项目原创 MIT 代码；上游独立文件继续适用原许可证。iframe 是兼容性隔离，不作为不可信代码的安全沙箱。teacherPreview 是本地展示开关，不是身份鉴别或访问控制系统。
+
+## v0.2 Original geometry proofs
+
+`lessons/geometric-proofs/` and its single-file build contain original MathPhysics code, SVG constructions and Chinese explanations under the root MIT license. Mathematical references are links, not copied course assets. No Mathigon textbooks source/content (whose package.json is UNLICENSED), or PhET Area Model Algebra code, is included in this module. Existing PhET, Tangram and Matter.js licenses are unchanged. Vector Addition GPL-3.0 source was already included in v0.1.

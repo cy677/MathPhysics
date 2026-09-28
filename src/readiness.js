@@ -2,7 +2,7 @@
 export function isReady(adapter, w = window) {
   try {
     const d = w.document;
-    if (adapter === 'matter') return w.__mpReady === true;
+    if (adapter === 'matter' || adapter === 'proofs') return w.__mpReady === true;
     if (adapter === 'phet') {
       const sim = w.phet?.joist?.sim || w.phet?.sim;
       return !!sim && Array.from(d.querySelectorAll('canvas, svg')).some(el => {

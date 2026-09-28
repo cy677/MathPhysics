@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "activities": [{
+    "id": "geometry-proofs",
+    "title": "看见公式 · 几何证明题集",
+    "zone": "geometry",
+    "kind": "proof",
+    "adapter": "proofs",
+    "grades": [1, 2, 3, 4, 5, 6],
+    "description": "24 个独立编写的互动演示：三角形比例、平方公式、主要图形面积与立体体积。每题含步骤、参数、例题与证明前提。",
+    "content": ["24个演示完整保留", "剪拼与等积变换", "比例与相似", "(a+b)²", "面积与体积", "原理和适用条件"],
+    "entry": "lessons/geometric-proofs/index.html",
+    "source": "https://github.com/cy677/MathPhysics",
+    "license": "MIT (original MathPhysics code and lesson descriptions)",
+    "progressMode": "visit-only",
+    "lessonCount": 24,
+    "completeUpstream": false,
+    "origin": "original"
+  }]
+}

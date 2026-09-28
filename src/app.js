@@ -4,7 +4,7 @@ const $=id=>document.getElementById(id);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const storage={getItem:key=>window.localStorage.getItem(key),setItem:(key,value)=>window.localStorage.setItem(key,value)};
 const zones={geometry:'几何工坊',physics:'动力车间',vectors:'箭头港口'};
-const kinds={game:'原版闯关',simulation:'互动实验',puzzle:'拼图探索',example:'物理示例'};
+const kinds={game:'原版闯关',simulation:'互动实验',puzzle:'拼图探索',example:'物理示例',proof:'几何证明题集'};
 const art={geometry:'△ ◇ ○',physics:'● ↗ ▰',vectors:'↗ ＋ →'};
 let inventory,defaults,state,ids,activities,zone='all',grade='all',query='',onlyOpen=false,current=null,frame=null,generation=0,timer,toastTimer;
 function toast(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4000);}
@@ -18,7 +18,7 @@ function draw(){
   document.querySelectorAll('#zone-filter button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.zone===zone)));
   document.querySelectorAll('#grade-filter button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.grade===grade)));
   const shown=activities.filter(a=>(zone==='all'||a.zone===zone)&&(grade==='all'||a.grades.includes(Number(grade)))&&(!onlyOpen||isOpen(a))&&(!query||(a.title+' '+a.id+' '+a.description+' '+a.content.join(' ')).toLowerCase().includes(query)));
-  $('cards').innerHTML=shown.map(a=>`<article class="activity-card ${escape(a.zone)}" data-activity="${escape(a.id)}"><div class="card-art"><span class="card-badge">${escape(kinds[a.kind])}${a.teacherRecommended?' · 教师参考':''}</span><span class="shape-art" aria-hidden="true">${art[a.zone]}</span>${state.visited[a.id]?'<span class="visited">✓ 已探索</span>':''}</div><div class="card-body"><div class="card-title"><h3>${escape(a.title)}</h3><span class="grade-tag">${gradesLabel(a)}</span></div><p>${escape(a.description)}</p><div class="card-foot"><span>${a.adapter==='phet'?'PhET · 原版完整保留':a.adapter==='matter'?'Matter.js · 完整示例':'Tangram · 原版保留'}</span><button data-launch="${escape(a.id)}" ${isOpen(a)?'':'class="locked"'}>${isOpen(a)?(state.teacherPreview&&!state.openIds.includes(a.id)?'教师预览 ↗':'进入探索 ↗'):'稍后开放 · 查看'}</button></div></div></article>`).join('');
+  $('cards').innerHTML=shown.map(a=>`<article class="activity-card ${escape(a.zone)}" data-activity="${escape(a.id)}"><div class="card-art"><span class="card-badge">${escape(kinds[a.kind])}${a.teacherRecommended?' · 教师参考':''}</span><span class="shape-art" aria-hidden="true">${art[a.zone]}</span>${state.visited[a.id]?'<span class="visited">✓ 已探索</span>':''}</div><div class="card-body"><div class="card-title"><h3>${escape(a.title)}</h3><span class="grade-tag">${gradesLabel(a)}</span></div><p>${escape(a.description)}</p><div class="card-foot"><span>${a.adapter==='phet'?'PhET · 原版完整保留':a.adapter==='matter'?'Matter.js · 完整示例':a.adapter==='proofs'?'MathPhysics · 24个原创演示':'Tangram · 原版保留'}</span><button data-launch="${escape(a.id)}" ${isOpen(a)?'':'class="locked"'}>${isOpen(a)?(state.teacherPreview&&!state.openIds.includes(a.id)?'教师预览 ↗':'进入探索 ↗'):'稍后开放 · 查看'}</button></div></div></article>`).join('');
   $('empty').hidden=shown.length!==0;
 }
 function drawManager(){
@@ -33,7 +33,7 @@ function validateInventory(value){
   for(const a of value.activities){
     if(!a||typeof a.id!=='string'||unique.has(a.id)||!zones[a.zone]||!Array.isArray(a.grades)||!Array.isArray(a.content))throw Error('内容清单有重复或无效条目');
     const u=new URL(a.entry,location.href);
-    if(u.origin!==location.origin||!a.entry.startsWith('vendor/')||a.entry.includes('..'))throw Error('活动必须使用本地资源路径');
+    if(u.origin!==location.origin||!(a.entry.startsWith('vendor/')||(a.adapter==='proofs'&&a.entry==='lessons/geometric-proofs/index.html'))||a.entry.includes('..'))throw Error('活动必须使用本地资源路径');
     unique.add(a.id);
   }
   return value;
@@ -42,6 +42,8 @@ function setAttribution(a){
   const source=typeof a.source==='string'&&a.source.startsWith('https://github.com/')?a.source:'#';
   if(a.adapter==='phet'){
     $('attribution').innerHTML='Simulation by PhET Interactive Simulations, University of Colorado Boulder, licensed under CC BY-NC 4.0 (<a href="https://phet.colorado.edu" target="_blank" rel="noopener">https://phet.colorado.edu</a>). <a href="'+escape(source)+'" target="_blank" rel="noopener">原项目源码</a> · 当前仅记录是否探索，不同步原版得分。';
+  }else if(a.adapter==='proofs'){
+    $('attribution').textContent='MathPhysics 原创几何构造与中文题集 · MIT · 证明前提和参考出处在各题说明中；数值核对不等于掌握或通关。';
   }else{$('attribution').innerHTML=escape(a.license)+' · <a href="'+escape(source)+'" target="_blank" rel="noopener">原项目源码与声明</a> · 原版玩法完整保留；已探索不等于通关。';}
 }
 function markReady(token){
@@ -56,7 +58,7 @@ async function openActivity(id){
   $('player').hidden=false;document.body.classList.add('playing');$('player-title').textContent=a.title;
   $('player-subtitle').textContent=zones[a.zone]+' / '+kinds[a.kind]+' / '+gradesLabel(a);
   $('player-tip').hidden=false;
-  $('player-tip').textContent=a.content.join(' · ')+(a.adapter==='tangram'?'。点击右下角拼装按钮开始，拖动拼板，拖角旋转。':'。原版导航和内部内容均保留。');
+  $('player-tip').textContent=a.content.join(' · ')+(a.adapter==='proofs'?'。题集内可自由切换全部24题；默认显示证明前提。':a.adapter==='tangram'?'。点击右下角拼装按钮开始，拖动拼板，拖角旋转。':'。原版导航和内部内容均保留。');
   $('loading').textContent='正在准备活动…';$('loading').className='';$('loading').hidden=false;setAttribution(a);
   history.replaceState(null,'','#activity/'+encodeURIComponent(a.id));$('player-back').focus();
   try{
@@ -100,6 +102,10 @@ function wire(){
 async function init(){
   if(location.protocol==='file:')throw Error('请通过本地服务器打开：运行 python scripts/serve.py，然后访问 http://localhost:8000。双击HTML不能可靠加载模块与资源。');
   [inventory,defaults]=await Promise.all(['config/inventory.json','config/defaults.json'].map(async path=>{const r=await fetch(path);if(!r.ok)throw Error('内容库尚未导入，请先运行 python scripts/import_upstream.py，或下载已经包含内容的离线包。');return r.json();}));
+  const localResponse=await fetch('config/local-activities.json');
+  if(!localResponse.ok)throw Error('原创内容清单缺失，请完整更新项目文件。');
+  const local=await localResponse.json();validateInventory(local);
+  inventory={...inventory,activities:[...inventory.activities,...local.activities]};
   validateInventory(inventory);activities=inventory.activities;ids=activities.map(a=>a.id);
   state=loadState(storage,ids,defaults.openIds);wire();draw();
   if(location.hash.startsWith('#activity/'))await openActivity(decodeURIComponent(location.hash.slice(10)));

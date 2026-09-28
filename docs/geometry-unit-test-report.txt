@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: all registered upstream Matter examples are catalogued, not sampled
+ok 1 - all registered upstream Matter examples are catalogued, not sampled
+  ---
+  duration_ms: 1.298521
+  type: 'test'
+  ...
+# Subtest: all four complete PhET simulations, all screens and tangram retained
+ok 2 - all four complete PhET simulations, all screens and tangram retained
+  ---
+  duration_ms: 2.85863
+  type: 'test'
+  ...
+# Subtest: exact upstream file bytes match complete inventory hashes
+ok 3 - exact upstream file bytes match complete inventory hashes
+  ---
+  duration_ms: 137.785175
+  type: 'test'
+  ...
+# Subtest: unique IDs, local entries, all elementary grades, initial subset only
+ok 4 - unique IDs, local entries, all elementary grades, initial subset only
+  ---
+  duration_ms: 0.438607
+  type: 'test'
+  ...
+# Subtest: malformed storage and unknown entries cannot manufacture progression
+ok 5 - malformed storage and unknown entries cannot manufacture progression
+  ---
+  duration_ms: 1.839688
+  type: 'test'
+  ...
+# Subtest: import configuration is validated and does not import executable paths
+ok 6 - import configuration is validated and does not import executable paths
+  ---
+  duration_ms: 3.516207
+  type: 'test'
+  ...
+# Subtest: license barriers are disclosed; unlicensed project is not vendored
+ok 7 - license barriers are disclosed; unlicensed project is not vendored
+  ---
+  duration_ms: 0.207259
+  type: 'test'
+  ...
+# Subtest: 24 lessons, valid sources, all drawings and answers finite at slider extremes
+ok 8 - 24 lessons, valid sources, all drawings and answers finite at slider extremes
+  ---
+  duration_ms: 37.823687
+  type: 'test'
+  ...
+# Subtest: normalization protects nonpositive widths and nonfinite parameters
+ok 9 - normalization protects nonpositive widths and nonfinite parameters
+  ---
+  duration_ms: 0.189516
+  type: 'test'
+  ...
+# Subtest: square expansion, square difference, distributivity hold over many lengths
+ok 10 - square expansion, square difference, distributivity hold over many lengths
+  ---
+  duration_ms: 0.223786
+  type: 'test'
+  ...
+# Subtest: parallelogram cut and translated piece tile the final rectangle
+ok 11 - parallelogram cut and translated piece tile the final rectangle
+  ---
+  duration_ms: 0.742522
+  type: 'test'
+  ...
+# Subtest: difference-square cut is rigid and exactly fills the remaining rectangle
+ok 12 - difference-square cut is rigid and exactly fills the remaining rectangle
+  ---
+  duration_ms: 0.924262
+  type: 'test'
+  ...
+# Subtest: two triangles, two trapezoids, rhombus and central Pythagorean square
+ok 13 - two triangles, two trapezoids, rhombus and central Pythagorean square
+  ---
+  duration_ms: 0.335134
+  type: 'test'
+  ...
+# Subtest: same-height triangle ratio is not similarity squared ratio
+ok 14 - same-height triangle ratio is not similarity squared ratio
+  ---
+  duration_ms: 0.126093
+  type: 'test'
+  ...
+# Subtest: circle and cylinder use convergent polygon bounds, not an exact finite rectangle
+ok 15 - circle and cylinder use convergent polygon bounds, not an exact finite rectangle
+  ---
+  duration_ms: 0.166337
+  type: 'test'
+  ...
+# Subtest: pyramid factor validated by the nonoverlapping max-coordinate decomposition
+ok 16 - pyramid factor validated by the nonoverlapping max-coordinate decomposition
+  ---
+  duration_ms: 2.355008
+  type: 'test'
+  ...
+# Subtest: cone and hemisphere Cavalieri sections match at every sampled height
+ok 17 - cone and hemisphere Cavalieri sections match at every sampled height
+  ---
+  duration_ms: 1.50123
+  type: 'test'
+  ...
+# Subtest: numeric answers accept two decimals/fractions and reject malformed or infinite text
+ok 18 - numeric answers accept two decimals/fractions and reject malformed or infinite text
+  ---
+  duration_ms: 0.553296
+  type: 'test'
+  ...
+# Subtest: new local catalog is separate from upstream, bundled, and marked original MIT
+ok 19 - new local catalog is separate from upstream, bundled, and marked original MIT
+  ---
+  duration_ms: 3.296114
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 231.042113

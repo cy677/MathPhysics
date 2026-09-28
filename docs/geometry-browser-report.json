@@ -1,0 +1,274 @@
+{
+  "suite": "Geometry proofs: real HTTP host, local module and file:// standalone",
+  "results": [
+    {
+      "id": "rectangle",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "parallelogram",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "triangle",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "trapezoid",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "rhombus",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "circle",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "sector",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "annulus",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "triangle-ratio",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "similarity",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "square-sum",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "square-minus",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "difference-squares",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "distributive",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "pythagoras",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "cuboid",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "cuboid-net",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "prism",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "cylinder",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "cylinder-net",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "pyramid",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "cone",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "sphere",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "volume-scale",
+      "passed": true,
+      "checks": [
+        "all three steps",
+        "slider extremes",
+        "answer validation",
+        "stale feedback invalidated"
+      ]
+    },
+    {
+      "id": "host-integration",
+      "passed": true,
+      "activities": 54,
+      "innerLessons": 24
+    },
+    {
+      "id": "viewport-1024",
+      "passed": true
+    },
+    {
+      "id": "viewport-390",
+      "passed": true
+    },
+    {
+      "id": "standalone-file",
+      "passed": true
+    },
+    {
+      "id": "controls",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Viewport emulation is not physical iPad Safari testing.",
+    "Numerical invariants and browser checks do not constitute a formally verified proof.",
+    "Previously vendored assets are hash-checked, not reauthored."
+  ],
+  "total": 29,
+  "passed": true
+}

@@ -1,6 +1,11 @@
 {
   "schemaVersion": 1,
   "title": "科学小岛",
-  "openIds": ["area-builder", "forces-and-motion-basics", "vector-addition"],
+  "openIds": [
+    "area-builder",
+    "forces-and-motion-basics",
+    "vector-addition",
+    "geometry-proofs"
+  ],
   "note": "仅控制活动入口，不删除任何内容，不限制PhET原版内部页面与关卡。年级是推荐筛选而非访问权限。"
 }

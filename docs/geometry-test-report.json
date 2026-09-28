@@ -1,0 +1,275 @@
+{
+  "suite": "Original geometry proofs Chromium inline HTML execution tests",
+  "passed": true,
+  "total": 28,
+  "results": [
+    {
+      "id": "rectangle",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "parallelogram",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "triangle",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "trapezoid",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "rhombus",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "circle",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "sector",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "annulus",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "triangle-ratio",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "similarity",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "square-sum",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "square-minus",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "difference-squares",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "distributive",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "pythagoras",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "cuboid",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "cuboid-net",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "prism",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "cylinder",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "cylinder-net",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "pyramid",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "cone",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "sphere",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "volume-scale",
+      "passed": true,
+      "checks": [
+        "three steps",
+        "all slider extremes",
+        "answer feedback",
+        "stale answer cleared"
+      ]
+    },
+    {
+      "id": "ui-controls",
+      "passed": true
+    },
+    {
+      "id": "layout-1024",
+      "passed": true,
+      "physicalDevice": false
+    },
+    {
+      "id": "layout-390",
+      "passed": true,
+      "physicalDevice": false
+    },
+    {
+      "id": "standalone-inline",
+      "passed": true,
+      "checks": [
+        "about:blank inline execution",
+        "24 lessons",
+        "navigation"
+      ]
+    }
+  ],
+  "limitations": [
+    "SVG examples and numerical invariants are tested; not a machine-checked formal proof.",
+    "Viewport checks are not physical iPad Safari tests.",
+    "Local browser policy blocks URL navigation. Rendering tested by set_content on about:blank, not localhost/file navigation; CI covers actual URLs separately."
+  ]
+}
