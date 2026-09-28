@@ -1,0 +1,57 @@
+name: Integrate and verify
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'src/**'
+      - 'config/**'
+      - 'tests/**'
+      - 'index.html'
+      - 'package.json'
+      - '.github/workflows/integrate.yml'
+permissions:
+  contents: write
+concurrency:
+  group: mathphysics-integrate
+  cancel-in-progress: false
+jobs:
+  integrate:
+    if: ${{ !contains(github.event.head_commit.message, '[assets]') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Import complete pinned upstream content
+        run: python scripts/import_upstream.py
+      - name: Check inventory and local links
+        run: node --test tests/catalog.test.mjs
+      - name: Install browser test dependency
+        run: npm install --ignore-scripts && npx playwright install --with-deps chromium
+      - name: Browser smoke tests
+        run: node tests/smoke.mjs
+      - name: Commit verified assets and inventory
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add vendor config/upstream-lock.json config/inventory.json docs/import-report.md docs/test-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'build: vendor complete licensed activities and verify inventory [assets]'
+            git push origin HEAD:main
+          fi
+      - name: Build offline distribution
+        run: python scripts/package.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MathPhysics-offline
+          path: dist/MathPhysics-offline.zip
+          retention-days: 30
