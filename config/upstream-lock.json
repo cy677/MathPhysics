@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "files": {
+    "vendor/archives/liabru--matter-js.zip": {
+      "url": "https://codeload.github.com/liabru/matter-js/zip/8a67787735585f02c4b46eabf7b9fcc1c7c321da",
+      "sha256": "556c1f96ca0ebef5c37b79cdb7c82432f0fdefa9d462fae1eb97ae556023b532",
+      "bytes": 905336,
+      "license": "MIT"
+    },
+    "vendor/archives/iliagrigorevdev--tangram.zip": {
+      "url": "https://codeload.github.com/iliagrigorevdev/tangram/zip/fd1618e6ead7042e0aea535b0caccbb6f2c42e9d",
+      "sha256": "5c528540a805ca7092f491c93e9c0b168d6d4d98a080d25bb2cb31cf369636df",
+      "bytes": 307748,
+      "license": "GPL-3.0"
+    },
+    "vendor/archives/phetsims--area-builder.zip": {
+      "url": "https://codeload.github.com/phetsims/area-builder/zip/2d2a9a451342dbd7609aa39c57c402684f257160",
+      "sha256": "55707f8e8d1671ef524d19b1703e1232999d1a750e063be2ecd916513bd3f088",
+      "bytes": 1370808,
+      "license": "GPL-3.0"
+    },
+    "vendor/phet/area-builder.html": {
+      "url": "https://phet.colorado.edu/sims/html/area-builder/latest/area-builder_zh_CN.html",
+      "sha256": "1428ff4e664e7ac433c9030a517a256c35df5b6100c2f8a96a363cb6a08d62d4",
+      "bytes": 1287438,
+      "license": "CC BY-NC 4.0 (official current distribution policy; preserve embedded notices)"
+    },
+    "vendor/archives/phetsims--forces-and-motion-basics.zip": {
+      "url": "https://codeload.github.com/phetsims/forces-and-motion-basics/zip/50d708bb5b2226dbfcc0b1080957360d0e1c24fd",
+      "sha256": "c17d03cf8888a679af934bef25c2af31f29217475318d16a0dd865ab8427cdfd",
+      "bytes": 18342486,
+      "license": "GPL-3.0"
+    },
+    "vendor/phet/forces-and-motion-basics.html": {
+      "url": "https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_zh_CN.html",
+      "sha256": "11df6f73895d430c3638f5f49ea060c37a6ebad94855e116d4b7e971f522703b",
+      "bytes": 4851311,
+      "license": "CC BY-NC 4.0 (official current distribution policy; preserve embedded notices)"
+    },
+    "vendor/archives/phetsims--energy-skate-park-basics.zip": {
+      "url": "https://codeload.github.com/phetsims/energy-skate-park-basics/zip/83530257d32a8f7498c93b68de1469357a240317",
+      "sha256": "089f5852062ece533640483abd6fc7a5a9d0797bc3b63577224ffd643d51e2b8",
+      "bytes": 5645347,
+      "license": "GPL-3.0"
+    },
+    "vendor/phet/energy-skate-park-basics.html": {
+      "url": "https://phet.colorado.edu/sims/html/energy-skate-park-basics/latest/energy-skate-park-basics_zh_CN.html",
+      "sha256": "6a3082d4592f773e24346ba8afa3f8f08bb56541f5d6cae5e1f46869c61a4016",
+      "bytes": 4912535,
+      "license": "CC BY-NC 4.0 (official current distribution policy; preserve embedded notices)"
+    },
+    "vendor/archives/phetsims--vector-addition.zip": {
+      "url": "https://codeload.github.com/phetsims/vector-addition/zip/06059e4f58fe5f93767ffc416711b2e6c9624310",
+      "sha256": "7227c96bbaa45e51d90c74d9e2812f3f0ee6de069be44fe603f2784fe3f748eb",
+      "bytes": 4064248,
+      "license": "GPL-3.0"
+    },
+    "vendor/phet/vector-addition.html": {
+      "url": "https://phet.colorado.edu/sims/html/vector-addition/latest/vector-addition_zh_CN.html",
+      "sha256": "1e3e9e7dbac1bf79c85c3f6d8166f605598a5007ad15694d76d9ed2f9465dc1a",
+      "bytes": 2536189,
+      "license": "CC BY-NC 4.0 (official current distribution policy; preserve embedded notices)"
+    },
+    "vendor/archives/poly-decomp-0.3.0.tgz": {
+      "url": "https://registry.npmjs.org/poly-decomp/-/poly-decomp-0.3.0.tgz",
+      "sha256": "9b7f526092d78e037fc37a4cf3e45d41434641eb7afcc6bb9d2d93532a25d2d7",
+      "bytes": 28187,
+      "license": "MIT"
+    },
+    "vendor/archives/matter-wrap-0.2.0.tgz": {
+      "url": "https://registry.npmjs.org/matter-wrap/-/matter-wrap-0.2.0.tgz",
+      "sha256": "6e283c907048ed6df2e5651718f19cd959556670e18ab0782b73b0d33c12de0f",
+      "bytes": 115384,
+      "license": "MIT"
+    },
+    "vendor/archives/pathseg-1.2.1.tgz": {
+      "url": "https://registry.npmjs.org/pathseg/-/pathseg-1.2.1.tgz",
+      "sha256": "6183c0fb5a5f891e19ee7fd87e1010380bfd8a6f1e76bdc5146d29604f350c81",
+      "bytes": 46734,
+      "license": "Chromium's License"
+    }
+  },
+  "repositories": {
+    "liabru/matter-js": {
+      "commit": "8a67787735585f02c4b46eabf7b9fcc1c7c321da",
+      "sourceArchive": "vendor/archives/liabru--matter-js.zip",
+      "extractedTo": "vendor/matter",
+      "license": "MIT"
+    },
+    "iliagrigorevdev/tangram": {
+      "commit": "fd1618e6ead7042e0aea535b0caccbb6f2c42e9d",
+      "sourceArchive": "vendor/archives/iliagrigorevdev--tangram.zip",
+      "extractedTo": "vendor/tangram",
+      "license": "GPL-3.0"
+    },
+    "phetsims/area-builder": {
+      "commit": "2d2a9a451342dbd7609aa39c57c402684f257160",
+      "sourceArchive": "vendor/archives/phetsims--area-builder.zip",
+      "extractedTo": "vendor/sources/area-builder",
+      "license": "GPL-3.0"
+    },
+    "phetsims/forces-and-motion-basics": {
+      "commit": "50d708bb5b2226dbfcc0b1080957360d0e1c24fd",
+      "sourceArchive": "vendor/archives/phetsims--forces-and-motion-basics.zip",
+      "extractedTo": "vendor/sources/forces-and-motion-basics",
+      "license": "GPL-3.0"
+    },
+    "phetsims/energy-skate-park-basics": {
+      "commit": "83530257d32a8f7498c93b68de1469357a240317",
+      "sourceArchive": "vendor/archives/phetsims--energy-skate-park-basics.zip",
+      "extractedTo": "vendor/sources/energy-skate-park-basics",
+      "license": "GPL-3.0"
+    },
+    "phetsims/vector-addition": {
+      "commit": "06059e4f58fe5f93767ffc416711b2e6c9624310",
+      "sourceArchive": "vendor/archives/phetsims--vector-addition.zip",
+      "extractedTo": "vendor/sources/vector-addition",
+      "license": "GPL-3.0"
+    }
+  }
+}

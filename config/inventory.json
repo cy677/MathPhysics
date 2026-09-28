@@ -1,0 +1,4620 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": "Pinned full upstream distribution, not a sampled level list",
+  "activities": [
+    {
+      "id": "area-builder",
+      "title": "围栏花园",
+      "zone": "geometry",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "game",
+      "adapter": "phet",
+      "entry": "vendor/phet/area-builder.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "description": "拖动彩色方块，发现面积与周长。",
+      "content": [
+        "自由探索",
+        "游戏：全部6级与原版随机出题"
+      ],
+      "license": "CC BY-NC 4.0 (HTML); GPL-3.0 (simulation source)",
+      "source": "https://github.com/phetsims/area-builder",
+      "version": "1.1.38",
+      "progressMode": "visit-only",
+      "completeUpstream": true
+    },
+    {
+      "id": "forces-and-motion-basics",
+      "title": "搬运挑战",
+      "zone": "physics",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "simulation",
+      "adapter": "phet",
+      "entry": "vendor/phet/forces-and-motion-basics.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "description": "推一推、换个路面，观察力怎样改变运动。",
+      "content": [
+        "合力",
+        "运动",
+        "摩擦力",
+        "加速度"
+      ],
+      "license": "CC BY-NC 4.0 (HTML); GPL-3.0 (simulation source)",
+      "source": "https://github.com/phetsims/forces-and-motion-basics",
+      "version": "2.6.5",
+      "progressMode": "visit-only",
+      "completeUpstream": true
+    },
+    {
+      "id": "energy-skate-park-basics",
+      "title": "轨道游乐场",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "simulation",
+      "adapter": "phet",
+      "entry": "vendor/phet/energy-skate-park-basics.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "description": "改变高度和摩擦，观察滑行与能量变化。",
+      "content": [
+        "介绍",
+        "摩擦力",
+        "轨道游乐场"
+      ],
+      "license": "CC BY-NC 4.0 (HTML); GPL-3.0 (simulation source)",
+      "source": "https://github.com/phetsims/energy-skate-park-basics",
+      "version": "1.5.1",
+      "progressMode": "visit-only",
+      "completeUpstream": true
+    },
+    {
+      "id": "vector-addition",
+      "title": "箭头导航",
+      "zone": "vectors",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "simulation",
+      "adapter": "phet",
+      "entry": "vendor/phet/vector-addition.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "description": "组合方向箭头，探索分量与合向量。",
+      "content": [
+        "探索一维",
+        "探索二维",
+        "实验室",
+        "方程"
+      ],
+      "license": "CC BY-NC 4.0 (HTML); GPL-3.0 (simulation source)",
+      "source": "https://github.com/phetsims/vector-addition",
+      "version": "1.2.4",
+      "progressMode": "visit-only",
+      "completeUpstream": true
+    },
+    {
+      "id": "tangram",
+      "title": "七巧板工坊",
+      "zone": "geometry",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "puzzle",
+      "adapter": "tangram",
+      "entry": "vendor/tangram/index.html",
+      "description": "移动和旋转七块拼板，保留原版吸附与轮廓预览。",
+      "content": [
+        "原仓库1个内置快照",
+        "完整拼装与分享快照逻辑；上游更多题目接口未实现"
+      ],
+      "license": "GPL-3.0; bundled Three.js MIT",
+      "source": "https://github.com/iliagrigorevdev/tangram",
+      "progressMode": "visit-only",
+      "completeUpstream": true
+    },
+    {
+      "id": "matter-airFriction",
+      "title": "空气阻力",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=airFriction",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Air Friction"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/airFriction.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-avalanche",
+      "title": "滚落的积木",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=avalanche",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Avalanche"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/avalanche.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-ballPool",
+      "title": "小球池",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=ballPool",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Ball Pool"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/ballPool.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-bridge",
+      "title": "吊桥实验",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=bridge",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Bridge"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/bridge.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-car",
+      "title": "小车过桥",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=car",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Car"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/car.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-catapult",
+      "title": "跷跷板投石机",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=catapult",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Catapult"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/catapult.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-chains",
+      "title": "链条",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=chains",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Chains"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/chains.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-circleStack",
+      "title": "圆球堆叠",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=circleStack",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Circle Stack"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/circleStack.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-cloth",
+      "title": "柔软布料",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=cloth",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Cloth"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/cloth.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "title": "碰撞分类",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=collisionFiltering",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Collision Filtering"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/collisionFiltering.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-compositeManipulation",
+      "title": "组合物体变换",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=compositeManipulation",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Composite Manipulation"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/compositeManipulation.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-compound",
+      "title": "复合形状",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=compound",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Compound Bodies"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/compound.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-compoundStack",
+      "title": "复合积木堆叠",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=compoundStack",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Compound Stack"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/compoundStack.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-concave",
+      "title": "凹形积木",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=concave",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Concave"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/concave.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-constraints",
+      "title": "弹簧与约束",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=constraints",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Constraints"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/constraints.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-doublePendulum",
+      "title": "双摆",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=doublePendulum",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Double Pendulum"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/doublePendulum.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-events",
+      "title": "碰撞事件",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=events",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Events"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/events.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-friction",
+      "title": "摩擦力",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=friction",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Friction"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/friction.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-gravity",
+      "title": "改变重力",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=gravity",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Reverse Gravity"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/gravity.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-gyro",
+      "title": "陀螺",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=gyro",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Gyroscope"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/gyro.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-manipulation",
+      "title": "物体操作",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=manipulation",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Manipulation"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/manipulation.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-mixed",
+      "title": "形状游乐场",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=mixed",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Mixed Shapes"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/mixed.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-newtonsCradle",
+      "title": "牛顿摆",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=newtonsCradle",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Newton\\"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/newtonsCradle.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-ragdoll",
+      "title": "布偶",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=ragdoll",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Ragdoll"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/ragdoll.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-pyramid",
+      "title": "积木金字塔",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=pyramid",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Pyramid"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/pyramid.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-raycasting",
+      "title": "射线探测",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=raycasting",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Raycasting"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/raycasting.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-restitution",
+      "title": "弹性与反弹",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=restitution",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Restitution"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/restitution.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-rounded",
+      "title": "圆角积木",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=rounded",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Rounded Corners (Chamfering)"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/rounded.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-remove",
+      "title": "添加与移除",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=remove",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Composite Remove"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/remove.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-renderResize",
+      "title": "自适应画布",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=renderResize",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Render Resize"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/renderResize.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-sensors",
+      "title": "传感器",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=sensors",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Sensors"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/sensors.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-sleeping",
+      "title": "静止与唤醒",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=sleeping",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Sleeping"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/sleeping.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-slingshot",
+      "title": "弹弓实验",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=slingshot",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Slingshot"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/slingshot.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-softBody",
+      "title": "软体结构",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=softBody",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Soft Body"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/softBody.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-sprites",
+      "title": "贴图物体",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=sprites",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Sprites"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/sprites.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-stack",
+      "title": "积木塔",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=stack",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Stack"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/stack.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-staticFriction",
+      "title": "静摩擦",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=staticFriction",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Static Friction"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/staticFriction.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-stats",
+      "title": "运行统计",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=stats",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Stats & Performance"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/stats.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-stress",
+      "title": "压力测试一",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=stress",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Stress"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/stress.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-stress2",
+      "title": "压力测试二",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=stress2",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Stress 2"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/stress2.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-stress3",
+      "title": "压力测试三",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=stress3",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Stress 3"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/stress3.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-stress4",
+      "title": "压力测试四",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=stress4",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Stress 4"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/stress4.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-substep",
+      "title": "时间子步",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=substep",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "High Substeps (Low Delta)"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/substep.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-svg",
+      "title": "SVG形状",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=svg",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Concave SVG Paths"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/svg.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-terrain",
+      "title": "凹形地形",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=terrain",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Terrain"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/terrain.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-timescale",
+      "title": "时间快慢",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=timescale",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Time Scaling"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/timescale.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    },
+    {
+      "id": "matter-views",
+      "title": "移动视野",
+      "zone": "physics",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=views",
+      "description": "开发参考示例；建议由教师陪同探索。",
+      "content": [
+        "Views"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/views.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": true
+    },
+    {
+      "id": "matter-wreckingBall",
+      "title": "拆除球",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "example",
+      "adapter": "matter",
+      "entry": "vendor/matter/demo/mathphysics.html?example=wreckingBall",
+      "description": "拖动物体，观察碰撞、运动和结构变化。",
+      "content": [
+        "Wrecking Ball"
+      ],
+      "license": "MIT (code); see bundled asset notices",
+      "source": "https://github.com/liabru/matter-js/blob/0.20.0/examples/wreckingBall.js",
+      "progressMode": "visit-only",
+      "completeUpstream": true,
+      "teacherRecommended": false
+    }
+  ],
+  "counts": {
+    "phetSimulations": 4,
+    "phetScreens": 13,
+    "areaBuilderDifficultyLevels": 6,
+    "tangramBuiltInSnapshots": 1,
+    "matterExamples": 48,
+    "launchableActivities": 53
+  },
+  "excluded": [
+    {
+      "repository": "DennisWeiss/linear-transform-visualizer",
+      "reason": "No explicit repository license found; source not copied."
+    },
+    {
+      "repository": "phaserjs/phaser",
+      "reason": "Framework only, not a curriculum. Not needed for first-version integration."
+    },
+    {
+      "repository": "jsxgraph/jsxgraph",
+      "reason": "Optional drawing framework; not a selected set of game levels."
+    }
+  ],
+  "files": {
+    "vendor/archives/iliagrigorevdev--tangram.zip": {
+      "bytes": 307748,
+      "sha256": "5c528540a805ca7092f491c93e9c0b168d6d4d98a080d25bb2cb31cf369636df"
+    },
+    "vendor/archives/liabru--matter-js.zip": {
+      "bytes": 905336,
+      "sha256": "556c1f96ca0ebef5c37b79cdb7c82432f0fdefa9d462fae1eb97ae556023b532"
+    },
+    "vendor/archives/matter-wrap-0.2.0.tgz": {
+      "bytes": 115384,
+      "sha256": "6e283c907048ed6df2e5651718f19cd959556670e18ab0782b73b0d33c12de0f"
+    },
+    "vendor/archives/pathseg-1.2.1.tgz": {
+      "bytes": 46734,
+      "sha256": "6183c0fb5a5f891e19ee7fd87e1010380bfd8a6f1e76bdc5146d29604f350c81"
+    },
+    "vendor/archives/phetsims--area-builder.zip": {
+      "bytes": 1370808,
+      "sha256": "55707f8e8d1671ef524d19b1703e1232999d1a750e063be2ecd916513bd3f088"
+    },
+    "vendor/archives/phetsims--energy-skate-park-basics.zip": {
+      "bytes": 5645347,
+      "sha256": "089f5852062ece533640483abd6fc7a5a9d0797bc3b63577224ffd643d51e2b8"
+    },
+    "vendor/archives/phetsims--forces-and-motion-basics.zip": {
+      "bytes": 18342486,
+      "sha256": "c17d03cf8888a679af934bef25c2af31f29217475318d16a0dd865ab8427cdfd"
+    },
+    "vendor/archives/phetsims--vector-addition.zip": {
+      "bytes": 4064248,
+      "sha256": "7227c96bbaa45e51d90c74d9e2812f3f0ee6de069be44fe603f2784fe3f748eb"
+    },
+    "vendor/archives/poly-decomp-0.3.0.tgz": {
+      "bytes": 28187,
+      "sha256": "9b7f526092d78e037fc37a4cf3e45d41434641eb7afcc6bb9d2d93532a25d2d7"
+    },
+    "vendor/deps/matter-wrap/.babelrc": {
+      "bytes": 28,
+      "sha256": "d035da317a3406c49d60d3cf0fd5a792f5c892ce4afb1c64094cfd3e2633bf04"
+    },
+    "vendor/deps/matter-wrap/.eslintrc": {
+      "bytes": 394,
+      "sha256": "aefc04bda553d94bef34138500aa039bc40ed44b0acb5aa81c685ff56a60e6a5"
+    },
+    "vendor/deps/matter-wrap/.npmignore": {
+      "bytes": 13,
+      "sha256": "bea7fd13e97b655d5a1092440e9cc8bccf916853788e553b686a6af9e50a4f84"
+    },
+    "vendor/deps/matter-wrap/.travis.yml": {
+      "bytes": 135,
+      "sha256": "4a5d5d6ff6a4a31f60e80275e6f0022b3db93c801721892003f70bb6e8ddf64c"
+    },
+    "vendor/deps/matter-wrap/API.md": {
+      "bytes": 2681,
+      "sha256": "cad166f3da8ff992af68e065152cfa9fc6a5eda5e64b08f33c567e140518c797"
+    },
+    "vendor/deps/matter-wrap/LICENSE": {
+      "bytes": 1079,
+      "sha256": "ab3604827f2fd6757ccf588cf258228e29447383e934c2660374b1fbfaabd5d0"
+    },
+    "vendor/deps/matter-wrap/README.md": {
+      "bytes": 1589,
+      "sha256": "a6a0b62e18aae7d672fb49a7db714f225b05008c04feafab7f770c65cdd58616"
+    },
+    "vendor/deps/matter-wrap/build/matter-wrap.js": {
+      "bytes": 8855,
+      "sha256": "31ce32fcda35ec4dcf4ed39dffad46fb53f65d27f8d1db5f0cbf63e4357dbf05"
+    },
+    "vendor/deps/matter-wrap/build/matter-wrap.min.js": {
+      "bytes": 2124,
+      "sha256": "e49a23e323756e70c1d8d1320365c833915a9cb4867dddaae89be9761dfdf60b"
+    },
+    "vendor/deps/matter-wrap/docs/examples/basic.js": {
+      "bytes": 2637,
+      "sha256": "643f26bee764a3e19856ba6039293f141b2ea77fe7ec4cb2b57f29ee1b072004"
+    },
+    "vendor/deps/matter-wrap/docs/index.html": {
+      "bytes": 1633,
+      "sha256": "195c1b39df9e193179586bd23e9d0027370ab70f28c24129451bba98ac44d3fd"
+    },
+    "vendor/deps/matter-wrap/docs/libs/bundle.js": {
+      "bytes": 8855,
+      "sha256": "31ce32fcda35ec4dcf4ed39dffad46fb53f65d27f8d1db5f0cbf63e4357dbf05"
+    },
+    "vendor/deps/matter-wrap/docs/libs/matter-tools.demo.js": {
+      "bytes": 27716,
+      "sha256": "df31f6d329723b21909f7b5afb5b22a9d01171baba80474e9159c9747f0b0529"
+    },
+    "vendor/deps/matter-wrap/docs/libs/matter.js": {
+      "bytes": 339245,
+      "sha256": "333233f27fb601c1faef38617e7529c4b6a8586bdb5ccb281c534c704df77831"
+    },
+    "vendor/deps/matter-wrap/index.js": {
+      "bytes": 5619,
+      "sha256": "4d47f351ea444961c7ea5d074bcc8246d2ab081178ca41369f63c32ed96fb0db"
+    },
+    "vendor/deps/matter-wrap/package.json": {
+      "bytes": 1383,
+      "sha256": "b0a6976b70fc402310e88e743b6fe349d070459478582431b9431d8b02d0cbb9"
+    },
+    "vendor/deps/matter-wrap/test/test.spec.js": {
+      "bytes": 3486,
+      "sha256": "acbf8ad3787bc31fb0b6f376a3f38d1b39c46263e38f25db8d2201530b41767b"
+    },
+    "vendor/deps/matter-wrap/webpack.config.js": {
+      "bytes": 2501,
+      "sha256": "0d0d83ae5e80f4e79631ccd5ae779dd587a82c81079df011db3dc1d337ccf041"
+    },
+    "vendor/deps/matter-wrap/yarn.lock": {
+      "bytes": 121087,
+      "sha256": "ec7dba7700bef4a99747fec2ea493b8fb1485906f68ec6d9e1161fe7896df905"
+    },
+    "vendor/deps/pathseg/LICENSE": {
+      "bytes": 1565,
+      "sha256": "eecbd970a33b4c2d4292556c7c1275f31b7ac31dd215f98eeaee916cb83a6907"
+    },
+    "vendor/deps/pathseg/README.md": {
+      "bytes": 2469,
+      "sha256": "ded9a8a2ad26303a8921136ebe1752effede423303d52a9835728a85c063d77c"
+    },
+    "vendor/deps/pathseg/bower.json": {
+      "bytes": 491,
+      "sha256": "06da0b840f4455175d9f4c3234e8c36c9d0ab51db43634148d5c3b213a90259b"
+    },
+    "vendor/deps/pathseg/package.json": {
+      "bytes": 569,
+      "sha256": "a182a09ea4aa20477427578106affccf605c4287de01d4e731662146cef65008"
+    },
+    "vendor/deps/pathseg/pathseg.js": {
+      "bytes": 60338,
+      "sha256": "d619501ad9cff333c694c9aca3c29eaab5cd24272ebeab499d04ecb82e609640"
+    },
+    "vendor/deps/pathseg/tests/qunit/qunit-1.20.0.css": {
+      "bytes": 5349,
+      "sha256": "98abc5dc3d67eb3a1f50eb861c7f888a9a5b43edaa8f29689c50d1841fb915fb"
+    },
+    "vendor/deps/pathseg/tests/qunit/qunit-1.20.0.js": {
+      "bytes": 112454,
+      "sha256": "576c7117981fae223d412e94e53a176c124f5e3a4dc321b9d56d58ae680015c0"
+    },
+    "vendor/deps/pathseg/tests/tests.html": {
+      "bytes": 369,
+      "sha256": "48696c1ec66e184c962f41434dc3c6db5240698c94b7ce1a735cef2ae50e606b"
+    },
+    "vendor/deps/pathseg/tests/tests.js": {
+      "bytes": 51337,
+      "sha256": "527b9432a07b0e07d05689ba5af8ce8ebdce18572212a845a44dd6596d5bebd4"
+    },
+    "vendor/deps/poly-decomp/.jshintrc": {
+      "bytes": 550,
+      "sha256": "0f180f844c60f47b347506944d4872741e7026f276c66b53d940971e08450ac4"
+    },
+    "vendor/deps/poly-decomp/Gruntfile.js": {
+      "bytes": 862,
+      "sha256": "eb7a6b1dfce450951a0d5ab5f45478143d6e1310888f386c0437cee754fd52ba"
+    },
+    "vendor/deps/poly-decomp/LICENSE": {
+      "bytes": 1080,
+      "sha256": "aa92b836949eb315e062592a9fdd660e6a301477e771305160f492dd3ee8a066"
+    },
+    "vendor/deps/poly-decomp/README.md": {
+      "bytes": 5808,
+      "sha256": "e38259321b22e5f54491052b1ece72e7b303b10867776fe1145fe4a8a6819d2e"
+    },
+    "vendor/deps/poly-decomp/build/decomp.js": {
+      "bytes": 22157,
+      "sha256": "f979a2c5d752df8f645dc62c6ee677a57713bcbb5c5ec875f76753592a8abf94"
+    },
+    "vendor/deps/poly-decomp/build/decomp.min.js": {
+      "bytes": 5609,
+      "sha256": "e9eb28be56c87c8af4de4837ac72c20549da0bccb0ccf7e86a06a1b886ae6988"
+    },
+    "vendor/deps/poly-decomp/dat.gui.js": {
+      "bytes": 45412,
+      "sha256": "66f804f8a0e1211a41b6ac01dbb6b50e2ce1e02d22fd6e2aad0c4fcef4c177dc"
+    },
+    "vendor/deps/poly-decomp/docs/index.html": {
+      "bytes": 153,
+      "sha256": "f6d94b65415c6155fb17a384188346b71175aa77b1d6803bae0d7e8115c73218"
+    },
+    "vendor/deps/poly-decomp/index.html": {
+      "bytes": 13426,
+      "sha256": "112294f4fc8fc08fb657170040bc2c8718863d5cbd7c8f310cffdc5262ba4c79"
+    },
+    "vendor/deps/poly-decomp/package.json": {
+      "bytes": 761,
+      "sha256": "d40d47ecd202bfb83e854bff9f13cb90caf2fd100941347df7a0485070c98979"
+    },
+    "vendor/deps/poly-decomp/src/index.js": {
+      "bytes": 21363,
+      "sha256": "0b985c99695ba2457a2a21911726dde7db523418bef92f8388737dd72c15717a"
+    },
+    "vendor/deps/poly-decomp/test/index.js": {
+      "bytes": 3209,
+      "sha256": "aa237ead983d9e0855046d26f45e948852185f7993a05da48c6169114b56a176"
+    },
+    "vendor/matter/.eslintignore": {
+      "bytes": 19,
+      "sha256": "3455de78af781beeff4d99e6002b4bb04c09d93422053fd637d7a666e37ff7ab"
+    },
+    "vendor/matter/.eslintrc": {
+      "bytes": 1704,
+      "sha256": "20d9538e1fabde09f90284d0e14774dceba8fb5df1e94e9bd1a4e2b7323d7b69"
+    },
+    "vendor/matter/.github/workflows/ci.yml": {
+      "bytes": 522,
+      "sha256": "935adf0e079448f188779618e7981c75c70b9e3ae02300d0037f22c81aeb0b9a"
+    },
+    "vendor/matter/.gitignore": {
+      "bytes": 308,
+      "sha256": "858f41bbf76266c1c8d119de41a67ef5614376dadcaf6c85354bc7fee8981c28"
+    },
+    "vendor/matter/CHANGELOG.md": {
+      "bytes": 86940,
+      "sha256": "3a5b85cad3f2db6ea113b0b6a786ab6bee58341d7f960f460f7e03dd3dbce7a9"
+    },
+    "vendor/matter/CONTRIBUTING.md": {
+      "bytes": 1836,
+      "sha256": "2595d6c2b9457e7990a152fd4d15a589d3effd790379966774c61a63683dea90"
+    },
+    "vendor/matter/LICENSE": {
+      "bytes": 1092,
+      "sha256": "ed182087be5b26734aa6d4789743de3a97417950e8c1e3ff2e3d19c6462720d3"
+    },
+    "vendor/matter/README.md": {
+      "bytes": 9023,
+      "sha256": "d17d37655c45ca5ded135fb15ebc4271e268eb44ee4574b163dd147f75161da4"
+    },
+    "vendor/matter/RELEASE.md": {
+      "bytes": 18040,
+      "sha256": "0fb7224e70a6788a55c199eafaee438ec48c83397731583a37a34491f16a41e8"
+    },
+    "vendor/matter/build/matter.js": {
+      "bytes": 374389,
+      "sha256": "016f108075a42e8bb8f75c43cf5b6d9f07b1d88857975ed9d96b0ede921416ce"
+    },
+    "vendor/matter/build/matter.min.js": {
+      "bytes": 83476,
+      "sha256": "72d30be0f579eb02ce1e0b6f9d359a4f392e6837e5a26ba8be5dbee7f88e24ae"
+    },
+    "vendor/matter/demo/img/background.png": {
+      "bytes": 20616,
+      "sha256": "f0917ca0c923f625d62dfd223dd60efa438b645f0b52a51eee52ac40a2c6a714"
+    },
+    "vendor/matter/demo/img/ball.png": {
+      "bytes": 14301,
+      "sha256": "c4fb4935591998ec05e1a9be282b48a616ed94aa5c8135df75a5d5ebe94f43b3"
+    },
+    "vendor/matter/demo/img/block-2.png": {
+      "bytes": 468,
+      "sha256": "a08f8d80ebd7e9cbd28260323e85fb7e7d367c179b3f7b92034756589ac97224"
+    },
+    "vendor/matter/demo/img/block.png": {
+      "bytes": 510,
+      "sha256": "51b089820a95c1e3f16ee75d425adb846e82de23bef7f5bfd65abcbbc29cac21"
+    },
+    "vendor/matter/demo/img/box.png": {
+      "bytes": 14249,
+      "sha256": "d6957228c695b6682ae439f9d65bc75b5f0095f319e24690a244fa09dc5fe901"
+    },
+    "vendor/matter/demo/img/rock.png": {
+      "bytes": 1707,
+      "sha256": "fa242be6b375f920ab495d1c5871a04144cbc90b5666ec58111af74a1fcb9e7f"
+    },
+    "vendor/matter/demo/img/wall-bg.jpg": {
+      "bytes": 142015,
+      "sha256": "5d9e52bb0e4795185b40a9e27afe1bbfeef5c3ac0ed4317349173b9840771442"
+    },
+    "vendor/matter/demo/index.html": {
+      "bytes": 2275,
+      "sha256": "5c474bab0ab988275c83ff834da70c510013a3b6de21ef26fea7aacba9f46f4b"
+    },
+    "vendor/matter/demo/js/matter-demo.01bd65.min.js": {
+      "bytes": 161772,
+      "sha256": "2e25e4fc7d8145a7fbf79f70cd9449bef144882ec9ba76fe9d3cda8a4fbed420"
+    },
+    "vendor/matter/demo/js/matter-demo.main.cf6d09.min.js": {
+      "bytes": 1602,
+      "sha256": "96155975b4cf283afd54cb6544e9de12b6f104117623ad72f9cd9564a3af8000"
+    },
+    "vendor/matter/demo/js/matter-demo.matter-tools.0f82d2.min.js": {
+      "bytes": 375476,
+      "sha256": "449773b3167378f674047219c395e46071c95ea0130a4fe765964735c4910524"
+    },
+    "vendor/matter/demo/js/matter-demo.matter-wrap.f14474.min.js": {
+      "bytes": 2037,
+      "sha256": "b72f74ba0652ab0c68bed2cbb51cc769d0ac40f1168e8910299daca601516573"
+    },
+    "vendor/matter/demo/js/matter-demo.pathseg.f137cc.min.js": {
+      "bytes": 39639,
+      "sha256": "12413173211e6c5fa064869d2dcbedd7cbb67f1a0cbae46d0a84ab03ae93af91"
+    },
+    "vendor/matter/demo/js/matter-demo.poly-decomp.6b3373.min.js": {
+      "bytes": 4985,
+      "sha256": "09da3cd8424e32816eef0c1e65578379c8f6819c165c74c1b6f0f4d67321a40b"
+    },
+    "vendor/matter/demo/mathphysics.html": {
+      "bytes": 1320,
+      "sha256": "0c610b616ab00c924adbbf364814b68ba18eac856f73314cd7bacab45a34f86c"
+    },
+    "vendor/matter/demo/src/Compare.js": {
+      "bytes": 5578,
+      "sha256": "2af80a7bbed913eeb3a9101437dc82306e4e351264a0d9b2092f05bee2651abc"
+    },
+    "vendor/matter/demo/src/Demo.js": {
+      "bytes": 3557,
+      "sha256": "d7c9aa5bf5cd29cc40dbfa44351d894b1fdabfbb8d959bea02d21b6b679ae250"
+    },
+    "vendor/matter/demo/src/Multi.js": {
+      "bytes": 3296,
+      "sha256": "4e1b1cf9e602b66f74581229c53ebe5631a2992c75b767b0b744d1ecb8b23a33"
+    },
+    "vendor/matter/demo/src/index.ejs": {
+      "bytes": 2000,
+      "sha256": "5c83d9fe71d667d4c9273ec95ecb81f5bd2086604d823df1b640acfe3c62e681"
+    },
+    "vendor/matter/demo/src/index.js": {
+      "bytes": 1175,
+      "sha256": "f4baaa9666fc1d5641f01570678ff89ea80e73173e97c9984e0ba03e4d3da172"
+    },
+    "vendor/matter/demo/svg/iconmonstr-check-mark-8-icon.svg": {
+      "bytes": 809,
+      "sha256": "e18b69c884359b84ffec401ac9f209e1579b49dac6d877c23ee353a0e3cbe103"
+    },
+    "vendor/matter/demo/svg/iconmonstr-direction-4-icon.svg": {
+      "bytes": 1496,
+      "sha256": "94210cf1c6cda7d1a5c12155867aa601a2a969230905a7b493b562b1d6df466d"
+    },
+    "vendor/matter/demo/svg/iconmonstr-paperclip-2-icon.svg": {
+      "bytes": 1358,
+      "sha256": "709ebb3b2aefadb184a1a2ddaf72d7ea201756294bd2f38d0db1ed96d5ec91a6"
+    },
+    "vendor/matter/demo/svg/iconmonstr-puzzle-icon.svg": {
+      "bytes": 1365,
+      "sha256": "f17bef037b6d47bd4de8b78aeca1e6404d6800ff35ec3acabc25fd49342f113f"
+    },
+    "vendor/matter/demo/svg/iconmonstr-user-icon.svg": {
+      "bytes": 961,
+      "sha256": "2473eba23405d61df8a776ff5750da26e884622478b8ff0ff5c16d62a03500e0"
+    },
+    "vendor/matter/demo/svg/svg.svg": {
+      "bytes": 3064,
+      "sha256": "4abdd93ef0ced0e94319e72864699aa8b6dadd60223d73f82df85e6fdc4b43af"
+    },
+    "vendor/matter/demo/svg/terrain.svg": {
+      "bytes": 3849,
+      "sha256": "d24fc50ebf723da1cd9092d22c0a16357b39252165eb5f786914f924c277d765"
+    },
+    "vendor/matter/examples/airFriction.js": {
+      "bytes": 2316,
+      "sha256": "81e9230f66613205c76cc6cf26bae4c8bf00b5e6573e31e0b7bfce38f6a530b9"
+    },
+    "vendor/matter/examples/avalanche.js": {
+      "bytes": 3142,
+      "sha256": "0fd43c8fa8d31baaceb7dd7d5daf747b312d49fa5c5564f4b733910c8dc09d50"
+    },
+    "vendor/matter/examples/ballPool.js": {
+      "bytes": 3094,
+      "sha256": "400807569de687cdfb4bb88c57698210b4b797e308c9058a00bdc6f201d2470d"
+    },
+    "vendor/matter/examples/bridge.js": {
+      "bytes": 3364,
+      "sha256": "80ce340676fe68b794a166a94311898dce769033f10990fe899a18f928d002e8"
+    },
+    "vendor/matter/examples/car.js": {
+      "bytes": 4735,
+      "sha256": "5ae92d2d7d451ed17bff2014ffd7cabab8c5968802c506c871cb9d60c70c5664"
+    },
+    "vendor/matter/examples/catapult.js": {
+      "bytes": 2868,
+      "sha256": "bff18af302870d6514617a0f3749a923e54db66c93ed3c39df6e7b60426fe9ad"
+    },
+    "vendor/matter/examples/chains.js": {
+      "bytes": 3705,
+      "sha256": "dc07e005fb6eb169a9f18e47b3a31475442d3557ae1f3bf86ca2c6b018bc5c38"
+    },
+    "vendor/matter/examples/circleStack.js": {
+      "bytes": 2300,
+      "sha256": "801c8dcfbc776eb728c3d4e69f329223848488c89e45fcf386da1a4cd7f55da0"
+    },
+    "vendor/matter/examples/cloth.js": {
+      "bytes": 3538,
+      "sha256": "124d752e98aa5d79e3235fd065b6d3e088942023d6bb1db433e3f16a792b8020"
+    },
+    "vendor/matter/examples/collisionFiltering.js": {
+      "bytes": 4320,
+      "sha256": "4e7937463bba94555b95691dce76df494a47a9e1dd911759393d86bfffbb7683"
+    },
+    "vendor/matter/examples/compositeManipulation.js": {
+      "bytes": 2998,
+      "sha256": "58a889d1d5e145ce4a4b3155afa53ddca54f8632023a5c7ba04928af435282ed"
+    },
+    "vendor/matter/examples/compound.js": {
+      "bytes": 2784,
+      "sha256": "f6b9b157f8dd124e706c8cb0a2fc9e3c03d0223558fe2ac1cfa261931bec3946"
+    },
+    "vendor/matter/examples/compoundStack.js": {
+      "bytes": 2527,
+      "sha256": "cc39e6df947cb055fc933d7a5d8241463d164bb245390d9cf2ae27d9f5fc113f"
+    },
+    "vendor/matter/examples/concave.js": {
+      "bytes": 3087,
+      "sha256": "591be1eb28e9a7d83adccaddc9f8ff88374175b6f3ff0843e8a4e7ed1a981961"
+    },
+    "vendor/matter/examples/constraints.js": {
+      "bytes": 4946,
+      "sha256": "256b0cb87a42b9b4111c9b9514ff69787af926d3c9d428ebe6112368e2a9c8f3"
+    },
+    "vendor/matter/examples/doublePendulum.js": {
+      "bytes": 4020,
+      "sha256": "1e54d0cdcae1c11e9bc402593454db4580ccef5d30212fbcd0d1e632bcd6260d"
+    },
+    "vendor/matter/examples/events.js": {
+      "bytes": 5962,
+      "sha256": "e7ed3aefaa064fbcf7cf8251bed8c5a9ae9b1439a11e73ab937e7d755789b638"
+    },
+    "vendor/matter/examples/friction.js": {
+      "bytes": 2734,
+      "sha256": "b7dc464cec5f4336c05c23aaf9de06317cc37f2cb0b805f2df997053d0ffb47f"
+    },
+    "vendor/matter/examples/gravity.js": {
+      "bytes": 2775,
+      "sha256": "77d6f16e1a96862c855b3cb9b8b53c882df1d53371bf19a3b0c50045ca85df91"
+    },
+    "vendor/matter/examples/gyro.js": {
+      "bytes": 4179,
+      "sha256": "bf5721f9267a21e2d455aae0f7b0ef99beb2dacadeb6a0e50fc195bd88eb4c86"
+    },
+    "vendor/matter/examples/index.js": {
+      "bytes": 1986,
+      "sha256": "21863f0122803e581a1a0975911b5bf701caa0fa07ee0f2f020b3623997a229f"
+    },
+    "vendor/matter/examples/manipulation.js": {
+      "bytes": 5110,
+      "sha256": "f4b34c55d693888c14a2ee061b5c75384e30f54eaafc4b1d629aee7307c94e3d"
+    },
+    "vendor/matter/examples/mixed.js": {
+      "bytes": 3001,
+      "sha256": "3098b3ac027c70b25604349cba2889f6801d207dbcadfb289805d2d2235cf3eb"
+    },
+    "vendor/matter/examples/newtonsCradle.js": {
+      "bytes": 3278,
+      "sha256": "06c4a54485f65e4bb2930a6c473b1bced1c963c7b4f97e5932d1fdffe9811096"
+    },
+    "vendor/matter/examples/pyramid.js": {
+      "bytes": 2279,
+      "sha256": "732faa208ce8329bfad83cfaabac89a151be299564c654ba04a4f1e0603e32b2"
+    },
+    "vendor/matter/examples/ragdoll.js": {
+      "bytes": 13408,
+      "sha256": "48d609813bc6f8e37ef9dbc3f8ba9eaa3f2de17deff68c7a5ae6d0cb0b0326b2"
+    },
+    "vendor/matter/examples/raycasting.js": {
+      "bytes": 4412,
+      "sha256": "962bdd80f45778b0b790cbeb8a915b5539f5d764376792c5a82ec0aaa1cace43"
+    },
+    "vendor/matter/examples/remove.js": {
+      "bytes": 4074,
+      "sha256": "a174b72931dd517577c86b7afee16b948a6474aeec7ef48ee8c9517055024ec8"
+    },
+    "vendor/matter/examples/renderResize.js": {
+      "bytes": 3679,
+      "sha256": "16ed4d3e3782a130af527921c7ee44c53d10dabef85d5313cef249837a548c07"
+    },
+    "vendor/matter/examples/restitution.js": {
+      "bytes": 2670,
+      "sha256": "de04a0e03882d493449600ee17fb88fa553e616a1a621125d379881f8db4fd9e"
+    },
+    "vendor/matter/examples/rounded.js": {
+      "bytes": 2959,
+      "sha256": "1fdbd86f4988fb722cabffc94a8d27831887cfa0583e0f531712e0b8e95afd8e"
+    },
+    "vendor/matter/examples/sensors.js": {
+      "bytes": 3413,
+      "sha256": "4a1c689c381420309edf5c6616994656fba3b3e8d72822024262fac8f0b7e4fc"
+    },
+    "vendor/matter/examples/sleeping.js": {
+      "bytes": 3084,
+      "sha256": "034f6aa81b867ade9a39a06c90bbd27a14cac88a123dd02fb74b8576de8d4b80"
+    },
+    "vendor/matter/examples/slingshot.js": {
+      "bytes": 3338,
+      "sha256": "9aacc541d7f24933269e2a81d5a997a8b166e22a7eb10d2422e99aa1a6af2687"
+    },
+    "vendor/matter/examples/softBody.js": {
+      "bytes": 3696,
+      "sha256": "f3a9de12af6bd1c8002bcf1a2b903ced70d32cdca063d7119772aea9a1b6a26a"
+    },
+    "vendor/matter/examples/sprites.js": {
+      "bytes": 3180,
+      "sha256": "958c4d77729624fc80ba006b9c36a8bdec362d3177dda7a4a605b98b07157a5c"
+    },
+    "vendor/matter/examples/stack.js": {
+      "bytes": 2270,
+      "sha256": "0c2a92634ffb11617e478ae947424fb84d7d37e5b4dbd5482d06fa9cb405f6ac"
+    },
+    "vendor/matter/examples/staticFriction.js": {
+      "bytes": 3096,
+      "sha256": "c25b40e740c6143187cfc6ad71b4efaad3153baf4908dc8359b0ccf4a89f50ff"
+    },
+    "vendor/matter/examples/stats.js": {
+      "bytes": 2355,
+      "sha256": "ac129a2c49391098540604c459e303b0eba4f62d5a2f54778a2220f0a5f9050b"
+    },
+    "vendor/matter/examples/stress.js": {
+      "bytes": 2280,
+      "sha256": "26f0c2957270b6082f5f167ea1e287deeb59f2266b955781df14de90dcba6f95"
+    },
+    "vendor/matter/examples/stress2.js": {
+      "bytes": 2287,
+      "sha256": "39a83d2bf14615fad63d1330d3dd17886613e45150526d17aadf937ada2ef529"
+    },
+    "vendor/matter/examples/stress3.js": {
+      "bytes": 2905,
+      "sha256": "3fbb40caa662461a415af4e033c2f24edd9c1eeffd29b22edab3f9f7582369ef"
+    },
+    "vendor/matter/examples/stress4.js": {
+      "bytes": 3436,
+      "sha256": "e0ad97eff73e9847c749b0e7022481c1bf7d7e6813dc358d471a997705bfb516"
+    },
+    "vendor/matter/examples/substep.js": {
+      "bytes": 3490,
+      "sha256": "c28afc456bb1a050f0b0948b1b3c9cc97cd51eb4e399497868bd61a97cae2085"
+    },
+    "vendor/matter/examples/svg.js": {
+      "bytes": 4192,
+      "sha256": "dc6a42753062015a95bc7101d82b66694f265ae03807f18d2595019cb2413acc"
+    },
+    "vendor/matter/examples/terrain.js": {
+      "bytes": 3569,
+      "sha256": "42366488e50b14672c061b368fc124d54d0a87e0196506a62c64da5afe665e75"
+    },
+    "vendor/matter/examples/timescale.js": {
+      "bytes": 4593,
+      "sha256": "75b6463006631ee8e2af8d79f49f77d7a382196cd39a9ec6dd3739b5d4c2451e"
+    },
+    "vendor/matter/examples/views.js": {
+      "bytes": 6034,
+      "sha256": "65785afeaeec7cdf2f09ac084fcf1ee18d842b1be47fd24f94f178894d5679d9"
+    },
+    "vendor/matter/examples/wreckingBall.js": {
+      "bytes": 2621,
+      "sha256": "358e3209ba2d1354ec1534d4ebbec63bf0ec83fe30f65338cd9b91887286d12f"
+    },
+    "vendor/matter/package-lock.json": {
+      "bytes": 1094468,
+      "sha256": "bf22f5b8fb2621180a2366583242ee5cc17e70f9447bb31f86a8b859f7ed2ba1"
+    },
+    "vendor/matter/package.json": {
+      "bytes": 3315,
+      "sha256": "4d8aa6501b2c06e2c1c46bdf294050096cc18631588810d19b451f8590e2ad9e"
+    },
+    "vendor/matter/src/body/Body.js": {
+      "bytes": 51154,
+      "sha256": "8b01c2923507f7c1dfcbf036cb2ec2b9278180077145cf7643c0c97bfa134892"
+    },
+    "vendor/matter/src/body/Composite.js": {
+      "bytes": 23836,
+      "sha256": "bca6f558c15a0ef6af0c811ae4fb99254d64a2e0e446bf1b33c0c01f4b9af6c1"
+    },
+    "vendor/matter/src/body/World.js": {
+      "bytes": 1058,
+      "sha256": "ea53dde3ff6da381a36d4cb956993adbac76c304c79acfb9386f3d7d7dca7b4d"
+    },
+    "vendor/matter/src/collision/Collision.js": {
+      "bytes": 11967,
+      "sha256": "2e65d1e67a75a95709571400dfd05085c83479eececae435ef37c39166c65956"
+    },
+    "vendor/matter/src/collision/Contact.js": {
+      "bytes": 494,
+      "sha256": "ca7ee080d2268be0660b3052239b25e6f7ac4684651a17da67e524759f9458b0"
+    },
+    "vendor/matter/src/collision/Detector.js": {
+      "bytes": 6414,
+      "sha256": "9d90c77633b4ba2a04c7b96f701415240caa638c7ff0e1edf3675af1b03cc1a6"
+    },
+    "vendor/matter/src/collision/Grid.js": {
+      "bytes": 10254,
+      "sha256": "6919a26f43de15ccb28dba8a4ffdae7df8aa07b0172eeed5dd84963387bd0235"
+    },
+    "vendor/matter/src/collision/Pair.js": {
+      "bytes": 3617,
+      "sha256": "136d93225ce9d81103cc1124488298bc2d7c53fea027fd19515135b8a460502e"
+    },
+    "vendor/matter/src/collision/Pairs.js": {
+      "bytes": 4266,
+      "sha256": "62e1acfae69eb953b813938b746be69f894348b0a701dc9970540ed37ca87661"
+    },
+    "vendor/matter/src/collision/Query.js": {
+      "bytes": 4325,
+      "sha256": "2dac27f58e6780b01372b12ec6431045b0c5f18ada4babcece6f5fe1c8d990ce"
+    },
+    "vendor/matter/src/collision/Resolver.js": {
+      "bytes": 15326,
+      "sha256": "b1e0a7cdee3b50735afad50ca718a3794b79d95057d1a0bd598127d6a087b66a"
+    },
+    "vendor/matter/src/collision/SAT.js": {
+      "bytes": 997,
+      "sha256": "ed400386f2f4023704ede9d6f8c1bc6684a9e121cb3748c564ebe196517fe449"
+    },
+    "vendor/matter/src/constraint/Constraint.js": {
+      "bytes": 17785,
+      "sha256": "5a582cec20b9b301cad1badf8ebf715a2dc379b0bdbb299c1d405adb47ea040f"
+    },
+    "vendor/matter/src/constraint/MouseConstraint.js": {
+      "bytes": 8460,
+      "sha256": "80472840e0d3ad88e905831e22b38b847c60019540796636722dc5819817c131"
+    },
+    "vendor/matter/src/core/Common.js": {
+      "bytes": 19321,
+      "sha256": "d0759a6140baad61a0fe20dc5238b0f08931e1c466ad38301103dd7e1a242e4b"
+    },
+    "vendor/matter/src/core/Engine.js": {
+      "bytes": 18621,
+      "sha256": "2b6a661b1468c0c74f2e929d316b774a3c803cd2d703b8f12180d781529e8721"
+    },
+    "vendor/matter/src/core/Events.js": {
+      "bytes": 3118,
+      "sha256": "dbad80942615a80867eff33c9260143697909868df1a56026dcc4229bec3bbd4"
+    },
+    "vendor/matter/src/core/Matter.js": {
+      "bytes": 2863,
+      "sha256": "59618f73d877ae62ad6e936026ff90d9725554663b79029a9c60b45116fdb17d"
+    },
+    "vendor/matter/src/core/Mouse.js": {
+      "bytes": 7050,
+      "sha256": "ebb5cc6cb5fd967e2b0e3c72f63bff499d65077fe44bbd495729415f6d2eade3"
+    },
+    "vendor/matter/src/core/Plugin.js": {
+      "bytes": 13286,
+      "sha256": "e2310c0155ed6e62d0677e0ace73ee39053db82df693bac3a873c5ebf7c2120e"
+    },
+    "vendor/matter/src/core/Runner.js": {
+      "bytes": 16710,
+      "sha256": "9a1a11021e4e8dcaa6aec97c9a32af5e9263678452e78161ed34f7ad5f48c352"
+    },
+    "vendor/matter/src/core/Sleeping.js": {
+      "bytes": 4162,
+      "sha256": "982fac0b42ea4ddd2c8a99c05511ff8b5c5c895b6d1dec73735199f5b76c1eeb"
+    },
+    "vendor/matter/src/factory/Bodies.js": {
+      "bytes": 14188,
+      "sha256": "24c1edddca72df9ab863a0a24519b406481a512ee1464a96f3cd7eebae537f92"
+    },
+    "vendor/matter/src/factory/Composites.js": {
+      "bytes": 12849,
+      "sha256": "c0e47f2f386b9cd5c85d2853da640fec44eeaa5b14348489ca954e162f08eafe"
+    },
+    "vendor/matter/src/geometry/Axes.js": {
+      "bytes": 1673,
+      "sha256": "b74d124e19d3db894409884f3c7c3ccb08eb5a740d35e6da8ec0ffe7776a1fe3"
+    },
+    "vendor/matter/src/geometry/Bounds.js": {
+      "bytes": 3505,
+      "sha256": "dfd58ce2a46b2b6497382d52c46c8a16d03f12867c71f29abf8f7bf7d9e9b078"
+    },
+    "vendor/matter/src/geometry/Svg.js": {
+      "bytes": 7393,
+      "sha256": "96fd6b2af72e239a24e02029e2fb1574c5a03d7bf2a12b845274ca90a95f24b5"
+    },
+    "vendor/matter/src/geometry/Vector.js": {
+      "bytes": 7179,
+      "sha256": "971db92214fcc3613eb5ec76b3dda7b9918363e4a73a59e702e694e2677b5310"
+    },
+    "vendor/matter/src/geometry/Vertices.js": {
+      "bytes": 14056,
+      "sha256": "9cbe39bc391d69f92f93ca6ca4693c55743e73bf676a11a9308f0c7796454448"
+    },
+    "vendor/matter/src/module/license.js": {
+      "bytes": 1163,
+      "sha256": "84581d248ebd4f0ac78d6adec45111c10f819209a683c6241e352d1c922dfe0c"
+    },
+    "vendor/matter/src/module/main.js": {
+      "bytes": 1629,
+      "sha256": "ca0e4209365aa9156de9a65561ada5f9ed5fdf2de68cad8fff6f390f94a15364"
+    },
+    "vendor/matter/src/render/Render.js": {
+      "bytes": 59780,
+      "sha256": "b61ca20e8422ec8e2b7c000b3e64c8590f58fafae7fdcdaad97fe754a4160e9c"
+    },
+    "vendor/matter/test/Browser.spec.js": {
+      "bytes": 3135,
+      "sha256": "8d431f9b7c09df989ac6134ff82c516e1a96885c50783c019c39e43ac7ffec44"
+    },
+    "vendor/matter/test/ExampleWorker.js": {
+      "bytes": 9754,
+      "sha256": "5ecbb71833a1cb9e88e30007d51ec246ee9907334ac1f7df0a60e01abd89a13e"
+    },
+    "vendor/matter/test/Examples.spec.js": {
+      "bytes": 3792,
+      "sha256": "cfe9099cfa0aa3ca10fb137d626e3ad12076e38871643558e21c7917a68cec54"
+    },
+    "vendor/matter/test/TestTools.js": {
+      "bytes": 12746,
+      "sha256": "966e55aac5fa1f28085859cdcd9f9a30f420336545d5bb8665a7478bf9b8edaf"
+    },
+    "vendor/matter/webpack.config.js": {
+      "bytes": 2029,
+      "sha256": "6f79713dde09f62f4f669af873d360a5668ea906c2876848a23a1aa0e62a305a"
+    },
+    "vendor/matter/webpack.demo.config.js": {
+      "bytes": 3658,
+      "sha256": "36b083ea5ba81864b07e5f5d16fc8ea2ebeaa01ab9fa0b911b0bde2956202518"
+    },
+    "vendor/matter/yuidoc.json": {
+      "bytes": 279,
+      "sha256": "1a012aca16991077b06ee4a02274b3a528898d5f04d650152445d1aa065b99ad"
+    },
+    "vendor/phet/area-builder.html": {
+      "bytes": 1287438,
+      "sha256": "1428ff4e664e7ac433c9030a517a256c35df5b6100c2f8a96a363cb6a08d62d4"
+    },
+    "vendor/phet/energy-skate-park-basics.html": {
+      "bytes": 4912535,
+      "sha256": "6a3082d4592f773e24346ba8afa3f8f08bb56541f5d6cae5e1f46869c61a4016"
+    },
+    "vendor/phet/forces-and-motion-basics.html": {
+      "bytes": 4851311,
+      "sha256": "11df6f73895d430c3638f5f49ea060c37a6ebad94855e116d4b7e971f522703b"
+    },
+    "vendor/phet/vector-addition.html": {
+      "bytes": 2536189,
+      "sha256": "1e3e9e7dbac1bf79c85c3f6d8166f605598a5007ad15694d76d9ed2f9465dc1a"
+    },
+    "vendor/sources/area-builder/.gitignore": {
+      "bytes": 106,
+      "sha256": "5811189820de8dced10d5dc4483dcdc9f11b93c2c9739ed84b624775d0fda6b0"
+    },
+    "vendor/sources/area-builder/.npmrc": {
+      "bytes": 28,
+      "sha256": "1597e56c66a7868eab67a491963faa49d1280b7b1a080d5eaf47c4262a215fe8"
+    },
+    "vendor/sources/area-builder/Gruntfile.cjs": {
+      "bytes": 151,
+      "sha256": "f0893235d9f9d07c86a55071865672a24eb805dad82cc4f61c76d955365f28a5"
+    },
+    "vendor/sources/area-builder/LICENSE": {
+      "bytes": 35121,
+      "sha256": "e1c0ad728983d8a57335e52cf1064f1affd1d454173d8cebd3ed8b4a72b48704"
+    },
+    "vendor/sources/area-builder/README.md": {
+      "bytes": 3634,
+      "sha256": "118d88f003c8fce160cccf9768ce28716fcc8a720110d4bd68b3c9f656eb259b"
+    },
+    "vendor/sources/area-builder/area-builder-strings_en.json": {
+      "bytes": 1059,
+      "sha256": "7c19c07a6b851d2c041fa60e1454e719d8c42caec5baaf2d8b2dd7bca674493b"
+    },
+    "vendor/sources/area-builder/area-builder_en.html": {
+      "bytes": 5248,
+      "sha256": "2c3b4426e0434730961ded591c642084eb250791cd7e47804a4ae8a291868299"
+    },
+    "vendor/sources/area-builder/assets/area-builder-screenshot-alt1.png": {
+      "bytes": 174784,
+      "sha256": "21a536148e79ed20ea503d0767faa71604e24c929cac24c81311f51460b14de1"
+    },
+    "vendor/sources/area-builder/assets/area-builder-screenshot-alt2.png": {
+      "bytes": 168309,
+      "sha256": "e7784e5e9b6b735bc96a15a14ae2e19dee85a8a3c053f8a4fd510fe1e118fe56"
+    },
+    "vendor/sources/area-builder/assets/area-builder-screenshot-screen1.png": {
+      "bytes": 59497,
+      "sha256": "a8369e9d441009c0579865f571288324797c14e2e323f62016ab622cdf3aebfc"
+    },
+    "vendor/sources/area-builder/assets/area-builder-screenshot-screen2.png": {
+      "bytes": 56527,
+      "sha256": "107f639a9232617cc3edea5d177460ece3296c0117202a133d4beac0c068a33f"
+    },
+    "vendor/sources/area-builder/assets/area-builder-screenshot.png": {
+      "bytes": 118291,
+      "sha256": "261a53b4644d6fba56268fde1c2e2203a81eb35a6968f7da22e5fad6d12607c1"
+    },
+    "vendor/sources/area-builder/assets/explore-icon.ai": {
+      "bytes": 138469,
+      "sha256": "6cc758560b6a76df0532c52070f3267697c7d1a044a00f8c48af9580fedbfb88"
+    },
+    "vendor/sources/area-builder/assets/game-icon.ai": {
+      "bytes": 145430,
+      "sha256": "f33f74c3dc3c7d7a71585eb95740bd5d1464a8252e46bed0f0f8c66e3c8c3bd5"
+    },
+    "vendor/sources/area-builder/dependencies.json": {
+      "bytes": 2640,
+      "sha256": "f24abcf07d32fb9b75351bec856b608134706298405cd1e1fcacdd5d7ce0fc82"
+    },
+    "vendor/sources/area-builder/doc/area-builder-guide.pdf": {
+      "bytes": 643853,
+      "sha256": "13d690f01a6a0ad171986ff90c1978344aca40e326c595d4247a87fdb2f12400"
+    },
+    "vendor/sources/area-builder/doc/implementation-notes.txt": {
+      "bytes": 1844,
+      "sha256": "471577cc6a463d43d1483779b2c761204b4f2e01aeb7587f36df4dc30cb7675d"
+    },
+    "vendor/sources/area-builder/doc/model.txt": {
+      "bytes": 436,
+      "sha256": "25966cd3c3b29a48e8140cee1e55efaad77c1f0e69bb82a42b31da888fb5a00d"
+    },
+    "vendor/sources/area-builder/eslint.config.mjs": {
+      "bytes": 345,
+      "sha256": "a9831618cb87f7a4a7d2e985c6ad579b9c5171c1b0742cf346dc65acd61fb1f9"
+    },
+    "vendor/sources/area-builder/images/exploreIcon.png": {
+      "bytes": 12932,
+      "sha256": "352df380d7f63dfd10425c53a2fa40f35ffa534e431cbc738e5e1db324bd6737"
+    },
+    "vendor/sources/area-builder/images/exploreIcon_png.ts": {
+      "bytes": 17506,
+      "sha256": "781f35e2de079a2e5cb624041084bf47b1b11d44bd6848bf622aa4fbd71ec8ff"
+    },
+    "vendor/sources/area-builder/images/gameIcon.png": {
+      "bytes": 19225,
+      "sha256": "4ce138bf96835bc04e6099e75404f84306e9a7770dfdc1bdbf4d6655ca976f59"
+    },
+    "vendor/sources/area-builder/images/gameIcon_png.ts": {
+      "bytes": 25898,
+      "sha256": "df12a90fa739cb0cc6ba73526e5fb65f20390a78a0ea943ad46a2116e7805c90"
+    },
+    "vendor/sources/area-builder/images/license.json": {
+      "bytes": 481,
+      "sha256": "fe9ab6045bc6deb5d830e6831427ec6cfa8179597b5ca7c29c5297f049ca3700"
+    },
+    "vendor/sources/area-builder/js/AreaBuilderStrings.ts": {
+      "bytes": 2347,
+      "sha256": "39dec0663f9f4f71b7c0c759397c1b1173139840c9179385a0cfeeb0a9ed2590"
+    },
+    "vendor/sources/area-builder/js/area-builder-main.js": {
+      "bytes": 1271,
+      "sha256": "286c3481d56a99e3df30f18e6bb8cb96580feaf089950abb7b629896fac72683"
+    },
+    "vendor/sources/area-builder/js/areaBuilder.js": {
+      "bytes": 241,
+      "sha256": "f92689c1d2a2ca5de82898654e776f61c3514252882bfce35b178cf0c71793ba"
+    },
+    "vendor/sources/area-builder/js/common/AreaBuilderQueryParameters.js": {
+      "bytes": 485,
+      "sha256": "bf73812512916dafcca59e52d799f7d2804688cd9d315125c558ff821e3b095d"
+    },
+    "vendor/sources/area-builder/js/common/AreaBuilderSharedConstants.js": {
+      "bytes": 1693,
+      "sha256": "5240bf4c933d95f9dc789bb5e0e464589ba64de8e6a39ca198540f7e95aee2e0"
+    },
+    "vendor/sources/area-builder/js/common/model/MovableShape.js": {
+      "bytes": 6329,
+      "sha256": "fa015e47eb9367aee79fd2e9000ec87b52e680b79ae3cb3dfebc9816f3d509a8"
+    },
+    "vendor/sources/area-builder/js/common/model/PerimeterShape.js": {
+      "bytes": 5689,
+      "sha256": "9aca6b633ca47bd07af149a2918eda7568b8053c9e92fd445316750d38dd40c7"
+    },
+    "vendor/sources/area-builder/js/common/model/ShapePlacementBoard.js": {
+      "bytes": 42560,
+      "sha256": "a7cba7a119a67c40964d3e9b536e2ef61998264ac1d5d68f18cff0fb65b42da5"
+    },
+    "vendor/sources/area-builder/js/common/view/AreaBuilderControlPanel.js": {
+      "bytes": 2940,
+      "sha256": "4eaf95df99a75e7b2124475f7d52b8ac08acd1affb1c01a6f9dd18c7e6210a22"
+    },
+    "vendor/sources/area-builder/js/common/view/AreaBuilderIconFactory.js": {
+      "bytes": 6006,
+      "sha256": "a16b0b65f8f0f727b957e27ef0f4ce212b0fa4b535894d1010a80a84a8a19a95"
+    },
+    "vendor/sources/area-builder/js/common/view/DimensionsIcon.js": {
+      "bytes": 2515,
+      "sha256": "efbd9c5989a0c423c295f2be3f902b608bd4b6e2ee6d0b2cdff4cc289121f531"
+    },
+    "vendor/sources/area-builder/js/common/view/Grid.js": {
+      "bytes": 1031,
+      "sha256": "c8e8c2d2337fd470880e6abcbcdcf5f0201e3b35916c2f210af33508cea5b42b"
+    },
+    "vendor/sources/area-builder/js/common/view/GridIcon.js": {
+      "bytes": 2188,
+      "sha256": "43f4e6cfe17f49922555cfecbebadbe10f19fdf535c473e269315d5f90133315"
+    },
+    "vendor/sources/area-builder/js/common/view/PerimeterShapeNode.js": {
+      "bytes": 11472,
+      "sha256": "3295addf2a606c7cf78d64122dab7e69f76d5dacf2eefdc99c16a094f990b912"
+    },
+    "vendor/sources/area-builder/js/common/view/ShapeCreatorNode.js": {
+      "bytes": 8067,
+      "sha256": "24135d024315fdff97598cd6470f18f497ffeb55bb160c164595356ccc7197bf"
+    },
+    "vendor/sources/area-builder/js/common/view/ShapeNode.js": {
+      "bytes": 6528,
+      "sha256": "808394e8b6595bf52b3bb09f5d0067bace47c3edf4bb0da41ff022ba0e88cc60"
+    },
+    "vendor/sources/area-builder/js/common/view/ShapePlacementBoardNode.js": {
+      "bytes": 3327,
+      "sha256": "099b49b504c8b9c0e0bfbe35d2011acd817a1463c5a1609cd025e7bf49ab886e"
+    },
+    "vendor/sources/area-builder/js/explore/AreaBuilderExploreScreen.js": {
+      "bytes": 1566,
+      "sha256": "f630bb1626d338ff3218f20f3249fa4c5b03600e7a40526b5686e1b0b9eb558d"
+    },
+    "vendor/sources/area-builder/js/explore/model/AreaBuilderExploreModel.js": {
+      "bytes": 7418,
+      "sha256": "77f21614cd76ad4e3465209c567e3e1765cb04a073ad0522a8ce97e864b8234e"
+    },
+    "vendor/sources/area-builder/js/explore/view/AreaAndPerimeterDisplay.js": {
+      "bytes": 3231,
+      "sha256": "b8e475a1110874b052d05261b36b6d934f8425314bf375b69e1ed53fdd5e8726"
+    },
+    "vendor/sources/area-builder/js/explore/view/AreaBuilderExploreView.js": {
+      "bytes": 4746,
+      "sha256": "70a97cc36cb5f5662361cea2685542fd2a682aa208cd6e3abaa8ddb2d24e0185"
+    },
+    "vendor/sources/area-builder/js/explore/view/BoardDisplayModePanel.js": {
+      "bytes": 2852,
+      "sha256": "aa1d9fcc48b5c26198604b0f460f72114a10a6beca8f95d19265d26477445411"
+    },
+    "vendor/sources/area-builder/js/explore/view/ExploreNode.js": {
+      "bytes": 7070,
+      "sha256": "acce9339fceabe1783318746393b283d2bde7ff3dd17a312a3f8c44ad08bea78"
+    },
+    "vendor/sources/area-builder/js/game/AreaBuilderGameScreen.js": {
+      "bytes": 1675,
+      "sha256": "c42ef7838c92620ce52731396ac116646721c699ddee2dafb4a5a7e920b909ed"
+    },
+    "vendor/sources/area-builder/js/game/model/AreaBuilderChallengeFactory.js": {
+      "bytes": 42049,
+      "sha256": "2c28903ab3f175245dbad53d5929cad298ad62057ccd37af6f3916a3490055d5"
+    },
+    "vendor/sources/area-builder/js/game/model/AreaBuilderGameChallenge.js": {
+      "bytes": 6156,
+      "sha256": "926e3462cd7db51eb03ff3bd8cfd1948b85ccca48a1f594ae6706b487d2fab2f"
+    },
+    "vendor/sources/area-builder/js/game/model/AreaBuilderGameModel.js": {
+      "bytes": 13403,
+      "sha256": "5c608ec0e2f4296f7e10fd462c209985e613add864bc62df9dc33b38e3888638"
+    },
+    "vendor/sources/area-builder/js/game/model/BuildSpec.js": {
+      "bytes": 3886,
+      "sha256": "64efc56a22ae4587af7bb52d405293463b71f89cef613e93f2090956226f7948"
+    },
+    "vendor/sources/area-builder/js/game/model/GameState.js": {
+      "bytes": 743,
+      "sha256": "b3ff5b09f8d7c7d3169969fb306d0317fd4f3b8a747df9d69c6a7df0e3871e9c"
+    },
+    "vendor/sources/area-builder/js/game/model/QuizGameModel.js": {
+      "bytes": 8865,
+      "sha256": "d7f62fd94df1e42f61585d7e6bdbe53d886b498833e51ce996de4e6d97af265c"
+    },
+    "vendor/sources/area-builder/js/game/view/AreaBuilderGameView.js": {
+      "bytes": 38022,
+      "sha256": "e112199e74db730dd9ad006afcfd256f07652844340ec3d9df470c41f112c015"
+    },
+    "vendor/sources/area-builder/js/game/view/AreaBuilderScoreboard.js": {
+      "bytes": 3535,
+      "sha256": "9be4de847634ddbe555e9e2a028b6633e097c2cd3f0304bc66ca9fa5e3db4d14"
+    },
+    "vendor/sources/area-builder/js/game/view/ColorProportionsPrompt.js": {
+      "bytes": 3622,
+      "sha256": "43b80585c13093459ba676d4cbd5e30035e676258dac02c52d789ad98fb9fb86"
+    },
+    "vendor/sources/area-builder/js/game/view/FeedbackWindow.js": {
+      "bytes": 2798,
+      "sha256": "73e931163f8fce7038e61a8e4bb61c45a733594f753812a593c032da477cf677"
+    },
+    "vendor/sources/area-builder/js/game/view/FractionNode.js": {
+      "bytes": 2733,
+      "sha256": "58977484e0909e479cab9f25c7544b78ae3982a6fb1ee69250741e37cb5372a2"
+    },
+    "vendor/sources/area-builder/js/game/view/GameIconFactory.js": {
+      "bytes": 4524,
+      "sha256": "d7845d16657cd8f920b75ab300452a9627e881abb28ed3916dc48971689d793d"
+    },
+    "vendor/sources/area-builder/js/game/view/GameInfoBanner.js": {
+      "bytes": 8411,
+      "sha256": "fd71655f57a0d8463c18626d40f8dcb43398a6b6b2f9309553da6b0411039311"
+    },
+    "vendor/sources/area-builder/js/game/view/StartGameLevelNode.js": {
+      "bytes": 5308,
+      "sha256": "955517a480d7235a5b54d8548f1b6cf074ff8331aac45e24d26f63af179556e8"
+    },
+    "vendor/sources/area-builder/js/game/view/YouBuiltWindow.js": {
+      "bytes": 5908,
+      "sha256": "5aa2acff98bb148a8c9b169726194e8bce19a490e467d695fab1561b5babcaf6"
+    },
+    "vendor/sources/area-builder/js/game/view/YouEnteredWindow.js": {
+      "bytes": 1334,
+      "sha256": "3740919205e1716cd3d26d5e13d358927a99f8de2a9c279b53305d7ebbb4e7b8"
+    },
+    "vendor/sources/area-builder/package-lock.json": {
+      "bytes": 44110,
+      "sha256": "66ab689af24b76ab3581b23ecccce0a3b51706b5a37649ceea5cce54410e3b3b"
+    },
+    "vendor/sources/area-builder/package.json": {
+      "bytes": 656,
+      "sha256": "091c68339d44e489935825c620b71a82d016513ecb1a595f75913a0274a37a90"
+    },
+    "vendor/sources/area-builder/tsconfig.json": {
+      "bytes": 367,
+      "sha256": "446a4a34213741a632813eba4943bd57de141d3608a66fd02697f347269ff878"
+    },
+    "vendor/sources/energy-skate-park-basics/.gitignore": {
+      "bytes": 106,
+      "sha256": "5811189820de8dced10d5dc4483dcdc9f11b93c2c9739ed84b624775d0fda6b0"
+    },
+    "vendor/sources/energy-skate-park-basics/.npmrc": {
+      "bytes": 28,
+      "sha256": "1597e56c66a7868eab67a491963faa49d1280b7b1a080d5eaf47c4262a215fe8"
+    },
+    "vendor/sources/energy-skate-park-basics/Gruntfile.cjs": {
+      "bytes": 151,
+      "sha256": "f0893235d9f9d07c86a55071865672a24eb805dad82cc4f61c76d955365f28a5"
+    },
+    "vendor/sources/energy-skate-park-basics/LICENSE": {
+      "bytes": 35159,
+      "sha256": "3f5b8089c30094b8ad75ec27de63b2407361305430574ca587608086fb5de8e5"
+    },
+    "vendor/sources/energy-skate-park-basics/README.md": {
+      "bytes": 3976,
+      "sha256": "a1d45a41fffec51e9b941454f37b65f421e70a3b5cb708e690c5c0920252118f"
+    },
+    "vendor/sources/energy-skate-park-basics/assets/energy-skate-park-basics-screenshot-alt1.png": {
+      "bytes": 568649,
+      "sha256": "3bb6df8912466b48b0f29bb10bf5cfaf9f25a5088649381e64adb5551b7376ea"
+    },
+    "vendor/sources/energy-skate-park-basics/assets/energy-skate-park-basics-screenshot-alt2.png": {
+      "bytes": 593677,
+      "sha256": "1b9595fc4d7cc5d551bbdc819ac1dfb4d267151ff6e3a5f121487106959154a7"
+    },
+    "vendor/sources/energy-skate-park-basics/assets/energy-skate-park-basics-screenshot-alt3.png": {
+      "bytes": 830072,
+      "sha256": "a00cba311c318d2c352d15b2cf0186271156d593af2962422f1c92588e668a22"
+    },
+    "vendor/sources/energy-skate-park-basics/assets/energy-skate-park-basics-screenshot-screen1.png": {
+      "bytes": 450591,
+      "sha256": "52bd3b79ca2314281832f9b999238f23c5bca823596bf401fd9980b20957a6db"
+    },
+    "vendor/sources/energy-skate-park-basics/assets/energy-skate-park-basics-screenshot-screen2.png": {
+      "bytes": 520761,
+      "sha256": "6bbbe2c995152e123163339f933ad8e3d0b90c82d144642a70b649d3afe52225"
+    },
+    "vendor/sources/energy-skate-park-basics/assets/energy-skate-park-basics-screenshot-screen3.png": {
+      "bytes": 549607,
+      "sha256": "d0ff2c1cb1938df8485e13bcf867f5e81e93b45333340e61898c7336cd80339d"
+    },
+    "vendor/sources/energy-skate-park-basics/assets/energy-skate-park-basics-screenshot.png": {
+      "bytes": 493517,
+      "sha256": "ac973ad51d3da38276c08021a97e5a140464f91dd7e76cf74dc51c050495ab10"
+    },
+    "vendor/sources/energy-skate-park-basics/assets/espb-screen-icons.ai": {
+      "bytes": 1754714,
+      "sha256": "9e0a0c1d49cdfa0ca3a8f268d00d21d5d4afe6a87a9a8d88abf65ed192bbdbf4"
+    },
+    "vendor/sources/energy-skate-park-basics/dependencies.json": {
+      "bytes": 2772,
+      "sha256": "6fc7fbb3074a62870dea8a765162b5982783faf6fd0ca176b66e772e8924b4ce"
+    },
+    "vendor/sources/energy-skate-park-basics/doc/implementation-notes.md": {
+      "bytes": 108,
+      "sha256": "a79ab44ee4e712fb8fa9f5cf0e75f312daa927e249248592157b11deab7a5e53"
+    },
+    "vendor/sources/energy-skate-park-basics/doc/model.md": {
+      "bytes": 94,
+      "sha256": "ff3a082181837251d6acee468c5e956d0de19395a450feef5ae611958025f38a"
+    },
+    "vendor/sources/energy-skate-park-basics/doc/release-notes.md": {
+      "bytes": 1918,
+      "sha256": "f20191f473f4951a554f277a82acf66b45ee69d99535f470b8cb19a4fba0e5e0"
+    },
+    "vendor/sources/energy-skate-park-basics/energy-skate-park-basics-strings_en.json": {
+      "bytes": 436,
+      "sha256": "88a2309474708df237802ff3dbba6cddedbbf2340df426ea8670faa37b2fd342"
+    },
+    "vendor/sources/energy-skate-park-basics/energy-skate-park-basics-strings_en.yaml": {
+      "bytes": 268,
+      "sha256": "f551e6539ff972fdff9c23fb1d448c3a95717c760044e316881e4769227d8b4f"
+    },
+    "vendor/sources/energy-skate-park-basics/energy-skate-park-basics_en.html": {
+      "bytes": 6220,
+      "sha256": "04a2a29169836a4b37c9e54988152d1451b9d73146b6d1685bbf668aa43975b0"
+    },
+    "vendor/sources/energy-skate-park-basics/eslint.config.mjs": {
+      "bytes": 357,
+      "sha256": "da40f82789ac731e9e8877116f5ac4f00dde0637b649d02d3b9eb2a2f629fd01"
+    },
+    "vendor/sources/energy-skate-park-basics/images/frictionScreenIcon.png": {
+      "bytes": 22172,
+      "sha256": "1c864d47d2d265ce4a1073b1a2a88c0219a2fa8b667b2a0aa1c95f31da4b5e44"
+    },
+    "vendor/sources/energy-skate-park-basics/images/frictionScreenIcon_png.ts": {
+      "bytes": 29826,
+      "sha256": "407cd5edab3b90724872ca007ccf19aa4c541f49045709df7cfc75ed1ca3e3b5"
+    },
+    "vendor/sources/energy-skate-park-basics/images/introScreenIcon.png": {
+      "bytes": 55836,
+      "sha256": "f36f278012ddef2f6b83e7afd68bc7a0199114567ef3ccf960141ee79a0c7f80"
+    },
+    "vendor/sources/energy-skate-park-basics/images/introScreenIcon_png.ts": {
+      "bytes": 74710,
+      "sha256": "f27c72b75cefc040d8436100a185cd7238cca1d8eeae7bf0d70974c497b96b92"
+    },
+    "vendor/sources/energy-skate-park-basics/images/license.json": {
+      "bytes": 733,
+      "sha256": "bb85489b57d09a1af866973722d753df21f74bbc976ba6725200b5928d55c9f1"
+    },
+    "vendor/sources/energy-skate-park-basics/images/playgroundScreenIcon.png": {
+      "bytes": 104930,
+      "sha256": "40774096fcc5c9512312d1a2b625f8d44f12dd818cacffbd6e2b949f2e148e3e"
+    },
+    "vendor/sources/energy-skate-park-basics/images/playgroundScreenIcon_png.ts": {
+      "bytes": 140170,
+      "sha256": "86f054116aa9357068f9db8b9c079744795cca0490a393ed9bb28265477d59cc"
+    },
+    "vendor/sources/energy-skate-park-basics/js/EnergySkateParkBasicsConstants.ts": {
+      "bytes": 1664,
+      "sha256": "ddc34c3bf887ca020ea2561f5ecf500112630a77d33ba856d7215d4186f42358"
+    },
+    "vendor/sources/energy-skate-park-basics/js/EnergySkateParkBasicsFluent.ts": {
+      "bytes": 3043,
+      "sha256": "197efc1e5edf13f78e6b9c4aec7cd850b432b3fa3d88ca823715b4885f914d06"
+    },
+    "vendor/sources/energy-skate-park-basics/js/EnergySkateParkBasicsSim.ts": {
+      "bytes": 2125,
+      "sha256": "a5f150b7baafb6fbe1f63322e9f38730b93490bc345111ab4d13c17a6eddf72f"
+    },
+    "vendor/sources/energy-skate-park-basics/js/EnergySkateParkBasicsStrings.ts": {
+      "bytes": 1094,
+      "sha256": "9f8fa82a7f5d278a51613cf1652a8272874cb7a0d2707d80a56fb017a8b415cd"
+    },
+    "vendor/sources/energy-skate-park-basics/js/common/model/EnergySkateParkBasicsTrackSetModel.ts": {
+      "bytes": 1406,
+      "sha256": "3abb2d78a6eab548a8b6ce3cfdc07c91e946f2daac908d7e85e743a30da96616"
+    },
+    "vendor/sources/energy-skate-park-basics/js/common/view/EnergyBarGraphPanel.ts": {
+      "bytes": 1763,
+      "sha256": "c99d737d58a0a16aa100992b68009bcbea5c6b1227b80566504191b2357a376f"
+    },
+    "vendor/sources/energy-skate-park-basics/js/common/view/EnergySkateParkBasicsTrackSetScreenView.ts": {
+      "bytes": 1907,
+      "sha256": "3eba5207766c4bd2289c021e2d94df6c984a82017b827867b6fb64e031c020de"
+    },
+    "vendor/sources/energy-skate-park-basics/js/energy-skate-park-basics-main.ts": {
+      "bytes": 494,
+      "sha256": "a868f19e2e2022191a84d29b9964112e6cba19ff8d8ac966ac330c451c2d0b70"
+    },
+    "vendor/sources/energy-skate-park-basics/js/energy-skate-park-basics-phet-io-overrides.js": {
+      "bytes": 78,
+      "sha256": "2a7daa9a3416a2a2a003efd056f72ce26342b3941b354aaa1227225a6f2520ad"
+    },
+    "vendor/sources/energy-skate-park-basics/js/energySkateParkBasics.ts": {
+      "bytes": 279,
+      "sha256": "a7a6fd41b00c1d0aa1fa99f005e93a10324e4c7b96b6a8bd0117750bf8cdf94b"
+    },
+    "vendor/sources/energy-skate-park-basics/js/friction/FrictionScreen.ts": {
+      "bytes": 2043,
+      "sha256": "b2d363bc1f910fc70ad18b1acae1c40ba84a610a9f6911ce39222564c3ea0152"
+    },
+    "vendor/sources/energy-skate-park-basics/js/friction/model/FrictionModel.ts": {
+      "bytes": 821,
+      "sha256": "adce94170544cb9b451f49feef742cc7cd0f10506d791a34d6ee55097394f503"
+    },
+    "vendor/sources/energy-skate-park-basics/js/friction/view/FrictionScreenIcon.ts": {
+      "bytes": 1582,
+      "sha256": "123e511cca680f1b9beee9b5b0cbfd4db932eba9d858a9fff08bf138ab1aa8a6"
+    },
+    "vendor/sources/energy-skate-park-basics/js/friction/view/FrictionScreenView.ts": {
+      "bytes": 979,
+      "sha256": "2eeb30ba1ff4fd5c36cda7dd9d69203ee9b5348265d44f82dc516d9e2a8dfde5"
+    },
+    "vendor/sources/energy-skate-park-basics/js/intro/IntroScreen.ts": {
+      "bytes": 1974,
+      "sha256": "f27aaa07ee549a52a7dde2f6a66b14202f8a57ccfaa5d0e7b005b53d0d658b94"
+    },
+    "vendor/sources/energy-skate-park-basics/js/intro/model/IntroModel.ts": {
+      "bytes": 972,
+      "sha256": "c37a7cc67e17d903c9a754f9423e46f0154b84335ab8ccde50349a4452a01509"
+    },
+    "vendor/sources/energy-skate-park-basics/js/intro/view/IntroScreenIcon.ts": {
+      "bytes": 1573,
+      "sha256": "a0b611e0be80eed6a8a6b2884f49ee0e21fe393f2ec0b4f35a5fbe2bec1b4461"
+    },
+    "vendor/sources/energy-skate-park-basics/js/intro/view/IntroScreenView.ts": {
+      "bytes": 844,
+      "sha256": "62725a7cd4ebf599aa93cab0b6c77f8a13a63b33cac5e9af343e94b3d86ba859"
+    },
+    "vendor/sources/energy-skate-park-basics/js/playground/PlaygroundScreen.ts": {
+      "bytes": 2183,
+      "sha256": "1ae69eddc371f7dafaae7db89fe466ab86abcbc1b6eb84f56ffce7377a32b5d4"
+    },
+    "vendor/sources/energy-skate-park-basics/js/playground/model/PlaygroundModel.ts": {
+      "bytes": 844,
+      "sha256": "ed9a6d8a9284297c988203ed6c720fc98708b33d58662ff04cecfcdbcd408dad"
+    },
+    "vendor/sources/energy-skate-park-basics/js/playground/view/PlaygroundScreenIcon.ts": {
+      "bytes": 1609,
+      "sha256": "a7a451895a3b59186395b852c7ed0c70de78a58564cd140ed964b5454e6c8cf0"
+    },
+    "vendor/sources/energy-skate-park-basics/js/playground/view/PlaygroundScreenView.ts": {
+      "bytes": 1347,
+      "sha256": "f0a62ee98bb91e0ac31831531444b6fdb4928d4632efcca0cbaa9126087d53cf"
+    },
+    "vendor/sources/energy-skate-park-basics/package-lock.json": {
+      "bytes": 44134,
+      "sha256": "2316fc8e0ce9c7df507460c54c66ad6ffb970ef9473fbae9daf7989939c69213"
+    },
+    "vendor/sources/energy-skate-park-basics/package.json": {
+      "bytes": 1216,
+      "sha256": "d55e9236955c4a4f444965f02c690458bddf320292144017a6e4277558c6bb3d"
+    },
+    "vendor/sources/energy-skate-park-basics/tsconfig.json": {
+      "bytes": 381,
+      "sha256": "eede1b0c2c1190765d97a0e00ee52b781dc28b8da8c18987496dcde2b935fe6a"
+    },
+    "vendor/sources/forces-and-motion-basics/.gitignore": {
+      "bytes": 107,
+      "sha256": "dd4b7bd14e4dca6a26bb06cfceefa907b51f0dee758e5f2c776c574eb98367ff"
+    },
+    "vendor/sources/forces-and-motion-basics/.npmrc": {
+      "bytes": 28,
+      "sha256": "1597e56c66a7868eab67a491963faa49d1280b7b1a080d5eaf47c4262a215fe8"
+    },
+    "vendor/sources/forces-and-motion-basics/CLAUDE.md": {
+      "bytes": 3578,
+      "sha256": "8c7fc90037ead8de64983aadb48ef34fd7ebcb2afd81732bec6508efd44e67ac"
+    },
+    "vendor/sources/forces-and-motion-basics/Gruntfile.cjs": {
+      "bytes": 151,
+      "sha256": "f0893235d9f9d07c86a55071865672a24eb805dad82cc4f61c76d955365f28a5"
+    },
+    "vendor/sources/forces-and-motion-basics/LICENSE": {
+      "bytes": 35159,
+      "sha256": "6e5facb9ea31762229841fbe06f31d9b4a567565066959c453c0bfdc2a747eea"
+    },
+    "vendor/sources/forces-and-motion-basics/README.md": {
+      "bytes": 3817,
+      "sha256": "653965f67a0b66f3a0069b9faeae077931e3d0981e38eb6656e5454ffc79877c"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/FAMB-objects.ai": {
+      "bytes": 2687875,
+      "sha256": "bc219994e24c52c455934935abafe94124a971ca64ebb60a4d89a5a221f099ca"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/FAMB-people-all-regions.ai": {
+      "bytes": 2587079,
+      "sha256": "fb586f9ab7a67bcf4459a879c96bae171c69a78f3c8a735224748fe685959825"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/brick-repeat.svg": {
+      "bytes": 44656,
+      "sha256": "e918bffac38d63f849fb00e1d2f4786d11903f8fb7f262666805a6b7d828e579"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/forces-and-motion-basics-screenshot-alt1.png": {
+      "bytes": 557941,
+      "sha256": "a94806b05725889514fe5ec05f9cd9e03e2c840f0482a0576734f9f551ff9c5d"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/forces-and-motion-basics-screenshot-alt2.png": {
+      "bytes": 581827,
+      "sha256": "5ab3ec2cf7064a619a80c6d8cebc30ce4d80d479fbe5620fd8eb4831ff49f24e"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/forces-and-motion-basics-screenshot-alt3.png": {
+      "bytes": 550861,
+      "sha256": "67471e3824ca893a14b9f2d8ae40cd7f4fb12815bb6cdd4aee343f483163b19c"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/forces-and-motion-basics-screenshot-screen1.png": {
+      "bytes": 549817,
+      "sha256": "09ef79441ebcd1aa48f7e9f948326162032ee868cede3ffe29a9e7d47ae754cd"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/forces-and-motion-basics-screenshot-screen2.png": {
+      "bytes": 526908,
+      "sha256": "4f95c29dc45893ca127871a8f45957d5b503451cf5b8b5be3e7bf8ea3dc2fc9e"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/forces-and-motion-basics-screenshot-screen3.png": {
+      "bytes": 553355,
+      "sha256": "b2015c627aa9bed0c0bbb2579245e74aa098ee098e57a4c0d29c9ff7fa3b78ee"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/forces-and-motion-basics-screenshot-screen4.png": {
+      "bytes": 521692,
+      "sha256": "e18d16bf822c54ab9cdd612213ae7fd9aeafd7abee9f11dd280c78cf4097662c"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/forces-and-motion-basics-screenshot.png": {
+      "bytes": 574661,
+      "sha256": "cbc039da20da09702b876f9afe7872aa173d3ea8273ee0e825d1b167f8aba42c"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/grass.ai": {
+      "bytes": 161608,
+      "sha256": "9f9a2a14a39b564872636c5bd6cc6a23736b5e25f68b24dd7376a355f57f27f1"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/ice_overlay.ai": {
+      "bytes": 161477,
+      "sha256": "f8e0806e222934f36272a49bdf12200290810e0acfc3797ee45b9fd14d7ea1e3"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/icicle.ai": {
+      "bytes": 551017,
+      "sha256": "b9fe8e8674a5127f19176a9fcc8defd26ed5c7d311ea54d67f762063b506a3ff"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_ORANGE_0.ai": {
+      "bytes": 133195,
+      "sha256": "883ab241d31058517a41f7d93afefaab620f63eb98051ee14b3dc6588ff623bb"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_ORANGE_3.ai": {
+      "bytes": 129524,
+      "sha256": "f426c19235a63bb2070447cad85a820adec3744b9446a352482efb142d04c85e"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_PURPLE_0.ai": {
+      "bytes": 111390,
+      "sha256": "b62878385ff1c984d235855e90400487b64d1d9f6616fed5a1811a6ff9eae87e"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_PURPLE_3.ai": {
+      "bytes": 108527,
+      "sha256": "0bd2bc61bb1ac8994acb6eaacea647565884ca7765663f17b61d33a078a0b335"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_RED_0.png.ai": {
+      "bytes": 128798,
+      "sha256": "e96ce15d41f0d3cd2dd1170c3b7c04301caed881de1f01644e839416e31590dc"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_RED_3.png.ai": {
+      "bytes": 117810,
+      "sha256": "adea54bd6a1e7a9025e9ff0e15d1cbf4743cf5b0de2418f6d1ea9fc90e9e06a6"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_lrg_BLUE_3.png.ai": {
+      "bytes": 107222,
+      "sha256": "4e1334b185e692004663827310f0de0ad6c08c7a39c2cc7ead6a9c946749f8b2"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_lrg_ORANGE_0.ai": {
+      "bytes": 140068,
+      "sha256": "733759a523ac04d51199eb924af03edcb78cdcce8e34263a650c33a2f2c688c3"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_lrg_ORANGE_3.ai": {
+      "bytes": 128520,
+      "sha256": "cc251c3b619717df3a19f8b10f3f8e6235e08f72fa31b3e27908951ff90b8566"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_lrg_PURPLE_0.ai": {
+      "bytes": 143179,
+      "sha256": "46f36078de932c1f2971b81bcddd2f889f5527e1a10e489632bf8e2f56a3a498"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_lrg_PURPLE_3.ai": {
+      "bytes": 117530,
+      "sha256": "70c40da5856f24e34398415479948d351127f55455a803dd225aff17ff5d936b"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_lrg_RED_0.png.ai": {
+      "bytes": 134932,
+      "sha256": "a0df500f55a5dd644b1c425d3d0acbc931f0933827d9c46ab2faefc191818661"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_lrg_RED_3.png.ai": {
+      "bytes": 116108,
+      "sha256": "091e990c2f13fc3433ab17e1b1fdaef919b78f8da23a9f36a9ed42e9845ade7e"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_small_ORANGE_0.ai": {
+      "bytes": 123865,
+      "sha256": "9761a275d9bc3a020b08f1ae713c39c3a326d970018ede09498a08244566d909"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_small_ORANGE_3.ai": {
+      "bytes": 114644,
+      "sha256": "1422dcf508390552c77345da21175dea32118d7ea2d279d9cbeffde0df7fb13e"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_small_PURPLE_0.ai": {
+      "bytes": 99853,
+      "sha256": "c5c11038f9a7750752d35cf4fbcedc8c99202444b8a86e34d9d0ff55496d3c82"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_small_PURPLE_3.ai": {
+      "bytes": 97165,
+      "sha256": "86befd812d5952697bd2f78b43a5804ff2628cf86029f42040a67435fe87c86c"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_small_RED_0.png.ai": {
+      "bytes": 115538,
+      "sha256": "6a76d689a7361ce859fd92e8d5b5267fd04a8dd641a92547a39ad717bdd77299"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pull_figure_small_RED_3.png.ai": {
+      "bytes": 113451,
+      "sha256": "0969af07840b1a0873acad82327737b8d3ce60600a731e78f12a5b0bdbacdbfe"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/pushers.ai": {
+      "bytes": 3353195,
+      "sha256": "ecc57c87d476cd530038565f6c5acc054e533b1db754998a033b0be788af19c5"
+    },
+    "vendor/sources/forces-and-motion-basics/assets/tugIcon.ai": {
+      "bytes": 765628,
+      "sha256": "1cc259984b994be6de4dee321666eef36a59095ec138915fee806b821f1dbadc"
+    },
+    "vendor/sources/forces-and-motion-basics/dependencies.json": {
+      "bytes": 2569,
+      "sha256": "dd91f92ded2470560ca417a2e80c890e93ec5c16bd1a2bfda9de8927adfe8d96"
+    },
+    "vendor/sources/forces-and-motion-basics/doc/implementation-notes.md": {
+      "bytes": 23359,
+      "sha256": "a0df4f5e525dd6dd89745e1ce21ec024e476ff8a9cdb5549247c1c47af421612"
+    },
+    "vendor/sources/forces-and-motion-basics/doc/model.md": {
+      "bytes": 11807,
+      "sha256": "5355f1c472381393cdc6032c4535ff5cc4bc1082f1ee4f5d6c48c0d083097ec3"
+    },
+    "vendor/sources/forces-and-motion-basics/doc/release-notes.md": {
+      "bytes": 1370,
+      "sha256": "bed7383d8da800169a88a943ef2c6e3baff758a0ea976ec0bd90005a40d7f2cd"
+    },
+    "vendor/sources/forces-and-motion-basics/eslint.config.mjs": {
+      "bytes": 422,
+      "sha256": "a57dfdab7f25a520aa9658e7b710c01571338e6405e21124e65462d98db50bc2"
+    },
+    "vendor/sources/forces-and-motion-basics/forces-and-motion-basics-images.json": {
+      "bytes": 2684,
+      "sha256": "908de6b45ad036daed7aeb1960f6806ff19465474db51dafc91620a2039a93fa"
+    },
+    "vendor/sources/forces-and-motion-basics/forces-and-motion-basics-strings_en.json": {
+      "bytes": 22731,
+      "sha256": "1d55968a90fb6ed4d79f4b9fc9087905c395e92e2992805acbebf68fd0de062e"
+    },
+    "vendor/sources/forces-and-motion-basics/forces-and-motion-basics-strings_en.yaml": {
+      "bytes": 18501,
+      "sha256": "2ea36e74a56507939aeb4880f05d31fef765ed62cdabdc66779865d71a4c6cca"
+    },
+    "vendor/sources/forces-and-motion-basics/forces-and-motion-basics_en.html": {
+      "bytes": 5879,
+      "sha256": "46e8ccc2f9a505952eb188d22e285a9e842c5664bb2409cab4791703b6d1937d"
+    },
+    "vendor/sources/forces-and-motion-basics/images/accelerationIcon.png": {
+      "bytes": 95821,
+      "sha256": "bf16c6ac094fb43442e6f48f21d5b00f6cba5b9662ae8af9842090896e6623f4"
+    },
+    "vendor/sources/forces-and-motion-basics/images/accelerationIcon_png.ts": {
+      "bytes": 128026,
+      "sha256": "f3c515f1919846a1512e0dafe012d52e89e9fcb6362423497956de479daceec3"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaGirlHolding.svg": {
+      "bytes": 11215,
+      "sha256": "5646f489d880380263c344a7b70ed9094970f1d4d280b2653fdc92a9b4a46913"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaGirlHolding_svg.ts": {
+      "bytes": 9788,
+      "sha256": "46cf2919f9ecee17833af275c9c60dcee9dcaeac572b8c1470d0fcfef78e4eaf"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaGirlSitting.svg": {
+      "bytes": 9245,
+      "sha256": "927ac1704e0e6f49b408824796fbed543e8ed30d22be1d0a374fcc3713744d36"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaGirlSitting_svg.ts": {
+      "bytes": 7815,
+      "sha256": "902b41021eaa9401733b258f79c9e54aacc296b5c5aa05c4be8055153afbaabf"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaGirlStanding.svg": {
+      "bytes": 8969,
+      "sha256": "90ce2da0a14fcf689c391abb152a6c7bd81674c498b24358620f78e6c7899502"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaGirlStanding_svg.ts": {
+      "bytes": 8059,
+      "sha256": "32dbf17b6a77902d4b6230cd78dd68e1d34325b85fd3528bdff3b87c75efe69b"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaManHolding.svg": {
+      "bytes": 8772,
+      "sha256": "824517883faacaaecc04f1c745368bf23614f41be0c89b7d64ce9c50833d80ff"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaManHolding_svg.ts": {
+      "bytes": 7992,
+      "sha256": "fb147f6ac9013a3339c7556686fa6bd0e194d283d221c6ff90a896d105a46b27"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaManSitting.svg": {
+      "bytes": 9417,
+      "sha256": "7be1ba6b3a404284bafa3e82d0e103d32611dfa5f2e30e4025671531aeca16ba"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaManSitting_svg.ts": {
+      "bytes": 8229,
+      "sha256": "5c991f7ba6d6862615a9ec3aa7227c86d7a22520692ed6305e666c60ac9f3b5b"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaManStanding.svg": {
+      "bytes": 10410,
+      "sha256": "7b3e1bf6707ec086074c8d9509005a5eed52f149e7babf575dbf9fb18bab3254"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaManStanding_svg.ts": {
+      "bytes": 9296,
+      "sha256": "08d575e333e9973c81db3f772c2a0ea348f9cb1f35abed21311de4d5e307c5e5"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaMotionIcon.png": {
+      "bytes": 109267,
+      "sha256": "0d67f0e618bb89a192524ef4b00c3203020daa83f628d9766ab4f8ee0a7693fa"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/africaMotionIcon_png.ts": {
+      "bytes": 145957,
+      "sha256": "25b67e0cbe6c39bbffc2a3273f585127dd47e45ac29e98de556109ad695a449d"
+    },
+    "vendor/sources/forces-and-motion-basics/images/africa/license.json": {
+      "bytes": 1736,
+      "sha256": "d2263a3a93b04b053405db33cb30e95c04ad0b14b181dc227feeae0582efb35a"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaGirlHolding.svg": {
+      "bytes": 12270,
+      "sha256": "a3c2737bd9a80c4efbd1f64d3793a477fc612665db2dd652385b8d23817a47d5"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaGirlHolding_svg.ts": {
+      "bytes": 10345,
+      "sha256": "d160082a4ac96eb66914dffab425b4853895d41924ce11c699dd2c22f680d517"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaGirlSitting.svg": {
+      "bytes": 13080,
+      "sha256": "13e2669d084a094c20acbd2a2a261368132f06a923a0639da94e15d39140f856"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaGirlSitting_svg.ts": {
+      "bytes": 11181,
+      "sha256": "4de7c08036529ebdbc1cd1d92d51796f3970d860264014e2df8d405f04b84bb0"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaGirlStanding.svg": {
+      "bytes": 13801,
+      "sha256": "a1c0c157ee8a0eebef8e775a37947fe66b0d25fef2558d9ec29dad083719f587"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaGirlStanding_svg.ts": {
+      "bytes": 11874,
+      "sha256": "77d314d3255ceaa93101cbae5252625128e653c07a2877690d237a727834ba48"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaManHolding.svg": {
+      "bytes": 9588,
+      "sha256": "1d846eb804178cd25f0f7c7c067435ce613a5c4729982f4a6d05ce4820322eb9"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaManHolding_svg.ts": {
+      "bytes": 8400,
+      "sha256": "1949c6b4e3c78d72f6f0edd8915a4a3b014226240437193a242578dcbc07ee97"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaManSitting.svg": {
+      "bytes": 10627,
+      "sha256": "bc87b503ca8ed867b20def9fd6f9d42b5e520560f087015f49f4a3faea3308aa"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaManSitting_svg.ts": {
+      "bytes": 9008,
+      "sha256": "ee3f30d8b42a1cf23c5176fce91e461a6fec4ed8b12f1829797ea969415305f6"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaManStanding.svg": {
+      "bytes": 8122,
+      "sha256": "0d8e5f4cc1085bbca9317238bb5a9e59e7017b27a1576d4a721f0bf584072818"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaManStanding_svg.ts": {
+      "bytes": 7266,
+      "sha256": "b316e97e57d50d909310d3e045da5871aaaf6ba86af1436e05366176fd928cb8"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaMotionIcon.png": {
+      "bytes": 110232,
+      "sha256": "795c65c93555debe20aa4232ff352dbec6a9d8012f39e151e40cfcbe7aaa356e"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/asiaMotionIcon_png.ts": {
+      "bytes": 147241,
+      "sha256": "4023cf9b2f250f9064afd65242b5d94e55b21917d85639577312c905f268ef16"
+    },
+    "vendor/sources/forces-and-motion-basics/images/asia/license.json": {
+      "bytes": 1722,
+      "sha256": "3bc5fdbedfb068db3a90e9293e93996da13be898d7f597929ae2dec37343219c"
+    },
+    "vendor/sources/forces-and-motion-basics/images/brickTile.png": {
+      "bytes": 1197,
+      "sha256": "76bec584bcd11d53d41bbcf23f66467a2a928f619688e0a9926c8d960459e6e2"
+    },
+    "vendor/sources/forces-and-motion-basics/images/brickTile_png.ts": {
+      "bytes": 1858,
+      "sha256": "cd4bc82afc19ff10ad23aada4cadaa5751bea95f3c0b7c5ad32676d0eddb9210"
+    },
+    "vendor/sources/forces-and-motion-basics/images/cart.svg": {
+      "bytes": 30505,
+      "sha256": "331355f6d5e57f07a42710b608617b05f38eee9ebd62782c13811ebbc18ed60e"
+    },
+    "vendor/sources/forces-and-motion-basics/images/cart_svg.ts": {
+      "bytes": 26604,
+      "sha256": "54a147a683291ad603136f071146a47fa078576e3e1646f60c46e29c79fab60e"
+    },
+    "vendor/sources/forces-and-motion-basics/images/cloud1.svg": {
+      "bytes": 1632,
+      "sha256": "78ab9c9684152ae06716b7ffc20906b3fc02a49568b22ae6247547766ef70a54"
+    },
+    "vendor/sources/forces-and-motion-basics/images/cloud1_svg.ts": {
+      "bytes": 1761,
+      "sha256": "ae0c9aa633b2dae11f0706287de70123c800541264d10e23962427b3632c7edf"
+    },
+    "vendor/sources/forces-and-motion-basics/images/crate.svg": {
+      "bytes": 15823,
+      "sha256": "a35313b93d5df69d4b91bf449830d91f4ab33dba0f935d2b4538aeeaea2d74ad"
+    },
+    "vendor/sources/forces-and-motion-basics/images/crate_svg.ts": {
+      "bytes": 11371,
+      "sha256": "1dd8bfc3581b1d38fde69cb298d5f8b7bee0f48cfcb6cd7ed5c54eab0fbce34a"
+    },
+    "vendor/sources/forces-and-motion-basics/images/frictionIcon.png": {
+      "bytes": 81491,
+      "sha256": "8517c794f63b3aa5dd3462b2196d89ebe76539867a0f88de922c55040817b51f"
+    },
+    "vendor/sources/forces-and-motion-basics/images/frictionIcon_png.ts": {
+      "bytes": 108918,
+      "sha256": "6c43033dc3d2c8267a6963f0b17d6a25ec458ef871aadcfcc0de73e7950a560c"
+    },
+    "vendor/sources/forces-and-motion-basics/images/fridge.svg": {
+      "bytes": 11292,
+      "sha256": "1bd7fcc810f83559ff28d3a59c627a64b1faf95885fe92e82749b3133d5edc03"
+    },
+    "vendor/sources/forces-and-motion-basics/images/fridge_svg.ts": {
+      "bytes": 9089,
+      "sha256": "e3764b23a8568adf1ce7903bd9b95dd525c8fd5b5d544e66b49051610ceccc25"
+    },
+    "vendor/sources/forces-and-motion-basics/images/grass.png": {
+      "bytes": 9922,
+      "sha256": "c3603518918e8df906c034ff370a3643a665a0e0bc2d527f888c1e3157ff588f"
+    },
+    "vendor/sources/forces-and-motion-basics/images/grass_png.ts": {
+      "bytes": 13494,
+      "sha256": "042a6bd3e1a9982e04aa3d79be58f9102ac8ec29c58262db95a25adc696c0355"
+    },
+    "vendor/sources/forces-and-motion-basics/images/icicle.png": {
+      "bytes": 9870,
+      "sha256": "f770a31b9aada701ba0210f02d58f95a3f06702985869cc1ad9cdd235ee6b35f"
+    },
+    "vendor/sources/forces-and-motion-basics/images/icicle_png.ts": {
+      "bytes": 13422,
+      "sha256": "1dccad3540a14133ea57a3646b0bce79203386cec0e34265f73ea2ca67690452"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaGirlHolding.svg": {
+      "bytes": 9854,
+      "sha256": "3d6f805dbb9792fc03898f92f54aebb5789db271362fe105dfb7df8a2eaebd76"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaGirlHolding_svg.ts": {
+      "bytes": 8434,
+      "sha256": "2f593e4bbaf0537e3d9749475fda29dd2b34211d2b739647c388ecf82229ac06"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaGirlSitting.svg": {
+      "bytes": 10565,
+      "sha256": "448681a09b4a1308aae3b10a7082efac1bc20a0d8c477208121bf8593a507bae"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaGirlSitting_svg.ts": {
+      "bytes": 8811,
+      "sha256": "a5e31f0c1a2cd17eed1a36deb907cb80b9a9306804b15061ecd4d769fcc1af9f"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaGirlStanding.svg": {
+      "bytes": 8840,
+      "sha256": "1c06110951095d25d416ce1b94004a2e5036a18ed46153eaeced4a2c4f6ee94d"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaGirlStanding_svg.ts": {
+      "bytes": 8061,
+      "sha256": "8c6861aca09d4c4d8f5f7d60a6b5e379888cf493314165e31e1f21c2112372ad"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaManHolding.svg": {
+      "bytes": 10071,
+      "sha256": "97a054203b9a24a0ec864026a0198c522a17ac1b87044b095b42b336698bf588"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaManHolding_svg.ts": {
+      "bytes": 9040,
+      "sha256": "d159c9451fcef1c07eda0cb7a4e0c9d1136065f9e1479c92de69b113b3416696"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaManSitting.svg": {
+      "bytes": 8814,
+      "sha256": "976d78343672a26c2eefdce99030c1a799cf417aff021f0ac6731fc6aae4e371"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaManSitting_svg.ts": {
+      "bytes": 7783,
+      "sha256": "490f70aa8269aa330641b881539034d7c0fc7d43b7eb0964a39c87fa3e8976ef"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaManStanding.svg": {
+      "bytes": 11083,
+      "sha256": "9639f540f86895a02015dba0aeeff3c3107c1480d86a1f64f8e6e364bb1c5e2c"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaManStanding_svg.ts": {
+      "bytes": 10193,
+      "sha256": "b49da58f1478a9f9bc1474867e825ce872b051e4829a68c9ce4d832b8c70198d"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaMotionIcon.png": {
+      "bytes": 109755,
+      "sha256": "ef331c767353d3b8841e9fc794693f86b5513b9c480c37a2fd5b8773df5b9b46"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/latinAmericaMotionIcon_png.ts": {
+      "bytes": 146605,
+      "sha256": "5dd08bc69ffed9f31c1a2fc706edcf2248ee96a5a5f55c8bc3f2703511d17e9a"
+    },
+    "vendor/sources/forces-and-motion-basics/images/latinAmerica/license.json": {
+      "bytes": 1778,
+      "sha256": "d8e4b1b3e13018feed00291a298d0139d737a5f8238b8781faf4bf700ccb2a3a"
+    },
+    "vendor/sources/forces-and-motion-basics/images/license.json": {
+      "bytes": 4117,
+      "sha256": "2e09989083729edbc77525df3f6d607424309d07aa66058fc408e70624105ced"
+    },
+    "vendor/sources/forces-and-motion-basics/images/mountains.svg": {
+      "bytes": 1172,
+      "sha256": "19e0691afcb37467e07c57bc9006102209488be224d65e35b471a83d18f9aa8a"
+    },
+    "vendor/sources/forces-and-motion-basics/images/mountains_svg.ts": {
+      "bytes": 1363,
+      "sha256": "d01ff38c90240705b134295f02664e8f56b0fb1a5877e7121c4733374f39b11f"
+    },
+    "vendor/sources/forces-and-motion-basics/images/mysteryObject01.svg": {
+      "bytes": 1741,
+      "sha256": "ef89666132d21edfa6b41460b99f3e55b6d41c0f87fd3bdbcb1ebcfba9ca78df"
+    },
+    "vendor/sources/forces-and-motion-basics/images/mysteryObject01_svg.ts": {
+      "bytes": 1750,
+      "sha256": "8d225194ae5e9ba2338b1fd17c9e02754a399d873b305edd5374bb8c35ad6ac2"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/license.json": {
+      "bytes": 1743,
+      "sha256": "204d644eb0f6793fba5cfc76f9f5318348f2d3f18cd92569fc846a87dfddc574"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaGirlHolding.svg": {
+      "bytes": 11271,
+      "sha256": "1ab7a77ae1babee51aa2d69cd7fb59dedeed0e41aa72595c8a8bc103f55313b8"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaGirlHolding_svg.ts": {
+      "bytes": 10127,
+      "sha256": "0d0ab4261133db5011f0090dc84af69daa7c1902756852280418c90ac9caf66c"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaGirlSitting.svg": {
+      "bytes": 11023,
+      "sha256": "7406e5049e98299480225730b15f58769dbc008f9084a8262dbd352a4d438b80"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaGirlSitting_svg.ts": {
+      "bytes": 9499,
+      "sha256": "c6d7bd8a9c1f93e923ef9a49ae779f659b971036a78ff89a5c0c1324fa4fa308"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaGirlStanding.svg": {
+      "bytes": 13852,
+      "sha256": "0acd6fae1f68b9a602a1b4d74239fc772d680f5375ff6a790c021fd84c02799d"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaGirlStanding_svg.ts": {
+      "bytes": 13018,
+      "sha256": "eac6d55d2dd3bb578559b509e7dfe4802dfdf8f6df87f0d7797428dd87b2e0d6"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaManHolding.svg": {
+      "bytes": 18656,
+      "sha256": "684df896a0fd6e34f3a2af16d643fea902bdcd84ece7d99d05771bcf02a61f27"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaManHolding_svg.ts": {
+      "bytes": 16208,
+      "sha256": "f04b68763430a5a55e057941850cc2ff982851c7b437017b2c4906996e220a03"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaManSitting.svg": {
+      "bytes": 17383,
+      "sha256": "d9e3ae58dc07cba5c7ebbf7cec23ef9037d9988bc92c17ba22851f75f064935b"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaManSitting_svg.ts": {
+      "bytes": 15033,
+      "sha256": "f8be609337f49319ae49ae66a1f0e964dbcda719c580bb2a2e4ec05cd9ac5b99"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaManStanding.svg": {
+      "bytes": 15002,
+      "sha256": "06c6b1d6af5a2bf560339f6bc0f10fc8a5c8346008c4ad9026fedf8744b0fdcf"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaManStanding_svg.ts": {
+      "bytes": 13055,
+      "sha256": "5377ebc3ff3939564b21d5a924ce90d4d72a677e1f177d6b994f6430d00e9727"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaMotionIcon.png": {
+      "bytes": 117933,
+      "sha256": "24770807e27920d9ac00417c101a5326cf4281195a60e68e9f7ac78320544fef"
+    },
+    "vendor/sources/forces-and-motion-basics/images/oceania/oceaniaMotionIcon_png.ts": {
+      "bytes": 157509,
+      "sha256": "d70e17ba8f5c8974d6aa256acc6d7918655d88bab461c469ad05dadf51deba03"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/license.json": {
+      "bytes": 14203,
+      "sha256": "2d9ba0c3a2d908958ae4f4860ea4ac67482fa7c3d1c93f0601552e7eb970e149"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_BLUE_0.png": {
+      "bytes": 12672,
+      "sha256": "d439e2db5790c656523e956fc6731b326d787679ff57ef93bcb6ec56dbe68670"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_BLUE_0_png.ts": {
+      "bytes": 17161,
+      "sha256": "11b75b8401d73225637288ecee20cd71af510e5ba8b88ac7a306239badedb86d"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_BLUE_3.png": {
+      "bytes": 12329,
+      "sha256": "d26d69e4afa900f22166d3eadd936efff7b5042351daf1317c8a15e2f6145f1c"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_BLUE_3_png.ts": {
+      "bytes": 16705,
+      "sha256": "eb303fbea0ebc4c060a1d488255c38c4feee6d41d5b6c48da40b296cd0bfe641"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_ORANGE_0.png": {
+      "bytes": 10607,
+      "sha256": "12b8cbfcdb094bbf588518ab928c780ac0a69da416ee7c1c4893c3e9da55be45"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_ORANGE_0_png.ts": {
+      "bytes": 14409,
+      "sha256": "55c866e65c197ed34017cdb39f6d17da1d75e227ed6390ba67ea40c428dcdae2"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_ORANGE_3.png": {
+      "bytes": 10216,
+      "sha256": "027853137becdc6968f6c313a71d5a31ccb2d951f36f480e33b3170e257ea0c4"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_ORANGE_3_png.ts": {
+      "bytes": 13889,
+      "sha256": "d4a1d0901f5d5e1df5d4055d4cd21fb0dcd5672c5b4cb16fc9491ca8dadcf6dd"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_PURPLE_0.png": {
+      "bytes": 14752,
+      "sha256": "8d05966a5d60dc38312c8d9f56eaa220cfe082226c16383afc181d75d6ec87ea"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_PURPLE_0_png.ts": {
+      "bytes": 19937,
+      "sha256": "0ea58fcd7ee7e8eb03d5924da8114b8ca7b52d5d916e89ae388009d2856653ad"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_PURPLE_3.png": {
+      "bytes": 14801,
+      "sha256": "2842f08b535be62ede517a5c7fc7cd35d6b3373132dbc753e89e4cc8191effb9"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_PURPLE_3_png.ts": {
+      "bytes": 20001,
+      "sha256": "43236cc3600190d6836d6bbfb031551b0b9eb40c748e8db8f72d51a843e2e6f3"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_RED_0.png": {
+      "bytes": 9768,
+      "sha256": "7f2656106dfb24b94f41aebeac3008b373a5fca072cc18c9c4d1cea8ebf98e8b"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_RED_0_png.ts": {
+      "bytes": 13289,
+      "sha256": "e6ccbfefd184fd51c5d41f1494c8828e25d5a08c25e07ae3abadd842c1b874ec"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_RED_3.png": {
+      "bytes": 9774,
+      "sha256": "3db09331e1cdbded81274caa9523a62676d1999f45fbc41f9895d1c9af5e87cd"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_RED_3_png.ts": {
+      "bytes": 13297,
+      "sha256": "f1b16df1ab2ab7c39f72356259bae285943c1eba1e17369aecf656ed116f51a8"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_BLUE_0.png": {
+      "bytes": 15377,
+      "sha256": "3762e73b95c7c766b0b9fd16b5da924b801843283afcdf6fca7ce7e2d3ff45ce"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_BLUE_0_png.ts": {
+      "bytes": 20769,
+      "sha256": "d8b9b66b67f13e5b080bded20c2ef69bc0be8668dd84bc73f467d786616633ef"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_BLUE_3.png": {
+      "bytes": 12801,
+      "sha256": "5bb3be1e3edc49bdc9b2b92d8d425ee8b37e4a546abfc99b22b858a9e5277ec2"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_BLUE_3_png.ts": {
+      "bytes": 17333,
+      "sha256": "efc25f95125cc84949daedf3159c34a43855221b9f7d874d97a35c4d815cd9cc"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_ORANGE_0.png": {
+      "bytes": 13361,
+      "sha256": "e4b393738cf37ac4c7039e1386289784bc46c40d00e71cabfd45165432cf9100"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_ORANGE_0_png.ts": {
+      "bytes": 18081,
+      "sha256": "0a24ad6f956988ffa198c1bdefa8ca24bb58fb1fa4d3167647644eeac7650b0e"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_ORANGE_3.png": {
+      "bytes": 12182,
+      "sha256": "481193a1ef6229ddf76d90a3c3d76ac123b2cf08332d21a3b3f7fc34d24aec3c"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_ORANGE_3_png.ts": {
+      "bytes": 16509,
+      "sha256": "2ac290715c23d84ec584ac7b86306ac2976ec2da59b04a34633a715f97192808"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_PURPLE_0.png": {
+      "bytes": 18953,
+      "sha256": "7a7d4ce3b7b523ff9b11888f343dcde274fa62489c0554d36e74078f1628c1f6"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_PURPLE_0_png.ts": {
+      "bytes": 25537,
+      "sha256": "fa92b4b65155f0ca6a27f542832f92bac20e26a035b3ae1dc75b983e9a5802fa"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_PURPLE_3.png": {
+      "bytes": 17892,
+      "sha256": "f46840dcd8de6db903e2504345457c09d7cb511f91b98335dcf506b0ab1e908e"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_PURPLE_3_png.ts": {
+      "bytes": 24121,
+      "sha256": "3e53b276424cd0326d171ae463453b04fadbc1b54c64bd04dbc2f912693c2a35"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_RED_0.png": {
+      "bytes": 12024,
+      "sha256": "ee38e9a6fa48804168a68d462697900616c5202e606fe7baedbf9e832d268907"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_RED_0_png.ts": {
+      "bytes": 16297,
+      "sha256": "fde567931c19ab7e5eea46fd4d0b5fc7a95e0bdf15a408771c80edc4914c4604"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_RED_3.png": {
+      "bytes": 11536,
+      "sha256": "8e9c25cc6732b282bbc9184be833179fffba1f4adb6554110f47b132d2ec9f5e"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_lrg_RED_3_png.ts": {
+      "bytes": 15649,
+      "sha256": "9095a2fbbfd28c828b83ddee81d7d41e1f63872f91437352d63ad95243c2645b"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_BLUE_0.png": {
+      "bytes": 8229,
+      "sha256": "986fcb5ff559662236e9ae564e5aea5b8ba691bcbefaec457f2f4060c81f73ae"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_BLUE_0_png.ts": {
+      "bytes": 11237,
+      "sha256": "57dcbf87c525bf82c0c0035187c2805dd5bf3412323cb3fdf3a05dcee1ae3239"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_BLUE_3.png": {
+      "bytes": 8236,
+      "sha256": "609f1a0e7999d6c84a07d743b8fedaedd9db6a6552952aef2aed12261b9e773d"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_BLUE_3_png.ts": {
+      "bytes": 11249,
+      "sha256": "237a33691d690617f84114871bae49f73de5ae1beaa7fc9aa2a27e517ad919db"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_ORANGE_0.png": {
+      "bytes": 7203,
+      "sha256": "7084e9a9403207400cc84d70b0be2fe89d9c3d3eb8f4281d94aec616331b2f0d"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_ORANGE_0_png.ts": {
+      "bytes": 9869,
+      "sha256": "fe5c230ea0b9c90b59051133883b3461b4110a75f8ee258dd7902a40104acd9b"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_ORANGE_3.png": {
+      "bytes": 7113,
+      "sha256": "81a3b78f8964fe50df8b60ec0dad01e5a21760adb18f5988c26b358199e711d0"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_ORANGE_3_png.ts": {
+      "bytes": 9749,
+      "sha256": "22bb5b327decfa7d78655375156040a79a7b31244f37a9c394059af277454a28"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_PURPLE_0.png": {
+      "bytes": 9790,
+      "sha256": "fa91176cb1aa5308887f836a010d8fd36b2bc90adb6119e052203f0cd3b83cc8"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_PURPLE_0_png.ts": {
+      "bytes": 13321,
+      "sha256": "f64306b336cd4bbac09950044e11783e888e502c5d4496f1030853b112bb79ee"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_PURPLE_3.png": {
+      "bytes": 9545,
+      "sha256": "7f50da30553b0d463b15bb4c08760f23cc7364d389d430ddb42196ee0ec155ae"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_PURPLE_3_png.ts": {
+      "bytes": 12993,
+      "sha256": "6e2ffd2447dde644dbce58ff683e4ce43c5450b4913c8d544030bc58123c1a2f"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_RED_0.png": {
+      "bytes": 6708,
+      "sha256": "f60c75ad7d22ce06dcf4e853aedee158cd0ab08730c40c2694429155dd6b96ee"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_RED_0_png.ts": {
+      "bytes": 9209,
+      "sha256": "c081cba8439f767f2d80049881b3b9440ce89cb38c7106a1f3e9914638a93e3c"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_RED_3.png": {
+      "bytes": 6633,
+      "sha256": "82955ed05b4c187b2e483b56c22d9febcb6977fe33167e7f7e856fcd49e85a10"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pull_figure_small_RED_3_png.ts": {
+      "bytes": 9109,
+      "sha256": "eb5875c949daa56a2e5a89568375fbab7b20988606eedc529926fedae6c5f111"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_0.png": {
+      "bytes": 5496,
+      "sha256": "1c9f63180ec62983c289c499b4cc950f7d09295406ed994e12c09a39f3358458"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_0_png.ts": {
+      "bytes": 7593,
+      "sha256": "70b60099cc2745f1caaf375a2883aa5e6091443a620c9b9fb3db65a966988c15"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_1.png": {
+      "bytes": 5487,
+      "sha256": "182e9b6e17d68ee18085f8345d6a7c23419c356adca031295217ae297fa2f11c"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_10.png": {
+      "bytes": 6217,
+      "sha256": "8053b8c475076a43a4cb94f61315c0fd1cf8cd8b577ba2cd403aebabb77a8019"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_10_png.ts": {
+      "bytes": 8557,
+      "sha256": "41c2e5da3c795f5128e3f4bd5ca9eb4aa5b41097fd856d337fe5f397d6431b8f"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_11.png": {
+      "bytes": 6385,
+      "sha256": "5941f9ef1d78b033e0a2df5c60e9ffc1c4e78ddfaea23b922cbdffa050df940b"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_11_png.ts": {
+      "bytes": 8781,
+      "sha256": "d427dfc1c24645bfc9dc6233663f6f1fa9c662759afdd7dcb6db3c902b5179a6"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_12.png": {
+      "bytes": 6439,
+      "sha256": "99f810de672c0ed3c722c8f5330979b9599afa90f9f2787bca8d0c4980810eb3"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_12_png.ts": {
+      "bytes": 8853,
+      "sha256": "ee2fb97af913b30dbf8796544e79f833a0b95cbed6de1d68b700263e72196b20"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_13.png": {
+      "bytes": 6349,
+      "sha256": "66a518d843a5cae7169bf45fef21c77c5c74863592790e21f8b4657f8c72de90"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_13_png.ts": {
+      "bytes": 8733,
+      "sha256": "25e402414b835763e4a4d5e74754db5707749530dc91001921197443d9b55c64"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_14.png": {
+      "bytes": 6572,
+      "sha256": "de67a8ad7d79902836f144fe7d9fb16b3bc2e2ace11bdc139bd0296c97a12add"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_14_png.ts": {
+      "bytes": 9029,
+      "sha256": "b3b28a2819fb93e0ed2f89c986e43950deb6e0cf092b8b3e1c264539e9d03928"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_15.png": {
+      "bytes": 6584,
+      "sha256": "6c7100f78675a52ba49de60c58a6638f6e2686153fdaa2eb44f740c50997c784"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_15_png.ts": {
+      "bytes": 9045,
+      "sha256": "17ad5af3f804a6e6ea3fbc83adf6fbd6ef27195b1f9245d82934fbd4cdd2c676"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_16.png": {
+      "bytes": 6495,
+      "sha256": "3440ae6add144e902f34130d9d70a2c2abd1a46d509d5a6c003317b17b9d5703"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_16_png.ts": {
+      "bytes": 8925,
+      "sha256": "c7f6ca45e3af43f86fff948711c9779b2fb1806f5bb1f826824475b1eb0ecc73"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_17.png": {
+      "bytes": 6429,
+      "sha256": "1b0d67e83a6f8f5b2f60aa8728cf85a18386b714b3d9e3b662b775c2cba63a5a"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_17_png.ts": {
+      "bytes": 8837,
+      "sha256": "b119bf501d795efa0bb0ed8a5a5ef433853281c45a0e5c1da69653a4bb53f42c"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_18.png": {
+      "bytes": 6323,
+      "sha256": "4c4432a33b95b1b66c3626b126c0dbdd95b97a733cab462ef3a4c88a59449c90"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_18_png.ts": {
+      "bytes": 8697,
+      "sha256": "8863536e26d304b6b7a5c9579963ab1c841afa5f041ad465f5da6b0d6bcc27ce"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_19.png": {
+      "bytes": 6272,
+      "sha256": "4f21c58852c56c50df1a7a12760001ad6297101b78e59bb928eb986bcb498b3b"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_19_png.ts": {
+      "bytes": 8629,
+      "sha256": "d9e57fbf83d041bf97cb467beb2a71f24bd7c5993f3fa500572873c745f2e2f1"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_1_png.ts": {
+      "bytes": 7581,
+      "sha256": "db27088de5ce2c49d655c0b3ad7844991c38bfe9c24f6e0241068e4fdda822fb"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_2.png": {
+      "bytes": 5518,
+      "sha256": "ca3e05ff98cade84dd7a5bf2f101134311ff9fd3de1265ab19592cbcc28949a4"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_20.png": {
+      "bytes": 6310,
+      "sha256": "852e1714cb974e7a38d816844e86639aa9c9c8dacf3d2560dd6308e2e1d77b50"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_20_png.ts": {
+      "bytes": 8681,
+      "sha256": "d385660a0cec4af1ce3879afd1fb2b330eb2ac7aef95f8912e7faab83db32864"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_21.png": {
+      "bytes": 6238,
+      "sha256": "363bba5ed9dfe6c24b7a2ca7e53b2c06375e111b4cf9cd5e7f9fd68671edef91"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_21_png.ts": {
+      "bytes": 8585,
+      "sha256": "1762f8dcd81cfb0af67d6e55746aab623d2d5d937b04205c46b1fc6cdab5bd03"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_22.png": {
+      "bytes": 6191,
+      "sha256": "d852e4429e5ec673bc3774bc48e7cf1d776e5601d6ffaead007217bac7ee8214"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_22_png.ts": {
+      "bytes": 8521,
+      "sha256": "05b97404da8ed9ae85e7a948a43b54ea37efe5805e4fa2022ac3ddd55ce68409"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_23.png": {
+      "bytes": 6359,
+      "sha256": "ac8f408a886f2448320695d48babd0b5b1fd2f3e81220b4134aec6175057c99f"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_23_png.ts": {
+      "bytes": 8745,
+      "sha256": "fcf0ff3654ee5b0e9e7e04525aac315dd36db3d333ffff0620bf4583bdcd37bd"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_24.png": {
+      "bytes": 6174,
+      "sha256": "6fa57e034307f2c902f0148663a645267baccfe61b257787bb4f72dd6c7d4615"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_24_png.ts": {
+      "bytes": 8497,
+      "sha256": "21f99e520a4f99fd57b7dca0c6132e3918b8c384c993b3345a0d221d073caeed"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_25.png": {
+      "bytes": 6134,
+      "sha256": "39458ebabef88b5be4a52f85bbebc0532135461a6d16d25b98335f55f0767ee8"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_25_png.ts": {
+      "bytes": 8445,
+      "sha256": "8b59c44d5997ea9aafc1f3190c6ca67951a134462e6da0cfbf7e3d2c068ea1b1"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_26.png": {
+      "bytes": 5979,
+      "sha256": "ac891de11d3bb42868ddc8cb7a49d1c745fa68d1c39d78c68003386e56d560ac"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_26_png.ts": {
+      "bytes": 8237,
+      "sha256": "c0377d4d88b70a0cfe87e7edccce73f48c543d263d2cc2463e879df01ccbcf0b"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_27.png": {
+      "bytes": 6027,
+      "sha256": "6b71eabe2bf59e45d266851474643e3b27504d07d8d27a7e2ae64a8d314eae98"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_27_png.ts": {
+      "bytes": 8301,
+      "sha256": "ef4e7bbf528a5c3898bfa6dbc725935477d4d836fe9f6e107dbcc00be12e0d65"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_28.png": {
+      "bytes": 5835,
+      "sha256": "379044554ca5b946a8d762e8edfd3f48bae01e3d2c5e9d0a02d56c754a896548"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_28_png.ts": {
+      "bytes": 8045,
+      "sha256": "d1a58fbd76b4e0c86142568230787c5c0c266da7eca95006c792f2711d891714"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_29.png": {
+      "bytes": 5650,
+      "sha256": "6058ee161654a8cb0eb0f2513a3a8b2fa1355d0873e69440d2bf9401109af4dd"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_29_png.ts": {
+      "bytes": 7801,
+      "sha256": "f63c3638ce6455bf6350702e14e36bbdc18675dd427ae7b4f5f53fd9ab69b7c6"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_2_png.ts": {
+      "bytes": 7625,
+      "sha256": "785fa411f34953dd3e94277a5031fbfae6ede26c6b60817c071f5cbe725cb4d4"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_3.png": {
+      "bytes": 5656,
+      "sha256": "985870fe6fac1a531fdceea42e9c559ccbf5e2d0d28fc26f0133dfc37f504646"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_30.png": {
+      "bytes": 5689,
+      "sha256": "8f69a85e4c754a9b6548923aa7be64a921291215db4e65dc935a29681f2cf0e0"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_30_png.ts": {
+      "bytes": 7853,
+      "sha256": "cede85c07f6e866bfde6018d0bf3885030c8f174bdfe302962deab1873a8ed48"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_3_png.ts": {
+      "bytes": 7809,
+      "sha256": "03559daeb2154534d3e84f6f230fcfcfc162c8cc41262e88618ddf50f31410ad"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_4.png": {
+      "bytes": 5831,
+      "sha256": "e2742141b8d477dff34dfbbf410e66da498a3ac68c8e966502d31b5566756ac9"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_4_png.ts": {
+      "bytes": 8041,
+      "sha256": "b0c37807ff150c2294b622cbbc4909c96e0554aef630709067dbcb893bc9b690"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_5.png": {
+      "bytes": 5905,
+      "sha256": "c2fab3897af12a9cd47954f85ae15374eeaddbb762a5914ac9b680b1ca4cc507"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_5_png.ts": {
+      "bytes": 8141,
+      "sha256": "ef1da4a9fc9876115cb8ce0098a4f1c4e10efb0ea032b9a2a9c3153cd54e0838"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_6.png": {
+      "bytes": 6070,
+      "sha256": "b25e6c396d8c95af4e233d48521f59a5f60dab757efa5fa0399f0ae099f59866"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_6_png.ts": {
+      "bytes": 8361,
+      "sha256": "a228a97f0e40dcb393fef952a5c1592d38887cc742f8eb4f297713e645529ecb"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_7.png": {
+      "bytes": 6042,
+      "sha256": "851c4183e758ec3d8d7259523b0b1145db8691d68cbfe6aaf3b4fcbf2dae16e3"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_7_png.ts": {
+      "bytes": 8321,
+      "sha256": "97a5d9b22addefe30ef473e83a700335bc9bb0fcc92fb8b0bdaf18f98d7d0940"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_8.png": {
+      "bytes": 6171,
+      "sha256": "1e0d1a3fa6afda1a65551ab9f1b8aebd50eaad04ed3943d8c7d99cfc4c6459a5"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_8_png.ts": {
+      "bytes": 8493,
+      "sha256": "02e76451633378e6e7b60f370f8cea063dc1077b415f9921c168603b97263e6e"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_9.png": {
+      "bytes": 6327,
+      "sha256": "f57fe643eafaea73e105330afdd05bed1854e6cb98c899b3ca9f948830bef882"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_9_png.ts": {
+      "bytes": 8701,
+      "sha256": "781b0fd91f0cf539a5ac49d35058a25578a362e19d4e042143bd57be30a88da0"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_fall_down.png": {
+      "bytes": 5733,
+      "sha256": "97117ea822a642f55b05331a9aba60715e5ddff29074e9c13f76fb2b545b8b1c"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_fall_down_png.ts": {
+      "bytes": 7909,
+      "sha256": "357df0e663115bf2c7006d6b1857db7eac9433f18dc768b588ed1254dd2b079f"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_straight_on.png": {
+      "bytes": 5328,
+      "sha256": "de0f14646c8d6535d31880dbab7fd283f67747e474c80b42cb003fb300a93a33"
+    },
+    "vendor/sources/forces-and-motion-basics/images/pushPullFigures/pusher_straight_on_png.ts": {
+      "bytes": 7369,
+      "sha256": "8e9f7de3cc439c0a4ed1a1a819649a4b3bec95a90226bd6ff195f7e9365a9beb"
+    },
+    "vendor/sources/forces-and-motion-basics/images/rope.png": {
+      "bytes": 29549,
+      "sha256": "1a8461173dd4a85f55e33fb97dd6dd7fb0409f13f50a12a17f060d8c06809946"
+    },
+    "vendor/sources/forces-and-motion-basics/images/rope_png.ts": {
+      "bytes": 39662,
+      "sha256": "2b75fd94f7921dc9b89e91f5a917f86529cd616224b83d45eec6693482120768"
+    },
+    "vendor/sources/forces-and-motion-basics/images/skateboard.svg": {
+      "bytes": 2625,
+      "sha256": "1910d48c805933a54dcc99d48c23ce33139266dc43b28f702cc9e53d1d6a7bea"
+    },
+    "vendor/sources/forces-and-motion-basics/images/skateboard_svg.ts": {
+      "bytes": 2773,
+      "sha256": "930976a3b372c47f280153cf20af185d88563b2525a3d939f0627b51ebc70fc7"
+    },
+    "vendor/sources/forces-and-motion-basics/images/trashCan.svg": {
+      "bytes": 7923,
+      "sha256": "8de63737c1e57cb050cef06494ee3c55740651d6716a5abe73a1d7d1cef887dd"
+    },
+    "vendor/sources/forces-and-motion-basics/images/trashCan_svg.ts": {
+      "bytes": 7024,
+      "sha256": "4b7960538de4dbeaab203530900e6f4ca78b2cdb727aadbf3a5decfc86d69456"
+    },
+    "vendor/sources/forces-and-motion-basics/images/tugIconBlueRed.png": {
+      "bytes": 60474,
+      "sha256": "e16618db686581a1530999e5fc3db94853869ef412bfc696d3c31fb5f9b04aec"
+    },
+    "vendor/sources/forces-and-motion-basics/images/tugIconBlueRed_png.ts": {
+      "bytes": 80894,
+      "sha256": "51f43ed86a680bc9187402dfce5051ef7a52cc148527f83db118b3ab59eb70c7"
+    },
+    "vendor/sources/forces-and-motion-basics/images/tugIconPurpleOrange.png": {
+      "bytes": 61072,
+      "sha256": "c161258fd6c3d416572c39403d14722cb1a1067234dc2ee6896dd96845729aa1"
+    },
+    "vendor/sources/forces-and-motion-basics/images/tugIconPurpleOrange_png.ts": {
+      "bytes": 81694,
+      "sha256": "19743c76dc09d61e27f4786df3c149536e37e739bbb02190aa6cdf0b0d7bafe4"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/license.json": {
+      "bytes": 1726,
+      "sha256": "85f9641bb8497cfc682252aef13aa34486d5cfc7f977c65cd9c3390b8ec73461"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaGirlHolding.svg": {
+      "bytes": 8816,
+      "sha256": "3e4ce366d1c6334ef4dc94edfc258c2859c5f3a5c4f2a4f67687275846b492f1"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaGirlHolding_svg.ts": {
+      "bytes": 7800,
+      "sha256": "e12a183b83824dd5b42294c6253bdbf3f547632fe34e17f0ed7a763f684e1c32"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaGirlSitting.svg": {
+      "bytes": 6391,
+      "sha256": "19cfc29af60d8b0f079496c665e8ec69f37d920795ea12a5639349c96fd89872"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaGirlSitting_svg.ts": {
+      "bytes": 5299,
+      "sha256": "9cfbed44a8b7fb984dd036a3e5a62b756b93adeffcc7b0ae0ef35f0fad6fd848"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaGirlStanding.svg": {
+      "bytes": 15835,
+      "sha256": "74b07ae458ad7005fd2a37bec5adc288b4b709253ecd7e37186e4d0b4a2a4f64"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaGirlStanding_svg.ts": {
+      "bytes": 14215,
+      "sha256": "6fc967903246b81752e715ef4e2eb5b406e32e3dc3192dec59dad4816a6819e1"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaManHolding.svg": {
+      "bytes": 12647,
+      "sha256": "70e99d70174d45f3b382700f7090c9fed229525fd450c4b9a62323fdb9c88c81"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaManHolding_svg.ts": {
+      "bytes": 10629,
+      "sha256": "965bcd6a62b9f639cc98652d971c7e742d054946d7cba08901dbfe768004d598"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaManSitting.svg": {
+      "bytes": 8733,
+      "sha256": "684cea7cc769a4e877e2fa6bcd2648cfaf5d8e9fcc5c513abcbfe0e37cdccfed"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaManSitting_svg.ts": {
+      "bytes": 7520,
+      "sha256": "eed354096485be2479ab7c189d9bdc71d04e6d7666024878084a2ce4c135ad9a"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaManStanding.svg": {
+      "bytes": 14899,
+      "sha256": "9e982835175a60fd76d6e55efc9cd46fe3d37dd23ccb08ead8b1f928bed1dce6"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaManStanding_svg.ts": {
+      "bytes": 12693,
+      "sha256": "829e93dba4355e8e2ab2319023aa16d098504a732bc06e01671e2066d9695c00"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaMotionIcon.png": {
+      "bytes": 109181,
+      "sha256": "7b0aec8f87e976c89b1db9c7139c19d1c90cc6902e2c116b4638c080a2c86550"
+    },
+    "vendor/sources/forces-and-motion-basics/images/usa/usaMotionIcon_png.ts": {
+      "bytes": 145841,
+      "sha256": "49464736e299decef899a1ef42875abcfb44237be34e29906c1bc6c979e4039f"
+    },
+    "vendor/sources/forces-and-motion-basics/images/waterBucket.svg": {
+      "bytes": 3427,
+      "sha256": "83f81d55e77ba9b5bc835c74a85cbbe664c0f3ceb8f2ed8fc1a1b0a98777798f"
+    },
+    "vendor/sources/forces-and-motion-basics/images/waterBucket_svg.ts": {
+      "bytes": 3654,
+      "sha256": "91bb3feeaac365ba0d0741bbdb239bdaed4c95cb4614088d2b7c13804c63d9ec"
+    },
+    "vendor/sources/forces-and-motion-basics/js/ForcesAndMotionBasicsFluent.ts": {
+      "bytes": 88708,
+      "sha256": "ba07b7f13dc6d723088f2b3640b41b07c9e3d7732a84b6967a3b8e156d6e7a27"
+    },
+    "vendor/sources/forces-and-motion-basics/js/ForcesAndMotionBasicsImages.ts": {
+      "bytes": 5357,
+      "sha256": "4f14949ecb35665e5cf16cbadf98bfac4ab94ff5a4667de3d3ed94275942758a"
+    },
+    "vendor/sources/forces-and-motion-basics/js/ForcesAndMotionBasicsStrings.ts": {
+      "bytes": 17358,
+      "sha256": "c304d4764927b9ccf4db361e49effd75e018b5bc3baa3cf88d8d549e43c83d0d"
+    },
+    "vendor/sources/forces-and-motion-basics/js/common/ForcesAndMotionBasicsQueryParameters.ts": {
+      "bytes": 1189,
+      "sha256": "9c75a4f5f38dc589aca83d97566d8d9a40b87e653f492f5b65ba2d8b386d92ae"
+    },
+    "vendor/sources/forces-and-motion-basics/js/common/view/FocusDrivenGrabReleaseCueNode.ts": {
+      "bytes": 2180,
+      "sha256": "219a69ca32926ee5d904391dbc26eaa39ade8ef645060534c89a4474b2773aa0"
+    },
+    "vendor/sources/forces-and-motion-basics/js/common/view/ForcesAndMotionBasicsIconFactory.ts": {
+      "bytes": 1133,
+      "sha256": "9ee36b6ffde1d64d71330886232db3148d0c9f44c4e90efe00b1e8de5ded5b6a"
+    },
+    "vendor/sources/forces-and-motion-basics/js/common/view/ForcesAndMotionBasicsLayoutBounds.ts": {
+      "bytes": 862,
+      "sha256": "cd5631c4f81287a3bd62b5d77f0ce95c78ef236de72f5758db1028a8dfdcf1f0"
+    },
+    "vendor/sources/forces-and-motion-basics/js/common/view/ReadoutArrow.ts": {
+      "bytes": 11481,
+      "sha256": "b7e3c4fa8602d7deec68098fc1a1c740e17f6676f8119227c5017e9671a17283"
+    },
+    "vendor/sources/forces-and-motion-basics/js/common/view/getQualitativeForceDescription.ts": {
+      "bytes": 1667,
+      "sha256": "42c4b2aa0bed2e5875a3d8cd324e15ec26cd5e5d647e5e467d8927ac012358c9"
+    },
+    "vendor/sources/forces-and-motion-basics/js/forces-and-motion-basics-main.ts": {
+      "bytes": 5407,
+      "sha256": "27f4ed8d71a2844e75a4bcd05f8f02037d5d115c8936746c528b9756ce3d0e6e"
+    },
+    "vendor/sources/forces-and-motion-basics/js/forces-and-motion-basics-phet-io-overrides.js": {
+      "bytes": 78,
+      "sha256": "2a7daa9a3416a2a2a003efd056f72ce26342b3941b354aaa1227225a6f2520ad"
+    },
+    "vendor/sources/forces-and-motion-basics/js/forcesAndMotionBasics.ts": {
+      "bytes": 286,
+      "sha256": "b1652cfc0dfced7944ed7842736132e862b38f328089e0f7e5401bb738f5988f"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/MotionConstants.ts": {
+      "bytes": 613,
+      "sha256": "8a63ff611cd4c16f3c59fe0bbb53031f020c83259194abe2a64b157dd9a024e4"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/MotionScreen.ts": {
+      "bytes": 1186,
+      "sha256": "eab95acba6748bf015cbdae8722320a15424e351c7e471d930b9938019a4b93e"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/model/HumanTypeEnum.ts": {
+      "bytes": 1391,
+      "sha256": "da97276147ba96b00f5881dca66988b4679a00b565c6863f22d2639513f00eb6"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/model/InteractionMode.ts": {
+      "bytes": 704,
+      "sha256": "10d5ac013629fe22b85539a053bc250b990ec5b8bd83e471f5aa84997f9b6bbe"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/model/Item.ts": {
+      "bytes": 13627,
+      "sha256": "efc21ac14183f792523863a75134b30cf7b6db0b26ccd574a5fcf2c328377c28"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/model/MotionModel.ts": {
+      "bytes": 29188,
+      "sha256": "6d0d5fd1f099b5b8838eb174975d2db800819c88aa72632b6d6561dff28ca3ce"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/AccelerometerNode.ts": {
+      "bytes": 3582,
+      "sha256": "a4d03ef04bc57c62935ab81235f24dad0775d438c13c30266fc083958aafdb24"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/AppliedForceControl.ts": {
+      "bytes": 6718,
+      "sha256": "5a75425d026ff9db252430ef54f7236f5da95b73285ec1fe9be0fb277f917eaa"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/AppliedForceSlider.ts": {
+      "bytes": 4905,
+      "sha256": "2ca1e839e54484857589c2d45eab4b6a870d3e8b1b630cd52e0625998bc0e932"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/FrictionControl.ts": {
+      "bytes": 4661,
+      "sha256": "4ded6e767082f48638b2a2b7cc74f3bb9543ac7754e67868d7d80fb8f73c2490"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/ItemDescriber.ts": {
+      "bytes": 5461,
+      "sha256": "7bd15e3538e06bfc6561c828b0342d9099541fc1d64303ed15c1babf3e2abe42"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/ItemNode.ts": {
+      "bytes": 25554,
+      "sha256": "f6ffbe78c1ae13e657e0e46b544197e619fdf0d1e4700e31a9771a4deed66c9c"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/ItemNodeDragListener.ts": {
+      "bytes": 2977,
+      "sha256": "dfd37ee8912ec09f074829dccf0b32652ea97ecd8556e363cb74b34accc53ae4"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/ItemNodeKeyboardListener.ts": {
+      "bytes": 787,
+      "sha256": "e769cd10ece03b30c8894278a03844ceee0c1bb26ac85e5dbb6facf6b071ea74"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/ItemStackGroupNode.ts": {
+      "bytes": 3736,
+      "sha256": "18aea831e24ee18f9326c2f9024cd8586e6fe6b7f528acb4db59645463059233"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/ItemToolboxGroupNode.ts": {
+      "bytes": 4150,
+      "sha256": "9bfcdfef8a5c77757435cf23b136982776cf17a28c18ae633bf03f76e2406ed2"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/MotionAccelerationDescriptionNode.ts": {
+      "bytes": 5431,
+      "sha256": "43752fdbf205bb038317d3ffa6d0d1d0c0873b352d2a6355226c1e86e064afd1"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/MotionControlPanel.ts": {
+      "bytes": 15152,
+      "sha256": "30a4204cf10612c8ef7b33ce5effdd17b99a72531a9ed4deb45e871ce1e06627"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/MotionForcesDescriptionNode.ts": {
+      "bytes": 8858,
+      "sha256": "06db0958c6e67a439f719866fbc02da5ba08d3c79a1765db2706c8fb08899cdf"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/MotionGrabReleaseCueNode.ts": {
+      "bytes": 1054,
+      "sha256": "6fe54369f37529c38dcb4143b5e6a71591904a4b2ca9beb144a17addbba4261a"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/MotionHotkeyData.ts": {
+      "bytes": 1453,
+      "sha256": "4f08f9d2f958195b8299b7fef56e2eda8e82be8b4e1313f3115b71b547d63cdc"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/MotionKeyboardHelpContent.ts": {
+      "bytes": 1986,
+      "sha256": "8b24a9005b54c6028eb2b5309bc19406dd96349877ac340752f09a8adf467122"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/MotionScreenSummaryContent.ts": {
+      "bytes": 3898,
+      "sha256": "974f3794519be678e2e42491daea0f80277ebe02eca8bf3defc4eb6eabe6d4b3"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/MotionScreenView.ts": {
+      "bytes": 35426,
+      "sha256": "73b553d659fca8dfd2eb7ffe37769f17fd74a7887c7d31ea20d9b476217437dc"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/MotionSpeedDescriptionNode.ts": {
+      "bytes": 5790,
+      "sha256": "4888df32cf1d4b9e7e50e2e4506da559787027e62043177c7f7f0ad27b036773"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/MotionStackDescriptionNode.ts": {
+      "bytes": 6007,
+      "sha256": "5eb0bb01092d131747fa405e9025ac7e5c628a9cbf585478289c88278fde731a"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/MovingBackgroundNode.ts": {
+      "bytes": 8390,
+      "sha256": "0a5d09ebcb4b42ce5140e323bad6539d92d9f9c89b26bfb2e6107dd2e306ff7f"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/ObjectNavigationKeyboardHelpSection.ts": {
+      "bytes": 2474,
+      "sha256": "95005b7e966b1a7eac85222a0d13fbafb52e4812acff28de800ec93f42099d31"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/PusherNode.ts": {
+      "bytes": 13844,
+      "sha256": "5340c7c5188dab92daec8559d6a0ff186d09bd3979b56e15ccf877d54d72405b"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/PusherNodeDragListener.ts": {
+      "bytes": 2301,
+      "sha256": "7118ebedd1de6838e59399124ce49765cf865bf471498f6ecc12f771abc781b9"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/SpeedometerNode.ts": {
+      "bytes": 2474,
+      "sha256": "35c5315fdae25ec844dd6047ec92a0acdd6774889023b0fa32fe9c9494d87866"
+    },
+    "vendor/sources/forces-and-motion-basics/js/motion/view/WaterBucketNode.ts": {
+      "bytes": 4949,
+      "sha256": "553b3d7624309544ca1e179260e80ae66d676c798ca1cf15ddf28c7c803a37d3"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/model/Cart.ts": {
+      "bytes": 1570,
+      "sha256": "91362bc32d8dfe45288763b5b7a652914d871c72c84a50cf310dfe86c835a70b"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/model/ForcesAndMotionBasicsPreferences.ts": {
+      "bytes": 933,
+      "sha256": "a247c72805c4a68a97e3fc7c3bdf0f10925748410d25485a0013d02d658cc631"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/model/HomeOrKnot.ts": {
+      "bytes": 324,
+      "sha256": "a1862a974691ef62f7872414c018edc7331082adcaa2b68b62dfa6e14b3b2007"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/model/Knot.ts": {
+      "bytes": 2628,
+      "sha256": "38d277029297adc2b32da2e8ecaa58ba176b0ae3b6b7412a8f96f4c3bd97e090"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/model/LeftOrRight.ts": {
+      "bytes": 347,
+      "sha256": "e4f5aa0143290e73b17a371413e81b1dbf46ef992272d41ca8239bf6afd9925d"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/model/NetForceModel.ts": {
+      "bytes": 20609,
+      "sha256": "d002848ca15e75f78772614e188d0ce6f2cc97c2dad60b86988e758ea832d7a1"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/model/Puller.ts": {
+      "bytes": 8652,
+      "sha256": "b065b56d2fcd5ce6fd35f55659d3501604d5483fc487bca320e41247e2f641f8"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/model/PullerMode.ts": {
+      "bytes": 5475,
+      "sha256": "4cf64db6951c82062f4b50968b80afd2d67f0420f2e984727ef38f085f19724b"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/model/PullerSize.ts": {
+      "bytes": 350,
+      "sha256": "ce2d86042b676199ddc8011466994021ad29a88ac7ffb67a426605151f9ce284"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/model/PullerSuffix.ts": {
+      "bytes": 291,
+      "sha256": "e4d41692b79e8281e297ec40235104ab9faf2898d9579827fa995e028a31ed71"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/model/RedOrBlue.ts": {
+      "bytes": 382,
+      "sha256": "490f290e0dd2b78904b77025c2a7ec6883e751580a5ad3a12083bfee38d02830"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/CartNode.ts": {
+      "bytes": 2236,
+      "sha256": "a1aa7bf11c3a443868513ef53e6088d5dadcc4c960a5ebbc55ee427fe6eb8ab1"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/CartStopperNode.ts": {
+      "bytes": 1658,
+      "sha256": "b8e5b4053e363ecfe98753b8ef6ed8bb7a5ac66bc7f598c059a773996bfddd12"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/FlagNode.ts": {
+      "bytes": 3815,
+      "sha256": "b87ba1e18a737045f5be55b9a5471c145dc2bdae7b044a8ccdde40c38bbd4a08"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/ForcesAndMotionBasicsPreferencesNode.ts": {
+      "bytes": 1012,
+      "sha256": "5f89637eac236967fe70d53309c972abcefd081d21369c0331629bb8c98aa2d4"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/ForcesListDescription.ts": {
+      "bytes": 7034,
+      "sha256": "49d2059d1f43a1be2cf7db90dd572b9d614890c5e68c59b6aa8472b107fece42"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/FromAnywhereInScreenKeyboardHelpSection.ts": {
+      "bytes": 1062,
+      "sha256": "c2b675d18491a162c70bd809896fb145866037a21afe883ee3c3b6f67d059f91"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/GoPauseButton.ts": {
+      "bytes": 7040,
+      "sha256": "0e2a2a68e5f8e20433012ca8912f55774984aab2086233d3f0e15002300b6504"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/KnotHighlightNode.ts": {
+      "bytes": 814,
+      "sha256": "955d30b0dd0b590cafab215294a821ccd44727a54e3d617a7e3c2c3dbcef0878"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/NetForceControlPanel.ts": {
+      "bytes": 5129,
+      "sha256": "54a6a7be3a11269e1dad3c8387c582f28cc47835e0c49f5e63fffdab6530d343"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/NetForceGrabReleaseCueNode.ts": {
+      "bytes": 1758,
+      "sha256": "ecfa9afea29a858489af42124a53fffd9bc1aacf2502cb8b4f6892b9c9cf1e3e"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/NetForceHotkeyData.ts": {
+      "bytes": 2656,
+      "sha256": "1a4fc1bcd87996c36ba460aca302a23f579eabb698178dfae7e4445074afd2c5"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/NetForceKeyboardHelpContent.ts": {
+      "bytes": 1188,
+      "sha256": "937826e2ca51d2cd6d29de543b7f6bba2a7022534a716970352b324c973132ad"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/NetForceScreenSummaryContent.ts": {
+      "bytes": 4476,
+      "sha256": "a5875b3b8fa1ceac2f3a1de240eff0cb8d2131a5ab7762fe586551522eeb699a"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/NetForceScreenView.ts": {
+      "bytes": 18627,
+      "sha256": "8aac767d2eba680da70de53ff75d2f92f1d84dfbd440cd90f95d13e794f01d9d"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/NetForceSpeedDescriptionNode.ts": {
+      "bytes": 5511,
+      "sha256": "a7ca2699e179ac5b254903cb4347fcb3608ec6ef3c838b8972392febede1a3d4"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/PullerColorControl.ts": {
+      "bytes": 3099,
+      "sha256": "776e40c9efcded7c89b25bdc72c4d667e44f89bca0acfefe42c4259e047bc58a"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/PullerGroupNode.ts": {
+      "bytes": 1288,
+      "sha256": "e38b7dee63e587b2e33ceb77b501cf7031040f943f683233a33222f195653647"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/PullerNavigationKeyboardHelpSection.ts": {
+      "bytes": 2332,
+      "sha256": "8aefaa20e21ea029b0b662fbb2fdacf9fd9f3cadcfbc129f7a939a87b2f94a65"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/PullerNode.ts": {
+      "bytes": 16309,
+      "sha256": "860cc45f354bee782133586f85215a98ae9a89940b2a429876235f3d3a2f6522"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/PullerNodeDragListener.ts": {
+      "bytes": 2199,
+      "sha256": "49dbf8cddc38489ad37140ab6be5461b72542b2e75be614edf3f680ec8651874"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/PullerNodeKeyboardListener.ts": {
+      "bytes": 11027,
+      "sha256": "3cd4f00804d4c8215a36e45d751a702861a096285d28f45e4b07bdddaa6c19a0"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/PullerToolboxNode.ts": {
+      "bytes": 1478,
+      "sha256": "a593d9f26338bf41008b6595de3750644870ab7669a6b5ac520bca1cf9289636"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/ReturnButton.ts": {
+      "bytes": 2656,
+      "sha256": "aacb0031d16a7208d130eab0900b6244e3b09531e41c998dd1cadee9c65faffd"
+    },
+    "vendor/sources/forces-and-motion-basics/js/netforce/view/TugOfWarDescriptionNode.ts": {
+      "bytes": 4000,
+      "sha256": "e18aa1110a86e149da3dc21d905458c8d083e4dda9b9ef20addc9188c378e235"
+    },
+    "vendor/sources/forces-and-motion-basics/package-lock.json": {
+      "bytes": 44134,
+      "sha256": "b603a2919f5ebdaa4743b801892153dc959d88c5533806922d3a20413c62be3a"
+    },
+    "vendor/sources/forces-and-motion-basics/package.json": {
+      "bytes": 1161,
+      "sha256": "da489696519f72f8da832399ff9da666901c558c89ef819f15746fa2df7e2b5b"
+    },
+    "vendor/sources/forces-and-motion-basics/sounds/golfClap.mp3": {
+      "bytes": 21808,
+      "sha256": "0fd538ae66a33e34e2e53c09d3aea025520d57e7ff59a5f5d86c584082064a3e"
+    },
+    "vendor/sources/forces-and-motion-basics/sounds/golfClap_mp3.js": {
+      "bytes": 30747,
+      "sha256": "e06576b8ab68b48c1fecaacefe874c35e198f3f3a9902e321beeeff7c5aa333b"
+    },
+    "vendor/sources/forces-and-motion-basics/sounds/license.json": {
+      "bytes": 225,
+      "sha256": "d91ba1060d16127b72da6592b5d77a6cd554afe024b8a6c9c1647ad4f69c7d30"
+    },
+    "vendor/sources/forces-and-motion-basics/tsconfig.json": {
+      "bytes": 263,
+      "sha256": "5c833a1bfc084c48c0b742a2a2eb5ff2ba0f2c6927e211478f172ff0a1c59acb"
+    },
+    "vendor/sources/vector-addition/.gitignore": {
+      "bytes": 106,
+      "sha256": "5811189820de8dced10d5dc4483dcdc9f11b93c2c9739ed84b624775d0fda6b0"
+    },
+    "vendor/sources/vector-addition/.npmrc": {
+      "bytes": 28,
+      "sha256": "1597e56c66a7868eab67a491963faa49d1280b7b1a080d5eaf47c4262a215fe8"
+    },
+    "vendor/sources/vector-addition/Gruntfile.cjs": {
+      "bytes": 151,
+      "sha256": "ccaaf338c9276a833858420106cb3d2ca945eca5e0b293a2dfcd186b1e8ac27e"
+    },
+    "vendor/sources/vector-addition/LICENSE": {
+      "bytes": 35121,
+      "sha256": "e1c0ad728983d8a57335e52cf1064f1affd1d454173d8cebd3ed8b4a72b48704"
+    },
+    "vendor/sources/vector-addition/README.md": {
+      "bytes": 3643,
+      "sha256": "453f62b6315081d88ba5e1333d7627a8b5752b0ff7273a7411a3aef649ba665f"
+    },
+    "vendor/sources/vector-addition/assets/vector-addition-screenshot-alt1.png": {
+      "bytes": 128258,
+      "sha256": "1269ca26c6dd86ef246916ef304e4edbf6507f7526ef6b09edff3080b9421f72"
+    },
+    "vendor/sources/vector-addition/assets/vector-addition-screenshot-alt2.png": {
+      "bytes": 114559,
+      "sha256": "3e2e529a5f5d09e78d5b2c6a1abc79bcf4892b2f8de8dac91fdd11a1e4c923c3"
+    },
+    "vendor/sources/vector-addition/assets/vector-addition-screenshot-alt3.png": {
+      "bytes": 120730,
+      "sha256": "ed6f2a2f3d03cd9714f8f0c052469023ac112563d0bbac7f739015fe2d67f4a6"
+    },
+    "vendor/sources/vector-addition/assets/vector-addition-screenshot-screen1.png": {
+      "bytes": 71881,
+      "sha256": "7604ec0438cff9a7ca65ab8865cebf6ff24db5023aa2bcb0e0f6c31714190a52"
+    },
+    "vendor/sources/vector-addition/assets/vector-addition-screenshot-screen2.png": {
+      "bytes": 462437,
+      "sha256": "23f0d39428bf42ec4a31092713c7356515c4db3b03d2f88b1b66e348b8593f11"
+    },
+    "vendor/sources/vector-addition/assets/vector-addition-screenshot-screen3.png": {
+      "bytes": 107189,
+      "sha256": "5d1d939859dc739de1062b397174926543a7a621d25ac1f6e6209106c34dc2fc"
+    },
+    "vendor/sources/vector-addition/assets/vector-addition-screenshot-screen4.png": {
+      "bytes": 114475,
+      "sha256": "d3fab8e5f89def75bc88278dd4365ae043f11bf5be52d3cd9bb3916b10089316"
+    },
+    "vendor/sources/vector-addition/assets/vector-addition-screenshot.png": {
+      "bytes": 91908,
+      "sha256": "1e76ed6add2fdb12e0ad2659bd8f9936b89028918e5b257ae0b72072f95f8398"
+    },
+    "vendor/sources/vector-addition/dependencies.json": {
+      "bytes": 2553,
+      "sha256": "a13a01c8cde39ffdae8b60be2aafc5fe715c10215ef9a08ab5c76272d2a94115"
+    },
+    "vendor/sources/vector-addition/doc/images/CurvedArrowNode-notes.png": {
+      "bytes": 235216,
+      "sha256": "70dc9527611f232c9976c360ef04960cbaf09a0636624b40958a0c72445186e3"
+    },
+    "vendor/sources/vector-addition/doc/images/README.md": {
+      "bytes": 91,
+      "sha256": "339266a7907a697c19e989184ab4ba17c7483f575e028c7ebb5738f4cab4bcec"
+    },
+    "vendor/sources/vector-addition/doc/images/angle-calculations.png": {
+      "bytes": 2440923,
+      "sha256": "c4a951103a5f98fbc84dcbea685e074dbbf227e4e1bcc43dc5198a45e4f3bf2e"
+    },
+    "vendor/sources/vector-addition/doc/implementation-notes.md": {
+      "bytes": 13649,
+      "sha256": "b65ae725f4a365f6c5a009c79778f58c879a6c0186f89a509d0de846e2be432d"
+    },
+    "vendor/sources/vector-addition/doc/model.md": {
+      "bytes": 3651,
+      "sha256": "1407f85ffd923784a8a13f631c24dc6e06ede6a588d125675dc7d9e56cfed6c1"
+    },
+    "vendor/sources/vector-addition/doc/release-notes.md": {
+      "bytes": 1691,
+      "sha256": "85eb451df8211d09914ad115c63f240c6f26f3f7334b6bff26925d4eac4d7953"
+    },
+    "vendor/sources/vector-addition/eslint.config.mjs": {
+      "bytes": 536,
+      "sha256": "82cc6f11468f780427ecf4742738a4a6e59d7ed78f32e02ab4022a316e66ab09"
+    },
+    "vendor/sources/vector-addition/js/VectorAdditionFluent.ts": {
+      "bytes": 48480,
+      "sha256": "81cbefdfb4a6e5075578996a3f360e850bd0380de7abc8f60ba2221fbb34532f"
+    },
+    "vendor/sources/vector-addition/js/VectorAdditionStrings.ts": {
+      "bytes": 10564,
+      "sha256": "c2f3cf6cc54b0812166afbf2257ad6ee59aae3a0afe9ef6efa55330042520361"
+    },
+    "vendor/sources/vector-addition/js/common/VectorAdditionColors.ts": {
+      "bytes": 9990,
+      "sha256": "7f8da95afed586f888052f03fdcc5c696931498620029b662c4c6509203d49b1"
+    },
+    "vendor/sources/vector-addition/js/common/VectorAdditionConstants.ts": {
+      "bytes": 10849,
+      "sha256": "664ee337815a247e99b81ef5e25c1edf5551c4caaf5625791872b1da465502f2"
+    },
+    "vendor/sources/vector-addition/js/common/VectorAdditionQueryParameters.ts": {
+      "bytes": 2879,
+      "sha256": "55894a375253f66ca9c7143256972fe44933953c971d35105545f3b58dc886b3"
+    },
+    "vendor/sources/vector-addition/js/common/VectorAdditionSymbols.ts": {
+      "bytes": 2260,
+      "sha256": "baa27c07d3f7cf4279e1ae9910354878c9cbbc723b2d2f8d8b88d811a6830eea"
+    },
+    "vendor/sources/vector-addition/js/common/VectorAdditionUtils.ts": {
+      "bytes": 1110,
+      "sha256": "4c739857e986e50738b616aface0c6b4c0d706af3e119f41a6b1c6c9595e3e38"
+    },
+    "vendor/sources/vector-addition/js/common/model/AngleConvention.ts": {
+      "bytes": 423,
+      "sha256": "9fc36dc8fd3ee7a61a5cef68dfdd84d00ba15c56c274f1209cf1ecbb03b34766"
+    },
+    "vendor/sources/vector-addition/js/common/model/ComponentVector.ts": {
+      "bytes": 8282,
+      "sha256": "43f20d6db64881c288755c620cd63ce53ee729eab70b1385a06c27b3638cdca6"
+    },
+    "vendor/sources/vector-addition/js/common/model/ComponentVectorStyle.ts": {
+      "bytes": 747,
+      "sha256": "900bc6064dcf723e2847d624e456f2850234c69d1249d2630edfe6a24346c1d6"
+    },
+    "vendor/sources/vector-addition/js/common/model/ComponentVectorType.ts": {
+      "bytes": 329,
+      "sha256": "c449cd343ebe4eb1a2c9499060ed8f20445a8e639533e57e512b1bdb2be83e80"
+    },
+    "vendor/sources/vector-addition/js/common/model/CoordinateSnapMode.ts": {
+      "bytes": 748,
+      "sha256": "b6172d62fa6fafa148f238277c4710e2e2cb9d88ba7e33938d2301fc9fad4e9d"
+    },
+    "vendor/sources/vector-addition/js/common/model/ExploreScene.ts": {
+      "bytes": 2168,
+      "sha256": "1bdca98f18e37f161b868109e5b8acdb5b22b5f9e86cfed7c936d6451b30b4e3"
+    },
+    "vendor/sources/vector-addition/js/common/model/ExploreVectorSet.ts": {
+      "bytes": 2848,
+      "sha256": "6cf5b58693856a92f8d0e59606c5ff7ff9aa4fee109de18562bfb1662b762714"
+    },
+    "vendor/sources/vector-addition/js/common/model/Graph.ts": {
+      "bytes": 4349,
+      "sha256": "67059a24d3546712d9503d38a3efe645455a8fca264b88df11b20b8f9b06a23a"
+    },
+    "vendor/sources/vector-addition/js/common/model/GraphOrientation.ts": {
+      "bytes": 577,
+      "sha256": "a904161be3cfdcec1aae861381177e1793afba1358bdcd7ef94f914a956b7791"
+    },
+    "vendor/sources/vector-addition/js/common/model/ResultantVector.ts": {
+      "bytes": 3671,
+      "sha256": "2ef3870c638ee33c4d41a8975905ea54f5586dad37f45a5fcec1febe825dd5ff"
+    },
+    "vendor/sources/vector-addition/js/common/model/RootVector.ts": {
+      "bytes": 12747,
+      "sha256": "5b22acddb10827662ca9ff746b0a3e5e8d3fefda6a2b8a1572e8d7186bcd9b7b"
+    },
+    "vendor/sources/vector-addition/js/common/model/SumVector.ts": {
+      "bytes": 2680,
+      "sha256": "f88f86d3196ac93a58a46e7f4df965c65c9e81adeef9c6bd965055d635fe755d"
+    },
+    "vendor/sources/vector-addition/js/common/model/Vector.ts": {
+      "bytes": 20987,
+      "sha256": "ddfa9e3fdf68f0cf265a2996e31015c22dbf9eaf96c18b82efc8d93926169109"
+    },
+    "vendor/sources/vector-addition/js/common/model/VectorAdditionModel.ts": {
+      "bytes": 3155,
+      "sha256": "133caa396a0a07f2bee5d74d1db119d9bd48585c53a95bf11cd910aa47dab96f"
+    },
+    "vendor/sources/vector-addition/js/common/model/VectorAdditionPreferences.ts": {
+      "bytes": 1424,
+      "sha256": "2a5e35feaf3b2b7027db53fcf535068aace67f5028925e1ad90362459b4f80d1"
+    },
+    "vendor/sources/vector-addition/js/common/model/VectorAdditionScene.ts": {
+      "bytes": 4423,
+      "sha256": "89c374a5d6a61ccc005094ed2fee3cd6114d23836cfd26173bdf024761898bcd"
+    },
+    "vendor/sources/vector-addition/js/common/model/VectorColorPalette.ts": {
+      "bytes": 2675,
+      "sha256": "1003794a48beb4096717225052edbe66b6879d77eef31821ceb0726db851dbad"
+    },
+    "vendor/sources/vector-addition/js/common/model/VectorSet.ts": {
+      "bytes": 10552,
+      "sha256": "ada6bb20299789ab608ccf37cb2741513b4f7ee4692f8288935e5b660fe9f3a2"
+    },
+    "vendor/sources/vector-addition/js/common/view/AddVectorKeyboardListener.ts": {
+      "bytes": 2575,
+      "sha256": "6184c296a730f4aaa96a452693d3858751f8433411f430503755977f5496a817"
+    },
+    "vendor/sources/vector-addition/js/common/view/AngleConventionControl.ts": {
+      "bytes": 3487,
+      "sha256": "189b821d908f468861967b8840bb23242f1033961425ce91daf7be9ac3021429"
+    },
+    "vendor/sources/vector-addition/js/common/view/AnglesCheckbox.ts": {
+      "bytes": 1249,
+      "sha256": "4ca9cf9b530144e50ccf5a04be7754016bcfff73f4faa52fb2a6f500ba8042ea"
+    },
+    "vendor/sources/vector-addition/js/common/view/ArrowOverSymbolNode.ts": {
+      "bytes": 2756,
+      "sha256": "9f3f4df95fbb8ae7306e7539bd390ee23a80501f8fe3862d5725f10faac907c6"
+    },
+    "vendor/sources/vector-addition/js/common/view/CartesianPolarSceneRadioButtonGroup.ts": {
+      "bytes": 3052,
+      "sha256": "ce612a61005f616c96c67bced46bb1fbaf211bc9026d015157e8177d765870ea"
+    },
+    "vendor/sources/vector-addition/js/common/view/CheckVectorValuesKeyboardShortcut.ts": {
+      "bytes": 2405,
+      "sha256": "3c24b88b65f4bce74c8b18d087b35e20240c9b2a2d4666bc2cc7bc85dba79f3e"
+    },
+    "vendor/sources/vector-addition/js/common/view/ComponentVectorNode.ts": {
+      "bytes": 9685,
+      "sha256": "acd1385c92df2650576d445d5e3620d5b0e09064f50875ce994c2f60b85e5d2a"
+    },
+    "vendor/sources/vector-addition/js/common/view/ComponentsControl.ts": {
+      "bytes": 2584,
+      "sha256": "97022b4a72179091a73ee16cf3c5583a9d7239bc5bc4a8e24065c4422a37df5c"
+    },
+    "vendor/sources/vector-addition/js/common/view/ComponentsRadioButtonGroup.ts": {
+      "bytes": 3399,
+      "sha256": "768331dbe56eb5c07adfea75eee0e43d0ea40afd472fd782b9b1086826e69608"
+    },
+    "vendor/sources/vector-addition/js/common/view/CurvedArrowNode.ts": {
+      "bytes": 5500,
+      "sha256": "cc2b0ff0c8f2c1882c37b478a9e05c8e9ff559f58a8ba33f12ff6a8ffc8f3bac"
+    },
+    "vendor/sources/vector-addition/js/common/view/DashedArrowNode.ts": {
+      "bytes": 5633,
+      "sha256": "cb57c6923759c8dddb922b74b414624881a8e557a09577590dcf36f233052a74"
+    },
+    "vendor/sources/vector-addition/js/common/view/ExploreGraphAreaHeading.ts": {
+      "bytes": 1926,
+      "sha256": "be7c0b6ea6e3051cfd8f03d2cd9dbcd3384e3a95355c4f05f5fdbd0bf59c3642"
+    },
+    "vendor/sources/vector-addition/js/common/view/ExploreVectorToolbox.ts": {
+      "bytes": 2043,
+      "sha256": "c8ec147923fefd96f33d27b2fb8348fb42e3ffcde8411195411825347f50b030"
+    },
+    "vendor/sources/vector-addition/js/common/view/ExploreVectorToolboxSlot.ts": {
+      "bytes": 2905,
+      "sha256": "16ad9b4b5a37ca7e42f3fd93bf8a926b64d9cae9d2ca38ab088dcded68304d51"
+    },
+    "vendor/sources/vector-addition/js/common/view/ExploreViewProperties.ts": {
+      "bytes": 1392,
+      "sha256": "ea1c2e5b4cc9d2db2c0ff984d22a214b983fe853797a2d67524a095af4370b36"
+    },
+    "vendor/sources/vector-addition/js/common/view/FixedSizeAccordionBox.ts": {
+      "bytes": 2594,
+      "sha256": "6c2713f7b13894ca4474494325cdd2c2cea98d6a7bfa50866bc7a94c09f7126a"
+    },
+    "vendor/sources/vector-addition/js/common/view/GraphAreaOriginKeyboardHelpSection.ts": {
+      "bytes": 1361,
+      "sha256": "c761a87b241ae518abcb2a17c80349cc7cb540680e265043e6b6ba398b62b8e1"
+    },
+    "vendor/sources/vector-addition/js/common/view/GraphControlPanel.ts": {
+      "bytes": 1499,
+      "sha256": "860598ca402a79a239718d1268be9ecb2c058240016e750cecaf2c399d1ec061"
+    },
+    "vendor/sources/vector-addition/js/common/view/GraphNode.ts": {
+      "bytes": 12332,
+      "sha256": "18f0a93b385290bf33572002822b138e362cfd5f613d22da619d96de290913b8"
+    },
+    "vendor/sources/vector-addition/js/common/view/GraphOriginDragListener.ts": {
+      "bytes": 1861,
+      "sha256": "b12cc0a9f604a546abd0356a1d0f894c287e85a5feae854ebf19d4d354e97957"
+    },
+    "vendor/sources/vector-addition/js/common/view/GraphOriginManipulator.ts": {
+      "bytes": 5557,
+      "sha256": "dd9d96f0d1042df348fb6f2b86d5faef16054e0e27be7a71d06e9b8f7a4d2075"
+    },
+    "vendor/sources/vector-addition/js/common/view/MoveVectorDragListener.ts": {
+      "bytes": 4779,
+      "sha256": "37f33edefe2a22b6e6fa1b6bf41e7209fdd4d9a5070afc9c54a37879d8e55294"
+    },
+    "vendor/sources/vector-addition/js/common/view/MoveVectorKeyboardListener.ts": {
+      "bytes": 3061,
+      "sha256": "cd82c3db8541d469574b2e52453ecf357d52c95e9b35a606f7246519d72f701b"
+    },
+    "vendor/sources/vector-addition/js/common/view/RemoveVectorKeyboardListener.ts": {
+      "bytes": 1648,
+      "sha256": "e579b9d1f388d524772efbd2b062b07fd89f506f13fd712ab1f0cd599cb3076b"
+    },
+    "vendor/sources/vector-addition/js/common/view/ResultantComponentVectorNode.ts": {
+      "bytes": 3197,
+      "sha256": "dec039d88de2c72ed92a868697029d3c316a81764474f801f80395ef6b296c70"
+    },
+    "vendor/sources/vector-addition/js/common/view/ResultantVectorNode.ts": {
+      "bytes": 3652,
+      "sha256": "785db704e19ae226eb741a5bdb4bac692ad67d43b898b20036f9aeeb96c3fc67"
+    },
+    "vendor/sources/vector-addition/js/common/view/RootVectorNode.ts": {
+      "bytes": 10911,
+      "sha256": "3b1c3673f2f52563c7de7b4476650b3170987a6b66ac7888454a99382de43c33"
+    },
+    "vendor/sources/vector-addition/js/common/view/ScaleRotateVectorDragListener.ts": {
+      "bytes": 3048,
+      "sha256": "8a15f97da2c832c5893bf9dd18a73b275ee16023254a39a32a8a683a009b8ad2"
+    },
+    "vendor/sources/vector-addition/js/common/view/ScaleRotateVectorKeyboardListener.ts": {
+      "bytes": 5009,
+      "sha256": "2261a48f8477e05ecbf5b1d08677bb6540cf7d4d1bd09829234f918cc0700e62"
+    },
+    "vendor/sources/vector-addition/js/common/view/SelectVectorKeyboardListener.ts": {
+      "bytes": 1705,
+      "sha256": "8ecfe134374cacd6fef17a0da1a818ba54e648805b417d78ed1d7dde53d40b1a"
+    },
+    "vendor/sources/vector-addition/js/common/view/SumCheckbox.ts": {
+      "bytes": 5558,
+      "sha256": "af34d2cc3294c471671b2fd1ffa7c43e374390c786478b8c66f3c6bcaefa8e83"
+    },
+    "vendor/sources/vector-addition/js/common/view/ValuesCheckbox.ts": {
+      "bytes": 1449,
+      "sha256": "01714c1bae92f460f4a602168283e80db3f2e001baebcdda422479772f6181ef"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorAdditionEraserButton.ts": {
+      "bytes": 2214,
+      "sha256": "caab4b7e184c82d54d44c8fdf91d6c7c5110831aea1616180ba9b218b5351cc7"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorAdditionGridCheckbox.ts": {
+      "bytes": 1187,
+      "sha256": "882c4bc6225a196656c53809ac4480f3867e1da6b7ba39df781317f2e77cb78c"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorAdditionIconFactory.ts": {
+      "bytes": 21169,
+      "sha256": "9b3cb015b8866ffff66a44fc4989958501023bfbcdcf2455277e02cde79d862e"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorAdditionKeyboardHelpContent.ts": {
+      "bytes": 1466,
+      "sha256": "df56aab0e0edf07a10370a1eb0d7bf73931206ae84c96e174603dd22f63d155a"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorAdditionPreferencesNode.ts": {
+      "bytes": 1067,
+      "sha256": "a9dd9056430adf8213fb6c1aae794c37b269a2c14e768d619456ceda0522d91b"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorAdditionSceneNode.ts": {
+      "bytes": 8716,
+      "sha256": "4fefcce505c390bfb71d39a058a3f49b00930e894151509d82314fd359b41a2b"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorAdditionScreenView.ts": {
+      "bytes": 2463,
+      "sha256": "4d7c21543d2a45b552557d9fd29451655756143a091c345bffc72f70a855c51c"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorAdditionViewProperties.ts": {
+      "bytes": 3113,
+      "sha256": "6b306558bb0a6f8f66e85358a5d680c7eee8af2fade15fcf487d05e309ffbf18"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorAngleNode.ts": {
+      "bytes": 7172,
+      "sha256": "e6c03db97b3dbfff00813dba759495218ec0b76206850ec5f071e4cfc00430b2"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorLabelNode.ts": {
+      "bytes": 6254,
+      "sha256": "8cc04e2424c591d0288ad5f1b8092f41c2b01200bb91533a95436ffaa2cf4d2b"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorNode.ts": {
+      "bytes": 13087,
+      "sha256": "c8132a79a3956d2e1d029a58b7b25d0db8fecffed744f90d71313a93aa802abf"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorQuantity.ts": {
+      "bytes": 419,
+      "sha256": "991bea6fd490b78e71c444faa14315ac8043627ee666f209391a46ec2ae37e47"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorQuantityDisplay.ts": {
+      "bytes": 6372,
+      "sha256": "96552ce719694d091b83a445a432126963c60bd6a1a86968ab41882e53e5f07d"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorSetNode.ts": {
+      "bytes": 18280,
+      "sha256": "30fdf323cfcd26a9b842da2b86f35b1e4320c915fbde889a52e398fbca0e0c4d"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorSymbolNode.ts": {
+      "bytes": 6257,
+      "sha256": "3aa6e98f6458f6bc8ff818b9975e81dadf76e39bd5dde6f821355f42450ee97d"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorTipNode.ts": {
+      "bytes": 9365,
+      "sha256": "e67e3a686bd9a77df5c5c757b500e187f7c09bc8af623e0eb9015065a3b7af60"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorToolbox.ts": {
+      "bytes": 2993,
+      "sha256": "fa5a2a18716c3688e7444cd64373990a687050dd62be9d07236a7d2502082a6e"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorToolboxSlot.ts": {
+      "bytes": 8101,
+      "sha256": "194e2cb4c9df0fd411d4e7bd5db12a59ef07f0a4e068842a476f75cfc7ff3c0b"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorValuesAccessibleParagraphProperty.ts": {
+      "bytes": 4178,
+      "sha256": "c26c7edbf9d1e1733f244aff0c3fba6f5a2892d7cda34feb8ef2a8cbc9f35a70"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorValuesAccordionBox.ts": {
+      "bytes": 10431,
+      "sha256": "93ece9497c0ebc6a5805600d530aec88c0d3b6b59d7f51fad60c03da50d8a129"
+    },
+    "vendor/sources/vector-addition/js/common/view/VectorsKeyboardHelpSection.ts": {
+      "bytes": 2271,
+      "sha256": "01f203b7177b3585d8a5b6952b7f2ea7371d2d0cf0ffd1ba77fee917ca284a1d"
+    },
+    "vendor/sources/vector-addition/js/equations/EquationsScreen.ts": {
+      "bytes": 1510,
+      "sha256": "e3df034c8d92fe59f62369ec79b507c89c9c0e57cf564af7027c4a8f5a898491"
+    },
+    "vendor/sources/vector-addition/js/equations/model/BaseVector.ts": {
+      "bytes": 2558,
+      "sha256": "0c3347ae478c1debd44655dfe1408feda8575dffa562320dca6bd6e412aeb601"
+    },
+    "vendor/sources/vector-addition/js/equations/model/CartesianBaseVector.ts": {
+      "bytes": 4004,
+      "sha256": "a9f2babd8d91fa2c05a133538861b8ff47dfd73c466ca6aff34c05cc5458da5c"
+    },
+    "vendor/sources/vector-addition/js/equations/model/EquationType.ts": {
+      "bytes": 560,
+      "sha256": "55af7ba1aa581052ac10f39dd01ce01ebb2afac03abcc606479d292bf66be4df"
+    },
+    "vendor/sources/vector-addition/js/equations/model/EquationsCartesianScene.ts": {
+      "bytes": 2013,
+      "sha256": "353c60a2f6168e5728e03563a863510b80ebab707f04b0df1e4a1de53ac57304"
+    },
+    "vendor/sources/vector-addition/js/equations/model/EquationsModel.ts": {
+      "bytes": 1669,
+      "sha256": "12555febf52fc6534fdd56f1bcaa1a9fb523631479156817c5d0ef41de2b8239"
+    },
+    "vendor/sources/vector-addition/js/equations/model/EquationsPolarScene.ts": {
+      "bytes": 2073,
+      "sha256": "7cf4b3818db25573504700dfceb7c0293cb79e17a3c66fbd939c0346b8033424"
+    },
+    "vendor/sources/vector-addition/js/equations/model/EquationsResultantVector.ts": {
+      "bytes": 4672,
+      "sha256": "a2388b9d389b4dc9e66edfc57ecf1c3d1d960def7f85b4f484aecc38dc1ef758"
+    },
+    "vendor/sources/vector-addition/js/equations/model/EquationsScene.ts": {
+      "bytes": 3440,
+      "sha256": "ec3bf1fc72a2ef98b71b74af80186fc849ef7c6d8df318f780177af88324bc66"
+    },
+    "vendor/sources/vector-addition/js/equations/model/EquationsVector.ts": {
+      "bytes": 6115,
+      "sha256": "dd6598d849d98f7821dc80c2aa6a6741416fa0a5491cfd8fdc8da8283e829983"
+    },
+    "vendor/sources/vector-addition/js/equations/model/EquationsVectorSet.ts": {
+      "bytes": 6360,
+      "sha256": "cfa965b3ce4507909e93e3b19035556212571a45648e44b7a04f34eae9bc8731"
+    },
+    "vendor/sources/vector-addition/js/equations/model/PolarBaseVector.ts": {
+      "bytes": 5156,
+      "sha256": "a4aeb7c9a1d3b1635cb7bdcac417f5dbfc4328b770680b2322958b8a771e70f4"
+    },
+    "vendor/sources/vector-addition/js/equations/view/BaseVectorNode.ts": {
+      "bytes": 2490,
+      "sha256": "abc9e27d773e1f8b9efe1d5909c272ed7f679097e589f09577c6de188febc9f1"
+    },
+    "vendor/sources/vector-addition/js/equations/view/BaseVectorsAccordionBox.ts": {
+      "bytes": 10009,
+      "sha256": "d0384a49ee45f45592960ee50f1586ee3cabb2fa554896548329600706be5aae"
+    },
+    "vendor/sources/vector-addition/js/equations/view/BaseVectorsCheckbox.ts": {
+      "bytes": 1660,
+      "sha256": "1337bafe38078a7063515d8f17ce1b0f82d766793b68c362c44f8a69604d7790"
+    },
+    "vendor/sources/vector-addition/js/equations/view/CoefficientPicker.ts": {
+      "bytes": 2104,
+      "sha256": "a296bc6c3d2254c92ab42b368442455849d908d09f41806ea25998b46684421f"
+    },
+    "vendor/sources/vector-addition/js/equations/view/EquationAccordionBox.ts": {
+      "bytes": 4503,
+      "sha256": "d3f2b259fcf7d145791c68990c95915a18260622c11b64932203f039f3c8dde0"
+    },
+    "vendor/sources/vector-addition/js/equations/view/EquationTypeNode.ts": {
+      "bytes": 4700,
+      "sha256": "97c65263078a4d41655d1092fc4fa4b58824f0b0a5784a5d3971d0e940cda075"
+    },
+    "vendor/sources/vector-addition/js/equations/view/EquationTypeRadioButtonGroup.ts": {
+      "bytes": 4562,
+      "sha256": "69e135d5156c8560e6f20b4e523bfdcba5cf1c55178615cbb5f5022949c1a2a7"
+    },
+    "vendor/sources/vector-addition/js/equations/view/EquationsGraphAreaHeading.ts": {
+      "bytes": 2260,
+      "sha256": "c77c088817d1a2dc8f21ba6f710083c3df2cc0013aff6e54265597228c32b018"
+    },
+    "vendor/sources/vector-addition/js/equations/view/EquationsGraphControlPanel.ts": {
+      "bytes": 3386,
+      "sha256": "fe6864531ca35421eb104a787434ae5868000caf0676301578073d79ad94c141"
+    },
+    "vendor/sources/vector-addition/js/equations/view/EquationsSceneNode.ts": {
+      "bytes": 4802,
+      "sha256": "cfabc6e6099da17eca62dc9d73b0048ee0c93e6b9918cdbdc1830fee2b0c95eb"
+    },
+    "vendor/sources/vector-addition/js/equations/view/EquationsScreenSummaryContent.ts": {
+      "bytes": 3808,
+      "sha256": "f97f8bd3248557f7594533591501087994caaa01055ab4a4e0bb00e887d1429f"
+    },
+    "vendor/sources/vector-addition/js/equations/view/EquationsScreenView.ts": {
+      "bytes": 5880,
+      "sha256": "137c218b728073cbd713515d34b268ee9c12f13bef72706ce644f285c47928fa"
+    },
+    "vendor/sources/vector-addition/js/equations/view/EquationsViewProperties.ts": {
+      "bytes": 2246,
+      "sha256": "3472abd2a675a5545884957a873095d1b202addfa5bad954c955586f4c615eb0"
+    },
+    "vendor/sources/vector-addition/js/equations/view/LabelEqualsAnglePicker.ts": {
+      "bytes": 7066,
+      "sha256": "1834d9ea22c942908e3c60a313f96533709972238840a463c3e58bebf9c9be3b"
+    },
+    "vendor/sources/vector-addition/js/equations/view/LabelEqualsNumberPicker.ts": {
+      "bytes": 2517,
+      "sha256": "4235591de632054cc7adb928d4be8de3c8a573843b3f4600b2b2ce75d7cf4155"
+    },
+    "vendor/sources/vector-addition/js/equations/view/ResultantVectorCheckbox.ts": {
+      "bytes": 4876,
+      "sha256": "9ad3a4c7d0e248cde693b9281050adf28578138d310c31461f78c52da7235c58"
+    },
+    "vendor/sources/vector-addition/js/explore1D/Explore1DScreen.ts": {
+      "bytes": 1479,
+      "sha256": "9ea21cb81300c56da05fd86ec6c2326ac58f8d778c03992ca7177deb6330a37f"
+    },
+    "vendor/sources/vector-addition/js/explore1D/model/Explore1DHorizontalScene.ts": {
+      "bytes": 2290,
+      "sha256": "39c7abca73409f5c1013dcbd9f1bc460b1dac9f1532d26b1dbe3311963645d11"
+    },
+    "vendor/sources/vector-addition/js/explore1D/model/Explore1DModel.ts": {
+      "bytes": 2317,
+      "sha256": "480de4c64def99f7d3af210fb7d62bde8194f5e8c058296ff2244a6d1ed7a1c7"
+    },
+    "vendor/sources/vector-addition/js/explore1D/model/Explore1DVerticalScene.ts": {
+      "bytes": 2272,
+      "sha256": "6263308a6b1ecd635792c2a1461940b5882bb8f0dda992cb86b4205fb0910328"
+    },
+    "vendor/sources/vector-addition/js/explore1D/view/Explore1DGraphControlPanel.ts": {
+      "bytes": 2983,
+      "sha256": "494dcda1e7d46cbe7d21136c3906520350e91e966118183656eb830855c6467c"
+    },
+    "vendor/sources/vector-addition/js/explore1D/view/Explore1DSceneNode.ts": {
+      "bytes": 2147,
+      "sha256": "234fd64f3d4be57370246b1f7672a38d04ae513c8b542a7890fabd1c58828e36"
+    },
+    "vendor/sources/vector-addition/js/explore1D/view/Explore1DScreenSummaryContent.ts": {
+      "bytes": 2420,
+      "sha256": "2330e6324909741ef4b55246addff38e1c2e383f2ddd1f5bc9d5bf6ff29b9da3"
+    },
+    "vendor/sources/vector-addition/js/explore1D/view/Explore1DScreenView.ts": {
+      "bytes": 5377,
+      "sha256": "dd8acde9fdd9ba8a7a2741ed39511c2995efac35ce26efe32af3bf8ef029555c"
+    },
+    "vendor/sources/vector-addition/js/explore1D/view/HorizontalVerticalSceneRadioButtonGroup.ts": {
+      "bytes": 2886,
+      "sha256": "1825d7c7ed7890edeea84cf945fd82c54ae3acbdc1f16aba78a1dbf6c69e2a74"
+    },
+    "vendor/sources/vector-addition/js/explore2D/Explore2DScreen.ts": {
+      "bytes": 1479,
+      "sha256": "7ced2969d72efaa62e7cfd50b0f1523cde391889be74747693abdb7420c1e75e"
+    },
+    "vendor/sources/vector-addition/js/explore2D/model/Explore2DCartesianScene.ts": {
+      "bytes": 2209,
+      "sha256": "69d4fd87e8ddaf35e911819be5d84b4e2cc94861a9518096b30f3ceb61f8f39c"
+    },
+    "vendor/sources/vector-addition/js/explore2D/model/Explore2DModel.ts": {
+      "bytes": 1687,
+      "sha256": "fc4a61401fcb18076017dfc035c09eaa20456bc19ffa784a8d21674b055a2503"
+    },
+    "vendor/sources/vector-addition/js/explore2D/model/Explore2DPolarScene.ts": {
+      "bytes": 2299,
+      "sha256": "486ea9e97a47a7ba201f69e6bc2cd63cf437ac1d193dbae812e8de130049e45c"
+    },
+    "vendor/sources/vector-addition/js/explore2D/view/Explore2DGraphControlPanel.ts": {
+      "bytes": 3970,
+      "sha256": "ec653f5e37b4450734c48fd35022f12dd705aeb8d5fd38e408431271127bf68c"
+    },
+    "vendor/sources/vector-addition/js/explore2D/view/Explore2DSceneNode.ts": {
+      "bytes": 2004,
+      "sha256": "f563d8565e493589e2f5cacc453a86723073755dd485b4357434c0817fddf5c5"
+    },
+    "vendor/sources/vector-addition/js/explore2D/view/Explore2DScreenSummaryContent.ts": {
+      "bytes": 2576,
+      "sha256": "f929ac431ed7df336b2f3c63630391ae561125701f7e2722e7f150cae51784f3"
+    },
+    "vendor/sources/vector-addition/js/explore2D/view/Explore2DScreenView.ts": {
+      "bytes": 5419,
+      "sha256": "4aa7b5341babf59efccc0a57e98fbecc981d8dd29081d8aaf80c3c4fd1ff9ca5"
+    },
+    "vendor/sources/vector-addition/js/lab/LabScreen.ts": {
+      "bytes": 1390,
+      "sha256": "71dfa97404c7e31fb07c917e752d6e174bf7d0a0fda3e7e7fbfc1e9cbe6ffdde"
+    },
+    "vendor/sources/vector-addition/js/lab/model/LabCartesianScene.ts": {
+      "bytes": 1310,
+      "sha256": "9fe97a3c2699c107c15f567d30a49fcf389c998bb226cfa984d062e919d20580"
+    },
+    "vendor/sources/vector-addition/js/lab/model/LabModel.ts": {
+      "bytes": 1579,
+      "sha256": "ed28ce848923efd21ce8f539f7f5a35f8f4a77db295da878894aed2283ee15c1"
+    },
+    "vendor/sources/vector-addition/js/lab/model/LabPolarScene.ts": {
+      "bytes": 1370,
+      "sha256": "a1f1b4373d8fc78d54bd86f8c966fc7e5c1c2ebd85c3fda70021c2b5e5ad36f7"
+    },
+    "vendor/sources/vector-addition/js/lab/model/LabScene.ts": {
+      "bytes": 5588,
+      "sha256": "5edaba4a74bf581549e5d17577a6241fa5bc9262758806e34db09eaa63374a51"
+    },
+    "vendor/sources/vector-addition/js/lab/model/LabVectorSet.ts": {
+      "bytes": 5308,
+      "sha256": "7a52f9e879d977668e55217b0b4fdab778e3846eea698fdd872d4591e73d3526"
+    },
+    "vendor/sources/vector-addition/js/lab/view/LabGraphAreaHeading.ts": {
+      "bytes": 1695,
+      "sha256": "833410c9d297242e3e6a19d32eee161d1748d61368cf2603d360db94c1116f39"
+    },
+    "vendor/sources/vector-addition/js/lab/view/LabGraphControlPanel.ts": {
+      "bytes": 7740,
+      "sha256": "641a2e74d619ff8ff5b7b2968a78b873e8a0337be4e29f3ad6f1aaff82f299ea"
+    },
+    "vendor/sources/vector-addition/js/lab/view/LabSceneNode.ts": {
+      "bytes": 1823,
+      "sha256": "481ac430cf2d0cdca8f77edf9892c10cfff91948e613238d7f36d6963d1872cd"
+    },
+    "vendor/sources/vector-addition/js/lab/view/LabScreenSummaryContent.ts": {
+      "bytes": 3817,
+      "sha256": "6b9531e1ced5d7de5e9db6d311ecf83bd9e9f8a9baa2cd204118a7b3cdb747b7"
+    },
+    "vendor/sources/vector-addition/js/lab/view/LabScreenView.ts": {
+      "bytes": 5170,
+      "sha256": "49b69d35809245106b0f5f9aac77c0b6246aa20c314bea4097fc1b16616deb4e"
+    },
+    "vendor/sources/vector-addition/js/lab/view/LabVectorToolbox.ts": {
+      "bytes": 2365,
+      "sha256": "a40758bbe2fe8a4f30a24ee6462bf92694044ab9a221d661b8423b56ae4ef7c2"
+    },
+    "vendor/sources/vector-addition/js/lab/view/LabVectorToolboxSlot.ts": {
+      "bytes": 2377,
+      "sha256": "9649f75a0073c8329ec609a5f8c95b636380ea7ab3f5fef6ec4aed651730ef67"
+    },
+    "vendor/sources/vector-addition/js/lab/view/LabViewProperties.ts": {
+      "bytes": 1718,
+      "sha256": "79144148123939d31ff56d84e3732dd70e82dc10cc1bdc8312c4a446236817c5"
+    },
+    "vendor/sources/vector-addition/js/vector-addition-main.ts": {
+      "bytes": 1797,
+      "sha256": "192224026e713f3009011e7ed481824328d099697bd58d572fb0d675e088a195"
+    },
+    "vendor/sources/vector-addition/js/vector-addition-phet-io-overrides.js": {
+      "bytes": 78,
+      "sha256": "2a7daa9a3416a2a2a003efd056f72ce26342b3941b354aaa1227225a6f2520ad"
+    },
+    "vendor/sources/vector-addition/js/vectorAddition.ts": {
+      "bytes": 249,
+      "sha256": "fd3084a2577f426383b7e44baf94c7cb75f35e9fd3c540e5c45a8f536c93336d"
+    },
+    "vendor/sources/vector-addition/package-lock.json": {
+      "bytes": 44116,
+      "sha256": "517e282526e5f0d093621c2ea8829ca81b61fe6a8afc6973e9a8825a5647e8d0"
+    },
+    "vendor/sources/vector-addition/package.json": {
+      "bytes": 971,
+      "sha256": "aa39b0adbe3ddf20760703baebac37ccc75c9f43719a0765a7c753bf2db455ec"
+    },
+    "vendor/sources/vector-addition/tsconfig.json": {
+      "bytes": 316,
+      "sha256": "8c32d960063a576aba6fb70cc51adb86bcec810098e2619a112469331ad383d8"
+    },
+    "vendor/sources/vector-addition/vector-addition-strings_en.json": {
+      "bytes": 15986,
+      "sha256": "d459644397b1febe37398d3c8a7026d687a8a32efaedffc9656a28e25e17b753"
+    },
+    "vendor/sources/vector-addition/vector-addition-strings_en.yaml": {
+      "bytes": 13993,
+      "sha256": "1d6b2ef76a8ded9cfaf3044129df40afd44244c26fd1075909d2334dfb92adfa"
+    },
+    "vendor/sources/vector-addition/vector-addition_en.html": {
+      "bytes": 5550,
+      "sha256": "e92398ed67486c2049100164eac1fbf263451f51aa6832409cf72bbc498a4f49"
+    },
+    "vendor/tangram/LICENSE": {
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    "vendor/tangram/README.md": {
+      "bytes": 900,
+      "sha256": "bbe29eb0548d4e3fe483b028e27b4087fd7da19cb2ae21610884b158c5335b49"
+    },
+    "vendor/tangram/favicon.ico": {
+      "bytes": 3262,
+      "sha256": "e5efa3c8369de9984da42a707d9c66b638ec78da0a271017b436009d3d313e62"
+    },
+    "vendor/tangram/index.html": {
+      "bytes": 1080,
+      "sha256": "67c0af5929f0fa4e3da993c8d949675186f2f03b9398f0c37bf4069e3c16b5a1"
+    },
+    "vendor/tangram/js/base64.js": {
+      "bytes": 1156,
+      "sha256": "cdc3f1e5a1958990a37aa718892a98bb64a90832d5d8564efb2e4c4e234f87a7"
+    },
+    "vendor/tangram/js/puzzle.js": {
+      "bytes": 8941,
+      "sha256": "03df3a2ecb6cb13f302bbbf0e739d28484fc00e10cd8cd91fab77f2f9e50bad5"
+    },
+    "vendor/tangram/js/scene.js": {
+      "bytes": 17223,
+      "sha256": "876278a5899ba0abe7ce949476d6020df6bd54259acbab2ef72a70ea9f6c7c4b"
+    },
+    "vendor/tangram/js/tangram.js": {
+      "bytes": 19836,
+      "sha256": "3021cbcbd99f455a78462ef0abe5d3599bb9c948db0d9cefe94460a07788a314"
+    },
+    "vendor/tangram/js/three.js": {
+      "bytes": 1097033,
+      "sha256": "af50daf68e9cee397f56a092cc407151f7c2379f8c443abaf7fb324b20436dc1"
+    },
+    "vendor/tangram/js/vecmath.js": {
+      "bytes": 4241,
+      "sha256": "ec1638335a3d3bb322f09707ccc6e4d3efe88f75780cd66147a5b659e4d11463"
+    },
+    "vendor/tangram/res/assemble.svg": {
+      "bytes": 1042,
+      "sha256": "49766a51f75f043ae7073680fcd2112c18d3e7193cc71f8f2d82f13d081d9528"
+    },
+    "vendor/tangram/res/more.svg": {
+      "bytes": 3099,
+      "sha256": "60c745e10cce04e2cc40972042cb711209c52cf392e903df664a974975092a2e"
+    },
+    "vendor/tangram/res/next.svg": {
+      "bytes": 966,
+      "sha256": "23c384c6f7f2b378ebe72360a8aba8016e1693c0c04ba3407ba77574b9ddceeb"
+    },
+    "vendor/tangram/res/no.svg": {
+      "bytes": 1733,
+      "sha256": "74eb0970bbc16f2878d56e499020b827e597cba95802af8a5e4078ce580d5884"
+    },
+    "vendor/tangram/res/prev.svg": {
+      "bytes": 966,
+      "sha256": "58fb1b069c09885e83b477fb00cc7f0e11fe43eb7e25176de450577fce5f3985"
+    },
+    "vendor/tangram/res/review.svg": {
+      "bytes": 1591,
+      "sha256": "bbbcf3ff05ea681e80e1a3b6386362768614519ff6dd8017a4a3024dfa3fdac1"
+    },
+    "vendor/tangram/res/share.svg": {
+      "bytes": 1850,
+      "sha256": "33445679aca6a12ff0d593f92d6de2d85dcf789e0f0c719642ffaf4dad656ad4"
+    },
+    "vendor/tangram/res/yes.svg": {
+      "bytes": 1441,
+      "sha256": "75a3ce42cc6451d7fbfeb0e13f333b6b96e2a74047cca9156301e341d872ae7b"
+    },
+    "vendor/tangram/screenshot.png": {
+      "bytes": 58309,
+      "sha256": "f860178e0cb14894eea154def9640f7b88958d6422fb3e160ea36a672930bc51"
+    }
+  }
+}

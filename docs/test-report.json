@@ -1,0 +1,239 @@
+{
+  "suite": "Chromium offline network-blocked integration smoke",
+  "results": [
+    {
+      "id": "host-controls",
+      "passed": true,
+      "checks": [
+        "full catalog",
+        "open all persists",
+        "initial subset restored",
+        "PhET iframe ready",
+        "iframe removed on return"
+      ]
+    },
+    {
+      "id": "area-builder",
+      "passed": true
+    },
+    {
+      "id": "forces-and-motion-basics",
+      "passed": true
+    },
+    {
+      "id": "energy-skate-park-basics",
+      "passed": true
+    },
+    {
+      "id": "vector-addition",
+      "passed": true
+    },
+    {
+      "id": "tangram",
+      "passed": true
+    },
+    {
+      "id": "matter-airFriction",
+      "passed": true
+    },
+    {
+      "id": "matter-avalanche",
+      "passed": true
+    },
+    {
+      "id": "matter-ballPool",
+      "passed": true
+    },
+    {
+      "id": "matter-bridge",
+      "passed": true
+    },
+    {
+      "id": "matter-car",
+      "passed": true
+    },
+    {
+      "id": "matter-catapult",
+      "passed": true
+    },
+    {
+      "id": "matter-chains",
+      "passed": true
+    },
+    {
+      "id": "matter-circleStack",
+      "passed": true
+    },
+    {
+      "id": "matter-cloth",
+      "passed": true
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "passed": true
+    },
+    {
+      "id": "matter-compositeManipulation",
+      "passed": true
+    },
+    {
+      "id": "matter-compound",
+      "passed": true
+    },
+    {
+      "id": "matter-compoundStack",
+      "passed": true
+    },
+    {
+      "id": "matter-concave",
+      "passed": true
+    },
+    {
+      "id": "matter-constraints",
+      "passed": true
+    },
+    {
+      "id": "matter-doublePendulum",
+      "passed": true
+    },
+    {
+      "id": "matter-events",
+      "passed": true
+    },
+    {
+      "id": "matter-friction",
+      "passed": true
+    },
+    {
+      "id": "matter-gravity",
+      "passed": true
+    },
+    {
+      "id": "matter-gyro",
+      "passed": true
+    },
+    {
+      "id": "matter-manipulation",
+      "passed": true
+    },
+    {
+      "id": "matter-mixed",
+      "passed": true
+    },
+    {
+      "id": "matter-newtonsCradle",
+      "passed": true
+    },
+    {
+      "id": "matter-ragdoll",
+      "passed": true
+    },
+    {
+      "id": "matter-pyramid",
+      "passed": true
+    },
+    {
+      "id": "matter-raycasting",
+      "passed": true
+    },
+    {
+      "id": "matter-restitution",
+      "passed": true
+    },
+    {
+      "id": "matter-rounded",
+      "passed": true
+    },
+    {
+      "id": "matter-remove",
+      "passed": true
+    },
+    {
+      "id": "matter-renderResize",
+      "passed": true
+    },
+    {
+      "id": "matter-sensors",
+      "passed": true
+    },
+    {
+      "id": "matter-sleeping",
+      "passed": true
+    },
+    {
+      "id": "matter-slingshot",
+      "passed": true
+    },
+    {
+      "id": "matter-softBody",
+      "passed": true
+    },
+    {
+      "id": "matter-sprites",
+      "passed": true
+    },
+    {
+      "id": "matter-stack",
+      "passed": true
+    },
+    {
+      "id": "matter-staticFriction",
+      "passed": true
+    },
+    {
+      "id": "matter-stats",
+      "passed": true
+    },
+    {
+      "id": "matter-stress",
+      "passed": true
+    },
+    {
+      "id": "matter-stress2",
+      "passed": true
+    },
+    {
+      "id": "matter-stress3",
+      "passed": true
+    },
+    {
+      "id": "matter-stress4",
+      "passed": true
+    },
+    {
+      "id": "matter-substep",
+      "passed": true
+    },
+    {
+      "id": "matter-svg",
+      "passed": true
+    },
+    {
+      "id": "matter-terrain",
+      "passed": true
+    },
+    {
+      "id": "matter-timescale",
+      "passed": true
+    },
+    {
+      "id": "matter-views",
+      "passed": true
+    },
+    {
+      "id": "matter-wreckingBall",
+      "passed": true
+    },
+    {
+      "id": "tablet-host-navigation",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Not an exhaustive pedagogical or every randomized problem test.",
+    "Touch emulation is not a physical iPad Safari test.",
+    "Original simulations keep their own navigation; host records visits, not completion."
+  ],
+  "passed": true,
+  "total": 55
+}
