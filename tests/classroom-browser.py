@@ -83,7 +83,7 @@ try:
     for id in modes:assert page.locator('[data-activity="'+id+'"]').count()==0
     page.locator('#only-open').uncheck()
     for id in modes:assert 'locked' in page.locator('[data-launch="'+id+'"]').get_attribute('class')
-    for grade,expected in [(1,['jsx-mirror']),(2,['jsx-triangle','jsx-mirror','jsx-rotation']),(3,['jsx-triangle','jsx-mirror','jsx-rotation','jsx-scale','jsx-vectors']),(5,list(modes))]:
+    for grade,expected in [(1,[]),(2,['jsx-mirror']),(3,[]),(4,['jsx-rotation']),(5,['jsx-triangle']),(6,['jsx-scale','jsx-vectors','jsx-linear'])]:
      page.locator('[data-grade="'+str(grade)+'"]').click()
      visible=[id for id in modes if page.locator('[data-activity="'+id+'"]').count()]
      assert visible==expected,(grade,visible)
