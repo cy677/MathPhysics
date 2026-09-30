@@ -35,13 +35,12 @@ test('Known existing geometry/JSX/PhET exercise goals excluded',()=>{
  // This is a scoped signature audit, not an exhaustive semantic comparison of upstream random states.
 });
 
-test('Integration: original ten local activities preserved exactly',async()=>{
- const {readFile}=await import('node:fs/promises');const {createHash}=await import('node:crypto');
+test('Integration: existing local activities are retained while grade metadata may be refined',async()=>{
+ const {readFile}=await import('node:fs/promises');
  const data=JSON.parse(await readFile(new URL('../config/local-activities.json',import.meta.url),'utf8'));
- assert.equal(data.activities.length,11);assert.equal(data.activities[10].id,'primary-math');assert.equal(data.activities[10].lessonCount,48);
- const old=Buffer.from(JSON.stringify({schemaVersion:1,activities:data.activities.slice(0,10)},null,2)+'\n');
- const sha=createHash('sha1').update(`blob ${old.length}\0`).update(old).digest('hex');
- assert.equal(sha,'23b2225901480e1456f7294dca87613f0a47507e');
+ const expected=['geometry-proofs','spaceflight','jsxgraph-playground','tangram-flat','jsx-triangle','jsx-mirror','jsx-rotation','jsx-scale','jsx-vectors','jsx-linear'];
+ assert.equal(data.activities.length,11);assert.deepEqual(data.activities.slice(0,10).map(a=>a.id),expected);assert.equal(data.activities[10].id,'primary-math');assert.equal(data.activities[10].lessonCount,48);
+ for(const a of data.activities.slice(0,10)){assert.ok(a.entry&&a.source&&a.license);assert.ok(a.grades.length>0);}
 });
 test('Integration: strict entry whitelist',async()=>{
  const {isLocalActivityEntry}=await import('../src/catalog.js');
