@@ -52,7 +52,7 @@ try:
     page.goto(base);page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==22
     text=page.locator('#home').inner_text();assert not any(s in text for s in ['第一版统一','暂不改写','原版完整保留','未开放的内容不会被删除'])
     assert page.locator('[data-activity]').first.get_attribute('data-activity')=='jsxgraph-playground'
-    page.locator('#only-open').uncheck();assert page.locator('[data-activity]').count()==57
+    page.locator('#only-open').uncheck();assert page.locator('[data-activity]').count()==63
     page.locator('#only-open').check()
     page.screenshot(path=str(OUT/'home.png'),full_page=True)
     page.locator('#library').scroll_into_view_if_needed();page.screenshot(path=str(OUT/'library.png'))
@@ -63,7 +63,7 @@ try:
      elif id=='geometry-proofs':page.frame_locator('iframe').locator('#back-home').click()
      else:page.locator('#player-back').click()
      page.wait_for_selector('iframe',state='detached');assert page.locator('iframe').count()==0
-    return {'defaultEntries':22,'nonPhET':18,'allEntries':57}
+    return {'defaultEntries':22,'nonPhET':18,'allEntries':63}
    run('host-library-and-five-adapters',host)
    def migration():
     key='mathphysics.state.v1';page.goto(base)
@@ -74,9 +74,40 @@ try:
     page.reload();page.wait_for_function('document.querySelector("#stats b")');assert page.locator('[data-activity]').count()==0
     page.locator('#teacher-open').click();page.locator('#open-recommended').click();page.locator('[data-close="teacher-dialog"]').click();assert page.locator('[data-activity]').count()==22
     state=page.evaluate('(key)=>JSON.parse(localStorage.getItem(key))',key);assert state['visited']['spaceflight']==456
-    page.locator('#teacher-open').click();page.locator('#open-all').click();page.locator('[data-close="teacher-dialog"]').click();page.reload();page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==57
+    page.locator('#teacher-open').click();page.locator('#open-all').click();page.locator('[data-close="teacher-dialog"]').click();page.reload();page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==63
     page.locator('#teacher-open').click();page.locator('#restore-defaults').click();page.locator('[data-close="teacher-dialog"]').click()
    run('legacy-migration-custom-empty-and-persistence',migration)
+   def graded_entries():
+    modes={'jsx-triangle':'triangle','jsx-mirror':'mirror','jsx-rotation':'rotate','jsx-scale':'scale','jsx-vectors':'vectors','jsx-linear':'linear'}
+    page.goto(base);page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==22
+    for id in modes:assert page.locator('[data-activity="'+id+'"]').count()==0
+    page.locator('#only-open').uncheck()
+    for id in modes:assert 'locked' in page.locator('[data-launch="'+id+'"]').get_attribute('class')
+    for grade,expected in [(1,['jsx-mirror']),(2,['jsx-triangle','jsx-mirror','jsx-rotation']),(3,['jsx-triangle','jsx-mirror','jsx-rotation','jsx-scale','jsx-vectors']),(5,list(modes))]:
+     page.locator('[data-grade="'+str(grade)+'"]').click()
+     visible=[id for id in modes if page.locator('[data-activity="'+id+'"]').count()]
+     assert visible==expected,(grade,visible)
+    page.goto(base+'#activity/jsx-linear');page.reload();page.wait_for_selector('#toast:not([hidden])')
+    assert page.locator('iframe').count()==0;assert not page.locator('#player').is_visible()
+    page.locator('#teacher-open').click()
+    for id in modes:assert not page.locator('[data-open="'+id+'"]').is_checked()
+    page.locator('[data-open="jsx-linear"]').check();page.locator('[data-close="teacher-dialog"]').click()
+    assert page.locator('[data-activity]').count()==23
+    page.locator('[data-launch="jsx-linear"]').click()
+    page.wait_for_function('document.querySelector("iframe")?.contentWindow.__playground?.mode==="linear" && document.getElementById("loading").hidden')
+    assert page.locator('iframe').get_attribute('src')=='lessons/jsxgraph-playground/index.html?mode=linear'
+    page.reload()
+    page.wait_for_function('document.querySelector("iframe")?.contentWindow.__playground?.mode==="linear" && document.getElementById("loading").hidden')
+    state=page.evaluate('JSON.parse(localStorage.getItem("mathphysics.state.v1"))')
+    assert [id for id in modes if id in state['openIds']]==['jsx-linear']
+    assert 'jsx-linear' in state['visited']
+    page.locator('#player-back').click();page.wait_for_selector('iframe',state='detached')
+    page.locator('#teacher-open').click();page.locator('#restore-defaults').click();page.locator('[data-close="teacher-dialog"]').click()
+    page.goto(base+'#activity/jsx-linear');page.wait_for_selector('#toast:not([hidden])')
+    assert page.locator('iframe').count()==0;assert not page.locator('#player').is_visible()
+    page.goto(base)
+    return {'independentEntries':6,'gradeFiltering':True,'closedByDefault':True,'teacherSelectionPersists':True,'deepLinkMode':'linear','closedDeepLinkBlocked':True}
+   run('graded-experiment-teacher-selection-and-deep-links',graded_entries)
    for a in activities:
     def activity(a=a):
      q=ctx.new_page();errs=[];missing=[];q.on('pageerror',lambda e:errs.append(str(e)));q.on('response',lambda r:missing.append(r.url) if r.url.startswith(base) and r.status>=400 else None)
@@ -145,7 +176,7 @@ except Exception as e:report['results'].append({'id':'suite','passed':False,'err
 finally:
  if server:server.terminate();server.wait(timeout=10)
  report['total']=len(report['results']);report['passed']=all(r['passed'] for r in report['results']) and report['total']>0
- if not args.inline:report['passed']=report['passed'] and len([r for r in report['results'] if r['id'].startswith('activity-')])==57
+ if not args.inline:report['passed']=report['passed'] and len([r for r in report['results'] if r['id'].startswith('activity-')])==63
  report['blockedExternalRequestCount']=len(external) if 'external' in locals() else 0
  name='classroom-inline-report.json' if args.inline else 'classroom-browser-report.json'
  (ROOT/'docs'/name).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print('SUMMARY',report['passed'],report['total'],flush=True)

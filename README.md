@@ -30,9 +30,11 @@ python scripts/build_playground_standalone.py
 | 动力车间 | 弹弓、吊桥、小车、牛顿摆、摩擦、碰撞、空间飞行课堂 |
 | 箭头港口 | 向量相加、旋转、缩放、线性变换网格 |
 
-v0.4 合计 **57个活动入口**。其中4个 PhET、48个 Matter.js 原始示例、1个原 Tangram，以及4个课堂/适配入口。Matter.js 条目不是48个教学关卡；几何证明课堂内有24题、JSXGraph课堂内有6个实验、平面七巧板有方形热身和原内置创意轮廓。
+当前合计 **63个活动入口**。其中4个 PhET、48个 Matter.js 原始示例、1个原 Tangram、4个课堂/适配入口，以及6个分年级 JSXGraph 实验入口。Matter.js 条目不是48个教学关卡；几何证明课堂内有24题、JSXGraph课堂内有6个实验、平面七巧板有方形热身和原内置创意轮廓。
 
-首次打开推荐 **22项活动，其中18项非PhET**，包括14个 Matter.js 示例和4个课堂/适配入口。首页取消“只看可玩的活动”即可看到全部目录。“老师 / 家长”可以逐项选择、开放推荐活动、全部开放或导入导出配置。
+首次打开推荐 **22项活动，其中18项非PhET**，包括14个 Matter.js 示例和4个课堂/适配入口。首页取消“只看可玩的活动”即可看到全部目录。“老师 / 家长”可以逐项选择、开放推荐活动、全部开放或导入导出配置。6个分年级入口与“图形会变魔术”共用同一套实验，默认关闭，可分别勾选开放；不会因开放了原课堂而自动开放。
+
+三角形实验可在“自由拖动”和“等底等高”之间切换：等底等高模式固定底边，顶点沿平行线移动，滑块单独改变高度。对称与向量挑战显示金色目标标记，换题时位置同步更新。
 
 原上游内容没有删减：Area Builder 的6个难度和随机出题逻辑保留；其他 PhET 原导航保留；原三维 Tangram 也保留。平面七巧板另提供无需 WebGL 的入口。
 
@@ -70,6 +72,7 @@ npm test
 python -m pip install playwright==1.56.0
 python -m playwright install chromium
 python tests/classroom-browser.py
+python tests/unique-features-browser.py
 node tests/geometry-browser.mjs
 python scripts/package.py
 ```

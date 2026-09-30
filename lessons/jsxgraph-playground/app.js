@@ -9,7 +9,7 @@ const lessons = {
  vectors:['拼箭头','箭头接力','把两个方向箭头首尾相接，找到最后到达的位置。','先走橙色箭头，再走蓝色箭头。换个顺序会到同一处吗？','向量相加可以首尾相接，也可以把横向分量和纵向分量分别相加。箭头可以平移，但方向和长度不能改变。'],
  linear:['变形机','网格变形机','拖动两支单位方向箭头，整张网格就会跟着改变。','比较变形前后的格子，哪些线仍然平行？','一格横向和一格纵向的去向确定了整个线性变换。原点不动。平行四边形的面积倍数等于行列式的绝对值；压成线时面积是0。']
 };
-let board,points=[],mode='triangle',value=1,goal=0,readings={};
+let board,points=[],mode='triangle',value=1,goal=0,readings={},triangleMode='free',targetMarker=null;
 const xy=p=>[p.X(),p.Y()];
 const fmt=n=>Number.isFinite(n)?Number(n.toFixed(2)).toString():'—';
 const metric=(label,v)=>'<div class="metric"><span>'+label+'</span><b>'+v+'</b></div>';
@@ -21,7 +21,7 @@ function invalidate(){$('feedback').textContent='';$('feedback').className='';}
 function create(modeId){
  mode=lessons[modeId]?modeId:'triangle';window.__mpReady=false;
  if(board)JXG.JSXGraph.freeBoard(board);
- points=[];value=1;goal=0;invalidate();
+ points=[];value=1;goal=0;targetMarker=null;invalidate();
  const l=lessons[mode];$('title').textContent=l[1];$('intro').textContent=l[2];$('observe').textContent=l[3];$('why').textContent=l[4];$('controls').innerHTML='';
  document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.mode===mode)));
  const w=$('board').clientWidth,h=$('board').clientHeight,unit=Math.max(15/w,14/h);
@@ -29,7 +29,23 @@ function create(modeId){
  board.suspendUpdate();
  if(['triangle','mirror','rotate','scale'].includes(mode)){
   const initial=mode==='triangle'?[[0,0],[4,0],[1,3]]:mode==='mirror'?[[-4,1],[-1,1],[-3,4]]:[[1,1],[3,1],[1,3]];
-  points=initial.map((p,i)=>dot(p,['A','B','C'][i],colors[i]));poly(points,colors[0]);
+  if(mode==='triangle'&&triangleMode==='equal-height'){
+   value=3;
+   const guide=board.create('line',[[0,()=>value],[1,()=>value]],{strokeColor:'#9bab9d',dash:2,fixed:true});
+   points=[dot([0,0],'A',colors[0],true),dot([4,0],'B',colors[1],true),board.create('glider',[1,value,guide],{name:'C',size:6,fillColor:colors[2],strokeColor:'#fff',showInfobox:false})];
+   board.create('segment',[points[2],[()=>points[2].X(),0]],{strokeColor:'#b28631',dash:2,fixed:true});
+   slider('三角形的高',.5,6,.5,3);
+   $('intro').textContent='底边固定，左右拖动 C 点，观察等底等高的三角形面积。再用滑块改变高度。';
+   $('observe').textContent='左右移动 C 点时，底和高都没变，面积为什么不变？';
+   $('why').textContent='等底等高的三角形面积相等。C 点沿着与底边平行的直线移动，底边长始终为4，高保持不变；面积等于4×高÷2。';
+  }else points=initial.map((p,i)=>dot(p,['A','B','C'][i],colors[i]));
+  poly(points,colors[0]);
+  if(mode==='triangle'){
+   const choices=document.createElement('div');choices.className='presets';
+   choices.innerHTML='<button data-triangle="free">自由拖动</button><button data-triangle="equal-height">等底等高</button>';
+   $('controls').prepend(choices);
+   choices.querySelectorAll('button').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.triangle===triangleMode));b.onclick=()=>{triangleMode=b.dataset.triangle;create('triangle');};});
+  }
   if(mode==='mirror'){
    slider('镜子位置',-2,2,.5,0);board.create('line',[[()=>value,-5],[()=>value,7]],{strokeColor:'#a6ada0',strokeWidth:2,dash:2,fixed:true});
   }else if(mode==='rotate')slider('旋转角度',0,360,15,90);
@@ -56,8 +72,13 @@ function create(modeId){
   const presets={turn:[[0,1],[-1,0]],stretch:[[2,0],[0,1]],shear:[[1,0],[1,1]],line:[[1,0],[2,0]]};
   $('controls').querySelectorAll('button').forEach(b=>b.onclick=()=>{presets[b.dataset.preset].forEach((p,i)=>points[i].setPosition(JXG.COORDS_BY_USER,p));invalidate();board.update();});
  }
+ if(mode==='mirror'||mode==='vectors'){
+  targetMarker=dot([()=>challengeTarget()[0],()=>challengeTarget()[1]],'★ 目标','#bc8b23',true);
+  targetMarker.setAttribute({size:9,fillOpacity:.25,strokeColor:'#a67512',strokeWidth:3,label:{offset:[12,12]}});
+ }
  points.forEach(p=>p.on('drag',invalidate));
- $('point-choice').innerHTML=points.map((p,i)=>'<option value="'+i+'">'+p.name+'</option>').join('');
+ $('point-choice').innerHTML=points.map((p,i)=>mode==='triangle'&&triangleMode==='equal-height'&&i<2?'':'<option value="'+i+'">'+p.name+'</option>').join('');
+ document.querySelectorAll('[data-move]').forEach(b=>b.disabled=mode==='triangle'&&triangleMode==='equal-height'&&['up','down'].includes(b.dataset.move));
  board.on('update',update);board.unsuspendUpdate();setGoal();update();
  window.__mpReady=true;if(parent!==window)parent.postMessage({type:'mp-ready'},location.origin);
 }
@@ -68,23 +89,24 @@ function update(){
  if(['triangle','mirror','rotate','scale'].includes(mode)){
   const area=triangleArea(...ps);readings={area};
   if(mode==='triangle'){
-   const angles=triangleAngles(...ps);readings.angles=angles;
-   html=metric('面积',fmt(area))+(area<1e-8?'<p>三个点排成一条线了，试着移开一个点。</p>':metric('三个角',angles.map(a=>fmt(a)+'°').join(' / '))+metric('内角和','180°'));
+   const angles=triangleAngles(...ps);readings.angles=angles;if(triangleMode==='equal-height')readings.height=value;
+   html=(triangleMode==='equal-height'?metric('固定底边','4')+metric('高',fmt(value)):'')+metric('面积',fmt(area))+(area<1e-8?'<p>三个点排成一条线了，试着移开一个点。</p>':metric('三个角',angles.map(a=>fmt(a)+'°').join(' / '))+metric('内角和','180°'));
   }else{html=metric('原图面积',fmt(area))+metric('变化后面积',fmt(mode==='scale'?area*value*value:area));if(mode==='scale')html+=metric('面积倍数',fmt(value*value));if(mode==='mirror')html+=metric('A′的位置',map(ps[0]).map(fmt).join('，'));}
  }else if(mode==='vectors'){const sum=add(...ps);readings={sum};html=metric('最后到达','('+sum.map(fmt).join(', ')+')');}
  else{const [u,v]=ps,det=determinant(u,v);readings={u,v,det,areaFactor:Math.abs(det)};html='<div class="matrix">'+fmt(u[0])+'  '+fmt(v[0])+'\n'+fmt(u[1])+'  '+fmt(v[1])+'</div>'+metric('面积倍数',fmt(Math.abs(det)));if(Math.abs(det)<1e-8)html+='<p>格子压成一条线了！面积变成0。</p>';}
  $('readings').innerHTML=html;
 }
+function challengeTarget(){return mode==='mirror'?(goal%2?[2,3]:[3,2]):(goal%2?[3,4]:[4,3]);}
 function setGoal(){
- invalidate();const opts={triangle:['拼一个面积为6的三角形。','拼一个面积为4的三角形。'],mirror:['把A的镜像点移到（3，2）。','把A的镜像点移到（2，3）。'],rotate:['让图形转过180°。','让图形转过270°。'],scale:['让变化后面积变为原来的4倍。','让变化后面积变为原来的2.25倍。'],vectors:['用两支箭头到达（4，3）。','用两支箭头到达（3，4）。'],linear:['把横向一步变成（2，0），纵向一步变成（0，1）。','把横向一步变成（1，0），纵向一步变成（1，1）。']};$('challenge').textContent=opts[mode][goal%2];
+ invalidate();const opts={triangle:['拼一个面积为6的三角形。','拼一个面积为4的三角形。'],mirror:['把A的镜像点移到（3，2）。','把A的镜像点移到（2，3）。'],rotate:['让图形转过180°。','让图形转过270°。'],scale:['让变化后面积变为原来的4倍。','让变化后面积变为原来的2.25倍。'],vectors:['用两支箭头到达（4，3）。','用两支箭头到达（3，4）。'],linear:['把横向一步变成（2，0），纵向一步变成（0，1）。','把横向一步变成（1，0），纵向一步变成（1，1）。']};$('challenge').textContent=opts[mode][goal%2];if(board)board.update();
 }
 function check(){
  const g=goal%2,ps=points.map(xy);let ok=false;
  if(mode==='triangle')ok=Math.abs(triangleArea(...ps)-(g?4:6))<.05;
- else if(mode==='mirror')ok=near(map(ps[0]),g?[2,3]:[3,2]);
+ else if(mode==='mirror')ok=near(map(ps[0]),challengeTarget());
  else if(mode==='rotate')ok=Math.abs(value-(g?270:180))<1;
  else if(mode==='scale')ok=triangleArea(...ps)>.01&&Math.abs(value*value-(g?2.25:4))<.02;
- else if(mode==='vectors')ok=near(add(...ps),g?[3,4]:[4,3]);
+ else if(mode==='vectors')ok=near(add(...ps),challengeTarget());
  else ok=near(ps[0],g?[1,0]:[2,0])&&near(ps[1],g?[1,1]:[0,1]);
  $('feedback').className=ok?'success':'retry';$('feedback').textContent=ok?'做到了！试着说一说你改变了什么。':'还差一点。看看圆点的位置和右侧数字，再试一次。';return ok;
 }
@@ -93,5 +115,5 @@ $('tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>create(b.dataset.m
 $('reset').onclick=()=>create(mode);$('check').onclick=check;$('new-goal').onclick=()=>{goal++;setGoal();};
 document.querySelectorAll('[data-move]').forEach(b=>b.onclick=()=>{const p=points[Number($('point-choice').value)||0],v={left:[-.25,0],right:[.25,0],up:[0,.25],down:[0,-.25]}[b.dataset.move];p.setPosition(JXG.COORDS_BY_USER,add(xy(p),v));invalidate();board.update();});
 $('back-home').onclick=e=>{if(parent!==window){e.preventDefault();parent.postMessage({type:'mp-close'},location.origin);}};
-window.__playground={get board(){return board;},get points(){return points;},get mode(){return mode;},get readings(){return readings;},create,check};
+window.__playground={get board(){return board;},get points(){return points;},get mode(){return mode;},get readings(){return readings;},get triangleMode(){return triangleMode;},get targetMarker(){return targetMarker;},create,check};
 try{create(new URLSearchParams(location.search).get('mode')||'triangle');}catch(e){$('intro').textContent='画板暂时没有打开，请重新加载页面。';console.error(e);}

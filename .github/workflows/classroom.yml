@@ -56,6 +56,8 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Verify real HTTP, file loading and interactions
         run: python tests/classroom-browser.py
+      - name: Verify selectively integrated learning interactions
+        run: python tests/unique-features-browser.py
       - name: Verify geometry lessons
         run: node tests/geometry-browser.mjs
       - name: Package offline classroom

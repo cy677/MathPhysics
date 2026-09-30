@@ -1,5 +1,6 @@
 import {loadState,saveState,parseSettings} from './state.js';
 import {isReady} from './readiness.js';
+import {isLocalActivityEntry} from './catalog.js';
 const $=id=>document.getElementById(id);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const storage={getItem:key=>window.localStorage.getItem(key),setItem:(key,value)=>window.localStorage.setItem(key,value)};
@@ -56,8 +57,7 @@ function validateInventory(value){
   const unique=new Set();
   for(const a of value.activities){
     if(!a||typeof a.id!=='string'||unique.has(a.id)||!zones[a.zone]||!Array.isArray(a.grades)||!Array.isArray(a.content))throw Error('内容清单有重复或无效条目');
-    const u=new URL(a.entry,location.href);
-    if(u.origin!==location.origin||!(a.entry.startsWith('vendor/')||(a.adapter==='proofs'&&a.entry==='lessons/geometric-proofs/index.html')||(a.adapter==='spaceflight'&&a.entry==='lessons/spaceflight/index.html')||(a.adapter==='jsxgraph'&&a.entry==='lessons/jsxgraph-playground/index.html')||(a.adapter==='tangram-flat'&&a.entry==='lessons/tangram-flat/index.html'))||a.entry.includes('..'))throw Error('活动必须使用本地资源路径');
+    if(!isLocalActivityEntry(a,location.href))throw Error('活动必须使用本地资源路径');
     unique.add(a.id);
   }
   return value;

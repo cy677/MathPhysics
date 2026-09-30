@@ -22,7 +22,13 @@
     "area-builder",
     "forces-and-motion-basics",
     "energy-skate-park-basics",
-    "vector-addition"
+    "vector-addition",
+    "jsx-triangle",
+    "jsx-mirror",
+    "jsx-rotation",
+    "jsx-scale",
+    "jsx-vectors",
+    "jsx-linear"
   ],
   "activities": {
     "jsxgraph-playground": {
@@ -309,6 +315,36 @@
       "title": "拆除球",
       "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
       "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+    },
+    "jsx-triangle": {
+      "title": "三角形滑滑梯",
+      "description": "自由拖动顶点，或切换等底等高，观察三角形面积的变化。",
+      "playHint": "切换“等底等高”，沿平行线拖动顶点，再用滑块改变高度。也可以切回“自由拖动”，使用下方方向按钮移动所选点。"
+    },
+    "jsx-mirror": {
+      "title": "镜子里的图形",
+      "description": "拖动彩色圆点，找一找镜子两边图形的对应关系。",
+      "playHint": "拖动顶点或移动镜子，观察对应的点离镜子有多远。 也可以选择圆点，使用画板下方的方向按钮。"
+    },
+    "jsx-rotation": {
+      "title": "转一转图形",
+      "description": "绕原点转动小三角形，看看它的边长和面积会不会改变。",
+      "playHint": "拖动顶点，再调节旋转角度，比较转动前后图形的位置。 也可以选择圆点，使用画板下方的方向按钮。"
+    },
+    "jsx-scale": {
+      "title": "图形放大镜",
+      "description": "同时放大图形的两个方向，比较边长和面积的倍数。",
+      "playHint": "改变边长倍数，观察面积。试试边长变为2倍时，面积变成几倍。 也可以选择圆点，使用画板下方的方向按钮。"
+    },
+    "jsx-vectors": {
+      "title": "箭头送快递",
+      "description": "拼接方向箭头，试着用不同走法到达同一个终点。",
+      "playHint": "拖动两支箭头，先沿橙色箭头走，再沿蓝色箭头走，看看最后到哪里。 也可以选择圆点，使用画板下方的方向按钮。"
+    },
+    "jsx-linear": {
+      "title": "网格变形机",
+      "description": "拖动两支方向箭头，让整张网格旋转、拉伸或剪切。",
+      "playHint": "拖动横向一步和纵向一步，也可以试试预设按钮，比较网格怎样变化。 也可以选择圆点，使用画板下方的方向按钮。"
     }
   }
 }
