@@ -46,7 +46,7 @@ el('new-question').onclick=()=>{questionVariant=questionVariant?0:1;clearAnswer(
 el('new-example').onclick=()=>{stop();const next={};for(const p of current.params){const n=Math.round((p.max-p.min)/p.step);next[p.key]=p.min+Math.floor(Math.random()*(n+1))*p.step;}values=normalize(current,next);syncValues();clearAnswer();render();};
 el('formula-toggle').onchange=()=>document.body.classList.toggle('no-formula',!el('formula-toggle').checked);
 el('practice').addEventListener('submit',event=>{event.preventDefault();const q=questionVariant?extensionQuestion(current,values):question(current,values),answer=checkAnswer(el('answer').value,q.answer),feedback=el('feedback');feedback.className=answer===true?'good':'error';feedback.textContent=answer===null?'请填有限数值或分数，例如 12、3.14、1/2。':answer?'本题数值核对正确。再说一说：图形为什么能这样分解？':'再检查对应的底、高或缩放倍数。可以打开下方的证明依据。';});
-el('reveal').onclick=()=>{const q=questionVariant?extensionQuestion(current,values):question(current,values);el('feedback').className='';el('feedback').textContent=current.formula+'；代入：'+calculation(current.id,values)+' '+q.units+'。试着改变一个条件，再算一算。';};
+el('reveal').onclick=()=>{const q=questionVariant?extensionQuestion(current,values):question(current,values);el('feedback').className='';el('feedback').textContent=questionVariant?'这道扩展题的参考答案：'+fmt(q.answer)+' '+q.units+'。请结合上方动态图形说明数量关系。':current.formula+'；代入：'+calculation(current.id,values)+' '+q.units+'。试着改变一个条件，再算一算。';};
 el('previous').onclick=()=>select(LESSONS[LESSONS.indexOf(current)-1]?.id||current.id);el('next').onclick=()=>select(LESSONS[LESSONS.indexOf(current)+1]?.id||current.id);
 window.addEventListener('pagehide',stop);document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
 if(innerWidth<=1000)el('directory').open=false;
