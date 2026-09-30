@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "scope": "PhET additions for MathPhysics primary-school math/science track",
+  "syncMode": "official-published-single-file-html",
+  "existing": [
+    "area-builder",
+    "forces-and-motion-basics",
+    "energy-skate-park-basics",
+    "vector-addition"
+  ],
+  "additions": [
+    {
+      "id": "fractions-intro",
+      "title": "分数入门",
+      "grades": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "zone": "math",
+      "kind": "simulation",
+      "source": "https://github.com/phetsims/fractions-intro",
+      "published": "https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_all.html",
+      "entry": "vendor/phet/fractions-intro.html"
+    },
+    {
+      "id": "fraction-matcher",
+      "title": "分数配对",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "zone": "math",
+      "kind": "game",
+      "source": "https://github.com/phetsims/fraction-matcher",
+      "published": "https://phet.colorado.edu/sims/html/fraction-matcher/latest/fraction-matcher_all.html",
+      "entry": "vendor/phet/fraction-matcher.html"
+    },
+    {
+      "id": "balancing-act",
+      "title": "平衡挑战",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "zone": "physics",
+      "kind": "simulation",
+      "source": "https://github.com/phetsims/balancing-act",
+      "published": "https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act_all.html",
+      "entry": "vendor/phet/balancing-act.html"
+    },
+    {
+      "id": "circuit-construction-kit-dc",
+      "title": "直流电路实验室",
+      "grades": [
+        4,
+        5,
+        6
+      ],
+      "zone": "physics",
+      "kind": "simulation",
+      "source": "https://github.com/phetsims/circuit-construction-kit-dc",
+      "published": "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_all.html",
+      "entry": "vendor/phet/circuit-construction-kit-dc.html"
+    },
+    {
+      "id": "states-of-matter-basics",
+      "title": "物质状态",
+      "grades": [
+        4,
+        5,
+        6
+      ],
+      "zone": "science",
+      "kind": "simulation",
+      "source": "https://github.com/phetsims/states-of-matter-basics",
+      "published": "https://phet.colorado.edu/sims/html/states-of-matter-basics/latest/states-of-matter-basics_all.html",
+      "entry": "vendor/phet/states-of-matter-basics.html"
+    },
+    {
+      "id": "build-a-molecule",
+      "title": "搭建分子",
+      "grades": [
+        5,
+        6
+      ],
+      "zone": "science",
+      "kind": "simulation",
+      "source": "https://github.com/phetsims/build-a-molecule",
+      "published": "https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_all.html",
+      "entry": "vendor/phet/build-a-molecule.html"
+    }
+  ],
+  "licenseNote": "Preserve PhET notices. Verify each simulation/source/assets before redistribution; do not relabel the bundle as MIT."
+}
