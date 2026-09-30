@@ -22,7 +22,7 @@ function parameters(){
 }
 function syncValues(){for(const p of current.params){el('param-'+p.key).value=values[p.key];el('value-'+p.key).textContent=fmt(values[p.key]);}remembered.set(current.id,{...values});}
 function select(id,updateURL=true){
- stop();current=LESSONS.find(l=>l.id===id)||LESSONS[0];values=normalize(current,remembered.get(current.id));progress=0;selectedStep=-1;questionVariant=0;parameters();directory();clearAnswer();
+ stop();current=LESSONS.find(l=>l.id===id)||LESSONS[0];values=normalize(current,remembered.get(current.id));progress=0;selectedStep=-1;questionVariant=0;el('new-question').textContent='换一种问法';parameters();directory();clearAnswer();
  el('topic-label').textContent=GROUPS[current.group];el('level-label').textContent=current.level;el('position-label').textContent=String(LESSONS.indexOf(current)+1).padStart(2,'0')+' / '+LESSONS.length;
  el('lesson-title').textContent=current.title;el('condition').textContent='适用条件 · '+current.condition;el('why').textContent=current.why;el('sources').innerHTML=current.sources.map(key=>{const s=SOURCES[key];return `<a href="${s.url}" target="_blank" rel="noopener noreferrer">${safe(s.title)} ↗</a>`;}).join('');
  el('previous').disabled=LESSONS.indexOf(current)===0;el('next').disabled=LESSONS.indexOf(current)===LESSONS.length-1;
