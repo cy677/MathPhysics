@@ -6,6 +6,7 @@
     "matter-slingshot",
     "spaceflight",
     "geometry-proofs",
+    "primary-math",
     "matter-bridge",
     "matter-car",
     "matter-newtonsCradle",
@@ -345,6 +346,11 @@
       "title": "网格变形机",
       "description": "拖动两支方向箭头，让整张网格旋转、拉伸或剪切。",
       "playHint": "拖动横向一步和纵向一步，也可以试试预设按钮，比较网格怎样变化。 也可以选择圆点，使用画板下方的方向按钮。"
+    },
+    "primary-math": {
+      "title": "数与生活",
+      "description": "按一到六年级探索数、量、统计和生活中的数学关系。",
+      "playHint": "选择年级和题目，先调整模型，再填写答案并解释为什么。"
     }
   }
 }
