@@ -56,6 +56,38 @@ export function question(lesson,v) {
   const units=ratio?'倍':id==='pythagoras'?'长度单位':lesson.group==='solid'&&!id.endsWith('-net')?'立方单位':'平方单位';
   return {prompt:'使用当前参数，'+target,answer,units};
 }
+export function extensionQuestion(lesson,v) {
+  const {a,b,h,r,q,k,theta}=v, id=lesson.id;
+  const table={
+    rectangle:()=>({prompt:'同一长方形的周长是多少？',answer:2*(a+b),units:'长度单位'}),
+    parallelogram:()=>({prompt:'保持高不变，把底扩大为原来的2倍，新面积是多少？',answer:2*a*h,units:'平方单位'}),
+    triangle:()=>({prompt:'保持面积不变，如果底扩大为原来的2倍，高应变为多少？',answer:h/2,units:'长度单位'}),
+    trapezoid:()=>({prompt:'这个梯形两底的平均长度是多少？',answer:(a+b)/2,units:'长度单位'}),
+    rhombus:()=>({prompt:'若第一条对角线不变、第二条对角线扩大2倍，新面积是多少？',answer:a*b,units:'平方单位'}),
+    circle:()=>({prompt:'同一个圆的周长是多少？',answer:2*Math.PI*r,units:'长度单位'}),
+    sector:()=>({prompt:'这个扇形占整圆面积的几分之几？请填小数或分数。',answer:theta/360,units:'个整圆'}),
+    annulus:()=>({prompt:'内圆半径是多少？',answer:r*q,units:'长度单位'}),
+    'triangle-ratio':()=>({prompt:'如果右侧三角形面积是10，左侧三角形面积是多少？',answer:10*a/b,units:'平方单位'}),
+    similarity:()=>({prompt:'终点图形的对应边是原图形的几倍？',answer:k,units:'倍'}),
+    'square-sum':()=>({prompt:'两块面积为ab的长方形合起来面积是多少？',answer:2*a*b,units:'平方单位'}),
+    'square-minus':()=>({prompt:'两条宽为b的长条面积相加、尚未补回重叠部分时是多少？',answer:2*a*b,units:'平方单位'}),
+    'difference-squares':()=>({prompt:'拼成后的长方形较长边长度是多少？',answer:a+b,units:'长度单位'}),
+    distributive:()=>({prompt:'只看底为a的左半块，它的面积是多少？',answer:h*a,units:'平方单位'}),
+    pythagoras:()=>({prompt:'两条直角边上的正方形面积之和是多少？',answer:a*a+b*b,units:'平方单位'}),
+    cuboid:()=>({prompt:'同一长方体全部外表面的面积是多少？',answer:2*(a*b+a*h+b*h),units:'平方单位'}),
+    'cuboid-net':()=>({prompt:'同一长方体的体积是多少？',answer:a*b*h,units:'立方单位'}),
+    prism:()=>({prompt:'两个全等三棱柱拼成长方体后，总体积是多少？',answer:a*b*h,units:'立方单位'}),
+    cylinder:()=>({prompt:'保持底面不变，把高扩大2倍，新体积是多少？',answer:2*Math.PI*r*r*h,units:'立方单位'}),
+    'cylinder-net':()=>({prompt:'只计算圆柱侧面积，不含两个底面，是多少？',answer:2*Math.PI*r*h,units:'平方单位'}),
+    pyramid:()=>({prompt:'与它同底同高的棱柱体积是多少？',answer:a*a*h,units:'立方单位'}),
+    cone:()=>({prompt:'与它同底同高的圆柱体积是多少？',answer:Math.PI*r*r*h,units:'立方单位'}),
+    sphere:()=>({prompt:'半径保持不变，一个半球的体积是多少？',answer:2*Math.PI*r**3/3,units:'立方单位'}),
+    'volume-scale':()=>({prompt:'每条边扩大k倍后，一个面的面积是原来的几倍？',answer:k*k,units:'倍'})
+  };
+  if(!table[id]) throw Error('Unknown extension question: '+id);
+  return table[id]();
+}
+
 export function checkAnswer(text,expected) {
   const s=String(text).trim();
   if(!s) return null;

@@ -43,7 +43,9 @@ function trySnap(i){
  }
  return false;
 }
-function finish(){actual.tans.forEach((_,i)=>trySnap(i));render();const full=slots.size===7;$('feedback').className=full?'success':'retry';$('feedback').textContent=full?(hints?'拼好了！再挑战一次，试着少用一点提示。':'拼好了！七块拼板正好填满轮廓。'):'已经放好'+slots.size+'块。还有'+(7-slots.size)+'块，再转一转、试一试。';return full;}
+function challengeLimit(){return {free:Infinity,two:2,none:0}[$('challenge-mode').value]??Infinity;}
+function updateChallenge(){const limit=challengeLimit(),shape=goal==='square'?'方形':'创意轮廓';$('challenge-text').textContent=limit===Infinity?shape+'：七块都要用上，可以按需要求助。':limit===0?shape+'：七块都要用上，这次不用“帮我放一块”。':shape+'：七块都要用上，最多使用2次“帮我放一块”。';}
+function finish(){actual.tans.forEach((_,i)=>trySnap(i));render();const full=slots.size===7,within=hints<=challengeLimit(),passed=full&&within;$('feedback').className=passed?'success':'retry';$('feedback').textContent=!full?'已经放好'+slots.size+'块。还有'+(7-slots.size)+'块，再转一转、试一试。':within?(hints?'拼好了！并且符合本题的求助次数要求。':'拼好了！七块拼板正好填满轮廓。'):'轮廓已经拼满，但本题要求的求助次数更少。重新开始再挑战一次。';return passed;}
 function localPoint(e){const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;const inv=svg.getScreenCTM().inverse(),q=p.matrixTransform(inv);return new Vector((q.x-CX)/SCALE,(CY-q.y)/SCALE);}
 svg.onpointerdown=e=>{const hit=e.target.closest('[data-piece]');if(!hit)return;e.preventDefault();selected=+hit.dataset.piece;if(slots.has(selected)){render();return;}const t=actual.tans[selected],p=localPoint(e);drag={pointer:e.pointerId,dx:t.position.x-p.x,dy:t.position.y-p.y};svg.setPointerCapture(e.pointerId);$('feedback').textContent='';render();};
 svg.onpointermove=e=>{if(!drag||drag.pointer!==e.pointerId)return;e.preventDefault();const p=localPoint(e),t=actual.tans[selected];t.transform(new Vector(Math.max(-1.88,Math.min(2.12,p.x+drag.dx)),Math.max(-1,Math.min(1.13,p.y+drag.dy))),t.rotation);render();};
@@ -53,13 +55,13 @@ $('piece-buttons').onclick=e=>{const b=e.target.closest('[data-select]');if(b){s
 function move(dx,dy){if(slots.has(selected))return;const t=actual.tans[selected];t.transform(new Vector(Math.max(-1.88,Math.min(2.12,t.position.x+dx)),Math.max(-1,Math.min(1.13,t.position.y+dy))),t.rotation);trySnap(selected);$('feedback').textContent='';render();}
 document.querySelectorAll('[data-move]').forEach(b=>b.onclick=()=>move(...({left:[-.025,0],right:[.025,0],up:[0,.025],down:[0,-.025]}[b.dataset.move])));
 function turn(delta){if(slots.has(selected))return;const t=actual.tans[selected];t.transform(t.position,(t.rotation+delta+360)%360);trySnap(selected);$('feedback').textContent='';render();}
-$('turn-left').onclick=()=>turn(15);$('turn-right').onclick=()=>turn(-15);$('reset').onclick=build;$('check').onclick=finish;$('show-hint').onchange=render;
+$('turn-left').onclick=()=>turn(15);$('turn-right').onclick=()=>turn(-15);$('reset').onclick=build;$('check').onclick=finish;$('show-hint').onchange=render;$('challenge-mode').onchange=()=>{updateChallenge();$('feedback').textContent='';};
 $('help').onclick=()=>{
  // Demonstrate a legal placement, accommodating already-swapped congruent pieces.
  const unused=target.tans.map((_,j)=>j).filter(j=>![...slots.values()].includes(j));
  for(let i=0;i<actual.tans.length;i++){if(slots.has(i))continue;const t=actual.tans[i],oldPosition=t.position.clone(),oldRotation=t.rotation;for(const j of unused){const s=target.tans[j];if(t.points.length!==s.points.length)continue;for(let r=0;r<360;r+=15){t.transform(s.position,r);if(translatedDistance(t,s)<.006){slots.set(i,j);selected=i;hints++;render();if(slots.size===7)finish();return;}}} t.transform(oldPosition,oldRotation); }
 };
-document.querySelectorAll('[data-goal]').forEach(b=>b.onclick=()=>{goal=b.dataset.goal;build();});
+document.querySelectorAll('[data-goal]').forEach(b=>b.onclick=()=>{goal=b.dataset.goal;build();updateChallenge();});
 $('back-home').onclick=e=>{if(parent!==window){e.preventDefault();parent.postMessage({type:'mp-close'},location.origin);}};
 window.__tangramFlat={get actual(){return actual;},get target(){return target;},get slots(){return slots;},get goal(){return goal;},trySnap,finish,build};
-build();window.__mpReady=true;if(parent!==window)parent.postMessage({type:'mp-ready'},location.origin);
+build();updateChallenge();window.__mpReady=true;if(parent!==window)parent.postMessage({type:'mp-ready'},location.origin);

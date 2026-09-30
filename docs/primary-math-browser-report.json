@@ -1,0 +1,309 @@
+{
+  "mode": "inline",
+  "passed": true,
+  "scope": "inline classroom execution only; no HTTP/file/iframe validation",
+  "timestamp": "2026-09-30T11:17:46.240172+00:00",
+  "cases": [
+    {
+      "id": "pm-01",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-02",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-03",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-04",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-05",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-06",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-07",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-08",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-09",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-10",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-11",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-12",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-13",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-14",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-15",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-16",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-17",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-18",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-19",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-20",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-21",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-22",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-23",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-24",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-25",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-26",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-27",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-28",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-29",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-30",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-31",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-32",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-33",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-34",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-35",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-36",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-37",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-38",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-39",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-40",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-41",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-42",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-43",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-44",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-45",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-46",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-47",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    },
+    {
+      "id": "pm-48",
+      "renderBounds": true,
+      "correctWrongBlank": true,
+      "hintSolution": true
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "browser": "144.0.7559.96",
+  "curriculumFilters": true,
+  "fractionInputs": true,
+  "keyboardAndReducedMotion": true,
+  "responsiveWidths": [
+    1280,
+    1024,
+    390
+  ],
+  "standaloneInline48": true,
+  "httpFileIframe": "not run in inline mode; environment HTTP navigation blocked by administrator"
+}

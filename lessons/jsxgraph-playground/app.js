@@ -96,18 +96,35 @@ function update(){
  else{const [u,v]=ps,det=determinant(u,v);readings={u,v,det,areaFactor:Math.abs(det)};html='<div class="matrix">'+fmt(u[0])+'  '+fmt(v[0])+'\n'+fmt(u[1])+'  '+fmt(v[1])+'</div>'+metric('面积倍数',fmt(Math.abs(det)));if(Math.abs(det)<1e-8)html+='<p>格子压成一条线了！面积变成0。</p>';}
  $('readings').innerHTML=html;
 }
-function challengeTarget(){return mode==='mirror'?(goal%2?[2,3]:[3,2]):(goal%2?[3,4]:[4,3]);}
+const challengeSets={
+ triangle:[6,4,8,10,12,3],
+ mirror:[[3,2],[2,3],[4,1],[1,4],[-2,2],[0,3]],
+ rotate:[180,270,90,360,45,135],
+ scale:[4,2.25,1,.25,6.25,1.5625],
+ vectors:[[4,3],[3,4],[5,2],[2,5],[1,4],[4,1]],
+ linear:[[[2,0],[0,1]],[[1,0],[1,1]],[[0,1],[-1,0]],[[1,0],[0,2]],[[1,.5],[0,1]],[[1,0],[2,0]]]
+};
+function challengeTarget(){const t=challengeSets[mode][goal%challengeSets[mode].length];return mode==='mirror'||mode==='vectors'?t:null;}
 function setGoal(){
- invalidate();const opts={triangle:['拼一个面积为6的三角形。','拼一个面积为4的三角形。'],mirror:['把A的镜像点移到（3，2）。','把A的镜像点移到（2，3）。'],rotate:['让图形转过180°。','让图形转过270°。'],scale:['让变化后面积变为原来的4倍。','让变化后面积变为原来的2.25倍。'],vectors:['用两支箭头到达（4，3）。','用两支箭头到达（3，4）。'],linear:['把横向一步变成（2，0），纵向一步变成（0，1）。','把横向一步变成（1，0），纵向一步变成（1，1）。']};$('challenge').textContent=opts[mode][goal%2];if(board)board.update();
+ invalidate();const i=goal%challengeSets[mode].length,t=challengeSets[mode][i];
+ const text={
+  triangle:()=>`拼一个面积为${t}的三角形。`,
+  mirror:()=>`把A的镜像点移到（${t[0]}，${t[1]}）。`,
+  rotate:()=>`让图形绕原点逆时针转过${t}°。`,
+  scale:()=>`让变化后面积变为原来的${t}倍。`,
+  vectors:()=>`用两支箭头到达（${t[0]}，${t[1]}）。`,
+  linear:()=>`把横向一步变成（${t[0].join('，')}），纵向一步变成（${t[1].join('，')}）。`
+ };
+ $('challenge').textContent=text[mode]();if(board)board.update();
 }
 function check(){
- const g=goal%2,ps=points.map(xy);let ok=false;
- if(mode==='triangle')ok=Math.abs(triangleArea(...ps)-(g?4:6))<.05;
- else if(mode==='mirror')ok=near(map(ps[0]),challengeTarget());
- else if(mode==='rotate')ok=Math.abs(value-(g?270:180))<1;
- else if(mode==='scale')ok=triangleArea(...ps)>.01&&Math.abs(value*value-(g?2.25:4))<.02;
- else if(mode==='vectors')ok=near(add(...ps),challengeTarget());
- else ok=near(ps[0],g?[1,0]:[2,0])&&near(ps[1],g?[1,1]:[0,1]);
+ const t=challengeSets[mode][goal%challengeSets[mode].length],ps=points.map(xy);let ok=false;
+ if(mode==='triangle')ok=Math.abs(triangleArea(...ps)-t)<.05;
+ else if(mode==='mirror')ok=near(map(ps[0]),t);
+ else if(mode==='rotate')ok=Math.abs(value-t)<1;
+ else if(mode==='scale')ok=triangleArea(...ps)>.01&&Math.abs(value*value-t)<.02;
+ else if(mode==='vectors')ok=near(add(...ps),t);
+ else ok=near(ps[0],t[0])&&near(ps[1],t[1]);
  $('feedback').className=ok?'success':'retry';$('feedback').textContent=ok?'做到了！试着说一说你改变了什么。':'还差一点。看看圆点的位置和右侧数字，再试一次。';return ok;
 }
 $('tabs').innerHTML=Object.entries(lessons).map(([id,l])=>'<button data-mode="'+id+'" aria-selected="false">'+l[0]+'</button>').join('');

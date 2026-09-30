@@ -6,10 +6,11 @@ const playgroundEntries = new Set([
 const lessonEntries = {
   proofs: 'lessons/geometric-proofs/index.html',
   spaceflight: 'lessons/spaceflight/index.html',
-  'tangram-flat': 'lessons/tangram-flat/index.html'
+  'tangram-flat': 'lessons/tangram-flat/index.html',
+  'primary-math': 'lessons/primary-math/index.html'
 };
 
-// Permit only the existing local lessons and the six canonical experiment URLs.
+// Permit only the registered local lessons and the six canonical experiment URLs.
 // Query parameters must never widen the lesson path or select an unknown mode.
 export function isLocalActivityEntry(activity, baseURL) {
   const {entry, adapter} = activity;

@@ -44,7 +44,7 @@ try{
  }
  await page.setViewportSize({width:1500,height:1100});await page.goto(pathToFileURL(path.resolve('dist/MathPhysics-Geometry-Proofs.html')).href);await page.waitForFunction(()=>window.__mpReady===true);assert.equal(await page.locator('[data-lesson]').count(),24);await page.locator('[data-lesson="sphere"]').click();assert.match(await page.locator('h1').innerText(),/^球/);record('standalone-file');
  await page.locator('#play').click();await page.waitForTimeout(150);assert.ok(Number(await page.locator('#timeline').inputValue())>0);await page.locator('#play').click();const paused=await page.locator('#timeline').inputValue();await page.waitForTimeout(100);assert.equal(await page.locator('#timeline').inputValue(),paused);
- await page.locator('#formula-toggle').uncheck();assert.equal(await page.locator('#result-box').isHidden(),true);await page.locator('#formula-toggle').check();await page.locator('#grade-filter').selectOption('1');assert.equal(await page.locator('[data-lesson]').count(),1);record('controls');
+ await page.locator('#formula-toggle').uncheck();assert.equal(await page.locator('#result-box').isHidden(),true);await page.locator('#formula-toggle').check();await page.locator('#grade-filter').selectOption('3');assert.equal(await page.locator('[data-lesson]').count(),1);record('controls');
  assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);
 }catch(e){report.results.push({id:'suite-error',passed:false,error:e.stack});console.error(e);}
 finally{await browser?.close();server.kill();report.total=report.results.length;report.passed=report.total===29&&report.results.every(x=>x.passed);await fs.writeFile('docs/geometry-browser-report.json',JSON.stringify(report,null,2)+'\n');}

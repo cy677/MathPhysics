@@ -11,12 +11,12 @@ test('import configuration is validated and does not import executable paths',()
 test('license barriers are disclosed; unlicensed project is not vendored',()=>{assert.ok(inventory.excluded.some(x=>x.repository==='DennisWeiss/linear-transform-visualizer'));assert.ok(!fs.existsSync(path.join(root,'vendor/linear-transform-visualizer')));assert.ok(fs.existsSync(path.join(root,'vendor/tangram/LICENSE')));assert.ok(fs.existsSync(path.join(root,'vendor/matter/LICENSE')));});
 
 const experiments = [
-  ['jsx-triangle', 'triangle', 'geometry', [2, 3, 4, 5, 6]],
-  ['jsx-mirror', 'mirror', 'geometry', [1, 2, 3, 4, 5, 6]],
-  ['jsx-rotation', 'rotate', 'geometry', [2, 3, 4, 5, 6]],
-  ['jsx-scale', 'scale', 'geometry', [3, 4, 5, 6]],
-  ['jsx-vectors', 'vectors', 'vectors', [3, 4, 5, 6]],
-  ['jsx-linear', 'linear', 'vectors', [5, 6]]
+  ['jsx-triangle', 'triangle', 'geometry', [5]],
+  ['jsx-mirror', 'mirror', 'geometry', [2]],
+  ['jsx-rotation', 'rotate', 'geometry', [4]],
+  ['jsx-scale', 'scale', 'geometry', [6]],
+  ['jsx-vectors', 'vectors', 'vectors', [6]],
+  ['jsx-linear', 'linear', 'vectors', [6]]
 ];
 const experimentIds = experiments.map(([id]) => id);
 const recommended = [
@@ -29,13 +29,13 @@ const recommended = [
 
 test('six independently graded experiment entries share the playground without replacing existing activities', () => {
   const display = read('config/presentation.json');
-  assert.equal(local.activities.length, 10);
-  assert.equal(ids.length, 63);
+  assert.equal(local.activities.length, 11);
+  assert.equal(ids.length, 64);
   assert.deepEqual(defaults.openIds, recommended);
   assert.deepEqual(display.order.slice(0, recommended.length), recommended);
   assert.equal(new Set(display.order).size, display.order.length);
   assert.equal(local.activities.find(a => a.id === 'jsxgraph-playground').entry, 'lessons/jsxgraph-playground/index.html');
-  assert.equal(local.activities.find(a => a.id === 'tangram-flat').entry, 'lessons/tangram-flat/index.html');
+  assert.equal(local.activities.find(a => a.id === 'tangram-flat').entry, 'lessons/tangram-flat/index.html');\n  assert.equal(local.activities.find(a => a.id === 'tangram-flat').challengeCount, 6);\n  assert.equal(local.activities.find(a => a.id === 'geometry-proofs').questionCount, 48);
   for (const [id, mode, zone, grades] of experiments) {
     const activity = local.activities.find(a => a.id === id);
     assert.ok(activity, id);
@@ -44,7 +44,7 @@ test('six independently graded experiment entries share the playground without r
     assert.equal(activity.kind, 'construction');
     assert.equal(activity.zone, zone);
     assert.deepEqual(activity.grades, grades);
-    assert.equal(activity.lessonCount, 1);
+    assert.equal(activity.lessonCount, 1);\n    assert.equal(activity.challengeCount, 6);
     assert.equal(activity.completeUpstream, false);
     assert.equal(activity.progressMode, 'visit-only');
     assert.ok(activity.content.length > 0);
