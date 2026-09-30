@@ -28,7 +28,8 @@
       "lessonCount": 24,
       "completeUpstream": false,
       "origin": "original",
-      "playHint": "选一道题，拖动滑块改变条件，再播放变换。试着解释每一步。"
+      "playHint": "选一道题，拖动滑块改变条件，再播放变换。试着解释每一步。",
+      "questionCount": 48
     },
     {
       "id": "spaceflight",
@@ -90,7 +91,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 6
+      "lessonCount": 6,
+      "challengeCount": 36
     },
     {
       "id": "tangram-flat",
@@ -114,7 +116,8 @@
       "origin": "adapted",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 2
+      "lessonCount": 2,
+      "challengeCount": 6
     },
     {
       "id": "jsx-triangle",
@@ -139,7 +142,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 1
+      "lessonCount": 1,
+      "challengeCount": 6
     },
     {
       "id": "jsx-mirror",
@@ -163,7 +167,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 1
+      "lessonCount": 1,
+      "challengeCount": 6
     },
     {
       "id": "jsx-rotation",
@@ -187,7 +192,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 1
+      "lessonCount": 1,
+      "challengeCount": 6
     },
     {
       "id": "jsx-scale",
@@ -211,7 +217,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 1
+      "lessonCount": 1,
+      "challengeCount": 6
     },
     {
       "id": "jsx-vectors",
@@ -235,7 +242,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 1
+      "lessonCount": 1,
+      "challengeCount": 6
     },
     {
       "id": "jsx-linear",
@@ -259,7 +267,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 1
+      "lessonCount": 1,
+      "challengeCount": 6
     },
     {
       "id": "primary-math",
