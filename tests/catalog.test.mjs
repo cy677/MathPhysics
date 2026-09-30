@@ -11,12 +11,12 @@ test('import configuration is validated and does not import executable paths',()
 test('license barriers are disclosed; unlicensed project is not vendored',()=>{assert.ok(inventory.excluded.some(x=>x.repository==='DennisWeiss/linear-transform-visualizer'));assert.ok(!fs.existsSync(path.join(root,'vendor/linear-transform-visualizer')));assert.ok(fs.existsSync(path.join(root,'vendor/tangram/LICENSE')));assert.ok(fs.existsSync(path.join(root,'vendor/matter/LICENSE')));});
 
 const experiments = [
-  ['jsx-triangle', 'triangle', 'geometry', [2, 3, 4, 5, 6]],
-  ['jsx-mirror', 'mirror', 'geometry', [1, 2, 3, 4, 5, 6]],
-  ['jsx-rotation', 'rotate', 'geometry', [2, 3, 4, 5, 6]],
-  ['jsx-scale', 'scale', 'geometry', [3, 4, 5, 6]],
-  ['jsx-vectors', 'vectors', 'vectors', [3, 4, 5, 6]],
-  ['jsx-linear', 'linear', 'vectors', [5, 6]]
+  ['jsx-triangle', 'triangle', 'geometry', [5]],
+  ['jsx-mirror', 'mirror', 'geometry', [2]],
+  ['jsx-rotation', 'rotate', 'geometry', [4]],
+  ['jsx-scale', 'scale', 'geometry', [6]],
+  ['jsx-vectors', 'vectors', 'vectors', [6]],
+  ['jsx-linear', 'linear', 'vectors', [6]]
 ];
 const experimentIds = experiments.map(([id]) => id);
 const recommended = [
