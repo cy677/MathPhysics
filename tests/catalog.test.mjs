@@ -29,9 +29,9 @@ const recommended = [
 
 test('six independently graded experiment entries share the playground without replacing existing activities', () => {
   const display = read('config/presentation.json');
-  assert.equal(local.activities.length, 10);
-  assert.equal(ids.length, 63);
-  assert.deepEqual(defaults.openIds, recommended);
+  assert.equal(local.activities.length, 11);
+  assert.equal(ids.length, 64);
+  assert.deepEqual(defaults.openIds, [...recommended, 'question-bank']);
   assert.deepEqual(display.order.slice(0, recommended.length), recommended);
   assert.equal(new Set(display.order).size, display.order.length);
   assert.equal(local.activities.find(a => a.id === 'jsxgraph-playground').entry, 'lessons/jsxgraph-playground/index.html');
@@ -83,7 +83,7 @@ test('new experiments stay closed until individually selected and existing teach
     assert.deepEqual(state.visited, {'jsxgraph-playground': 123});
   }
   const fresh = loadState({getItem: () => null}, ids, defaults.openIds, defaults.revision);
-  assert.deepEqual(fresh.openIds, recommended);
+  assert.deepEqual(fresh.openIds, [...recommended, 'question-bank']);
   const chosen = parseSettings(JSON.stringify({schemaVersion: 1, openIds: ['jsx-scale', 'jsx-linear', 'jsx-scale']}), ids);
   assert.deepEqual(chosen, ['jsx-scale', 'jsx-linear']);
   const saved = loadState({getItem: () => JSON.stringify({openIds: chosen, visited: {'jsx-scale': 456}})}, ids, defaults.openIds, defaults.revision);

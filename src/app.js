@@ -4,9 +4,9 @@ import {isLocalActivityEntry} from './catalog.js';
 const $=id=>document.getElementById(id);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const storage={getItem:key=>window.localStorage.getItem(key),setItem:(key,value)=>window.localStorage.setItem(key,value)};
-const zones={geometry:'几何工坊',physics:'动力车间',vectors:'箭头港口'};
-const kinds={game:'趣味挑战',simulation:'互动实验',puzzle:'拼图探索',example:'物理游乐场',proof:'几何证明题集',mission:'太空任务',construction:'拖动几何'};
-const art={geometry:'△ ◇ ○',physics:'● ↗ ▰',vectors:'↗ ＋ →'};
+const zones={numbers:'中文题库',geometry:'几何工坊',physics:'动力车间',vectors:'箭头港口'};
+const kinds={practice:'数学练习',game:'趣味挑战',simulation:'互动实验',puzzle:'拼图探索',example:'物理游乐场',proof:'几何证明题集',mission:'太空任务',construction:'拖动几何'};
+const art={numbers:'＋ − × ÷',geometry:'△ ◇ ○',physics:'● ↗ ▰',vectors:'↗ ＋ →'};
 let inventory,defaults,state,ids,activities,zone='all',grade='all',query='',onlyOpen=true,current=null,frame=null,generation=0,timer,toastTimer;
 function toast(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4000);}
 function persist(){if(!saveState(storage,state))toast('浏览器未能保存设置，本次更改只在当前页面有效。');}
@@ -137,6 +137,8 @@ async function init(){
   const display=await displayResponse.json();
   if(display.schemaVersion!==1||!Array.isArray(display.order)||!display.activities)throw Error('活动目录格式错误');
   const order=new Map(display.order.map((id,index)=>[id,index]));
+  if(!order.has('question-bank'))order.set('question-bank',-1);
+  const bankFilter=document.createElement('button');bankFilter.type='button';bankFilter.dataset.zone='numbers';bankFilter.textContent='中文题库';$('zone-filter').append(bankFilter);
   activities=inventory.activities.map(a=>{const d=display.activities[a.id]||{};return {...a,title:typeof d.title==='string'?d.title:a.title,description:typeof d.description==='string'?d.description:a.description,playHint:typeof d.playHint==='string'?d.playHint:a.playHint};}).sort((a,b)=>(order.get(a.id)??1000)-(order.get(b.id)??1000));
   ids=activities.map(a=>a.id);
   state=loadState(storage,ids,defaults.openIds,defaults.revision);saveState(storage,state);wire();draw();

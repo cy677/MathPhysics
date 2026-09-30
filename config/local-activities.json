@@ -288,6 +288,37 @@
       "completeUpstream": false,
       "progressMode": "visit-only",
       "lessonCount": 1
+    },
+    {
+      "id": "question-bank",
+      "title": "中文题库工坊",
+      "zone": "numbers",
+      "kind": "practice",
+      "adapter": "question-bank",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "description": "选择知识点，生成中文练习，试试分步提示和不同难度。",
+      "content": [
+        "48个参数化题型",
+        "整数、分数与小数",
+        "测量、几何与应用题",
+        "自动判题",
+        "练习配方导入导出"
+      ],
+      "entry": "lessons/question-bank/index.html",
+      "source": "https://github.com/cy677/MathPhysics",
+      "license": "MIT (original Chinese generators; topic references only)",
+      "progressMode": "visit-only",
+      "generatorCount": 48,
+      "completeUpstream": false,
+      "origin": "original",
+      "playHint": "先选择题型和难度，再生成练习。种子不变可以复现同一组题目；需要帮助时逐步打开提示。"
     }
   ]
 }

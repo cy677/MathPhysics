@@ -17,7 +17,10 @@
     "build:spaceflight": "python3 scripts/build_spaceflight_standalone.py",
     "build:playground": "python3 scripts/build_playground_standalone.py",
     "test:classroom": "python3 tests/classroom-browser.py",
-    "test:classroom:inline": "python3 tests/classroom-browser.py --inline"
+    "test:classroom:inline": "python3 tests/classroom-browser.py --inline",
+    "generate:questions": "node scripts/generate_questions.mjs",
+    "test:questions": "node --test tests/question-bank*.test.mjs",
+    "test:questions:browser": "python3 tests/question-bank-browser.py"
   },
   "devDependencies": {
     "playwright": "1.56.0"
