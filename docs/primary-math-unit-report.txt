@@ -1,0 +1,340 @@
+TAP version 13
+# Subtest: pm-01: 给种子找空位
+ok 1 - pm-01: 给种子找空位
+  ---
+  duration_ms: 2.418843
+  type: 'test'
+  ...
+# Subtest: pm-02: 队伍中间的小熊
+ok 2 - pm-02: 队伍中间的小熊
+  ---
+  duration_ms: 0.21246
+  type: 'test'
+  ...
+# Subtest: pm-03: 捆起来再数
+ok 3 - pm-03: 捆起来再数
+  ---
+  duration_ms: 0.145789
+  type: 'test'
+  ...
+# Subtest: pm-04: 一一配对找差距
+ok 4 - pm-04: 一一配对找差距
+  ---
+  duration_ms: 0.149775
+  type: 'test'
+  ...
+# Subtest: pm-05: 小巴停靠两次
+ok 5 - pm-05: 小巴停靠两次
+  ---
+  duration_ms: 0.143486
+  type: 'test'
+  ...
+# Subtest: pm-06: 只收两种卡片
+ok 6 - pm-06: 只收两种卡片
+  ---
+  duration_ms: 0.184488
+  type: 'test'
+  ...
+# Subtest: pm-07: 按规则接车厢
+ok 7 - pm-07: 按规则接车厢
+  ---
+  duration_ms: 0.114593
+  type: 'test'
+  ...
+# Subtest: pm-08: 凑十搬家
+ok 8 - pm-08: 凑十搬家
+  ---
+  duration_ms: 0.064958
+  type: 'test'
+  ...
+# Subtest: pm-09: 满十换一捆
+ok 9 - pm-09: 满十换一捆
+  ---
+  duration_ms: 0.275786
+  type: 'test'
+  ...
+# Subtest: pm-10: 拆捆借个位
+ok 10 - pm-10: 拆捆借个位
+  ---
+  duration_ms: 0.257718
+  type: 'test'
+  ...
+# Subtest: pm-11: 相同的育苗小组
+ok 11 - pm-11: 相同的育苗小组
+  ---
+  duration_ms: 0.116456
+  type: 'test'
+  ...
+# Subtest: pm-12: 每袋一样多
+ok 12 - pm-12: 每袋一样多
+  ---
+  duration_ms: 0.062705
+  type: 'test'
+  ...
+# Subtest: pm-13: 满盒以后剩几块
+ok 13 - pm-13: 满盒以后剩几块
+  ---
+  duration_ms: 0.06023
+  type: 'test'
+  ...
+# Subtest: pm-14: 角币找零
+ok 14 - pm-14: 角币找零
+  ---
+  duration_ms: 0.070396
+  type: 'test'
+  ...
+# Subtest: pm-15: 离整点还有多久
+ok 15 - pm-15: 离整点还有多久
+  ---
+  duration_ms: 0.044407
+  type: 'test'
+  ...
+# Subtest: pm-16: 一颗星不止一个人
+ok 16 - pm-16: 一颗星不止一个人
+  ---
+  duration_ms: 0.040541
+  type: 'test'
+  ...
+# Subtest: pm-17: 一块拼板有多大
+ok 17 - pm-17: 一块拼板有多大
+  ---
+  duration_ms: 0.070206
+  type: 'test'
+  ...
+# Subtest: pm-18: 留下多少阅读时间
+ok 18 - pm-18: 留下多少阅读时间
+  ---
+  duration_ms: 0.051007
+  type: 'test'
+  ...
+# Subtest: pm-19: 跨过整点的预约
+ok 19 - pm-19: 跨过整点的预约
+  ---
+  duration_ms: 0.047942
+  type: 'test'
+  ...
+# Subtest: pm-20: 先统一尺子的单位
+ok 20 - pm-20: 先统一尺子的单位
+  ---
+  duration_ms: 0.045709
+  type: 'test'
+  ...
+# Subtest: pm-21: 价签之间的小空隙
+ok 21 - pm-21: 价签之间的小空隙
+  ---
+  duration_ms: 0.043936
+  type: 'test'
+  ...
+# Subtest: pm-22: 两张名单别数重
+ok 22 - pm-22: 两张名单别数重
+  ---
+  duration_ms: 0.143616
+  type: 'test'
+  ...
+# Subtest: pm-23: 饮品搭配表
+ok 23 - pm-23: 饮品搭配表
+  ---
+  duration_ms: 0.061413
+  type: 'test'
+  ...
+# Subtest: pm-24: 倍数带子剪一段
+ok 24 - pm-24: 倍数带子剪一段
+  ---
+  duration_ms: 0.04635
+  type: 'test'
+  ...
+# Subtest: pm-25: 换一种小数单位
+ok 25 - pm-25: 换一种小数单位
+  ---
+  duration_ms: 0.107422
+  type: 'test'
+  ...
+# Subtest: pm-26: 四舍五入的边界
+ok 26 - pm-26: 四舍五入的边界
+  ---
+  duration_ms: 0.055664
+  type: 'test'
+  ...
+# Subtest: pm-27: 零也要占位置
+ok 27 - pm-27: 零也要占位置
+  ---
+  duration_ms: 0.108694
+  type: 'test'
+  ...
+# Subtest: pm-28: 把小数点对齐
+ok 28 - pm-28: 把小数点对齐
+  ---
+  duration_ms: 0.058118
+  type: 'test'
+  ...
+# Subtest: pm-29: 读懂柱子的高度
+ok 29 - pm-29: 读懂柱子的高度
+  ---
+  duration_ms: 0.043265
+  type: 'test'
+  ...
+# Subtest: pm-30: 移一移变得同样多
+ok 30 - pm-30: 移一移变得同样多
+  ---
+  duration_ms: 0.042464
+  type: 'test'
+  ...
+# Subtest: pm-31: 修好放大的乘法
+ok 31 - pm-31: 修好放大的乘法
+  ---
+  duration_ms: 0.074051
+  type: 'test'
+  ...
+# Subtest: pm-32: 可以同时做的准备
+ok 32 - pm-32: 可以同时做的准备
+  ---
+  duration_ms: 0.058218
+  type: 'test'
+  ...
+# Subtest: pm-33: 不同分法的纸带
+ok 33 - pm-33: 不同分法的纸带
+  ---
+  duration_ms: 0.045027
+  type: 'test'
+  ...
+# Subtest: pm-34: 细分刻度不改长度
+ok 34 - pm-34: 细分刻度不改长度
+  ---
+  duration_ms: 0.039099
+  type: 'test'
+  ...
+# Subtest: pm-35: 尽量多的相同礼包
+ok 35 - pm-35: 尽量多的相同礼包
+  ---
+  duration_ms: 0.083897
+  type: 'test'
+  ...
+# Subtest: pm-36: 两盏灯再次碰面
+ok 36 - pm-36: 两盏灯再次碰面
+  ---
+  duration_ms: 0.044978
+  type: 'test'
+  ...
+# Subtest: pm-37: 按质量付钱
+ok 37 - pm-37: 按质量付钱
+  ---
+  duration_ms: 0.045368
+  type: 'test'
+  ...
+# Subtest: pm-38: 相同盒子里的秘密
+ok 38 - pm-38: 相同盒子里的秘密
+  ---
+  duration_ms: 0.040611
+  type: 'test'
+  ...
+# Subtest: pm-39: 每分钟的用水量
+ok 39 - pm-39: 每分钟的用水量
+  ---
+  duration_ms: 0.043175
+  type: 'test'
+  ...
+# Subtest: pm-40: 折线往上走了多少
+ok 40 - pm-40: 折线往上走了多少
+  ---
+  duration_ms: 0.039239
+  type: 'test'
+  ...
+# Subtest: pm-41: 一瓶里装几小杯
+ok 41 - pm-41: 一瓶里装几小杯
+  ---
+  duration_ms: 0.108644
+  type: 'test'
+  ...
+# Subtest: pm-42: 按份数配徽章
+ok 42 - pm-42: 按份数配徽章
+  ---
+  duration_ms: 0.054152
+  type: 'test'
+  ...
+# Subtest: pm-43: 从差距找一份
+ok 43 - pm-43: 从差距找一份
+  ---
+  duration_ms: 0.115454
+  type: 'test'
+  ...
+# Subtest: pm-44: 从完成量找原计划
+ok 44 - pm-44: 从完成量找原计划
+  ---
+  duration_ms: 0.088604
+  type: 'test'
+  ...
+# Subtest: pm-45: 先增加再减少
+ok 45 - pm-45: 先增加再减少
+  ---
+  duration_ms: 0.047982
+  type: 'test'
+  ...
+# Subtest: pm-46: 工作总量不变
+ok 46 - pm-46: 工作总量不变
+  ---
+  duration_ms: 0.330688
+  type: 'test'
+  ...
+# Subtest: pm-47: 人数不同不能直接平均
+ok 47 - pm-47: 人数不同不能直接平均
+  ---
+  duration_ms: 0.08644
+  type: 'test'
+  ...
+# Subtest: pm-48: 统计图中没写出的部分
+ok 48 - pm-48: 统计图中没写出的部分
+  ---
+  duration_ms: 0.069525
+  type: 'test'
+  ...
+# Subtest: 48 original tasks, eight per recommended grade, unique IDs/goals/prompts
+ok 49 - 48 original tasks, eight per recommended grade, unique IDs/goals/prompts
+  ---
+  duration_ms: 0.463679
+  type: 'test'
+  ...
+# Subtest: Input parser accepts equivalent forms without executing text
+ok 50 - Input parser accepts equivalent forms without executing text
+  ---
+  duration_ms: 0.30534
+  type: 'test'
+  ...
+# Subtest: Calculator rejects invalid syntax, nonfinite values and division by zero
+ok 51 - Calculator rejects invalid syntax, nonfinite values and division by zero
+  ---
+  duration_ms: 0.419993
+  type: 'test'
+  ...
+# Subtest: Known existing geometry/JSX/PhET exercise goals excluded
+ok 52 - Known existing geometry/JSX/PhET exercise goals excluded
+  ---
+  duration_ms: 0.386021
+  type: 'test'
+  ...
+# Subtest: Integration: original ten local activities preserved exactly
+ok 53 - Integration: original ten local activities preserved exactly
+  ---
+  duration_ms: 34.142183
+  type: 'test'
+  ...
+# Subtest: Integration: strict entry whitelist
+ok 54 - Integration: strict entry whitelist
+  ---
+  duration_ms: 1.569384
+  type: 'test'
+  ...
+# Subtest: Integration: readiness waits for explicit lesson flag
+ok 55 - Integration: readiness waits for explicit lesson flag
+  ---
+  duration_ms: 1.171184
+  type: 'test'
+  ...
+1..55
+# tests 55
+# suites 0
+# pass 55
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 105.402659

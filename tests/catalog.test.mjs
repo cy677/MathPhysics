@@ -29,8 +29,8 @@ const recommended = [
 
 test('six independently graded experiment entries share the playground without replacing existing activities', () => {
   const display = read('config/presentation.json');
-  assert.equal(local.activities.length, 10);
-  assert.equal(ids.length, 63);
+  assert.equal(local.activities.length, 11);
+  assert.equal(ids.length, 64);
   assert.deepEqual(defaults.openIds, recommended);
   assert.deepEqual(display.order.slice(0, recommended.length), recommended);
   assert.equal(new Set(display.order).size, display.order.length);

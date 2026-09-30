@@ -288,6 +288,40 @@
       "completeUpstream": false,
       "progressMode": "visit-only",
       "lessonCount": 1
+    },
+    {
+      "id": "primary-math",
+      "title": "数与生活",
+      "zone": "geometry",
+      "kind": "game",
+      "adapter": "primary-math",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "description": "摆一摆数量，拨一拨时钟，用图解开48个生活中的数学小挑战。",
+      "content": [
+        "数与运算",
+        "分数与小数",
+        "时间与测量",
+        "条形图建模",
+        "统计",
+        "人教版参考",
+        "苏教版参考",
+        "新加坡参考"
+      ],
+      "entry": "lessons/primary-math/index.html",
+      "source": "https://github.com/cy677/MathPhysics",
+      "license": "MIT (original questions, code and models)",
+      "origin": "original",
+      "completeUpstream": false,
+      "progressMode": "visit-only",
+      "lessonCount": 48,
+      "playHint": "选择年级和题目，先调整模型，再填写答案。试着用自己的话解释数量关系。"
     }
   ]
 }

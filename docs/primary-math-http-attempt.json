@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "scope": "new lesson and catalog/readiness iframe contract; not full host/vendor regression or physical iPad",
+  "timestamp": "2026-09-30T11:09:11.242389+00:00",
+  "cases": [],
+  "pageErrors": [],
+  "externalRequests": [],
+  "browser": "144.0.7559.96",
+  "error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:44237/lessons/primary-math/index.html\nCall log:\n  - navigating to \"http://127.0.0.1:44237/lessons/primary-math/index.html\", waiting until \"load\"\n"
+}
