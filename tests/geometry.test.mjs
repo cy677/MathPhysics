@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {LESSONS,SOURCES} from '../lessons/geometric-proofs/catalog.js';
-import {normalize,value,area,rotate,polygonArea,crossSection,coneSection,checkAnswer} from '../lessons/geometric-proofs/math.js';
+import {normalize,value,area,rotate,polygonArea,crossSection,coneSection,checkAnswer,extensionQuestion} from '../lessons/geometric-proofs/math.js';
 import {draw} from '../lessons/geometric-proofs/draw.js';
 const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} != ${b}`);
 test('24 lessons, valid sources, all drawings and answers finite at slider extremes',()=>{
@@ -14,6 +14,11 @@ test('24 lessons, valid sources, all drawings and answers finite at slider extre
    for(const p of [0,.25,.5,.75,1])assert.ok(!/NaN|undefined|Infinity/.test(draw(l.id,v,p)),l.id);
   }
  }
+});
+test('24 topics are assigned to one recommended grade and expose 48 distinct question forms',()=>{
+ const expected={rectangle:3,distributive:4,parallelogram:5,triangle:5,trapezoid:5,rhombus:5,cuboid:5,'cuboid-net':5};
+ for(const l of LESSONS){assert.equal(l.grades.length,1,l.id);assert.equal(l.grades[0],expected[l.id]||6,l.id);const v=normalize(l);const q=extensionQuestion(l,v);assert.ok(q.prompt.length>8&&Number.isFinite(q.answer)&&q.units);assert.notEqual(q.prompt,'使用当前参数，求本题目标图形的面积。');}
+ assert.equal(LESSONS.length*2,48);
 });
 test('normalization protects nonpositive widths and nonfinite parameters',()=>{
  for(const id of ['square-minus','difference-squares']){const l=LESSONS.find(x=>x.id===id),v=normalize(l,{a:3,b:5});assert.ok(v.a>v.b);}
