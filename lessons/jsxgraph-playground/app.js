@@ -108,12 +108,12 @@ function challengeTarget(){const t=challengeSets[mode][goal%challengeSets[mode].
 function setGoal(){
  invalidate();const i=goal%challengeSets[mode].length,t=challengeSets[mode][i];
  const text={
-  triangle:()=>\`拼一个面积为\${t}的三角形。\`,
-  mirror:()=>\`把A的镜像点移到（\${t[0]}，\${t[1]}）。\`,
-  rotate:()=>\`让图形绕原点逆时针转过\${t}°。\`,
-  scale:()=>\`让变化后面积变为原来的\${t}倍。\`,
-  vectors:()=>\`用两支箭头到达（\${t[0]}，\${t[1]}）。\`,
-  linear:()=>\`把横向一步变成（\${t[0].join('，')}），纵向一步变成（\${t[1].join('，')}）。\`
+  triangle:()=>`拼一个面积为${t}的三角形。`,
+  mirror:()=>`把A的镜像点移到（${t[0]}，${t[1]}）。`,
+  rotate:()=>`让图形绕原点逆时针转过${t}°。`,
+  scale:()=>`让变化后面积变为原来的${t}倍。`,
+  vectors:()=>`用两支箭头到达（${t[0]}，${t[1]}）。`,
+  linear:()=>`把横向一步变成（${t[0].join('，')}），纵向一步变成（${t[1].join('，')}）。`
  };
  $('challenge').textContent=text[mode]();if(board)board.update();
 }
@@ -126,7 +126,6 @@ function check(){
  else if(mode==='vectors')ok=near(add(...ps),t);
  else ok=near(ps[0],t[0])&&near(ps[1],t[1]);
  $('feedback').className=ok?'success':'retry';$('feedback').textContent=ok?'做到了！试着说一说你改变了什么。':'还差一点。看看圆点的位置和右侧数字，再试一次。';return ok;
-}
 }
 $('tabs').innerHTML=Object.entries(lessons).map(([id,l])=>'<button data-mode="'+id+'" aria-selected="false">'+l[0]+'</button>').join('');
 $('tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>create(b.dataset.mode));
