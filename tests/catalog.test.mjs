@@ -35,7 +35,7 @@ test('six independently graded experiment entries share the playground without r
   assert.deepEqual(display.order.slice(0, recommended.length), recommended);
   assert.equal(new Set(display.order).size, display.order.length);
   assert.equal(local.activities.find(a => a.id === 'jsxgraph-playground').entry, 'lessons/jsxgraph-playground/index.html');
-  assert.equal(local.activities.find(a => a.id === 'tangram-flat').entry, 'lessons/tangram-flat/index.html');
+  assert.equal(local.activities.find(a => a.id === 'tangram-flat').entry, 'lessons/tangram-flat/index.html');\n  assert.equal(local.activities.find(a => a.id === 'tangram-flat').challengeCount, 6);\n  assert.equal(local.activities.find(a => a.id === 'geometry-proofs').questionCount, 48);
   for (const [id, mode, zone, grades] of experiments) {
     const activity = local.activities.find(a => a.id === id);
     assert.ok(activity, id);
@@ -44,7 +44,7 @@ test('six independently graded experiment entries share the playground without r
     assert.equal(activity.kind, 'construction');
     assert.equal(activity.zone, zone);
     assert.deepEqual(activity.grades, grades);
-    assert.equal(activity.lessonCount, 1);
+    assert.equal(activity.lessonCount, 1);\n    assert.equal(activity.challengeCount, 6);
     assert.equal(activity.completeUpstream, false);
     assert.equal(activity.progressMode, 'visit-only');
     assert.ok(activity.content.length > 0);
