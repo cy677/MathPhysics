@@ -241,6 +241,30 @@
       "passed": true
     },
     {
+      "id": "jsx-triangle",
+      "passed": true
+    },
+    {
+      "id": "jsx-mirror",
+      "passed": true
+    },
+    {
+      "id": "jsx-rotation",
+      "passed": true
+    },
+    {
+      "id": "jsx-scale",
+      "passed": true
+    },
+    {
+      "id": "jsx-vectors",
+      "passed": true
+    },
+    {
+      "id": "jsx-linear",
+      "passed": true
+    },
+    {
       "id": "tablet-host-navigation",
       "passed": true
     }
@@ -251,5 +275,5 @@
     "Original simulations keep their own navigation; host records visits, not completion."
   ],
   "passed": true,
-  "total": 59
+  "total": 65
 }
