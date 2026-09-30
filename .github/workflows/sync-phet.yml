@@ -1,0 +1,30 @@
+name: Sync PhET standalone HTML
+on:
+  push:
+    branches: [feature/phet-expanded-20261001]
+    paths:
+      - modules/phet/**
+      - scripts/sync_phet.py
+      - .github/workflows/sync-phet.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/phet-expanded-20261001
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/sync_phet.py
+      - name: Commit synchronized published HTML
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vendor/phet modules/phet/lock.json
+          git diff --cached --quiet && exit 0
+          git commit -m "vendor: sync official PhET published HTML"
+          git push
