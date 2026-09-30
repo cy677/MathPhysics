@@ -6,9 +6,9 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="topbar"><a id="back-home" href="../../index.html">← 科学小岛</a><span class="wordmark">MathPhysics <b>看见公式</b></span><span class="edition">24 个动手发现</span></header>
+<header class="topbar"><a id="back-home" href="../../index.html">← 科学小岛</a><span class="wordmark">MathPhysics <b>看见公式</b></span><span class="edition">24 个主题 · 48 种问法</span></header>
 <div class="layout">
-<aside><details id="directory" open><summary>题目目录 <span>24</span></summary><div class="directory-body">
+<aside><details id="directory" open><summary>题目目录 <span>按年级</span></summary><div class="directory-body">
 <p class="aside-note">把公式拆开，看清每一步。</p>
 <label class="filter-label" for="group-filter">主题</label><select id="group-filter"><option value="all">全部主题</option><option value="area">面积工坊</option><option value="ratio">比例与相似</option><option value="algebra">代数拼图</option><option value="solid">立体空间</option></select>
 <label class="filter-label" for="grade-filter">推荐年级</label><select id="grade-filter"><option value="all">小学全年级 / 拓展</option><option value="1">一年级</option><option value="2">二年级</option><option value="3">三年级</option><option value="4">四年级</option><option value="5">五年级</option><option value="6">六年级</option></select>
@@ -24,7 +24,7 @@
 <div id="drawing"></div>
 <div class="transport"><button id="play" type="button" aria-label="播放或暂停演示">▶ 播放</button><label for="timeline">变换进度</label><input id="timeline" type="range" min="0" max="100" value="0" step="1"><output id="progress-label" for="timeline">0%</output><button id="restart" type="button">重置</button></div>
 </section>
-<section class="control-card" aria-label="参数控制"><h2>动手改变条件</h2><p>拖动滑块或用键盘方向键微调。</p><div id="parameters"></div><div class="result-box" id="result-box"><small>终点公式</small><div id="formula"></div><small>当前目标参数的计算结果</small><strong id="result"></strong></div><button id="new-example" type="button">换一组参数 ↻</button></section>
+<section class="control-card" aria-label="参数控制"><h2>动手改变条件</h2><p>拖动滑块或用键盘方向键微调。</p><div id="parameters"></div><div class="result-box" id="result-box"><small>终点公式</small><div id="formula"></div><small>当前目标参数的计算结果</small><strong id="result"></strong></div><div class="question-actions"><button id="new-question" type="button">换一种问法</button><button id="new-example" type="button">换一组参数 ↻</button></div></section>
 </div>
 <section class="reason-card"><div class="step-buttons" id="step-buttons"><button type="button" data-step="0">01 观察</button><button type="button" data-step="1">02 变换</button><button type="button" data-step="2">03 归纳</button></div><p id="explanation" aria-live="polite"></p><p id="condition" class="condition"></p></section>
 <section class="exercise"><div><span class="mini-title">试着算一题</span><h2 id="question"></h2><p>按上方目标参数作答；动画未播完也以终点为准。填数值或分数，小数保留两位，π 使用数学常数。</p></div><form id="practice"><label class="sr-only" for="answer">填写数值答案</label><input id="answer" type="text" inputmode="decimal" autocomplete="off" placeholder="你的答案"><button type="submit">核对</button><button id="reveal" type="button" class="subtle">看计算结果</button></form><p id="feedback" aria-live="polite"></p></section>
