@@ -96,5 +96,12 @@
       "entry": "vendor/phet/build-a-molecule.html"
     }
   ],
-  "licenseNote": "Preserve PhET notices. Verify each simulation/source/assets before redistribution; do not relabel the bundle as MIT."
+  "licenseNote": "Preserve PhET notices. Verify each simulation/source/assets before redistribution; do not relabel the bundle as MIT.",
+  "install": {
+    "windows": "Double-click GET_PHET_WINDOWS.bat after downloading/cloning this branch.",
+    "macLinux": "Run ./get_phet.sh from repository root.",
+    "output": "vendor/phet/",
+    "verification": "modules/phet/lock.json is generated with byte size and SHA-256 for each downloaded official published HTML."
+  },
+  "status": "ready-to-download; additions intentionally enter inventory only after official standalone files are present"
 }
