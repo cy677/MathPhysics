@@ -9,9 +9,11 @@ on:
       - 'config/**'
       - 'tests/**'
       - 'scripts/build_geometry_standalone.py'
+      - 'scripts/python.mjs'
+      - 'package.json'
       - '.github/workflows/geometry.yml'
   pull_request:
-    paths: ['lessons/**', 'src/**', 'config/**', 'tests/**']
+    paths: ['lessons/**', 'src/**', 'config/**', 'tests/**', 'scripts/python.mjs', 'package.json']
 permissions:
   contents: read
 jobs:
@@ -28,7 +30,7 @@ jobs:
           python-version: '3.12'
       - run: npm install --ignore-scripts
       - run: npm test
-      - run: python scripts/build_geometry_standalone.py
+      - run: npm run standalone:geometry
       - run: npx playwright install --with-deps chromium
       - run: node tests/geometry-browser.mjs
       - uses: actions/upload-artifact@v4

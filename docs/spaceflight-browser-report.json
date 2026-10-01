@@ -1,0 +1,718 @@
+{
+  "suite": "Chromium exact-standalone-HTML in-memory acceptance",
+  "results": [
+    {
+      "id": "standalone-bundle-render",
+      "passed": true,
+      "mode": "in-memory",
+      "runtimeRequests": 0
+    },
+    {
+      "id": "us-crew/prepare",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/launch",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/turn",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/maxq",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/fstage",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/upper",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/craftSep",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/activation",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/phase",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/approach",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/dock",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/stay",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/undock",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/deorbit",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/trunk",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/entry",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/chute",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/splash",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/finish",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-crew/parallel-recovery",
+      "passed": true
+    },
+    {
+      "id": "us-sat/prepare",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-sat/launch",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-sat/turn",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-sat/maxq",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-sat/fstage",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-sat/upper",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-sat/fairing",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-sat/deploy",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-sat/commission",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-sat/service",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "us-sat/parallel-recovery",
+      "passed": true
+    },
+    {
+      "id": "cn-crew/prepare",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/launch",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/turn",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/tower",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/boosters",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/cstage",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/fairing",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/upper",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/craftSep",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/activation",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/phase",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/approach",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/dock",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/stay",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/undock",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/orbitalSep",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/deorbit",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/serviceSep",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/entry",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/chute",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/land",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-crew/finish",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-sat/prepare",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-sat/launch",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-sat/turn",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-sat/cstage",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-sat/fairing",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-sat/third",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-sat/coast",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-sat/transfer",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-sat/deploy",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-sat/commission",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "cn-sat/service",
+      "passed": true,
+      "stageSeek": [
+        0,
+        1,
+        0.53
+      ]
+    },
+    {
+      "id": "lab/thrust",
+      "passed": true,
+      "sliderEndpoints": "all"
+    },
+    {
+      "id": "lab/staging",
+      "passed": true,
+      "sliderEndpoints": "all"
+    },
+    {
+      "id": "lab/orbit",
+      "passed": true,
+      "sliderEndpoints": "all"
+    },
+    {
+      "id": "lab/dock",
+      "passed": true,
+      "sliderEndpoints": "all"
+    },
+    {
+      "id": "lab/power",
+      "passed": true,
+      "sliderEndpoints": "all"
+    },
+    {
+      "id": "lab/freefall",
+      "passed": true,
+      "sliderEndpoints": "all"
+    },
+    {
+      "id": "lab/entry",
+      "passed": true,
+      "sliderEndpoints": "all"
+    },
+    {
+      "id": "lab/chute",
+      "passed": true,
+      "sliderEndpoints": "all"
+    },
+    {
+      "id": "diagram/f9",
+      "passed": true,
+      "structureCards": 3
+    },
+    {
+      "id": "diagram/dragon",
+      "passed": true,
+      "structureCards": 3
+    },
+    {
+      "id": "diagram/iss",
+      "passed": true,
+      "structureCards": 3
+    },
+    {
+      "id": "diagram/cz2f",
+      "passed": true,
+      "structureCards": 3
+    },
+    {
+      "id": "diagram/shenzhou",
+      "passed": true,
+      "structureCards": 3
+    },
+    {
+      "id": "diagram/tiangong",
+      "passed": true,
+      "structureCards": 3
+    },
+    {
+      "id": "diagram/cz3a",
+      "passed": true,
+      "structureCards": 3
+    },
+    {
+      "id": "wrong-and-correct-feedback",
+      "passed": true
+    },
+    {
+      "id": "explanation/junior",
+      "passed": true
+    },
+    {
+      "id": "explanation/middle",
+      "passed": true
+    },
+    {
+      "id": "explanation/senior",
+      "passed": true
+    },
+    {
+      "id": "play-pause-and-scrub",
+      "passed": true
+    },
+    {
+      "id": "docking-inertia-manual-pulse",
+      "passed": true
+    },
+    {
+      "id": "docking-autodemonstration-uses-same-model",
+      "passed": true,
+      "result": "docked",
+      "endVelocity": 0.1268986353264873,
+      "endOffset": 0.016954213133730193
+    },
+    {
+      "id": "notebook-input-and-graceful-storage-fallback",
+      "passed": true
+    },
+    {
+      "id": "24-source-notices",
+      "passed": true
+    },
+    {
+      "id": "viewport/1512",
+      "passed": true,
+      "journeyAndDockControls": "no horizontal overflow"
+    },
+    {
+      "id": "viewport/1024",
+      "passed": true,
+      "journeyAndDockControls": "no horizontal overflow"
+    },
+    {
+      "id": "viewport/390",
+      "passed": true,
+      "journeyAndDockControls": "no horizontal overflow"
+    },
+    {
+      "id": "no-uncaught-browser-errors-or-external-requests",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "The managed browser blocks file:// and localhost navigation. This test uses page.set_content with the exact bundled HTML bytes, not a real file:// or HTTP launch.",
+    "Viewport emulation is not a physical iPad Safari test.",
+    "Illustrations and numerical tests are not flight telemetry, a formally verified vehicle simulation, or pedagogical outcome validation.",
+    "Previous upstream assets are hash-checked by unit tests; their full browser suite is not repeated here."
+  ],
+  "total": 93,
+  "passed": true
+}

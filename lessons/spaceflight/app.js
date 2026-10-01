@@ -7,6 +7,9 @@ const validSeen=new Set(Object.values(D.missions).flatMap(m=>m.steps.map(s=>`${m
 const validAnswers=new Set(Object.values(D.missions).flatMap(m=>m.steps.filter(s=>s.quiz).map(s=>`${m.id}/${s.id}`)));
 let saved={seen:{},answers:{},labs:{},notes:'',level:'middle'};
 try{const q=JSON.parse(localStorage.getItem(D.storageKey)||'null');if(q&&q.version===1){for(const [key,allow] of [['seen',validSeen],['answers',validAnswers],['labs',new Set(D.labs.map(l=>l.id))]])if(q[key]&&typeof q[key]==='object')for(const id of Object.keys(q[key]))if(allow.has(id)&&q[key][id]===true)saved[key][id]=true;saved.notes=M.validateNote(q.notes);if(['junior','middle','senior'].includes(q.level))saved.level=q.level;}}catch{}
+const saveStatus=document.createElement('p');saveStatus.id='save-status';saveStatus.className='mp-save-status';saveStatus.setAttribute('role','status');$('rail-title').parentElement.after(saveStatus);
+const saves=window.MathPhysicsProgress.create('spaceflight',[...validAnswers,'lab/dock'],saveStatus);
+saves.importCompleted(Object.keys(saved.answers));
 let mission=D.missions['us-crew'],index=0,p=0,tab='journey',branch=false,playing=false,rate=1,labId='thrust',systemId='f9',part=0,values={},sim={},labRunning=false,last=performance.now(),drawAt=0,noteTimer,toastTimer;
 function toast(s){$('toast').textContent=s;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4000);}
 function persist(){try{localStorage.setItem(D.storageKey,JSON.stringify({version:1,...saved}));return true;}catch{return false;}}
@@ -15,7 +18,7 @@ function markSeen(){if(tab==='journey'&&!branch){saved.seen[`${mission.id}/${cur
 function refs(keys){$('step-sources').innerHTML=keys.map(k=>`<button data-source="${esc(k)}" title="${esc(D.sources[k]?.title||k)}">${esc((D.sources[k]?.title||k).split(' · ')[0])} ↗</button>`).join('');}
 function showSources(key){$('sources-dialog').showModal();if(key)requestAnimationFrame(()=>document.getElementById('source-'+key)?.scrollIntoView({block:'center'}));}
 function updateURL(){const q=new URLSearchParams({mission:mission.id,tab});if(tab==='journey')q.set('step',branch?'recovery':current().id);if(tab==='labs')q.set('lab',labId);if(tab==='systems')q.set('system',systemId);try{history.replaceState(null,'','#'+q.toString());}catch{}}
-function routeButtons(){document.documentElement.style.setProperty('--accent',mission.color);$('missions').innerHTML=Object.values(D.missions).map(m=>`<button class="mission-button ${m.id===mission.id?'active':''}" data-mission="${m.id}" aria-pressed="${m.id===mission.id}"><small>${esc(m.country)} · ${esc(m.tag)}</small><b>${esc(m.short)}</b><span>${esc(m.name)}</span></button>`).join('');$('route-note').textContent=mission.note;}
+function routeButtons(){document.documentElement.style.setProperty('--mission-accent',mission.color);$('missions').innerHTML=Object.values(D.missions).map(m=>`<button class="mission-button ${m.id===mission.id?'active':''}" data-mission="${m.id}" aria-pressed="${m.id===mission.id}"><small>${esc(m.country)} · ${esc(m.tag)}</small><b>${esc(m.short)}</b><span>${esc(m.name)}</span></button>`).join('');$('route-note').textContent=mission.note;}
 function itemButtons(){
  const arr=tab==='journey'?mission.steps:tab==='labs'?D.labs:D.systems;
  $('rail-title').textContent=tab==='journey'?'任务阶段':tab==='labs'?'原理实验':'飞行器与空间站';$('rail-count').textContent=arr.length+' 项';
@@ -45,17 +48,20 @@ function render(){
  $('workspace').hidden=tab==='notebook';$('notebook').hidden=tab!=='notebook';$('player').hidden=tab!=='journey';$('lab-controls').hidden=tab!=='labs';$('dock-controls').hidden=tab!=='labs'||labId!=='dock';$('lab-animation').hidden=tab!=='labs'||labId==='dock';
  $('lab-toggle').hidden=tab!=='labs'||!['orbit','freefall'].includes(labId);
  if(tab==='notebook')notebookInfo();else {markSeen();itemButtons();if(tab==='journey')journeyInfo();if(tab==='labs')labsInfo();if(tab==='systems')systemsInfo();paint();}updateURL();
+ saves.show(tab==='journey'?mission.id+'/'+current().id:tab==='labs'&&labId==='dock'?'lab/dock':null);
 }
 function tabTo(t){if(!['journey','labs','systems','notebook'].includes(t))return;setPlay(false);setLabRun(false);tab=t;if(t==='labs'&&!Object.keys(values).length)initLab(labId);if(t==='labs'){saved.labs[labId]=true;persist();}render();}
 function solveDock(dt){if(sim.dockResult!=='approaching')return;const d=sim.dock;
  if(sim.auto){const dist=Math.max(0,-d.x),target=Math.min(.8,Math.sqrt(.045*dist),dist*.43+.08);d.vx+=M.clamp((target-d.vx)*.85,-.15,.15)*dt;d.vy+=M.clamp(-.12*d.y-.85*d.vy,-.13,.13)*dt;values.angle*=Math.exp(-dt*.65);if(Math.abs(values.angle)<.15)values.angle=0;syncControls();}
  d.x+=d.vx*dt;d.y+=d.vy*dt;
- if(d.x>=-.2){sim.dockResult=M.dockStatus(d,values.angle);sim.needsPaint=true;setLabRun(false);sim.auto=false;toast(sim.dockResult==='docked'?'完成教学模型中的低速捕获。真实对接还需锁紧与气密检查。':'这次没有满足教学对接条件。观察偏差与速度，再试一次。');}
+ if(d.x>=-.2){sim.dockResult=M.dockStatus(d,values.angle);sim.needsPaint=true;setLabRun(false);sim.auto=false;if(sim.dockResult==='docked')saves.complete('lab/dock',{dock:{...d},angle:values.angle});toast(sim.dockResult==='docked'?'完成教学模型中的低速捕获。真实对接还需锁紧与气密检查。':'这次没有满足教学对接条件。观察偏差与速度，再试一次。');}
  if(d.x < -22 || Math.abs(d.y)>6){setLabRun(false);sim.auto=false;sim.dockResult='alignment';sim.needsPaint=true;toast('离开了教学操作区域，请重置再试。');}
 }
-function tick(now){const dt=Math.min((now-last)/1000,.05);last=now;
+function update(dt){
  if(playing&&tab==='journey'){p+=dt*rate/7.5;if(p>=1){p=1;if(!branch&&index<mission.steps.length-1){index++;p=0;render();}else {setPlay(false);sim.needsPaint=true;}}$('scrub').value=Math.round(p*1000);}
  if(labRunning&&tab==='labs'){sim.time+=dt;if(labId==='orbit'){sim.orbitPhase+=dt/19;if(sim.orbitPhase>=1){sim.orbitPhase=1;sim.needsPaint=true;setLabRun(false);}}if(labId==='dock')solveDock(dt*3);}
+}
+function tick(now){const dt=Math.min((now-last)/1000,.05);last=now;update(dt);
  if(now-drawAt>30&&((playing&&tab==='journey')||(labRunning&&tab==='labs'))){paint();drawAt=now;}
  // Paint the exact endpoint after a simulation stops, including a docking result.
  if(sim.needsPaint){paint();sim.needsPaint=false;}requestAnimationFrame(tick);
@@ -68,7 +74,7 @@ document.addEventListener('click',e=>{
  if(own(b.dataset,'item')){const i=Number(b.dataset.item);if(tab==='journey')goStep(i);if(tab==='labs')chooseLab(D.labs[i].id);if(tab==='systems'){systemId=D.systems[i].id;part=0;render();}return;}
  if(b.dataset.source){showSources(b.dataset.source);return;}
  if(own(b.dataset,'part')){part=Number(b.dataset.part);systemsInfo();paint();return;}
- if(own(b.dataset,'answer')){const q=current().quiz,n=Number(b.dataset.answer),key=mission.id+'/'+current().id;document.querySelectorAll('[data-answer]').forEach(el=>el.classList.remove('wrong','correct'));b.classList.add(n===q[2]?'correct':'wrong');$('quiz-feedback').textContent=(n===q[2]?'答对了。':'再想一想。')+q[3];if(n===q[2]){saved.answers[key]=true;persist();}return;}
+ if(own(b.dataset,'answer')){const q=current().quiz,n=Number(b.dataset.answer),key=mission.id+'/'+current().id;document.querySelectorAll('[data-answer]').forEach(el=>el.classList.remove('wrong','correct'));b.classList.add(n===q[2]?'correct':'wrong');$('quiz-feedback').textContent=(n===q[2]?'答对了。':'再想一想。')+q[3];if(n===q[2]){saved.answers[key]=true;persist();saves.complete(key);}return;}
  if(b.dataset.impulse&&tab==='labs'&&labId==='dock'){if(sim.dockResult!=='approaching')return;const k=b.dataset.impulse,d=sim.dock;if(k==='up')d.vy+=.08;if(k==='down')d.vy-=.08;if(k==='right')d.vx+=.08;if(k==='left')d.vx-=.08;sim.auto=false;paint();return;}
 });
 $('level').value=saved.level;$('level').onchange=e=>{saved.level=e.target.value;persist();render();};$('prev').onclick=()=>goStep(index-1);$('next').onclick=()=>goStep(index+1);$('play').onclick=()=>{if(p>=1)p=0;setPlay(!playing);};$('rate').onchange=e=>rate=Number(e.target.value);$('scrub').oninput=e=>{p=Number(e.target.value)/1000;setPlay(false);paint();};$('recovery').onclick=()=>{branch=true;p=0;setPlay(false);render();};$('return-journey').onclick=()=>{branch=false;p=0;setPlay(false);render();};$('try-lab').onclick=()=>chooseLab(current().lab);
@@ -81,5 +87,11 @@ $('export-notes').onclick=()=>{const content=['# 太空任务 · 探究记录','
 document.addEventListener('visibilitychange',()=>{if(document.hidden){setPlay(false);setLabRun(false);}});window.addEventListener('hashchange',onHash);
 // Expose observable, read-only snapshots for acceptance tests and future integration.
 window.SpaceClassroom={snapshot:()=>({mission:mission.id,index,step:current().id,tab,branch,p,playing,lab:labId,values:{...values},dock:sim.dock?{...sim.dock}:null,dockResult:sim.dockResult,auto:!!sim.auto,labRunning,system:systemId,level:saved.level}),counts:{missions:4,stages:Object.values(D.missions).reduce((n,m)=>n+m.steps.length,0),labs:8,systems:7}};
-initLab(labId);setSourceList();onHash();requestAnimationFrame(tick);window.__mpReady=true;if(parent!==window&&location.origin!=='null')parent.postMessage({type:'mp-ready'},location.origin);
+initLab(labId);setSourceList();
+const checkpoint=saves.resume();
+if(!location.hash&&checkpoint){if(checkpoint.levelId==='lab/dock'){initLab('dock');tab='labs';}else{const [m,s]=checkpoint.levelId.split('/');mission=D.missions[m];index=mission.steps.findIndex(a=>a.id===s);}routeButtons();render();}else onHash();
+if(checkpoint?.levelId==='lab/dock'&&tab==='labs'&&labId==='dock'){const d=checkpoint.dock;if(d&&['x','y','vx','vy'].every(k=>Number.isFinite(d[k]))&&Number.isFinite(checkpoint.angle)&&M.dockStatus(d,checkpoint.angle)==='docked'){sim.dock={...d};values.angle=checkpoint.angle;sim.dockResult='docked';render();}}
+window.render_game_to_text=()=>JSON.stringify({...window.SpaceClassroom.snapshot(),save:saves.snapshot()});
+window.advanceTime=ms=>{if(!Number.isFinite(ms)||ms<0)return;const steps=Math.ceil(ms/(1000/60));for(let i=0;i<steps;i++)update(ms/steps/1000);paint();sim.needsPaint=false;};
+requestAnimationFrame(tick);window.__mpReady=true;if(parent!==window&&location.origin!=='null')parent.postMessage({type:'mp-ready'},location.origin);
 })();

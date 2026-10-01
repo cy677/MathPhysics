@@ -1,0 +1,32 @@
+{
+  "standalone": {
+    "y": 7884,
+    "height": 8728,
+    "lastQuestion": {
+      "x": 16,
+      "y": 274.96875,
+      "width": 288,
+      "height": 528.640625,
+      "top": 274.96875,
+      "right": 304,
+      "bottom": 803.609375,
+      "left": 16
+    }
+  },
+  "embedded": {
+    "hostHeight": 2403,
+    "frameViewport": 646,
+    "frameScrollY": 7997,
+    "frameHeight": 8643,
+    "lastQuestion": {
+      "x": 16,
+      "y": 76.96875,
+      "width": 288,
+      "height": 528.640625,
+      "top": 76.96875,
+      "right": 304,
+      "bottom": 605.609375,
+      "left": 16
+    }
+  }
+}

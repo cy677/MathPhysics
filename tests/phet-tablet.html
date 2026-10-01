@@ -1,0 +1,6 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>1024×768 平板布局检查</title>
+<style>body{margin:12px;font:16px system-ui;background:#e7ebdf;color:#263d33}header{display:flex;gap:20px;align-items:center;height:44px}select{font:inherit;padding:6px}iframe{width:1024px;height:768px;border:0;display:block;transform:scale(.82);transform-origin:top left}</style>
+<header><strong>1024 × 768 平板布局检查</strong><label>实验 <select id="sim"><option value="host">科学小岛 · 搬运挑战</option value="forces-and-motion-basics">力与运动</option><option value="energy-skate-park-basics">滑板实验</option><option value="area-builder">面积实验</option><option value="vector-addition">向量实验</option></select></label></header>
+<iframe id="screen" title="1024×768 实验画面" src="../#activity/forces-and-motion-basics"></iframe>
+<script>document.querySelector('#sim').onchange=e=>{document.querySelector('#screen').src=e.target.value==='host'?'../#activity/forces-and-motion-basics':'../src/phet/generated/'+e.target.value+'.html?locale=zh_CN'};</script>
+</html>

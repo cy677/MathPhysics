@@ -1,0 +1,25 @@
+START PhET original/themed numerical runtime comparison
+PHET SUMMARY True 7
+START topics-grades-search-and-empty-state
+PASS topics-grades-search-and-empty-state
+START configuration-download-upload-and-invalid-inputs
+PASS configuration-download-upload-and-invalid-inputs
+START close-all-preview-and-restore
+PASS close-all-preview-and-restore
+START deep-link-help-reset-return-and-visit
+PASS deep-link-help-reset-return-and-visit
+START attribution-dialog-and-escape
+PASS attribution-dialog-and-escape
+START host-layout-390
+PASS host-layout-390
+START host-layout-768
+PASS host-layout-768
+START host-layout-1024
+PASS host-layout-1024
+START host-layout-1440
+PASS host-layout-1440
+START local-server-headers-and-content-types
+PASS local-server-headers-and-content-types
+START host-no-uncaught-errors-or-missing-local-assets
+PASS host-no-uncaught-errors-or-missing-local-assets
+HOST SUMMARY True 11

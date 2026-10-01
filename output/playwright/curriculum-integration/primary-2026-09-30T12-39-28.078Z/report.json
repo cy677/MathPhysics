@@ -1,0 +1,77 @@
+{
+  "suite": "Primary math curriculum browser acceptance",
+  "screenshots": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\curriculum-integration\\primary-2026-09-30T12-39-28.078Z",
+  "viewports": [],
+  "mapping": {
+    "grade": {
+      "grades": {
+        "1": 8,
+        "2": 8,
+        "3": 8,
+        "4": 8,
+        "5": 8,
+        "6": 8
+      },
+      "total": 48,
+      "unique": 48
+    },
+    "pep": {
+      "grades": {
+        "1": 8,
+        "2": 8,
+        "3": 8,
+        "4": 8,
+        "5": 8,
+        "6": 8
+      },
+      "total": 48,
+      "unique": 48
+    },
+    "sujiao": {
+      "grades": {
+        "1": 8,
+        "2": 8,
+        "3": 8,
+        "4": 6,
+        "5": 10,
+        "6": 8
+      },
+      "total": 48,
+      "unique": 48
+    },
+    "singapore": {
+      "grades": {
+        "1": 8,
+        "2": 6,
+        "3": 9,
+        "4": 9,
+        "5": 3,
+        "6": 9,
+        "拓展": 4
+      },
+      "total": 48,
+      "unique": 48
+    }
+  },
+  "interaction": {},
+  "host": {},
+  "limitations": [
+    "Chromium viewport emulation; no physical mobile Safari run."
+  ],
+  "questionCount": 48,
+  "theme": {
+    "background": "rgb(245, 243, 233)",
+    "ink": "rgb(38, 61, 51)",
+    "primary": "rgb(49, 93, 75)",
+    "buttonHeight": 50,
+    "token": "#315d4b"
+  },
+  "error": "page.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#question')\u001b[22m\n\u001b[2m    - locator resolved to <select id=\"question\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    59 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at C:\\Users\\cheng\\Desktop\\MathPhysics\\tests\\primary-curriculum-browser.mjs:71:95",
+  "passed": false,
+  "failures": [
+    {
+      "label": "Suite execution",
+      "detail": "page.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#question')\u001b[22m\n\u001b[2m    - locator resolved to <select id=\"question\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    59 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+    }
+  ]
+}

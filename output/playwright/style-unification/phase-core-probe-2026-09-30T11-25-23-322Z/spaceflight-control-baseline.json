@@ -1,0 +1,91 @@
+{
+  "accent": "#71ead0",
+  "selectors": {
+    "mission": [
+      {
+        "text": "美国发射体系 · 载人任务\n载人龙去空间站\n猎鹰9号 · 载人龙 · ISS",
+        "color": "rgb(38, 61, 51)",
+        "background": "rgb(231, 237, 223)",
+        "border": "rgb(49, 93, 75)",
+        "fontSize": "15px",
+        "height": 107.28125,
+        "width": 333,
+        "minHeight": "100px",
+        "contrast": 9.777415937754087
+      }
+    ],
+    "tabs": [
+      {
+        "text": "01 任务旅程",
+        "color": "rgb(113, 234, 208)",
+        "background": "rgb(231, 237, 223)",
+        "border": "rgb(113, 234, 208) rgb(113, 234, 208) rgb(49, 93, 75)",
+        "fontSize": "12px",
+        "height": 51.75,
+        "width": 128.375,
+        "minHeight": "48px",
+        "contrast": 1.222145803741416
+      }
+    ],
+    "play": [
+      {
+        "text": "▶ 播放",
+        "color": "rgb(255, 254, 249)",
+        "background": "rgb(49, 93, 75)",
+        "border": "rgb(49, 93, 75)",
+        "fontSize": "15px",
+        "height": 44,
+        "width": 75.390625,
+        "minHeight": "44px",
+        "contrast": 7.432854433621455
+      }
+    ],
+    "stats": [],
+    "labels": [
+      {
+        "text": "MATHPHYSICS / 科学小岛",
+        "color": "rgb(101, 117, 103)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgb(101, 117, 103)",
+        "fontSize": "11px",
+        "height": 14,
+        "width": 169.703125,
+        "minHeight": "0px",
+        "contrast": 4.293710729139377
+      },
+      {
+        "text": "MISSION CLASSROOM · 01",
+        "color": "rgb(101, 117, 103)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgb(101, 117, 103)",
+        "fontSize": "11px",
+        "height": 14,
+        "width": 189.296875,
+        "minHeight": "0px",
+        "contrast": 4.293710729139377
+      },
+      {
+        "text": "MISSION SEQUENCE · 任务流程",
+        "color": "rgb(101, 117, 103)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgb(101, 117, 103)",
+        "fontSize": "11px",
+        "height": 18.140625,
+        "width": 209.171875,
+        "minHeight": "auto",
+        "contrast": 4.293710729139377
+      },
+      {
+        "text": "FIELD NOTES",
+        "color": "rgb(101, 117, 103)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgb(101, 117, 103)",
+        "fontSize": "11px",
+        "height": 0,
+        "width": 0,
+        "minHeight": "0px",
+        "contrast": 4.293710729139377
+      }
+    ]
+  }
+}

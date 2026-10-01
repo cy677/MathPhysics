@@ -30,6 +30,22 @@ concurrency:
   group: classroom-${{ github.ref }}
   cancel-in-progress: true
 jobs:
+  python-entrypoints:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check Python detection and argument forwarding
+        run: node --test tests/python.test.mjs
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -47,21 +63,22 @@ jobs:
           npm test | tee docs/classroom-unit-report.txt
       - name: Build self-contained classroom files
         run: |
-          python scripts/build_geometry_standalone.py
-          python scripts/build_spaceflight_standalone.py
-          python scripts/build_playground_standalone.py
+          npm run standalone:geometry
+          npm run build:spaceflight
+          npm run build:playground
+          npm run build:primary
       - name: Install browser test dependency
         run: |
-          python -m pip install playwright==1.56.0
-          python -m playwright install --with-deps chromium
+          node scripts/python.mjs -m pip install playwright==1.56.0
+          node scripts/python.mjs -m playwright install --with-deps chromium
       - name: Verify real HTTP, file loading and interactions
-        run: python tests/classroom-browser.py
+        run: npm run test:classroom
       - name: Verify selectively integrated learning interactions
-        run: python tests/unique-features-browser.py
+        run: node scripts/python.mjs tests/unique-features-browser.py
       - name: Verify geometry lessons
         run: node tests/geometry-browser.mjs
       - name: Package offline classroom
-        run: python scripts/package.py
+        run: npm run package
       - uses: actions/upload-artifact@v4
         if: success()
         with:
@@ -72,6 +89,7 @@ jobs:
             dist/MathPhysics-Tangram.html
             dist/MathPhysics-Geometry-Proofs.html
             dist/MathPhysics-Spaceflight.html
+            dist/MathPhysics-Primary-Math.html
           retention-days: 30
       - uses: actions/upload-artifact@v4
         if: always()

@@ -4,26 +4,13 @@
   "openIds": [
     "jsxgraph-playground",
     "tangram-flat",
-    "matter-slingshot",
+    "physics-demos",
     "spaceflight",
     "geometry-proofs",
-    "matter-bridge",
-    "matter-car",
-    "matter-newtonsCradle",
-    "matter-catapult",
-    "matter-friction",
-    "matter-restitution",
-    "matter-ballPool",
-    "matter-pyramid",
-    "matter-cloth",
-    "matter-chains",
-    "matter-constraints",
-    "matter-stack",
-    "matter-gravity",
     "area-builder",
     "forces-and-motion-basics",
     "energy-skate-park-basics",
     "vector-addition"
   ],
-  "revision": "2026-09-v04"
+  "revision": "2026-09-v04-physics"
 }

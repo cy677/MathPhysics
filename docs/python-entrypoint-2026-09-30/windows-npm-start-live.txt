@@ -1,0 +1,6 @@
+
+> mathphysics-science-island@0.4.0 start
+> node scripts/python.mjs scripts/serve.py --port 8791
+
+MathPhysics: http://127.0.0.1:8791
+127.0.0.1 - - [30/Sep/2026 13:30:32] "GET / HTTP/1.1" 200 -

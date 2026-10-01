@@ -3,7 +3,7 @@ import {isLocalActivityEntry} from '../src/catalog.js';
 const root=path.resolve(import.meta.dirname,'..');const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const inventory=read('config/inventory.json'),defaults=read('config/defaults.json'),local=read('config/local-activities.json');const ids=[...inventory.activities,...local.activities].map(a=>a.id);
 test('all registered upstream Matter examples are catalogued, not sampled',()=>{const text=fs.readFileSync(path.join(root,'vendor/matter/examples/index.js'),'utf8');const names=[...text.matchAll(/\w+\s*:\s*require\(['"]\.\/([\w]+)\.js['"]\)/g)].map(m=>'matter-'+m[1]);assert.equal(names.length,48);for(const id of names)assert.ok(ids.includes(id),id);assert.equal(inventory.counts.matterExamples,names.length);});
-test('all four complete PhET simulations, all screens and tangram retained',()=>{assert.equal(inventory.counts.phetSimulations,4);assert.equal(inventory.counts.phetScreens,13);assert.equal(inventory.counts.areaBuilderDifficultyLevels,6);assert.ok(ids.includes('tangram'));for(const a of inventory.activities){assert.ok(fs.statSync(path.join(root,a.entry.split('?')[0])).isFile(),a.id);assert.equal(a.completeUpstream,true);assert.equal(a.progressMode,'visit-only');}for(const a of inventory.activities.filter(a=>a.adapter==='phet'))assert.ok(fs.statSync(path.join(root,a.entry.split('?')[0])).size>100000);});
+test('all ten complete PhET simulations, all screens and tangram retained',()=>{assert.equal(inventory.counts.phetSimulations,10);assert.equal(inventory.counts.phetScreens,28);assert.equal(inventory.counts.areaBuilderDifficultyLevels,6);assert.ok(ids.includes('tangram'));for(const a of inventory.activities){assert.ok(fs.statSync(path.join(root,a.entry.split('?')[0])).isFile(),a.id);assert.equal(a.completeUpstream,true);assert.equal(a.progressMode,'visit-only');}for(const a of inventory.activities.filter(a=>a.adapter==='phet'))assert.ok(fs.statSync(path.join(root,a.entry.split('?')[0])).size>100000);});
 test('exact upstream file bytes match complete inventory hashes',()=>{for(const [file,meta] of Object.entries(inventory.files)){const data=fs.readFileSync(path.join(root,file));assert.equal(data.length,meta.bytes,file);assert.equal(createHash('sha256').update(data).digest('hex'),meta.sha256,file);}});
 test('unique IDs, local entries, all elementary grades, initial subset only',()=>{assert.equal(new Set(ids).size,ids.length);assert.equal(ids.length,inventory.counts.launchableActivities+local.activities.length);assert.ok(defaults.openIds.length>0&&defaults.openIds.length<ids.length);for(const id of defaults.openIds)assert.ok(ids.includes(id));for(const a of inventory.activities){assert.ok(a.entry.startsWith('vendor/'));assert.ok(!a.entry.includes('..'));assert.ok(a.grades.length>0);assert.ok(a.grades.every(g=>Number.isInteger(g)&&g>=1&&g<=6));}for(let g=1;g<=6;g++)assert.ok(inventory.activities.some(a=>a.grades.includes(g)));});
 test('malformed storage and unknown entries cannot manufacture progression',()=>{const s=normalizeState({openIds:[ids[0],'unknown',ids[0]],visited:{[ids[0]]:123,unknown:99},teacherPreview:'true'},ids,defaults.openIds);assert.deepEqual(s.openIds,[ids[0]]);assert.deepEqual(s.visited,{[ids[0]]:123});assert.equal(s.teacherPreview,false);assert.deepEqual(loadState({getItem(){throw Error('disabled');}},ids,defaults.openIds).openIds,defaults.openIds);assert.equal(saveState({setItem(){throw Error('quota');}},s),false);});
@@ -11,31 +11,30 @@ test('import configuration is validated and does not import executable paths',()
 test('license barriers are disclosed; unlicensed project is not vendored',()=>{assert.ok(inventory.excluded.some(x=>x.repository==='DennisWeiss/linear-transform-visualizer'));assert.ok(!fs.existsSync(path.join(root,'vendor/linear-transform-visualizer')));assert.ok(fs.existsSync(path.join(root,'vendor/tangram/LICENSE')));assert.ok(fs.existsSync(path.join(root,'vendor/matter/LICENSE')));});
 
 const experiments = [
-  ['jsx-triangle', 'triangle', 'geometry', [2, 3, 4, 5, 6]],
-  ['jsx-mirror', 'mirror', 'geometry', [1, 2, 3, 4, 5, 6]],
-  ['jsx-rotation', 'rotate', 'geometry', [2, 3, 4, 5, 6]],
-  ['jsx-scale', 'scale', 'geometry', [3, 4, 5, 6]],
-  ['jsx-vectors', 'vectors', 'vectors', [3, 4, 5, 6]],
-  ['jsx-linear', 'linear', 'vectors', [5, 6]]
+  ['jsx-triangle', 'triangle', 'geometry', [5]],
+  ['jsx-mirror', 'mirror', 'geometry', [2]],
+  ['jsx-rotation', 'rotate', 'geometry', [4]],
+  ['jsx-scale', 'scale', 'geometry', [6]],
+  ['jsx-vectors', 'vectors', 'vectors', [6]],
+  ['jsx-linear', 'linear', 'vectors', [6]]
 ];
 const experimentIds = experiments.map(([id]) => id);
 const recommended = [
-  'jsxgraph-playground', 'tangram-flat', 'matter-slingshot', 'spaceflight', 'geometry-proofs',
-  'matter-bridge', 'matter-car', 'matter-newtonsCradle', 'matter-catapult', 'matter-friction',
-  'matter-restitution', 'matter-ballPool', 'matter-pyramid', 'matter-cloth', 'matter-chains',
-  'matter-constraints', 'matter-stack', 'matter-gravity', 'area-builder',
+  'jsxgraph-playground', 'tangram-flat', 'physics-demos', 'spaceflight', 'geometry-proofs', 'area-builder',
   'forces-and-motion-basics', 'energy-skate-park-basics', 'vector-addition'
 ];
 
 test('six independently graded experiment entries share the playground without replacing existing activities', () => {
   const display = read('config/presentation.json');
-  assert.equal(local.activities.length, 10);
-  assert.equal(ids.length, 63);
+  assert.equal(local.activities.length, 13);
+  assert.equal(ids.length, 72);
   assert.deepEqual(defaults.openIds, recommended);
   assert.deepEqual(display.order.slice(0, recommended.length), recommended);
   assert.equal(new Set(display.order).size, display.order.length);
   assert.equal(local.activities.find(a => a.id === 'jsxgraph-playground').entry, 'lessons/jsxgraph-playground/index.html');
   assert.equal(local.activities.find(a => a.id === 'tangram-flat').entry, 'lessons/tangram-flat/index.html');
+  assert.equal(local.activities.find(a => a.id === 'tangram-flat').challengeCount, 6);
+  assert.equal(local.activities.find(a => a.id === 'geometry-proofs').questionCount, 48);
   for (const [id, mode, zone, grades] of experiments) {
     const activity = local.activities.find(a => a.id === id);
     assert.ok(activity, id);
@@ -45,6 +44,7 @@ test('six independently graded experiment entries share the playground without r
     assert.equal(activity.zone, zone);
     assert.deepEqual(activity.grades, grades);
     assert.equal(activity.lessonCount, 1);
+    assert.equal(activity.challengeCount, 6);
     assert.equal(activity.completeUpstream, false);
     assert.equal(activity.progressMode, 'visit-only');
     assert.ok(activity.content.length > 0);
@@ -74,8 +74,8 @@ test('entry allowlist accepts exactly the six canonical mode URLs and preserves 
   }
 });
 
-test('new experiments stay closed until individually selected and existing teaching choices survive reload', () => {
-  const oldIds = ids.filter(id => !experimentIds.includes(id));
+test('legacy preference parsing remains compatible without losing existing visits', () => {
+  const oldIds = ids.filter(id => !experimentIds.includes(id) && !id.startsWith('matter-'));
   for (const openIds of [[], ['jsxgraph-playground'], ['spaceflight', 'geometry-proofs'], recommended, oldIds]) {
     const state = loadState({getItem: () => JSON.stringify({openIds, visited: {'jsxgraph-playground': 123}})}, ids, defaults.openIds, defaults.revision);
     assert.deepEqual(state.openIds, openIds);

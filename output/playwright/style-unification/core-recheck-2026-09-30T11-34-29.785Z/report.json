@@ -1,0 +1,13 @@
+{
+  "suite": "Style unification core page recheck",
+  "prefix": "/MathPhysics/",
+  "screenshots": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-34-29.785Z",
+  "pages": [],
+  "findings": [],
+  "limitations": [
+    "Chromium viewport emulation; no physical iPad/iPhone Safari check.",
+    "Tangram 3D and offline single-file builds are not included in this phase."
+  ],
+  "passed": false,
+  "error": "page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-launch]') to be visible\u001b[22m\n\n    at C:\\Users\\cheng\\Desktop\\MathPhysics\\tests\\style-unification-core.mjs:137:18"
+}

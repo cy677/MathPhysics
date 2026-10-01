@@ -1,0 +1,2245 @@
+{
+  "suite": "图形会变魔术：六模式 36 题、等底等高 6 题、提示、交互和响应式布局",
+  "startedAt": "2026-09-30T14:40:27.471Z",
+  "results": [
+    {
+      "id": "launch-and-renamed-next-button",
+      "passed": true
+    },
+    {
+      "id": "triangle-wrong-answer-actionable-hint",
+      "passed": true,
+      "hint": "现在面积是4，还需增大2。面积＝底×高÷2。\n一种做法：把 A 移到（0，0），B 移到（4，0），C 移到（1，3），得到4×3÷2＝6。\n可在画板下方选择“移动点”，用方向按钮微调；每次移动四分之一格。"
+    },
+    {
+      "id": "triangle-retry-hint-survives-and-updates-on-adjustment",
+      "passed": true,
+      "before": "现在面积是4，还需增大2。面积＝底×高÷2。\n一种做法：把 A 移到（0，0），B 移到（4，0），C 移到（1，3），得到4×3÷2＝6。\n可在画板下方选择“移动点”，用方向按钮微调；每次移动四分之一格。",
+      "after": "现在面积是4.5，还需增大1.5。面积＝底×高÷2。\n一种做法：把 A 移到（0，0），B 移到（4，0），C 移到（1，3），得到4×3÷2＝6。\n可在画板下方选择“移动点”，用方向按钮微调；每次移动四分之一格。"
+    },
+    {
+      "id": "triangle-question-1-of-6",
+      "passed": true,
+      "target": 6,
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-question-1-success-1200x900.png"
+    },
+    {
+      "id": "triangle-question-2-of-6",
+      "passed": true,
+      "target": 4
+    },
+    {
+      "id": "triangle-question-3-of-6",
+      "passed": true,
+      "target": 8
+    },
+    {
+      "id": "triangle-question-4-of-6",
+      "passed": true,
+      "target": 10
+    },
+    {
+      "id": "triangle-question-5-of-6",
+      "passed": true,
+      "target": 12,
+      "pointVisibility": {
+        "x": 352.41176470588243,
+        "y": 58.58823529411768,
+        "width": 822,
+        "height": 498,
+        "user": [
+          1,
+          6
+        ]
+      },
+      "edgeScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-12-c-height-6-1200x900.png"
+    },
+    {
+      "id": "triangle-question-6-of-6",
+      "passed": true,
+      "target": 3,
+      "pointVisibility": {
+        "x": 339.8571428571428,
+        "y": 284.57142857142856,
+        "width": 822,
+        "height": 498,
+        "user": [
+          1,
+          1.5
+        ]
+      },
+      "edgeScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-3-c-height-1-5-1200x900.png"
+    },
+    {
+      "id": "triangle-next-question-wraps-to-first",
+      "passed": true
+    },
+    {
+      "id": "mirror-wrong-answer-actionable-hint",
+      "passed": true,
+      "hint": "现在 A′ 在（4，1），目标是（3，2）。镜子位于 x＝0，对应点到镜子的距离相等，高度相同。\n保持镜子不动，把 A 移到（-3，2）。选“A”，向右1格、向上1格。"
+    },
+    {
+      "id": "mirror-retry-hint-survives-and-updates-on-adjustment",
+      "passed": true,
+      "before": "现在 A′ 在（4，1），目标是（3，2）。镜子位于 x＝0，对应点到镜子的距离相等，高度相同。\n保持镜子不动，把 A 移到（-3，2）。选“A”，向右1格、向上1格。",
+      "after": "现在 A′ 在（3.75，1），目标是（3，2）。镜子位于 x＝0，对应点到镜子的距离相等，高度相同。\n保持镜子不动，把 A 移到（-3，2）。选“A”，向右0.75格、向上1格。"
+    },
+    {
+      "id": "mirror-hint-updates-after-moving-the-mirror",
+      "passed": true,
+      "hint": "现在 A′ 在（4.75，1），目标是（3，2）。镜子位于 x＝0.5，对应点到镜子的距离相等，高度相同。\n保持镜子不动，把 A 移到（-2，2）。选“A”，向右1.75格、向上1格。"
+    },
+    {
+      "id": "mirror-question-1-of-6",
+      "passed": true,
+      "target": [
+        3,
+        2
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\mirror-question-1-success-1200x900.png"
+    },
+    {
+      "id": "mirror-question-2-of-6",
+      "passed": true,
+      "target": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "mirror-question-3-of-6",
+      "passed": true,
+      "target": [
+        4,
+        1
+      ]
+    },
+    {
+      "id": "mirror-question-4-of-6",
+      "passed": true,
+      "target": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "mirror-question-5-of-6",
+      "passed": true,
+      "target": [
+        -2,
+        2
+      ],
+      "edgeScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-12-c-height-6-1200x900.png"
+    },
+    {
+      "id": "mirror-question-6-of-6",
+      "passed": true,
+      "target": [
+        0,
+        3
+      ],
+      "geometryScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\mirror-question-6-target-overlap-1200x900.png",
+      "edgeScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-3-c-height-1-5-1200x900.png"
+    },
+    {
+      "id": "mirror-next-question-wraps-to-first",
+      "passed": true
+    },
+    {
+      "id": "rotate-wrong-answer-actionable-hint",
+      "passed": true,
+      "hint": "现在逆时针转了90°，目标是180°。\n把“旋转角度”滑块调到180。180° 是半圈。正角度表示逆时针。"
+    },
+    {
+      "id": "rotate-retry-hint-survives-and-updates-on-adjustment",
+      "passed": true,
+      "before": "现在逆时针转了90°，目标是180°。\n把“旋转角度”滑块调到180。180° 是半圈。正角度表示逆时针。",
+      "after": "现在逆时针转了105°，目标是180°。\n把“旋转角度”滑块调到180。180° 是半圈。正角度表示逆时针。"
+    },
+    {
+      "id": "rotate-question-1-of-6",
+      "passed": true,
+      "target": 180,
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\rotate-question-1-success-1200x900.png"
+    },
+    {
+      "id": "rotate-question-2-of-6",
+      "passed": true,
+      "target": 270
+    },
+    {
+      "id": "rotate-question-3-of-6",
+      "passed": true,
+      "target": 90
+    },
+    {
+      "id": "rotate-question-4-of-6",
+      "passed": true,
+      "target": 360
+    },
+    {
+      "id": "rotate-question-5-of-6",
+      "passed": true,
+      "target": 45,
+      "edgeScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-12-c-height-6-1200x900.png"
+    },
+    {
+      "id": "rotate-question-6-of-6",
+      "passed": true,
+      "target": 135,
+      "edgeScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-3-c-height-1-5-1200x900.png"
+    },
+    {
+      "id": "rotate-next-question-wraps-to-first",
+      "passed": true
+    },
+    {
+      "id": "scale-wrong-answer-actionable-hint",
+      "passed": true,
+      "hint": "原图的三个点太接近或排成一条线，先把 A 移到（1，1），B 移到（3，1），C 移到（1，3），拼出有面积的三角形。\n现在面积倍数为2.25，目标为4。面积倍数＝边长倍数×边长倍数。\n把“边长倍数”滑块调到2，因为2×2＝4。"
+    },
+    {
+      "id": "scale-retry-hint-survives-and-updates-on-adjustment",
+      "passed": true,
+      "before": "原图的三个点太接近或排成一条线，先把 A 移到（1，1），B 移到（3，1），C 移到（1，3），拼出有面积的三角形。\n现在面积倍数为2.25，目标为4。面积倍数＝边长倍数×边长倍数。\n把“边长倍数”滑块调到2，因为2×2＝4。",
+      "after": "原图的三个点太接近或排成一条线，先把 A 移到（1，1），B 移到（3，1），C 移到（1，3），拼出有面积的三角形。\n现在面积倍数为3.0625，目标为4。面积倍数＝边长倍数×边长倍数。\n把“边长倍数”滑块调到2，因为2×2＝4。"
+    },
+    {
+      "id": "scale-question-1-of-6",
+      "passed": true,
+      "target": 4,
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\scale-question-1-success-1200x900.png"
+    },
+    {
+      "id": "scale-question-2-of-6",
+      "passed": true,
+      "target": 2.25
+    },
+    {
+      "id": "scale-question-3-of-6",
+      "passed": true,
+      "target": 1,
+      "geometryScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\scale-area-factor-1-overlap-1200x900.png"
+    },
+    {
+      "id": "scale-question-4-of-6",
+      "passed": true,
+      "target": 0.25
+    },
+    {
+      "id": "scale-question-5-of-6",
+      "passed": true,
+      "target": 6.25,
+      "edgeScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-12-c-height-6-1200x900.png"
+    },
+    {
+      "id": "scale-question-6-of-6",
+      "passed": true,
+      "target": 1.5625,
+      "edgeScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-3-c-height-1-5-1200x900.png"
+    },
+    {
+      "id": "scale-next-question-wraps-to-first",
+      "passed": true
+    },
+    {
+      "id": "vectors-wrong-answer-actionable-hint",
+      "passed": true,
+      "hint": "现在终点在（3，3），目标是（4，3）。两支箭头的横向、纵向分量分别相加。\n保留橙色箭头（2，1），把蓝色箭头改到（2，2）。选“蓝色箭头”，向右1格。"
+    },
+    {
+      "id": "vectors-retry-hint-survives-and-updates-on-adjustment",
+      "passed": true,
+      "before": "现在终点在（3，3），目标是（4，3）。两支箭头的横向、纵向分量分别相加。\n保留橙色箭头（2，1），把蓝色箭头改到（2，2）。选“蓝色箭头”，向右1格。",
+      "after": "现在终点在（3.25，3），目标是（4，3）。两支箭头的横向、纵向分量分别相加。\n保留橙色箭头（2，1），把蓝色箭头改到（2，2）。选“蓝色箭头”，向右0.75格。"
+    },
+    {
+      "id": "vectors-question-1-of-6",
+      "passed": true,
+      "target": [
+        4,
+        3
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\vectors-question-1-success-1200x900.png"
+    },
+    {
+      "id": "vectors-question-2-of-6",
+      "passed": true,
+      "target": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "vectors-question-3-of-6",
+      "passed": true,
+      "target": [
+        5,
+        2
+      ]
+    },
+    {
+      "id": "vectors-question-4-of-6",
+      "passed": true,
+      "target": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "vectors-question-5-of-6",
+      "passed": true,
+      "target": [
+        1,
+        4
+      ],
+      "edgeScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-12-c-height-6-1200x900.png"
+    },
+    {
+      "id": "vectors-question-6-of-6",
+      "passed": true,
+      "target": [
+        4,
+        1
+      ],
+      "edgeScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-3-c-height-1-5-1200x900.png"
+    },
+    {
+      "id": "vectors-next-question-wraps-to-first",
+      "passed": true
+    },
+    {
+      "id": "linear-wrong-answer-actionable-hint",
+      "passed": true,
+      "hint": "横向一步现在是（1.5，0.5），目标是（2，0）；纵向一步现在是（0.5，1.5），目标是（0，1）。\n点击“拉伸”就能得到这组方向。可在画板下方选择要调整的箭头，用方向按钮微调。"
+    },
+    {
+      "id": "linear-retry-hint-survives-and-updates-on-adjustment",
+      "passed": true,
+      "before": "横向一步现在是（1.5，0.5），目标是（2，0）；纵向一步现在是（0.5，1.5），目标是（0，1）。\n点击“拉伸”就能得到这组方向。可在画板下方选择要调整的箭头，用方向按钮微调。",
+      "after": "横向一步现在是（0，1），目标是（2，0）；纵向一步现在是（-1，0），目标是（0，1）。\n点击“拉伸”就能得到这组方向。可在画板下方选择要调整的箭头，用方向按钮微调。"
+    },
+    {
+      "id": "linear-question-1-of-6",
+      "passed": true,
+      "target": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\linear-question-1-success-1200x900.png"
+    },
+    {
+      "id": "linear-question-2-of-6",
+      "passed": true,
+      "target": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "linear-question-3-of-6",
+      "passed": true,
+      "target": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "linear-question-4-of-6",
+      "passed": true,
+      "target": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "id": "linear-question-5-of-6",
+      "passed": true,
+      "target": [
+        [
+          1,
+          0.5
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "edgeScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-12-c-height-6-1200x900.png"
+    },
+    {
+      "id": "linear-question-6-of-6",
+      "passed": true,
+      "target": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "edgeScreenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-3-c-height-1-5-1200x900.png"
+    },
+    {
+      "id": "linear-next-question-wraps-to-first",
+      "passed": true
+    },
+    {
+      "id": "equal-height-wrong-answer-actionable-hint",
+      "passed": true,
+      "hint": "现在面积是4，目标是6。底边固定为4，面积＝4×高÷2，所以高应为3。\n把“三角形的高”滑块调到3。左右移动 C 只改变形状，不改变面积。"
+    },
+    {
+      "id": "triangle-equal-height-question-1-of-6",
+      "passed": true,
+      "targetArea": 6,
+      "height": 3,
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-equal-height-question-1-success-1200x900.png"
+    },
+    {
+      "id": "triangle-equal-height-question-2-of-6",
+      "passed": true,
+      "targetArea": 4,
+      "height": 2
+    },
+    {
+      "id": "triangle-equal-height-question-3-of-6",
+      "passed": true,
+      "targetArea": 8,
+      "height": 4
+    },
+    {
+      "id": "triangle-equal-height-question-4-of-6",
+      "passed": true,
+      "targetArea": 10,
+      "height": 5
+    },
+    {
+      "id": "triangle-equal-height-question-5-of-6",
+      "passed": true,
+      "targetArea": 12,
+      "height": 6
+    },
+    {
+      "id": "triangle-equal-height-question-6-of-6",
+      "passed": true,
+      "targetArea": 3,
+      "height": 1.5
+    },
+    {
+      "id": "refresh-restores-equal-height-checkpoint",
+      "passed": true,
+      "restored": {
+        "mode": "triangle",
+        "goal": 5,
+        "triangleMode": "equal-height",
+        "value": 1.5,
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            1.5000000919204162,
+            1.5
+          ]
+        ],
+        "readings": {
+          "area": 3,
+          "angles": [
+            44.99999824444943,
+            30.963757461482714,
+            104.03624429406788
+          ],
+          "height": 1.5
+        },
+        "save": {
+          "schemaVersion": 1,
+          "completed": {
+            "triangle/0": 1790779229823,
+            "triangle/1": 1790779230823,
+            "triangle/2": 1790779231740,
+            "triangle/3": 1790779232657,
+            "triangle/4": 1790779233940,
+            "triangle/5": 1790779234906,
+            "mirror/0": 1790779235789,
+            "mirror/1": 1790779236222,
+            "mirror/2": 1790779236573,
+            "mirror/3": 1790779236922,
+            "mirror/4": 1790779237272,
+            "mirror/5": 1790779237674,
+            "rotate/0": 1790779238057,
+            "rotate/1": 1790779238256,
+            "rotate/2": 1790779238390,
+            "rotate/3": 1790779238540,
+            "rotate/4": 1790779238656,
+            "rotate/5": 1790779238823,
+            "scale/0": 1790779240805,
+            "scale/1": 1790779240973,
+            "scale/2": 1790779241089,
+            "scale/3": 1790779241239,
+            "scale/4": 1790779241355,
+            "scale/5": 1790779241523,
+            "vectors/0": 1790779242906,
+            "vectors/1": 1790779243622,
+            "vectors/2": 1790779244255,
+            "vectors/3": 1790779244890,
+            "vectors/4": 1790779245523,
+            "vectors/5": 1790779246206,
+            "linear/0": 1790779247589,
+            "linear/1": 1790779248305,
+            "linear/2": 1790779248938,
+            "linear/3": 1790779249572,
+            "linear/4": 1790779250205,
+            "linear/5": 1790779250889
+          },
+          "checkpoint": {
+            "value": 1.5,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                1.5000000919204162,
+                1.5
+              ]
+            ],
+            "triangleMode": "equal-height",
+            "levelId": "triangle/5"
+          }
+        }
+      }
+    },
+    {
+      "id": "triangle-equal-height-next-question-wraps-to-first",
+      "passed": true
+    },
+    {
+      "id": "triangle-collinear-degenerate",
+      "passed": true,
+      "readings": "面积\n0\n\n三个点排成一条线了，试着移开一个点。",
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-collinear-degenerate-1200x900.png"
+    },
+    {
+      "id": "linear-collinear-degenerate",
+      "passed": true,
+      "readings": "1  2\n0  0\n面积倍数\n0\n\n格子压成一条线了！面积变成0。",
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\linear-collinear-degenerate-1200x900.png"
+    },
+    {
+      "id": "layout-1200-triangle",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 1200,
+          "height": 900
+        },
+        "documentWidth": 1200,
+        "board": {
+          "left": 24,
+          "right": 848,
+          "top": 213.015625,
+          "bottom": 858.8125,
+          "width": 824,
+          "height": 645.796875
+        },
+        "aside": {
+          "left": 866,
+          "right": 1176,
+          "top": 213.015625,
+          "bottom": 858.8125,
+          "width": 310,
+          "height": 645.796875
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 885,
+          "right": 1154,
+          "top": 635.96875,
+          "bottom": 662.359375,
+          "width": 269,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 885,
+          "right": 1154,
+          "top": 676.359375,
+          "bottom": 724.359375,
+          "width": 269,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 822,
+          "height": 498
+        },
+        "points": [
+          {
+            "x": 268.71428571428567,
+            "y": 391.2857142857143
+          },
+          {
+            "x": 553.2857142857142,
+            "y": 391.2857142857143
+          },
+          {
+            "x": 339.8571428571428,
+            "y": 177.85714285714286
+          }
+        ],
+        "target": null,
+        "directionTargets": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-1200-mirror",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 1200,
+          "height": 900
+        },
+        "documentWidth": 1200,
+        "board": {
+          "left": 24,
+          "right": 848,
+          "top": 213.015625,
+          "bottom": 858.8125,
+          "width": 824,
+          "height": 645.796875
+        },
+        "aside": {
+          "left": 866,
+          "right": 1176,
+          "top": 213.015625,
+          "bottom": 858.8125,
+          "width": 310,
+          "height": 645.796875
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 885,
+          "right": 1154,
+          "top": 652.765625,
+          "bottom": 679.15625,
+          "width": 269,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 885,
+          "right": 1154,
+          "top": 693.15625,
+          "bottom": 741.15625,
+          "width": 269,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 822,
+          "height": 498
+        },
+        "points": [
+          {
+            "x": 109.59999999999997,
+            "y": 303.8
+          },
+          {
+            "x": 273.99999999999994,
+            "y": 303.8
+          },
+          {
+            "x": 164.39999999999998,
+            "y": 139.39999999999998
+          }
+        ],
+        "target": {
+          "x": 493.19999999999993,
+          "y": 249
+        },
+        "directionTargets": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\mirror-desktop-target-1200x900.png"
+    },
+    {
+      "id": "layout-1200-rotate",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 1200,
+          "height": 900
+        },
+        "documentWidth": 1200,
+        "board": {
+          "left": 24,
+          "right": 848,
+          "top": 213.015625,
+          "bottom": 858.8125,
+          "width": 824,
+          "height": 645.796875
+        },
+        "aside": {
+          "left": 866,
+          "right": 1176,
+          "top": 213.015625,
+          "bottom": 858.8125,
+          "width": 310,
+          "height": 645.796875
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 885,
+          "right": 1154,
+          "top": 592.578125,
+          "bottom": 618.96875,
+          "width": 269,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 885,
+          "right": 1154,
+          "top": 632.96875,
+          "bottom": 680.96875,
+          "width": 269,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 822,
+          "height": 498
+        },
+        "points": [
+          {
+            "x": 460.8,
+            "y": 199.2
+          },
+          {
+            "x": 560.4,
+            "y": 199.2
+          },
+          {
+            "x": 460.8,
+            "y": 99.60000000000002
+          }
+        ],
+        "target": null,
+        "directionTargets": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-1200-scale",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 1200,
+          "height": 900
+        },
+        "documentWidth": 1200,
+        "board": {
+          "left": 24,
+          "right": 848,
+          "top": 213.015625,
+          "bottom": 858.8125,
+          "width": 824,
+          "height": 645.796875
+        },
+        "aside": {
+          "left": 866,
+          "right": 1176,
+          "top": 213.015625,
+          "bottom": 858.8125,
+          "width": 310,
+          "height": 645.796875
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 885,
+          "right": 1154,
+          "top": 631.96875,
+          "bottom": 658.359375,
+          "width": 269,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 885,
+          "right": 1154,
+          "top": 672.359375,
+          "bottom": 720.359375,
+          "width": 269,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 822,
+          "height": 498
+        },
+        "points": [
+          {
+            "x": 280.57142857142856,
+            "y": 379.42857142857144
+          },
+          {
+            "x": 375.42857142857144,
+            "y": 379.42857142857144
+          },
+          {
+            "x": 280.57142857142856,
+            "y": 284.5714285714286
+          }
+        ],
+        "target": null,
+        "directionTargets": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-1200-vectors",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 1200,
+          "height": 900
+        },
+        "documentWidth": 1200,
+        "board": {
+          "left": 24,
+          "right": 848,
+          "top": 213.015625,
+          "bottom": 858.8125,
+          "width": 824,
+          "height": 645.796875
+        },
+        "aside": {
+          "left": 866,
+          "right": 1176,
+          "top": 213.015625,
+          "bottom": 858.8125,
+          "width": 310,
+          "height": 645.796875
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 885,
+          "right": 1154,
+          "top": 501.1875,
+          "bottom": 527.578125,
+          "width": 269,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 885,
+          "right": 1154,
+          "top": 541.578125,
+          "bottom": 589.578125,
+          "width": 269,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 822,
+          "height": 498
+        },
+        "points": [
+          {
+            "x": 383.33333333333337,
+            "y": 332.00000000000006
+          },
+          {
+            "x": 328,
+            "y": 276.6666666666667
+          }
+        ],
+        "target": {
+          "x": 494.00000000000006,
+          "y": 221.33333333333337
+        },
+        "directionTargets": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-1200-linear",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 1200,
+          "height": 900
+        },
+        "documentWidth": 1200,
+        "board": {
+          "left": 24,
+          "right": 848,
+          "top": 213.015625,
+          "bottom": 858.8125,
+          "width": 824,
+          "height": 645.796875
+        },
+        "aside": {
+          "left": 866,
+          "right": 1176,
+          "top": 213.015625,
+          "bottom": 858.8125,
+          "width": 310,
+          "height": 645.796875
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 885,
+          "right": 1154,
+          "top": 669.765625,
+          "bottom": 722.546875,
+          "width": 269,
+          "height": 52.78125
+        },
+        "actions": {
+          "left": 885,
+          "right": 1154,
+          "top": 736.546875,
+          "bottom": 784.546875,
+          "width": 269,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 53,
+        "challengeClientHeight": 53,
+        "boardSize": {
+          "width": 822,
+          "height": 498
+        },
+        "points": [
+          {
+            "x": 466.33333333333337,
+            "y": 249.00000000000003
+          },
+          {
+            "x": 411.00000000000006,
+            "y": 193.66666666666669
+          }
+        ],
+        "target": null,
+        "directionTargets": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-1024-triangle",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 1024,
+          "height": 768
+        },
+        "documentWidth": 1024,
+        "board": {
+          "left": 24,
+          "right": 708,
+          "top": 207.53125,
+          "bottom": 726.8125,
+          "width": 684,
+          "height": 519.28125
+        },
+        "aside": {
+          "left": 720,
+          "right": 1000,
+          "top": 207.53125,
+          "bottom": 726.8125,
+          "width": 280,
+          "height": 519.28125
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 735,
+          "right": 982,
+          "top": 618.484375,
+          "bottom": 644.875,
+          "width": 247,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 735,
+          "right": 982,
+          "top": 658.875,
+          "bottom": 706.875,
+          "width": 247,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 682,
+          "height": 371
+        },
+        "points": [
+          {
+            "x": 235.00000000000003,
+            "y": 291.5
+          },
+          {
+            "x": 447.00000000000006,
+            "y": 291.5
+          },
+          {
+            "x": 288.00000000000006,
+            "y": 132.5
+          }
+        ],
+        "target": null,
+        "directionTargets": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-1024-mirror",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 1024,
+          "height": 768
+        },
+        "documentWidth": 1024,
+        "board": {
+          "left": 24,
+          "right": 708,
+          "top": 207.53125,
+          "bottom": 726.8125,
+          "width": 684,
+          "height": 519.28125
+        },
+        "aside": {
+          "left": 720,
+          "right": 1000,
+          "top": 207.53125,
+          "bottom": 726.8125,
+          "width": 280,
+          "height": 519.28125
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 735,
+          "right": 982,
+          "top": 635.28125,
+          "bottom": 661.671875,
+          "width": 247,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 735,
+          "right": 982,
+          "top": 675.671875,
+          "bottom": 723.671875,
+          "width": 247,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 682,
+          "height": 371
+        },
+        "points": [
+          {
+            "x": 90.93333333333334,
+            "y": 230.9666666666666
+          },
+          {
+            "x": 227.33333333333334,
+            "y": 230.9666666666666
+          },
+          {
+            "x": 136.4,
+            "y": 94.56666666666663
+          }
+        ],
+        "target": {
+          "x": 409.20000000000005,
+          "y": 185.49999999999994
+        },
+        "directionTargets": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-1024-rotate",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 1024,
+          "height": 768
+        },
+        "documentWidth": 1024,
+        "board": {
+          "left": 24,
+          "right": 708,
+          "top": 207.53125,
+          "bottom": 726.8125,
+          "width": 684,
+          "height": 519.28125
+        },
+        "aside": {
+          "left": 720,
+          "right": 1000,
+          "top": 207.53125,
+          "bottom": 726.8125,
+          "width": 280,
+          "height": 519.28125
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 735,
+          "right": 982,
+          "top": 575.09375,
+          "bottom": 601.484375,
+          "width": 247,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 735,
+          "right": 982,
+          "top": 615.484375,
+          "bottom": 663.484375,
+          "width": 247,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 682,
+          "height": 371
+        },
+        "points": [
+          {
+            "x": 378.0999999999999,
+            "y": 148.4
+          },
+          {
+            "x": 452.29999999999995,
+            "y": 148.4
+          },
+          {
+            "x": 378.0999999999999,
+            "y": 74.19999999999999
+          }
+        ],
+        "target": null,
+        "directionTargets": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-1024-scale",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 1024,
+          "height": 768
+        },
+        "documentWidth": 1024,
+        "board": {
+          "left": 24,
+          "right": 708,
+          "top": 207.53125,
+          "bottom": 726.8125,
+          "width": 684,
+          "height": 519.28125
+        },
+        "aside": {
+          "left": 720,
+          "right": 1000,
+          "top": 207.53125,
+          "bottom": 726.8125,
+          "width": 280,
+          "height": 519.28125
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 735,
+          "right": 982,
+          "top": 614.484375,
+          "bottom": 640.875,
+          "width": 247,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 735,
+          "right": 982,
+          "top": 654.875,
+          "bottom": 702.875,
+          "width": 247,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 682,
+          "height": 371
+        },
+        "points": [
+          {
+            "x": 243.83333333333334,
+            "y": 282.6666666666667
+          },
+          {
+            "x": 314.5,
+            "y": 282.6666666666667
+          },
+          {
+            "x": 243.83333333333334,
+            "y": 212
+          }
+        ],
+        "target": null,
+        "directionTargets": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-1024-vectors",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 1024,
+          "height": 768
+        },
+        "documentWidth": 1024,
+        "board": {
+          "left": 24,
+          "right": 708,
+          "top": 207.53125,
+          "bottom": 726.8125,
+          "width": 684,
+          "height": 519.28125
+        },
+        "aside": {
+          "left": 720,
+          "right": 1000,
+          "top": 207.53125,
+          "bottom": 726.8125,
+          "width": 280,
+          "height": 519.28125
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 735,
+          "right": 982,
+          "top": 483.703125,
+          "bottom": 510.09375,
+          "width": 247,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 735,
+          "right": 982,
+          "top": 524.09375,
+          "bottom": 572.09375,
+          "width": 247,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 682,
+          "height": 371
+        },
+        "points": [
+          {
+            "x": 320.38888888888886,
+            "y": 247.33333333333331
+          },
+          {
+            "x": 279.16666666666663,
+            "y": 206.1111111111111
+          }
+        ],
+        "target": {
+          "x": 402.8333333333333,
+          "y": 164.88888888888889
+        },
+        "directionTargets": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-1024-linear",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 1024,
+          "height": 768
+        },
+        "documentWidth": 1024,
+        "board": {
+          "left": 24,
+          "right": 708,
+          "top": 207.53125,
+          "bottom": 726.8125,
+          "width": 684,
+          "height": 519.28125
+        },
+        "aside": {
+          "left": 720,
+          "right": 1000,
+          "top": 207.53125,
+          "bottom": 726.8125,
+          "width": 280,
+          "height": 519.28125
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 735,
+          "right": 982,
+          "top": 673.078125,
+          "bottom": 725.859375,
+          "width": 247,
+          "height": 52.78125
+        },
+        "actions": {
+          "left": 735,
+          "right": 982,
+          "top": 739.859375,
+          "bottom": 787.859375,
+          "width": 247,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 53,
+        "challengeClientHeight": 53,
+        "boardSize": {
+          "width": 682,
+          "height": 371
+        },
+        "points": [
+          {
+            "x": 382.2222222222222,
+            "y": 185.5
+          },
+          {
+            "x": 340.99999999999994,
+            "y": 144.27777777777777
+          }
+        ],
+        "target": null,
+        "directionTargets": [
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\linear-tablet-1024x768.png"
+    },
+    {
+      "id": "layout-390-triangle",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "board": {
+          "left": 12,
+          "right": 378,
+          "top": 293.21875,
+          "bottom": 832.40625,
+          "width": 366,
+          "height": 539.1875
+        },
+        "aside": {
+          "left": 12,
+          "right": 378,
+          "top": 844.40625,
+          "bottom": 1429.75,
+          "width": 366,
+          "height": 585.34375
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 29,
+          "right": 361,
+          "top": 1260.359375,
+          "bottom": 1286.75,
+          "width": 332,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 29,
+          "right": 361,
+          "top": 1300.75,
+          "bottom": 1348.75,
+          "width": 332,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 364,
+          "height": 340
+        },
+        "points": [
+          {
+            "x": 84.85714285714286,
+            "y": 267.1428571428571
+          },
+          {
+            "x": 279.1428571428571,
+            "y": 267.1428571428571
+          },
+          {
+            "x": 133.42857142857144,
+            "y": 121.42857142857139
+          }
+        ],
+        "target": null,
+        "directionTargets": [
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-390-mirror",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "board": {
+          "left": 12,
+          "right": 378,
+          "top": 293.21875,
+          "bottom": 832.40625,
+          "width": 366,
+          "height": 539.1875
+        },
+        "aside": {
+          "left": 12,
+          "right": 378,
+          "top": 844.40625,
+          "bottom": 1425.75,
+          "width": 366,
+          "height": 581.34375
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 29,
+          "right": 361,
+          "top": 1256.359375,
+          "bottom": 1282.75,
+          "width": 332,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 29,
+          "right": 361,
+          "top": 1296.75,
+          "bottom": 1344.75,
+          "width": 332,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 364,
+          "height": 340
+        },
+        "points": [
+          {
+            "x": 48.53333333333333,
+            "y": 194.26666666666665
+          },
+          {
+            "x": 121.33333333333333,
+            "y": 194.26666666666665
+          },
+          {
+            "x": 72.8,
+            "y": 121.46666666666667
+          }
+        ],
+        "target": {
+          "x": 218.39999999999998,
+          "y": 170
+        },
+        "directionTargets": [
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-390-rotate",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "board": {
+          "left": 12,
+          "right": 378,
+          "top": 293.21875,
+          "bottom": 832.40625,
+          "width": 366,
+          "height": 539.1875
+        },
+        "aside": {
+          "left": 12,
+          "right": 378,
+          "top": 844.40625,
+          "bottom": 1386.359375,
+          "width": 366,
+          "height": 541.953125
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 29,
+          "right": 361,
+          "top": 1216.96875,
+          "bottom": 1243.359375,
+          "width": 332,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 29,
+          "right": 361,
+          "top": 1257.359375,
+          "bottom": 1305.359375,
+          "width": 332,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 364,
+          "height": 340
+        },
+        "points": [
+          {
+            "x": 216,
+            "y": 136
+          },
+          {
+            "x": 284,
+            "y": 136
+          },
+          {
+            "x": 216,
+            "y": 68
+          }
+        ],
+        "target": null,
+        "directionTargets": [
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-390-scale",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "board": {
+          "left": 12,
+          "right": 378,
+          "top": 293.21875,
+          "bottom": 832.40625,
+          "width": 366,
+          "height": 539.1875
+        },
+        "aside": {
+          "left": 12,
+          "right": 378,
+          "top": 844.40625,
+          "bottom": 1425.75,
+          "width": 366,
+          "height": 581.34375
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 29,
+          "right": 361,
+          "top": 1256.359375,
+          "bottom": 1282.75,
+          "width": 332,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 29,
+          "right": 361,
+          "top": 1296.75,
+          "bottom": 1344.75,
+          "width": 332,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 364,
+          "height": 340
+        },
+        "points": [
+          {
+            "x": 92.95238095238096,
+            "y": 259.04761904761904
+          },
+          {
+            "x": 157.71428571428572,
+            "y": 259.04761904761904
+          },
+          {
+            "x": 92.95238095238096,
+            "y": 194.2857142857143
+          }
+        ],
+        "target": null,
+        "directionTargets": [
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "id": "layout-390-vectors",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "board": {
+          "left": 12,
+          "right": 378,
+          "top": 293.21875,
+          "bottom": 832.40625,
+          "width": 366,
+          "height": 539.1875
+        },
+        "aside": {
+          "left": 12,
+          "right": 378,
+          "top": 844.40625,
+          "bottom": 1294.96875,
+          "width": 366,
+          "height": 450.5625
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 29,
+          "right": 361,
+          "top": 1125.578125,
+          "bottom": 1151.96875,
+          "width": 332,
+          "height": 26.390625
+        },
+        "actions": {
+          "left": 29,
+          "right": 361,
+          "top": 1165.96875,
+          "bottom": 1213.96875,
+          "width": 332,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 26,
+        "challengeClientHeight": 26,
+        "boardSize": {
+          "width": 364,
+          "height": 340
+        },
+        "points": [
+          {
+            "x": 163.1111111111111,
+            "y": 226.66666666666669
+          },
+          {
+            "x": 125.33333333333331,
+            "y": 188.8888888888889
+          }
+        ],
+        "target": {
+          "x": 238.66666666666666,
+          "y": 151.11111111111111
+        },
+        "directionTargets": [
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ]
+        ]
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\vectors-mobile-target-390x844.png"
+    },
+    {
+      "id": "layout-390-linear",
+      "passed": true,
+      "layout": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "documentWidth": 390,
+        "board": {
+          "left": 12,
+          "right": 378,
+          "top": 293.21875,
+          "bottom": 832.40625,
+          "width": 366,
+          "height": 539.1875
+        },
+        "aside": {
+          "left": 12,
+          "right": 378,
+          "top": 844.40625,
+          "bottom": 1489.9375,
+          "width": 366,
+          "height": 645.53125
+        },
+        "boardAsideOverlap": false,
+        "challenge": {
+          "left": 29,
+          "right": 361,
+          "top": 1294.15625,
+          "bottom": 1346.9375,
+          "width": 332,
+          "height": 52.78125
+        },
+        "actions": {
+          "left": 29,
+          "right": 361,
+          "top": 1360.9375,
+          "bottom": 1408.9375,
+          "width": 332,
+          "height": 48
+        },
+        "feedback": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "challengeActionsOverlap": false,
+        "challengeFontSize": 16,
+        "challengeScrollHeight": 53,
+        "challengeClientHeight": 53,
+        "boardSize": {
+          "width": 364,
+          "height": 340
+        },
+        "points": [
+          {
+            "x": 219.77777777777777,
+            "y": 170
+          },
+          {
+            "x": 182,
+            "y": 132.22222222222223
+          }
+        ],
+        "target": null,
+        "directionTargets": [
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ],
+          [
+            82,
+            48
+          ]
+        ]
+      }
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "使用真实 Chromium；视口模拟不等同于实体手机或平板。"
+  ],
+  "passed": true,
+  "finishedAt": "2026-09-30T14:40:56.256Z",
+  "resultCount": 85,
+  "screenshotDirectory": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual"
+}

@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "id": "build_geometry_standalone.py",
+      "passed": true
+    },
+    {
+      "id": "build_spaceflight_standalone.py",
+      "passed": true
+    },
+    {
+      "id": "build_playground_standalone.py",
+      "passed": true
+    },
+    {
+      "id": "build_phet_theme.py",
+      "passed": true
+    },
+    {
+      "id": "current-standalone-MathPhysics-Geometry-Proofs.html",
+      "passed": true,
+      "comparison": "normalized newlines"
+    },
+    {
+      "id": "current-standalone-MathPhysics-Playground.html",
+      "passed": true,
+      "comparison": "normalized newlines"
+    },
+    {
+      "id": "current-standalone-MathPhysics-Spaceflight.html",
+      "passed": true,
+      "comparison": "normalized newlines"
+    },
+    {
+      "id": "current-standalone-MathPhysics-Tangram.html",
+      "passed": true,
+      "comparison": "normalized newlines"
+    },
+    {
+      "id": "phet-reproducible-area-builder.html",
+      "passed": true,
+      "comparison": "byte for byte"
+    },
+    {
+      "id": "phet-reproducible-edit-ledger.json",
+      "passed": true,
+      "comparison": "byte for byte"
+    },
+    {
+      "id": "phet-reproducible-energy-skate-park-basics.html",
+      "passed": true,
+      "comparison": "byte for byte"
+    },
+    {
+      "id": "phet-reproducible-forces-and-motion-basics.html",
+      "passed": true,
+      "comparison": "byte for byte"
+    },
+    {
+      "id": "phet-reproducible-vector-addition.html",
+      "passed": true,
+      "comparison": "byte for byte"
+    }
+  ]
+}

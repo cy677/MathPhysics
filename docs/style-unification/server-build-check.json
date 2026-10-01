@@ -1,0 +1,22 @@
+{
+  "archive": "MathPhysics-server-style-unification-20260930.tar.gz",
+  "bytes": 98210386,
+  "sha256": "e59ebc71ba2a972acde5860e58200d0bc7d510f06e872e9e453a6edf294cb517",
+  "packagedActivityCount": 63,
+  "manifestFilesVerified": 1483,
+  "requiredPresentationFiles": [
+    "src/theme.css",
+    "src/theme.js",
+    "src/activity-entry.js",
+    "src/adapters/matter.html",
+    "src/adapters/matter.css",
+    "src/adapters/tangram.html",
+    "src/adapters/tangram.css",
+    "src/adapters/tangram-view.js",
+    "src/adapters/generated/tangram-scene.js",
+    "src/adapters/generated/edit-ledger.json",
+    "scripts/build_display_adapters.py",
+    "scripts/inline_theme.py",
+    "scripts/fixtures/matter-legacy.html"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "total": 7,
+  "archiveBytes": 122481417,
+  "archiveSHA256": "68e0e7cff09c565b3b60f56d07ffe619657505d97e3663ece2451e454148711e",
+  "archiveFiles": 1650,
+  "results": [
+    {
+      "id": "archive-build",
+      "passed": true
+    },
+    {
+      "id": "archive-crc",
+      "passed": true,
+      "corruptEntry": null
+    },
+    {
+      "id": "archive-complete-byte-identical-files",
+      "passed": true,
+      "missing": [],
+      "extra": [],
+      "mismatched": []
+    },
+    {
+      "id": "unique-archive-entries",
+      "passed": true
+    },
+    {
+      "id": "all-57-activity-entrypoints",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "id": "all-1296-inventory-assets",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "id": "all-four-generated-phet-entrypoints",
+      "passed": true,
+      "missing": []
+    }
+  ]
+}

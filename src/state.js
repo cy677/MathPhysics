@@ -1,3 +1,5 @@
+import {MATTER_MODULE_ID} from './matter-catalog.js';
+
 // Host preferences only; upstream activity scores are not inferred.
 export const STORAGE_KEY = 'mathphysics.state.v1';
 const LEGACY_DEFAULTS = [
@@ -6,14 +8,23 @@ const LEGACY_DEFAULTS = [
   ['area-builder', 'forces-and-motion-basics', 'vector-addition', 'geometry-proofs', 'spaceflight']
 ];
 const sameSet = (a, b) => Array.isArray(a) && a.length === b.length && b.every(id => a.includes(id));
+function normalizeOpenIds(openIds, valid) {
+  const groupedMatter = valid.has(MATTER_MODULE_ID);
+  return [...new Set(openIds.filter(id => typeof id === 'string' && valid.has(id))
+    .map(id => groupedMatter && id.startsWith('matter-') ? MATTER_MODULE_ID : id))];
+}
 export function normalizeState(input, ids, defaults) {
   const valid = new Set(ids);
   const value = input && typeof input === 'object' && !Array.isArray(input) ? input : {};
   const open = Array.isArray(value.openIds) ? value.openIds : defaults;
-  const openIds = [...new Set(open.filter(id => typeof id === 'string' && valid.has(id)))];
+  const openIds = normalizeOpenIds(open, valid);
   const visited = {};
   if (value.visited && typeof value.visited === 'object') {
     for (const id of ids) { const n = value.visited[id]; if (Number.isFinite(n) && n > 0) visited[id] = n; }
+  }
+  if (valid.has(MATTER_MODULE_ID) && !visited[MATTER_MODULE_ID]) {
+    const matterVisits = ids.filter(id => id.startsWith('matter-') && visited[id]).map(id => visited[id]);
+    if (matterVisits.length) visited[MATTER_MODULE_ID] = Math.max(...matterVisits);
   }
   return { schemaVersion: 1, openIds, visited, teacherPreview: value.teacherPreview === true,
     ...(typeof value.defaultsRevision === 'string' ? { defaultsRevision: value.defaultsRevision } : {}) };
@@ -38,5 +49,5 @@ export function parseSettings(text, ids) {
   const value = JSON.parse(text);
   if (!value || value.schemaVersion !== 1 || !Array.isArray(value.openIds)) throw Error('请选择导出的活动配置文件');
   if (value.openIds.some(id => typeof id !== 'string' || !ids.includes(id))) throw Error('配置包含当前内容库中不存在的活动');
-  return [...new Set(value.openIds)];
+  return normalizeOpenIds(value.openIds, new Set(ids));
 }

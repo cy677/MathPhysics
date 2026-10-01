@@ -1,0 +1,113 @@
+{
+  "sourceCommit": "a7187a2f86007d23f1a04f3f7b49a04d7a4e591a",
+  "passed": true,
+  "checks": {
+    "sourceBankMathAndGradesExact": true,
+    "primarySourceInteractionPreservedWithHostReturn": true,
+    "beforeSourceBackupsVerified": 27,
+    "pinnedUpstreamFilesVerified": 1296,
+    "localThemeAndAdaptersPreserved": {
+      "scripts/build_display_adapters.py": "8380877383705e32771705dcdbcd12b0354713023b90ff49665b2d076b070610",
+      "scripts/build_phet_theme.py": "8422fd27a489aec159c3e76872d5bc28757cd68fc336e38f367ab6a054e2b4db",
+      "src/activity-entry.js": "e112de9c1d4f4c29c92db79f7b95cd2c720819187049d5538c6246e6fb0c8837",
+      "src/adapters/generated/edit-ledger.json": "87263759d18899507c66b77d369267bf1a84895e0cae77d3896f21a25bc750eb",
+      "src/adapters/generated/tangram-scene.js": "fb4ed907308f086e9fbeae5d4d5f5c815acc04ff41913f2ee646132fdee25bca",
+      "src/adapters/matter.css": "1bdcb20e07ebc10f5c6e913ae882c5705792f4d9f007f0b39055896f5ebd7a77",
+      "src/adapters/matter.html": "16be3136196614c6bcd53a30b633572d7a89419e30d5127ebfcb587aaed06829",
+      "src/adapters/tangram-view.js": "097667c42563dcc5efc03f4a03d1b5b68f61f6417bb3774bd5c32d04d8b9fc26",
+      "src/adapters/tangram.css": "4a263ed57416af68076fa98a350ca72aa149fe22076c868662f64cd35e8a3242",
+      "src/adapters/tangram.html": "1b8c92a12969409e5b0b478a74306e44597306f32082ea1be42997c88f78bb6d",
+      "src/adapters/tangram.template.html": "cc441fc38837fdde2424925afc5b4f87c5b4281d0b5d4c479c8371b7f23433da",
+      "src/matter-runner.js": "9bcd3a25048842e7091d00a509398c54524d85d69b9f43dd16a053cf682ad3e6",
+      "src/phet/generated/area-builder.html": "725c7ae82306e6a0df5c5df7f3aca5bfc17848098932addf462b13e2a9a08d83",
+      "src/phet/generated/edit-ledger.json": "bbf99fe1cef872dbf884fb71964fd02ae45e09725d62162f2fa61232b3dac268",
+      "src/phet/generated/energy-skate-park-basics.html": "a71e51ce37f2692c0573b9092603f484bee561205004e6d7a8b44cb9d47d961e",
+      "src/phet/generated/forces-and-motion-basics.html": "019b543d9cdfef5a7c6e2fb728b385365ffd02bf6713ea0a3661c3f4974d2051",
+      "src/phet/generated/vector-addition.html": "2568595744d7c2c54f513b47cd21399567ac189fb7017f87ed56a20e96cbb591",
+      "src/phet/view.js": "4e95fa04d925bd4343bdab85f5e41f8d85cb2b382a69c0bdde0219ab8af792ba",
+      "src/theme.css": "1fb07b372fb9f383c959a8a3f4df9c406148cfa9ac50d7d92aa0724a5d032028",
+      "src/theme.js": "c04419725cbe9be17c0e9f616e8732ac9715c7d455b4c234e2621fd7033e7aa0"
+    },
+    "activityCount": 64,
+    "defaultOpenCount": 22,
+    "defaultsSHA256": "9f8cb6997875469dfaef3c23028f0b0812b075803872534a469b415373df06da",
+    "syntaxPassed": [
+      "lessons/primary-math/app.mjs",
+      "lessons/primary-math/bank.mjs",
+      "lessons/primary-math/math.mjs",
+      "src/catalog.js",
+      "src/readiness.js",
+      "src/app.js",
+      "lessons/geometric-proofs/catalog.js",
+      "lessons/geometric-proofs/math.js",
+      "lessons/geometric-proofs/app.js",
+      "lessons/jsxgraph-playground/app.js",
+      "lessons/tangram-flat/app.js",
+      "scripts/build_primary_math_standalone.py",
+      "tests/primary-math.test.mjs",
+      "tests/primary-math-browser.py",
+      "scripts/package.py",
+      "scripts/build_server.py",
+      "tests/catalog.test.mjs",
+      "tests/geometry.test.mjs",
+      "tests/playground.test.mjs",
+      "tests/geometry-browser.mjs",
+      "tests/classroom-browser.py",
+      "tests/playground-browser.mjs"
+    ],
+    "relatedUnitTests": {
+      "command": "node --test tests/primary-math.test.mjs tests/geometry.test.mjs tests/catalog.test.mjs tests/playground.test.mjs",
+      "passed": 88,
+      "failed": 0
+    },
+    "standalone": {
+      "MathPhysics-Geometry-Proofs.html": {
+        "bytes": 68258,
+        "sha256": "fb20b3148e350ad67b8654aadb5b77cbb403528e018ea26c3b626ddb002b4368",
+        "themeInlined": true,
+        "runtimeLocal": true
+      },
+      "MathPhysics-Spaceflight.html": {
+        "bytes": 112322,
+        "sha256": "07a0ff3efec836ad29d8a7046a6f938a10b832c547f9d1f3a7d97afb8c90dddb",
+        "themeInlined": true,
+        "runtimeLocal": true
+      },
+      "MathPhysics-Playground.html": {
+        "bytes": 1006141,
+        "sha256": "62cea281c0cb2997e422aed98669682cd8dcad25c01df9588a028e90199196a4",
+        "themeInlined": true,
+        "runtimeLocal": true
+      },
+      "MathPhysics-Tangram.html": {
+        "bytes": 91732,
+        "sha256": "f858e54390efe0352b015e1d525a85c23a7909ed910926303723e8efa442ac96",
+        "themeInlined": true,
+        "runtimeLocal": true
+      },
+      "MathPhysics-Primary-Math.html": {
+        "bytes": 69250,
+        "sha256": "257aa886cfcdb4dc84f719cc222ac88239961e9f6c15ae6c99865352f6fd7ff2",
+        "themeInlined": true,
+        "runtimeLocal": true
+      }
+    },
+    "serverPackage": {
+      "path": "dist/MathPhysics-server-curriculum-integration-20260930-final.tar.gz",
+      "bytes": 98261239,
+      "sha256": "e94eb69961634fae8dc6954b1d93b9b8afc3034234fd001d941a8ed27fde532f",
+      "filesVerifiedAgainstArchiveAndFrozenTree": 1500,
+      "activityCount": 64,
+      "includedDocs": [
+        "docs/primary-math-catalog.md",
+        "docs/primary-math-curriculum.md"
+      ]
+    },
+    "offlineZipPrimaryResourcesVerified": 14,
+    "nginx": {
+      "reviewed": true,
+      "executed": false,
+      "reason": "nginx is unavailable on Windows PATH; exact two-document allowlist and scoped module MIME only"
+    }
+  }
+}

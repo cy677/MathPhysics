@@ -1,0 +1,1 @@
+{"suite": "smoke", "passed": true, "total": 59, "originalCommand": ["C:\\Program Files\\nodejs\\node.EXE", "C:\\Users\\cheng\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js", "run", "test:browser"]}

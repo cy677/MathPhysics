@@ -1,0 +1,51 @@
+warning: unable to access 'C:\Users\cheng/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\cheng/.config/git/ignore': Permission denied
+ M README.md
+ M THIRD_PARTY_NOTICES.md
+ M docs/classroom-browser-report.json
+ M docs/classroom-screenshots/home.png
+ M docs/classroom-screenshots/host-jsxgraph-playground.png
+ M docs/classroom-screenshots/host-matter-slingshot.png
+ M docs/classroom-screenshots/host-tangram-flat.png
+ M docs/classroom-screenshots/library.png
+ M docs/classroom-screenshots/linear.png
+ M docs/classroom-screenshots/mirror.png
+ M docs/classroom-screenshots/playground-1024.png
+ M docs/classroom-screenshots/playground-390.png
+ M docs/classroom-screenshots/tangram-creative.png
+ M docs/classroom-screenshots/tangram-square.png
+ M docs/geometry-browser-report.json
+ M docs/geometry-screenshots/circle.png
+ M docs/geometry-screenshots/sphere.png
+ M docs/geometry-screenshots/square-sum.png
+ M docs/geometry-screenshots/triangle-ratio.png
+ M docs/geometry-screenshots/width-1024.png
+ M docs/screenshots/home-desktop.png
+ M docs/screenshots/home-overview.png
+ M docs/screenshots/host-area-builder.png
+ M docs/screenshots/matter-bridge.png
+ M docs/screenshots/tablet.png
+ M docs/test-report.json
+ M index.html
+ M package.json
+ M scripts/build_playground_standalone.py
+ M scripts/package.py
+ M src/app.js
+ M src/readiness.js
+ M tests/classroom-browser.py
+ M tests/smoke.mjs
+?? docs/classroom-screenshots/host-phet-merged.png
+?? docs/full-test-2026-09-30/
+?? docs/non-phet-redesign/
+?? docs/phet-redesign/
+?? docs/spaceflight-browser-report.json
+?? docs/spaceflight-screenshots/
+?? docs/spaceflight-unit-test-report.txt
+?? scripts/build_phet_theme.py
+?? scripts/prepare_phet_assets.mjs
+?? src/phet/
+?? tests/phet-runtime.html
+?? tests/phet-runtime.js
+?? tests/phet-tablet.html
+?? tests/phet-theme.test.mjs
+?? tests/readiness.test.mjs

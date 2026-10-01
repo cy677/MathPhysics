@@ -3,12 +3,14 @@
 import argparse
 from pathlib import Path
 import re
+from inline_theme import inline_shared_theme
 root=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser()
 parser.add_argument('--output',type=Path,default=root/'dist/MathPhysics-Geometry-Proofs.html')
 args=parser.parse_args()
 folder=root/'lessons/geometric-proofs'
 html=(folder/'index.html').read_text(encoding='utf-8')
+html=inline_shared_theme(html)
 css=(folder/'styles.css').read_text(encoding='utf-8')
 parts=[]
 for name in ['catalog.js','math.js','draw.js','app.js']:

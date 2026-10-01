@@ -1,0 +1,263 @@
+--- before/src/app.js
++++ src/app.js
+@@ -6,9 +6,9 @@
+ const $=id=>document.getElementById(id);
+ const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const storage={getItem:key=>window.localStorage.getItem(key),setItem:(key,value)=>window.localStorage.setItem(key,value)};
+-const zones={geometry:'几何工坊',physics:'动力车间',vectors:'箭头港口',science:'微观天地'};
+-const kinds={game:'趣味挑战',simulation:'互动实验',puzzle:'拼图探索',example:'物理游乐场',collection:'分类演示',proof:'几何证明题集',mission:'太空任务',construction:'拖动几何'};
+-const art={geometry:'△ ◇ ○',physics:'● ↗ ▰',vectors:'↗ ＋ →',science:'● ○ ●'};
++const zones={geometry:'几何工坊',physics:'动力车间',vectors:'箭头港口',science:'微观天地',numbers:'中文题库'};
++const kinds={game:'趣味挑战',simulation:'互动实验',puzzle:'拼图探索',example:'物理游乐场',collection:'分类演示',proof:'几何证明题集',mission:'太空任务',construction:'拖动几何',practice:'数学练习'};
++const art={geometry:'△ ◇ ○',physics:'● ↗ ▰',vectors:'↗ ＋ →',science:'● ○ ●',numbers:'＋ − × ÷'};
+ const phetTips={
+   'forces-and-motion-basics':'拔河：把两队的小伙伴拖到绳结上，再点“开始”。推箱子：拖动推力滑块，观察方向和速度；试着更换物体和路面。',
+   'energy-skate-park-basics':'把滑板小伙伴拖到轨道高处，松手看他滑行。打开能量图，比较高处和低处；暂停后可以一步一步观察。',
+@@ -30,6 +30,7 @@
+ function cardArt(a){
+  const id=a.id;
+  const shapes={
++  'question-bank':'<rect x="39" y="15" width="100" height="88" rx="10" fill="#fffef9" stroke="#719c83" stroke-width="2.5"/><path d="M57 37H89M57 53H116M57 69H100" stroke="#a6bea0" stroke-width="3" stroke-linecap="round"/><path d="M57 87L63 93L75 80" fill="none" stroke="#315d4b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M112 87L148 34L158 41L122 94L109 101Z" fill="#efc66b" stroke="#b49749" stroke-width="2" stroke-linejoin="round"/><path d="M148 34L153 27Q155 24 159 27L163 30Q166 33 164 36L158 41" fill="#d39177" stroke="#b49749" stroke-width="2"/><path d="M109 101L113 91L120 96Z" fill="#315d4b"/>',
+   'fractions-intro':'<circle cx="61" cy="57" r="32" fill="#fffef9" stroke="#6d9476" stroke-width="2.5"/><path d="M61 57V25A32 32 0 0 1 93 57Z" fill="#e4bc67"/><path d="M61 25V89M29 57H93" stroke="#6d9476" stroke-width="2"/><rect x="113" y="33" width="48" height="48" rx="4" fill="#fffef9" stroke="#6d9476" stroke-width="2.5"/><path d="M115 35H137V79H115Z" fill="#a6bea0"/><path d="M137 33V81M113 57H161" stroke="#6d9476" stroke-width="2"/>',
+   'fraction-matcher':'<rect x="24" y="27" width="51" height="57" rx="7" fill="#fffef9" stroke="#6d9476" stroke-width="2"/><circle cx="49" cy="55" r="17" fill="#fffef9" stroke="#6d9476" stroke-width="2"/><path d="M49 38A17 17 0 0 1 49 72Z" fill="#e4bc67"/><path d="M49 38V72M88 50H102M88 61H102" stroke="#6d9476" stroke-width="2.5"/><rect x="115" y="27" width="51" height="57" rx="7" fill="#fffef9" stroke="#6d9476" stroke-width="2"/><text x="140" y="50" text-anchor="middle" fill="#315d4b" font-size="19">1</text><path d="M130 56H150" stroke="#315d4b" stroke-width="2"/><text x="140" y="76" text-anchor="middle" fill="#315d4b" font-size="19">2</text>',
+   'balancing-act':'<path d="M25 66H165" stroke="#92725b" stroke-width="7" stroke-linecap="round"/><path d="M95 68L77 95H113Z" fill="#e4bc67" stroke="#92725b" stroke-width="2"/><rect x="40" y="39" width="25" height="23" rx="4" fill="#719c83"/><rect x="125" y="26" width="25" height="36" rx="4" fill="#d39177"/><path d="M35 78H67M123 78H155" stroke="#a6b99b" stroke-width="2" stroke-dasharray="3 4"/>',
+--- before/src/catalog.js
++++ src/catalog.js
+@@ -10,6 +10,7 @@
+   spaceflight: 'lessons/spaceflight/index.html',
+   'tangram-flat': 'lessons/tangram-flat/index.html',
+   'primary-math': 'lessons/primary-math/index.html',
++  'question-bank': 'lessons/question-bank/index.html',
+   'matter-library': 'src/adapters/matter.html'
+ };
+ 
+--- before/src/readiness.js
++++ src/readiness.js
+@@ -2,7 +2,7 @@
+ export function isReady(adapter, w = window) {
+   try {
+     const d = w.document;
+-    if (adapter === 'matter' || adapter === 'matter-library' || adapter === 'proofs' || adapter === 'spaceflight' || adapter === 'jsxgraph' || adapter === 'tangram-flat' || adapter === 'primary-math') return w.__mpReady === true;
++    if (adapter === 'matter' || adapter === 'matter-library' || adapter === 'proofs' || adapter === 'spaceflight' || adapter === 'jsxgraph' || adapter === 'tangram-flat' || adapter === 'primary-math' || adapter === 'question-bank') return w.__mpReady === true;
+     if (adapter === 'phet') {
+       const sim = w.phet?.joist?.sim || w.phet?.sim;
+       const screens = sim?.simScreens || sim?.screens;
+--- before/src/styles.css
++++ src/styles.css
+@@ -22,3 +22,5 @@
+ .player-actions{flex-wrap:wrap}.player-bar>div:not(.player-actions){min-width:0}.player-bar h2{overflow-wrap:anywhere}
+ dialog{overflow:auto;box-shadow:var(--mp-shadow-dialog)}.manager-actions .file-button:focus-within{outline:3px solid var(--mp-focus);outline-offset:3px}
+ @media(max-width:680px){.topbar nav button{font-size:12px;padding:7px 9px}.player-bar{align-items:center}.player-actions{width:100%;justify-content:flex-end;border-top:1px solid var(--mp-line);padding-top:4px}.player-actions button{font-size:12px;padding:7px 12px}.player-bar>button{min-height:44px;font-size:12px}.player-tip{font-size:12px;max-height:16dvh}.attribution{font-size:11px;max-height:70px}.brand small{font-size:10px}.island p,.island-link,.catalog-note,.bottom-note p{font-size:12px}.hero-actions{gap:16px}.grade-note{font-size:12px}.search-box input{font-size:14px;min-height:36px}.chips button,.chips.small button{font-size:12px}.manager-row{align-items:flex-start}.manager-row input{margin-top:5px}.manager-row small{font-size:11px}.minor{font-size:12px!important}}
++
++.numbers{--accent:var(--mp-primary);--wash:var(--mp-gold-soft);--strong:var(--mp-primary)}
+--- before/config/local-activities.json
++++ config/local-activities.json
+@@ -9,8 +9,19 @@
+       "zone": "physics",
+       "kind": "collection",
+       "adapter": "matter-library",
+-      "grades": [3, 4, 5, 6],
+-      "content": ["材料与运动", "机械与经典实验", "形状与堆叠", "柔性与约束", "开发与呈现"],
++      "grades": [
++        3,
++        4,
++        5,
++        6
++      ],
++      "content": [
++        "材料与运动",
++        "机械与经典实验",
++        "形状与堆叠",
++        "柔性与约束",
++        "开发与呈现"
++      ],
+       "entry": "src/adapters/matter.html",
+       "source": "https://github.com/liabru/matter-js",
+       "license": "MIT (code); see bundled asset notices",
+@@ -321,6 +332,37 @@
+       "progressMode": "visit-only",
+       "lessonCount": 48,
+       "playHint": "选择年级和题目，先调整模型，再填写答案。试着用自己的话解释数量关系。"
++    },
++    {
++      "id": "question-bank",
++      "title": "中文题库工坊",
++      "zone": "numbers",
++      "kind": "practice",
++      "adapter": "question-bank",
++      "grades": [
++        1,
++        2,
++        3,
++        4,
++        5,
++        6
++      ],
++      "description": "选择知识点，生成中文练习，试试分步提示和不同难度。",
++      "content": [
++        "48个参数化题型",
++        "整数、分数与小数",
++        "测量、几何与应用题",
++        "自动判题",
++        "练习配方导入导出"
++      ],
++      "entry": "lessons/question-bank/index.html",
++      "source": "https://github.com/cy677/MathPhysics",
++      "license": "MIT (original Chinese generators; topic references only)",
++      "progressMode": "visit-only",
++      "generatorCount": 48,
++      "completeUpstream": false,
++      "origin": "original",
++      "playHint": "选择知识点、题型和难度，生成练习后填写答案。遇到困难先打开提示，再看看解题过程。"
+     }
+   ]
+ }
+--- before/config/presentation.json
++++ config/presentation.json
+@@ -17,6 +17,7 @@
+     "states-of-matter-basics",
+     "build-a-molecule",
+     "primary-math",
++    "question-bank",
+     "jsx-triangle",
+     "jsx-mirror",
+     "jsx-rotation",
+@@ -380,6 +381,11 @@
+       "title": "分子搭建工坊",
+       "description": "把不同的原子接在一起，搭出水和其他小分子。",
+       "playHint": "把原子从下方的小桶拖出来，靠近它们组成分子。把符合目标的分子拖到收集框；也可以切到“多个分子”或“自由探索”自由搭建。"
++    },
++    "question-bank": {
++      "title": "中文题库工坊",
++      "description": "选择知识点，生成中文练习，试试分步提示和不同难度。",
++      "playHint": "选择知识点、题型和难度，生成练习后填写答案。遇到困难先打开提示，再看看解题过程。"
+     }
+   }
+ }
+--- before/package.json
++++ package.json
+@@ -29,7 +29,10 @@
+     "test:classroom:inline": "node scripts/python.mjs tests/classroom-browser.py --inline",
+     "build:primary": "node scripts/python.mjs scripts/build_primary_math_standalone.py",
+     "test:primary": "node --test tests/primary-math.test.mjs",
+-    "test:primary:browser": "node scripts/python.mjs tests/primary-math-browser.py"
++    "test:primary:browser": "node scripts/python.mjs tests/primary-math-browser.py",
++    "generate:questions": "node scripts/generate_questions.mjs",
++    "test:questions": "node --test tests/question-bank*.test.mjs",
++    "test:questions:browser": "node scripts/python.mjs tests/question-bank-browser.py"
+   },
+   "devDependencies": {
+     "playwright": "1.56.0"
+--- before/tests/catalog.test.mjs
++++ tests/catalog.test.mjs
+@@ -26,8 +26,8 @@
+ 
+ test('six independently graded experiment entries share the playground without replacing existing activities', () => {
+   const display = read('config/presentation.json');
+-  assert.equal(local.activities.length, 12);
+-  assert.equal(ids.length, 71);
++  assert.equal(local.activities.length, 13);
++  assert.equal(ids.length, 72);
+   assert.deepEqual(defaults.openIds, recommended);
+   assert.deepEqual(display.order.slice(0, recommended.length), recommended);
+   assert.equal(new Set(display.order).size, display.order.length);
+--- before/tests/playground.test.mjs
++++ tests/playground.test.mjs
+@@ -5,7 +5,7 @@
+ const root=path.resolve(import.meta.dirname,'..'),json=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+ const up=json('config/inventory.json'),local=json('config/local-activities.json'),defaults=json('config/defaults.json'),presentation=json('config/presentation.json');
+ const all=[...up.activities,...local.activities],ids=all.map(a=>a.id);
+-test('71 registered activities; the legacy recommendation file retains valid entries',()=>{assert.equal(ids.length,71);assert.equal(new Set(ids).size,71);assert.equal(defaults.openIds.length,9);const open=all.filter(a=>defaults.openIds.includes(a.id));assert.equal(open.filter(a=>a.adapter!=='phet').length,5);assert.equal(open.filter(a=>a.adapter==='matter').length,0);assert.equal(open.filter(a=>a.adapter==='matter-library').length,1);for(const a of all)assert.ok(fs.existsSync(path.join(root,a.entry.split('?')[0])));});
++test('72 registered activities; the legacy recommendation file retains valid entries',()=>{assert.equal(ids.length,72);assert.equal(new Set(ids).size,72);assert.equal(defaults.openIds.length,9);const open=all.filter(a=>defaults.openIds.includes(a.id));assert.equal(open.filter(a=>a.adapter!=='phet').length,5);assert.equal(open.filter(a=>a.adapter==='matter').length,0);assert.equal(open.filter(a=>a.adapter==='matter-library').length,1);for(const a of all)assert.ok(fs.existsSync(path.join(root,a.entry.split('?')[0])));});
+ test('legacy starter defaults upgrade once while preserving exploration records',()=>{const old={schemaVersion:1,openIds:['area-builder','forces-and-motion-basics','vector-addition'],visited:{'area-builder':123},teacherPreview:false};const state=loadState({getItem:key=>{assert.equal(key,STORAGE_KEY);return JSON.stringify(old);}},ids,defaults.openIds,defaults.revision);assert.deepEqual(state.openIds,defaults.openIds);assert.equal(state.visited['area-builder'],123);assert.equal(state.defaultsRevision,defaults.revision);});
+ test('custom and deliberately empty teaching selections are never overwritten',()=>{for(const custom of [[],['physics-demos'],['spaceflight','geometry-proofs']]){const state=loadState({getItem:()=>JSON.stringify({openIds:custom,visited:{spaceflight:123}})},ids,defaults.openIds,defaults.revision);assert.deepEqual(state.openIds,custom);assert.equal(state.visited.spaceflight,123);}});
+ test('JSXGraph package files match their exact import hashes and carry MIT attribution',()=>{const lock=json('config/libraries-lock.json');assert.equal(lock.jsxgraph.version,'1.12.2');for(const [p,v] of Object.entries(lock.jsxgraph.files)){const data=fs.readFileSync(path.join(root,p));assert.equal(data.length,v.bytes);assert.equal(createHash('sha256').update(data).digest('hex'),v.sha256,p);}assert.ok(fs.readFileSync(path.join(root,'vendor/jsxgraph/LICENSE.MIT'),'utf8').includes('Permission is hereby granted'));});
+--- before/scripts/build_server.py
++++ scripts/build_server.py
+@@ -37,7 +37,7 @@
+ roots = ['index.html', 'README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md',
+          'package.json', 'package-lock.json', 'src', 'lessons', 'config',
+          'vendor', 'scripts', 'tests', 'deploy', 'modules', 'GET_PHET_WINDOWS.bat', 'get_phet.sh',
+-         'docs/primary-math-curriculum.md', 'docs/primary-math-catalog.md']
++         'docs/primary-math-curriculum.md', 'docs/primary-math-catalog.md', 'docs/question-bank.md']
+ files = []
+ for name in roots:
+     source = ROOT / name
+--- before/README.md
++++ README.md
+@@ -56,6 +56,14 @@
+ 
+ 新增模块的单元检查使用 `npm run test:primary`，独立离线构建使用 `npm run build:primary`，真实HTTP、file://和iframe检查使用 `npm run test:primary:browser`。当前融合范围与验收入口见 [融合方案](docs/curriculum-integration/plan.md) 和 [实施交接](docs/curriculum-integration/integration.md)。
+ 
++## 中文题库工坊：48种可重复生成的练习
++
++首页新增“中文题库”主题与“中文题库工坊”入口，沿用科学小岛的奶油白、森林绿和暖黄色。提供48个原创参数化题型、9类知识点和3档难度，支持生成1—500道不重复题目、自动判题、分步提示、解题过程、打印与练习导入导出。练习名称与题型、难度、数量一致时，可以复现同一组练习；难度不对应教材年级。
++
++题库可通过首页直接打开，也可访问 `lessons/question-bank/index.html`。当前练习和作答自动保存在独立的 `mathphysics.question-bank.v1` 键中，不覆盖其他课堂进度；“清除记录”页面也包含这份记录。生成新练习或恢复练习设置时会开始新一轮作答。
++
++运行 `npm run test:questions` 检查题型算法与接入，`npm run test:questions:browser` 检查真实浏览器交互。命令行生成与题型来源见 [中文题库说明](docs/question-bank.md)。
++
+ ## PhET 内部视觉更新
+ 
+ 推箱子、拔河和滑板使用新的插画角色、表情与动作。实验场景、面板、按钮和导航同步采用奶油白、森林绿和暖黄色；玩法提示采用儿童能直接照做的中文。保留 PhET 署名和菜单。
+@@ -81,7 +89,7 @@
+ 
+ 沿用 `mathphysics.state.v1` 本地存储并保留浏览记录。所有目录内容直接开放，旧版的开放名单与教师预览状态不再影响访问；首页也不再读取 `config/defaults.json` 的旧推荐名单。年级用于推荐筛选。浏览记录不等于通关成绩。
+ 
+-需要重新开始时，先关闭其他正在运行的科学小岛课堂，再在同一浏览器、同一站点地址下打开 `scripts/clear_records.html`，点击“清除记录”。本地默认地址为 `http://127.0.0.1:8000/scripts/clear_records.html`。清除脚本为 `scripts/clear_records.js`，仅移除本站的探索记录、各课堂的通关与自动存档，以及旧版航天答题记录；保留其他项目的数据。打开清除页面不会自动删除记录。不同浏览器、站点地址和独立 HTML 文件的记录需在各自所在页面处理。
++需要重新开始时，先关闭其他正在运行的科学小岛课堂，再在同一浏览器、同一站点地址下打开 `scripts/clear_records.html`，点击“清除记录”。本地默认地址为 `http://127.0.0.1:8000/scripts/clear_records.html`。清除脚本为 `scripts/clear_records.js`，仅移除本站的探索记录、各课堂的通关与自动存档，题库练习与作答，以及旧版航天答题记录；保留其他项目的数据。打开清除页面不会自动删除记录。不同浏览器、站点地址和独立 HTML 文件的记录需在各自所在页面处理。
+ 
+ 儿童界面只保留操作和学习引导；实现边界、来源及维护说明放在文档和资料面板。必要的数学前提与版权署名不隐藏。
+ 
+@@ -99,6 +107,7 @@
+ config/libraries-lock.json        JSXGraph校验清单
+ lessons/geometric-proofs/         24个主题与48种问法
+ lessons/primary-math/             48题数与生活
++lessons/question-bank/            48种中文参数化练习
+ lessons/spaceflight/              太空飞行课堂
+ lessons/jsxgraph-playground/      6个基于JSXGraph编写的实验
+ lessons/tangram-flat/             原Tangram内核的SVG适配（GPL）
+--- before/scripts/clear_records.js
++++ scripts/clear_records.js
+@@ -1,6 +1,7 @@
+ /* Run in the browser at the MathPhysics site, not in a terminal. MIT. */
+ const isRecordKey = key => key === 'mathphysics.state.v1' ||
+-  key === 'mathphysics.spaceflight.v1' || key.startsWith('mathphysics.progress.v1.');
++  key === 'mathphysics.spaceflight.v1' || key === 'mathphysics.question-bank.v1' ||
++  key.startsWith('mathphysics.progress.v1.');
+ 
+ export function recordKeys(storage = globalThis.localStorage) {
+   const keys = [];
+--- before/tests/clear-records.test.mjs
++++ tests/clear-records.test.mjs
+@@ -12,7 +12,7 @@
+   const keys = ['mathphysics.state.v1', 'mathphysics.progress.v1.primary-math',
+     'mathphysics.progress.v1.geometry-proofs', 'mathphysics.progress.v1.jsxgraph-playground',
+     'mathphysics.progress.v1.tangram-flat', 'mathphysics.progress.v1.spaceflight',
+-    'mathphysics.progress.v1.phet-area-builder', 'mathphysics.spaceflight.v1'];
++    'mathphysics.progress.v1.phet-area-builder', 'mathphysics.spaceflight.v1', 'mathphysics.question-bank.v1'];
+   const saved = storage(keys.map(key => [key, 'record']));
+   assert.deepEqual(recordKeys(saved), keys);
+   assert.equal(clearRecords(saved), keys.length);
+--- before/index.html
++++ index.html
+@@ -11,7 +11,7 @@
+ <main id="home">
+ <section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> 给好奇心，一个可以动手的世界</div><h1>小小探索家，<br>欢迎来到<span>科学小岛。</span></h1><p>拼一块图形，点一盏灯，搭一个分子。<br>让数学与科学，在你的手中发生。</p><div class="hero-actions"><a class="primary" href="#library">开始探索 <span>↗</span></a><span class="grade-note">小学 1—6 年级<br>观察 · 尝试 · 再发现</span></div></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><span class="float-label label-a">每一种尝试，都有新发现</span><svg viewBox="0 0 480 350"><ellipse cx="252" cy="287" rx="160" ry="31" fill="#dfe6d7"/><path d="M90 242L253 176 412 238 250 306Z" fill="#b0c3a2"/><path d="M90 224L253 159 412 221 250 286Z" fill="#d2debb"/><path d="M160 236L233 207 303 235 230 263Z" fill="#fff5d4"/><path d="M330 146L392 171 392 236 330 211Z" fill="#d59b45"/><path d="M278 168L330 146 330 211 278 233Z" fill="#efbb59"/><path d="M278 168L337 121 392 171 330 194Z" fill="#f8d47a"/><path d="M117 198L169 107 223 198Z" fill="#739e88"/><path d="M167 162L205 101 244 163Z" fill="#a0b69a"/><rect x="229" y="99" width="79" height="81" rx="23" fill="#f9fbf5" stroke="#3d6d59" stroke-width="5"/><rect x="240" y="119" width="57" height="29" rx="11" fill="#315d4b"/><circle cx="255" cy="133" r="4" fill="#f7ce64"/><circle cx="282" cy="133" r="4" fill="#f7ce64"/><path d="M257 160Q268 168 280 160" fill="none" stroke="#315d4b" stroke-width="3" stroke-linecap="round"/><path d="M268 98V80" stroke="#315d4b" stroke-width="4"/><circle cx="268" cy="76" r="8" fill="#e89974"/><rect x="239" y="182" width="23" height="27" rx="9" fill="#315d4b"/><rect x="280" y="182" width="23" height="27" rx="9" fill="#315d4b"/><path d="M224 139L205 127M313 139L331 123" stroke="#315d4b" stroke-width="11" stroke-linecap="round"/><circle cx="130" cy="246" r="18" fill="#e89a78"/><circle cx="390" cy="90" r="24" fill="#f5cf76"/><path d="M70 99L118 77M106 69L119 77 110 88" stroke="#7396b5" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M353 270L383 282M376 273L385 283 373 285" stroke="#49725b" stroke-width="4" fill="none"/><path d="M167 65V81M159 73H175" stroke="#cf927c" stroke-width="3" stroke-linecap="round"/></svg><span class="float-label label-b">△ ＋ → ＝ 新发现</span></div></section>
+ <section class="islands" aria-label="四个探索主题"><button class="island geometry" data-zone="geometry"><span class="island-number">01 / 几何工坊</span><span class="island-icon">△ ◇ ○</span><h2>把想象，拼成形状</h2><p>分数、拼图、面积与空间</p><span class="island-link">前往几何工坊 ↗</span></button><button class="island physics" data-zone="physics"><span class="island-number">02 / 动力车间</span><span class="island-icon">● ↗ ▰</span><h2>动手，让世界动起来</h2><p>推拉、平衡、能量与电路</p><span class="island-link">前往动力车间 ↗</span></button><button class="island vectors" data-zone="vectors"><span class="island-number">03 / 箭头港口</span><span class="island-icon">↗ ＋ →</span><h2>找到方向，也找到规律</h2><p>方向、向量与分量的初步认识</p><span class="island-link">前往箭头港口 ↗</span></button><button class="island science" data-zone="science"><span class="island-number">04 / 微观天地</span><span class="island-icon">● ○ ●</span><h2>走近，微小的世界</h2><p>冷热、物态、原子与分子</p><span class="island-link">前往微观天地 ↗</span></button></section>
+-<section id="library" class="library"><div class="section-heading"><div><div class="eyebrow">EXPLORER'S LIBRARY</div><h2>今天，想发现什么？</h2></div><div id="stats" class="stats">正在打开探索地图…</div></div><div class="filters"><div class="filter-row"><span class="filter-label">主题</span><div class="chips" id="zone-filter"><button data-zone="all" aria-pressed="true">全部</button><button data-zone="geometry">几何工坊</button><button data-zone="physics">动力车间</button><button data-zone="vectors">箭头港口</button><button data-zone="science">微观天地</button></div><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="找一找活动" aria-label="搜索活动"></label></div><div class="filter-row"><span class="filter-label">年级</span><div class="chips small" id="grade-filter"><button data-grade="all" aria-pressed="true">全年级</button><button data-grade="1">一年级</button><button data-grade="2">二年级</button><button data-grade="3">三年级</button><button data-grade="4">四年级</button><button data-grade="5">五年级</button><button data-grade="6">六年级</button></div></div><p class="catalog-note">拖一拖、转一转，看看会发生什么。</p><div id="cards" class="cards" aria-live="polite"><p>正在加载活动清单…</p></div><p id="empty" class="empty" hidden>暂时没有符合筛选的活动，试试其他主题或年级。</p></section>
++<section id="library" class="library"><div class="section-heading"><div><div class="eyebrow">EXPLORER'S LIBRARY</div><h2>今天，想发现什么？</h2></div><div id="stats" class="stats">正在打开探索地图…</div></div><div class="filters"><div class="filter-row"><span class="filter-label">主题</span><div class="chips" id="zone-filter"><button data-zone="all" aria-pressed="true">全部</button><button data-zone="geometry">几何工坊</button><button data-zone="physics">动力车间</button><button data-zone="vectors">箭头港口</button><button data-zone="science">微观天地</button><button data-zone="numbers">中文题库</button></div><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="找一找活动" aria-label="搜索活动"></label></div><div class="filter-row"><span class="filter-label">年级</span><div class="chips small" id="grade-filter"><button data-grade="all" aria-pressed="true">全年级</button><button data-grade="1">一年级</button><button data-grade="2">二年级</button><button data-grade="3">三年级</button><button data-grade="4">四年级</button><button data-grade="5">五年级</button><button data-grade="6">六年级</button></div></div><p class="catalog-note">拖一拖、转一转，看看会发生什么。</p><div id="cards" class="cards" aria-live="polite"><p>正在加载活动清单…</p></div><p id="empty" class="empty" hidden>暂时没有符合筛选的活动，试试其他主题或年级。</p></section>
+ <section class="bottom-note"><strong>先尝试，再发现。</strong><p>先猜一猜，再动手试一试。改变一个条件，把你的发现讲给同伴听。</p></section>
+ </main>
+ <footer>MathPhysics · 科学小岛 <span>几何 / 经典力学 / 向量初步</span><span><a href="THIRD_PARTY_NOTICES.md" target="_blank" rel="noopener">来源与许可</a></span></footer>
+--- before/tests/primary-math.test.mjs
++++ tests/primary-math.test.mjs
+@@ -39,7 +39,7 @@
+  const {readFile}=await import('node:fs/promises');
+  const data=JSON.parse(await readFile(new URL('../config/local-activities.json',import.meta.url),'utf8'));
+  const expected=['geometry-proofs','spaceflight','jsxgraph-playground','tangram-flat','jsx-triangle','jsx-mirror','jsx-rotation','jsx-scale','jsx-vectors','jsx-linear'];
+- assert.equal(data.activities.length,12);assert.equal(data.activities[0].id,'physics-demos');const retained=data.activities.slice(1);assert.deepEqual(retained.slice(0,10).map(a=>a.id),expected);assert.equal(retained[10].id,'primary-math');assert.equal(retained[10].lessonCount,48);
++ assert.equal(data.activities.length,13);assert.equal(data.activities[0].id,'physics-demos');const retained=data.activities.slice(1);assert.deepEqual(retained.slice(0,10).map(a=>a.id),expected);assert.equal(retained[10].id,'primary-math');assert.equal(retained[10].lessonCount,48);
+  for(const a of retained.slice(0,10)){assert.ok(a.entry&&a.source&&a.license);assert.ok(a.grades.length>0);}
+ });
+ test('Integration: strict entry whitelist',async()=>{

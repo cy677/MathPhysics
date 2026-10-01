@@ -1,0 +1,516 @@
+{
+  "suite": "Adapter interaction, Tangram contrast/snapshot, and hosted viewport checks",
+  "screenshots": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\adapter-recheck-2026-09-30T11-56-36.546Z",
+  "hosted": [
+    {
+      "id": "jsxgraph-playground",
+      "viewport": "tablet",
+      "inner": {
+        "width": 1024,
+        "documentWidth": 1024,
+        "overflow": false,
+        "bodyClass": "mp-page mp-embedded embedded",
+        "canvas": []
+      },
+      "passed": true
+    },
+    {
+      "id": "matter-bridge",
+      "viewport": "tablet",
+      "inner": {
+        "width": 1024,
+        "documentWidth": 1024,
+        "overflow": false,
+        "bodyClass": "mp-page mp-matter mp-embedded",
+        "canvas": [
+          {
+            "width": 714,
+            "height": 535
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "tangram",
+      "viewport": "tablet",
+      "inner": {
+        "width": 1024,
+        "documentWidth": 1024,
+        "overflow": false,
+        "bodyClass": "mp-page mp-tangram mp-embedded",
+        "canvas": [
+          {
+            "width": 1024,
+            "height": 520
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "area-builder",
+      "viewport": "tablet",
+      "inner": {
+        "width": 1024,
+        "documentWidth": 1024,
+        "overflow": false,
+        "bodyClass": "",
+        "canvas": []
+      },
+      "passed": true
+    },
+    {
+      "id": "jsxgraph-playground",
+      "viewport": "mobile",
+      "inner": {
+        "width": 390,
+        "documentWidth": 390,
+        "overflow": false,
+        "bodyClass": "mp-page mp-embedded embedded",
+        "canvas": []
+      },
+      "passed": true
+    },
+    {
+      "id": "matter-bridge",
+      "viewport": "mobile",
+      "inner": {
+        "width": 390,
+        "documentWidth": 390,
+        "overflow": false,
+        "bodyClass": "mp-page mp-matter mp-embedded",
+        "canvas": [
+          {
+            "width": 372,
+            "height": 278
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "tangram",
+      "viewport": "mobile",
+      "inner": {
+        "width": 390,
+        "documentWidth": 390,
+        "overflow": false,
+        "bodyClass": "mp-page mp-tangram mp-embedded",
+        "canvas": [
+          {
+            "width": 390,
+            "height": 547
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "area-builder",
+      "viewport": "mobile",
+      "inner": {
+        "width": 390,
+        "documentWidth": 390,
+        "overflow": false,
+        "bodyClass": "",
+        "canvas": []
+      },
+      "passed": true
+    }
+  ],
+  "tangram": [
+    {
+      "viewport": "desktop",
+      "overflow": false,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "labels": [
+        {
+          "piece": 2,
+          "background": "rgb(52,82,91)",
+          "foreground": "rgb(255, 254, 249)",
+          "contrast": 8.31
+        },
+        {
+          "piece": 3,
+          "background": "rgb(159,187,185)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 9.05
+        },
+        {
+          "piece": 4,
+          "background": "rgb(205,96,84)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 4.75
+        },
+        {
+          "piece": 5,
+          "background": "rgb(240,182,67)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 10.1
+        },
+        {
+          "piece": 6,
+          "background": "rgb(249,230,198)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 15.1
+        },
+        {
+          "piece": 7,
+          "background": "rgb(234,192,142)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 10.93
+        },
+        {
+          "piece": 1,
+          "background": "rgb(86,165,150)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 6.35
+        }
+      ],
+      "buttons": [
+        {
+          "piece": 1,
+          "background": "rgb(86, 165, 150)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 6.35,
+          "height": 44
+        },
+        {
+          "piece": 2,
+          "background": "rgb(52, 82, 91)",
+          "foreground": "rgb(255, 254, 249)",
+          "contrast": 8.31,
+          "height": 44
+        },
+        {
+          "piece": 3,
+          "background": "rgb(159, 187, 185)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 9.05,
+          "height": 44
+        },
+        {
+          "piece": 4,
+          "background": "rgb(205, 96, 84)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 4.75,
+          "height": 44
+        },
+        {
+          "piece": 5,
+          "background": "rgb(240, 182, 67)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 10.1,
+          "height": 44
+        },
+        {
+          "piece": 6,
+          "background": "rgb(249, 230, 198)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 15.1,
+          "height": 44
+        },
+        {
+          "piece": 7,
+          "background": "rgb(234, 192, 142)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 10.93,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "overflow": false,
+      "documentWidth": 1024,
+      "viewportWidth": 1024,
+      "labels": [
+        {
+          "piece": 2,
+          "background": "rgb(52,82,91)",
+          "foreground": "rgb(255, 254, 249)",
+          "contrast": 8.31
+        },
+        {
+          "piece": 3,
+          "background": "rgb(159,187,185)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 9.05
+        },
+        {
+          "piece": 4,
+          "background": "rgb(205,96,84)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 4.75
+        },
+        {
+          "piece": 5,
+          "background": "rgb(240,182,67)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 10.1
+        },
+        {
+          "piece": 6,
+          "background": "rgb(249,230,198)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 15.1
+        },
+        {
+          "piece": 7,
+          "background": "rgb(234,192,142)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 10.93
+        },
+        {
+          "piece": 1,
+          "background": "rgb(86,165,150)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 6.35
+        }
+      ],
+      "buttons": [
+        {
+          "piece": 1,
+          "background": "rgb(86, 165, 150)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 6.35,
+          "height": 44
+        },
+        {
+          "piece": 2,
+          "background": "rgb(52, 82, 91)",
+          "foreground": "rgb(255, 254, 249)",
+          "contrast": 8.31,
+          "height": 44
+        },
+        {
+          "piece": 3,
+          "background": "rgb(159, 187, 185)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 9.05,
+          "height": 44
+        },
+        {
+          "piece": 4,
+          "background": "rgb(205, 96, 84)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 4.75,
+          "height": 44
+        },
+        {
+          "piece": 5,
+          "background": "rgb(240, 182, 67)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 10.1,
+          "height": 44
+        },
+        {
+          "piece": 6,
+          "background": "rgb(249, 230, 198)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 15.1,
+          "height": 44
+        },
+        {
+          "piece": 7,
+          "background": "rgb(234, 192, 142)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 10.93,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "overflow": false,
+      "documentWidth": 390,
+      "viewportWidth": 390,
+      "labels": [
+        {
+          "piece": 2,
+          "background": "rgb(52,82,91)",
+          "foreground": "rgb(255, 254, 249)",
+          "contrast": 8.31
+        },
+        {
+          "piece": 3,
+          "background": "rgb(159,187,185)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 9.05
+        },
+        {
+          "piece": 4,
+          "background": "rgb(205,96,84)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 4.75
+        },
+        {
+          "piece": 5,
+          "background": "rgb(240,182,67)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 10.1
+        },
+        {
+          "piece": 6,
+          "background": "rgb(249,230,198)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 15.1
+        },
+        {
+          "piece": 7,
+          "background": "rgb(234,192,142)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 10.93
+        },
+        {
+          "piece": 1,
+          "background": "rgb(86,165,150)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 6.35
+        }
+      ],
+      "buttons": [
+        {
+          "piece": 1,
+          "background": "rgb(86, 165, 150)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 6.35,
+          "height": 44
+        },
+        {
+          "piece": 2,
+          "background": "rgb(52, 82, 91)",
+          "foreground": "rgb(255, 254, 249)",
+          "contrast": 8.31,
+          "height": 44
+        },
+        {
+          "piece": 3,
+          "background": "rgb(159, 187, 185)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 9.05,
+          "height": 44
+        },
+        {
+          "piece": 4,
+          "background": "rgb(205, 96, 84)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 4.75,
+          "height": 44
+        },
+        {
+          "piece": 5,
+          "background": "rgb(240, 182, 67)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 10.1,
+          "height": 44
+        },
+        {
+          "piece": 6,
+          "background": "rgb(249, 230, 198)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 15.1,
+          "height": 44
+        },
+        {
+          "piece": 7,
+          "background": "rgb(234, 192, 142)",
+          "foreground": "rgb(16, 21, 16)",
+          "contrast": 10.93,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "viewport": "3d-desktop",
+      "overflow": false,
+      "documentWidth": 1440,
+      "viewportWidth": 1440,
+      "canvas": {
+        "width": 1440,
+        "height": 733,
+        "clientWidth": 1440,
+        "clientHeight": 733
+      },
+      "buttons": [
+        {
+          "action": "assemble",
+          "height": 44
+        }
+      ]
+    },
+    {
+      "viewport": "3d-tablet",
+      "overflow": false,
+      "documentWidth": 1024,
+      "viewportWidth": 1024,
+      "canvas": {
+        "width": 1024,
+        "height": 601,
+        "clientWidth": 1024,
+        "clientHeight": 601
+      },
+      "buttons": [
+        {
+          "action": "assemble",
+          "height": 44
+        }
+      ]
+    },
+    {
+      "viewport": "3d-mobile",
+      "overflow": false,
+      "documentWidth": 390,
+      "viewportWidth": 390,
+      "canvas": {
+        "width": 390,
+        "height": 683,
+        "clientWidth": 390,
+        "clientHeight": 683
+      },
+      "buttons": [
+        {
+          "action": "assemble",
+          "height": 44
+        }
+      ]
+    }
+  ],
+  "matter": {
+    "origin": {
+      "id": 51,
+      "x": 580,
+      "y": 561.14119087137,
+      "point": {
+        "x": 279.15,
+        "y": 561.928389073306
+      },
+      "worldPerCss": 2.1390374331550803,
+      "cssWidth": 374
+    },
+    "down": {
+      "grabbedBody": 51,
+      "mouse": {
+        "x": 582.7956989247311,
+        "y": 563.1744604316547
+      }
+    },
+    "moved": {
+      "grabbedBody": 51,
+      "mouse": {
+        "x": 634.4086021505376,
+        "y": 563.1744604316547
+      }
+    },
+    "delta": 51.61290322580646,
+    "expected": 51.33689839572193,
+    "errors": []
+  },
+  "limitations": [
+    "Chromium viewport/touch emulation only; no physical iOS/Safari test."
+  ],
+  "passed": true,
+  "failures": []
+}

@@ -1,0 +1,342 @@
+{
+  "capturedAt": "2026-09-30T19:11:54.0181565+08:00",
+  "files": [
+    {
+      "path": "dist/MathPhysics-Geometry-Proofs.html",
+      "beforeSHA256": null,
+      "baseline": "generated-baseline-not-captured",
+      "afterSHA256": "e90e25f55d9f31e57dd84663a0cd59cce3721678a6a84492640f78facca6b802",
+      "changed": true
+    },
+    {
+      "path": "dist/MathPhysics-Playground.html",
+      "beforeSHA256": null,
+      "baseline": "generated-baseline-not-captured",
+      "afterSHA256": "deba572f6e248f811ade5e1a912d717f80b33f6a5426b8bb8133c7ed83b2adcd",
+      "changed": true
+    },
+    {
+      "path": "dist/MathPhysics-Spaceflight.html",
+      "beforeSHA256": null,
+      "baseline": "generated-baseline-not-captured",
+      "afterSHA256": "07a0ff3efec836ad29d8a7046a6f938a10b832c547f9d1f3a7d97afb8c90dddb",
+      "changed": true
+    },
+    {
+      "path": "dist/MathPhysics-Tangram.html",
+      "beforeSHA256": null,
+      "baseline": "generated-baseline-not-captured",
+      "afterSHA256": "3a0399dadfbc903e8fc0e701900cfab1b7bcf0043683e46f7859433853e2c0db",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "a53c28feb108aa5904ab06efa5e07458dcc78d93c4eb24bf192196df328810be",
+      "baseline": "before-source",
+      "path": "index.html",
+      "afterSHA256": "de3a6359b3e41f36bd76dec77780de10c7e49f2f7d1c624ccf3214fdb24d6b06",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "ee293bccee92162bc4d62f220ad62c39ae37e9eed263b16d92874e189c96e806",
+      "baseline": "before-source",
+      "path": "lessons/geometric-proofs/draw.js",
+      "afterSHA256": "40af7871e170cd1d757e3cb0ec4b60cc0be40bed870e59fcc0c543283c943ea9",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "1a55cbceaa916b182e6d59b058114e5ceaa79045f2aea49f543907573775b3fd",
+      "baseline": "before-source",
+      "path": "lessons/geometric-proofs/index.html",
+      "afterSHA256": "61ae53639b2d6599ccf87f2e3d59c06727cccb94a8a54d5fe3814b6f5fe16e67",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "862d662f6892d4f501e9c97eafef60bcb3227363886966daaa11b6435f183ee6",
+      "baseline": "before-source",
+      "path": "lessons/geometric-proofs/styles.css",
+      "afterSHA256": "22880bdd7d951142d2362fb5343aa00cd1713e8ca25111afbbd2de087f925a49",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "6d29af594774c87f87110c6fced30b49b62ccd2562a6ea2f05b237ce4285e393",
+      "baseline": "before-source",
+      "path": "lessons/jsxgraph-playground/index.html",
+      "afterSHA256": "77638193493a47b0588a9527772ff2a6d0834ffa5639b8edbaf75261ccf19e50",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "260a4ee1623a60a9a04d3f203b2d9d0f43fd11e8b069c9e68c2113853ae13ded",
+      "baseline": "before-source",
+      "path": "lessons/jsxgraph-playground/styles.css",
+      "afterSHA256": "2b69d80166ff270d8751006eafb6cadb558f2d66d8a15c386ab794fa1b07ca76",
+      "changed": true
+    },
+    {
+      "path": "lessons/spaceflight/app.js",
+      "baseline": "before-source",
+      "beforeSHA256": "da8289f53b2155ca4b742baa08adf534e0c4efee76e95969d4d544b56c1e0fdf",
+      "afterSHA256": "d75ad1b5ee7530ff76ab9227acb4786738c9642b1abdda22c9966fe57b4addc7",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "3d4b28b18138085253b41f39d70b198ba43fe4e841378d5c8cbd6984e623f945",
+      "baseline": "before-source",
+      "path": "lessons/spaceflight/index.html",
+      "afterSHA256": "a666530239bc6ac71a8bda73393e8c669f06a950f0ce5d656b97bfc4a3afb55d",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "55a92c91e2f53bdba560689d9dbe3f0b742a939a74f2d53bde01df2bf00f0b92",
+      "baseline": "before-source",
+      "path": "lessons/spaceflight/styles.css",
+      "afterSHA256": "3422b0b183213f7b790348662d0a8a19f45e36f53fa8f6d5fb859e26b376139d",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "513e9e1373a6965b56c4e662e99fe48c26aafdfc9baa5c3766f243e5058e7199",
+      "baseline": "before-source",
+      "path": "lessons/tangram-flat/app.js",
+      "afterSHA256": "fe85ea7e5dd36465964164cc5e901d92cfa6e8992fd4ec766d074dbbd9fe6d8b",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "ea96db945f05a2e3fcd12961434506b88d19fe45a9d5e4196fe95eaeb10d7e44",
+      "baseline": "before-source",
+      "path": "lessons/tangram-flat/index.html",
+      "afterSHA256": "22c36b57a88b86438b83a1b047d1e2d537f8c9859bc0d88ae561bc85b7355017",
+      "changed": true
+    },
+    {
+      "path": "lessons/tangram-flat/styles.css",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "0f97e4e478212d5620e6e963f1ec99d933deb20a26ae0b8bff4c8c8c8b2f66f3",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "adfc7ea3d33e411eef9c11cc01786c33d451352646a7152730ee26ea5abd9769",
+      "path": "package.json",
+      "baseline": "before-source",
+      "afterSHA256": "00e109e97bb64ef268db83a807740264b7db81f3779576fb3905e4c487da7354",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "e45157871f777c2d8399ddbdde3c3fdb1e501bbb94e8e879ff6b46a563ceb12f",
+      "afterSHA256": "b2b6b3443758ffab4ec009f8a99ca82ff5c9cc15dde3169a3fa8318c7dd73110",
+      "path": "README.md",
+      "changed": true,
+      "baseline": "before-source"
+    },
+    {
+      "path": "scripts/build_display_adapters.py",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "8380877383705e32771705dcdbcd12b0354713023b90ff49665b2d076b070610",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "d462fab7ba66a90dc6b86299d82014b47de6a9669664003c8ee851b833bd3739",
+      "baseline": "before-source",
+      "path": "scripts/build_geometry_standalone.py",
+      "afterSHA256": "409d6e331ca3323387635f14f7fd2687dc58f1a46bf53bad3105ed475a30c4ba",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "240cfbf2d7942a958b910505a74bf1fb634d8bb2267c24dcd203db5856dfa2d8",
+      "baseline": "before-source",
+      "path": "scripts/build_phet_theme.py",
+      "afterSHA256": "8422fd27a489aec159c3e76872d5bc28757cd68fc336e38f367ab6a054e2b4db",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "8e8a4dddd356daadbb74120f435e2c5dfe0af6adbff52341363f514d75a7c759",
+      "baseline": "before-source",
+      "path": "scripts/build_playground_standalone.py",
+      "afterSHA256": "787335a1b3585e84ea92e700fe2d82d496092bef6c0c606e15d5e82069842b9a",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "aa3e1b523f09f9a40078922b684d576cce72711a2bb547a6013de1a34bbd3e43",
+      "baseline": "before-source",
+      "path": "scripts/build_server.py",
+      "afterSHA256": "9f543c569e3ce849c497043ec8334fe73a1262dbde3216978a254c498901ceed",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "1740c5ae3c6780e28459b252d5a7f1fbc4610a84841565d0a7fb197eed7e8a47",
+      "baseline": "before-source",
+      "path": "scripts/build_spaceflight_standalone.py",
+      "afterSHA256": "8d9300e47d971d5d13fb9aee689b269e6e9c76bf87627c86bc0056967c58a9ea",
+      "changed": true
+    },
+    {
+      "path": "scripts/fixtures/matter-legacy.html",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "a8d734af00b08284b760afd549414f6282f1f1bcae603e5ea968b6ed936b7b6c",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "5dddaa904cf4ce08b448b0455922ef45f9ca52fad7a3436c912eab7632115987",
+      "path": "scripts/import_upstream.py",
+      "baseline": "before-source",
+      "afterSHA256": "2bd162080d2ace5042119b12dd1b574771ca55757961f1e372b659b2f48cde07",
+      "changed": true
+    },
+    {
+      "path": "scripts/inline_theme.py",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "3a1ed9222822a7413a9ff7e750eca5163d2c4a3f508a00442138eda53e4c68e3",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "f95db0dfdcec33038111afcd49c990b27237f69c7aef08d0651888534e7b230c",
+      "baseline": "before-source",
+      "path": "scripts/package.py",
+      "afterSHA256": "83b2f39e77e5580e77c04b748370b9c5fb4c6551e88b116670dfd29c91784a94",
+      "changed": true
+    },
+    {
+      "path": "src/activity-entry.js",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "e112de9c1d4f4c29c92db79f7b95cd2c720819187049d5538c6246e6fb0c8837",
+      "changed": true
+    },
+    {
+      "path": "src/adapters/generated/edit-ledger.json",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "87263759d18899507c66b77d369267bf1a84895e0cae77d3896f21a25bc750eb",
+      "changed": true
+    },
+    {
+      "path": "src/adapters/generated/tangram-scene.js",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "fb4ed907308f086e9fbeae5d4d5f5c815acc04ff41913f2ee646132fdee25bca",
+      "changed": true
+    },
+    {
+      "path": "src/adapters/matter.css",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "1bdcb20e07ebc10f5c6e913ae882c5705792f4d9f007f0b39055896f5ebd7a77",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "a8d734af00b08284b760afd549414f6282f1f1bcae603e5ea968b6ed936b7b6c",
+      "baseline": "before-source",
+      "path": "src/adapters/matter.html",
+      "afterSHA256": "16be3136196614c6bcd53a30b633572d7a89419e30d5127ebfcb587aaed06829",
+      "changed": true
+    },
+    {
+      "path": "src/adapters/tangram-view.js",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "097667c42563dcc5efc03f4a03d1b5b68f61f6417bb3774bd5c32d04d8b9fc26",
+      "changed": true
+    },
+    {
+      "path": "src/adapters/tangram.css",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "4a263ed57416af68076fa98a350ca72aa149fe22076c868662f64cd35e8a3242",
+      "changed": true
+    },
+    {
+      "path": "src/adapters/tangram.html",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "1b8c92a12969409e5b0b478a74306e44597306f32082ea1be42997c88f78bb6d",
+      "changed": true
+    },
+    {
+      "path": "src/adapters/tangram.template.html",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "cc441fc38837fdde2424925afc5b4f87c5b4281d0b5d4c479c8371b7f23433da",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "e443c5ccff3a5d5664bc3d55c5ddf0bd489fb2c5cea7dfcea39fcae470c7d57d",
+      "baseline": "before-source",
+      "path": "src/app.js",
+      "afterSHA256": "96559e7f33327f9f5f6bc5f69251c2b8ece612c007f991efd3f98b2286268007",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "1b042f7c8f93a66a528e4b7ddeb4c6e7f0f18e6dd80e65e6b338f75eb39dd135",
+      "baseline": "before-source",
+      "path": "src/matter-runner.js",
+      "afterSHA256": "9bcd3a25048842e7091d00a509398c54524d85d69b9f43dd16a053cf682ad3e6",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "7cae46417cc0384674cfc8db644dc87f8d8d51056719065e2db0ce3c6a62aa18",
+      "baseline": "generated-hash-only",
+      "path": "src/phet/generated/area-builder.html",
+      "afterSHA256": "725c7ae82306e6a0df5c5df7f3aca5bfc17848098932addf462b13e2a9a08d83",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "a854f8415f845737e6d49b2aa1bfcd734ff1ecc478c258bba8c6f945258252f1",
+      "baseline": "generated-hash-only",
+      "path": "src/phet/generated/edit-ledger.json",
+      "afterSHA256": "bbf99fe1cef872dbf884fb71964fd02ae45e09725d62162f2fa61232b3dac268",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "01bd9c404ae4784e45c65f778ddc77ec4910b6cfb7f273af9a9865ab51cc2c5a",
+      "baseline": "generated-hash-only",
+      "path": "src/phet/generated/energy-skate-park-basics.html",
+      "afterSHA256": "a71e51ce37f2692c0573b9092603f484bee561205004e6d7a8b44cb9d47d961e",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "872c89ac995d67550d8da68fdecefa7ac48dda17bfb02b52286cbbca80ce2006",
+      "baseline": "generated-hash-only",
+      "path": "src/phet/generated/forces-and-motion-basics.html",
+      "afterSHA256": "019b543d9cdfef5a7c6e2fb728b385365ffd02bf6713ea0a3661c3f4974d2051",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "e63c153e386fd01ef32415171db39fb4e6fa8648aec6fe1c4298d0f0d29111c7",
+      "baseline": "generated-hash-only",
+      "path": "src/phet/generated/vector-addition.html",
+      "afterSHA256": "2568595744d7c2c54f513b47cd21399567ac189fb7017f87ed56a20e96cbb591",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "5f2cb80380f1049479b40e62fe5157b12bfeed309538f76f48116bf026c97fe2",
+      "baseline": "before-source",
+      "path": "src/phet/view.js",
+      "afterSHA256": "4e95fa04d925bd4343bdab85f5e41f8d85cb2b382a69c0bdde0219ab8af792ba",
+      "changed": true
+    },
+    {
+      "beforeSHA256": "d00dd4983b2a52348a28b4dbb4040286c9a1a0f1c9148975fded00784bfb7ecf",
+      "baseline": "before-source",
+      "path": "src/styles.css",
+      "afterSHA256": "afb90fecf311a22b263cafad24b303e129e4a04c42b6ae6c6afc71937884dbd4",
+      "changed": true
+    },
+    {
+      "path": "src/theme.css",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "1fb07b372fb9f383c959a8a3f4df9c406148cfa9ac50d7d92aa0724a5d032028",
+      "changed": true
+    },
+    {
+      "path": "src/theme.js",
+      "beforeSHA256": null,
+      "baseline": "new-file",
+      "afterSHA256": "c04419725cbe9be17c0e9f616e8732ac9715c7d455b4c234e2621fd7033e7aa0",
+      "changed": true
+    }
+  ],
+  "changedFiles": 48
+}

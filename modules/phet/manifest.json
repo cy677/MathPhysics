@@ -18,11 +18,21 @@
         4,
         5
       ],
-      "zone": "math",
+      "zone": "geometry",
       "kind": "simulation",
       "source": "https://github.com/phetsims/fractions-intro",
       "published": "https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_all.html",
-      "entry": "vendor/phet/fractions-intro.html"
+      "entry": "vendor/phet/fractions-intro.html",
+      "screenCount": 3,
+      "description": "把圆饼、长条和数轴摆一摆，看见一个整体可以怎样分。",
+      "playHint": "先选“介绍”，把分数拼块拖到框里。改变分子和分母，比较图形与数轴；再去“游戏”或“实验室”试一试。",
+      "content": [
+        "分数",
+        "分子与分母",
+        "介绍",
+        "游戏",
+        "实验室"
+      ]
     },
     {
       "id": "fraction-matcher",
@@ -33,11 +43,21 @@
         5,
         6
       ],
-      "zone": "math",
+      "zone": "geometry",
       "kind": "game",
       "source": "https://github.com/phetsims/fraction-matcher",
       "published": "https://phet.colorado.edu/sims/html/fraction-matcher/latest/fraction-matcher_all.html",
-      "entry": "vendor/phet/fraction-matcher.html"
+      "entry": "vendor/phet/fraction-matcher.html",
+      "screenCount": 2,
+      "description": "给表示同一个数的图形和分数找到朋友。",
+      "playHint": "选择“分数”或“带分数”，再选难度。把两个表示同一个数的卡片放到天平两边，点“检查”看看配对结果。",
+      "content": [
+        "分数",
+        "等值分数",
+        "带分数",
+        "配对",
+        "8档难度"
+      ]
     },
     {
       "id": "balancing-act",
@@ -52,7 +72,18 @@
       "kind": "simulation",
       "source": "https://github.com/phetsims/balancing-act",
       "published": "https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act_all.html",
-      "entry": "vendor/phet/balancing-act.html"
+      "entry": "vendor/phet/balancing-act.html",
+      "screenCount": 3,
+      "description": "把重物放在两边，找一找跷跷板平衡的办法。",
+      "playHint": "把重物拖到跷跷板两边，移走支撑看看哪边下沉。试着改变重物的位置和质量，再到“游戏”挑战平衡。",
+      "content": [
+        "平衡",
+        "质量",
+        "距离",
+        "介绍",
+        "平衡实验室",
+        "游戏"
+      ]
     },
     {
       "id": "circuit-construction-kit-dc",
@@ -66,7 +97,20 @@
       "kind": "simulation",
       "source": "https://github.com/phetsims/circuit-construction-kit-dc",
       "published": "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_all.html",
-      "entry": "vendor/phet/circuit-construction-kit-dc.html"
+      "entry": "vendor/phet/circuit-construction-kit-dc.html",
+      "screenCount": 2,
+      "description": "用电池、导线和灯泡接出一条完整的电路。",
+      "playHint": "从右侧拖出电池、导线和灯泡，把接头连成一圈。观察灯泡和电流；选中元件可以调节数值，也可以加入开关。",
+      "content": [
+        "电路",
+        "电池",
+        "灯泡",
+        "开关",
+        "电流",
+        "电压",
+        "介绍",
+        "实验室"
+      ]
     },
     {
       "id": "states-of-matter-basics",
@@ -80,7 +124,20 @@
       "kind": "simulation",
       "source": "https://github.com/phetsims/states-of-matter-basics",
       "published": "https://phet.colorado.edu/sims/html/states-of-matter-basics/latest/states-of-matter-basics_all.html",
-      "entry": "vendor/phet/states-of-matter-basics.html"
+      "entry": "vendor/phet/states-of-matter-basics.html",
+      "screenCount": 2,
+      "description": "加热或冷却，看看粒子怎样组成固体、液体和气体。",
+      "playHint": "先选一种物质，比较“固体”“液体”“气体”的粒子。拖动加热与冷却滑块；到“相变”页试着压下盖子，观察变化。",
+      "content": [
+        "物态",
+        "固体",
+        "液体",
+        "气体",
+        "加热",
+        "冷却",
+        "相变",
+        "粒子"
+      ]
     },
     {
       "id": "build-a-molecule",
@@ -93,7 +150,18 @@
       "kind": "simulation",
       "source": "https://github.com/phetsims/build-a-molecule",
       "published": "https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_all.html",
-      "entry": "vendor/phet/build-a-molecule.html"
+      "entry": "vendor/phet/build-a-molecule.html",
+      "screenCount": 3,
+      "description": "把不同的原子接在一起，搭出水和其他小分子。",
+      "playHint": "把原子从下方的小桶拖出来，靠近它们组成分子。把符合目标的分子拖到收集框；也可以切到“多个分子”或“自由探索”自由搭建。",
+      "content": [
+        "原子",
+        "分子",
+        "水分子",
+        "单个分子",
+        "多个分子",
+        "自由探索"
+      ]
     }
   ],
   "licenseNote": "Preserve PhET notices. Verify each simulation/source/assets before redistribution; do not relabel the bundle as MIT.",
@@ -103,5 +171,5 @@
     "output": "vendor/phet/",
     "verification": "modules/phet/lock.json is generated with byte size and SHA-256 for each downloaded official published HTML."
   },
-  "status": "ready-to-download; additions intentionally enter inventory only after official standalone files are present"
+  "status": "integrated; official standalone files verified against lock.json and registered in the activity inventory"
 }

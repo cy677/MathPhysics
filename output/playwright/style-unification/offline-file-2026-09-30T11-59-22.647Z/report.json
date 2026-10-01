@@ -1,0 +1,166 @@
+{
+  "suite": "Four standalone file:// lessons",
+  "screenshots": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\offline-file-2026-09-30T11-59-22.647Z",
+  "builds": [
+    {
+      "name": "geometry",
+      "status": 0,
+      "stdout": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\offline-file-2026-09-30T11-59-22.647Z\\workspace\\dist\\MathPhysics-Geometry-Proofs.html 63126\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "spaceflight",
+      "status": 0,
+      "stdout": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\offline-file-2026-09-30T11-59-22.647Z\\workspace\\dist\\MathPhysics-Spaceflight.html 112322\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "playground-and-tangram",
+      "status": 0,
+      "stdout": "MathPhysics-Playground.html 1005881\r\nMathPhysics-Tangram.html 90406\r\n",
+      "stderr": ""
+    }
+  ],
+  "pages": [
+    {
+      "id": "geometry",
+      "title": "长方形与正方形：数方格 · 看见公式",
+      "protocol": "file:",
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1440,
+          "documentWidth": 1440,
+          "overflow": false,
+          "bodyBackground": "rgb(245, 243, 233)"
+        },
+        {
+          "name": "tablet",
+          "width": 1024,
+          "documentWidth": 1024,
+          "overflow": false,
+          "bodyBackground": "rgb(245, 243, 233)"
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "overflow": false,
+          "bodyBackground": "rgb(245, 243, 233)"
+        }
+      ],
+      "interaction": {
+        "action": "select transformation explanation step",
+        "changed": true
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "spaceflight",
+      "title": "从地球出发 · 太空任务互动课堂",
+      "protocol": "file:",
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1440,
+          "documentWidth": 1440,
+          "overflow": false,
+          "bodyBackground": "rgb(245, 243, 233)"
+        },
+        {
+          "name": "tablet",
+          "width": 1024,
+          "documentWidth": 1024,
+          "overflow": false,
+          "bodyBackground": "rgb(245, 243, 233)"
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "overflow": false,
+          "bodyBackground": "rgb(245, 243, 233)"
+        }
+      ],
+      "interaction": {
+        "action": "open principles laboratory tab",
+        "selected": "true"
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "jsxgraph-playground",
+      "title": "三角形的秘密 · 科学小岛",
+      "protocol": "file:",
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1440,
+          "documentWidth": 1440,
+          "overflow": false,
+          "bodyBackground": "rgb(245, 243, 233)"
+        },
+        {
+          "name": "tablet",
+          "width": 1024,
+          "documentWidth": 1024,
+          "overflow": false,
+          "bodyBackground": "rgb(245, 243, 233)"
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "overflow": false,
+          "bodyBackground": "rgb(245, 243, 233)"
+        }
+      ],
+      "interaction": {
+        "action": "switch geometry experiment",
+        "mode": "mirror",
+        "selected": "true"
+      },
+      "pageErrors": []
+    },
+    {
+      "id": "tangram-flat",
+      "title": "七巧板拼图 · 科学小岛",
+      "protocol": "file:",
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1440,
+          "documentWidth": 1440,
+          "overflow": false,
+          "bodyBackground": "rgb(245, 243, 233)"
+        },
+        {
+          "name": "tablet",
+          "width": 1024,
+          "documentWidth": 1024,
+          "overflow": false,
+          "bodyBackground": "rgb(245, 243, 233)"
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "overflow": false,
+          "bodyBackground": "rgb(245, 243, 233)"
+        }
+      ],
+      "interaction": {
+        "action": "select a piece and rotate it",
+        "selected": "true",
+        "rotation": 45
+      },
+      "pageErrors": []
+    }
+  ],
+  "externalRequests": [],
+  "limitations": [
+    "Chromium file:// checks; no physical mobile browser test."
+  ],
+  "passed": true,
+  "failures": []
+}

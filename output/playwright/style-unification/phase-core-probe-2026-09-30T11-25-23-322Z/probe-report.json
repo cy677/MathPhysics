@@ -1,0 +1,1454 @@
+{
+  "base": "http://127.0.0.1:64673/",
+  "sizes": [
+    {
+      "width": 1440,
+      "height": 900,
+      "name": "desktop"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "name": "tablet"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "mobile"
+    }
+  ],
+  "pages": [
+    [
+      "home",
+      ""
+    ],
+    [
+      "geometry",
+      "lessons/geometric-proofs/index.html?lesson=square-sum"
+    ],
+    [
+      "spaceflight",
+      "lessons/spaceflight/index.html"
+    ],
+    [
+      "jsxgraph",
+      "lessons/jsxgraph-playground/index.html?mode=linear"
+    ],
+    [
+      "tangram-flat",
+      "lessons/tangram-flat/index.html"
+    ]
+  ],
+  "results": [
+    {
+      "name": "home",
+      "size": "desktop",
+      "url": "http://127.0.0.1:64673/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 4012
+      },
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "15px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": {
+        "text": "开始探索\n↗",
+        "background": "rgb(49, 93, 75)",
+        "color": "rgb(255, 254, 249)",
+        "height": 50.75
+      },
+      "buttons": [
+        {
+          "text": "老师 / 家长",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "来源与授权",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "01 / 几何工坊\n△ ◇ ○\n把想象，拼成形状\n\n拼图、面积、",
+          "height": 236,
+          "minHeight": "207px"
+        },
+        {
+          "text": "02 / 动力车间\n● ↗ ▰\n动手，让世界动起来\n\n推拉、摩擦",
+          "height": 236,
+          "minHeight": "207px"
+        },
+        {
+          "text": "03 / 箭头港口\n↗ ＋ →\n找到方向，也找到规律\n\n方向、向",
+          "height": 236,
+          "minHeight": "207px"
+        },
+        {
+          "text": "退出预览",
+          "height": 0,
+          "minHeight": "44px"
+        },
+        {
+          "text": "全部",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "几何工坊",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "动力车间",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "箭头港口",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "全年级",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "一年级",
+          "height": 44,
+          "minHeight": "44px"
+        }
+      ],
+      "ready": null,
+      "overflow": false
+    },
+    {
+      "name": "geometry",
+      "size": "desktop",
+      "url": "http://127.0.0.1:64673/lessons/geometric-proofs/index.html?lesson=square-sum",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 1451
+      },
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "16px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": null,
+      "buttons": [
+        {
+          "text": "01\n长方形与正方形：数方格",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "02\n平行四边形：剪一块、移一块",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "03\n三角形：为什么要除以二",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "04\n梯形：两块拼出一个底",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "05\n菱形：两条对角线的秘密",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "06\n圆：扇形越细，越接近长方形",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "07\n扇形：占整圆的多少",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "08\n圆环：大圆减去小圆",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "09\n等高三角形：底比等于面积比",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "10\n相似图形：边长翻倍，面积呢",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "11\n(a+b)²：为什么有两个 ab",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "12\n(a−b)²：为什么要加回 b²",
+          "height": 44,
+          "minHeight": "44px"
+        }
+      ],
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "name": "spaceflight",
+      "size": "desktop",
+      "url": "http://127.0.0.1:64673/lessons/spaceflight/index.html#mission=us-crew&tab=journey&step=prepare",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 1360
+      },
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "15px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": {
+        "text": "▶ 播放",
+        "background": "rgb(113, 234, 208)",
+        "color": "rgb(255, 254, 249)",
+        "height": 44
+      },
+      "buttons": [
+        {
+          "text": "资料与说明",
+          "height": 45,
+          "minHeight": "44px"
+        },
+        {
+          "text": "⛶ 全屏",
+          "height": 45,
+          "minHeight": "44px"
+        },
+        {
+          "text": "美国发射体系 · 载人任务\n载人龙去空间站\n猎鹰9号 · 载人龙",
+          "height": 107,
+          "minHeight": "100px"
+        },
+        {
+          "text": "美国发射体系 · 卫星任务\n送卫星去工作\n猎鹰9号 · 卫星入轨",
+          "height": 107,
+          "minHeight": "100px"
+        },
+        {
+          "text": "中国发射体系 · 载人任务\n神舟去天宫\n长征二号F · 神舟 ·",
+          "height": 107,
+          "minHeight": "100px"
+        },
+        {
+          "text": "中国发射体系 · 卫星任务\n长三甲的卫星任务\n长征三号甲 · 卫",
+          "height": 107,
+          "minHeight": "100px"
+        },
+        {
+          "text": "01 任务旅程",
+          "height": 52,
+          "minHeight": "48px"
+        },
+        {
+          "text": "02 原理实验室",
+          "height": 52,
+          "minHeight": "48px"
+        },
+        {
+          "text": "03 认识飞行器",
+          "height": 52,
+          "minHeight": "48px"
+        },
+        {
+          "text": "04 探究手册",
+          "height": 52,
+          "minHeight": "48px"
+        },
+        {
+          "text": "01\n出发前的检查",
+          "height": 46,
+          "minHeight": "45px"
+        },
+        {
+          "text": "02\n点火，离开发射台",
+          "height": 45,
+          "minHeight": "45px"
+        }
+      ],
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "name": "jsxgraph",
+      "size": "desktop",
+      "url": "http://127.0.0.1:64673/lessons/jsxgraph-playground/index.html?mode=linear",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "15px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": {
+        "text": "我做好了",
+        "background": "rgb(49, 93, 75)",
+        "color": "rgb(255, 254, 249)",
+        "height": 48
+      },
+      "buttons": [
+        {
+          "text": "重新开始",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "三角形",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "找对称",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "转一转",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "放大镜",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "拼箭头",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "变形机",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "←",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "↑",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "↓",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "→",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "旋转90°",
+          "height": 48,
+          "minHeight": "48px"
+        }
+      ],
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "name": "tangram-flat",
+      "size": "desktop",
+      "url": "http://127.0.0.1:64673/lessons/tangram-flat/index.html",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "bodyClass": "mp-page mp-tangram-flat",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "15px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": {
+        "text": "看看拼好了没有",
+        "background": "rgb(49, 93, 75)",
+        "color": "rgb(255, 254, 249)",
+        "height": 48
+      },
+      "buttons": [
+        {
+          "text": "重新开始",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "方形热身",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "创意轮廓",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "←",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "↑",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "↓",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "→",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "1",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "2",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "3",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "4",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "5",
+          "height": 48,
+          "minHeight": "48px"
+        }
+      ],
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "name": "home",
+      "size": "tablet",
+      "url": "http://127.0.0.1:64673/",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "document": {
+        "width": 1024,
+        "height": 3984
+      },
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "15px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": {
+        "text": "开始探索\n↗",
+        "background": "rgb(49, 93, 75)",
+        "color": "rgb(255, 254, 249)",
+        "height": 50.75
+      },
+      "buttons": [
+        {
+          "text": "老师 / 家长",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "来源与授权",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "01 / 几何工坊\n△ ◇ ○\n把想象，拼成形状\n\n拼图、面积、",
+          "height": 236,
+          "minHeight": "207px"
+        },
+        {
+          "text": "02 / 动力车间\n● ↗ ▰\n动手，让世界动起来\n\n推拉、摩擦",
+          "height": 236,
+          "minHeight": "207px"
+        },
+        {
+          "text": "03 / 箭头港口\n↗ ＋ →\n找到方向，也找到规律\n\n方向、向",
+          "height": 236,
+          "minHeight": "207px"
+        },
+        {
+          "text": "退出预览",
+          "height": 0,
+          "minHeight": "44px"
+        },
+        {
+          "text": "全部",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "几何工坊",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "动力车间",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "箭头港口",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "全年级",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "一年级",
+          "height": 44,
+          "minHeight": "44px"
+        }
+      ],
+      "ready": null,
+      "overflow": false
+    },
+    {
+      "name": "geometry",
+      "size": "tablet",
+      "url": "http://127.0.0.1:64673/lessons/geometric-proofs/index.html?lesson=square-sum",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "document": {
+        "width": 1024,
+        "height": 1704
+      },
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "16px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": null,
+      "buttons": [
+        {
+          "text": "01\n长方形与正方形：数方格",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "02\n平行四边形：剪一块、移一块",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "03\n三角形：为什么要除以二",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "04\n梯形：两块拼出一个底",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "05\n菱形：两条对角线的秘密",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "06\n圆：扇形越细，越接近长方形",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "07\n扇形：占整圆的多少",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "08\n圆环：大圆减去小圆",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "09\n等高三角形：底比等于面积比",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "10\n相似图形：边长翻倍，面积呢",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "11\n(a+b)²：为什么有两个 ab",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "12\n(a−b)²：为什么要加回 b²",
+          "height": 58,
+          "minHeight": "44px"
+        }
+      ],
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "name": "spaceflight",
+      "size": "tablet",
+      "url": "http://127.0.0.1:64673/lessons/spaceflight/index.html#mission=us-crew&tab=journey&step=prepare",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "document": {
+        "width": 1024,
+        "height": 1801
+      },
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "15px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": {
+        "text": "▶ 播放",
+        "background": "rgb(113, 234, 208)",
+        "color": "rgb(255, 254, 249)",
+        "height": 44
+      },
+      "buttons": [
+        {
+          "text": "资料与说明",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "⛶ 全屏",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "美国发射体系 · 载人任务\n载人龙去空间站\n猎鹰9号 · 载人龙",
+          "height": 98,
+          "minHeight": "96px"
+        },
+        {
+          "text": "美国发射体系 · 卫星任务\n送卫星去工作\n猎鹰9号 · 卫星入轨",
+          "height": 98,
+          "minHeight": "96px"
+        },
+        {
+          "text": "中国发射体系 · 载人任务\n神舟去天宫\n长征二号F · 神舟 ·",
+          "height": 98,
+          "minHeight": "96px"
+        },
+        {
+          "text": "中国发射体系 · 卫星任务\n长三甲的卫星任务\n长征三号甲 · 卫",
+          "height": 98,
+          "minHeight": "96px"
+        },
+        {
+          "text": "01 任务旅程",
+          "height": 52,
+          "minHeight": "48px"
+        },
+        {
+          "text": "02 原理实验室",
+          "height": 52,
+          "minHeight": "48px"
+        },
+        {
+          "text": "03 认识飞行器",
+          "height": 52,
+          "minHeight": "48px"
+        },
+        {
+          "text": "04 探究手册",
+          "height": 52,
+          "minHeight": "48px"
+        },
+        {
+          "text": "01\n出发前的检查",
+          "height": 46,
+          "minHeight": "45px"
+        },
+        {
+          "text": "02\n点火，离开发射台",
+          "height": 45,
+          "minHeight": "45px"
+        }
+      ],
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "name": "jsxgraph",
+      "size": "tablet",
+      "url": "http://127.0.0.1:64673/lessons/jsxgraph-playground/index.html?mode=linear",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "document": {
+        "width": 1024,
+        "height": 768
+      },
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "15px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": {
+        "text": "我做好了",
+        "background": "rgb(49, 93, 75)",
+        "color": "rgb(255, 254, 249)",
+        "height": 48
+      },
+      "buttons": [
+        {
+          "text": "重新开始",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "三角形",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "找对称",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "转一转",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "放大镜",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "拼箭头",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "变形机",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "←",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "↑",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "↓",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "→",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "旋转90°",
+          "height": 48,
+          "minHeight": "48px"
+        }
+      ],
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "name": "tangram-flat",
+      "size": "tablet",
+      "url": "http://127.0.0.1:64673/lessons/tangram-flat/index.html",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "document": {
+        "width": 1024,
+        "height": 768
+      },
+      "bodyClass": "mp-page mp-tangram-flat",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "15px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": {
+        "text": "看看拼好了没有",
+        "background": "rgb(49, 93, 75)",
+        "color": "rgb(255, 254, 249)",
+        "height": 48
+      },
+      "buttons": [
+        {
+          "text": "重新开始",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "方形热身",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "创意轮廓",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "←",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "↑",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "↓",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "→",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "1",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "2",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "3",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "4",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "5",
+          "height": 48,
+          "minHeight": "48px"
+        }
+      ],
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "name": "home",
+      "size": "mobile",
+      "url": "http://127.0.0.1:64673/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 8662
+      },
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "15px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": {
+        "text": "开始探索\n↗",
+        "background": "rgb(49, 93, 75)",
+        "color": "rgb(255, 254, 249)",
+        "height": 50.75
+      },
+      "buttons": [
+        {
+          "text": "老师 / 家长",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "来源与授权",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "01 / 几何工坊\n△ ◇ ○\n把想象，拼成形状\n\n拼图、面积、",
+          "height": 145,
+          "minHeight": "120px"
+        },
+        {
+          "text": "02 / 动力车间\n● ↗ ▰\n动手，让世界动起来\n\n推拉、摩擦",
+          "height": 145,
+          "minHeight": "120px"
+        },
+        {
+          "text": "03 / 箭头港口\n↗ ＋ →\n找到方向，也找到规律\n\n方向、向",
+          "height": 145,
+          "minHeight": "120px"
+        },
+        {
+          "text": "退出预览",
+          "height": 0,
+          "minHeight": "44px"
+        },
+        {
+          "text": "全部",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "几何工坊",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "动力车间",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "箭头港口",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "全年级",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "一年级",
+          "height": 44,
+          "minHeight": "44px"
+        }
+      ],
+      "ready": null,
+      "overflow": false
+    },
+    {
+      "name": "geometry",
+      "size": "mobile",
+      "url": "http://127.0.0.1:64673/lessons/geometric-proofs/index.html?lesson=square-sum",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 1714
+      },
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "16px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": null,
+      "buttons": [
+        {
+          "text": "",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "",
+          "height": 58,
+          "minHeight": "44px"
+        },
+        {
+          "text": "",
+          "height": 58,
+          "minHeight": "44px"
+        }
+      ],
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "name": "spaceflight",
+      "size": "mobile",
+      "url": "http://127.0.0.1:64673/lessons/spaceflight/index.html#mission=us-crew&tab=journey&step=prepare",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 2156
+      },
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "15px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": {
+        "text": "▶ 播放",
+        "background": "rgb(113, 234, 208)",
+        "color": "rgb(255, 254, 249)",
+        "height": 44
+      },
+      "buttons": [
+        {
+          "text": "资料与说明",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "⛶ 全屏",
+          "height": 44,
+          "minHeight": "44px"
+        },
+        {
+          "text": "美国发射体系 · 载人任务\n载人龙去空间站\n猎鹰9号 · 载人龙",
+          "height": 103,
+          "minHeight": "103px"
+        },
+        {
+          "text": "美国发射体系 · 卫星任务\n送卫星去工作\n猎鹰9号 · 卫星入轨",
+          "height": 103,
+          "minHeight": "103px"
+        },
+        {
+          "text": "中国发射体系 · 载人任务\n神舟去天宫\n长征二号F · 神舟 ·",
+          "height": 103,
+          "minHeight": "103px"
+        },
+        {
+          "text": "中国发射体系 · 卫星任务\n长三甲的卫星任务\n长征三号甲 · 卫",
+          "height": 103,
+          "minHeight": "103px"
+        },
+        {
+          "text": "01 任务旅程",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "02 原理实验室",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "03 认识飞行器",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "04 探究手册",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "01\n出发前的检查",
+          "height": 49,
+          "minHeight": "45px"
+        },
+        {
+          "text": "02\n点火，离开发射台",
+          "height": 49,
+          "minHeight": "45px"
+        }
+      ],
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "name": "jsxgraph",
+      "size": "mobile",
+      "url": "http://127.0.0.1:64673/lessons/jsxgraph-playground/index.html?mode=linear",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 1510
+      },
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "15px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": {
+        "text": "我做好了",
+        "background": "rgb(49, 93, 75)",
+        "color": "rgb(255, 254, 249)",
+        "height": 48
+      },
+      "buttons": [
+        {
+          "text": "重新开始",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "三角形",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "找对称",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "转一转",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "放大镜",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "拼箭头",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "变形机",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "←",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "↑",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "↓",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "→",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "旋转90°",
+          "height": 48,
+          "minHeight": "48px"
+        }
+      ],
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "name": "tangram-flat",
+      "size": "mobile",
+      "url": "http://127.0.0.1:64673/lessons/tangram-flat/index.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 1167
+      },
+      "bodyClass": "mp-page mp-tangram-flat",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "fontSize": "15px",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "primary": {
+        "text": "看看拼好了没有",
+        "background": "rgb(49, 93, 75)",
+        "color": "rgb(255, 254, 249)",
+        "height": 48
+      },
+      "buttons": [
+        {
+          "text": "重新开始",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "方形热身",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "创意轮廓",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "←",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "↑",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "↓",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "→",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "1",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "2",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "3",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "4",
+          "height": 48,
+          "minHeight": "48px"
+        },
+        {
+          "text": "5",
+          "height": 48,
+          "minHeight": "48px"
+        }
+      ],
+      "ready": true,
+      "overflow": false
+    }
+  ]
+}

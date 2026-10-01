@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "testPorts": [
+    8765,
+    8768,
+    8784,
+    8790
+  ],
+  "remainingListeners": 0,
+  "remainingTestProcesses": 0,
+  "stoppedProcesses": 0,
+  "temporaryDirectoryRemoved": true,
+  "nodeDependenciesRetained": true
+}

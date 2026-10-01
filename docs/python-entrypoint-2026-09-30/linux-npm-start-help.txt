@@ -1,0 +1,11 @@
+
+> mathphysics-science-island@0.4.0 start
+> node scripts/python.mjs scripts/serve.py --help
+
+usage: serve.py [-h] [--host HOST] [--port PORT] [--open]
+
+options:
+  -h, --help   show this help message and exit
+  --host HOST
+  --port PORT
+  --open

@@ -1,0 +1,27 @@
+{
+  "activityEntries": 63,
+  "pinnedFilesVerified": 1296,
+  "tangramReversibleEdits": 12,
+  "tangramSnapshotUnchanged": true,
+  "legacyMatterFixtureMatchesPin": true,
+  "runtimePagesChecked": 7,
+  "pythonSyntaxFiles": 9,
+  "standalone": {
+    "MathPhysics-Geometry-Proofs.html": {
+      "bytes": 63126,
+      "sha256": "e90e25f55d9f31e57dd84663a0cd59cce3721678a6a84492640f78facca6b802"
+    },
+    "MathPhysics-Spaceflight.html": {
+      "bytes": 112322,
+      "sha256": "07a0ff3efec836ad29d8a7046a6f938a10b832c547f9d1f3a7d97afb8c90dddb"
+    },
+    "MathPhysics-Playground.html": {
+      "bytes": 1005881,
+      "sha256": "deba572f6e248f811ade5e1a912d717f80b33f6a5426b8bb8133c7ed83b2adcd"
+    },
+    "MathPhysics-Tangram.html": {
+      "bytes": 90406,
+      "sha256": "3a0399dadfbc903e8fc0e701900cfab1b7bcf0043683e46f7859433853e2c0db"
+    }
+  }
+}

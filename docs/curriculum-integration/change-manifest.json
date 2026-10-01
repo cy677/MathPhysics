@@ -1,0 +1,411 @@
+{
+  "sourceRef": "origin/feat/primary-curriculum-questions-20260930",
+  "sourceCommit": "a7187a2f86007d23f1a04f3f7b49a04d7a4e591a",
+  "baseline": "current working-tree bytes before this integration",
+  "omittedSourceReports": [
+    "docs/primary-math-browser-report.json",
+    "docs/primary-math-http-attempt.json",
+    "docs/primary-math-unit-report.txt"
+  ],
+  "files": [
+    {
+      "path": "lessons/primary-math/app.mjs",
+      "status": "new",
+      "sourceSHA256": "c5330215551baf72c2c6e6abed1a643a93a8e7ad861e17ceccac0eeb0c1f3f51",
+      "afterSHA256": "0f9ddfa71f80e43729e8996e74adc456c842b4f8e3c85ee908c36cee88c302ab",
+      "afterBytes": 13935
+    },
+    {
+      "path": "lessons/primary-math/bank.mjs",
+      "status": "new",
+      "sourceSHA256": "edecf342b73eb592d0e2b42545dd8bb7ae0d159aea0433f4a8a4c94c5a72d444",
+      "afterSHA256": "edecf342b73eb592d0e2b42545dd8bb7ae0d159aea0433f4a8a4c94c5a72d444",
+      "afterBytes": 27564
+    },
+    {
+      "path": "lessons/primary-math/math.mjs",
+      "status": "new",
+      "sourceSHA256": "7bbc584819ad9d857a9cfee8a6ee0d137f2b164a3c466732509fdef650ec2e5c",
+      "afterSHA256": "7bbc584819ad9d857a9cfee8a6ee0d137f2b164a3c466732509fdef650ec2e5c",
+      "afterBytes": 2197
+    },
+    {
+      "path": "lessons/primary-math/index.html",
+      "status": "new",
+      "sourceSHA256": "1d0c1aa3715fda943250a44641d5e8452f652330b12507813a80c52967969f7d",
+      "afterSHA256": "231fd7f4cb5a5f4e89fd16dc82078278e2740bd72c60bc04e45fe697596ab46e",
+      "afterBytes": 4137
+    },
+    {
+      "path": "config/local-activities.json",
+      "status": "modified",
+      "beforeSHA256": "d15669e1029c2d38064d26d8e349cc92067d98a3675dd80a3aee69c069bd4fbf",
+      "beforeBytes": 9128,
+      "backup": "docs/curriculum-integration/before-source/config/local-activities.json",
+      "afterSHA256": "375174a14aafb1588ee3fe1e2bd9f21684f03940977552dd8298225cbf0eb514",
+      "afterBytes": 9768
+    },
+    {
+      "path": "config/presentation.json",
+      "status": "modified",
+      "beforeSHA256": "767218f48065426d6df9b52cfc70bf727114600911d8f0d72d46bedfdd2fe2f8",
+      "beforeBytes": 17603,
+      "backup": "docs/curriculum-integration/before-source/config/presentation.json",
+      "afterSHA256": "a290fba0b483271f0c4cc1974065a1f166e5dd8a9f3ffe04b25317f8779ac7b5",
+      "afterBytes": 17529
+    },
+    {
+      "path": "src/catalog.js",
+      "status": "modified",
+      "beforeSHA256": "791edd489d14f02bc25d9623d25931681c00fb216ca3c01c5541fa4a92b83ce7",
+      "beforeBytes": 1092,
+      "backup": "docs/curriculum-integration/before-source/src/catalog.js",
+      "afterSHA256": "b651bc8f2987ad3cf53f1eaf91e204d2ea8e06b7bb97b5a35d4c9d80bea9187a",
+      "afterBytes": 1122
+    },
+    {
+      "path": "src/readiness.js",
+      "status": "modified",
+      "beforeSHA256": "070978799c50d1a282dcabd1b612c86a625ac68f7081488cfd54ee66cda502b8",
+      "beforeBytes": 961,
+      "backup": "docs/curriculum-integration/before-source/src/readiness.js",
+      "afterSHA256": "22c7be35d6390986a107be820a57540bb6a66e4167662e5916504268e7bfe73b",
+      "afterBytes": 973
+    },
+    {
+      "path": "src/app.js",
+      "status": "modified",
+      "beforeSHA256": "96559e7f33327f9f5f6bc5f69251c2b8ece612c007f991efd3f98b2286268007",
+      "beforeBytes": 19410,
+      "backup": "docs/curriculum-integration/before-source/src/app.js",
+      "afterSHA256": "1d4668b3dbca5653bcbb0a4d0ca0a80d6e5049d162feafb8627c28936b24a1ac",
+      "afterBytes": 19307
+    },
+    {
+      "path": "lessons/primary-math/style.css",
+      "status": "new",
+      "note": "New local-theme presentation; source branch style not imported",
+      "afterSHA256": "4997e43357010153f6532e43a783d784af97dd57835e19e7cd22009d58ab08d0",
+      "afterBytes": 6039
+    },
+    {
+      "path": "lessons/geometric-proofs/catalog.js",
+      "status": "modified",
+      "beforeSHA256": "7f7511b81c2d64a58ed649beb9a20057835ac914f642cf20cc64627fdbecea59",
+      "beforeBytes": 16225,
+      "backup": "docs/curriculum-integration/before-source/lessons/geometric-proofs/catalog.js",
+      "sourceSHA256": "15282cf29d9110bcd4167c267a9c2627da3e4a4af1e37f5cae7e3bbb46a1de4e",
+      "afterSHA256": "15282cf29d9110bcd4167c267a9c2627da3e4a4af1e37f5cae7e3bbb46a1de4e",
+      "afterBytes": 16149
+    },
+    {
+      "path": "lessons/geometric-proofs/math.js",
+      "status": "modified",
+      "beforeSHA256": "0af25a8673ad5483d6c4a5e190a8e6b151bf1d694ac305a3e83a0cb0feecc412",
+      "beforeBytes": 4419,
+      "backup": "docs/curriculum-integration/before-source/lessons/geometric-proofs/math.js",
+      "sourceSHA256": "eb842dea70a21839543146da838b0a3943b3cffa4b91b608527ae3874238924a",
+      "afterSHA256": "eb842dea70a21839543146da838b0a3943b3cffa4b91b608527ae3874238924a",
+      "afterBytes": 7590
+    },
+    {
+      "path": "lessons/geometric-proofs/app.js",
+      "status": "modified",
+      "beforeSHA256": "46b822d295911b6f90bcd560636ea6ea302f1804cf54e7401d3fd727ade97ad8",
+      "beforeBytes": 6766,
+      "backup": "docs/curriculum-integration/before-source/lessons/geometric-proofs/app.js",
+      "afterSHA256": "ed87b294c241ae22c79c7a1257a9803256c1f2f77ed1843d68944069522d3728",
+      "afterBytes": 8039
+    },
+    {
+      "path": "lessons/geometric-proofs/index.html",
+      "status": "modified",
+      "beforeSHA256": "61ae53639b2d6599ccf87f2e3d59c06727cccb94a8a54d5fe3814b6f5fe16e67",
+      "beforeBytes": 4694,
+      "backup": "docs/curriculum-integration/before-source/lessons/geometric-proofs/index.html",
+      "afterSHA256": "4507c52880d3a500bfea6a9cf24e93806f80ab77e6f3ef0f2373e92eed69f669",
+      "afterBytes": 5030
+    },
+    {
+      "path": "lessons/geometric-proofs/styles.css",
+      "status": "modified",
+      "beforeSHA256": "22880bdd7d951142d2362fb5343aa00cd1713e8ca25111afbbd2de087f925a49",
+      "beforeBytes": 10010,
+      "backup": "docs/curriculum-integration/before-source/lessons/geometric-proofs/styles.css",
+      "afterSHA256": "2cbddd256605c4d3532e1d52153e3c31f665a77975812aa56d5e2b84689b75ca",
+      "afterBytes": 10476
+    },
+    {
+      "path": "lessons/jsxgraph-playground/app.js",
+      "status": "modified",
+      "beforeSHA256": "b619bbf5b3b85e61cf99a675cf1994f47778e37487e794712b9493450e5313c4",
+      "beforeBytes": 18659,
+      "backup": "docs/curriculum-integration/before-source/lessons/jsxgraph-playground/app.js",
+      "afterSHA256": "290db384c016e48212c34d2554d8c59e075021c73b2ba0b13b482cccb47ee314",
+      "afterBytes": 18811
+    },
+    {
+      "path": "lessons/tangram-flat/app.js",
+      "status": "modified",
+      "beforeSHA256": "fe85ea7e5dd36465964164cc5e901d92cfa6e8992fd4ec766d074dbbd9fe6d8b",
+      "beforeBytes": 7769,
+      "backup": "docs/curriculum-integration/before-source/lessons/tangram-flat/app.js",
+      "afterSHA256": "d37370477807637b7e332be9ffe74c6a4adf8290190280e95f7e585e69208fa5",
+      "afterBytes": 8505
+    },
+    {
+      "path": "lessons/tangram-flat/index.html",
+      "status": "modified",
+      "beforeSHA256": "22c36b57a88b86438b83a1b047d1e2d537f8c9859bc0d88ae561bc85b7355017",
+      "beforeBytes": 2719,
+      "backup": "docs/curriculum-integration/before-source/lessons/tangram-flat/index.html",
+      "afterSHA256": "e61afd0aa3b614df0f25df829fea1dfadc3fffaffdb7f88216dedd02559d72db",
+      "afterBytes": 3028
+    },
+    {
+      "path": "lessons/tangram-flat/styles.css",
+      "status": "modified",
+      "beforeSHA256": "0f97e4e478212d5620e6e963f1ec99d933deb20a26ae0b8bff4c8c8c8b2f66f3",
+      "beforeBytes": 2033,
+      "backup": "docs/curriculum-integration/before-source/lessons/tangram-flat/styles.css",
+      "afterSHA256": "99bccbdc525bea6c7feb232085c8aadb38a67de1a4493624cce2a9ebe125bd69",
+      "afterBytes": 2306
+    },
+    {
+      "path": "docs/geometry-grade-expansion.md",
+      "status": "new",
+      "sourceSHA256": "2ea1614be265ad8e194248b547e9589f835297a5d03e698da604fa0f258a7064",
+      "afterSHA256": "2ea1614be265ad8e194248b547e9589f835297a5d03e698da604fa0f258a7064",
+      "afterBytes": 4583
+    },
+    {
+      "path": "docs/primary-math-catalog.md",
+      "status": "new",
+      "sourceSHA256": "2d867e13e3282275d9726d81b830efe4ab03de00d248d5414ea827a786705cf6",
+      "afterSHA256": "2d867e13e3282275d9726d81b830efe4ab03de00d248d5414ea827a786705cf6",
+      "afterBytes": 2673
+    },
+    {
+      "path": "docs/primary-math-curriculum.md",
+      "status": "new",
+      "sourceSHA256": "b62a67fecb7dfe0b67588e03df1e0eac12ee807fc31e706bbadb4dbce06cdea4",
+      "afterSHA256": "de8e4148dfa8ad573cb2466123510f622c207076c82510817d68df131ede40b0",
+      "afterBytes": 9146
+    },
+    {
+      "path": "scripts/build_primary_math_standalone.py",
+      "status": "new",
+      "sourceSHA256": "529a2c53c4689572436f9379520f54b87ef844f5a90e9f1c55b5571d0ea77caf",
+      "afterSHA256": "8aa598bade9b47f432b93d086634dadccbcf4115907e6edb181a2df7c74ba781",
+      "afterBytes": 1865
+    },
+    {
+      "path": "tests/primary-math.test.mjs",
+      "status": "new",
+      "sourceSHA256": "2e1dc1b9ffb16e27e6a27c133a4e06d37c2b401a8c12f0b4947ab982a6fde00e",
+      "afterSHA256": "2e1dc1b9ffb16e27e6a27c133a4e06d37c2b401a8c12f0b4947ab982a6fde00e",
+      "afterBytes": 4176
+    },
+    {
+      "path": "tests/primary-math-browser.py",
+      "status": "new",
+      "sourceSHA256": "77bc67f535ee3a1932aac71f07800ebcc70394836b21cf58cf325903684abefd",
+      "afterSHA256": "75dae77ce543a6944601c92d48614090391f568dc9b1a560c4f3ee7c4771a2ef",
+      "afterBytes": 9088
+    },
+    {
+      "path": "docs/geometry-proofs.md",
+      "status": "modified",
+      "beforeSHA256": "43b102df84db4917a8e7fe2d79d901d68c431e91e470a73a579d09b9305c71a2",
+      "beforeBytes": 6824,
+      "backup": "docs/curriculum-integration/before-source/docs/geometry-proofs.md",
+      "afterSHA256": "d9ed624a269cf6216d14a99f412b37e35492b7e1f623db3cd5b06c06f066947b",
+      "afterBytes": 7178
+    },
+    {
+      "path": "package.json",
+      "status": "modified",
+      "beforeSHA256": "00e109e97bb64ef268db83a807740264b7db81f3779576fb3905e4c487da7354",
+      "beforeBytes": 1515,
+      "backup": "docs/curriculum-integration/before-source/package.json",
+      "afterSHA256": "3cdb6e2524e16dea47d00d2d3a051db9e8834a8756c2c32a913c65864bb79d63",
+      "afterBytes": 1726
+    },
+    {
+      "path": "scripts/package.py",
+      "status": "modified",
+      "beforeSHA256": "83b2f39e77e5580e77c04b748370b9c5fb4c6551e88b116670dfd29c91784a94",
+      "beforeBytes": 1836,
+      "backup": "docs/curriculum-integration/before-source/scripts/package.py",
+      "afterSHA256": "6e8a19dbfaf336150dda89b6d25c90b3a52eff9c7ec2049ad14bffbd0634a41f",
+      "afterBytes": 1897
+    },
+    {
+      "path": "scripts/build_server.py",
+      "status": "modified",
+      "beforeSHA256": "9f543c569e3ce849c497043ec8334fe73a1262dbde3216978a254c498901ceed",
+      "beforeBytes": 4365,
+      "backup": "docs/curriculum-integration/before-source/scripts/build_server.py",
+      "afterSHA256": "ba90dc11e45c3c3c2ea0815418707524a10e42bf263f11a5954a8ce81022cfc2",
+      "afterBytes": 4477
+    },
+    {
+      "path": ".github/workflows/classroom.yml",
+      "status": "modified",
+      "beforeSHA256": "622418c39e824fe1ca478418b9010d24b186792975008cdd5cbb2778798dd5fb",
+      "beforeBytes": 3156,
+      "backup": "docs/curriculum-integration/before-source/.github/workflows/classroom.yml",
+      "afterSHA256": "333b15551e081dc61bbcc06d3302bfa68030ebd4dc2409d4e4a40bf4aa7ff294",
+      "afterBytes": 3137
+    },
+    {
+      "path": "tests/catalog.test.mjs",
+      "status": "modified",
+      "beforeSHA256": "64ecd7ba819b4b297b85a4b3a5f7508ad1629031d38b216e9beb6e02f7687ffd",
+      "beforeBytes": 9053,
+      "backup": "docs/curriculum-integration/before-source/tests/catalog.test.mjs",
+      "afterSHA256": "f3885beb413fb421b6800cffa8dcf8b65730de072cafd42fca819993d74258df",
+      "afterBytes": 9123
+    },
+    {
+      "path": "tests/geometry.test.mjs",
+      "status": "modified",
+      "beforeSHA256": "7b754d9fc0092e76315003bee6cefd6938f70587c8388112c548d6e2f608265c",
+      "beforeBytes": 5576,
+      "backup": "docs/curriculum-integration/before-source/tests/geometry.test.mjs",
+      "afterSHA256": "62e17a13aba783c645ee742ebf8b6a6e51cb888da2d12e2d4a331fbc76449417",
+      "afterBytes": 6150
+    },
+    {
+      "path": "tests/playground.test.mjs",
+      "status": "modified",
+      "beforeSHA256": "1ef5945f8285a746c258fd5864c6466079171c724b229216595eba993c04308a",
+      "beforeBytes": 4835,
+      "backup": "docs/curriculum-integration/before-source/tests/playground.test.mjs",
+      "afterSHA256": "76dd8a9e55d441dbf198808a3dce5779bfdd8cf151bd220edb05de2cd33d09bc",
+      "afterBytes": 5246
+    },
+    {
+      "path": "tests/geometry-browser.mjs",
+      "status": "modified",
+      "beforeSHA256": "85259f45d3d6a23db77689f29de532edbcc6b0ca61e322aab4221af37fd5c8e9",
+      "beforeBytes": 6418,
+      "backup": "docs/curriculum-integration/before-source/tests/geometry-browser.mjs",
+      "afterSHA256": "49625e23cf11dbf80e8cdef41d6bde8903fe21196f727d2310c824184c10abc1",
+      "afterBytes": 6366
+    },
+    {
+      "path": "tests/classroom-browser.py",
+      "status": "modified",
+      "beforeSHA256": "9af6e84ccaa1a341e1f904772818a8d9f2f497df2eb96f787fe2219771922ac3",
+      "beforeBytes": 17225,
+      "backup": "docs/curriculum-integration/before-source/tests/classroom-browser.py",
+      "afterSHA256": "848520874450aeef9b8210dea20b4ac4ce3e13fe86c89279d2a2544c9c328e5d",
+      "afterBytes": 16907
+    },
+    {
+      "path": "deploy/mathphysics.nginx.conf",
+      "status": "modified",
+      "beforeSHA256": "2a1975e6485e58fc4c0ad17e0c2f015917a69ded556e69eca5ab573323e9b6c9",
+      "beforeBytes": 1102,
+      "backup": "docs/curriculum-integration/before-source/deploy/mathphysics.nginx.conf",
+      "afterSHA256": "13ea069c2f5c91e8a9bf70ffa7e4fb63c5c7cd1ef8aa4693254312aabe34583a",
+      "afterBytes": 1883
+    },
+    {
+      "path": "dist/MathPhysics-Geometry-Proofs.html",
+      "status": "modified",
+      "beforeSHA256": "e90e25f55d9f31e57dd84663a0cd59cce3721678a6a84492640f78facca6b802",
+      "beforeBytes": 63126,
+      "backup": "hash-only generated artifact",
+      "afterSHA256": "fb20b3148e350ad67b8654aadb5b77cbb403528e018ea26c3b626ddb002b4368",
+      "afterBytes": 68258
+    },
+    {
+      "path": "dist/MathPhysics-Spaceflight.html",
+      "status": "modified",
+      "beforeSHA256": "07a0ff3efec836ad29d8a7046a6f938a10b832c547f9d1f3a7d97afb8c90dddb",
+      "beforeBytes": 112322,
+      "backup": "hash-only generated artifact",
+      "afterSHA256": "07a0ff3efec836ad29d8a7046a6f938a10b832c547f9d1f3a7d97afb8c90dddb",
+      "afterBytes": 112322
+    },
+    {
+      "path": "dist/MathPhysics-Playground.html",
+      "status": "modified",
+      "beforeSHA256": "deba572f6e248f811ade5e1a912d717f80b33f6a5426b8bb8133c7ed83b2adcd",
+      "beforeBytes": 1005881,
+      "backup": "hash-only generated artifact",
+      "afterSHA256": "62cea281c0cb2997e422aed98669682cd8dcad25c01df9588a028e90199196a4",
+      "afterBytes": 1006141
+    },
+    {
+      "path": "dist/MathPhysics-Tangram.html",
+      "status": "modified",
+      "beforeSHA256": "3a0399dadfbc903e8fc0e701900cfab1b7bcf0043683e46f7859433853e2c0db",
+      "beforeBytes": 90406,
+      "backup": "hash-only generated artifact",
+      "afterSHA256": "f858e54390efe0352b015e1d525a85c23a7909ed910926303723e8efa442ac96",
+      "afterBytes": 91732
+    },
+    {
+      "path": "dist/MathPhysics-Primary-Math.html",
+      "status": "new",
+      "afterSHA256": "257aa886cfcdb4dc84f719cc222ac88239961e9f6c15ae6c99865352f6fd7ff2",
+      "afterBytes": 69250
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "beforeSHA256": "b2b6b3443758ffab4ec009f8a99ca82ff5c9cc15dde3169a3fa8318c7dd73110",
+      "beforeBytes": 8358,
+      "backup": "docs/curriculum-integration/before-source/README.md",
+      "afterSHA256": "95f5fa3a1bf36969381d6aa9188b5414cc2480238ea3dea7e3e279fb6fef7fb2",
+      "afterBytes": 10532
+    },
+    {
+      "path": "tests/playground-browser.mjs",
+      "status": "modified",
+      "beforeSHA256": "437ca5f3de2585f8e70babbe07ecb693f2c4bedf65d08882c5f61ec35ab53eae",
+      "beforeBytes": 12909,
+      "backup": "docs/curriculum-integration/before-source/tests/playground-browser.mjs",
+      "afterSHA256": "e6ad676e2749026dca15a092582b444d4c798489e2cf07ba9641bde24357070e",
+      "afterBytes": 12909
+    },
+    {
+      "path": "dist/MathPhysics-offline.zip",
+      "status": "modified",
+      "beforeSHA256": "51c843a5ef8aa1e6ff35efd830ce75369b06ce5c33b54271b3323dd641962774",
+      "beforeBytes": 109489663,
+      "backup": "hash-only generated artifact",
+      "afterSHA256": "2741b968ec51b371fd8f76974a90a281dc0f22f4ed06f602765845ea6d7d0b8b",
+      "afterBytes": 124083397
+    },
+    {
+      "path": "docs/curriculum-integration/implementation-checks.json",
+      "status": "new",
+      "afterSHA256": "73cae4dd0c03fe28a9a0a8032255fa05a1462824e86dedf71a73962516517acb",
+      "afterBytes": 5412
+    },
+    {
+      "path": "docs/curriculum-integration/integration.md",
+      "status": "new",
+      "afterSHA256": "c1e268630c5d838c90c8f52c34d783f04e9d4d5f305b642a1f230e21b3dabe38",
+      "afterBytes": 3544
+    },
+    {
+      "path": "dist/MathPhysics-server-curriculum-integration-20260930-final.tar.gz",
+      "status": "new",
+      "note": "Generated final distribution",
+      "afterSHA256": "e94eb69961634fae8dc6954b1d93b9b8afc3034234fd001d941a8ed27fde532f",
+      "afterBytes": 98261239
+    },
+    {
+      "path": "dist/MathPhysics-server-curriculum-integration-20260930-final.tar.gz.sha256",
+      "status": "new",
+      "note": "Generated final distribution",
+      "afterSHA256": "8688638976589a86e85ea7dd7c58fc07c3e56a1017cdd86cb0d77d330d891d5a",
+      "afterBytes": 131
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "modules": [
+    "jsxgraph-playground",
+    "tangram-flat",
+    "physics-demos",
+    "geometry-proofs",
+    "area-builder",
+    "forces-and-motion-basics",
+    "energy-skate-park-basics",
+    "vector-addition",
+    "primary-math",
+    "jsx-triangle",
+    "jsx-mirror",
+    "jsx-rotation",
+    "jsx-scale",
+    "jsx-vectors",
+    "jsx-linear",
+    "tangram"
+  ],
+  "categories": [
+    {
+      "title": "材料与运动",
+      "examples": 6
+    },
+    {
+      "title": "机械与经典实验",
+      "examples": 8
+    },
+    {
+      "title": "形状与堆叠",
+      "examples": 12
+    },
+    {
+      "title": "柔性与约束",
+      "examples": 5
+    },
+    {
+      "title": "开发与呈现",
+      "examples": 17
+    }
+  ],
+  "examples": [
+    "airFriction",
+    "friction",
+    "staticFriction",
+    "restitution",
+    "gravity",
+    "timescale",
+    "bridge",
+    "car",
+    "catapult",
+    "slingshot",
+    "newtonsCradle",
+    "doublePendulum",
+    "wreckingBall",
+    "gyro",
+    "mixed",
+    "stack",
+    "circleStack",
+    "compound",
+    "compoundStack",
+    "pyramid",
+    "avalanche",
+    "ballPool",
+    "rounded",
+    "concave",
+    "svg",
+    "terrain",
+    "cloth",
+    "softBody",
+    "ragdoll",
+    "chains",
+    "constraints",
+    "collisionFiltering",
+    "compositeManipulation",
+    "events",
+    "manipulation",
+    "raycasting",
+    "remove",
+    "renderResize",
+    "sensors",
+    "sleeping",
+    "sprites",
+    "stats",
+    "stress",
+    "stress2",
+    "stress3",
+    "stress4",
+    "substep",
+    "views"
+  ],
+  "errors": [],
+  "missing": [],
+  "checks": [
+    "All catalog modules are available, with no teacher workspace or open-only filter",
+    "Legacy bookmarks and visits; pause and reset preserve selected scene",
+    "Empty, restricted and teacher-preview legacy settings do not limit access or erase visits",
+    "Every catalog module launches directly; grade, theme, search and deep-link reload work",
+    "Canvas drag still selects physics bodies",
+    "Mobile categories, lists and canvas fit without horizontal overflow"
+  ],
+  "base": "http://127.0.0.1:58543/MathPhysics/"
+}

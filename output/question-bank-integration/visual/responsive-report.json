@@ -1,0 +1,181 @@
+{
+  "viewports": {
+    "320": {
+      "home": {
+        "viewport": 320,
+        "document": 320,
+        "cards": 1
+      },
+      "iframe": {
+        "hostViewport": 320,
+        "hostDocument": 320,
+        "frameClientWidth": 320,
+        "frameViewport": 320,
+        "frameDocument": 320,
+        "questions": 20,
+        "bodyFont": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+        "bodyBackground": "rgb(245, 243, 233)"
+      },
+      "standalone": {
+        "viewport": 320,
+        "document": 320,
+        "body": 320,
+        "settings": {
+          "x": 35,
+          "y": 327.859375,
+          "width": 250,
+          "height": 373.15625,
+          "top": 327.859375,
+          "right": 285,
+          "bottom": 701.015625,
+          "left": 35
+        },
+        "questions": 20,
+        "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+        "background": "rgb(245, 243, 233)"
+      }
+    },
+    "390": {
+      "home": {
+        "viewport": 390,
+        "document": 390,
+        "cards": 1
+      },
+      "iframe": {
+        "hostViewport": 390,
+        "hostDocument": 390,
+        "frameClientWidth": 390,
+        "frameViewport": 390,
+        "frameDocument": 390,
+        "questions": 20,
+        "bodyFont": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+        "bodyBackground": "rgb(245, 243, 233)"
+      },
+      "standalone": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "settings": {
+          "x": 35,
+          "y": 327.859375,
+          "width": 320,
+          "height": 373.15625,
+          "top": 327.859375,
+          "right": 355,
+          "bottom": 701.015625,
+          "left": 35
+        },
+        "questions": 20,
+        "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+        "background": "rgb(245, 243, 233)"
+      }
+    },
+    "768": {
+      "home": {
+        "viewport": 768,
+        "document": 768,
+        "cards": 1
+      },
+      "iframe": {
+        "hostViewport": 768,
+        "hostDocument": 768,
+        "frameClientWidth": 768,
+        "frameViewport": 768,
+        "frameDocument": 768,
+        "questions": 20,
+        "bodyFont": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+        "bodyBackground": "rgb(245, 243, 233)"
+      },
+      "standalone": {
+        "viewport": 768,
+        "document": 768,
+        "body": 768,
+        "settings": {
+          "x": 55,
+          "y": 336.546875,
+          "width": 254,
+          "height": 581.34375,
+          "top": 336.546875,
+          "right": 309,
+          "bottom": 917.890625,
+          "left": 55
+        },
+        "questions": 20,
+        "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+        "background": "rgb(245, 243, 233)"
+      }
+    },
+    "1024": {
+      "home": {
+        "viewport": 1024,
+        "document": 1024,
+        "cards": 1
+      },
+      "iframe": {
+        "hostViewport": 1024,
+        "hostDocument": 1024,
+        "frameClientWidth": 1024,
+        "frameViewport": 1024,
+        "frameDocument": 1024,
+        "questions": 20,
+        "bodyFont": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+        "bodyBackground": "rgb(245, 243, 233)"
+      },
+      "standalone": {
+        "viewport": 1024,
+        "document": 1024,
+        "body": 1024,
+        "settings": {
+          "x": 55,
+          "y": 348.5625,
+          "width": 254,
+          "height": 581.34375,
+          "top": 348.5625,
+          "right": 309,
+          "bottom": 929.90625,
+          "left": 55
+        },
+        "questions": 20,
+        "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+        "background": "rgb(245, 243, 233)"
+      }
+    },
+    "1280": {
+      "home": {
+        "viewport": 1280,
+        "document": 1280,
+        "cards": 1
+      },
+      "iframe": {
+        "hostViewport": 1280,
+        "hostDocument": 1280,
+        "frameClientWidth": 1280,
+        "frameViewport": 1280,
+        "frameDocument": 1280,
+        "questions": 20,
+        "bodyFont": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+        "bodyBackground": "rgb(245, 243, 233)"
+      },
+      "standalone": {
+        "viewport": 1280,
+        "document": 1280,
+        "body": 1280,
+        "settings": {
+          "x": 65,
+          "y": 348.5625,
+          "width": 254,
+          "height": 581.34375,
+          "top": 348.5625,
+          "right": 319,
+          "bottom": 929.90625,
+          "left": 65
+        },
+        "questions": 20,
+        "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+        "background": "rgb(245, 243, 233)"
+      }
+    }
+  },
+  "browserErrors": [],
+  "externalRequests": []
+}

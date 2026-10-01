@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "timestamp": "2026-09-30T16:18:00.640Z",
+  "questionCount": 48,
+  "visualQuestionCount": 2,
+  "phase": "copy-stage",
+  "visualChecks": [
+    {
+      "id": "pm-26",
+      "kind": "round",
+      "values": [
+        340,
+        350,
+        360
+      ],
+      "knownPrimitives": 21,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 58,
+          "top": 54,
+          "right": 136,
+          "bottom": 119
+        },
+        {
+          "left": 319,
+          "top": 124,
+          "right": 397,
+          "bottom": 189
+        },
+        {
+          "left": 580,
+          "top": 194,
+          "right": 658,
+          "bottom": 259
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-47",
+      "kind": "chart",
+      "values": [
+        0,
+        10,
+        20
+      ],
+      "knownPrimitives": 20,
+      "trialPrimitives": [
+        5,
+        5,
+        5
+      ],
+      "trialBounds": [
+        {
+          "left": 103,
+          "top": 282,
+          "right": 668,
+          "bottom": 282
+        },
+        {
+          "left": 103,
+          "top": 202,
+          "right": 668,
+          "bottom": 282
+        },
+        {
+          "left": 103,
+          "top": 122,
+          "right": 668,
+          "bottom": 282
+        }
+      ],
+      "distinctTrialStates": 3
+    }
+  ],
+  "interactions": {},
+  "layouts": [],
+  "host": {},
+  "standalone": {
+    "file": "dist\\MathPhysics-Primary-Math.html",
+    "bytes": 73937,
+    "ready": true,
+    "interactive": true,
+    "externalRequests": 0,
+    "adultCopy": false
+  },
+  "pageErrors": [],
+  "externalRequests": [],
+  "browser": "141.0.7390.37",
+  "copySemantics": {
+    "http": [
+      {
+        "id": "pm-26",
+        "note": "绿色边框跟着你的整数卡移动。找找浅绿色卡片中最大的数。",
+        "selectedCard": {
+          "box": {
+            "x": 58,
+            "y": 194,
+            "width": 78,
+            "height": 57
+          },
+          "target": {
+            "x": 81.16051483154297,
+            "y": 211,
+            "width": 31.747692108154297,
+            "height": 22.909090042114258
+          }
+        },
+        "screenshot": "output\\playwright\\primary-math-interaction\\copy-stage\\screenshots\\http-pm-26.png"
+      },
+      {
+        "id": "pm-47",
+        "note": "细柱表示各组平均每人读的本数。绿色按同一个平均本数分配给5人，试着比较总本数。",
+        "equalShareBars": 5,
+        "screenshot": "output\\playwright\\primary-math-interaction\\copy-stage\\screenshots\\http-pm-47.png"
+      }
+    ],
+    "file": [
+      {
+        "id": "pm-26",
+        "note": "绿色边框跟着你的整数卡移动。找找浅绿色卡片中最大的数。",
+        "selectedCard": {
+          "box": {
+            "x": 58,
+            "y": 194,
+            "width": 78,
+            "height": 57
+          },
+          "target": {
+            "x": 81.16051483154297,
+            "y": 211,
+            "width": 31.747692108154297,
+            "height": 22.909090042114258
+          }
+        },
+        "screenshot": "output\\playwright\\primary-math-interaction\\copy-stage\\screenshots\\file-pm-26.png"
+      },
+      {
+        "id": "pm-47",
+        "note": "细柱表示各组平均每人读的本数。绿色按同一个平均本数分配给5人，试着比较总本数。",
+        "equalShareBars": 5,
+        "screenshot": "output\\playwright\\primary-math-interaction\\copy-stage\\screenshots\\file-pm-47.png"
+      }
+    ]
+  },
+  "browserClosed": true,
+  "httpPort": 59656,
+  "serverClosed": true,
+  "portReleased": true
+}

@@ -1,0 +1,62 @@
+
+> mathphysics-science-island@0.4.0 test
+> node --test tests/*.test.mjs
+
+✔ all registered upstream Matter examples are catalogued, not sampled (1.332ms)
+✔ all four complete PhET simulations, all screens and tangram retained (1.3743ms)
+✔ exact upstream file bytes match complete inventory hashes (360.7057ms)
+✔ unique IDs, local entries, all elementary grades, initial subset only (0.5025ms)
+✔ malformed storage and unknown entries cannot manufacture progression (1.19ms)
+✔ import configuration is validated and does not import executable paths (0.3642ms)
+✔ license barriers are disclosed; unlicensed project is not vendored (0.5164ms)
+✔ 24 lessons, valid sources, all drawings and answers finite at slider extremes (20.9578ms)
+✔ normalization protects nonpositive widths and nonfinite parameters (0.2045ms)
+✔ square expansion, square difference, distributivity hold over many lengths (0.1767ms)
+✔ parallelogram cut and translated piece tile the final rectangle (0.4186ms)
+✔ difference-square cut is rigid and exactly fills the remaining rectangle (0.4309ms)
+✔ two triangles, two trapezoids, rhombus and central Pythagorean square (0.2675ms)
+✔ same-height triangle ratio is not similarity squared ratio (0.146ms)
+✔ circle and cylinder use convergent polygon bounds, not an exact finite rectangle (0.1537ms)
+✔ pyramid factor validated by the nonoverlapping max-coordinate decomposition (1.184ms)
+✔ cone and hemisphere Cavalieri sections match at every sampled height (0.9682ms)
+✔ numeric answers accept two decimals/fractions and reject malformed or infinite text (0.3217ms)
+✔ new local catalog is separate from upstream, bundled, and marked original MIT (2.8083ms)
+✔ every derivative reverses byte-for-byte to the pinned PhET source (1070.9856ms)
+✔ host directs only PhET into generated views and keeps attribution and learning help (42.1319ms)
+✔ 57 distinct activities; 22 recommended entries with 18 non-PhET activities (4.3883ms)
+✔ legacy starter defaults upgrade once while preserving exploration records (0.891ms)
+✔ custom and deliberately empty teaching selections are never overwritten (0.2766ms)
+✔ JSXGraph package files match their exact import hashes and carry MIT attribution (133.1347ms)
+✔ child-facing descriptions and host template do not show integration boilerplate (0.6862ms)
+✔ six dynamic activities use valid geometry, including degenerate triangles (0.2819ms)
+✔ reflection is an involution, rotation is isometric, similarity scales area by k squared (0.5116ms)
+✔ linear map fixes origin; determinant matches area and can collapse to a line (0.1804ms)
+✔ flat tangram uses all original polygon vertices, seven pieces and original snapshot (2.7762ms)
+✔ the selected interpreter runs Python 3 (73.1015ms)
+✔ an explicit Python executable is used without shell quoting (232.5784ms)
+✔ script paths, arguments and failure exit codes survive the launcher (232.6842ms)
+✔ Python module arguments are supported (252.8592ms)
+✔ a missing explicit interpreter fails clearly without silently switching (117.7242ms)
+✔ a non-Python executable cannot pass interpreter detection (209.5586ms)
+✔ the native Python entrypoint works with a restricted PATH (196.139ms)
+﹣ Linux falls back to a Python 3 interpreter named python (0.0914ms) # SKIP
+✔ PhET splash graphics cannot count as a successfully explored activity (0.7958ms)
+✔ SVG classroom adapters finish loading without a canvas (0.1933ms)
+✔ four complete routes, 62 explicit stages, eight labs, seven original vehicle diagrams (17.7416ms)
+✔ launch vehicles, stations and representative return sequences are not conflated (0.3565ms)
+✔ every experimental slider endpoint produces finite bounded values (0.4374ms)
+✔ circular orbit at 400 km has plausible speed, period and gravity (0.2994ms)
+✔ RK4 preserves circular orbit radius and uses a labelled atmosphere boundary (11.5694ms)
+✔ thrust, staged mass, solar incidence and energy invariants (0.337ms)
+✔ vacuum never reports an air-drag terminal speed; larger area lowers it (0.2043ms)
+✔ docking requires alignment, slow relative speed and controlled attitude together (0.2434ms)
+✔ host retains third-party catalog and separate original entries (3.8337ms)
+✔ single-file builder has no external runtime scripts or styles (189.2336ms)
+ℹ tests 50
+ℹ suites 0
+ℹ pass 49
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 1723.4214

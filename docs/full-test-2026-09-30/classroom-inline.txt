@@ -1,0 +1,11 @@
+PASS geometry-triangle
+PASS geometry-mirror
+PASS geometry-rotate
+PASS geometry-scale
+PASS geometry-vectors
+PASS geometry-linear
+PASS tangram-square
+PASS tangram-creative
+PASS layout-1024
+PASS layout-390
+SUMMARY True 10

@@ -3,3 +3,8 @@ dist/
 __pycache__/
 *.pyc
 .DS_Store
+.test-deps/
+.playwright-mcp/
+**/before-source/
+output/playwright/playground-challenges/before/
+*.log

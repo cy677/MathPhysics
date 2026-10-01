@@ -1,0 +1,99 @@
+{
+  "date": "2026-09-30",
+  "status": "completed_with_findings",
+  "overallPassed": false,
+  "functionalPassed": true,
+  "unitTests": 42,
+  "browserCheckRecords": 283,
+  "unresolvedIssues": [
+    {
+      "id": "windows-python3-entrypoint",
+      "severity": "medium",
+      "confirmedCommand": "npm start",
+      "exitCode": 9009,
+      "workaround": "python scripts/serve.py",
+      "sourceChanged": false
+    }
+  ],
+  "reports": [
+    {
+      "report": "test-report.json",
+      "passed": true,
+      "total": 59
+    },
+    {
+      "report": "classroom-browser-report.json",
+      "passed": true,
+      "total": 74
+    },
+    {
+      "report": "geometry-browser-report.json",
+      "passed": true,
+      "total": 29
+    },
+    {
+      "report": "spaceflight-browser-report.json",
+      "passed": true,
+      "total": 93
+    },
+    {
+      "report": "classroom-inline-report.json",
+      "passed": true,
+      "total": 10
+    },
+    {
+      "report": "phet-runtime-report.json",
+      "passed": true,
+      "total": 7
+    },
+    {
+      "report": "host-extended-report.json",
+      "passed": true,
+      "total": 11
+    },
+    {
+      "report": "build-report.json",
+      "passed": true,
+      "total": 13
+    },
+    {
+      "report": "javascript-syntax-report.json",
+      "passed": true,
+      "total": 27
+    },
+    {
+      "report": "python-syntax-report.json",
+      "passed": true,
+      "total": 9
+    },
+    {
+      "report": "package-report.json",
+      "passed": true,
+      "total": 7
+    },
+    {
+      "report": "existing-package-report.json",
+      "passed": true,
+      "total": 0
+    },
+    {
+      "report": "source-integrity-report.json",
+      "passed": true,
+      "total": 0
+    },
+    {
+      "report": "cleanup-report.json",
+      "passed": true,
+      "total": 0
+    },
+    {
+      "report": "windows-command-report.json",
+      "passed": false,
+      "total": 0
+    }
+  ],
+  "limitations": [
+    "Chromium only; no physical iPad Safari or touch hardware acceptance.",
+    "No exhaustive enumeration of all upstream randomized questions."
+  ]
+}

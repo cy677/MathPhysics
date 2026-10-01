@@ -1,0 +1,29 @@
+
+> mathphysics-science-island@0.4.0 build:server
+> node scripts/python.mjs scripts/build_server.py --release 20261001-question-bank-d9b59d6
+
+Tangram display adapter: 12 reversible edits; 17834 bytes
+{
+  "forces-and-motion-basics": 92,
+  "energy-skate-park-basics": 39,
+  "area-builder": 15,
+  "vector-addition": 14,
+  "fractions-intro": 22,
+  "fraction-matcher": 21,
+  "balancing-act": 15,
+  "circuit-construction-kit-dc": 17,
+  "states-of-matter-basics": 20,
+  "build-a-molecule": 19
+}
+C:\Users\cheng\Desktop\MathPhysics\dist\MathPhysics-Geometry-Proofs.html 72680
+C:\Users\cheng\Desktop\MathPhysics\dist\MathPhysics-Spaceflight.html 117183
+MathPhysics-Playground.html 1014945
+MathPhysics-Tangram.html 96485
+C:\Users\cheng\Desktop\MathPhysics\dist\MathPhysics-Primary-Math.html
+{
+  "archive": "C:\\Users\\cheng\\Desktop\\MathPhysics\\dist\\MathPhysics-server-20261001-question-bank-d9b59d6.tar.gz",
+  "bytes": 113042240,
+  "sha256": "6c33a4859d4fb1d7ba616a19457b27a63c895d4a6c89b17e93ac8afe4f7e8e9e",
+  "releaseId": "20261001-question-bank-d9b59d6",
+  "files": 1548
+}

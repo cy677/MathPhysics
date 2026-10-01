@@ -1,1 +1,23 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>物理游乐场</title><style>*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#14151f;color:#e8ecd8;font:13px system-ui,sans-serif}body{display:flex;flex-direction:column;align-items:center}header{display:flex;align-items:center;gap:12px;padding:8px 14px;width:100%;min-height:47px;flex-shrink:0}header span{margin-right:auto}button{padding:7px 13px;border:1px solid #444c43;border-radius:7px;background:#2b3430;color:#eef5d8;cursor:pointer;font:inherit;min-height:33px}button:focus-visible{outline:3px solid #f4ca68}canvas{display:block;max-width:100vw;max-height:calc(100dvh - 48px);object-fit:contain;touch-action:none}#error{padding:24px;white-space:pre-line;color:#f5c0a2}</style></head><body><header><span id="title">正在准备实验…</span><button id="pause">暂停</button><button id="reset">重置</button></header><div id="error" hidden></div><script src="../build/matter.js"></script><script src="../../deps/poly-decomp/build/decomp.js"></script><script src="../../deps/matter-wrap/build/matter-wrap.js"></script><script src="../../deps/pathseg/pathseg.js"></script><script src="../../../src/matter-runner.js"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>物理验收 · 科学小岛</title>
+  <!-- Upstream examples use ./img and ./svg relative to their original demo folder. -->
+  <base href="../../vendor/matter/demo/">
+  <link rel="stylesheet" href="../../../src/theme.css">
+  <link rel="stylesheet" href="../../../src/adapters/matter.css">
+</head>
+<body class="mp-page mp-matter">
+  <header><a id="back-home" href="../../../index.html">← 科学小岛</a><div class="heading"><small>动力车间 · 物理验收</small><h1 id="title">正在准备演示…</h1></div><div class="actions"><button id="browse" hidden>← 返回分类</button><button id="pause" class="primary" aria-pressed="false" hidden>暂停</button><button id="reset" hidden>重新开始</button></div></header>
+  <main id="module-browser" hidden aria-label="物理演示分类"><div class="module-content"><p id="catalog-summary" class="catalog-summary"></p><div id="category-cards" class="category-cards"></div><section id="category-detail" hidden><a id="all-categories" class="back-categories">← 全部分类</a><div class="category-heading"><h2 id="category-title"></h2><span id="category-count"></span></div><p id="category-description" class="category-description"></p><div id="example-cards" class="example-cards"></div></section></div></main>
+  <main id="scene" hidden aria-label="物理实验画布"><div id="error" role="alert" hidden></div></main>
+  <footer><span id="scene-hint">选择一个分类，再进入演示。</span><a href="../LICENSE" target="_blank" rel="noopener">Matter.js · MIT</a></footer>
+  <script src="../build/matter.js"></script>
+  <script src="../../deps/poly-decomp/build/decomp.js"></script>
+  <script src="../../deps/matter-wrap/build/matter-wrap.js"></script>
+  <script src="../../deps/pathseg/pathseg.js"></script>
+  <script src="../../../src/theme.js"></script>
+  <script src="../../../src/matter-runner.js"></script>
+</body>
+</html>

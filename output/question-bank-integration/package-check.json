@@ -1,0 +1,27 @@
+{
+  "archive": "C:\\Users\\cheng\\Desktop\\MathPhysics\\dist\\MathPhysics-server-20261001-question-bank-d9b59d6.tar.gz",
+  "passed": true,
+  "registeredActivityCount": 72,
+  "sourceIncludesWorkingTreeChanges": true,
+  "verifiedPackagedFiles": [
+    "lessons/question-bank/index.html",
+    "lessons/question-bank/style.css",
+    "lessons/question-bank/app.mjs",
+    "lessons/question-bank/catalog.mjs",
+    "lessons/question-bank/core.mjs",
+    "lessons/question-bank/engine.mjs",
+    "lessons/question-bank/generators.mjs",
+    "lessons/question-bank/session.mjs",
+    "src/theme.css",
+    "src/theme.js",
+    "src/catalog.js",
+    "src/readiness.js",
+    "config/local-activities.json",
+    "config/presentation.json",
+    "scripts/generate_questions.mjs",
+    "scripts/clear_records.js",
+    "docs/question-bank.md",
+    "BUILD.json"
+  ],
+  "sha256": "6c33a4859d4fb1d7ba616a19457b27a63c895d4a6c89b17e93ac8afe4f7e8e9e"
+}

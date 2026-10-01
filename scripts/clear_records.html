@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>清除学习记录 · 科学小岛</title>
+  <link rel="stylesheet" href="../src/theme.css">
+  <style>
+    main { max-width: 640px; margin: 8vh auto; padding: 0 20px; }
+    article { padding: 28px; background: var(--mp-surface); border: 1px solid var(--mp-line); border-radius: var(--mp-radius-card); box-shadow: var(--mp-shadow); }
+    h1 { margin: 0 0 16px; font-size: 28px; }
+    p { margin: 12px 0; }
+    .site { color: var(--mp-muted); overflow-wrap: anywhere; }
+    .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 24px; }
+    .actions a { display: inline-flex; min-height: 44px; align-items: center; }
+    #clear-status { min-height: 3em; color: var(--mp-primary); }
+    #clear-status[data-state="error"] { color: var(--mp-error); }
+    @media (max-width: 480px) { main { margin: 24px auto; padding: 0 12px; } article { padding: 20px; } h1 { font-size: 24px; } }
+  </style>
+</head>
+<body class="mp-page">
+  <main><article>
+    <h1>清除学习记录</h1>
+    <p>清除当前浏览器中，本站的探索记录、通关记录和自动存档。其他项目的数据保留。</p>
+    <p>请先关闭其他正在运行的科学小岛课堂，再点击清除。</p>
+    <p class="site">当前站点：<strong id="clear-site"></strong></p>
+    <p id="clear-status" role="status" aria-live="polite">请通过网站地址打开本页面，再清除记录。</p>
+    <div class="actions"><button id="clear-records" class="primary" type="button" disabled>清除记录</button><a id="back-home" href="../index.html">← 返回科学小岛</a></div>
+  </article></main>
+  <script type="module" src="clear_records.js"></script>
+</body>
+</html>

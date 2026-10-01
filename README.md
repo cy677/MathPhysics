@@ -1,50 +1,101 @@
 # MathPhysics · 科学小岛
 
-通过拖动、拼图和小实验，认识几何、力与运动、太空飞行。面向小学一年级至六年级，按主题和推荐年级选择活动。
+通过拖动、拼图和小实验，认识数量关系、几何、力与运动、太空飞行。面向小学一年级至六年级，按主题和推荐年级选择活动。
 
 ## 开始使用
 
-下载包含资源的完整包并解压，在项目目录运行：
+下载包含资源的完整包并解压。Windows 安装 Python 3 后可运行 `START_WINDOWS.bat`，或在项目目录运行：
 
-```bash
-python scripts/serve.py --open
+```powershell
+py -3 scripts/serve.py --open
 ```
 
-Windows 安装 Python 3 后也可运行 `START_WINDOWS.bat`。宿主使用本地静态服务，不要直接双击根目录 index.html。它不需要账号、CDN、数据库或 npm 运行依赖。局域网平板使用 `python scripts/serve.py --host 0.0.0.0 --port 8000`，通过电脑的局域网 IP:8000 访问；只在可信网络使用此开发服务器。
+Linux 使用 `python3 scripts/serve.py --open`。宿主使用本地静态服务，不要直接双击根目录 index.html。它不需要账号、CDN、数据库或 npm 运行依赖。局域网平板在启动命令后添加 `--host 0.0.0.0 --port 8000`，通过电脑的局域网 IP:8000 访问；只在可信网络使用此开发服务器。
+
+安装了 Node.js 的开发环境可在 Windows 和 Linux 统一使用 `npm start -- --open`。所有 npm Python 任务与 Node 浏览器测试共用 `scripts/python.mjs`：Windows 依次检查 `python`、`py -3`、`python3`，Linux 依次检查 `python3`、`python`，只接受 Python 3，再使用其实际可执行文件路径。环境变量 `PYTHON` 可指定解释器完整路径；指定后不可用会直接报错。直接调用 Python 的示例以下使用 Linux 的 `python3`，Windows 可替换为 `py -3`；双击启动不要求 Node.js。
 
 独立课堂可以构建为无需静态服务的单文件 HTML：
 
 ```bash
-python scripts/build_geometry_standalone.py
-python scripts/build_spaceflight_standalone.py
-python scripts/build_playground_standalone.py
+python3 scripts/build_geometry_standalone.py
+python3 scripts/build_spaceflight_standalone.py
+python3 scripts/build_playground_standalone.py
+python3 scripts/build_primary_math_standalone.py
 ```
 
-输出在 dist/：`MathPhysics-Geometry-Proofs.html`、`MathPhysics-Spaceflight.html`、`MathPhysics-Playground.html`、`MathPhysics-Tangram.html`。使用支持脚本的浏览器打开；文件预览器不等同于浏览器。
+输出在 dist/：`MathPhysics-Geometry-Proofs.html`、`MathPhysics-Spaceflight.html`、`MathPhysics-Playground.html`、`MathPhysics-Tangram.html`、`MathPhysics-Primary-Math.html`。使用支持脚本的浏览器打开；文件预览器不等同于浏览器。
 
 ## 活动
 
 | 主题 | 内容 |
 |---|---|
-| 几何工坊 | 面积拼图、24题几何证明、平面七巧板、拖动三角形与轴对称 |
-| 动力车间 | 弹弓、吊桥、小车、牛顿摆、摩擦、碰撞、空间飞行课堂 |
+| 几何工坊 | 分数拼图与配对、面积拼图、24个几何证明主题（48种问法）、平面七巧板、分年级图形变换挑战、48题“数与生活” |
+| 动力车间 | 弹弓、吊桥、小车、牛顿摆、摩擦、碰撞、平衡与电路、空间飞行课堂 |
 | 箭头港口 | 向量相加、旋转、缩放、线性变换网格 |
+| 微观天地 | 固体、液体与气体的粒子变化，原子与分子搭建 |
 
-当前合计 **63个活动入口**。其中4个 PhET、48个 Matter.js 原始示例、1个原 Tangram、4个课堂/适配入口，以及6个分年级 JSXGraph 实验入口。Matter.js 条目不是48个教学关卡；几何证明课堂内有24题、JSXGraph课堂内有6个实验、平面七巧板有方形热身和原内置创意轮廓。
+Matter.js 的全部 **48个物理演示**合并为一个「物理验收」大模块，首页显示一个入口。模块内按材料与运动（6）、机械与经典实验（8）、形状与堆叠（12）、柔性与约束（5）、开发与呈现（17）选择演示。全部上游源码、资源和原有演示入口仍保留；这些演示不是48个教学关卡。几何证明课堂内有24个主题和48种问法、JSXGraph课堂内有6个实验与36个挑战目标、平面七巧板保留方形热身和原内置创意轮廓，并为每个轮廓提供3档挑战，共6张挑战卡。
 
-首次打开推荐 **22项活动，其中18项非PhET**，包括14个 Matter.js 示例和4个课堂/适配入口。首页取消“只看可玩的活动”即可看到全部目录。“老师 / 家长”可以逐项选择、开放推荐活动、全部开放或导入导出配置。6个分年级入口与“图形会变魔术”共用同一套实验，默认关闭，可分别勾选开放；不会因开放了原课堂而自动开放。
+目录中的所有活动均可直接进入，包括「物理验收」的48个演示、6个分年级图形实验和「数与生活」。首页保留主题、年级与搜索筛选，已移除老师 / 家长工作台、开放配置和“只看可玩的活动”。旧版保存的关闭名单不再限制访问，原有探索记录和课堂存档继续保留。6个分年级入口与“图形会变魔术”共用同一套实验。
+
+几何内容按推荐首次系统学习年级重新划分：七巧板为一年级，对称为二年级，长方形面积证明为三年级，旋转与分配律面积模型为四年级，三角形/平行四边形/梯形面积及长方体为五年级，圆、圆柱圆锥、比例缩放及向量/线性变换拓展为六年级。几何证明的每个主题增加一种不同问法；JSXGraph每种模式由2个挑战扩展为6个；七巧板的2个原轮廓分别增加3档挑战要求，共6张挑战卡。
 
 三角形实验可在“自由拖动”和“等底等高”之间切换：等底等高模式固定底边，顶点沿平行线移动，滑块单独改变高度。对称与向量挑战显示金色目标标记，换题时位置同步更新。
 
+6个图形实验沿用奶油白、森林绿与暖黄色，各有独立的目录图示。画板会适应窗口大小，彩色点支持拖动和方向按钮微调；点击圆点会同步选中下方控制，坐标随操作更新。实验标签支持方向键、Home 和 End 切换。电脑与横屏布局将画板和方向按钮留在首屏，操作与挑战面板可滚动；窄屏依次排列。运行 `npm run test:playground` 可重建离线课堂并检查6项实验、三种视口、目录筛选与离线交互，截图及结果保存在 `output/playwright/graded-style/`。
+
 原上游内容没有删减：Area Builder 的6个难度和随机出题逻辑保留；其他 PhET 原导航保留；原三维 Tangram 也保留。平面七巧板另提供无需 WebGL 的入口。
+
+## 数与生活：48道原创数学题
+
+新增覆盖推荐1—6年级的48题，每个推荐年级8题，包含数与运算、分数、小数、时间、单位、统计和条形图建模。支持人教、苏教、新加坡参考年级筛选；每题提供可调整模型、输入检查、提示、解析与反思问题。课堂在浏览器中保存完成记录，不保存或上传学生输入的答案。
+
+在首页点击“数与生活”即可进入，也可通过静态服务直接访问 `lessons/primary-math/index.html`。小屏幕可在画板内横向滑动查看完整模型。
+
+年级映射为编写者的选题建议，不是2026新版教材逐册认证。官方新版全文抓取及版本差异的限制、来源、去重范围见 [课程依据与去重记录](docs/primary-math-curriculum.md)。本批避开已有面积、体积、对称、向量等固定题目，不声称穷举上游随机出题的全部状态。
+
+新增模块的单元检查使用 `npm run test:primary`，独立离线构建使用 `npm run build:primary`，真实HTTP、file://和iframe检查使用 `npm run test:primary:browser`。当前融合范围与验收入口见 [融合方案](docs/curriculum-integration/plan.md) 和 [实施交接](docs/curriculum-integration/integration.md)。
+
+## 中文题库工坊：48种可重复生成的练习
+
+首页新增“中文题库”主题与“中文题库工坊”入口，沿用科学小岛的奶油白、森林绿和暖黄色。提供48个原创参数化题型、9类知识点和3档难度，支持生成1—500道不重复题目、自动判题、分步提示、解题过程、打印与练习导入导出。练习名称与题型、难度、数量一致时，可以复现同一组练习；难度不对应教材年级。
+
+题库可通过首页直接打开，也可访问 `lessons/question-bank/index.html`。当前练习和作答自动保存在独立的 `mathphysics.question-bank.v1` 键中，不覆盖其他课堂进度；“清除记录”页面也包含这份记录。生成新练习或恢复练习设置时会开始新一轮作答。
+
+运行 `npm run test:questions` 检查题型算法与接入，`npm run test:questions:browser` 检查真实浏览器交互。命令行生成与题型来源见 [中文题库说明](docs/question-bank.md)。
+
+## PhET 内部视觉更新
+
+推箱子、拔河和滑板使用新的插画角色、表情与动作。实验场景、面板、按钮和导航同步采用奶油白、森林绿和暖黄色；玩法提示采用儿童能直接照做的中文。保留 PhET 署名和菜单。
+
+10个模块的28个实验页面、Area Builder六级随机出题、科学模型与计算均保留。原文件仍在 `vendor/phet/`；实际入口加载 `src/phet/generated/` 的视觉改编版本。新增课堂与 PhET 视觉改编共同接入活动目录。
+
+2026-10-01 接入分数入门、分数配对、平衡挑战、直流电路、物态变化和分子搭建六个完整模拟。首页使用独立图示、中文操作提示和年级筛选，内部画布、面板、按钮与导航沿用现有主题。分数填色、原子种类和电流等有学习含义的颜色保留。分数活动在“几何工坊”，平衡与电路在“动力车间”，物态与分子在“微观天地”。六项资源已经随分支提供，正常启动无需再次下载。
+
+新增资源清单和固定 SHA-256 位于 `modules/phet/manifest.json`、`modules/phet/lock.json`。`npm run build:phet` 先校验完整资源并登记活动，再生成可逆的主题版本；`npm run test:phet:browser` 检查六个新入口、单文件运行、旧记录保留，以及10个模块的原版/主题版模型对照。融合说明与视觉验收见 [新增 PhET 模块](docs/phet-expansion/integration.md)。
+
+随项目提供的资源可直接运行。重新构建视觉版本仅需 Python：`python3 scripts/build_phet_theme.py`；开发环境也可统一使用 `npm run build:phet`。重新切分插画素材才需要 Sharp，可通过 `PHET_SHARP_PATH` 指定现有安装。执行 `npm test` 检查原文件哈希、可逆修改记录及现有活动；打开 `http://127.0.0.1:8000/tests/phet-runtime.html` 点击“运行检查”，可重跑原版和新版的数值对照。
+
+实现边界、真实界面对比与验收结果见 [PhET 更新报告](docs/phet-redesign/README.md)。
+
 
 ## 已有用户更新
 
-沿用 `mathphysics.state.v1` 本地存储。未调整过旧首批开放列表的用户，会升级到22项推荐活动，并保留浏览记录。自定义列表（包括刻意全部关闭）不覆盖；可点击“开放推荐活动”补充新内容。年级是推荐筛选，不是权限系统。浏览记录不等于通关成绩。
+完成数学题、几何证明问法、图形挑战、符合所选难度的平面七巧板、航天检查题或对接实验时，会立即自动存档。重新打开课堂会恢复上次完成的关卡，图形挑战和拼图也会恢复完成时的画面；页面显示已完成数量和保存状态。PhET 面积游戏在每级结果页保存完成记录、成绩与最佳时间，重新打开后恢复选关页上的成绩。重玩与切换活动不会清除存档。
+
+存档使用独立的 `mathphysics.progress.v1.*` 本地存储键，仅保存在当前浏览器及站点下，不需要账号或联网。服务器课堂和单文件 HTML 均已接入；建议使用固定的 HTTP(S) 地址，直接打开 HTML 时的持久存储行为由浏览器决定。不同设备、浏览器或访问地址不共享存档，清除站点数据会移除存档。浏览器禁用存储或空间不足时，页面提示进度仅在本页有效。
+
+自动存档的浏览器检查使用 `npm run test:progress:browser`，覆盖实际成功判定、刷新恢复、重复通关、宿主 iframe 重开、五个单文件课堂和保存失败，结果保存在 `output/playwright/autosave/report.json`。重建独立 HTML 后再运行此检查。
+
+沿用 `mathphysics.state.v1` 本地存储并保留浏览记录。所有目录内容直接开放，旧版的开放名单与教师预览状态不再影响访问；首页也不再读取 `config/defaults.json` 的旧推荐名单。年级用于推荐筛选。浏览记录不等于通关成绩。
+
+需要重新开始时，先关闭其他正在运行的科学小岛课堂，再在同一浏览器、同一站点地址下打开 `scripts/clear_records.html`，点击“清除记录”。本地默认地址为 `http://127.0.0.1:8000/scripts/clear_records.html`。清除脚本为 `scripts/clear_records.js`，仅移除本站的探索记录、各课堂的通关与自动存档，题库练习与作答，以及旧版航天答题记录；保留其他项目的数据。打开清除页面不会自动删除记录。不同浏览器、站点地址和独立 HTML 文件的记录需在各自所在页面处理。
 
 儿童界面只保留操作和学习引导；实现边界、来源及维护说明放在文档和资料面板。必要的数学前提与版权署名不隐藏。
 
 ## 目录与维护
+
+与现有 meow 并行部署到 IP 服务器的目录、构建、数据保留和回退方案见 [服务器部署说明](docs/server-deployment.md)。生产发布包可运行 `npm run build:server -- --release <唯一版本号>` 生成。
 
 ```text
 index.html                       首页
@@ -52,9 +103,11 @@ src/                             宿主、状态、加载器
 config/inventory.json             原上游清单和文件哈希
 config/local-activities.json      新课堂与适配入口
 config/presentation.json          首页排序、儿童文案和操作提示
-config/defaults.json              推荐开放列表和迁移版本
+config/defaults.json              旧版推荐配置（首页不再使用）
 config/libraries-lock.json        JSXGraph校验清单
-lessons/geometric-proofs/         24题几何证明
+lessons/geometric-proofs/         24个主题与48种问法
+lessons/primary-math/             48题数与生活
+lessons/question-bank/            48种中文参数化练习
 lessons/spaceflight/              太空飞行课堂
 lessons/jsxgraph-playground/      6个基于JSXGraph编写的实验
 lessons/tangram-flat/             原Tangram内核的SVG适配（GPL）
@@ -69,18 +122,20 @@ docs/                            来源、修改说明、验证结果
 ```bash
 npm install --ignore-scripts
 npm test
-python -m pip install playwright==1.56.0
-python -m playwright install chromium
-python tests/classroom-browser.py
-python tests/unique-features-browser.py
+node scripts/python.mjs -m pip install playwright==1.56.0
+node scripts/python.mjs -m playwright install chromium
+npm run test:classroom
+node scripts/python.mjs tests/unique-features-browser.py
 node tests/geometry-browser.mjs
-python scripts/package.py
+npm run package
 ```
 
 `docs/classroom-browser-report.json` 记录真实 HTTP、file://、所有入口及关键交互的检查结果；`classroom-inline-report.json` 仅记录独立 HTML 的内存载入检查。以实际报告的 passed 字段为准，不能用截图或本说明代替验收。触屏模拟不等于真实 iPad Safari 测试。
 
 ## 授权
 
-宿主、几何/航天原创课堂、JSXGraph课堂原创部分采用 MIT。JSXGraph 使用其 MIT 许可。平面七巧板与原 Tangram 为 GPL-3.0。Matter.js 代码 MIT，素材及其他依赖按原声明。PhET源码主要GPL，而随包官方 HTML 成品按 CC BY-NC 4.0 处理；全量包不能统一改成MIT。详见 [第三方来源与授权](THIRD_PARTY_NOTICES.md)。
+宿主、几何/航天/数与生活原创课堂、JSXGraph课堂原创部分采用 MIT。JSXGraph 使用其 MIT 许可。平面七巧板与原 Tangram 为 GPL-3.0。Matter.js 代码 MIT，素材及其他依赖按原声明。PhET源码主要GPL，而随包官方 HTML 成品按 CC BY-NC 4.0 处理；全量包不能统一改成MIT。详见 [第三方来源与授权](THIRD_PARTY_NOTICES.md)。
 
-[几何题集说明](docs/geometry-proofs.md) · [航天课堂说明](docs/spaceflight.md) · [v0.4修改说明](docs/v0.4-changes.md)
+[几何题集说明](docs/geometry-proofs.md) · [几何分年级与扩题依据](docs/geometry-grade-expansion.md) · [课程依据与去重记录](docs/primary-math-curriculum.md) · [航天课堂说明](docs/spaceflight.md) · [v0.4修改说明](docs/v0.4-changes.md)
+
+本次全前端统一的范围与维护方式见 [实施方案](docs/style-unification/plan.md) 和 [产品维护交接](docs/style-unification/implementation.md)。

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "cases": [
+    "48 math completions, wrong/blank/hint do not save; curriculum restores; replay is idempotent",
+    "48 geometry questions save independently and restore the extension variant and parameters",
+    "all 36 graph challenges, target/points resume, reset preserves completed levels",
+    "six tangram challenges, hint-limit failures do not save, solved pieces restore",
+    "16 spaceflight quizzes and docking save; docking outcome survives refresh",
+    "36 Area Builder answers save finite scores after a malformed checkpoint; positive best time and all scores/times restore",
+    "host iframe close/reopen restores progress and retains teacher settings and previous visits",
+    "all five standalone file:// classrooms save and restore with no external runtime dependencies",
+    "storage quota failure leaves the game playable and shows the save failure",
+    "malformed stored JSON does not prevent startup"
+  ],
+  "pageErrors": [],
+  "screenshots": [
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\primary-restored.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\geometry-restored.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\playground-restored.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\tangram-restored.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\spaceflight-restored.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\phet-results.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\phet-restored.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\primary-width-1024.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\primary-width-390.png"
+  ]
+}

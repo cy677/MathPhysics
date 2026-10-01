@@ -1,6 +1,6 @@
 // Original SVG constructions. Moving dissection pieces are rigid, not shape morphs. MIT.
 import {fmt,polygonArea,crossSection,coneSection} from './math.js';
-const C={blue:'#428ad0',teal:'#1eaa91',gold:'#f0bb46',coral:'#e87e61',purple:'#9d83cf',ink:'#294d5c',pale:'#e9f3f3'};
+const C={blue:'#428ad0',teal:'#1eaa91',gold:'#f0bb46',coral:'#e87e61',purple:'#9d83cf',ink:'var(--mp-ink)',pale:'var(--mp-leaf)'};
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const text=(x,y,s,size=20,anchor='middle',fill=C.ink)=>`<text x="${x}" y="${y}" font-size="${size}" text-anchor="${anchor}" fill="${fill}">${esc(s)}</text>`;
 const poly=(pts,color,attrs='')=>`<polygon points="${pts.map(p=>p.join(',')).join(' ')}" fill="${color}" stroke="${C.ink}" stroke-width="1.8" stroke-linejoin="round" ${attrs}/>`;

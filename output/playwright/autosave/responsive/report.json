@@ -1,0 +1,316 @@
+{
+  "passed": true,
+  "entries": [
+    {
+      "module": "primary",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentWidth": 1024,
+      "bodyWidth": 1024,
+      "text": "已完成 1 / 48 · 本关已完成 · 已自动存档",
+      "rect": {
+        "x": 16,
+        "y": 335.296875,
+        "width": 230.625,
+        "height": 20.796875
+      },
+      "visible": true,
+      "windowScrollY": 0,
+      "scrollAncestors": [
+        {
+          "tag": "HTML",
+          "id": "",
+          "className": "",
+          "overflowY": "visible",
+          "scrollTop": 0,
+          "scrollHeight": 2171,
+          "clientHeight": 900
+        }
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\responsive\\status-primary-1024.png"
+    },
+    {
+      "module": "geometry",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentWidth": 1024,
+      "bodyWidth": 1024,
+      "text": "已完成 1 / 48 · 本关已完成 · 已自动存档",
+      "rect": {
+        "x": 269,
+        "y": 639.53125,
+        "width": 712,
+        "height": 21.59375
+      },
+      "visible": true,
+      "windowScrollY": 838,
+      "scrollAncestors": [
+        {
+          "tag": "HTML",
+          "id": "",
+          "className": "",
+          "overflowY": "visible",
+          "scrollTop": 838,
+          "scrollHeight": 1738,
+          "clientHeight": 900
+        }
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\responsive\\status-geometry-1024.png"
+    },
+    {
+      "module": "playground",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentWidth": 1024,
+      "bodyWidth": 1024,
+      "text": "已完成 1 / 36 · 本关已完成 · 已自动存档",
+      "rect": {
+        "x": 735,
+        "y": 587.6875,
+        "width": 247,
+        "height": 20.796875
+      },
+      "visible": true,
+      "windowScrollY": 0,
+      "scrollAncestors": [
+        {
+          "tag": "ASIDE",
+          "id": "",
+          "className": "",
+          "overflowY": "auto",
+          "scrollTop": 0,
+          "scrollHeight": 651,
+          "clientHeight": 651
+        }
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\responsive\\status-playground-1024.png"
+    },
+    {
+      "module": "tangram",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentWidth": 1024,
+      "bodyWidth": 1024,
+      "text": "已完成 1 / 6 · 本关已完成 · 已自动存档",
+      "rect": {
+        "x": 735,
+        "y": 734.890625,
+        "width": 247,
+        "height": 20.796875
+      },
+      "visible": true,
+      "windowScrollY": 0,
+      "scrollAncestors": [
+        {
+          "tag": "ASIDE",
+          "id": "",
+          "className": "",
+          "overflowY": "auto",
+          "scrollTop": 187,
+          "scrollHeight": 810,
+          "clientHeight": 623
+        }
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\responsive\\status-tangram-1024.png"
+    },
+    {
+      "module": "spaceflight",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentWidth": 1024,
+      "bodyWidth": 1024,
+      "text": "已完成 1 / 17 · 本关已完成 · 已自动存档",
+      "rect": {
+        "x": 23,
+        "y": 429.671875,
+        "width": 165,
+        "height": 41.59375
+      },
+      "visible": true,
+      "windowScrollY": 99,
+      "scrollAncestors": [
+        {
+          "tag": "HTML",
+          "id": "",
+          "className": "",
+          "overflowY": "visible",
+          "scrollTop": 99,
+          "scrollHeight": 1801,
+          "clientHeight": 900
+        }
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\responsive\\status-spaceflight-1024.png"
+    },
+    {
+      "module": "phet",
+      "width": 1024,
+      "innerWidth": 1024,
+      "documentWidth": 1024,
+      "bodyWidth": 1024,
+      "text": "已完成 1 / 6 · 本关已完成 · 已自动存档",
+      "rect": {
+        "x": 12,
+        "y": 8,
+        "width": 239,
+        "height": 26.796875
+      },
+      "visible": true,
+      "windowScrollY": 0,
+      "scrollAncestors": [],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\responsive\\status-phet-1024.png"
+    },
+    {
+      "module": "primary",
+      "width": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "text": "已完成 1 / 48 · 本关已完成 · 已自动存档",
+      "rect": {
+        "x": 16,
+        "y": 335.296875,
+        "width": 230.625,
+        "height": 20.796875
+      },
+      "visible": true,
+      "windowScrollY": 0,
+      "scrollAncestors": [
+        {
+          "tag": "HTML",
+          "id": "",
+          "className": "",
+          "overflowY": "visible",
+          "scrollTop": 0,
+          "scrollHeight": 2092,
+          "clientHeight": 900
+        }
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\responsive\\status-primary-390.png"
+    },
+    {
+      "module": "geometry",
+      "width": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "text": "已完成 1 / 48 · 本关已完成 · 已自动存档",
+      "rect": {
+        "x": 33,
+        "y": 651.328125,
+        "width": 324,
+        "height": 21.59375
+      },
+      "visible": true,
+      "windowScrollY": 909,
+      "scrollAncestors": [
+        {
+          "tag": "HTML",
+          "id": "",
+          "className": "",
+          "overflowY": "visible",
+          "scrollTop": 909,
+          "scrollHeight": 1809,
+          "clientHeight": 900
+        }
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\responsive\\status-geometry-390.png"
+    },
+    {
+      "module": "playground",
+      "width": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "text": "已完成 1 / 36 · 本关已完成 · 已自动存档",
+      "rect": {
+        "x": 29,
+        "y": 648.5625,
+        "width": 332,
+        "height": 20.796875
+      },
+      "visible": true,
+      "windowScrollY": 581,
+      "scrollAncestors": [
+        {
+          "tag": "HTML",
+          "id": "",
+          "className": "",
+          "overflowY": "visible",
+          "scrollTop": 581,
+          "scrollHeight": 1481,
+          "clientHeight": 900
+        }
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\responsive\\status-playground-390.png"
+    },
+    {
+      "module": "tangram",
+      "width": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "text": "已完成 1 / 6 · 本关已完成 · 已自动存档",
+      "rect": {
+        "x": 29,
+        "y": 721.21875,
+        "width": 332,
+        "height": 20.796875
+      },
+      "visible": true,
+      "windowScrollY": 573,
+      "scrollAncestors": [
+        {
+          "tag": "HTML",
+          "id": "",
+          "className": "",
+          "overflowY": "visible",
+          "scrollTop": 573,
+          "scrollHeight": 1473,
+          "clientHeight": 900
+        }
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\responsive\\status-tangram-390.png"
+    },
+    {
+      "module": "spaceflight",
+      "width": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "text": "已完成 1 / 17 · 本关已完成 · 已自动存档",
+      "rect": {
+        "x": 14,
+        "y": 440.046875,
+        "width": 362,
+        "height": 20.796875
+      },
+      "visible": true,
+      "windowScrollY": 328,
+      "scrollAncestors": [
+        {
+          "tag": "HTML",
+          "id": "",
+          "className": "",
+          "overflowY": "visible",
+          "scrollTop": 328,
+          "scrollHeight": 2177,
+          "clientHeight": 900
+        }
+      ],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\responsive\\status-spaceflight-390.png"
+    },
+    {
+      "module": "phet",
+      "width": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "text": "已完成 1 / 6 · 本关已完成 · 已自动存档",
+      "rect": {
+        "x": 12,
+        "y": 8,
+        "width": 239,
+        "height": 26.796875
+      },
+      "visible": true,
+      "windowScrollY": 0,
+      "scrollAncestors": [],
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\autosave\\responsive\\status-phet-390.png"
+    }
+  ],
+  "pageErrors": null
+}

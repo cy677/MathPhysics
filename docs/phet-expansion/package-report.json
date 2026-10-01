@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "archive": "dist/MathPhysics-offline.zip",
+  "checksumFile": "dist/MathPhysics-offline.zip.sha256",
+  "zipCRC": true,
+  "registeredEntries": 72,
+  "expansionSources": 6,
+  "rebuildManifestIncluded": true
+}

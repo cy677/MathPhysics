@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "file": ".github/workflows/classroom.yml",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "file": ".github/workflows/geometry.yml",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "file": ".github/workflows/integrate.yml",
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

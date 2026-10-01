@@ -2,9 +2,10 @@
 """Bundle the original classroom into one offline HTML; Python stdlib only."""
 from pathlib import Path
 import re
+from inline_theme import inline_shared_theme
 root = Path(__file__).resolve().parents[1]
 source = root / 'lessons/spaceflight'
-html = (source/'index.html').read_text(encoding='utf-8')
+html = inline_shared_theme((source/'index.html').read_text(encoding='utf-8'))
 css = (source/'styles.css').read_text(encoding='utf-8')
 html = html.replace('<link rel="stylesheet" href="styles.css">', '<style>\n'+css+'\n</style>')
 for name in ['data.js','math.js','draw.js','app.js']:

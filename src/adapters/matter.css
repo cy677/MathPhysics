@@ -1,0 +1,55 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; height: 100dvh; overflow: hidden; font-size: 15px; }
+header { display: flex; align-items: center; gap: 20px; padding: 12px 24px; border-bottom: 1px solid var(--mp-line); background: var(--mp-surface); flex-shrink: 0; }
+header a { display: inline-flex; min-height: 44px; align-items: center; text-decoration: none; font-size: 13px; white-space: nowrap; }
+.heading { min-width: 0; }
+.heading small { color: var(--mp-muted); font-size: 12px; }
+h1 { margin: 2px 0; font-size: 20px; line-height: 1.4; overflow-wrap: anywhere; }
+.actions { margin-left: auto; display: flex; gap: 8px; }
+.actions button { white-space: nowrap; font-size: 14px; }
+#module-browser { flex: 1; min-height: 0; overflow: auto; padding: 28px 24px; }
+.module-content { max-width: 1120px; margin: 0 auto; }
+.catalog-summary { margin: 0 0 24px; color: var(--mp-muted); }
+.category-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.category-card, .example-card { display: flex; flex-direction: column; text-decoration: none; color: var(--mp-ink); background: var(--mp-surface); border: 1px solid var(--mp-line); border-radius: var(--mp-radius-card); padding: 22px; box-shadow: var(--mp-shadow); }
+.category-card:hover, .example-card:hover { border-color: var(--mp-primary); background: var(--mp-leaf); }
+.category-symbol { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: var(--mp-gold-soft); color: var(--mp-primary); font-size: 28px; }
+.category-card h2 { font-size: 20px; margin: 16px 0 8px; }
+.category-card p, .example-card p { color: var(--mp-muted); font-size: 14px; margin: 0 0 20px; }
+.category-card small { margin-top: auto; color: var(--mp-primary); }
+.category-heading { display: flex; align-items: center; gap: 16px; margin-top: 20px; }
+.category-heading h2 { margin: 0; font-size: 25px; }
+.category-heading span { color: var(--mp-muted); font-size: 14px; }
+.category-description { margin: 8px 0 22px; color: var(--mp-muted); }
+.back-categories { display: inline-flex; align-items: center; min-height: 44px; }
+.example-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.example-card h3 { font-size: 18px; margin: 0 0 8px; }
+.example-card .example-enter { margin-top: auto; color: var(--mp-primary); font-size: 13px; }
+.example-card .example-visited { font-size: 12px; color: var(--mp-primary); margin-bottom: 8px; }
+@media (max-width: 850px) {
+  .category-cards, .example-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+#pause[aria-pressed=true] { background: var(--mp-gold); color: var(--mp-ink); border-color: var(--mp-focus); }
+#scene { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 12px; position: relative; width: 100%; }
+canvas { display: block; touch-action: none; flex: none; border: 1px solid var(--mp-line); border-radius: 12px; box-shadow: var(--mp-shadow); }
+footer { flex-shrink: 0; display: flex; justify-content: space-between; gap: 16px; padding: 10px 24px; border-top: 1px solid var(--mp-line); font-size: 12px; color: var(--mp-muted); }
+#error { align-self: stretch; width: 100%; padding: 24px; border-radius: var(--mp-radius-card); background: var(--mp-gold-soft); color: var(--mp-error); white-space: pre-line; overflow: auto; }
+body.mp-embedded #back-home, body.mp-embedded .heading small, body.mp-embedded footer { display: none; }
+body.mp-embedded header { padding: 8px 16px; }
+body.mp-embedded h1 { font-size: 16px; }
+@media (max-width: 580px) {
+  #module-browser { padding: 20px 12px; }
+  .category-cards, .example-cards { grid-template-columns: 1fr; gap: 12px; }
+  .category-card, .example-card { padding: 18px; }
+  .category-card h2 { margin-top: 12px; }
+  .category-heading h2 { font-size: 22px; }
+  header { flex-wrap: wrap; gap: 8px 16px; padding: 10px 12px; }
+  h1 { font-size: 18px; }
+  .heading { flex: 1; }
+  .heading small { font-size: 11px; }
+  .actions { margin-left: auto; }
+  .actions button { font-size: 13px; padding: 9px 12px; }
+  #scene { padding: 8px; }
+  footer { padding: 9px 12px; flex-wrap: wrap; }
+}

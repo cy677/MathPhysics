@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>立体七巧板 · 科学小岛</title>
+  <link rel="icon" href="../../vendor/tangram/favicon.ico">
+  <link rel="stylesheet" href="../theme.css">
+  <link rel="stylesheet" href="tangram.css">
+</head>
+<body class="mp-page mp-tangram">
+  <header><a id="back-home" href="../../index.html">← 科学小岛</a><div><small>几何工坊 · 移动与旋转</small><h1>立体七巧板</h1></div><button id="reset">重新开始</button></header>
+  <p class="instructions" id="instructions">先看清目标图形，再点“开始拼图”。拖动拼块，点一下拼块可以转向。</p>
+  <main id="container" aria-label="立体七巧板拼图画布" aria-describedby="instructions"></main>
+  <div id="error" role="alert" hidden></div>
+  <footer><span>七块拼板，试着拼出目标图形。</span><a href="../../vendor/tangram/LICENSE" target="_blank" rel="noopener">Tangram · GPL-3.0</a></footer>
+  <!-- MP_TANGRAM_SNAPSHOT -->
+  <script src="../theme.js"></script>
+  <script type="module" src="tangram-view.js"></script>
+</body>
+</html>

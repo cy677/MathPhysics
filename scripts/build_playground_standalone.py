@@ -2,6 +2,7 @@
 """Build exact classroom modules with local dependencies inlined, for offline use."""
 from pathlib import Path
 import re
+from inline_theme import inline_shared_theme
 ROOT=Path(__file__).resolve().parents[1]
 
 def module_object(file, name):
@@ -13,7 +14,7 @@ def module_object(file, name):
 
 def build(folder,filename,script):
     base=ROOT/'lessons'/folder
-    html=(base/'index.html').read_text(encoding='utf-8')
+    html=inline_shared_theme((base/'index.html').read_text(encoding='utf-8'))
     def style(m):
         p=(base/m.group(1)).resolve()
         return '<style>'+p.read_text(encoding='utf-8')+'</style>'
@@ -28,15 +29,15 @@ def build(folder,filename,script):
 
 def main():
     j=ROOT/'lessons/jsxgraph-playground'
-    math=re.sub(r'^export\s+', '', (j/'math.js').read_text(),flags=re.M)
-    app=re.sub(r'^import .*?;\s*$', '', (j/'app.js').read_text(),flags=re.M)
-    license=(ROOT/'vendor/jsxgraph/LICENSE.MIT').read_text()
-    runtime=(ROOT/'vendor/jsxgraph/distrib/jsxgraphcore.js').read_text()
+    math=re.sub(r'^export\s+', '', (j/'math.js').read_text(encoding='utf-8'),flags=re.M)
+    app=re.sub(r'^import .*?;\s*$', '', (j/'app.js').read_text(encoding='utf-8'),flags=re.M)
+    license=(ROOT/'vendor/jsxgraph/LICENSE.MIT').read_text(encoding='utf-8')
+    runtime=(ROOT/'vendor/jsxgraph/distrib/jsxgraphcore.js').read_text(encoding='utf-8')
     build('jsxgraph-playground','MathPhysics-Playground.html','/*\n'+license+'\n*/\n'+runtime+'\n;(()=>{\n'+math+'\n'+app+'\n})();')
     v=ROOT/'vendor/tangram/js'
     runtime=module_object(v/'base64.js','Base64')+module_object(v/'vecmath.js','VecMath')+module_object(v/'tangram.js','T')
-    snapshot=re.sub(r'^export\s+', '', (ROOT/'lessons/tangram-flat/snapshot.js').read_text(),flags=re.M)
-    app=re.sub(r'^import .*?;\s*$', '', (ROOT/'lessons/tangram-flat/app.js').read_text(),flags=re.M)
-    license=(ROOT/'vendor/tangram/LICENSE').read_text()
+    snapshot=re.sub(r'^export\s+', '', (ROOT/'lessons/tangram-flat/snapshot.js').read_text(encoding='utf-8'),flags=re.M)
+    app=re.sub(r'^import .*?;\s*$', '', (ROOT/'lessons/tangram-flat/app.js').read_text(encoding='utf-8'),flags=re.M)
+    license=(ROOT/'vendor/tangram/LICENSE').read_text(encoding='utf-8')
     build('tangram-flat','MathPhysics-Tangram.html','/*\n'+license+'\n*/\n(()=>{\n'+runtime+'const Vector=VecMath.Vector;\n'+snapshot+'\n'+app+'\n})();')
 if __name__=='__main__':main()

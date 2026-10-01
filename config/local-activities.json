@@ -2,14 +2,41 @@
   "schemaVersion": 1,
   "activities": [
     {
+      "id": "physics-demos",
+      "title": "物理验收",
+      "description": "在五个分类中探索48个物理演示，观察材料、运动、机械与结构。",
+      "playHint": "先选择分类，再进入一个演示。拖动物体观察变化，点分类名称可以返回选择。",
+      "zone": "physics",
+      "kind": "collection",
+      "adapter": "matter-library",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "content": [
+        "材料与运动",
+        "机械与经典实验",
+        "形状与堆叠",
+        "柔性与约束",
+        "开发与呈现"
+      ],
+      "entry": "src/adapters/matter.html",
+      "source": "https://github.com/liabru/matter-js",
+      "license": "MIT (code); see bundled asset notices",
+      "origin": "original-on-open-source",
+      "completeUpstream": false,
+      "progressMode": "visit-only",
+      "exampleCount": 48
+    },
+    {
       "id": "geometry-proofs",
       "title": "看见公式",
       "zone": "geometry",
       "kind": "proof",
       "adapter": "proofs",
       "grades": [
-        1,
-        2,
         3,
         4,
         5,
@@ -30,7 +57,8 @@
       "lessonCount": 24,
       "completeUpstream": false,
       "origin": "original",
-      "playHint": "选一道题，拖动滑块改变条件，再播放变换。试着解释每一步。"
+      "playHint": "选一道题，拖动滑块改变条件，再播放变换。试着解释每一步。",
+      "questionCount": 48
     },
     {
       "id": "spaceflight",
@@ -75,7 +103,6 @@
       "kind": "construction",
       "adapter": "jsxgraph",
       "grades": [
-        1,
         2,
         3,
         4,
@@ -93,7 +120,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 6
+      "lessonCount": 6,
+      "challengeCount": 36
     },
     {
       "id": "tangram-flat",
@@ -104,12 +132,7 @@
       "kind": "puzzle",
       "adapter": "tangram-flat",
       "grades": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
+        1
       ],
       "content": [
         "拖动",
@@ -122,7 +145,8 @@
       "origin": "adapted",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 2
+      "lessonCount": 2,
+      "challengeCount": 6
     },
     {
       "id": "jsx-triangle",
@@ -133,11 +157,7 @@
       "kind": "construction",
       "adapter": "jsxgraph",
       "grades": [
-        2,
-        3,
-        4,
-        5,
-        6
+        5
       ],
       "content": [
         "三角形",
@@ -151,7 +171,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 1
+      "lessonCount": 1,
+      "challengeCount": 6
     },
     {
       "id": "jsx-mirror",
@@ -162,12 +183,7 @@
       "kind": "construction",
       "adapter": "jsxgraph",
       "grades": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
+        2
       ],
       "content": [
         "轴对称",
@@ -180,7 +196,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 1
+      "lessonCount": 1,
+      "challengeCount": 6
     },
     {
       "id": "jsx-rotation",
@@ -191,11 +208,7 @@
       "kind": "construction",
       "adapter": "jsxgraph",
       "grades": [
-        2,
-        3,
-        4,
-        5,
-        6
+        4
       ],
       "content": [
         "旋转",
@@ -208,7 +221,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 1
+      "lessonCount": 1,
+      "challengeCount": 6
     },
     {
       "id": "jsx-scale",
@@ -219,9 +233,6 @@
       "kind": "construction",
       "adapter": "jsxgraph",
       "grades": [
-        3,
-        4,
-        5,
         6
       ],
       "content": [
@@ -235,7 +246,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 1
+      "lessonCount": 1,
+      "challengeCount": 6
     },
     {
       "id": "jsx-vectors",
@@ -246,9 +258,6 @@
       "kind": "construction",
       "adapter": "jsxgraph",
       "grades": [
-        3,
-        4,
-        5,
         6
       ],
       "content": [
@@ -262,7 +271,8 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 1
+      "lessonCount": 1,
+      "challengeCount": 6
     },
     {
       "id": "jsx-linear",
@@ -273,7 +283,6 @@
       "kind": "construction",
       "adapter": "jsxgraph",
       "grades": [
-        5,
         6
       ],
       "content": [
@@ -287,7 +296,73 @@
       "origin": "original-on-open-source",
       "completeUpstream": false,
       "progressMode": "visit-only",
-      "lessonCount": 1
+      "lessonCount": 1,
+      "challengeCount": 6
+    },
+    {
+      "id": "primary-math",
+      "title": "数与生活",
+      "zone": "geometry",
+      "kind": "game",
+      "adapter": "primary-math",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "description": "摆一摆数量，拨一拨时钟，用图解开48个生活中的数学小挑战。",
+      "content": [
+        "数与运算",
+        "分数与小数",
+        "时间与测量",
+        "条形图建模",
+        "统计",
+        "人教版参考",
+        "苏教版参考",
+        "新加坡参考"
+      ],
+      "entry": "lessons/primary-math/index.html",
+      "source": "https://github.com/cy677/MathPhysics",
+      "license": "MIT (original questions, code and models)",
+      "origin": "original",
+      "completeUpstream": false,
+      "progressMode": "visit-only",
+      "lessonCount": 48,
+      "playHint": "选择年级和题目，先调整模型，再填写答案。试着用自己的话解释数量关系。"
+    },
+    {
+      "id": "question-bank",
+      "title": "中文题库工坊",
+      "zone": "numbers",
+      "kind": "practice",
+      "adapter": "question-bank",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "description": "选择知识点，生成中文练习，试试分步提示和不同难度。",
+      "content": [
+        "48个参数化题型",
+        "整数、分数与小数",
+        "测量、几何与应用题",
+        "自动判题",
+        "练习配方导入导出"
+      ],
+      "entry": "lessons/question-bank/index.html",
+      "source": "https://github.com/cy677/MathPhysics",
+      "license": "MIT (original Chinese generators; topic references only)",
+      "progressMode": "visit-only",
+      "generatorCount": 48,
+      "completeUpstream": false,
+      "origin": "original",
+      "playHint": "选择知识点、题型和难度，生成练习后填写答案。遇到困难先打开提示，再看看解题过程。"
     }
   ]
 }

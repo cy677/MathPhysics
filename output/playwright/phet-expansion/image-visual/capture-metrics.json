@@ -1,0 +1,611 @@
+{
+  "date": "2026-09-30T21:01:13.625Z",
+  "base": "http://127.0.0.1:52347",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "name": "tablet",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "generated": [
+    {
+      "id": "fractions-intro",
+      "names": [
+        "介绍",
+        "游戏",
+        "实验室"
+      ],
+      "artIconCount": 4,
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1280,
+          "height": 800,
+          "menu": "fractions-intro-menu-desktop-1280x800.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "intro",
+              "name": "介绍",
+              "file": "fractions-intro-01-intro-desktop-1280x800.png"
+            },
+            {
+              "index": 1,
+              "key": "game",
+              "name": "游戏",
+              "file": "fractions-intro-02-game-desktop-1280x800.png"
+            },
+            {
+              "index": 2,
+              "key": "lab",
+              "name": "实验室",
+              "file": "fractions-intro-03-lab-desktop-1280x800.png"
+            }
+          ]
+        },
+        {
+          "name": "tablet",
+          "width": 1024,
+          "height": 768,
+          "menu": "fractions-intro-menu-tablet-1024x768.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "intro",
+              "name": "介绍",
+              "file": "fractions-intro-01-intro-tablet-1024x768.png"
+            },
+            {
+              "index": 1,
+              "key": "game",
+              "name": "游戏",
+              "file": "fractions-intro-02-game-tablet-1024x768.png"
+            },
+            {
+              "index": 2,
+              "key": "lab",
+              "name": "实验室",
+              "file": "fractions-intro-03-lab-tablet-1024x768.png"
+            }
+          ]
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "height": 844,
+          "menu": "fractions-intro-menu-mobile-390x844.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "intro",
+              "name": "介绍",
+              "file": "fractions-intro-01-intro-mobile-390x844.png"
+            },
+            {
+              "index": 1,
+              "key": "game",
+              "name": "游戏",
+              "file": "fractions-intro-02-game-mobile-390x844.png"
+            },
+            {
+              "index": 2,
+              "key": "lab",
+              "name": "实验室",
+              "file": "fractions-intro-03-lab-mobile-390x844.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fraction-matcher",
+      "names": [
+        "分数",
+        "带分数"
+      ],
+      "artIconCount": 4,
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1280,
+          "height": 800,
+          "menu": "fraction-matcher-menu-desktop-1280x800.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "fraction",
+              "name": "分数",
+              "file": "fraction-matcher-01-fraction-desktop-1280x800.png"
+            },
+            {
+              "index": 1,
+              "key": "mixed-number",
+              "name": "带分数",
+              "file": "fraction-matcher-02-mixed-number-desktop-1280x800.png"
+            }
+          ]
+        },
+        {
+          "name": "tablet",
+          "width": 1024,
+          "height": 768,
+          "menu": "fraction-matcher-menu-tablet-1024x768.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "fraction",
+              "name": "分数",
+              "file": "fraction-matcher-01-fraction-tablet-1024x768.png"
+            },
+            {
+              "index": 1,
+              "key": "mixed-number",
+              "name": "带分数",
+              "file": "fraction-matcher-02-mixed-number-tablet-1024x768.png"
+            }
+          ]
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "height": 844,
+          "menu": "fraction-matcher-menu-mobile-390x844.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "fraction",
+              "name": "分数",
+              "file": "fraction-matcher-01-fraction-mobile-390x844.png"
+            },
+            {
+              "index": 1,
+              "key": "mixed-number",
+              "name": "带分数",
+              "file": "fraction-matcher-02-mixed-number-mobile-390x844.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "balancing-act",
+      "names": [
+        "认识平衡",
+        "探究杠杆平衡原理",
+        "游戏"
+      ],
+      "artIconCount": 4,
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1280,
+          "height": 800,
+          "menu": "balancing-act-menu-desktop-1280x800.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "balance-basics",
+              "name": "认识平衡",
+              "file": "balancing-act-01-balance-basics-desktop-1280x800.png"
+            },
+            {
+              "index": 1,
+              "key": "lever",
+              "name": "探究杠杆平衡原理",
+              "file": "balancing-act-02-lever-desktop-1280x800.png"
+            },
+            {
+              "index": 2,
+              "key": "game",
+              "name": "游戏",
+              "file": "balancing-act-03-game-desktop-1280x800.png"
+            }
+          ]
+        },
+        {
+          "name": "tablet",
+          "width": 1024,
+          "height": 768,
+          "menu": "balancing-act-menu-tablet-1024x768.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "balance-basics",
+              "name": "认识平衡",
+              "file": "balancing-act-01-balance-basics-tablet-1024x768.png"
+            },
+            {
+              "index": 1,
+              "key": "lever",
+              "name": "探究杠杆平衡原理",
+              "file": "balancing-act-02-lever-tablet-1024x768.png"
+            },
+            {
+              "index": 2,
+              "key": "game",
+              "name": "游戏",
+              "file": "balancing-act-03-game-tablet-1024x768.png"
+            }
+          ]
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "height": 844,
+          "menu": "balancing-act-menu-mobile-390x844.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "balance-basics",
+              "name": "认识平衡",
+              "file": "balancing-act-01-balance-basics-mobile-390x844.png"
+            },
+            {
+              "index": 1,
+              "key": "lever",
+              "name": "探究杠杆平衡原理",
+              "file": "balancing-act-02-lever-mobile-390x844.png"
+            },
+            {
+              "index": 2,
+              "key": "game",
+              "name": "游戏",
+              "file": "balancing-act-03-game-mobile-390x844.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "circuit-construction-kit-dc",
+      "names": [
+        "入门",
+        "实验室"
+      ],
+      "artIconCount": 3,
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1280,
+          "height": 800,
+          "menu": "circuit-construction-kit-dc-menu-desktop-1280x800.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "intro",
+              "name": "入门",
+              "file": "circuit-construction-kit-dc-01-intro-desktop-1280x800.png"
+            },
+            {
+              "index": 1,
+              "key": "lab",
+              "name": "实验室",
+              "file": "circuit-construction-kit-dc-02-lab-desktop-1280x800.png"
+            }
+          ]
+        },
+        {
+          "name": "tablet",
+          "width": 1024,
+          "height": 768,
+          "menu": "circuit-construction-kit-dc-menu-tablet-1024x768.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "intro",
+              "name": "入门",
+              "file": "circuit-construction-kit-dc-01-intro-tablet-1024x768.png"
+            },
+            {
+              "index": 1,
+              "key": "lab",
+              "name": "实验室",
+              "file": "circuit-construction-kit-dc-02-lab-tablet-1024x768.png"
+            }
+          ]
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "height": 844,
+          "menu": "circuit-construction-kit-dc-menu-mobile-390x844.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "intro",
+              "name": "入门",
+              "file": "circuit-construction-kit-dc-01-intro-mobile-390x844.png"
+            },
+            {
+              "index": 1,
+              "key": "lab",
+              "name": "实验室",
+              "file": "circuit-construction-kit-dc-02-lab-mobile-390x844.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "states-of-matter-basics",
+      "names": [
+        "状态",
+        "相变"
+      ],
+      "artIconCount": 4,
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1280,
+          "height": 800,
+          "menu": "states-of-matter-basics-menu-desktop-1280x800.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "states",
+              "name": "状态",
+              "file": "states-of-matter-basics-01-states-desktop-1280x800.png"
+            },
+            {
+              "index": 1,
+              "key": "phase-change",
+              "name": "相变",
+              "file": "states-of-matter-basics-02-phase-change-desktop-1280x800.png"
+            }
+          ]
+        },
+        {
+          "name": "tablet",
+          "width": 1024,
+          "height": 768,
+          "menu": "states-of-matter-basics-menu-tablet-1024x768.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "states",
+              "name": "状态",
+              "file": "states-of-matter-basics-01-states-tablet-1024x768.png"
+            },
+            {
+              "index": 1,
+              "key": "phase-change",
+              "name": "相变",
+              "file": "states-of-matter-basics-02-phase-change-tablet-1024x768.png"
+            }
+          ]
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "height": 844,
+          "menu": "states-of-matter-basics-menu-mobile-390x844.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "states",
+              "name": "状态",
+              "file": "states-of-matter-basics-01-states-mobile-390x844.png"
+            },
+            {
+              "index": 1,
+              "key": "phase-change",
+              "name": "相变",
+              "file": "states-of-matter-basics-02-phase-change-mobile-390x844.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "build-a-molecule",
+      "names": [
+        "单个分子",
+        "多个分子",
+        "自由探索"
+      ],
+      "artIconCount": 3,
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1280,
+          "height": 800,
+          "menu": "build-a-molecule-menu-desktop-1280x800.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "single-molecule",
+              "name": "单个分子",
+              "file": "build-a-molecule-01-single-molecule-desktop-1280x800.png"
+            },
+            {
+              "index": 1,
+              "key": "multiple-molecules",
+              "name": "多个分子",
+              "file": "build-a-molecule-02-multiple-molecules-desktop-1280x800.png"
+            },
+            {
+              "index": 2,
+              "key": "playground",
+              "name": "自由探索",
+              "file": "build-a-molecule-03-playground-desktop-1280x800.png"
+            }
+          ]
+        },
+        {
+          "name": "tablet",
+          "width": 1024,
+          "height": 768,
+          "menu": "build-a-molecule-menu-tablet-1024x768.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "single-molecule",
+              "name": "单个分子",
+              "file": "build-a-molecule-01-single-molecule-tablet-1024x768.png"
+            },
+            {
+              "index": 1,
+              "key": "multiple-molecules",
+              "name": "多个分子",
+              "file": "build-a-molecule-02-multiple-molecules-tablet-1024x768.png"
+            },
+            {
+              "index": 2,
+              "key": "playground",
+              "name": "自由探索",
+              "file": "build-a-molecule-03-playground-tablet-1024x768.png"
+            }
+          ]
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "height": 844,
+          "menu": "build-a-molecule-menu-mobile-390x844.png",
+          "screens": [
+            {
+              "index": 0,
+              "key": "single-molecule",
+              "name": "单个分子",
+              "file": "build-a-molecule-01-single-molecule-mobile-390x844.png"
+            },
+            {
+              "index": 1,
+              "key": "multiple-molecules",
+              "name": "多个分子",
+              "file": "build-a-molecule-02-multiple-molecules-mobile-390x844.png"
+            },
+            {
+              "index": 2,
+              "key": "playground",
+              "name": "自由探索",
+              "file": "build-a-molecule-03-playground-mobile-390x844.png"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "vendor": [
+    {
+      "id": "fractions-intro",
+      "index": 0,
+      "screenName": "介绍",
+      "screenCount": 3,
+      "file": "fractions-intro-vendor-screen-01-desktop-1280x800.png"
+    },
+    {
+      "id": "fraction-matcher",
+      "index": 0,
+      "screenName": "分数",
+      "screenCount": 2,
+      "file": "fraction-matcher-vendor-screen-01-desktop-1280x800.png"
+    },
+    {
+      "id": "balancing-act",
+      "index": 1,
+      "screenName": "探究杠杆平衡原理",
+      "screenCount": 3,
+      "file": "balancing-act-vendor-screen-02-desktop-1280x800.png"
+    },
+    {
+      "id": "circuit-construction-kit-dc",
+      "index": 1,
+      "screenName": "实验室",
+      "screenCount": 2,
+      "file": "circuit-construction-kit-dc-vendor-screen-02-desktop-1280x800.png"
+    },
+    {
+      "id": "states-of-matter-basics",
+      "index": 1,
+      "screenName": "相变",
+      "screenCount": 2,
+      "file": "states-of-matter-basics-vendor-screen-02-desktop-1280x800.png"
+    },
+    {
+      "id": "build-a-molecule",
+      "index": 1,
+      "screenName": "多个分子",
+      "screenCount": 3,
+      "file": "build-a-molecule-vendor-screen-02-desktop-1280x800.png"
+    }
+  ],
+  "pageErrors": [],
+  "failedLocalRequests": [],
+  "blockedExternalRequests": [
+    "https://www.googletagmanager.com/gtm.js?id=GTM-WLNGBXD",
+    "https://phet.colorado.edu/yotta/immediate.gif?pingver=4&project=fractions-intro&brand=phet&license=NC&version=1.0.33&locale=zh_CN&buildTimestamp=2026-08-22%2019%3A04%3A41%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fsrc%2Fphet%2Fgenerated%2Ffractions-intro.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802074249&loadType=default&ref=",
+    "https://phet.colorado.edu/yotta/sanity.gif?pingver=4&project=fractions-intro&brand=phet&license=NC&version=1.0.33&locale=zh_CN&buildTimestamp=2026-08-22%2019%3A04%3A41%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fsrc%2Fphet%2Fgenerated%2Ffractions-intro.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802074249&loadType=default&ref=&gaError=false&gaLoaded=false",
+    "http://phet.colorado.edu/services/check-html-updates",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-WLNGBXD",
+    "https://phet.colorado.edu/yotta/immediate.gif?pingver=4&project=fraction-matcher&brand=phet&license=NC&version=1.2.21&locale=zh_CN&buildTimestamp=2026-06-24%2008%3A02%3A25%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fsrc%2Fphet%2Fgenerated%2Ffraction-matcher.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802078291&loadType=default&ref=",
+    "https://phet.colorado.edu/yotta/sanity.gif?pingver=4&project=fraction-matcher&brand=phet&license=NC&version=1.2.21&locale=zh_CN&buildTimestamp=2026-06-24%2008%3A02%3A25%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fsrc%2Fphet%2Fgenerated%2Ffraction-matcher.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802078291&loadType=default&ref=&gaError=false&gaLoaded=false",
+    "http://phet.colorado.edu/services/check-html-updates",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-WLNGBXD",
+    "https://phet.colorado.edu/yotta/immediate.gif?pingver=4&project=balancing-act&brand=phet&license=NC&version=1.3.7&locale=zh_CN&buildTimestamp=2026-08-19%2021%3A49%3A59%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fsrc%2Fphet%2Fgenerated%2Fbalancing-act.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802080906&loadType=default&ref=",
+    "https://phet.colorado.edu/yotta/sanity.gif?pingver=4&project=balancing-act&brand=phet&license=NC&version=1.3.7&locale=zh_CN&buildTimestamp=2026-08-19%2021%3A49%3A59%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fsrc%2Fphet%2Fgenerated%2Fbalancing-act.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802080906&loadType=default&ref=&gaError=false&gaLoaded=false",
+    "http://phet.colorado.edu/services/check-html-updates",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-WLNGBXD",
+    "https://phet.colorado.edu/yotta/immediate.gif?pingver=4&project=circuit-construction-kit-dc&brand=phet&license=NC&version=1.5.2&locale=zh_CN&buildTimestamp=2026-08-02%2005%3A18%3A55%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fsrc%2Fphet%2Fgenerated%2Fcircuit-construction-kit-dc.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802084688&loadType=default&ref=",
+    "https://phet.colorado.edu/yotta/sanity.gif?pingver=4&project=circuit-construction-kit-dc&brand=phet&license=NC&version=1.5.2&locale=zh_CN&buildTimestamp=2026-08-02%2005%3A18%3A55%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fsrc%2Fphet%2Fgenerated%2Fcircuit-construction-kit-dc.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802084688&loadType=default&ref=&gaError=false&gaLoaded=false",
+    "http://phet.colorado.edu/services/check-html-updates",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-WLNGBXD",
+    "https://phet.colorado.edu/yotta/immediate.gif?pingver=4&project=states-of-matter-basics&brand=phet&license=NC&version=1.2.23&locale=zh_CN&buildTimestamp=2026-07-22%2007%3A44%3A11%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fsrc%2Fphet%2Fgenerated%2Fstates-of-matter-basics.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802088151&loadType=default&ref=",
+    "https://phet.colorado.edu/yotta/sanity.gif?pingver=4&project=states-of-matter-basics&brand=phet&license=NC&version=1.2.23&locale=zh_CN&buildTimestamp=2026-07-22%2007%3A44%3A11%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fsrc%2Fphet%2Fgenerated%2Fstates-of-matter-basics.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802088151&loadType=default&ref=&gaError=false&gaLoaded=false",
+    "http://phet.colorado.edu/services/check-html-updates",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-WLNGBXD",
+    "https://phet.colorado.edu/yotta/immediate.gif?pingver=4&project=build-a-molecule&brand=phet&license=NC&version=1.0.25&locale=zh_CN&buildTimestamp=2026-07-30%2001%3A41%3A11%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fsrc%2Fphet%2Fgenerated%2Fbuild-a-molecule.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802091856&loadType=default&ref=",
+    "https://phet.colorado.edu/yotta/sanity.gif?pingver=4&project=build-a-molecule&brand=phet&license=NC&version=1.0.25&locale=zh_CN&buildTimestamp=2026-07-30%2001%3A41%3A11%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fsrc%2Fphet%2Fgenerated%2Fbuild-a-molecule.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802091856&loadType=default&ref=&gaError=false&gaLoaded=false",
+    "http://phet.colorado.edu/services/check-html-updates",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-WLNGBXD",
+    "https://phet.colorado.edu/yotta/immediate.gif?pingver=4&project=fractions-intro&brand=phet&license=NC&version=1.0.33&locale=zh_CN&buildTimestamp=2026-08-22%2019%3A04%3A41%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fvendor%2Fphet%2Ffractions-intro.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802096043&loadType=default&ref=",
+    "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+    "https://phet.colorado.edu/yotta/sanity.gif?pingver=4&project=fractions-intro&brand=phet&license=NC&version=1.0.33&locale=zh_CN&buildTimestamp=2026-08-22%2019%3A04%3A41%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fvendor%2Fphet%2Ffractions-intro.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802096043&loadType=default&ref=&gaError=false&gaLoaded=false",
+    "http://phet.colorado.edu/services/check-html-updates",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-WLNGBXD",
+    "https://phet.colorado.edu/yotta/immediate.gif?pingver=4&project=fraction-matcher&brand=phet&license=NC&version=1.2.21&locale=zh_CN&buildTimestamp=2026-06-24%2008%3A02%3A25%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fvendor%2Fphet%2Ffraction-matcher.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802097089&loadType=default&ref=",
+    "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+    "https://phet.colorado.edu/yotta/sanity.gif?pingver=4&project=fraction-matcher&brand=phet&license=NC&version=1.2.21&locale=zh_CN&buildTimestamp=2026-06-24%2008%3A02%3A25%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fvendor%2Fphet%2Ffraction-matcher.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802097089&loadType=default&ref=&gaError=false&gaLoaded=false",
+    "http://phet.colorado.edu/services/check-html-updates",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-WLNGBXD",
+    "https://phet.colorado.edu/yotta/immediate.gif?pingver=4&project=balancing-act&brand=phet&license=NC&version=1.3.7&locale=zh_CN&buildTimestamp=2026-08-19%2021%3A49%3A59%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fvendor%2Fphet%2Fbalancing-act.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802097985&loadType=default&ref=",
+    "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+    "https://phet.colorado.edu/yotta/sanity.gif?pingver=4&project=balancing-act&brand=phet&license=NC&version=1.3.7&locale=zh_CN&buildTimestamp=2026-08-19%2021%3A49%3A59%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fvendor%2Fphet%2Fbalancing-act.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802097985&loadType=default&ref=&gaError=false&gaLoaded=false",
+    "http://phet.colorado.edu/services/check-html-updates",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-WLNGBXD",
+    "https://phet.colorado.edu/yotta/immediate.gif?pingver=4&project=circuit-construction-kit-dc&brand=phet&license=NC&version=1.5.2&locale=zh_CN&buildTimestamp=2026-08-02%2005%3A18%3A55%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fvendor%2Fphet%2Fcircuit-construction-kit-dc.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802099229&loadType=default&ref=",
+    "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+    "https://phet.colorado.edu/yotta/sanity.gif?pingver=4&project=circuit-construction-kit-dc&brand=phet&license=NC&version=1.5.2&locale=zh_CN&buildTimestamp=2026-08-02%2005%3A18%3A55%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fvendor%2Fphet%2Fcircuit-construction-kit-dc.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802099229&loadType=default&ref=&gaError=false&gaLoaded=false",
+    "http://phet.colorado.edu/services/check-html-updates",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-WLNGBXD",
+    "https://phet.colorado.edu/yotta/immediate.gif?pingver=4&project=states-of-matter-basics&brand=phet&license=NC&version=1.2.23&locale=zh_CN&buildTimestamp=2026-07-22%2007%3A44%3A11%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fvendor%2Fphet%2Fstates-of-matter-basics.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802100916&loadType=default&ref=",
+    "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+    "https://phet.colorado.edu/yotta/sanity.gif?pingver=4&project=states-of-matter-basics&brand=phet&license=NC&version=1.2.23&locale=zh_CN&buildTimestamp=2026-07-22%2007%3A44%3A11%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fvendor%2Fphet%2Fstates-of-matter-basics.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802100916&loadType=default&ref=&gaError=false&gaLoaded=false",
+    "http://phet.colorado.edu/services/check-html-updates",
+    "https://www.googletagmanager.com/gtm.js?id=GTM-WLNGBXD",
+    "https://phet.colorado.edu/yotta/immediate.gif?pingver=4&project=build-a-molecule&brand=phet&license=NC&version=1.0.25&locale=zh_CN&buildTimestamp=2026-07-30%2001%3A41%3A11%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fvendor%2Fphet%2Fbuild-a-molecule.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802101737&loadType=default&ref=",
+    "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+    "https://phet.colorado.edu/yotta/sanity.gif?pingver=4&project=build-a-molecule&brand=phet&license=NC&version=1.0.25&locale=zh_CN&buildTimestamp=2026-07-30%2001%3A41%3A11%20UTC&domain=127.0.0.1&href=http%3A%2F%2F127.0.0.1%3A52347%2Fvendor%2Fphet%2Fbuild-a-molecule.html%3Flocale%3Dzh_CN%26webgl%3Dfalse%26allowLinks%3Dfalse&type=html&timestamp=1790802101737&loadType=default&ref=&gaError=false&gaLoaded=false",
+    "http://phet.colorado.edu/services/check-html-updates"
+  ],
+  "summary": {
+    "generatedModules": 6,
+    "menuScreenshots": 18,
+    "actualScreenScreenshots": 45,
+    "vendorScreenshots": 6,
+    "pageErrors": 0,
+    "failedLocalRequests": 0,
+    "blockedExternalRequests": 54
+  }
+}

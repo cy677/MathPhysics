@@ -1,0 +1,137 @@
+{
+  "suite": "Primary curriculum and retained classroom integration",
+  "prefix": "/MathPhysics/",
+  "screenshots": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\curriculum-integration\\browser-2026-09-30T12-46-29.880Z",
+  "data": {
+    "primaryCount": 48,
+    "primaryByRecommendedGrade": {
+      "1": 8,
+      "2": 8,
+      "3": 8,
+      "4": 8,
+      "5": 8,
+      "6": 8
+    },
+    "geometryBaseCount": 24,
+    "geometryQuestionForms": 48,
+    "uniquePrimaryIds": 48
+  },
+  "primary": {},
+  "geometry": {
+    "deepLink": "http://127.0.0.1:60696/MathPhysics/lessons/geometric-proofs/index.html?lesson=rectangle",
+    "filteredAreaGrade5": [
+      {
+        "id": "parallelogram",
+        "title": "平行四边形：剪一块、移一块"
+      },
+      {
+        "id": "triangle",
+        "title": "三角形：为什么要除以二"
+      },
+      {
+        "id": "trapezoid",
+        "title": "梯形：两块拼出一个底"
+      },
+      {
+        "id": "rhombus",
+        "title": "菱形：两条对角线的秘密"
+      }
+    ],
+    "errors": []
+  },
+  "jsxgraph": {
+    "modeCount": 6,
+    "targetCount": 36,
+    "challengeMap": {
+      "triangle": [
+        "拼一个面积为6的三角形。",
+        "拼一个面积为4的三角形。",
+        "拼一个面积为8的三角形。",
+        "拼一个面积为10的三角形。",
+        "拼一个面积为12的三角形。",
+        "拼一个面积为3的三角形。"
+      ],
+      "mirror": [
+        "把A的镜像点移到（3，2）。",
+        "把A的镜像点移到（2，3）。",
+        "把A的镜像点移到（4，1）。",
+        "把A的镜像点移到（1，4）。",
+        "把A的镜像点移到（-2，2）。",
+        "把A的镜像点移到（0，3）。"
+      ],
+      "rotate": [
+        "让图形绕原点逆时针转过180°。",
+        "让图形绕原点逆时针转过270°。",
+        "让图形绕原点逆时针转过90°。",
+        "让图形绕原点逆时针转过360°。",
+        "让图形绕原点逆时针转过45°。",
+        "让图形绕原点逆时针转过135°。"
+      ],
+      "scale": [
+        "让变化后面积变为原来的4倍。",
+        "让变化后面积变为原来的2.25倍。",
+        "让变化后面积变为原来的1倍。",
+        "让变化后面积变为原来的0.25倍。",
+        "让变化后面积变为原来的6.25倍。",
+        "让变化后面积变为原来的1.5625倍。"
+      ],
+      "vectors": [
+        "用两支箭头到达（4，3）。",
+        "用两支箭头到达（3，4）。",
+        "用两支箭头到达（5，2）。",
+        "用两支箭头到达（2，5）。",
+        "用两支箭头到达（1，4）。",
+        "用两支箭头到达（4，1）。"
+      ],
+      "linear": [
+        "把横向一步变成（2，0），纵向一步变成（0，1）。",
+        "把横向一步变成（1，0），纵向一步变成（1，1）。",
+        "把横向一步变成（0，1），纵向一步变成（-1，0）。",
+        "把横向一步变成（1，0），纵向一步变成（0，2）。",
+        "把横向一步变成（1，0.5），纵向一步变成（0，1）。",
+        "把横向一步变成（1，0），纵向一步变成（2，0）。"
+      ]
+    },
+    "errors": []
+  },
+  "tangram": {
+    "cards": {
+      "square": [
+        "方形：七块都要用上，可以按需要求助。",
+        "方形：七块都要用上，最多使用2次“帮我放一块”。",
+        "方形：七块都要用上，这次不用“帮我放一块”。"
+      ],
+      "creative": [
+        "创意轮廓：七块都要用上，可以按需要求助。",
+        "创意轮廓：七块都要用上，最多使用2次“帮我放一块”。",
+        "创意轮廓：七块都要用上，这次不用“帮我放一块”。"
+      ]
+    },
+    "helpCount": 1,
+    "solvedBoard": {
+      "placed": true,
+      "slots": 7
+    },
+    "errors": []
+  },
+  "host": {},
+  "limitations": [
+    "Chromium viewport emulation; no physical mobile Safari run."
+  ],
+  "skipPrimaryStage": true,
+  "passed": false,
+  "failures": [
+    {
+      "label": "JSXGraph mirror: original first two target values are retained",
+      "detail": "把A的镜像点移到（3，2）。,把A的镜像点移到（2，3）。"
+    },
+    {
+      "label": "JSXGraph vectors: original first two target values are retained",
+      "detail": "用两支箭头到达（4，3）。,用两支箭头到达（3，4）。"
+    },
+    {
+      "label": "JSXGraph linear: original first two target values are retained",
+      "detail": "把横向一步变成（2，0），纵向一步变成（0，1）。,把横向一步变成（1，0），纵向一步变成（1，1）。"
+    }
+  ]
+}

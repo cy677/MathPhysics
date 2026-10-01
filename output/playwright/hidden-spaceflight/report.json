@@ -1,0 +1,303 @@
+{
+  "suite": "hidden spaceflight catalog regression and visual check",
+  "checks": [
+    {
+      "id": "legacy-open-visit-restored-but-hidden",
+      "passed": true,
+      "visibleCards": 1,
+      "storedOpen": true,
+      "storedVisited": true
+    },
+    {
+      "id": "old-open-set-visit-and-progress-survive-refresh-before-user-changes",
+      "passed": true
+    },
+    {
+      "id": "show-closed-and-search-do-not-expose-hidden-entry",
+      "passed": true,
+      "visibleCards": 63,
+      "emptySearch": true
+    },
+    {
+      "id": "teacher-manager-and-open-all-omit-hidden-card",
+      "passed": true,
+      "managerRows": 63,
+      "hiddenIdStillStored": true
+    },
+    {
+      "id": "teacher-preview-omits-hidden-entry",
+      "passed": true,
+      "visibleCards": 63,
+      "preview": true
+    },
+    {
+      "id": "refresh-preserves-old-host-and-spaceflight-progress-storage",
+      "passed": true,
+      "hiddenOpen": true,
+      "visited": 1727000000000,
+      "progressUnchanged": true
+    },
+    {
+      "id": "legacy-hidden-activity-hash-does-not-launch-host-iframe",
+      "passed": true
+    },
+    {
+      "id": "direct-spaceflight-lesson-remains-available",
+      "passed": true,
+      "status": 200,
+      "ready": true,
+      "missions": 4,
+      "progressUnchanged": true
+    },
+    {
+      "id": "another-local-activity-still-launches",
+      "passed": true,
+      "activity": "primary-math",
+      "iframe": true
+    },
+    {
+      "id": "host-page-has-no-page-errors",
+      "passed": true
+    },
+    {
+      "id": "responsive-directory-and-management-1024",
+      "passed": true,
+      "directory": {
+        "viewport": 1024,
+        "documentWidth": 1024,
+        "bodyWidth": 1024
+      },
+      "manager": {
+        "viewport": 1024,
+        "documentWidth": 1024,
+        "bodyWidth": 1024,
+        "dialogLeft": 117,
+        "dialogRight": 907,
+        "dialogWidth": 790,
+        "dialogScrollHeight": 681,
+        "dialogClientHeight": 681
+      },
+      "hiddenAbsent": true,
+      "pageErrors": 0
+    },
+    {
+      "id": "responsive-directory-and-management-390",
+      "passed": true,
+      "directory": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390
+      },
+      "manager": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "dialogLeft": 18,
+        "dialogRight": 372,
+        "dialogWidth": 354,
+        "dialogScrollHeight": 739,
+        "dialogClientHeight": 702
+      },
+      "hiddenAbsent": true,
+      "pageErrors": 0
+    },
+    {
+      "id": "official-develop-web-game-client-run",
+      "passed": true,
+      "exitCode": 0,
+      "screenshot": "official-client/shot-0.png",
+      "state": null
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "output/playwright/hidden-spaceflight/directory-1024.png",
+      "view": 1024,
+      "surface": "directory"
+    },
+    {
+      "path": "output/playwright/hidden-spaceflight/manager-1024.png",
+      "view": 1024,
+      "surface": "management"
+    },
+    {
+      "path": "output/playwright/hidden-spaceflight/directory-390.png",
+      "view": 390,
+      "surface": "directory"
+    },
+    {
+      "path": "output/playwright/hidden-spaceflight/manager-390.png",
+      "view": 390,
+      "surface": "management"
+    },
+    {
+      "path": "output/playwright/hidden-spaceflight/manager-390-bottom.png",
+      "view": 390,
+      "surface": "management bottom"
+    },
+    {
+      "path": "output/playwright/hidden-spaceflight/directory-1440.png",
+      "view": 1440,
+      "surface": "directory"
+    },
+    {
+      "path": "output/playwright/hidden-spaceflight/official-client/shot-0.png",
+      "view": "official develop-web-game client",
+      "surface": "home directory"
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "hostLaunchDebug": {
+    "hash": "",
+    "onlyOpen": true,
+    "cardIds": [
+      "jsxgraph-playground",
+      "tangram-flat",
+      "matter-slingshot",
+      "geometry-proofs",
+      "matter-bridge",
+      "matter-car",
+      "matter-newtonsCradle",
+      "matter-catapult",
+      "matter-friction",
+      "matter-restitution",
+      "matter-ballPool",
+      "matter-pyramid",
+      "matter-cloth",
+      "matter-chains",
+      "matter-constraints",
+      "matter-stack",
+      "matter-gravity",
+      "area-builder",
+      "forces-and-motion-basics",
+      "energy-skate-park-basics",
+      "vector-addition",
+      "primary-math",
+      "jsx-triangle",
+      "jsx-mirror",
+      "jsx-rotation",
+      "jsx-scale",
+      "jsx-vectors",
+      "jsx-linear",
+      "tangram",
+      "matter-airFriction",
+      "matter-avalanche",
+      "matter-circleStack",
+      "matter-collisionFiltering",
+      "matter-compositeManipulation",
+      "matter-compound",
+      "matter-compoundStack",
+      "matter-concave",
+      "matter-doublePendulum",
+      "matter-events",
+      "matter-gyro",
+      "matter-manipulation",
+      "matter-mixed",
+      "matter-ragdoll",
+      "matter-raycasting",
+      "matter-rounded",
+      "matter-remove",
+      "matter-renderResize",
+      "matter-sensors",
+      "matter-sleeping",
+      "matter-softBody",
+      "matter-sprites",
+      "matter-staticFriction",
+      "matter-stats",
+      "matter-stress",
+      "matter-stress2",
+      "matter-stress3",
+      "matter-stress4",
+      "matter-substep",
+      "matter-svg",
+      "matter-terrain",
+      "matter-timescale",
+      "matter-views",
+      "matter-wreckingBall"
+    ],
+    "stored": {
+      "schemaVersion": 1,
+      "openIds": [
+        "area-builder",
+        "forces-and-motion-basics",
+        "energy-skate-park-basics",
+        "vector-addition",
+        "tangram",
+        "matter-airFriction",
+        "matter-avalanche",
+        "matter-ballPool",
+        "matter-bridge",
+        "matter-car",
+        "matter-catapult",
+        "matter-chains",
+        "matter-circleStack",
+        "matter-cloth",
+        "matter-collisionFiltering",
+        "matter-compositeManipulation",
+        "matter-compound",
+        "matter-compoundStack",
+        "matter-concave",
+        "matter-constraints",
+        "matter-doublePendulum",
+        "matter-events",
+        "matter-friction",
+        "matter-gravity",
+        "matter-gyro",
+        "matter-manipulation",
+        "matter-mixed",
+        "matter-newtonsCradle",
+        "matter-ragdoll",
+        "matter-pyramid",
+        "matter-raycasting",
+        "matter-restitution",
+        "matter-rounded",
+        "matter-remove",
+        "matter-renderResize",
+        "matter-sensors",
+        "matter-sleeping",
+        "matter-slingshot",
+        "matter-softBody",
+        "matter-sprites",
+        "matter-stack",
+        "matter-staticFriction",
+        "matter-stats",
+        "matter-stress",
+        "matter-stress2",
+        "matter-stress3",
+        "matter-stress4",
+        "matter-substep",
+        "matter-svg",
+        "matter-terrain",
+        "matter-timescale",
+        "matter-views",
+        "matter-wreckingBall",
+        "geometry-proofs",
+        "spaceflight",
+        "jsxgraph-playground",
+        "tangram-flat",
+        "jsx-triangle",
+        "jsx-mirror",
+        "jsx-rotation",
+        "jsx-scale",
+        "jsx-vectors",
+        "jsx-linear",
+        "primary-math"
+      ],
+      "visited": {
+        "area-builder": 1727000000000,
+        "spaceflight": 1727000000000
+      },
+      "teacherPreview": true,
+      "defaultsRevision": "2026-09-v04"
+    }
+  },
+  "officialClient": {
+    "exitCode": 0,
+    "signal": null,
+    "stdout": "",
+    "stderr": "(node:19192) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:\n--import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"file%3A///C%3A/Users/cheng/Desktop/MathPhysics/output/playwright/hidden-spaceflight/resolve-playwright.mjs\", pathToFileURL(\"./\"));'\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+    "screenshotExists": true,
+    "stateExists": false
+  }
+}

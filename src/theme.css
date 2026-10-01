@@ -1,0 +1,85 @@
+/* Science Island shared presentation tokens. Scientific object colors remain module-owned. */
+.mp-save-status {
+  color: var(--mp-primary, #315d4b);
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.mp-save-status[data-saved="false"] { color: var(--mp-warm-ink, #77552a); }
+:root {
+  color-scheme: light;
+  --mp-page: #f5f3e9;
+  --mp-surface: #fffef9;
+  --mp-ink: #263d33;
+  --mp-piece-ink: #101510;
+  --mp-muted: #657567;
+  --mp-primary: #315d4b;
+  --mp-primary-hover: #25483b;
+  --mp-leaf: #e7eddf;
+  --mp-line: #d8ded3;
+  --mp-gold: #efc66b;
+  --mp-gold-soft: #faf0d5;
+  --mp-warm-ink: #77552a;
+  --mp-focus: #b87428;
+  --mp-error: #a4482d;
+  --mp-error-soft: #fae8df;
+  --mp-blue: #568ba6;
+  --mp-orange: #c87d47;
+  --mp-purple: #9980bc;
+  --mp-font: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  --mp-radius-control: 12px;
+  --mp-radius-card: 18px;
+  --mp-shadow: 0 6px 22px #263d330a;
+  --mp-shadow-dialog: 0 20px 70px #263d3329;
+}
+:where(body.mp-page) {
+  margin: 0;
+  background: var(--mp-page);
+  color: var(--mp-ink);
+  font-family: var(--mp-font);
+  font-synthesis: none;
+  line-height: 1.65;
+}
+:where(.mp-page) :where(button, input, select, textarea) { font: inherit; color: inherit; }
+:where(.mp-page) :where(button, a, input, select, summary) { -webkit-tap-highlight-color: transparent; }
+:where(.mp-page) :where(button, select, summary) { cursor: pointer; }
+:where(.mp-page) :where(button) {
+  min-height: 44px;
+  border: 1px solid var(--mp-line);
+  border-radius: var(--mp-radius-control);
+  background: var(--mp-surface);
+  padding: 9px 14px;
+  touch-action: manipulation;
+}
+:where(.mp-page) :where(button):hover { background: var(--mp-leaf); }
+:where(.mp-page) :where(button):active { box-shadow: inset 0 2px 0 #263d3314; }
+:where(.mp-page) :where(button):disabled { cursor: default; opacity: .48; }
+:where(.mp-page) :where(input[type=range], input[type=checkbox], input[type=radio]) { accent-color: var(--mp-primary); }
+:where(.mp-page) :where(input[type=range]) { min-height: 36px; }
+:where(.mp-page) :where(a) { color: var(--mp-primary); text-underline-offset: 4px; }
+:where(.mp-page) :where(button, a, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--mp-focus);
+  outline-offset: 3px;
+}
+:where(.mp-page) :where(.primary, .mp-primary) {
+  background: var(--mp-primary);
+  color: var(--mp-surface);
+  border-color: var(--mp-primary);
+}
+:where(.mp-page) :where(.primary, .mp-primary):hover { background: var(--mp-primary-hover); }
+:where(.mp-page) :where(dialog) {
+  color: var(--mp-ink);
+  background: var(--mp-surface);
+  border: 1px solid var(--mp-line);
+  border-radius: var(--mp-radius-card);
+  box-shadow: var(--mp-shadow-dialog);
+}
+:where(.mp-page) :where(dialog)::backdrop { background: #263d3359; }
+:where(.mp-page) [hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  :where(.mp-page) { scroll-behavior: auto; }
+  :where(.mp-page) *, :where(.mp-page) *::before, :where(.mp-page) *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

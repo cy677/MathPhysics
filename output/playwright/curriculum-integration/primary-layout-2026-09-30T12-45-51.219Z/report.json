@@ -1,0 +1,69 @@
+{
+  "suite": "Primary tablet layout recheck",
+  "output": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\curriculum-integration\\primary-layout-2026-09-30T12-45-51.219Z",
+  "viewports": [
+    {
+      "name": "tablet-768",
+      "viewport": 768,
+      "documentWidth": 768,
+      "sceneClient": 700,
+      "sceneScroll": 700,
+      "svgWidth": 700,
+      "selectVisible": true,
+      "navVisible": false,
+      "panHintVisible": true,
+      "answerButtonHeight": 50,
+      "questionHeading": "给种子找空位"
+    },
+    {
+      "name": "tablet-1024",
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "sceneClient": 956,
+      "sceneScroll": 956,
+      "svgWidth": 956,
+      "selectVisible": true,
+      "navVisible": false,
+      "panHintVisible": true,
+      "answerButtonHeight": 50,
+      "questionHeading": "给种子找空位"
+    }
+  ],
+  "host": [
+    {
+      "name": "tablet-768",
+      "outer": {
+        "viewport": 768,
+        "documentWidth": 768,
+        "playerVisible": true,
+        "backVisible": true
+      },
+      "inner": {
+        "viewport": 768,
+        "documentWidth": 768,
+        "sceneClient": 700,
+        "sceneScroll": 700,
+        "questionSelectorVisible": true
+      }
+    },
+    {
+      "name": "tablet-1024",
+      "outer": {
+        "viewport": 1024,
+        "documentWidth": 1024,
+        "playerVisible": true,
+        "backVisible": true
+      },
+      "inner": {
+        "viewport": 1024,
+        "documentWidth": 1024,
+        "sceneClient": 956,
+        "sceneScroll": 956,
+        "questionSelectorVisible": true
+      }
+    }
+  ],
+  "limitations": [],
+  "passed": true,
+  "failures": []
+}

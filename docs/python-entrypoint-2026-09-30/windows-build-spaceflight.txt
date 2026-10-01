@@ -1,0 +1,5 @@
+
+> mathphysics-science-island@0.4.0 build:spaceflight
+> node scripts/python.mjs scripts/build_spaceflight_standalone.py
+
+C:\Users\cheng\Desktop\MathPhysics\dist\MathPhysics-Spaceflight.html 105578

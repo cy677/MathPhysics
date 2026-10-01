@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-01",
+  "scope": {
+    "modules": [
+      "fractions-intro",
+      "fraction-matcher",
+      "balancing-act",
+      "circuit-construction-kit-dc",
+      "states-of-matter-basics",
+      "build-a-molecule"
+    ],
+    "actualScreens": 15,
+    "viewports": [
+      { "name": "desktop", "width": 1280, "height": 800 },
+      { "name": "tablet", "width": 1024, "height": 768 },
+      { "name": "mobile-portrait", "width": 390, "height": 844 }
+    ],
+    "browser": "Local Playwright Chromium; viewport emulation, not physical-device touch testing"
+  },
+  "homepage": {
+    "activityCardsAtFullAudit": 22,
+    "activityCardsAtFinalRecheck": 23,
+    "categoryEntryColumnsByViewport": [4, 2, 1],
+    "activityCardColumnsByViewport": [3, 3, 1],
+    "horizontalOverflow": false,
+    "scienceGrade5FilterResults": ["states-of-matter-basics", "build-a-molecule"],
+    "search": {
+      "query": "电路",
+      "results": ["circuit-construction-kit-dc"]
+    }
+  },
+  "phet": {
+    "fullAuditSelectionMenus": 18,
+    "fullAuditRenderedScreens": 45,
+    "finalRecheckedSelectionMenus": 18,
+    "finalRecheckedFirstScreenNavigation": 18,
+    "finalRecheckedFractionsGameTitle": 3,
+    "screenCanvasClippedOrOverflowed": false,
+    "unselectedLabelContrastRatio": 5.6,
+    "selectedLabelContrastRatio": 7.51,
+    "fractionsIntroGameTitle": "选择一个挑战！",
+    "moleculeGoalSlotMatchesVendorOriginal": true,
+    "mobileReadabilityObservation": "Some simulator controls and labels are small in portrait; landscape may be easier to use. No physical-device touch test was performed."
+  },
+  "runtime": {
+    "browserPageErrors": 0,
+    "failedLocalRequests": 0,
+    "externalRequests": "Blocked during local-only rendering",
+    "testServersStopped": true,
+    "testedPortsRebindConfirmedReleased": true
+  },
+  "evidenceDirectory": "output/playwright/phet-expansion/visual"
+}

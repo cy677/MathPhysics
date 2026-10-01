@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-30",
+  "unitTests": {
+    "command": "npm test",
+    "passed": 31,
+    "failed": 0
+  },
+  "upstreamFiles": "all inventory byte hashes matched",
+  "visualDerivatives": "all four reverse byte-for-byte to pinned upstream files",
+  "runtimeReport": "runtime-results.json",
+  "phetScreens": 13,
+  "modelFunctionFingerprints": 25,
+  "runtimeComparisons": 32,
+  "areaBuilderLevels": 6,
+  "seededAreaChallengesCompared": 36,
+  "nonPhetRuntimeChecks": [
+    "matter-bridge",
+    "geometry-proofs",
+    "spaceflight"
+  ],
+  "visualReviewer": "Luna, max",
+  "visualReport": "visual-review.md",
+  "limitations": [
+    "1024x768 layout emulation is not a physical iPad or touch-hardware test",
+    "Random challenge checks cover a fixed seeded sample; generator code was separately compared"
+  ],
+  "testedBuilds": {
+    "forces-and-motion-basics": "872c89ac995d67550d8da68fdecefa7ac48dda17bfb02b52286cbbca80ce2006",
+    "energy-skate-park-basics": "01bd9c404ae4784e45c65f778ddc77ec4910b6cfb7f273af9a9865ab51cc2c5a",
+    "area-builder": "7cae46417cc0384674cfc8db644dc87f8d8d51056719065e2db0ce3c6a62aa18",
+    "vector-addition": "e63c153e386fd01ef32415171db39fb4e6fa8648aec6fe1c4298d0f0d29111c7"
+  }
+}

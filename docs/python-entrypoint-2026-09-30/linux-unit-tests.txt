@@ -1,0 +1,319 @@
+
+> mathphysics-science-island@0.4.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: all registered upstream Matter examples are catalogued, not sampled
+ok 1 - all registered upstream Matter examples are catalogued, not sampled
+  ---
+  duration_ms: 4.759201
+  type: 'test'
+  ...
+# Subtest: all four complete PhET simulations, all screens and tangram retained
+ok 2 - all four complete PhET simulations, all screens and tangram retained
+  ---
+  duration_ms: 131.165954
+  type: 'test'
+  ...
+# Subtest: exact upstream file bytes match complete inventory hashes
+ok 3 - exact upstream file bytes match complete inventory hashes
+  ---
+  duration_ms: 4190.96246
+  type: 'test'
+  ...
+# Subtest: unique IDs, local entries, all elementary grades, initial subset only
+ok 4 - unique IDs, local entries, all elementary grades, initial subset only
+  ---
+  duration_ms: 0.396221
+  type: 'test'
+  ...
+# Subtest: malformed storage and unknown entries cannot manufacture progression
+ok 5 - malformed storage and unknown entries cannot manufacture progression
+  ---
+  duration_ms: 0.848719
+  type: 'test'
+  ...
+# Subtest: import configuration is validated and does not import executable paths
+ok 6 - import configuration is validated and does not import executable paths
+  ---
+  duration_ms: 0.307235
+  type: 'test'
+  ...
+# Subtest: license barriers are disclosed; unlicensed project is not vendored
+ok 7 - license barriers are disclosed; unlicensed project is not vendored
+  ---
+  duration_ms: 2.544786
+  type: 'test'
+  ...
+# Subtest: 24 lessons, valid sources, all drawings and answers finite at slider extremes
+ok 8 - 24 lessons, valid sources, all drawings and answers finite at slider extremes
+  ---
+  duration_ms: 26.772749
+  type: 'test'
+  ...
+# Subtest: normalization protects nonpositive widths and nonfinite parameters
+ok 9 - normalization protects nonpositive widths and nonfinite parameters
+  ---
+  duration_ms: 0.51008
+  type: 'test'
+  ...
+# Subtest: square expansion, square difference, distributivity hold over many lengths
+ok 10 - square expansion, square difference, distributivity hold over many lengths
+  ---
+  duration_ms: 0.227025
+  type: 'test'
+  ...
+# Subtest: parallelogram cut and translated piece tile the final rectangle
+ok 11 - parallelogram cut and translated piece tile the final rectangle
+  ---
+  duration_ms: 0.582543
+  type: 'test'
+  ...
+# Subtest: difference-square cut is rigid and exactly fills the remaining rectangle
+ok 12 - difference-square cut is rigid and exactly fills the remaining rectangle
+  ---
+  duration_ms: 0.606508
+  type: 'test'
+  ...
+# Subtest: two triangles, two trapezoids, rhombus and central Pythagorean square
+ok 13 - two triangles, two trapezoids, rhombus and central Pythagorean square
+  ---
+  duration_ms: 0.249472
+  type: 'test'
+  ...
+# Subtest: same-height triangle ratio is not similarity squared ratio
+ok 14 - same-height triangle ratio is not similarity squared ratio
+  ---
+  duration_ms: 0.113391
+  type: 'test'
+  ...
+# Subtest: circle and cylinder use convergent polygon bounds, not an exact finite rectangle
+ok 15 - circle and cylinder use convergent polygon bounds, not an exact finite rectangle
+  ---
+  duration_ms: 0.17723
+  type: 'test'
+  ...
+# Subtest: pyramid factor validated by the nonoverlapping max-coordinate decomposition
+ok 16 - pyramid factor validated by the nonoverlapping max-coordinate decomposition
+  ---
+  duration_ms: 1.838772
+  type: 'test'
+  ...
+# Subtest: cone and hemisphere Cavalieri sections match at every sampled height
+ok 17 - cone and hemisphere Cavalieri sections match at every sampled height
+  ---
+  duration_ms: 1.44407
+  type: 'test'
+  ...
+# Subtest: numeric answers accept two decimals/fractions and reject malformed or infinite text
+ok 18 - numeric answers accept two decimals/fractions and reject malformed or infinite text
+  ---
+  duration_ms: 0.416376
+  type: 'test'
+  ...
+# Subtest: new local catalog is separate from upstream, bundled, and marked original MIT
+ok 19 - new local catalog is separate from upstream, bundled, and marked original MIT
+  ---
+  duration_ms: 22.205127
+  type: 'test'
+  ...
+# Subtest: every derivative reverses byte-for-byte to the pinned PhET source
+ok 20 - every derivative reverses byte-for-byte to the pinned PhET source
+  ---
+  duration_ms: 1928.971185
+  type: 'test'
+  ...
+# Subtest: host directs only PhET into generated views and keeps attribution and learning help
+ok 21 - host directs only PhET into generated views and keeps attribution and learning help
+  ---
+  duration_ms: 334.062059
+  type: 'test'
+  ...
+# Subtest: 57 distinct activities; 22 recommended entries with 18 non-PhET activities
+ok 22 - 57 distinct activities; 22 recommended entries with 18 non-PhET activities
+  ---
+  duration_ms: 14.975638
+  type: 'test'
+  ...
+# Subtest: legacy starter defaults upgrade once while preserving exploration records
+ok 23 - legacy starter defaults upgrade once while preserving exploration records
+  ---
+  duration_ms: 0.777581
+  type: 'test'
+  ...
+# Subtest: custom and deliberately empty teaching selections are never overwritten
+ok 24 - custom and deliberately empty teaching selections are never overwritten
+  ---
+  duration_ms: 0.305621
+  type: 'test'
+  ...
+# Subtest: JSXGraph package files match their exact import hashes and carry MIT attribution
+ok 25 - JSXGraph package files match their exact import hashes and carry MIT attribution
+  ---
+  duration_ms: 1536.163454
+  type: 'test'
+  ...
+# Subtest: child-facing descriptions and host template do not show integration boilerplate
+ok 26 - child-facing descriptions and host template do not show integration boilerplate
+  ---
+  duration_ms: 2.153492
+  type: 'test'
+  ...
+# Subtest: six dynamic activities use valid geometry, including degenerate triangles
+ok 27 - six dynamic activities use valid geometry, including degenerate triangles
+  ---
+  duration_ms: 0.473169
+  type: 'test'
+  ...
+# Subtest: reflection is an involution, rotation is isometric, similarity scales area by k squared
+ok 28 - reflection is an involution, rotation is isometric, similarity scales area by k squared
+  ---
+  duration_ms: 0.824808
+  type: 'test'
+  ...
+# Subtest: linear map fixes origin; determinant matches area and can collapse to a line
+ok 29 - linear map fixes origin; determinant matches area and can collapse to a line
+  ---
+  duration_ms: 0.158497
+  type: 'test'
+  ...
+# Subtest: flat tangram uses all original polygon vertices, seven pieces and original snapshot
+ok 30 - flat tangram uses all original polygon vertices, seven pieces and original snapshot
+  ---
+  duration_ms: 1.178069
+  type: 'test'
+  ...
+# Subtest: the selected interpreter runs Python 3
+ok 31 - the selected interpreter runs Python 3
+  ---
+  duration_ms: 15.309382
+  type: 'test'
+  ...
+# Subtest: an explicit Python executable is used without shell quoting
+ok 32 - an explicit Python executable is used without shell quoting
+  ---
+  duration_ms: 71.901566
+  type: 'test'
+  ...
+# Subtest: script paths, arguments and failure exit codes survive the launcher
+ok 33 - script paths, arguments and failure exit codes survive the launcher
+  ---
+  duration_ms: 67.696536
+  type: 'test'
+  ...
+# Subtest: Python module arguments are supported
+ok 34 - Python module arguments are supported
+  ---
+  duration_ms: 97.163738
+  type: 'test'
+  ...
+# Subtest: a missing explicit interpreter fails clearly without silently switching
+ok 35 - a missing explicit interpreter fails clearly without silently switching
+  ---
+  duration_ms: 42.711391
+  type: 'test'
+  ...
+# Subtest: a non-Python executable cannot pass interpreter detection
+ok 36 - a non-Python executable cannot pass interpreter detection
+  ---
+  duration_ms: 66.163979
+  type: 'test'
+  ...
+# Subtest: the native Python entrypoint works with a restricted PATH
+ok 37 - the native Python entrypoint works with a restricted PATH
+  ---
+  duration_ms: 65.049663
+  type: 'test'
+  ...
+# Subtest: Linux falls back to a Python 3 interpreter named python
+ok 38 - Linux falls back to a Python 3 interpreter named python
+  ---
+  duration_ms: 62.934881
+  type: 'test'
+  ...
+# Subtest: PhET splash graphics cannot count as a successfully explored activity
+ok 39 - PhET splash graphics cannot count as a successfully explored activity
+  ---
+  duration_ms: 0.786821
+  type: 'test'
+  ...
+# Subtest: SVG classroom adapters finish loading without a canvas
+ok 40 - SVG classroom adapters finish loading without a canvas
+  ---
+  duration_ms: 0.194314
+  type: 'test'
+  ...
+# Subtest: four complete routes, 62 explicit stages, eight labs, seven original vehicle diagrams
+ok 41 - four complete routes, 62 explicit stages, eight labs, seven original vehicle diagrams
+  ---
+  duration_ms: 291.161058
+  type: 'test'
+  ...
+# Subtest: launch vehicles, stations and representative return sequences are not conflated
+ok 42 - launch vehicles, stations and representative return sequences are not conflated
+  ---
+  duration_ms: 0.528878
+  type: 'test'
+  ...
+# Subtest: every experimental slider endpoint produces finite bounded values
+ok 43 - every experimental slider endpoint produces finite bounded values
+  ---
+  duration_ms: 0.528238
+  type: 'test'
+  ...
+# Subtest: circular orbit at 400 km has plausible speed, period and gravity
+ok 44 - circular orbit at 400 km has plausible speed, period and gravity
+  ---
+  duration_ms: 0.235081
+  type: 'test'
+  ...
+# Subtest: RK4 preserves circular orbit radius and uses a labelled atmosphere boundary
+ok 45 - RK4 preserves circular orbit radius and uses a labelled atmosphere boundary
+  ---
+  duration_ms: 12.555783
+  type: 'test'
+  ...
+# Subtest: thrust, staged mass, solar incidence and energy invariants
+ok 46 - thrust, staged mass, solar incidence and energy invariants
+  ---
+  duration_ms: 0.237533
+  type: 'test'
+  ...
+# Subtest: vacuum never reports an air-drag terminal speed; larger area lowers it
+ok 47 - vacuum never reports an air-drag terminal speed; larger area lowers it
+  ---
+  duration_ms: 0.174078
+  type: 'test'
+  ...
+# Subtest: docking requires alignment, slow relative speed and controlled attitude together
+ok 48 - docking requires alignment, slow relative speed and controlled attitude together
+  ---
+  duration_ms: 0.129915
+  type: 'test'
+  ...
+# Subtest: host retains third-party catalog and separate original entries
+ok 49 - host retains third-party catalog and separate original entries
+  ---
+  duration_ms: 15.317926
+  type: 'test'
+  ...
+# Subtest: single-file builder has no external runtime scripts or styles
+ok 50 - single-file builder has no external runtime scripts or styles
+  ---
+  duration_ms: 123.795029
+  type: 'test'
+  ...
+1..50
+# tests 50
+# suites 0
+# pass 50
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4439.635464
+npm notice
+npm notice New minor version of npm available! 11.12.1 -> 11.20.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.20.0
+npm notice To update run: npm install -g npm@11.20.0
+npm notice

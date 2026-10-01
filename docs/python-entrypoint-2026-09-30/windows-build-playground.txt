@@ -1,0 +1,6 @@
+
+> mathphysics-science-island@0.4.0 build:playground
+> node scripts/python.mjs scripts/build_playground_standalone.py
+
+MathPhysics-Playground.html 985819
+MathPhysics-Tangram.html 77076

@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "total": 11,
+  "results": [
+    {
+      "id": "topics-grades-search-and-empty-state",
+      "passed": true,
+      "filterCombinations": 28,
+      "searchAndEmptyState": true
+    },
+    {
+      "id": "configuration-download-upload-and-invalid-inputs",
+      "passed": true,
+      "validImport": true,
+      "invalidInputsRejected": 4,
+      "visitedPreserved": true,
+      "reloadPersists": true
+    },
+    {
+      "id": "close-all-preview-and-restore",
+      "passed": true
+    },
+    {
+      "id": "deep-link-help-reset-return-and-visit",
+      "passed": true
+    },
+    {
+      "id": "attribution-dialog-and-escape",
+      "passed": true
+    },
+    {
+      "id": "host-layout-390",
+      "passed": true
+    },
+    {
+      "id": "host-layout-768",
+      "passed": true
+    },
+    {
+      "id": "host-layout-1024",
+      "passed": true
+    },
+    {
+      "id": "host-layout-1440",
+      "passed": true
+    },
+    {
+      "id": "local-server-headers-and-content-types",
+      "passed": true,
+      "resources": 4
+    },
+    {
+      "id": "host-no-uncaught-errors-or-missing-local-assets",
+      "passed": true
+    }
+  ],
+  "blockedExternalRequestCount": 36,
+  "errors": [],
+  "missing": []
+}

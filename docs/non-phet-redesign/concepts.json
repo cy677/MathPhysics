@@ -1,0 +1,39 @@
+{
+  "status": "awaiting-user-direction-selection",
+  "numbering": "Actual generated-image display order in this chat",
+  "selectedOption": null,
+  "options": [
+    {
+      "displayedOption": 1,
+      "direction": "清爽探索台",
+      "file": "concepts/01-clear-discovery.png",
+      "source": "C:\\Users\\cheng\\.codex\\generated_images\\01a0f044-c58c-7a00-9da5-6ea8a778c306\\exec-0fcce09f-f3f2-4dc6-b437-5125380714d8.png",
+      "sha256": "213dc38aab0e000e97419c007d81eae9e342768b69c409dd25f7204e08d6fb02"
+    },
+    {
+      "displayedOption": 2,
+      "direction": "开放拼图桌",
+      "file": "concepts/02-open-shape-table.png",
+      "source": "C:\\Users\\cheng\\.codex\\generated_images\\01a0f044-c58c-7a00-9da5-6ea8a778c306\\exec-b4094fe7-c8f4-473f-bc8d-7aa5a522ebf0.png",
+      "sha256": "a25b5a404d1cc4980acde6fef72c00d8aa706ab1d0e2ecd3033e940096d2c8bf"
+    },
+    {
+      "displayedOption": 3,
+      "direction": "科学观测站",
+      "file": "concepts/03-observation-station.png",
+      "source": "C:\\Users\\cheng\\.codex\\generated_images\\01a0f044-c58c-7a00-9da5-6ea8a778c306\\exec-a4bcf60b-4cf8-4418-83ad-2ecc7d1d64b6.png",
+      "sha256": "6530937c2ae8587201572c089f35957c2f15de55914b9c6ffc68b3c6e185b76d"
+    }
+  ],
+  "visualCaveats": [
+    "Generated concepts communicate layout and style; original source geometry, formulas, parameter ranges and step states remain authoritative.",
+    "Option 1: playback thumb position must match the displayed progress value in implementation.",
+    "Option 3: shared triangle diagonal and dimension endpoints must be drawn from the original exact geometry.",
+    "Guide character must be kept small, around 48-64 CSS px in classroom views."
+  ],
+  "implementationReview": {
+    "model": "gpt-6-sol",
+    "reasoningEffort": "high",
+    "status": "not-started"
+  }
+}

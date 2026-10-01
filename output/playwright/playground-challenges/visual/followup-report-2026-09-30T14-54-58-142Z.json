@@ -1,0 +1,712 @@
+{
+  "suite": "图形会变魔术：标签重叠、边界顶点和可滚动挑战面板复查",
+  "startedAt": "2026-09-30T14:54:48.795Z",
+  "results": [
+    {
+      "id": "free-triangle-area-12-c-at-height-6-visible",
+      "passed": true,
+      "state": {
+        "point": [
+          1,
+          6
+        ],
+        "screen": [
+          352.41176470588243,
+          58.58823529411768
+        ],
+        "canvas": [
+          822,
+          498
+        ],
+        "area": 12
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-12-c-1-6-final.png"
+    },
+    {
+      "id": "free-triangle-area-3-c-at-height-1-5-visible",
+      "passed": true,
+      "state": {
+        "point": [
+          1,
+          1.5
+        ],
+        "screen": [
+          339.8571428571428,
+          284.57142857142856
+        ],
+        "canvas": [
+          822,
+          498
+        ],
+        "area": 3
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\triangle-area-3-c-1-1-5-final.png"
+    },
+    {
+      "id": "mirror-q6-triple-overlap-labels-separate-and-original-drags",
+      "passed": true,
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\mirror-q6-target-a-prime-overlap-final.png",
+      "state": {
+        "mode": "mirror",
+        "goal": 5,
+        "triangleMode": "free",
+        "value": 0,
+        "points": [
+          [
+            0.5,
+            3.5
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            -3,
+            4
+          ]
+        ],
+        "readings": {
+          "area": 4.75
+        },
+        "save": {
+          "schemaVersion": 1,
+          "completed": {
+            "triangle/4": 1790780091357,
+            "triangle/5": 1790780091789,
+            "mirror/5": 1790780092454
+          },
+          "checkpoint": {
+            "value": 0,
+            "points": [
+              [
+                0,
+                3
+              ],
+              [
+                -1,
+                1
+              ],
+              [
+                -3,
+                4
+              ]
+            ],
+            "triangleMode": "free",
+            "levelId": "mirror/5"
+          }
+        }
+      },
+      "labels": [
+        {
+          "text": "A",
+          "left": 365.796875,
+          "right": 376.328125,
+          "top": 426.203125,
+          "bottom": 448.59375,
+          "width": 10.53125,
+          "height": 22.390625
+        },
+        {
+          "text": "A′",
+          "left": 365.796875,
+          "right": 380.640625,
+          "top": 466.203125,
+          "bottom": 488.59375,
+          "width": 14.84375,
+          "height": 22.390625
+        },
+        {
+          "text": "★ 目标",
+          "left": 292.21875,
+          "right": 335.8125,
+          "top": 470.203125,
+          "bottom": 492.59375,
+          "width": 43.59375,
+          "height": 22.390625
+        }
+      ],
+      "movedA": [
+        0.5,
+        3.5
+      ]
+    },
+    {
+      "id": "scale-factor-1-labels-separate-and-original-drags",
+      "passed": true,
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\scale-area-factor-1-overlap-final.png",
+      "state": {
+        "mode": "scale",
+        "goal": 2,
+        "triangleMode": "free",
+        "value": 1,
+        "points": [
+          [
+            1.25,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "readings": {
+          "area": 1.75
+        },
+        "save": {
+          "schemaVersion": 1,
+          "completed": {
+            "triangle/4": 1790780091357,
+            "triangle/5": 1790780091789,
+            "mirror/5": 1790780092454,
+            "scale/2": 1790780093057
+          },
+          "checkpoint": {
+            "value": 1,
+            "points": [
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "triangleMode": "free",
+            "levelId": "scale/2"
+          }
+        }
+      },
+      "labels": [
+        {
+          "text": "A",
+          "left": 317.5625,
+          "right": 328.09375,
+          "top": 611.4375,
+          "bottom": 633.828125,
+          "width": 10.53125,
+          "height": 22.390625
+        },
+        {
+          "text": "B",
+          "left": 412.421875,
+          "right": 422,
+          "top": 611.4375,
+          "bottom": 633.828125,
+          "width": 9.578125,
+          "height": 22.390625
+        },
+        {
+          "text": "C",
+          "left": 317.5625,
+          "right": 327,
+          "top": 516.578125,
+          "bottom": 538.96875,
+          "width": 9.4375,
+          "height": 22.390625
+        },
+        {
+          "text": "A′",
+          "left": 317.5625,
+          "right": 332.40625,
+          "top": 651.4375,
+          "bottom": 673.828125,
+          "width": 14.84375,
+          "height": 22.390625
+        },
+        {
+          "text": "B′",
+          "left": 412.421875,
+          "right": 426.3125,
+          "top": 651.4375,
+          "bottom": 673.828125,
+          "width": 13.890625,
+          "height": 22.390625
+        },
+        {
+          "text": "C′",
+          "left": 317.5625,
+          "right": 331.3125,
+          "top": 556.578125,
+          "bottom": 578.96875,
+          "width": 13.75,
+          "height": 22.390625
+        }
+      ],
+      "movedA": [
+        1.25,
+        1
+      ]
+    },
+    {
+      "id": "rotate-360-labels-separate-and-original-drags",
+      "passed": true,
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\rotate-360-overlap-final.png",
+      "state": {
+        "mode": "rotate",
+        "goal": 3,
+        "triangleMode": "free",
+        "value": 360,
+        "points": [
+          [
+            1.25,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "readings": {
+          "area": 1.75
+        },
+        "save": {
+          "schemaVersion": 1,
+          "completed": {
+            "triangle/4": 1790780091357,
+            "triangle/5": 1790780091789,
+            "mirror/5": 1790780092454,
+            "scale/2": 1790780093057,
+            "rotate/3": 1790780093706
+          },
+          "checkpoint": {
+            "value": 360,
+            "points": [
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "triangleMode": "free",
+            "levelId": "rotate/3"
+          }
+        }
+      },
+      "labels": [
+        {
+          "text": "A",
+          "left": 497.796875,
+          "right": 508.328125,
+          "top": 431.203125,
+          "bottom": 453.59375,
+          "width": 10.53125,
+          "height": 22.390625
+        },
+        {
+          "text": "B",
+          "left": 597.390625,
+          "right": 606.96875,
+          "top": 431.203125,
+          "bottom": 453.59375,
+          "width": 9.578125,
+          "height": 22.390625
+        },
+        {
+          "text": "C",
+          "left": 497.796875,
+          "right": 507.234375,
+          "top": 331.609375,
+          "bottom": 354,
+          "width": 9.4375,
+          "height": 22.390625
+        },
+        {
+          "text": "A′",
+          "left": 497.796875,
+          "right": 512.640625,
+          "top": 471.203125,
+          "bottom": 493.59375,
+          "width": 14.84375,
+          "height": 22.390625
+        },
+        {
+          "text": "B′",
+          "left": 597.390625,
+          "right": 611.28125,
+          "top": 471.203125,
+          "bottom": 493.59375,
+          "width": 13.890625,
+          "height": 22.390625
+        },
+        {
+          "text": "C′",
+          "left": 497.796875,
+          "right": 511.546875,
+          "top": 371.609375,
+          "bottom": 394,
+          "width": 13.75,
+          "height": 22.390625
+        }
+      ],
+      "movedA": [
+        1.25,
+        1
+      ]
+    },
+    {
+      "id": "vectors-target-ring-and-endpoint-labels",
+      "passed": true,
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\vectors-target-endpoint-overlap-final.png",
+      "state": {
+        "mode": "vectors",
+        "goal": 0,
+        "triangleMode": "free",
+        "value": 1,
+        "points": [
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "readings": {
+          "sum": [
+            4,
+            3
+          ]
+        },
+        "save": {
+          "schemaVersion": 1,
+          "completed": {
+            "triangle/4": 1790780091357,
+            "triangle/5": 1790780091789,
+            "mirror/5": 1790780092454,
+            "rotate/3": 1790780093706,
+            "scale/2": 1790780093057,
+            "vectors/0": 1790780094722
+          },
+          "checkpoint": {
+            "value": 1,
+            "points": [
+              [
+                4,
+                0
+              ],
+              [
+                0,
+                3
+              ]
+            ],
+            "triangleMode": "free",
+            "levelId": "vectors/0"
+          }
+        }
+      }
+    },
+    {
+      "id": "linear-compressed-line-labels-direction-and-pointer-across-three-sizes",
+      "passed": true,
+      "states": [
+        {
+          "size": {
+            "width": 1200,
+            "height": 900
+          },
+          "labels": [
+            {
+              "text": "横向一步",
+              "left": 475.65625,
+              "right": 531.65625,
+              "top": 508.671875,
+              "bottom": 531.0625,
+              "width": 56,
+              "height": 22.390625
+            },
+            {
+              "text": "纵向一步",
+              "left": 531,
+              "right": 587,
+              "top": 548.671875,
+              "bottom": 571.0625,
+              "width": 56,
+              "height": 22.390625
+            }
+          ],
+          "visibleBoard": {
+            "scrollY": 0,
+            "rect": [
+              25,
+              256.015625,
+              847,
+              753.8125
+            ],
+            "viewport": [
+              1200,
+              900
+            ]
+          },
+          "pointerStart": [
+            1,
+            0
+          ],
+          "pointerDrag": {
+            "passed": true,
+            "error": null,
+            "actual": [
+              1,
+              0.25
+            ]
+          },
+          "afterPointer": [
+            1,
+            0.25
+          ],
+          "nudged": [
+            1,
+            0.5
+          ],
+          "dragAfterNudge": {
+            "passed": true,
+            "error": null,
+            "actual": [
+              1.25,
+              0.25
+            ]
+          },
+          "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\linear-degenerate-1200x900-final.png"
+        },
+        {
+          "size": {
+            "width": 1024,
+            "height": 768
+          },
+          "labels": [
+            {
+              "text": "横向一步",
+              "left": 398.609375,
+              "right": 454.609375,
+              "top": 432.640625,
+              "bottom": 455.03125,
+              "width": 56,
+              "height": 22.390625
+            },
+            {
+              "text": "纵向一步",
+              "left": 439.828125,
+              "right": 495.828125,
+              "top": 472.640625,
+              "bottom": 495.03125,
+              "width": 56,
+              "height": 22.390625
+            }
+          ],
+          "visibleBoard": {
+            "scrollY": 0,
+            "rect": [
+              25,
+              250.53125,
+              707,
+              621.8125
+            ],
+            "viewport": [
+              1024,
+              768
+            ]
+          },
+          "pointerStart": [
+            1,
+            0
+          ],
+          "pointerDrag": {
+            "passed": true,
+            "error": null,
+            "actual": [
+              1,
+              0.25
+            ]
+          },
+          "afterPointer": [
+            1,
+            0.25
+          ],
+          "nudged": [
+            1,
+            0.5
+          ],
+          "dragAfterNudge": {
+            "passed": true,
+            "error": null,
+            "actual": [
+              1.25,
+              0.25
+            ]
+          },
+          "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\linear-degenerate-1024x768-final.png"
+        },
+        {
+          "size": {
+            "width": 390,
+            "height": 844
+          },
+          "labels": [
+            {
+              "text": "横向一步",
+              "left": 225.875,
+              "right": 281.875,
+              "top": 501.09375,
+              "bottom": 523.484375,
+              "width": 56,
+              "height": 22.390625
+            },
+            {
+              "text": "纵向一步",
+              "left": 263.65625,
+              "right": 319.65625,
+              "top": 541.09375,
+              "bottom": 563.484375,
+              "width": 56,
+              "height": 22.390625
+            }
+          ],
+          "visibleBoard": {
+            "scrollY": 0,
+            "rect": [
+              13,
+              336.21875,
+              377,
+              676.21875
+            ],
+            "viewport": [
+              390,
+              844
+            ]
+          },
+          "pointerStart": [
+            1,
+            0
+          ],
+          "pointerDrag": {
+            "passed": true,
+            "error": null,
+            "actual": [
+              1,
+              0.25
+            ]
+          },
+          "afterPointer": [
+            1,
+            0.25
+          ],
+          "nudged": [
+            1,
+            0.5
+          ],
+          "dragAfterNudge": {
+            "passed": true,
+            "error": null,
+            "actual": [
+              1.25,
+              0.25
+            ]
+          },
+          "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\linear-degenerate-390x844-final.png"
+        }
+      ]
+    },
+    {
+      "id": "tablet-aside-scroll-reaches-actions-and-full-hint",
+      "passed": true,
+      "initialAside": {
+        "scrollHeight": 661,
+        "clientHeight": 519,
+        "scrollTop": 0,
+        "overflow": "auto",
+        "actions": [
+          739.859375,
+          787.859375
+        ],
+        "aside": [
+          207.53125,
+          726.8125
+        ]
+      },
+      "controlsVisible": {
+        "scrollTop": 142,
+        "actions": [
+          597.859375,
+          645.859375
+        ],
+        "aside": [
+          207.53125,
+          726.8125
+        ],
+        "visible": true
+      },
+      "feedbackVisible": {
+        "text": "横向一步现在是（1.5，0.5），目标是（2，0）；纵向一步现在是（0.5，1.5），目标是（0，1）。\n点击“拉伸”就能得到这组方向。可在画板下方选择要调整的箭头，用方向按钮微调。",
+        "scrollTop": 308,
+        "scrollHeight": 828,
+        "clientHeight": 519,
+        "rect": [
+          489.859375,
+          646.359375
+        ],
+        "aside": [
+          207.53125,
+          726.8125
+        ],
+        "visible": true
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\layout-1024x768-aside-scroll-final.png"
+    },
+    {
+      "id": "mobile-vector-no-horizontal-overflow",
+      "passed": true,
+      "layout": {
+        "width": 390,
+        "viewport": 390,
+        "board": {
+          "x": 13,
+          "y": 336.21875,
+          "width": 364,
+          "height": 340,
+          "top": 336.21875,
+          "right": 377,
+          "bottom": 676.21875,
+          "left": 13
+        },
+        "aside": {
+          "x": 12,
+          "y": 844.40625,
+          "width": 366,
+          "height": 450.5625,
+          "top": 844.40625,
+          "right": 378,
+          "bottom": 1294.96875,
+          "left": 12
+        }
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\playground-challenges\\visual\\layout-390x844-final.png"
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "使用真实 Chromium；视口模拟不等同于实体设备。"
+  ],
+  "passed": true,
+  "finishedAt": "2026-09-30T14:54:58.142Z",
+  "resultCount": 9
+}

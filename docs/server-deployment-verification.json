@@ -1,0 +1,117 @@
+{
+  "date": "2026-09-30",
+  "releaseId": "20260930T061500Z",
+  "sourceCommit": "a66c04e893592c49b7036738ef0297b5cdcf6b10",
+  "includesLocalChanges": true,
+  "urls": {
+    "meow": "https://124.70.198.189/",
+    "mathphysics": "https://124.70.198.189/mathphysics/"
+  },
+  "archiveSHA256": "96a9df8e0009f6e42fa23c6a2ad63ee95af8701f2005979145a9b1f450c27369",
+  "server": {
+    "root": "/srv/mathphysics",
+    "release": "/srv/mathphysics/releases/20260930T061500Z",
+    "backup": "/srv/mathphysics/backups/20260930T060000Z",
+    "verifiedFiles": 1463,
+    "serverRebuildMatchesLocal": true,
+    "testsPassed": 50,
+    "testsFailed": 0,
+    "httpEntryChecks": 61,
+    "compiledResourceHashesMatch": true,
+    "cacheRefreshReturns200": true,
+    "privatePathsHidden": true
+  },
+  "meow": {
+    "pid": 3158136,
+    "processAndStartTimeUnchanged": true,
+    "homepageUnchanged": true,
+    "systemdConfigUnchanged": true,
+    "databaseTablesUnchanged": 12,
+    "databaseBackupIntegrity": "ok",
+    "nginxChangeOnlyOneIncludeLine": true
+  },
+  "localTests": {
+    "passed": 49,
+    "failed": 0,
+    "skipped": 1,
+    "skipReason": "Linux-only interpreter fallback check"
+  },
+  "browser": {
+    "passed": true,
+    "url": "https://124.70.198.189/mathphysics/",
+    "recommendedEntries": 22,
+    "totalEntries": 57,
+    "activities": [
+      {
+        "id": "jsxgraph-playground",
+        "ready": true,
+        "src": "lessons/jsxgraph-playground/index.html"
+      },
+      {
+        "id": "tangram-flat",
+        "ready": true,
+        "src": "lessons/tangram-flat/index.html"
+      },
+      {
+        "id": "matter-slingshot",
+        "ready": true,
+        "src": "vendor/matter/demo/mathphysics.html?example=slingshot"
+      },
+      {
+        "id": "spaceflight",
+        "ready": true,
+        "src": "lessons/spaceflight/index.html"
+      },
+      {
+        "id": "geometry-proofs",
+        "ready": true,
+        "src": "lessons/geometric-proofs/index.html"
+      },
+      {
+        "id": "forces-and-motion-basics",
+        "ready": true,
+        "src": "src/phet/generated/forces-and-motion-basics.html?locale=zh_CN&webgl=false&allowLinks=false"
+      },
+      {
+        "id": "area-builder",
+        "ready": true,
+        "src": "src/phet/generated/area-builder.html?locale=zh_CN&webgl=false&allowLinks=false"
+      },
+      {
+        "id": "energy-skate-park-basics",
+        "ready": true,
+        "src": "src/phet/generated/energy-skate-park-basics.html?locale=zh_CN&webgl=false&allowLinks=false"
+      },
+      {
+        "id": "vector-addition",
+        "ready": true,
+        "src": "src/phet/generated/vector-addition.html?locale=zh_CN&webgl=false&allowLinks=false"
+      }
+    ],
+    "customSettingsPreserved": true,
+    "visitsPreserved": true,
+    "unrelatedStoragePreserved": true,
+    "mobileWidth": 390,
+    "errors": [],
+    "missing": []
+  },
+  "limitations": [
+    "Touch viewport emulation is not a physical iPad Safari test.",
+    "Pinned upstream PhET analytics requests to /cdn-cgi/rum return 405; classroom loading and interactions pass. No meow route was changed for analytics."
+  ],
+  "screenshots": [
+    "../output/playwright/mathphysics-live-home.png",
+    "../output/playwright/mathphysics-live-phet.png",
+    "../output/playwright/mathphysics-live-mobile.png"
+  ],
+  "cleanup": {
+    "temporaryArchivesRemoved": true,
+    "backupAndReleaseRetained": true,
+    "probePort8793Released": true,
+    "testBrowserClosed": true,
+    "finalPublicHTTPSStatus": {
+      "meow": 200,
+      "mathphysics": 200
+    }
+  }
+}

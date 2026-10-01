@@ -3,11 +3,14 @@ import {spawn} from 'node:child_process';
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {isReady} from '../src/readiness.js';
+import {displayActivities} from '../src/catalog.js';
+import {findPython} from '../scripts/python.mjs';
 const inventory=JSON.parse(await fs.readFile('config/inventory.json','utf8'));
 const local=JSON.parse(await fs.readFile('config/local-activities.json','utf8'));
 inventory.activities.push(...local.activities);
-const defaults=JSON.parse(await fs.readFile('config/defaults.json','utf8'));
-const server=spawn('python3',['scripts/serve.py','--port','8765'],{stdio:'ignore'});
+const presentation=JSON.parse(await fs.readFile('config/presentation.json','utf8'));
+const visibleActivities=displayActivities(inventory.activities,presentation);
+const server=spawn(findPython(),['scripts/serve.py','--port','8765'],{stdio:'ignore',windowsHide:true});
 const base='http://127.0.0.1:8765/';
 let browser;
 const report={suite:'Chromium offline network-blocked integration smoke',results:[],limitations:['Not an exhaustive pedagogical or every randomized problem test.','Touch emulation is not a physical iPad Safari test.','Original simulations keep their own navigation; host records visits, not completion.']};
@@ -31,22 +34,24 @@ try{
   await fs.mkdir('docs/screenshots',{recursive:true});
   let page=await context.newPage();const hostErrors=[];page.on('pageerror',e=>hostErrors.push(e.message));
   try{
-    await page.goto(base);await page.waitForSelector('[data-activity]');await page.locator('#only-open').uncheck();assert.equal(await page.locator('[data-activity]').count(),inventory.activities.length);
+    await page.goto(base);await page.waitForSelector('[data-activity]');assert.equal(await page.locator('[data-activity]').count(),visibleActivities.length);
+    assert.equal(await page.locator('#teacher-open, #teacher-dialog, #only-open, button.locked').count(),0);
     await page.screenshot({path:'docs/screenshots/home-desktop.png',fullPage:true});
     await page.screenshot({path:'docs/screenshots/home-overview.png'});
-    await page.locator('#teacher-open').click();await page.locator('#open-all').click();await page.locator('[data-close="teacher-dialog"]').click();await page.reload();await page.waitForSelector('[data-activity]');await page.locator('#only-open').uncheck();assert.equal(await page.locator('button.locked').count(),0);
+    await page.evaluate(()=>localStorage.setItem('mathphysics.state.v1',JSON.stringify({schemaVersion:1,openIds:[],visited:{spaceflight:123}})));await page.reload();await page.waitForSelector('[data-activity]');assert.equal(await page.locator('[data-activity]').count(),visibleActivities.length);
     await page.locator('[data-launch="area-builder"]').click();await page.waitForFunction(()=>document.getElementById('loading').hidden,null,{timeout:65000});
     await page.screenshot({path:'docs/screenshots/host-area-builder.png'});
     await page.locator('#player-back').click();assert.equal(await page.locator('iframe').count(),0);
-    await page.locator('#teacher-open').click();await page.locator('#restore-defaults').click();await page.locator('[data-close="teacher-dialog"]').click();assert.equal(await page.locator('button.locked').count(),inventory.activities.length-defaults.openIds.length);
-    assert.deepEqual(hostErrors,[]);record({id:'host-controls',passed:true,checks:['full catalog','open all persists','initial subset restored','PhET iframe ready','iframe removed on return']});
+    assert.equal(await page.locator('[data-activity]').count(),visibleActivities.length);assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('mathphysics.state.v1')).visited.spaceflight),123);
+    assert.deepEqual(hostErrors,[]);record({id:'host-controls',passed:true,checks:['full catalog','legacy closed settings do not restrict access','saved visits retained','PhET iframe ready','iframe removed on return']});
   }catch(e){await captureFailure(page,'host-controls',e,{errors:hostErrors});}
   await page.close();
   for(const a of inventory.activities){
     console.log('START',a.id);page=await context.newPage();const errors=[],missing=[];
     page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.url().startsWith(base)&&r.status()>=400)missing.push(r.url());});
     try{
-      await page.goto(base+a.entry,{waitUntil:'load',timeout:60000});
+      const entry=a.adapter==='phet'?a.entry.replace('vendor/phet/','src/phet/generated/'):a.entry;
+      await page.goto(base+entry,{waitUntil:'load',timeout:60000});
       await page.waitForFunction(isReady,a.adapter,{timeout:20000});
       await page.waitForTimeout(a.adapter==='matter'?900:1500);
       assert.deepEqual(missing,[],'Missing local runtime assets');assert.deepEqual(errors,[],'Uncaught page exceptions');
@@ -58,7 +63,7 @@ try{
   const touch=await browser.newContext({viewport:{width:1024,height:768},hasTouch:true,isMobile:true});
   await touch.route('**/*',route=>new URL(route.request().url()).origin===new URL(base).origin?route.continue():route.abort());page=await touch.newPage();
   try{
-    await page.goto(base);await page.waitForSelector('[data-activity]');await page.locator('#only-open').uncheck();await page.locator('[data-zone="geometry"]').first().tap();assert.ok(await page.locator('[data-activity="area-builder"]').isVisible());
+    await page.goto(base);await page.waitForSelector('[data-activity]');await page.locator('[data-zone="geometry"]').first().tap();assert.ok(await page.locator('[data-activity="area-builder"]').isVisible());
     await page.screenshot({path:'docs/screenshots/tablet.png',fullPage:true});record({id:'tablet-host-navigation',passed:true});
   }catch(e){await captureFailure(page,'tablet-host-navigation',e);}
   await touch.close();

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "cases": [
+    "Opening the helper does not clear any records",
+    "Click clears visits, all six activity saves and legacy answers while preserving unrelated data",
+    "Home has no explored badges, every module stays open and math resumes with zero completions",
+    "Mobile helper fits; empty records are handled without changing other projects",
+    "Failed deletion reports failure without claiming records were cleared"
+  ],
+  "errors": [],
+  "base": "http://127.0.0.1:61818/MathPhysics/"
+}

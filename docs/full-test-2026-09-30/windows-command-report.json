@@ -1,0 +1,21 @@
+{
+  "passed": false,
+  "npmStartExitCode": 9009,
+  "pythonLauncherPassed": true,
+  "affectedPackageScripts": [
+    "start",
+    "import",
+    "package",
+    "standalone:geometry",
+    "test:spaceflight",
+    "build:spaceflight",
+    "build:playground",
+    "test:classroom",
+    "test:classroom:inline"
+  ],
+  "nodeTestFilesAlsoUsingPython3": [
+    "tests/smoke.mjs",
+    "tests/geometry-browser.mjs"
+  ],
+  "resolutionForThisRun": "Temporary copies used the absolute Python interpreter path; original project files were not changed."
+}

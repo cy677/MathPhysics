@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中文题库工坊 · 科学小岛</title>
+<meta name="theme-color" content="#f5f3e9">
+<link rel="stylesheet" href="../../src/theme.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="mp-page mp-question-bank">
+<header class="top"><a class="brand" href="../../index.html#library" id="back" aria-label="返回科学小岛">◒ 科学小岛 <span>MathPhysics</span></a><div class="header-note">数学练习 <span>48种题型</span></div></header>
+<main>
+<section class="intro"><p class="eyebrow">想一想 · 算一算 · 试一试</p><h1>中文题库工坊</h1><p>选择想练习的知识点，生成属于你的练习。遇到困难时，可以一步一步看提示。</p></section>
+<div class="layout">
+<aside class="panel" aria-labelledby="settings-title">
+<h2 id="settings-title">01 选一组练习</h2>
+<form id="settings">
+<label>知识点<select id="topic"><option value="all">全部知识点</option></select></label>
+<label>题型<select id="template"><option value="all">混合题型</option></select></label>
+<label>难度<select id="difficulty"><option value="1">基础</option><option value="2">提高</option><option value="3">挑战</option></select></label>
+<label>题目数量<input id="count" type="number" min="1" max="500" step="1" value="20" required></label>
+<label>练习名称<input id="seed" type="text" maxlength="120" value="科学小岛" required aria-describedby="seed-help"></label>
+<p class="muted" id="seed-help">名称、题型、难度和数量相同，就能再次生成这组练习。</p>
+<button type="submit" class="primary">生成练习</button><button type="button" id="new-seed">换一组随机练习</button>
+</form>
+<p id="catalog-count" class="muted"></p>
+<details><summary>导出与恢复</summary><div class="tools">
+<button id="export-student">导出练习题</button><button id="export-teacher">导出题目、答案与解析</button><button id="export-recipe">保存练习设置</button>
+<label class="file-label">恢复练习设置<input type="file" id="import" accept=".json,application/json"></label>
+<button id="print">打印当前题目</button>
+</div><p class="muted">保存设置后，可以恢复同一组题目。生成或恢复练习会开始新一轮作答。</p></details>
+<details><summary>题型与来源说明</summary><p>本版参考 MathsMentales 的基础技能分类，以及 MathALÉA 的进阶主题组织。中文题干、提示、算法和判分均为独立实现，未导入两个项目的完整题库。</p><p><a href="../../docs/question-bank.md" target="_blank" rel="noopener">查看题型与来源</a></p></details>
+</aside>
+<section class="workspace" aria-label="练习题">
+<h2 class="workspace-title">02 想一想，试着回答</h2>
+<div id="status" role="status" aria-live="polite"></div>
+<div class="scorebar" id="score" aria-live="polite"></div>
+<p id="sheet-info" class="muted"></p>
+<div id="questions"></div>
+<noscript>此页面需要启用 JavaScript 才能生成题目。</noscript>
+</section>
+</div>
+</main>
+<script type="module" src="app.mjs"></script>
+<script src="../../src/theme.js"></script>
+</body></html>

@@ -1,0 +1,25 @@
+{
+  "preservedActivityCount": 53,
+  "preservedFileHashes": 1296,
+  "addedFileHashes": 6,
+  "registeredActivities": 72,
+  "visibleActivities": 23,
+  "phetSimulations": 10,
+  "phetScreens": 28,
+  "modelsCompared": 40,
+  "unitTests": {
+    "total": 197,
+    "passed": 196,
+    "failed": 0,
+    "platformSkipped": 1
+  },
+  "browserPassed": true,
+  "testPortReleased": true,
+  "artwork": {
+    "replacedSourceImagesIncludingMipmaps": 305,
+    "menuIllustrations": 15,
+    "imageGenerationAtlases": 2,
+    "menuBoundsPreserved": true,
+    "elementColorsMatchLiveModel": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "initial": {
+    "representations": [
+      "CIRCLE",
+      "HORIZONTAL_BAR",
+      "VERTICAL_BAR",
+      "BEAKER",
+      "CAKE",
+      "NUMBER_LINE"
+    ],
+    "representation": "CIRCLE",
+    "numerator": 0,
+    "denominator": 1
+  },
+  "half": {
+    "representation": "CAKE",
+    "numerator": 1,
+    "denominator": 2
+  },
+  "whole": {
+    "representation": "CAKE",
+    "numerator": 2,
+    "denominator": 2
+  },
+  "errors": []
+}

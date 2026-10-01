@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "file": "scripts\\build_geometry_standalone.py",
+      "passed": true
+    },
+    {
+      "file": "scripts\\build_phet_theme.py",
+      "passed": true
+    },
+    {
+      "file": "scripts\\build_playground_standalone.py",
+      "passed": true
+    },
+    {
+      "file": "scripts\\build_spaceflight_standalone.py",
+      "passed": true
+    },
+    {
+      "file": "scripts\\import_upstream.py",
+      "passed": true
+    },
+    {
+      "file": "scripts\\package.py",
+      "passed": true
+    },
+    {
+      "file": "scripts\\serve.py",
+      "passed": true
+    },
+    {
+      "file": "tests\\classroom-browser.py",
+      "passed": true
+    },
+    {
+      "file": "tests\\spaceflight-browser.py",
+      "passed": true
+    }
+  ]
+}

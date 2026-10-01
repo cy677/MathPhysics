@@ -1,3 +1,5 @@
+import {MATTER_MODULE_ID} from './matter-catalog.js';
+
 const playground = 'lessons/jsxgraph-playground/index.html';
 const playgroundEntries = new Set([
   playground,
@@ -6,7 +8,10 @@ const playgroundEntries = new Set([
 const lessonEntries = {
   proofs: 'lessons/geometric-proofs/index.html',
   spaceflight: 'lessons/spaceflight/index.html',
-  'tangram-flat': 'lessons/tangram-flat/index.html'
+  'tangram-flat': 'lessons/tangram-flat/index.html',
+  'primary-math': 'lessons/primary-math/index.html',
+  'question-bank': 'lessons/question-bank/index.html',
+  'matter-library': 'src/adapters/matter.html'
 };
 
 // Permit only the existing local lessons and the six canonical experiment URLs.
@@ -20,4 +25,22 @@ export function isLocalActivityEntry(activity, baseURL) {
   return entry.startsWith('vendor/') ||
     (adapter === 'jsxgraph' && playgroundEntries.has(entry)) ||
     (Object.hasOwn(lessonEntries, adapter) && entry === lessonEntries[adapter]);
+}
+
+export function displayActivities(activities, presentation) {
+  const groupedMatter = activities.some(activity => activity.id === MATTER_MODULE_ID);
+  const matterSearch = activities.filter(activity => activity.adapter === 'matter')
+    .flatMap(activity => [activity.title, activity.id, presentation.activities[activity.id]?.title || '']);
+  const order = new Map(presentation.order.map((id, index) => [id, index]));
+  return activities.filter(activity => presentation.activities[activity.id]?.hidden !== true &&
+    !(groupedMatter && activity.adapter === 'matter')).map(activity => {
+    const display = presentation.activities[activity.id] || {};
+    return {
+      ...activity,
+      title: typeof display.title === 'string' ? display.title : activity.title,
+      description: typeof display.description === 'string' ? display.description : activity.description,
+      playHint: typeof display.playHint === 'string' ? display.playHint : activity.playHint,
+      content: activity.id === MATTER_MODULE_ID ? [...activity.content, ...matterSearch] : activity.content
+    };
+  }).sort((a, b) => (order.get(a.id) ?? 1000) - (order.get(b.id) ?? 1000));
 }

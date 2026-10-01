@@ -1,0 +1,2771 @@
+{
+  "suite": "63-entry browser sweep, PhET screens, Matter canvas and Tangram adapter",
+  "prefix": "/MathPhysics/",
+  "screenshots": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\entry-sweep-2026-09-30T11-44-09.189Z",
+  "expectedEntries": 63,
+  "entries": [
+    {
+      "id": "area-builder",
+      "adapter": "phet",
+      "entry": "src/phet/generated/area-builder.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/phet/generated/area-builder.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "ready": true,
+      "title": "‪‪区域建造者‬ 1.1.38‬",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/phet/generated/area-builder.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "bodyClass": "",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(0, 0, 0)",
+      "font": "\"Times New Roman\"",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 3,
+      "phet": {
+        "screens": 2,
+        "constructed": 2,
+        "selected": null
+      },
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "forces-and-motion-basics",
+      "adapter": "phet",
+      "entry": "src/phet/generated/forces-and-motion-basics.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/phet/generated/forces-and-motion-basics.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "ready": true,
+      "title": "‪力和运动：基础‬",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/phet/generated/forces-and-motion-basics.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "bodyClass": "",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(0, 0, 0)",
+      "font": "\"Times New Roman\"",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 4,
+      "phet": {
+        "screens": 4,
+        "constructed": 4,
+        "selected": "‪Home‬"
+      },
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "energy-skate-park-basics",
+      "adapter": "phet",
+      "entry": "src/phet/generated/energy-skate-park-basics.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/phet/generated/energy-skate-park-basics.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "ready": true,
+      "title": "‪能量滑板竞技场: 基础‬",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/phet/generated/energy-skate-park-basics.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "bodyClass": "",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(0, 0, 0)",
+      "font": "\"Times New Roman\"",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 4,
+      "phet": {
+        "screens": 3,
+        "constructed": 3,
+        "selected": "‪Home‬"
+      },
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "vector-addition",
+      "adapter": "phet",
+      "entry": "src/phet/generated/vector-addition.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/phet/generated/vector-addition.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "ready": true,
+      "title": "‪向量相加‬",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/phet/generated/vector-addition.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "bodyClass": "",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(0, 0, 0)",
+      "font": "\"Times New Roman\"",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 4,
+      "phet": {
+        "screens": 4,
+        "constructed": 4,
+        "selected": "‪Home‬"
+      },
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "tangram",
+      "adapter": "tangram",
+      "entry": "src/adapters/tangram.html",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/tangram.html",
+      "ready": true,
+      "title": "立体七巧板 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/tangram.html",
+      "bodyClass": "mp-page mp-tangram",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 1440,
+          "height": 733,
+          "clientWidth": 1440,
+          "clientHeight": 733
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": null,
+      "tangramCanvas": {
+        "width": 1440,
+        "height": 733
+      },
+      "errors": [],
+      "missing": [],
+      "responsive": [
+        {
+          "name": "tablet",
+          "width": 1024,
+          "documentWidth": 1024,
+          "canvas": [
+            {
+              "width": 1024,
+              "height": 601,
+              "clientWidth": 1024,
+              "clientHeight": 601
+            }
+          ],
+          "tangramCanvas": {
+            "width": 1024,
+            "height": 601
+          }
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "canvas": [
+            {
+              "width": 390,
+              "height": 683,
+              "clientWidth": 390,
+              "clientHeight": 683
+            }
+          ],
+          "tangramCanvas": {
+            "width": 390,
+            "height": 683
+          }
+        }
+      ],
+      "snapshotQueryAccepted": true
+    },
+    {
+      "id": "matter-airFriction",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=airFriction",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=airFriction",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=airFriction",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 7,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-avalanche",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=avalanche",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=avalanche",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=avalanche",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 103,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-ballPool",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=ballPool",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=ballPool",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=ballPool",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 84,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-bridge",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=bridge",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=bridge",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=bridge",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 35,
+        "constraints": 17,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": [],
+      "responsive": [
+        {
+          "name": "tablet",
+          "width": 1024,
+          "documentWidth": 1024,
+          "canvas": [
+            {
+              "width": 800,
+              "height": 600,
+              "clientWidth": 826,
+              "clientHeight": 619
+            }
+          ],
+          "tangramCanvas": null
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "canvas": [
+            {
+              "width": 800,
+              "height": 600,
+              "clientWidth": 372,
+              "clientHeight": 278
+            }
+          ],
+          "tangramCanvas": null
+        }
+      ],
+      "drag": {
+        "before": {
+          "id": 2,
+          "x": 168.14351809907075,
+          "y": 307.08898134206754,
+          "px": 86.60709471131558,
+          "py": 443.37069129296486,
+          "worldPerCss": 2.1390374331550803,
+          "cssWidth": 374
+        },
+        "after": {
+          "x": 168.30514493226428,
+          "y": 307.2958206269752
+        },
+        "delta": 0.16162683319353732,
+        "expected": 51.33689839572193
+      }
+    },
+    {
+      "id": "matter-car",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=car",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=car",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=car",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 13,
+        "constraints": 5,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-catapult",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=catapult",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=catapult",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=catapult",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 11,
+        "constraints": 2,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-chains",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=chains",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=chains",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=chains",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 32,
+        "constraints": 32,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-circleStack",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=circleStack",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=circleStack",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=circleStack",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 104,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-cloth",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=cloth",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=cloth",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=cloth",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 243,
+        "constraints": 449,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=collisionFiltering",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=collisionFiltering",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=collisionFiltering",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 49,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-compositeManipulation",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=compositeManipulation",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=compositeManipulation",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=compositeManipulation",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 20,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-compound",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=compound",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=compound",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=compound",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 3,
+        "constraints": 2,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-compoundStack",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=compoundStack",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=compoundStack",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=compoundStack",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 76,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-concave",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=concave",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=concave",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=concave",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 28,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-constraints",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=constraints",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=constraints",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=constraints",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 17,
+        "constraints": 9,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-doublePendulum",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=doublePendulum",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=doublePendulum",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=doublePendulum",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 2,
+        "constraints": 3,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-events",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=events",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=events",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=events",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 40,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-friction",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=friction",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=friction",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=friction",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 10,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-gravity",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=gravity",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=gravity",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=gravity",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 59,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-gyro",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=gyro",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=gyro",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=gyro",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 54,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-manipulation",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=manipulation",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=manipulation",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=manipulation",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 12,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-mixed",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=mixed",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=mixed",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=mixed",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 54,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-newtonsCradle",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=newtonsCradle",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=newtonsCradle",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=newtonsCradle",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 12,
+        "constraints": 13,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-ragdoll",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=ragdoll",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=ragdoll",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=ragdoll",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 69,
+        "constraints": 11,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-pyramid",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=pyramid",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=pyramid",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=pyramid",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 68,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-raycasting",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=raycasting",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=raycasting",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=raycasting",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 53,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-restitution",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=restitution",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=restitution",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=restitution",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 9,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-rounded",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=rounded",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=rounded",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=rounded",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 12,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-remove",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=remove",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=remove",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=remove",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 54,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-renderResize",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=renderResize",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=renderResize",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=renderResize",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 2880,
+          "height": 1800,
+          "clientWidth": 1203,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 54,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-sensors",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=sensors",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=sensors",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=sensors",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 3,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-sleeping",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=sleeping",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=sleeping",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=sleeping",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 40,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-slingshot",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=slingshot",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=slingshot",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=slingshot",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 37,
+        "constraints": 2,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": [],
+      "responsive": [
+        {
+          "name": "tablet",
+          "width": 1024,
+          "documentWidth": 1024,
+          "canvas": [
+            {
+              "width": 800,
+              "height": 600,
+              "clientWidth": 826,
+              "clientHeight": 619
+            }
+          ],
+          "tangramCanvas": null
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "canvas": [
+            {
+              "width": 800,
+              "height": 600,
+              "clientWidth": 372,
+              "clientHeight": 278
+            }
+          ],
+          "tangramCanvas": null
+        }
+      ]
+    },
+    {
+      "id": "matter-softBody",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=softBody",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=softBody",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=softBody",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 69,
+        "constraints": 180,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-sprites",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=sprites",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=sprites",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=sprites",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 44,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-stack",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=stack",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=stack",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=stack",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 54,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-staticFriction",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=staticFriction",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=staticFriction",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=staticFriction",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 11,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-stats",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=stats",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=stats",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=stats",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 121,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-stress",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=stress",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=stress",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=stress",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 274,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-stress2",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=stress2",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=stress2",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=stress2",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 454,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-stress3",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=stress3",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=stress3",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=stress3",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 688,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-stress4",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=stress4",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=stress4",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=stress4",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 1291,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-substep",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=substep",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=substep",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=substep",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 1600,
+          "height": 1200,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 6,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-svg",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=svg",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=svg",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=svg",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 9,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-terrain",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=terrain",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=terrain",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=terrain",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 163,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-timescale",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=timescale",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=timescale",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=timescale",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 73,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-views",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=views",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=views",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=views",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 44,
+        "constraints": 1,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "matter-wreckingBall",
+      "adapter": "matter",
+      "entry": "src/adapters/matter.html?example=wreckingBall",
+      "target": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=wreckingBall",
+      "ready": true,
+      "title": "物理游乐场 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/src/adapters/matter.html?example=wreckingBall",
+      "bodyClass": "mp-page mp-matter",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 800,
+          "height": 600,
+          "clientWidth": 1002,
+          "clientHeight": 751
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": {
+        "bodies": 55,
+        "constraints": 2,
+        "background": "#fffef9"
+      },
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "geometry-proofs",
+      "adapter": "proofs",
+      "entry": "lessons/geometric-proofs/index.html",
+      "target": "http://127.0.0.1:58413/MathPhysics/lessons/geometric-proofs/index.html",
+      "ready": true,
+      "title": "长方形与正方形：数方格 · 看见公式",
+      "url": "http://127.0.0.1:58413/MathPhysics/lessons/geometric-proofs/index.html",
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 1,
+      "phet": null,
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": [],
+      "responsive": [
+        {
+          "name": "tablet",
+          "width": 1024,
+          "documentWidth": 1024,
+          "canvas": [],
+          "tangramCanvas": null
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "canvas": [],
+          "tangramCanvas": null
+        }
+      ]
+    },
+    {
+      "id": "spaceflight",
+      "adapter": "spaceflight",
+      "entry": "lessons/spaceflight/index.html",
+      "target": "http://127.0.0.1:58413/MathPhysics/lessons/spaceflight/index.html",
+      "ready": true,
+      "title": "从地球出发 · 太空任务互动课堂",
+      "url": "http://127.0.0.1:58413/MathPhysics/lessons/spaceflight/index.html#mission=us-crew&tab=journey&step=prepare",
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [
+        {
+          "width": 1040,
+          "height": 610,
+          "clientWidth": 865,
+          "clientHeight": 507
+        }
+      ],
+      "svgCount": 0,
+      "phet": null,
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": [],
+      "responsive": [
+        {
+          "name": "tablet",
+          "width": 1024,
+          "documentWidth": 1024,
+          "canvas": [
+            {
+              "width": 1040,
+              "height": 610,
+              "clientWidth": 795,
+              "clientHeight": 466
+            }
+          ],
+          "tangramCanvas": null
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "canvas": [
+            {
+              "width": 1040,
+              "height": 610,
+              "clientWidth": 362,
+              "clientHeight": 212
+            }
+          ],
+          "tangramCanvas": null
+        }
+      ]
+    },
+    {
+      "id": "jsxgraph-playground",
+      "adapter": "jsxgraph",
+      "entry": "lessons/jsxgraph-playground/index.html",
+      "target": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html",
+      "ready": true,
+      "title": "三角形的秘密 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html",
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 7,
+      "phet": null,
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": [],
+      "responsive": [
+        {
+          "name": "tablet",
+          "width": 1024,
+          "documentWidth": 1024,
+          "canvas": [],
+          "tangramCanvas": null
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "canvas": [],
+          "tangramCanvas": null
+        }
+      ]
+    },
+    {
+      "id": "tangram-flat",
+      "adapter": "tangram-flat",
+      "entry": "lessons/tangram-flat/index.html",
+      "target": "http://127.0.0.1:58413/MathPhysics/lessons/tangram-flat/index.html",
+      "ready": true,
+      "title": "七巧板拼图 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/lessons/tangram-flat/index.html",
+      "bodyClass": "mp-page mp-tangram-flat",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 1,
+      "phet": null,
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": [],
+      "responsive": [
+        {
+          "name": "tablet",
+          "width": 1024,
+          "documentWidth": 1024,
+          "canvas": [],
+          "tangramCanvas": null
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "canvas": [],
+          "tangramCanvas": null
+        }
+      ]
+    },
+    {
+      "id": "jsx-triangle",
+      "adapter": "jsxgraph",
+      "entry": "lessons/jsxgraph-playground/index.html?mode=triangle",
+      "target": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html?mode=triangle",
+      "ready": true,
+      "title": "三角形的秘密 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html?mode=triangle",
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 7,
+      "phet": null,
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "jsx-mirror",
+      "adapter": "jsxgraph",
+      "entry": "lessons/jsxgraph-playground/index.html?mode=mirror",
+      "target": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html?mode=mirror",
+      "ready": true,
+      "title": "镜子里的图形 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html?mode=mirror",
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 7,
+      "phet": null,
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "jsx-rotation",
+      "adapter": "jsxgraph",
+      "entry": "lessons/jsxgraph-playground/index.html?mode=rotate",
+      "target": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html?mode=rotate",
+      "ready": true,
+      "title": "转动的三角形 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html?mode=rotate",
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 7,
+      "phet": null,
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "jsx-scale",
+      "adapter": "jsxgraph",
+      "entry": "lessons/jsxgraph-playground/index.html?mode=scale",
+      "target": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html?mode=scale",
+      "ready": true,
+      "title": "图形放大镜 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html?mode=scale",
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 7,
+      "phet": null,
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "jsx-vectors",
+      "adapter": "jsxgraph",
+      "entry": "lessons/jsxgraph-playground/index.html?mode=vectors",
+      "target": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html?mode=vectors",
+      "ready": true,
+      "title": "箭头接力 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html?mode=vectors",
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 7,
+      "phet": null,
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    },
+    {
+      "id": "jsx-linear",
+      "adapter": "jsxgraph",
+      "entry": "lessons/jsxgraph-playground/index.html?mode=linear",
+      "target": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html?mode=linear",
+      "ready": true,
+      "title": "网格变形机 · 科学小岛",
+      "url": "http://127.0.0.1:58413/MathPhysics/lessons/jsxgraph-playground/index.html?mode=linear",
+      "bodyClass": "mp-page",
+      "background": "rgb(245, 243, 233)",
+      "color": "rgb(38, 61, 51)",
+      "font": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "viewportWidth": 1440,
+      "documentWidth": 1440,
+      "canvas": [],
+      "svgCount": 7,
+      "phet": null,
+      "matter": null,
+      "tangramCanvas": null,
+      "errors": [],
+      "missing": []
+    }
+  ],
+  "phetScreens": [
+    {
+      "id": "forces-and-motion-basics",
+      "index": 1,
+      "name": "‪拔河比赛‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 5,
+      "canvas": []
+    },
+    {
+      "id": "forces-and-motion-basics",
+      "index": 2,
+      "name": "‪运动‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 6,
+      "canvas": []
+    },
+    {
+      "id": "forces-and-motion-basics",
+      "index": 3,
+      "name": "‪摩擦力‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 6,
+      "canvas": []
+    },
+    {
+      "id": "forces-and-motion-basics",
+      "index": 4,
+      "name": "‪加速度‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 6,
+      "canvas": []
+    },
+    {
+      "id": "energy-skate-park-basics",
+      "index": 1,
+      "name": "‪入门‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 4,
+      "canvas": []
+    },
+    {
+      "id": "energy-skate-park-basics",
+      "index": 2,
+      "name": "‪摩擦力‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 4,
+      "canvas": []
+    },
+    {
+      "id": "energy-skate-park-basics",
+      "index": 3,
+      "name": "‪跟踪运动场‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 4,
+      "canvas": []
+    },
+    {
+      "id": "area-builder",
+      "index": 1,
+      "name": "‪探索‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 3,
+      "canvas": []
+    },
+    {
+      "id": "area-builder",
+      "index": 2,
+      "name": "‪游戏‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 3,
+      "canvas": []
+    },
+    {
+      "id": "vector-addition",
+      "index": 1,
+      "name": "‪一维向量‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 4,
+      "canvas": []
+    },
+    {
+      "id": "vector-addition",
+      "index": 2,
+      "name": "‪二维向量‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 4,
+      "canvas": []
+    },
+    {
+      "id": "vector-addition",
+      "index": 3,
+      "name": "‪实验‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 4,
+      "canvas": []
+    },
+    {
+      "id": "vector-addition",
+      "index": 4,
+      "name": "‪等式‬",
+      "width": 1440,
+      "viewport": 1440,
+      "svgCount": 4,
+      "canvas": []
+    }
+  ],
+  "interactions": [
+    {
+      "id": "forces-and-motion-basics",
+      "passed": true,
+      "screens": 4,
+      "checks": [
+        "every screen model and view constructed",
+        "each screen selected in live simulation",
+        "desktop/tablet/mobile viewport"
+      ]
+    },
+    {
+      "id": "energy-skate-park-basics",
+      "passed": true,
+      "screens": 3,
+      "checks": [
+        "every screen model and view constructed",
+        "each screen selected in live simulation",
+        "desktop/tablet/mobile viewport"
+      ]
+    },
+    {
+      "id": "area-builder",
+      "passed": true,
+      "screens": 2,
+      "checks": [
+        "every screen model and view constructed",
+        "each screen selected in live simulation",
+        "desktop/tablet/mobile viewport"
+      ]
+    },
+    {
+      "id": "vector-addition",
+      "passed": true,
+      "screens": 4,
+      "checks": [
+        "every screen model and view constructed",
+        "each screen selected in live simulation",
+        "desktop/tablet/mobile viewport"
+      ]
+    }
+  ],
+  "limitations": [
+    "Chromium viewport and touch emulation; no physical iPad/iPhone Safari check.",
+    "PhET screen switching is driven through the simulation public screen property after real browser initialization."
+  ],
+  "passed": false,
+  "failures": [
+    {
+      "label": "Matter mobile canvas drag maps CSS pixels to simulation coordinates",
+      "detail": "[object Object]"
+    },
+    {
+      "label": "Host iframe adapter routes",
+      "detail": "TypeError: Invalid URL\n    at new URL (node:internal/url:819:25)\n    at file:///C:/Users/cheng/Desktop/MathPhysics/tests/style-unification-entries.mjs:204:60"
+    }
+  ],
+  "summary": {
+    "launched": 63,
+    "entryFailures": [],
+    "matterEntries": 48,
+    "phetScreens": 13,
+    "failures": 2
+  }
+}

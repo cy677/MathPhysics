@@ -1,0 +1,33 @@
+[
+  {
+    "viewport": {
+      "name": "desktop",
+      "width": 1280,
+      "height": 800
+    },
+    "clicked": {
+      "home": false,
+      "index": 1
+    },
+    "nav": {
+      "home": false,
+      "index": 2
+    }
+  },
+  {
+    "viewport": {
+      "name": "tablet",
+      "width": 1024,
+      "height": 768
+    },
+    "screen": "game via sim selection property"
+  },
+  {
+    "viewport": {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    },
+    "screen": "game via sim selection property"
+  }
+]

@@ -32,11 +32,11 @@ jobs:
         with:
           python-version: '3.12'
       - name: Import complete pinned upstream content
-        run: python scripts/import_upstream.py
+        run: npm run import
       - name: Check inventory and local links
         run: node --test tests/catalog.test.mjs
       - name: Prepare full snapshot for reproducible diagnostics
-        run: python scripts/package.py
+        run: npm run package
       - uses: actions/upload-artifact@v4
         with:
           name: MathPhysics-unverified-snapshot
@@ -62,7 +62,7 @@ jobs:
             git push origin HEAD:main
           fi
       - name: Build verified offline distribution
-        run: python scripts/package.py
+        run: npm run package
       - uses: actions/upload-artifact@v4
         if: always()
         with:

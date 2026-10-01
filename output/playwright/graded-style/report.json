@@ -1,0 +1,198 @@
+{
+  "suite": "Graded experiments: interaction, responsive layout, host and offline delivery",
+  "results": [
+    {
+      "id": "http-triangle-interaction",
+      "passed": true
+    },
+    {
+      "id": "http-mirror-interaction",
+      "passed": true
+    },
+    {
+      "id": "http-rotate-interaction",
+      "passed": true
+    },
+    {
+      "id": "http-scale-interaction",
+      "passed": true
+    },
+    {
+      "id": "http-vectors-interaction",
+      "passed": true
+    },
+    {
+      "id": "http-linear-interaction",
+      "passed": true
+    },
+    {
+      "id": "http-equal-height-and-resize",
+      "passed": true
+    },
+    {
+      "id": "http-keyboard-tabs",
+      "passed": true
+    },
+    {
+      "id": "http-triangle-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "http-mirror-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "http-rotate-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "http-scale-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "http-vectors-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "http-linear-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "http-all-challenges-save-and-resume",
+      "passed": true
+    },
+    {
+      "id": "http-equal-height-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "http-largest-triangle-point-remains-visible",
+      "passed": true
+    },
+    {
+      "id": "http-degenerate-scale-recovery",
+      "passed": true
+    },
+    {
+      "id": "http-overlapping-shapes-labels-and-drag",
+      "passed": true
+    },
+    {
+      "id": "file-triangle-interaction",
+      "passed": true
+    },
+    {
+      "id": "file-mirror-interaction",
+      "passed": true
+    },
+    {
+      "id": "file-rotate-interaction",
+      "passed": true
+    },
+    {
+      "id": "file-scale-interaction",
+      "passed": true
+    },
+    {
+      "id": "file-vectors-interaction",
+      "passed": true
+    },
+    {
+      "id": "file-linear-interaction",
+      "passed": true
+    },
+    {
+      "id": "file-equal-height-and-resize",
+      "passed": true
+    },
+    {
+      "id": "file-keyboard-tabs",
+      "passed": true
+    },
+    {
+      "id": "file-triangle-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "file-mirror-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "file-rotate-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "file-scale-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "file-vectors-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "file-linear-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "file-all-challenges-save-and-resume",
+      "passed": true
+    },
+    {
+      "id": "file-equal-height-all-six-challenges-and-hints",
+      "passed": true,
+      "challenges": 6
+    },
+    {
+      "id": "file-largest-triangle-point-remains-visible",
+      "passed": true
+    },
+    {
+      "id": "file-degenerate-scale-recovery",
+      "passed": true
+    },
+    {
+      "id": "file-overlapping-shapes-labels-and-drag",
+      "passed": true
+    },
+    {
+      "id": "viewport-1200",
+      "passed": true,
+      "modes": 6
+    },
+    {
+      "id": "viewport-1024",
+      "passed": true,
+      "modes": 6
+    },
+    {
+      "id": "viewport-390",
+      "passed": true,
+      "modes": 6
+    },
+    {
+      "id": "host-cards-grades-selection-deep-link-and-return",
+      "passed": true
+    },
+    {
+      "id": "touch-direction-control",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Chromium viewport and touch emulation; not physical iPad Safari."
+  ],
+  "passed": true
+}

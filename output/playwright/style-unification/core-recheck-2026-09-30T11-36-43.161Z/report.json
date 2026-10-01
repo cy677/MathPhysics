@@ -1,0 +1,5347 @@
+{
+  "suite": "Style unification core page recheck",
+  "prefix": "/MathPhysics/",
+  "screenshots": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z",
+  "pages": [
+    {
+      "title": "科学小岛 · MathPhysics",
+      "bodyClass": "mp-page",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "body": 1440
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "开始探索\n↗",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 51,
+          "width": 154,
+          "aria": null
+        }
+      ],
+      "activeTabs": [],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "△",
+          "color": "rgb(239, 198, 107)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 4.63,
+          "height": 44,
+          "width": 44,
+          "aria": null
+        }
+      ],
+      "svgLabels": [],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "老师 / 家长",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 10.5,
+          "height": 44,
+          "width": 103,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "来源与授权",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 10.5,
+          "height": 44,
+          "width": 103,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "01 / 几何工坊\n△ ◇ ○\n把想象，拼成形状\n\n拼图、面积、周长与空间\n\n前往几何工坊 ↗",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 236,
+          "width": 389,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "02 / 动力车间\n● ↗ ▰\n动手，让世界动起来\n\n推拉、摩擦、碰撞与能量\n\n前往动力车间 ↗",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(242, 232, 213)",
+          "effectiveBackground": "rgb(242, 232, 213)",
+          "contrast": 9.61,
+          "height": 236,
+          "width": 389,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "03 / 箭头港口\n↗ ＋ →\n找到方向，也找到规律\n\n方向、向量与分量的初步认识\n\n前往箭头港口 ↗",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(226, 234, 237)",
+          "effectiveBackground": "rgb(226, 234, 237)",
+          "contrast": 9.58,
+          "height": 236,
+          "width": 389,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "退出预览",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 0,
+          "width": 0,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "全部",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.51,
+          "height": 44,
+          "width": 52,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "几何工坊",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 76,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "动力车间",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 76,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "箭头港口",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 76,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "全年级",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.51,
+          "height": 44,
+          "width": 59,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "一年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 59,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "二年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 59,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "三年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 59,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "四年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 59,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "五年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 59,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "六年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 59,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "进入探索 ↗",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 80,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "进入探索 ↗",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 80,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "进入探索 ↗",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 80,
+          "aria": null
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": null,
+      "ready": false,
+      "id": "home",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "name": "desktop"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\home-desktop.png",
+      "errors": []
+    },
+    {
+      "title": "科学小岛 · MathPhysics",
+      "bodyClass": "mp-page",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 1024,
+        "document": 1024,
+        "body": 1024
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "开始探索\n↗",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 51,
+          "width": 154,
+          "aria": null
+        }
+      ],
+      "activeTabs": [],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "△",
+          "color": "rgb(239, 198, 107)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 4.63,
+          "height": 44,
+          "width": 44,
+          "aria": null
+        }
+      ],
+      "svgLabels": [],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "老师 / 家长",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 10.5,
+          "height": 44,
+          "width": 103,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "来源与授权",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 10.5,
+          "height": 44,
+          "width": 103,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "01 / 几何工坊\n△ ◇ ○\n把想象，拼成形状\n\n拼图、面积、周长与空间\n\n前往几何工坊 ↗",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 236,
+          "width": 297,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "02 / 动力车间\n● ↗ ▰\n动手，让世界动起来\n\n推拉、摩擦、碰撞与能量\n\n前往动力车间 ↗",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(242, 232, 213)",
+          "effectiveBackground": "rgb(242, 232, 213)",
+          "contrast": 9.61,
+          "height": 236,
+          "width": 297,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "03 / 箭头港口\n↗ ＋ →\n找到方向，也找到规律\n\n方向、向量与分量的初步认识\n\n前往箭头港口 ↗",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(226, 234, 237)",
+          "effectiveBackground": "rgb(226, 234, 237)",
+          "contrast": 9.58,
+          "height": 236,
+          "width": 297,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "退出预览",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 0,
+          "width": 0,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "全部",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.51,
+          "height": 44,
+          "width": 52,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "几何工坊",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 76,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "动力车间",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 76,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "箭头港口",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 76,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "全年级",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.51,
+          "height": 44,
+          "width": 59,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "一年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 59,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "二年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 59,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "三年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 59,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "四年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 59,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "五年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 59,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "六年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 59,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "进入探索 ↗",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 80,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "进入探索 ↗",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 80,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "进入探索 ↗",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 80,
+          "aria": null
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": null,
+      "ready": false,
+      "id": "home",
+      "viewport": {
+        "width": 1024,
+        "height": 768,
+        "name": "tablet"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\home-tablet.png",
+      "errors": []
+    },
+    {
+      "title": "科学小岛 · MathPhysics",
+      "bodyClass": "mp-page",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "开始探索\n↗",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 51,
+          "width": 154,
+          "aria": null
+        }
+      ],
+      "activeTabs": [],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "△",
+          "color": "rgb(239, 198, 107)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 4.63,
+          "height": 36,
+          "width": 36,
+          "aria": null
+        }
+      ],
+      "svgLabels": [],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "老师 / 家长",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 10.5,
+          "height": 44,
+          "width": 78,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "来源与授权",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 10.5,
+          "height": 44,
+          "width": 78,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "01 / 几何工坊\n△ ◇ ○\n把想象，拼成形状\n\n拼图、面积、周长与空间\n\n前往几何工坊 ↗",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 145,
+          "width": 350,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "02 / 动力车间\n● ↗ ▰\n动手，让世界动起来\n\n推拉、摩擦、碰撞与能量\n\n前往动力车间 ↗",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(242, 232, 213)",
+          "effectiveBackground": "rgb(242, 232, 213)",
+          "contrast": 9.61,
+          "height": 145,
+          "width": 350,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "03 / 箭头港口\n↗ ＋ →\n找到方向，也找到规律\n\n方向、向量与分量的初步认识\n\n前往箭头港口 ↗",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(226, 234, 237)",
+          "effectiveBackground": "rgb(226, 234, 237)",
+          "contrast": 9.58,
+          "height": 145,
+          "width": 350,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "退出预览",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 0,
+          "width": 0,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "全部",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.51,
+          "height": 44,
+          "width": 44,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "几何工坊",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 68,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "动力车间",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 68,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "箭头港口",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 68,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "全年级",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.51,
+          "height": 44,
+          "width": 54,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "一年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 54,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "二年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 54,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "三年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 54,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "四年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 54,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "五年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 54,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "六年级",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 44,
+          "width": 54,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "进入探索 ↗",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 80,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "进入探索 ↗",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 80,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "进入探索 ↗",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 80,
+          "aria": null
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": null,
+      "ready": false,
+      "id": "home",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "name": "mobile"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\home-mobile.png",
+      "errors": []
+    },
+    {
+      "title": "长方形与正方形：数方格 · 看见公式",
+      "bodyClass": "mp-page",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "body": 1440
+      },
+      "primary": [],
+      "activeTabs": [],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [],
+      "svgLabels": [
+        {
+          "text": "a = 6",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "b = 3",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "一行 6 格",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "共 3 行",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "6 × 3 = 18",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "调成 a=b，得到正方形",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        }
+      ],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "01\n长方形与正方形：数方格",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 206,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "02\n平行四边形：剪一块、移一块",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "03\n三角形：为什么要除以二",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "04\n梯形：两块拼出一个底",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "05\n菱形：两条对角线的秘密",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "06\n圆：扇形越细，越接近长方形",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "07\n扇形：占整圆的多少",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "08\n圆环：大圆减去小圆",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "09\n等高三角形：底比等于面积比",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "10\n相似图形：边长翻倍，面积呢",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "11\n(a+b)²：为什么有两个 ab",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "12\n(a−b)²：为什么要加回 b²",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "13\n平方差：把 L 形拼成长方形",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "14\n分配律：一块分成两块",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "15\n勾股定理：四个三角形围一个方形",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "16\n长方体与正方体：一层一层数",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "17\n长方体表面积：六个面展开",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "18\n直三棱柱：两个拼一个长方体",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "19\n圆柱：多边形柱越来越圆",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "20\n圆柱表面积：侧面是一张纸",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 206,
+          "aria": "false"
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": null,
+      "ready": true,
+      "id": "geometry-proofs",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "name": "desktop"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\geometry-proofs-desktop.png",
+      "errors": []
+    },
+    {
+      "title": "长方形与正方形：数方格 · 看见公式",
+      "bodyClass": "mp-page",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 1024,
+        "document": 1024,
+        "body": 1024
+      },
+      "primary": [],
+      "activeTabs": [],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [],
+      "svgLabels": [
+        {
+          "text": "a = 6",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "b = 3",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "一行 6 格",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "共 3 行",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "6 × 3 = 18",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "调成 a=b，得到正方形",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        }
+      ],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "01\n长方形与正方形：数方格",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 176,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "02\n平行四边形：剪一块、移一块",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "03\n三角形：为什么要除以二",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "04\n梯形：两块拼出一个底",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "05\n菱形：两条对角线的秘密",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "06\n圆：扇形越细，越接近长方形",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "07\n扇形：占整圆的多少",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "08\n圆环：大圆减去小圆",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "09\n等高三角形：底比等于面积比",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "10\n相似图形：边长翻倍，面积呢",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "11\n(a+b)²：为什么有两个 ab",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "12\n(a−b)²：为什么要加回 b²",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "13\n平方差：把 L 形拼成长方形",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "14\n分配律：一块分成两块",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "15\n勾股定理：四个三角形围一个方形",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "16\n长方体与正方体：一层一层数",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "17\n长方体表面积：六个面展开",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "18\n直三棱柱：两个拼一个长方体",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "19\n圆柱：多边形柱越来越圆",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 176,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "20\n圆柱表面积：侧面是一张纸",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 176,
+          "aria": "false"
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": null,
+      "ready": true,
+      "id": "geometry-proofs",
+      "viewport": {
+        "width": 1024,
+        "height": 768,
+        "name": "tablet"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\geometry-proofs-tablet.png",
+      "errors": []
+    },
+    {
+      "title": "长方形与正方形：数方格 · 看见公式",
+      "bodyClass": "mp-page",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "primary": [],
+      "activeTabs": [],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [],
+      "svgLabels": [
+        {
+          "text": "a = 6",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "b = 3",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "一行 6 格",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "共 3 行",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "6 × 3 = 18",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        },
+        {
+          "text": "调成 a=b，得到正方形",
+          "fill": "var(--mp-ink)",
+          "background": "#fffef9"
+        }
+      ],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "01\n长方形与正方形：数方格",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 58,
+          "width": 157,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "02\n平行四边形：剪一块、移一块",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "03\n三角形：为什么要除以二",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "04\n梯形：两块拼出一个底",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "05\n菱形：两条对角线的秘密",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "06\n圆：扇形越细，越接近长方形",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "07\n扇形：占整圆的多少",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "08\n圆环：大圆减去小圆",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "09\n等高三角形：底比等于面积比",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "10\n相似图形：边长翻倍，面积呢",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "11\n(a+b)²：为什么有两个 ab",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "12\n(a−b)²：为什么要加回 b²",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "13\n平方差：把 L 形拼成长方形",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "14\n分配律：一块分成两块",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "15\n勾股定理：四个三角形围一个方形",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "16\n长方体与正方体：一层一层数",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "17\n长方体表面积：六个面展开",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "18\n直三棱柱：两个拼一个长方体",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "19\n圆柱：多边形柱越来越圆",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "20\n圆柱表面积：侧面是一张纸",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 58,
+          "width": 157,
+          "aria": "false"
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": null,
+      "ready": true,
+      "id": "geometry-proofs",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "name": "mobile"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\geometry-proofs-mobile.png",
+      "errors": []
+    },
+    {
+      "title": "从地球出发 · 太空任务互动课堂",
+      "bodyClass": "mp-page",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "body": 1440
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "▶ 播放",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 44,
+          "width": 75,
+          "aria": null
+        },
+        {
+          "selector": ".primary",
+          "text": "▶ 开始实验",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 0,
+          "width": 0,
+          "aria": null
+        },
+        {
+          "selector": ".primary",
+          "text": "▶ 运行示意",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 0,
+          "width": 0,
+          "aria": null
+        },
+        {
+          "selector": ".primary",
+          "text": "导出探究记录",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 0,
+          "width": 0,
+          "aria": null
+        }
+      ],
+      "activeTabs": [
+        {
+          "selector": "[data-tab].active, [data-mode][aria-selected=\"true\"], [data-goal][aria-selected=\"true\"]",
+          "text": "01 任务旅程",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 52,
+          "width": 128,
+          "aria": "true"
+        }
+      ],
+      "activeMission": [
+        {
+          "selector": ".mission-button.active",
+          "text": "美国发射体系 · 载人任务\n载人龙去空间站\n猎鹰9号 · 载人龙 · ISS",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 107,
+          "width": 333,
+          "aria": "true"
+        }
+      ],
+      "missionAccent": "#71ead0",
+      "taggedText": [
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "↗",
+          "color": "rgb(239, 198, 107)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 4.63,
+          "height": 45,
+          "width": 45,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "4",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 6.75,
+          "height": 31,
+          "width": 48,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "8",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 6.75,
+          "height": 31,
+          "width": 48,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "7",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 6.75,
+          "height": 31,
+          "width": 60,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "系统与安全",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 24,
+          "width": 75,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "动手试试 · 推力够不够？ →",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 240,
+          "aria": null
+        }
+      ],
+      "svgLabels": [],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "资料与说明",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 45,
+          "width": 105,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "⛶ 全屏",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 45,
+          "width": 77,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "美国发射体系 · 载人任务\n载人龙去空间站\n猎鹰9号 · 载人龙 · ISS",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 107,
+          "width": 333,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "美国发射体系 · 卫星任务\n送卫星去工作\n猎鹰9号 · 卫星入轨",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 107,
+          "width": 333,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "中国发射体系 · 载人任务\n神舟去天宫\n长征二号F · 神舟 · 天宫",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 107,
+          "width": 333,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "中国发射体系 · 卫星任务\n长三甲的卫星任务\n长征三号甲 · 卫星入轨",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 107,
+          "width": 333,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "01 任务旅程",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 52,
+          "width": 128,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "02 原理实验室",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 4.4,
+          "height": 52,
+          "width": 143,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "03 认识飞行器",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 4.4,
+          "height": 52,
+          "width": 143,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "04 探究手册",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 4.4,
+          "height": 52,
+          "width": 128,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "01\n出发前的检查",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 46,
+          "width": 171,
+          "aria": "step"
+        },
+        {
+          "selector": "button",
+          "text": "02\n点火，离开发射台",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 171,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "03\n逐渐转弯，积累水平速度",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 60,
+          "width": 171,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "04\n穿过气动载荷较大区段",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 171,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "05\n一、二级分开",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 171,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "06\n上面级继续加速",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 171,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "07\n船箭分离",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 171,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "08\n飞船独立飞行",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 171,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "09\n变轨与交会",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 171,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "10\n近距离接近",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 171,
+          "aria": "false"
+        }
+      ],
+      "lessonOverflowScroller": {
+        "client": 185,
+        "scroll": 185,
+        "overflowX": "auto",
+        "firstFocusable": 0
+      },
+      "matter": null,
+      "ready": true,
+      "id": "spaceflight",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "name": "desktop"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\spaceflight-desktop.png",
+      "errors": []
+    },
+    {
+      "title": "从地球出发 · 太空任务互动课堂",
+      "bodyClass": "mp-page",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 1024,
+        "document": 1024,
+        "body": 1024
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "▶ 播放",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 44,
+          "width": 75,
+          "aria": null
+        },
+        {
+          "selector": ".primary",
+          "text": "▶ 开始实验",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 0,
+          "width": 0,
+          "aria": null
+        },
+        {
+          "selector": ".primary",
+          "text": "▶ 运行示意",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 0,
+          "width": 0,
+          "aria": null
+        },
+        {
+          "selector": ".primary",
+          "text": "导出探究记录",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 0,
+          "width": 0,
+          "aria": null
+        }
+      ],
+      "activeTabs": [
+        {
+          "selector": "[data-tab].active, [data-mode][aria-selected=\"true\"], [data-goal][aria-selected=\"true\"]",
+          "text": "01 任务旅程",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 52,
+          "width": 128,
+          "aria": "true"
+        }
+      ],
+      "activeMission": [
+        {
+          "selector": ".mission-button.active",
+          "text": "美国发射体系 · 载人任务\n载人龙去空间站\n猎鹰9号 · 载人龙 · ISS",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 98,
+          "width": 239,
+          "aria": "true"
+        }
+      ],
+      "missionAccent": "#71ead0",
+      "taggedText": [
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "↗",
+          "color": "rgb(239, 198, 107)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 4.63,
+          "height": 45,
+          "width": 45,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "4",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 6.75,
+          "height": 31,
+          "width": 48,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "8",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 6.75,
+          "height": 31,
+          "width": 48,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "7",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 6.75,
+          "height": 31,
+          "width": 60,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "系统与安全",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 24,
+          "width": 75,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "动手试试 · 推力够不够？ →",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 938,
+          "aria": null
+        }
+      ],
+      "svgLabels": [],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "资料与说明",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 78,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "⛶ 全屏",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 56,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "美国发射体系 · 载人任务\n载人龙去空间站\n猎鹰9号 · 载人龙 · ISS",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 98,
+          "width": 239,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "美国发射体系 · 卫星任务\n送卫星去工作\n猎鹰9号 · 卫星入轨",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 98,
+          "width": 239,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "中国发射体系 · 载人任务\n神舟去天宫\n长征二号F · 神舟 · 天宫",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 98,
+          "width": 239,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "中国发射体系 · 卫星任务\n长三甲的卫星任务\n长征三号甲 · 卫星入轨",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 98,
+          "width": 239,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "01 任务旅程",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 52,
+          "width": 128,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "02 原理实验室",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 4.4,
+          "height": 52,
+          "width": 143,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "03 认识飞行器",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 4.4,
+          "height": 52,
+          "width": 143,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "04 探究手册",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 4.4,
+          "height": 52,
+          "width": 128,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "01\n出发前的检查",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 46,
+          "width": 151,
+          "aria": "step"
+        },
+        {
+          "selector": "button",
+          "text": "02\n点火，离开发射台",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 151,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "03\n逐渐转弯，积累水平速度",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 60,
+          "width": 151,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "04\n穿过气动载荷较大区段",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 60,
+          "width": 151,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "05\n一、二级分开",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 151,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "06\n上面级继续加速",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 151,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "07\n船箭分离",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 151,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "08\n飞船独立飞行",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 151,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "09\n变轨与交会",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 151,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "10\n近距离接近",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 45,
+          "width": 151,
+          "aria": "false"
+        }
+      ],
+      "lessonOverflowScroller": {
+        "client": 165,
+        "scroll": 165,
+        "overflowX": "auto",
+        "firstFocusable": 0
+      },
+      "matter": null,
+      "ready": true,
+      "id": "spaceflight",
+      "viewport": {
+        "width": 1024,
+        "height": 768,
+        "name": "tablet"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\spaceflight-tablet.png",
+      "errors": []
+    },
+    {
+      "title": "从地球出发 · 太空任务互动课堂",
+      "bodyClass": "mp-page",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "▶ 播放",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 44,
+          "width": 58,
+          "aria": null
+        },
+        {
+          "selector": ".primary",
+          "text": "▶ 开始实验",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 0,
+          "width": 0,
+          "aria": null
+        },
+        {
+          "selector": ".primary",
+          "text": "▶ 运行示意",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 0,
+          "width": 0,
+          "aria": null
+        },
+        {
+          "selector": ".primary",
+          "text": "导出探究记录",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 0,
+          "width": 0,
+          "aria": null
+        }
+      ],
+      "activeTabs": [
+        {
+          "selector": "[data-tab].active, [data-mode][aria-selected=\"true\"], [data-goal][aria-selected=\"true\"]",
+          "text": "01 任务旅程",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 48,
+          "width": 52,
+          "aria": "true"
+        }
+      ],
+      "activeMission": [
+        {
+          "selector": ".mission-button.active",
+          "text": "美国发射体系 · 载人任务\n载人龙去空间站\n猎鹰9号 · 载人龙 · ISS",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 103,
+          "width": 179,
+          "aria": "true"
+        }
+      ],
+      "missionAccent": "#71ead0",
+      "taggedText": [
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "↗",
+          "color": "rgb(239, 198, 107)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 4.63,
+          "height": 34,
+          "width": 34,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "4",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 6.75,
+          "height": 25,
+          "width": 12,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "8",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 6.75,
+          "height": 25,
+          "width": 12,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "7",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 6.75,
+          "height": 25,
+          "width": 12,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "系统与安全",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 24,
+          "width": 75,
+          "aria": null
+        },
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "动手试试 · 推力够不够？ →",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 44,
+          "width": 328,
+          "aria": null
+        }
+      ],
+      "svgLabels": [],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "资料与说明",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 78,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "⛶ 全屏",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 56,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "美国发射体系 · 载人任务\n载人龙去空间站\n猎鹰9号 · 载人龙 · ISS",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 103,
+          "width": 179,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "美国发射体系 · 卫星任务\n送卫星去工作\n猎鹰9号 · 卫星入轨",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 103,
+          "width": 179,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "中国发射体系 · 载人任务\n神舟去天宫\n长征二号F · 神舟 · 天宫",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 103,
+          "width": 179,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "中国发射体系 · 卫星任务\n长三甲的卫星任务\n长征三号甲 · 卫星入轨",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 103,
+          "width": 179,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "01 任务旅程",
+          "color": "rgb(49, 93, 75)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 6.28,
+          "height": 48,
+          "width": 52,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "02 原理实验室",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 4.4,
+          "height": 48,
+          "width": 64,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "03 认识飞行器",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 4.4,
+          "height": 48,
+          "width": 64,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "04 探究手册",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(245, 243, 233)",
+          "contrast": 4.4,
+          "height": 48,
+          "width": 52,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "01\n出发前的检查",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 49,
+          "width": 148,
+          "aria": "step"
+        },
+        {
+          "selector": "button",
+          "text": "02\n点火，离开发射台",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 49,
+          "width": 148,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "03\n逐渐转弯，积累水平速度",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 49,
+          "width": 148,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "04\n穿过气动载荷较大区段",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 49,
+          "width": 148,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "05\n一、二级分开",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 49,
+          "width": 148,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "06\n上面级继续加速",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 49,
+          "width": 148,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "07\n船箭分离",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 49,
+          "width": 148,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "08\n飞船独立飞行",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 49,
+          "width": 148,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "09\n变轨与交会",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 49,
+          "width": 148,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "10\n近距离接近",
+          "color": "rgb(101, 117, 103)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 4.84,
+          "height": 49,
+          "width": 148,
+          "aria": "false"
+        }
+      ],
+      "lessonOverflowScroller": {
+        "client": 362,
+        "scroll": 2918,
+        "overflowX": "auto",
+        "firstFocusable": 0
+      },
+      "matter": null,
+      "ready": true,
+      "id": "spaceflight",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "name": "mobile"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\spaceflight-mobile.png",
+      "errors": []
+    },
+    {
+      "title": "三角形的秘密 · 科学小岛",
+      "bodyClass": "mp-page",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "body": 1440
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "我做好了",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 94,
+          "aria": null
+        }
+      ],
+      "activeTabs": [
+        {
+          "selector": "[data-tab].active, [data-mode][aria-selected=\"true\"], [data-goal][aria-selected=\"true\"]",
+          "text": "三角形",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 225,
+          "aria": "true"
+        }
+      ],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "试一试 · 小挑战",
+          "color": "rgb(184, 116, 40)",
+          "background": "rgb(250, 240, 213)",
+          "effectiveBackground": "rgb(250, 240, 213)",
+          "contrast": 3.32,
+          "height": 24,
+          "width": 95,
+          "aria": null
+        }
+      ],
+      "svgLabels": [],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "重新开始",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 86,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "三角形",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 225,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "找对称",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 225,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "转一转",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 225,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "放大镜",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 225,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "拼箭头",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 225,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "变形机",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 225,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "←",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 48,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "↑",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 48,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "↓",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 48,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "→",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 48,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "自由拖动",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 131,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "等底等高",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 48,
+          "width": 131,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "我做好了",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 94,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "换个目标 ↻",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(250, 240, 213)",
+          "contrast": 10.29,
+          "height": 48,
+          "width": 83,
+          "aria": null
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": null,
+      "ready": true,
+      "id": "jsxgraph",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "name": "desktop"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\jsxgraph-desktop.png",
+      "errors": []
+    },
+    {
+      "title": "三角形的秘密 · 科学小岛",
+      "bodyClass": "mp-page",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 1024,
+        "document": 1024,
+        "body": 1024
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "我做好了",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 94,
+          "aria": null
+        }
+      ],
+      "activeTabs": [
+        {
+          "selector": "[data-tab].active, [data-mode][aria-selected=\"true\"], [data-goal][aria-selected=\"true\"]",
+          "text": "三角形",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 156,
+          "aria": "true"
+        }
+      ],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "试一试 · 小挑战",
+          "color": "rgb(184, 116, 40)",
+          "background": "rgb(250, 240, 213)",
+          "effectiveBackground": "rgb(250, 240, 213)",
+          "contrast": 3.32,
+          "height": 24,
+          "width": 95,
+          "aria": null
+        }
+      ],
+      "svgLabels": [],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "重新开始",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 86,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "三角形",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 156,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "找对称",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 156,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "转一转",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 156,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "放大镜",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 156,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "拼箭头",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 156,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "变形机",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 156,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "←",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 48,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "↑",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 48,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "↓",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 48,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "→",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 48,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "自由拖动",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 120,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "等底等高",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 48,
+          "width": 120,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "我做好了",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 94,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "换个目标 ↻",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(250, 240, 213)",
+          "contrast": 10.29,
+          "height": 48,
+          "width": 83,
+          "aria": null
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": null,
+      "ready": true,
+      "id": "jsxgraph",
+      "viewport": {
+        "width": 1024,
+        "height": 768,
+        "name": "tablet"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\jsxgraph-tablet.png",
+      "errors": []
+    },
+    {
+      "title": "三角形的秘密 · 科学小岛",
+      "bodyClass": "mp-page",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "我做好了",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 94,
+          "aria": null
+        }
+      ],
+      "activeTabs": [
+        {
+          "selector": "[data-tab].active, [data-mode][aria-selected=\"true\"], [data-goal][aria-selected=\"true\"]",
+          "text": "三角形",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 117,
+          "aria": "true"
+        }
+      ],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "试一试 · 小挑战",
+          "color": "rgb(184, 116, 40)",
+          "background": "rgb(250, 240, 213)",
+          "effectiveBackground": "rgb(250, 240, 213)",
+          "contrast": 3.32,
+          "height": 24,
+          "width": 95,
+          "aria": null
+        }
+      ],
+      "svgLabels": [],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "重新开始",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 86,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "三角形",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 117,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "找对称",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 117,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "转一转",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 117,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "放大镜",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 117,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "拼箭头",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 117,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "变形机",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 117,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "←",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 82,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "↑",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 82,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "↓",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 82,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "→",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 82,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "自由拖动",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 163,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "等底等高",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 48,
+          "width": 163,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "我做好了",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 94,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "换个目标 ↻",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(250, 240, 213)",
+          "contrast": 10.29,
+          "height": 48,
+          "width": 83,
+          "aria": null
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": null,
+      "ready": true,
+      "id": "jsxgraph",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "name": "mobile"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\jsxgraph-mobile.png",
+      "errors": []
+    },
+    {
+      "title": "七巧板拼图 · 科学小岛",
+      "bodyClass": "mp-page mp-tangram-flat",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "body": 1440
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "看看拼好了没有",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 139,
+          "aria": null
+        }
+      ],
+      "activeTabs": [
+        {
+          "selector": "[data-tab].active, [data-mode][aria-selected=\"true\"], [data-goal][aria-selected=\"true\"]",
+          "text": "方形热身",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 256,
+          "aria": "true"
+        }
+      ],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "小挑战",
+          "color": "rgb(184, 116, 40)",
+          "background": "rgb(250, 240, 213)",
+          "effectiveBackground": "rgb(250, 240, 213)",
+          "contrast": 3.32,
+          "height": 24,
+          "width": 51,
+          "aria": null
+        }
+      ],
+      "svgLabels": [],
+      "tangram": [
+        {
+          "piece": "1",
+          "fill": "rgb(52,82,91)",
+          "label": "2",
+          "labelFill": "var(--mp-surface)"
+        },
+        {
+          "piece": "2",
+          "fill": "rgb(159,187,185)",
+          "label": "3",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": "3",
+          "fill": "rgb(205,96,84)",
+          "label": "4",
+          "labelFill": "var(--mp-surface)"
+        },
+        {
+          "piece": "4",
+          "fill": "rgb(240,182,67)",
+          "label": "5",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": "5",
+          "fill": "rgb(249,230,198)",
+          "label": "6",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": "6",
+          "fill": "rgb(234,192,142)",
+          "label": "7",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": "0",
+          "fill": "rgb(86,165,150)",
+          "label": "1",
+          "labelFill": "var(--mp-ink)"
+        }
+      ],
+      "pieceButtons": [
+        {
+          "selector": ".piece-buttons button",
+          "text": "1",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(86, 165, 150)",
+          "effectiveBackground": "rgb(86, 165, 150)",
+          "contrast": 4.02,
+          "height": 44,
+          "width": 44,
+          "aria": "true"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "2",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(52, 82, 91)",
+          "effectiveBackground": "rgb(52, 82, 91)",
+          "contrast": 8.31,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "3",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(159, 187, 185)",
+          "effectiveBackground": "rgb(159, 187, 185)",
+          "contrast": 5.72,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "4",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(205, 96, 84)",
+          "effectiveBackground": "rgb(205, 96, 84)",
+          "contrast": 3.85,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "5",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(240, 182, 67)",
+          "effectiveBackground": "rgb(240, 182, 67)",
+          "contrast": 6.38,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "6",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(249, 230, 198)",
+          "effectiveBackground": "rgb(249, 230, 198)",
+          "contrast": 9.55,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "7",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(234, 192, 142)",
+          "effectiveBackground": "rgb(234, 192, 142)",
+          "contrast": 6.91,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        }
+      ],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "重新开始",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 86,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "方形热身",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 256,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "创意轮廓",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 256,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "←",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 44,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "↑",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 44,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "↓",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 44,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "→",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 44,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "1",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(86, 165, 150)",
+          "effectiveBackground": "rgb(86, 165, 150)",
+          "contrast": 4.02,
+          "height": 44,
+          "width": 44,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "2",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(52, 82, 91)",
+          "effectiveBackground": "rgb(52, 82, 91)",
+          "contrast": 8.31,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "3",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(159, 187, 185)",
+          "effectiveBackground": "rgb(159, 187, 185)",
+          "contrast": 5.72,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "4",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(205, 96, 84)",
+          "effectiveBackground": "rgb(205, 96, 84)",
+          "contrast": 3.85,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "5",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(240, 182, 67)",
+          "effectiveBackground": "rgb(240, 182, 67)",
+          "contrast": 6.38,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "6",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(249, 230, 198)",
+          "effectiveBackground": "rgb(249, 230, 198)",
+          "contrast": 9.55,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "7",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(234, 192, 142)",
+          "effectiveBackground": "rgb(234, 192, 142)",
+          "contrast": 6.91,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "↶ 左转15°",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 48,
+          "width": 131,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "右转15° ↷",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 48,
+          "width": 131,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "帮我放一块",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 82,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "看看拼好了没有",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 139,
+          "aria": null
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": null,
+      "ready": true,
+      "id": "tangram-flat",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "name": "desktop"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\tangram-flat-desktop.png",
+      "errors": []
+    },
+    {
+      "title": "七巧板拼图 · 科学小岛",
+      "bodyClass": "mp-page mp-tangram-flat",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 1024,
+        "document": 1024,
+        "body": 1024
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "看看拼好了没有",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 139,
+          "aria": null
+        }
+      ],
+      "activeTabs": [
+        {
+          "selector": "[data-tab].active, [data-mode][aria-selected=\"true\"], [data-goal][aria-selected=\"true\"]",
+          "text": "方形热身",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 256,
+          "aria": "true"
+        }
+      ],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "小挑战",
+          "color": "rgb(184, 116, 40)",
+          "background": "rgb(250, 240, 213)",
+          "effectiveBackground": "rgb(250, 240, 213)",
+          "contrast": 3.32,
+          "height": 24,
+          "width": 51,
+          "aria": null
+        }
+      ],
+      "svgLabels": [],
+      "tangram": [
+        {
+          "piece": "1",
+          "fill": "rgb(52,82,91)",
+          "label": "2",
+          "labelFill": "var(--mp-surface)"
+        },
+        {
+          "piece": "2",
+          "fill": "rgb(159,187,185)",
+          "label": "3",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": "3",
+          "fill": "rgb(205,96,84)",
+          "label": "4",
+          "labelFill": "var(--mp-surface)"
+        },
+        {
+          "piece": "4",
+          "fill": "rgb(240,182,67)",
+          "label": "5",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": "5",
+          "fill": "rgb(249,230,198)",
+          "label": "6",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": "6",
+          "fill": "rgb(234,192,142)",
+          "label": "7",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": "0",
+          "fill": "rgb(86,165,150)",
+          "label": "1",
+          "labelFill": "var(--mp-ink)"
+        }
+      ],
+      "pieceButtons": [
+        {
+          "selector": ".piece-buttons button",
+          "text": "1",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(86, 165, 150)",
+          "effectiveBackground": "rgb(86, 165, 150)",
+          "contrast": 4.02,
+          "height": 44,
+          "width": 44,
+          "aria": "true"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "2",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(52, 82, 91)",
+          "effectiveBackground": "rgb(52, 82, 91)",
+          "contrast": 8.31,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "3",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(159, 187, 185)",
+          "effectiveBackground": "rgb(159, 187, 185)",
+          "contrast": 5.72,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "4",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(205, 96, 84)",
+          "effectiveBackground": "rgb(205, 96, 84)",
+          "contrast": 3.85,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "5",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(240, 182, 67)",
+          "effectiveBackground": "rgb(240, 182, 67)",
+          "contrast": 6.38,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "6",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(249, 230, 198)",
+          "effectiveBackground": "rgb(249, 230, 198)",
+          "contrast": 9.55,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "7",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(234, 192, 142)",
+          "effectiveBackground": "rgb(234, 192, 142)",
+          "contrast": 6.91,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        }
+      ],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "重新开始",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 86,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "方形热身",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 256,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "创意轮廓",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 256,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "←",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 44,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "↑",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 44,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "↓",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 44,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "→",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 44,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "1",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(86, 165, 150)",
+          "effectiveBackground": "rgb(86, 165, 150)",
+          "contrast": 4.02,
+          "height": 44,
+          "width": 44,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "2",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(52, 82, 91)",
+          "effectiveBackground": "rgb(52, 82, 91)",
+          "contrast": 8.31,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "3",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(159, 187, 185)",
+          "effectiveBackground": "rgb(159, 187, 185)",
+          "contrast": 5.72,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "4",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(205, 96, 84)",
+          "effectiveBackground": "rgb(205, 96, 84)",
+          "contrast": 3.85,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "5",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(240, 182, 67)",
+          "effectiveBackground": "rgb(240, 182, 67)",
+          "contrast": 6.38,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "6",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(249, 230, 198)",
+          "effectiveBackground": "rgb(249, 230, 198)",
+          "contrast": 9.55,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "7",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(234, 192, 142)",
+          "effectiveBackground": "rgb(234, 192, 142)",
+          "contrast": 6.91,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "↶ 左转15°",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 48,
+          "width": 120,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "右转15° ↷",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 48,
+          "width": 120,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "帮我放一块",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 82,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "看看拼好了没有",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 139,
+          "aria": null
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": null,
+      "ready": true,
+      "id": "tangram-flat",
+      "viewport": {
+        "width": 1024,
+        "height": 768,
+        "name": "tablet"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\tangram-flat-tablet.png",
+      "errors": []
+    },
+    {
+      "title": "七巧板拼图 · 科学小岛",
+      "bodyClass": "mp-page mp-tangram-flat",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "看看拼好了没有",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 139,
+          "aria": null
+        }
+      ],
+      "activeTabs": [
+        {
+          "selector": "[data-tab].active, [data-mode][aria-selected=\"true\"], [data-goal][aria-selected=\"true\"]",
+          "text": "方形热身",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 180,
+          "aria": "true"
+        }
+      ],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [
+        {
+          "selector": ".concept, .brief-numbers b, .brand-mark, .try-lab, .badge",
+          "text": "小挑战",
+          "color": "rgb(184, 116, 40)",
+          "background": "rgb(250, 240, 213)",
+          "effectiveBackground": "rgb(250, 240, 213)",
+          "contrast": 3.32,
+          "height": 24,
+          "width": 51,
+          "aria": null
+        }
+      ],
+      "svgLabels": [],
+      "tangram": [
+        {
+          "piece": "1",
+          "fill": "rgb(52,82,91)",
+          "label": "2",
+          "labelFill": "var(--mp-surface)"
+        },
+        {
+          "piece": "2",
+          "fill": "rgb(159,187,185)",
+          "label": "3",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": "3",
+          "fill": "rgb(205,96,84)",
+          "label": "4",
+          "labelFill": "var(--mp-surface)"
+        },
+        {
+          "piece": "4",
+          "fill": "rgb(240,182,67)",
+          "label": "5",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": "5",
+          "fill": "rgb(249,230,198)",
+          "label": "6",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": "6",
+          "fill": "rgb(234,192,142)",
+          "label": "7",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": "0",
+          "fill": "rgb(86,165,150)",
+          "label": "1",
+          "labelFill": "var(--mp-ink)"
+        }
+      ],
+      "pieceButtons": [
+        {
+          "selector": ".piece-buttons button",
+          "text": "1",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(86, 165, 150)",
+          "effectiveBackground": "rgb(86, 165, 150)",
+          "contrast": 4.02,
+          "height": 44,
+          "width": 44,
+          "aria": "true"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "2",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(52, 82, 91)",
+          "effectiveBackground": "rgb(52, 82, 91)",
+          "contrast": 8.31,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "3",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(159, 187, 185)",
+          "effectiveBackground": "rgb(159, 187, 185)",
+          "contrast": 5.72,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "4",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(205, 96, 84)",
+          "effectiveBackground": "rgb(205, 96, 84)",
+          "contrast": 3.85,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "5",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(240, 182, 67)",
+          "effectiveBackground": "rgb(240, 182, 67)",
+          "contrast": 6.38,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "6",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(249, 230, 198)",
+          "effectiveBackground": "rgb(249, 230, 198)",
+          "contrast": 9.55,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": ".piece-buttons button",
+          "text": "7",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(234, 192, 142)",
+          "effectiveBackground": "rgb(234, 192, 142)",
+          "contrast": 6.91,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        }
+      ],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "重新开始",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 86,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "方形热身",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 180,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "创意轮廓",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 180,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "←",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 82,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "↑",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 82,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "↓",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 82,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "→",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 82,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "1",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(86, 165, 150)",
+          "effectiveBackground": "rgb(86, 165, 150)",
+          "contrast": 4.02,
+          "height": 44,
+          "width": 44,
+          "aria": "true"
+        },
+        {
+          "selector": "button",
+          "text": "2",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(52, 82, 91)",
+          "effectiveBackground": "rgb(52, 82, 91)",
+          "contrast": 8.31,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "3",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(159, 187, 185)",
+          "effectiveBackground": "rgb(159, 187, 185)",
+          "contrast": 5.72,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "4",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(205, 96, 84)",
+          "effectiveBackground": "rgb(205, 96, 84)",
+          "contrast": 3.85,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "5",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(240, 182, 67)",
+          "effectiveBackground": "rgb(240, 182, 67)",
+          "contrast": 6.38,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "6",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(249, 230, 198)",
+          "effectiveBackground": "rgb(249, 230, 198)",
+          "contrast": 9.55,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "7",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(234, 192, 142)",
+          "effectiveBackground": "rgb(234, 192, 142)",
+          "contrast": 6.91,
+          "height": 44,
+          "width": 44,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "↶ 左转15°",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 48,
+          "width": 163,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "右转15° ↷",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(231, 237, 223)",
+          "effectiveBackground": "rgb(231, 237, 223)",
+          "contrast": 9.78,
+          "height": 48,
+          "width": 163,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "帮我放一块",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgba(0, 0, 0, 0)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 48,
+          "width": 82,
+          "aria": null
+        },
+        {
+          "selector": "button",
+          "text": "看看拼好了没有",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 48,
+          "width": 139,
+          "aria": null
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": null,
+      "ready": true,
+      "id": "tangram-flat",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "name": "mobile"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\tangram-flat-mobile.png",
+      "errors": []
+    },
+    {
+      "title": "物理游乐场 · 科学小岛",
+      "bodyClass": "mp-page mp-matter",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "body": 1440
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "暂停",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 44,
+          "width": 58,
+          "aria": "false"
+        }
+      ],
+      "activeTabs": [],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [],
+      "svgLabels": [],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "暂停",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 44,
+          "width": 58,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "重新开始",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 86,
+          "aria": null
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": {
+        "width": 800,
+        "height": 600,
+        "clientWidth": 1002,
+        "clientHeight": 751,
+        "bodies": 2,
+        "constraints": 3,
+        "renderBackground": "#fffef9"
+      },
+      "ready": true,
+      "id": "matter-bridge",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "name": "desktop"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\matter-bridge-desktop.png",
+      "errors": []
+    },
+    {
+      "title": "物理游乐场 · 科学小岛",
+      "bodyClass": "mp-page mp-matter",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 1024,
+        "document": 1024,
+        "body": 1024
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "暂停",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 44,
+          "width": 58,
+          "aria": "false"
+        }
+      ],
+      "activeTabs": [],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [],
+      "svgLabels": [],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "暂停",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 44,
+          "width": 58,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "重新开始",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 86,
+          "aria": null
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": {
+        "width": 800,
+        "height": 600,
+        "clientWidth": 826,
+        "clientHeight": 619,
+        "bodies": 2,
+        "constraints": 3,
+        "renderBackground": "#fffef9"
+      },
+      "ready": true,
+      "id": "matter-bridge",
+      "viewport": {
+        "width": 1024,
+        "height": 768,
+        "name": "tablet"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\matter-bridge-tablet.png",
+      "errors": []
+    },
+    {
+      "title": "物理游乐场 · 科学小岛",
+      "bodyClass": "mp-page mp-matter",
+      "pageBackground": "rgb(245, 243, 233)",
+      "bodyColor": "rgb(38, 61, 51)",
+      "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Microsoft YaHei\", sans-serif",
+      "tokens": {
+        "--mp-page": "#f5f3e9",
+        "--mp-surface": "#fffef9",
+        "--mp-ink": "#263d33",
+        "--mp-muted": "#657567",
+        "--mp-primary": "#315d4b"
+      },
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "primary": [
+        {
+          "selector": ".primary",
+          "text": "暂停",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 44,
+          "width": 52,
+          "aria": "false"
+        }
+      ],
+      "activeTabs": [],
+      "activeMission": [],
+      "missionAccent": "",
+      "taggedText": [],
+      "svgLabels": [],
+      "tangram": [],
+      "pieceButtons": [],
+      "buttons": [
+        {
+          "selector": "button",
+          "text": "暂停",
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(49, 93, 75)",
+          "effectiveBackground": "rgb(49, 93, 75)",
+          "contrast": 7.43,
+          "height": 44,
+          "width": 52,
+          "aria": "false"
+        },
+        {
+          "selector": "button",
+          "text": "重新开始",
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(255, 254, 249)",
+          "effectiveBackground": "rgb(255, 254, 249)",
+          "contrast": 11.57,
+          "height": 44,
+          "width": 78,
+          "aria": null
+        }
+      ],
+      "lessonOverflowScroller": null,
+      "matter": {
+        "width": 800,
+        "height": 600,
+        "clientWidth": 372,
+        "clientHeight": 278,
+        "bodies": 2,
+        "constraints": 3,
+        "renderBackground": "#fffef9"
+      },
+      "ready": true,
+      "id": "matter-bridge",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "name": "mobile"
+      },
+      "screenshot": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\style-unification\\core-recheck-2026-09-30T11-36-43.161Z\\matter-bridge-mobile.png",
+      "errors": []
+    }
+  ],
+  "findings": [
+    {
+      "id": "geometry-svg-labels",
+      "labels": [
+        {
+          "text": "a = 6",
+          "fill": "var(--mp-ink)"
+        },
+        {
+          "text": "b = 3",
+          "fill": "var(--mp-ink)"
+        },
+        {
+          "text": "一行 6 格",
+          "fill": "var(--mp-ink)"
+        },
+        {
+          "text": "共 3 行",
+          "fill": "var(--mp-ink)"
+        },
+        {
+          "text": "6 × 3 = 18",
+          "fill": "var(--mp-ink)"
+        },
+        {
+          "text": "调成 a=b，得到正方形",
+          "fill": "var(--mp-ink)"
+        }
+      ]
+    },
+    {
+      "id": "spaceflight-controls",
+      "accent": "#315d4b",
+      "dynamicAccent": "#71ead0",
+      "activeTab": {
+        "color": "rgb(49, 93, 75)",
+        "background": "rgb(231, 237, 223)",
+        "border": "rgb(49, 93, 75)",
+        "height": 52
+      },
+      "activeMission": {
+        "color": "rgb(38, 61, 51)",
+        "background": "rgb(231, 237, 223)",
+        "border": "rgb(49, 93, 75)",
+        "label": "rgb(49, 93, 75)"
+      },
+      "play": {
+        "color": "rgb(255, 254, 249)",
+        "background": "rgb(49, 93, 75)",
+        "height": 44
+      },
+      "concept": {
+        "color": "rgb(49, 93, 75)",
+        "background": "rgb(231, 237, 223)"
+      }
+    },
+    {
+      "id": "spaceflight-mobile-stage-list",
+      "client": 362,
+      "scroll": 1235,
+      "overflowX": "auto",
+      "buttonTabIndex": 0
+    },
+    {
+      "id": "tangram-flat-label-contrast",
+      "labels": [
+        {
+          "piece": 2,
+          "fill": "rgb(52,82,91)",
+          "label": "2",
+          "labelFill": "var(--mp-surface)"
+        },
+        {
+          "piece": 3,
+          "fill": "rgb(159,187,185)",
+          "label": "3",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": 4,
+          "fill": "rgb(205,96,84)",
+          "label": "4",
+          "labelFill": "var(--mp-surface)"
+        },
+        {
+          "piece": 5,
+          "fill": "rgb(240,182,67)",
+          "label": "5",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": 6,
+          "fill": "rgb(249,230,198)",
+          "label": "6",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": 7,
+          "fill": "rgb(234,192,142)",
+          "label": "7",
+          "labelFill": "var(--mp-ink)"
+        },
+        {
+          "piece": 1,
+          "fill": "rgb(86,165,150)",
+          "label": "1",
+          "labelFill": "var(--mp-ink)"
+        }
+      ],
+      "buttons": [
+        {
+          "piece": 1,
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(86, 165, 150)",
+          "height": 44
+        },
+        {
+          "piece": 2,
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(52, 82, 91)",
+          "height": 44
+        },
+        {
+          "piece": 3,
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(159, 187, 185)",
+          "height": 44
+        },
+        {
+          "piece": 4,
+          "color": "rgb(255, 254, 249)",
+          "background": "rgb(205, 96, 84)",
+          "height": 44
+        },
+        {
+          "piece": 5,
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(240, 182, 67)",
+          "height": 44
+        },
+        {
+          "piece": 6,
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(249, 230, 198)",
+          "height": 44
+        },
+        {
+          "piece": 7,
+          "color": "rgb(38, 61, 51)",
+          "background": "rgb(234, 192, 142)",
+          "height": 44
+        }
+      ]
+    },
+    {
+      "id": "matter-bridge-scene",
+      "canvas": {
+        "width": 800,
+        "height": 600,
+        "clientWidth": 372,
+        "clientHeight": 278
+      },
+      "bodies": 35,
+      "constraints": 17,
+      "fills": [
+        "#315d4b",
+        "#315d4b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#526c5b",
+        "#cb8b73",
+        "#efc66b",
+        "#568ba6",
+        "#efc66b",
+        "#a6bb96",
+        "#a6bb96",
+        "#568ba6",
+        "#efc66b",
+        "#d99d62",
+        "#a6bb96",
+        "#efc66b",
+        "#a6bb96",
+        "#568ba6",
+        "#d99d62",
+        "#568ba6",
+        "#a6bb96",
+        "#d99d62",
+        "#cb8b73"
+      ],
+      "background": "#fffef9"
+    },
+    {
+      "id": "host-controls",
+      "passed": true,
+      "checks": [
+        "search",
+        "teacher manager",
+        "open-all",
+        "iframe launch",
+        "return"
+      ]
+    }
+  ],
+  "limitations": [
+    "Chromium viewport emulation; no physical iPad/iPhone Safari check.",
+    "Tangram 3D and offline single-file builds are not included in this phase."
+  ],
+  "passed": false,
+  "failures": [
+    {
+      "label": "Tangram SVG piece 2 label contrast",
+      "detail": "null"
+    },
+    {
+      "label": "Tangram SVG piece 3 label contrast",
+      "detail": "null"
+    },
+    {
+      "label": "Tangram SVG piece 4 label contrast",
+      "detail": "null"
+    },
+    {
+      "label": "Tangram SVG piece 5 label contrast",
+      "detail": "null"
+    },
+    {
+      "label": "Tangram SVG piece 6 label contrast",
+      "detail": "null"
+    },
+    {
+      "label": "Tangram SVG piece 7 label contrast",
+      "detail": "null"
+    },
+    {
+      "label": "Tangram SVG piece 1 label contrast",
+      "detail": "null"
+    },
+    {
+      "label": "Tangram piece 1 button contrast",
+      "detail": "4.02"
+    },
+    {
+      "label": "Tangram piece 4 button contrast",
+      "detail": "3.85"
+    }
+  ]
+}

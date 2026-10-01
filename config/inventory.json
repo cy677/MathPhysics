@@ -1203,15 +1203,187 @@
       "progressMode": "visit-only",
       "completeUpstream": true,
       "teacherRecommended": false
+    },
+    {
+      "id": "fractions-intro",
+      "title": "分数入门",
+      "zone": "geometry",
+      "grades": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "kind": "simulation",
+      "adapter": "phet",
+      "entry": "vendor/phet/fractions-intro.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "description": "把圆饼、长条和数轴摆一摆，看见一个整体可以怎样分。",
+      "playHint": "先选“介绍”，把分数拼块拖到框里。改变分子和分母，比较图形与数轴；再去“游戏”或“实验室”试一试。",
+      "content": [
+        "分数",
+        "分子与分母",
+        "介绍",
+        "游戏",
+        "实验室"
+      ],
+      "screenCount": 3,
+      "license": "CC BY-NC 4.0 (official HTML; preserve embedded notices)",
+      "source": "https://github.com/phetsims/fractions-intro",
+      "progressMode": "visit-only",
+      "completeUpstream": true
+    },
+    {
+      "id": "fraction-matcher",
+      "title": "分数配对",
+      "zone": "geometry",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "game",
+      "adapter": "phet",
+      "entry": "vendor/phet/fraction-matcher.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "description": "给表示同一个数的图形和分数找到朋友。",
+      "playHint": "选择“分数”或“带分数”，再选难度。把两个表示同一个数的卡片放到天平两边，点“检查”看看配对结果。",
+      "content": [
+        "分数",
+        "等值分数",
+        "带分数",
+        "配对",
+        "8档难度"
+      ],
+      "screenCount": 2,
+      "license": "CC BY-NC 4.0 (official HTML; preserve embedded notices)",
+      "source": "https://github.com/phetsims/fraction-matcher",
+      "progressMode": "visit-only",
+      "completeUpstream": true
+    },
+    {
+      "id": "balancing-act",
+      "title": "平衡挑战",
+      "zone": "physics",
+      "grades": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "simulation",
+      "adapter": "phet",
+      "entry": "vendor/phet/balancing-act.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "description": "把重物放在两边，找一找跷跷板平衡的办法。",
+      "playHint": "把重物拖到跷跷板两边，移走支撑看看哪边下沉。试着改变重物的位置和质量，再到“游戏”挑战平衡。",
+      "content": [
+        "平衡",
+        "质量",
+        "距离",
+        "介绍",
+        "平衡实验室",
+        "游戏"
+      ],
+      "screenCount": 3,
+      "license": "CC BY-NC 4.0 (official HTML; preserve embedded notices)",
+      "source": "https://github.com/phetsims/balancing-act",
+      "progressMode": "visit-only",
+      "completeUpstream": true
+    },
+    {
+      "id": "circuit-construction-kit-dc",
+      "title": "直流电路实验室",
+      "zone": "physics",
+      "grades": [
+        4,
+        5,
+        6
+      ],
+      "kind": "simulation",
+      "adapter": "phet",
+      "entry": "vendor/phet/circuit-construction-kit-dc.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "description": "用电池、导线和灯泡接出一条完整的电路。",
+      "playHint": "从右侧拖出电池、导线和灯泡，把接头连成一圈。观察灯泡和电流；选中元件可以调节数值，也可以加入开关。",
+      "content": [
+        "电路",
+        "电池",
+        "灯泡",
+        "开关",
+        "电流",
+        "电压",
+        "介绍",
+        "实验室"
+      ],
+      "screenCount": 2,
+      "license": "CC BY-NC 4.0 (official HTML; preserve embedded notices)",
+      "source": "https://github.com/phetsims/circuit-construction-kit-dc",
+      "progressMode": "visit-only",
+      "completeUpstream": true
+    },
+    {
+      "id": "states-of-matter-basics",
+      "title": "物质状态",
+      "zone": "science",
+      "grades": [
+        4,
+        5,
+        6
+      ],
+      "kind": "simulation",
+      "adapter": "phet",
+      "entry": "vendor/phet/states-of-matter-basics.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "description": "加热或冷却，看看粒子怎样组成固体、液体和气体。",
+      "playHint": "先选一种物质，比较“固体”“液体”“气体”的粒子。拖动加热与冷却滑块；到“相变”页试着压下盖子，观察变化。",
+      "content": [
+        "物态",
+        "固体",
+        "液体",
+        "气体",
+        "加热",
+        "冷却",
+        "相变",
+        "粒子"
+      ],
+      "screenCount": 2,
+      "license": "CC BY-NC 4.0 (official HTML; preserve embedded notices)",
+      "source": "https://github.com/phetsims/states-of-matter-basics",
+      "progressMode": "visit-only",
+      "completeUpstream": true
+    },
+    {
+      "id": "build-a-molecule",
+      "title": "搭建分子",
+      "zone": "science",
+      "grades": [
+        5,
+        6
+      ],
+      "kind": "simulation",
+      "adapter": "phet",
+      "entry": "vendor/phet/build-a-molecule.html?locale=zh_CN&webgl=false&allowLinks=false",
+      "description": "把不同的原子接在一起，搭出水和其他小分子。",
+      "playHint": "把原子从下方的小桶拖出来，靠近它们组成分子。把符合目标的分子拖到收集框；也可以切到“多个分子”或“自由探索”自由搭建。",
+      "content": [
+        "原子",
+        "分子",
+        "水分子",
+        "单个分子",
+        "多个分子",
+        "自由探索"
+      ],
+      "screenCount": 3,
+      "license": "CC BY-NC 4.0 (official HTML; preserve embedded notices)",
+      "source": "https://github.com/phetsims/build-a-molecule",
+      "progressMode": "visit-only",
+      "completeUpstream": true
     }
   ],
   "counts": {
-    "phetSimulations": 4,
-    "phetScreens": 13,
+    "phetSimulations": 10,
+    "phetScreens": 28,
     "areaBuilderDifficultyLevels": 6,
     "tangramBuiltInSnapshots": 1,
     "matterExamples": 48,
-    "launchableActivities": 53
+    "launchableActivities": 59
   },
   "excluded": [
     {
@@ -6411,6 +6583,30 @@
     "vendor/tangram/screenshot.png": {
       "bytes": 58309,
       "sha256": "f860178e0cb14894eea154def9640f7b88958d6422fb3e160ea36a672930bc51"
+    },
+    "vendor/phet/fractions-intro.html": {
+      "bytes": 2877396,
+      "sha256": "d0cf4bbb8888d0a16628ad4a69df9ad5b49b4cc4b15d9433a979dfc1157448c3"
+    },
+    "vendor/phet/fraction-matcher.html": {
+      "bytes": 2100862,
+      "sha256": "28d8fbb3aabe7d10b4b64bd02d26b6b9aa7e5025f4c226396f9d6cf057b1cbfc"
+    },
+    "vendor/phet/balancing-act.html": {
+      "bytes": 3509612,
+      "sha256": "fa365bacf9b52b0800b4596b307ac61d7675143443178288c8e832c6e3a76e6c"
+    },
+    "vendor/phet/circuit-construction-kit-dc.html": {
+      "bytes": 3926289,
+      "sha256": "4feae7b4823354d57112fc46c3bdca9de5c3612e7695cd8967b8c32f122736f1"
+    },
+    "vendor/phet/states-of-matter-basics.html": {
+      "bytes": 2670753,
+      "sha256": "fdb67dbaf55910c07246e074c8a68c18224cc7b037733fa581a29aee0ab2a762"
+    },
+    "vendor/phet/build-a-molecule.html": {
+      "bytes": 8771113,
+      "sha256": "2d60a20708150c70399c7798fc512a6fd7fc9ce726e87f695fd0040cc846a09a"
     }
   }
 }

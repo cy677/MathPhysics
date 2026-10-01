@@ -1,0 +1,160 @@
+{
+  "suite": "Five standalone curriculum pages file:// acceptance",
+  "output": "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\curriculum-integration\\offline-file-2026-09-30T12-52-13.175Z",
+  "pages": [
+    {
+      "id": "geometry",
+      "file": "C:\\Users\\cheng\\Desktop\\MathPhysics\\dist\\MathPhysics-Geometry-Proofs.html",
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1440,
+          "documentWidth": 1440,
+          "overflow": false
+        },
+        {
+          "name": "tablet",
+          "width": 768,
+          "documentWidth": 768,
+          "overflow": false
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "overflow": false
+        }
+      ],
+      "pageErrors": [],
+      "interaction": {
+        "action": "select a transformation explanation step",
+        "changed": true
+      }
+    },
+    {
+      "id": "spaceflight",
+      "file": "C:\\Users\\cheng\\Desktop\\MathPhysics\\dist\\MathPhysics-Spaceflight.html",
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1440,
+          "documentWidth": 1440,
+          "overflow": false
+        },
+        {
+          "name": "tablet",
+          "width": 768,
+          "documentWidth": 768,
+          "overflow": false
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "overflow": false
+        }
+      ],
+      "pageErrors": [],
+      "interaction": {
+        "action": "open principles lab tab",
+        "selected": "true"
+      }
+    },
+    {
+      "id": "jsxgraph-playground",
+      "file": "C:\\Users\\cheng\\Desktop\\MathPhysics\\dist\\MathPhysics-Playground.html",
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1440,
+          "documentWidth": 1440,
+          "overflow": false
+        },
+        {
+          "name": "tablet",
+          "width": 768,
+          "documentWidth": 768,
+          "overflow": false
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "overflow": false
+        }
+      ],
+      "pageErrors": [],
+      "interaction": {
+        "action": "switch experiment mode",
+        "mode": "mirror",
+        "selected": "true"
+      }
+    },
+    {
+      "id": "tangram-flat",
+      "file": "C:\\Users\\cheng\\Desktop\\MathPhysics\\dist\\MathPhysics-Tangram.html",
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1440,
+          "documentWidth": 1440,
+          "overflow": false
+        },
+        {
+          "name": "tablet",
+          "width": 768,
+          "documentWidth": 768,
+          "overflow": false
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "overflow": false
+        }
+      ],
+      "pageErrors": [],
+      "interaction": {
+        "action": "select and rotate a tangram piece",
+        "selected": "true",
+        "before": 30,
+        "after": 45
+      }
+    },
+    {
+      "id": "primary-math",
+      "file": "C:\\Users\\cheng\\Desktop\\MathPhysics\\dist\\MathPhysics-Primary-Math.html",
+      "viewports": [
+        {
+          "name": "desktop",
+          "width": 1440,
+          "documentWidth": 1440,
+          "overflow": false
+        },
+        {
+          "name": "tablet",
+          "width": 768,
+          "documentWidth": 768,
+          "overflow": false
+        },
+        {
+          "name": "mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "overflow": false
+        }
+      ],
+      "pageErrors": [],
+      "interaction": {
+        "action": "submit a correct offline answer",
+        "state": "correct"
+      }
+    }
+  ],
+  "externalRequests": [],
+  "limitations": [
+    "Chromium viewport emulation; no physical mobile Safari run."
+  ],
+  "passed": true,
+  "failures": []
+}

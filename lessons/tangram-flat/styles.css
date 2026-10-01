@@ -1,0 +1,32 @@
+/* Flat Tangram presentation; the original polygon/snapshot data stay in app.js. */
+.mp-tangram-flat #tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 520px; }
+.tangram-stage { display: block; width: 100%; height: auto; min-height: 240px; touch-action: none; background: var(--mp-surface); }
+.tangram-stage [data-piece] { cursor: grab; stroke-linejoin: miter; }
+.tangram-stage [data-piece]:active { cursor: grabbing; }
+.tangram-stage text { pointer-events: none; }
+.piece-buttons { display: grid; grid-template-columns: repeat(4, 44px); gap: 9px; margin: 14px 0 18px; }
+.piece-buttons button { width: 44px; min-width: 44px; min-height: 44px; padding: 5px; color: var(--mp-ink); border: 2px solid transparent; font-weight: 750; }
+.piece-buttons [aria-pressed=true] { outline: 3px solid var(--mp-primary); outline-offset: 2px; border-color: var(--mp-surface); }
+.piece-buttons button:focus-visible { outline-color: var(--mp-focus); }
+#progress { font-weight: 700; color: var(--mp-primary); white-space: nowrap; }
+label.hint { display: flex; gap: 9px; align-items: center; margin: 18px 0; min-height: 44px; }
+label.hint input { width: 19px; height: 19px; }
+.mp-tangram-flat .movement > div { display: flex; gap: 6px; }
+.mp-tangram-flat .movement button { width: 44px; padding: 8px; background: var(--mp-surface); border: 1px solid var(--mp-line); }
+.mp-tangram-flat .intro { margin-top: 8px; max-width: 760px; }
+.mp-tangram-flat #feedback { min-height: 30px; }
+.mp-tangram-flat .board-card { align-self: start; }
+.mp-tangram-flat summary { min-height: 44px; cursor: pointer; }
+@media (min-width: 900px) and (min-height: 580px) {
+  .mp-tangram-flat .board-card { align-self: stretch; }
+  .tangram-stage { flex: 1; min-height: 0; height: 100%; }
+  .mp-tangram-flat h1 { flex-shrink: 0; }
+}
+@media (max-width: 580px) {
+  .mp-tangram-flat .movement { justify-content: center; }
+  .mp-tangram-flat .movement > div { width: 100%; }
+  .mp-tangram-flat .movement button { flex: 1; }
+  .tangram-stage { min-height: 240px; }
+}
+
+.challenge-label{display:block;font-size:13px;margin:12px 0 6px}#challenge-mode{width:100%;min-height:44px;padding:9px;border:1px solid var(--mp-line);border-radius:var(--mp-radius-control);background:var(--mp-surface);color:var(--mp-ink);font:inherit;margin-bottom:12px}

@@ -1,0 +1,71 @@
+{
+  "suite": "v0.4 isolated inline bundles",
+  "results": [
+    {
+      "id": "geometry-triangle",
+      "passed": true,
+      "pointerDrag": true,
+      "keyboardAlternative": true,
+      "challengeCheck": true
+    },
+    {
+      "id": "geometry-mirror",
+      "passed": true,
+      "pointerDrag": true,
+      "keyboardAlternative": true,
+      "challengeCheck": true
+    },
+    {
+      "id": "geometry-rotate",
+      "passed": true,
+      "pointerDrag": true,
+      "keyboardAlternative": true,
+      "challengeCheck": true
+    },
+    {
+      "id": "geometry-scale",
+      "passed": true,
+      "pointerDrag": true,
+      "keyboardAlternative": true,
+      "challengeCheck": true
+    },
+    {
+      "id": "geometry-vectors",
+      "passed": true,
+      "pointerDrag": true,
+      "keyboardAlternative": true,
+      "challengeCheck": true
+    },
+    {
+      "id": "geometry-linear",
+      "passed": true,
+      "pointerDrag": true,
+      "keyboardAlternative": true,
+      "challengeCheck": true
+    },
+    {
+      "id": "tangram-square",
+      "passed": true
+    },
+    {
+      "id": "tangram-creative",
+      "passed": true
+    },
+    {
+      "id": "layout-1024",
+      "passed": true
+    },
+    {
+      "id": "layout-390",
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Touch emulation is not a physical iPad Safari test.",
+    "Smoke tests verify execution, not every randomized upstream challenge.",
+    "Inline checks do not replace the real HTTP and file:// CI checks."
+  ],
+  "total": 10,
+  "passed": true,
+  "blockedExternalRequestCount": 0
+}

@@ -1,0 +1,202 @@
+
+> mathphysics-science-island@0.4.0 test
+> node --test tests/*.test.mjs
+
+✔ all registered upstream Matter examples are catalogued, not sampled (1.2157ms)
+✔ all four complete PhET simulations, all screens and tangram retained (1.3849ms)
+✔ exact upstream file bytes match complete inventory hashes (345.5025ms)
+✔ unique IDs, local entries, all elementary grades, initial subset only (0.3694ms)
+✔ malformed storage and unknown entries cannot manufacture progression (1.019ms)
+✔ import configuration is validated and does not import executable paths (0.355ms)
+✔ license barriers are disclosed; unlicensed project is not vendored (0.4596ms)
+✔ six independently graded experiment entries share the playground without replacing existing activities (0.7014ms)
+✔ entry allowlist accepts exactly the six canonical mode URLs and preserves existing local paths (0.6508ms)
+✔ new experiments stay closed until individually selected and existing teaching choices survive reload (0.6612ms)
+✔ 24 lessons, valid sources, all drawings and answers finite at slider extremes (34.5868ms)
+✔ 24 topics are assigned to one recommended grade and expose 48 distinct question forms (1.3428ms)
+✔ normalization protects nonpositive widths and nonfinite parameters (0.2729ms)
+✔ square expansion, square difference, distributivity hold over many lengths (0.3788ms)
+✔ parallelogram cut and translated piece tile the final rectangle (1.9735ms)
+✔ difference-square cut is rigid and exactly fills the remaining rectangle (0.916ms)
+✔ two triangles, two trapezoids, rhombus and central Pythagorean square (0.3276ms)
+✔ same-height triangle ratio is not similarity squared ratio (0.2105ms)
+✔ circle and cylinder use convergent polygon bounds, not an exact finite rectangle (0.2839ms)
+✔ pyramid factor validated by the nonoverlapping max-coordinate decomposition (1.8511ms)
+✔ cone and hemisphere Cavalieri sections match at every sampled height (1.3501ms)
+✔ numeric answers accept two decimals/fractions and reject malformed or infinite text (0.7084ms)
+✔ new local catalog is separate from upstream, bundled, and marked original MIT (3.3409ms)
+✔ five categories partition all 48 official examples exactly once (1.508ms)
+✔ home and manager receive one physics module while all source activities stay registered (0.684ms)
+✔ old choices and visits migrate into one module without opening unrelated activities (0.6126ms)
+✔ old and new exported configurations import at module granularity (0.4933ms)
+✔ every derivative reverses byte-for-byte to the pinned PhET source (1113.3424ms)
+✔ activity entry resolver preserves upstream data while selecting presentation adapters (3.0005ms)
+✔ host keeps PhET attribution and learning help (45.5991ms)
+✖ 64 distinct activities; 22 recommended entries with 18 non-PhET activities (1.9639ms)
+✔ legacy starter defaults upgrade once while preserving exploration records (1.5218ms)
+✖ custom and deliberately empty teaching selections are never overwritten (1.2095ms)
+✔ JSXGraph package files match their exact import hashes and carry MIT attribution (146.1577ms)
+✔ child-facing descriptions and host template do not show integration boilerplate (0.5178ms)
+✔ six dynamic activities use valid geometry, including degenerate triangles (0.2769ms)
+✔ reflection is an involution, rotation is isometric, similarity scales area by k squared (0.4951ms)
+✔ each dynamic geometry mode now offers six curriculum-linked challenge targets (0.8208ms)
+✔ linear map fixes origin; determinant matches area and can collapse to a line (0.3758ms)
+✔ flat tangram uses all original polygon vertices, seven pieces and original snapshot (2.5352ms)
+✔ pm-01: 给种子找空位 (2.3031ms)
+✔ pm-02: 队伍中间的小熊 (0.285ms)
+✔ pm-03: 捆起来再数 (0.1075ms)
+✔ pm-04: 一一配对找差距 (0.1069ms)
+✔ pm-05: 小巴停靠两次 (0.1339ms)
+✔ pm-06: 只收两种卡片 (0.1019ms)
+✔ pm-07: 按规则接车厢 (0.0954ms)
+✔ pm-08: 凑十搬家 (0.0719ms)
+✔ pm-09: 满十换一捆 (0.0828ms)
+✔ pm-10: 拆捆借个位 (0.1406ms)
+✔ pm-11: 相同的育苗小组 (0.074ms)
+✔ pm-12: 每袋一样多 (0.0928ms)
+✔ pm-13: 满盒以后剩几块 (0.0539ms)
+✔ pm-14: 角币找零 (0.0343ms)
+✔ pm-15: 离整点还有多久 (0.0349ms)
+✔ pm-16: 一颗星不止一个人 (0.0325ms)
+✔ pm-17: 一块拼板有多大 (0.0539ms)
+✔ pm-18: 留下多少阅读时间 (0.0394ms)
+✔ pm-19: 跨过整点的预约 (0.0359ms)
+✔ pm-20: 先统一尺子的单位 (0.0346ms)
+✔ pm-21: 价签之间的小空隙 (0.0341ms)
+✔ pm-22: 两张名单别数重 (0.0324ms)
+✔ pm-23: 饮品搭配表 (0.0302ms)
+✔ pm-24: 倍数带子剪一段 (0.0293ms)
+✔ pm-25: 换一种小数单位 (0.1057ms)
+✔ pm-26: 四舍五入的边界 (0.1881ms)
+✔ pm-27: 零也要占位置 (0.1552ms)
+✔ pm-28: 把小数点对齐 (0.0786ms)
+✔ pm-29: 读懂柱子的高度 (0.063ms)
+✔ pm-30: 移一移变得同样多 (0.1144ms)
+✔ pm-31: 修好放大的乘法 (0.0681ms)
+✔ pm-32: 可以同时做的准备 (0.0521ms)
+✔ pm-33: 不同分法的纸带 (0.0643ms)
+✔ pm-34: 细分刻度不改长度 (0.0499ms)
+✔ pm-35: 尽量多的相同礼包 (0.1516ms)
+✔ pm-36: 两盏灯再次碰面 (0.0695ms)
+✔ pm-37: 按质量付钱 (0.0499ms)
+✔ pm-38: 相同盒子里的秘密 (0.0402ms)
+✔ pm-39: 每分钟的用水量 (0.0391ms)
+✔ pm-40: 折线往上走了多少 (0.0438ms)
+✔ pm-41: 一瓶里装几小杯 (0.0574ms)
+✔ pm-42: 按份数配徽章 (0.0365ms)
+✔ pm-43: 从差距找一份 (0.0983ms)
+✔ pm-44: 从完成量找原计划 (0.0809ms)
+✔ pm-45: 先增加再减少 (0.0527ms)
+✔ pm-46: 工作总量不变 (0.0419ms)
+✔ pm-47: 人数不同不能直接平均 (0.0561ms)
+✔ pm-48: 统计图中没写出的部分 (0.0651ms)
+✔ 48 original tasks, eight per recommended grade, unique IDs/goals/prompts (0.3826ms)
+✔ Input parser accepts equivalent forms without executing text (0.2119ms)
+✔ Calculator rejects invalid syntax, nonfinite values and division by zero (0.2693ms)
+✔ Known existing geometry/JSX/PhET exercise goals excluded (0.2219ms)
+✖ Integration: existing local activities are retained while grade metadata may be refined (24.1239ms)
+✔ Integration: strict entry whitelist (2.4489ms)
+✔ Integration: readiness waits for explicit lesson flag (0.8191ms)
+✔ opening and selecting a level do not create a completion or save (2.5371ms)
+✔ completion saves immediately and restores the checkpoint in a new session (3.0228ms)
+✔ replaying a level does not double-count or erase earlier completions (1.1214ms)
+✔ corrupt and incompatible saves recover without manufacturing progress (2.0573ms)
+✔ unknown levels and malformed completion timestamps are rejected (0.8217ms)
+✔ disabled storage retains session progress and shows a truthful failure status (1.0746ms)
+✔ separate tabs merge completed levels and preserve unrelated host settings (2.4916ms)
+✔ existing correct answers can be imported without replacing the resume checkpoint (1.4025ms)
+✔ the selected interpreter runs Python 3 (76.8167ms)
+✔ an explicit Python executable is used without shell quoting (218.5529ms)
+✔ script paths, arguments and failure exit codes survive the launcher (235.982ms)
+✔ Python module arguments are supported (249.5444ms)
+✔ a missing explicit interpreter fails clearly without silently switching (141.6363ms)
+✔ a non-Python executable cannot pass interpreter detection (212.1099ms)
+✔ the native Python entrypoint works with a restricted PATH (208.246ms)
+﹣ Linux falls back to a Python 3 interpreter named python (0.103ms) # SKIP
+✔ PhET splash graphics cannot count as a successfully explored activity (1.7333ms)
+✔ SVG classroom adapters finish loading without a canvas (0.2292ms)
+✔ four complete routes, 62 explicit stages, eight labs, seven original vehicle diagrams (12.9941ms)
+✔ launch vehicles, stations and representative return sequences are not conflated (0.3937ms)
+✔ every experimental slider endpoint produces finite bounded values (0.2843ms)
+✔ circular orbit at 400 km has plausible speed, period and gravity (0.1634ms)
+✔ RK4 preserves circular orbit radius and uses a labelled atmosphere boundary (12.4732ms)
+✔ thrust, staged mass, solar incidence and energy invariants (0.2461ms)
+✔ vacuum never reports an air-drag terminal speed; larger area lowers it (0.168ms)
+✔ docking requires alignment, slow relative speed and controlled attitude together (0.5046ms)
+✔ host retains third-party catalog and separate original entries (3.2879ms)
+✔ single-file builder has no external runtime scripts or styles (172.6418ms)
+✔ bundled JSXGraph glider follows its dynamic guide and retains area through moves and height updates (40.1093ms)
+✔ bundled JSXGraph fixed functional markers update on goal changes and reset (7.02ms)
+✔ equal-base equal-height triangles retain area while the apex slides, including outside the base (0.7759ms)
+✔ both visible mirror and vector targets are reachable with the existing quarter-grid controls (0.2723ms)
+ℹ tests 127
+ℹ suites 0
+ℹ pass 123
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 1887.5964
+
+✖ failing tests:
+
+test at tests\playground.test.mjs:8:1
+✖ 64 distinct activities; 22 recommended entries with 18 non-PhET activities (1.9639ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  65 !== 64
+  
+      at TestContext.<anonymous> (file:///C:/Users/cheng/Desktop/MathPhysics/tests/playground.test.mjs:8:95)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 65,
+    expected: 64,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\playground.test.mjs:10:1
+✖ custom and deliberately empty teaching selections are never overwritten (1.2095ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   'physics-demos'
+  -   'matter-bridge'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/cheng/Desktop/MathPhysics/tests/playground.test.mjs:10:305)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'physics-demos' ],
+    expected: [ 'matter-bridge' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\primary-math.test.mjs:38:1
+✖ Integration: existing local activities are retained while grade metadata may be refined (24.1239ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  12 !== 11
+  
+      at TestContext.<anonymous> (file:///C:/Users/cheng/Desktop/MathPhysics/tests/primary-math.test.mjs:42:9)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 12,
+    expected: 11,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

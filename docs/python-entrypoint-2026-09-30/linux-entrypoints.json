@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "platform": "linux",
+  "results": [
+    {
+      "id": "npm-start-help",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "id": "npm-start-live-http",
+      "passed": true,
+      "port": 8792
+    },
+    {
+      "id": "npm-start-cleanup",
+      "passed": true,
+      "port": 8792
+    },
+    {
+      "id": "standalone-geometry",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "id": "build-spaceflight",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "id": "build-playground",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "id": "build-phet",
+      "passed": true,
+      "exitCode": 0
+    },
+    {
+      "id": "all-npm-python-entrypoints-unified",
+      "passed": true,
+      "tasks": [
+        "start",
+        "import",
+        "package",
+        "standalone:geometry",
+        "build:spaceflight",
+        "build:playground",
+        "build:phet",
+        "test:spaceflight",
+        "test:classroom",
+        "test:classroom:inline"
+      ]
+    }
+  ],
+  "total": 8
+}

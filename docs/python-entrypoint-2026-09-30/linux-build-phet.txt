@@ -1,0 +1,10 @@
+
+> mathphysics-science-island@0.4.0 build:phet
+> node scripts/python.mjs scripts/build_phet_theme.py
+
+{
+  "forces-and-motion-basics": 92,
+  "energy-skate-park-basics": 39,
+  "area-builder": 15,
+  "vector-addition": 14
+}

@@ -1,0 +1,4 @@
+
+> mathphysics-science-island@0.4.0 start
+> python3 scripts/serve.py
+

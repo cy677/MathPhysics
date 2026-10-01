@@ -1,0 +1,1350 @@
+{
+  "passed": true,
+  "timestamp": "2026-09-30T16:01:10.376Z",
+  "questionCount": 48,
+  "visualQuestionCount": 33,
+  "phase": "core-stage",
+  "visualChecks": [
+    {
+      "id": "pm-01",
+      "kind": "balance",
+      "values": [
+        0,
+        5,
+        10
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 260,
+          "top": 58,
+          "right": 260,
+          "bottom": 225
+        },
+        {
+          "left": 260,
+          "top": 58,
+          "right": 422.5,
+          "bottom": 225
+        },
+        {
+          "left": 260,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-03",
+      "kind": "digits",
+      "values": [
+        0,
+        35,
+        70
+      ],
+      "knownPrimitives": 13,
+      "trialPrimitives": [
+        0,
+        41,
+        84
+      ],
+      "trialBounds": [
+        null,
+        {
+          "left": 67,
+          "top": 132,
+          "right": 500,
+          "bottom": 240
+        },
+        {
+          "left": 67,
+          "top": 132,
+          "right": 309,
+          "bottom": 249
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-04",
+      "kind": "balance",
+      "values": [
+        0,
+        7,
+        14
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 268.478271484375,
+          "top": 58,
+          "right": 268.478271484375,
+          "bottom": 225
+        },
+        {
+          "left": 268.478271484375,
+          "top": 58,
+          "right": 426.7391357421875,
+          "bottom": 225
+        },
+        {
+          "left": 268.478271484375,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-08",
+      "kind": "transfer",
+      "values": [
+        0,
+        4,
+        7
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 200,
+          "top": 164,
+          "right": 442.6666717529297,
+          "bottom": 245
+        },
+        {
+          "left": 200,
+          "top": 164,
+          "right": 564,
+          "bottom": 245
+        },
+        {
+          "left": 200,
+          "top": 164,
+          "right": 655,
+          "bottom": 245
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-09",
+      "kind": "digits",
+      "values": [
+        0,
+        45,
+        90
+      ],
+      "knownPrimitives": 13,
+      "trialPrimitives": [
+        0,
+        53,
+        108
+      ],
+      "trialBounds": [
+        null,
+        {
+          "left": 67,
+          "top": 132,
+          "right": 500,
+          "bottom": 240
+        },
+        {
+          "left": 67,
+          "top": 132,
+          "right": 309,
+          "bottom": 249
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-10",
+      "kind": "balance",
+      "values": [
+        0,
+        30,
+        60
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 226.37930297851562,
+          "top": 58,
+          "right": 226.37930297851562,
+          "bottom": 225
+        },
+        {
+          "left": 226.37930297851562,
+          "top": 58,
+          "right": 405.6896667480469,
+          "bottom": 225
+        },
+        {
+          "left": 226.37930297851562,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-11",
+      "kind": "groups",
+      "values": [
+        0,
+        15,
+        30
+      ],
+      "knownPrimitives": 40,
+      "trialPrimitives": [
+        0,
+        30,
+        50
+      ],
+      "trialBounds": [
+        null,
+        {
+          "left": 183.15789794921875,
+          "top": 64.74073791503906,
+          "right": 470.84210205078125,
+          "bottom": 178
+        },
+        {
+          "left": 183.15789794921875,
+          "top": 64.74073791503906,
+          "right": 593,
+          "bottom": 289
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-12",
+      "kind": "balance",
+      "values": [
+        0,
+        5,
+        10
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 65,
+          "top": 58,
+          "right": 65,
+          "bottom": 225
+        },
+        {
+          "left": 65,
+          "top": 58,
+          "right": 325,
+          "bottom": 225
+        },
+        {
+          "left": 65,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-13",
+      "kind": "groups",
+      "values": [
+        0,
+        2,
+        4
+      ],
+      "knownPrimitives": 20,
+      "trialPrimitives": [
+        0,
+        2,
+        4
+      ],
+      "trialBounds": [
+        null,
+        {
+          "left": 110,
+          "top": 263,
+          "right": 182,
+          "bottom": 283
+        },
+        {
+          "left": 110,
+          "top": 263,
+          "right": 286,
+          "bottom": 283
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-14",
+      "kind": "balance",
+      "values": [
+        0,
+        10,
+        20
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 425,
+          "top": 58,
+          "right": 425,
+          "bottom": 225
+        },
+        {
+          "left": 425,
+          "top": 58,
+          "right": 505,
+          "bottom": 225
+        },
+        {
+          "left": 425,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-15",
+      "kind": "clock",
+      "values": [
+        0,
+        30,
+        60
+      ],
+      "knownPrimitives": 4,
+      "trialPrimitives": [
+        4,
+        4,
+        4
+      ],
+      "trialBounds": [
+        {
+          "left": 458,
+          "top": 68,
+          "right": 602,
+          "bottom": 212
+        },
+        {
+          "left": 458,
+          "top": 68,
+          "right": 602,
+          "bottom": 212
+        },
+        {
+          "left": 458,
+          "top": 68,
+          "right": 602,
+          "bottom": 212
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-17",
+      "kind": "fraction",
+      "values": [
+        0,
+        0.5,
+        1
+      ],
+      "knownPrimitives": 15,
+      "trialPrimitives": [
+        15,
+        15,
+        15
+      ],
+      "trialBounds": [
+        {
+          "left": 155,
+          "top": 108,
+          "right": 645,
+          "bottom": 142
+        },
+        {
+          "left": 155,
+          "top": 108,
+          "right": 645,
+          "bottom": 142
+        },
+        {
+          "left": 155,
+          "top": 108,
+          "right": 645,
+          "bottom": 142
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-18",
+      "kind": "fraction",
+      "values": [
+        0,
+        0.5555555555555556,
+        1
+      ],
+      "knownPrimitives": 24,
+      "trialPrimitives": [
+        12,
+        12,
+        12
+      ],
+      "trialBounds": [
+        {
+          "left": 155,
+          "top": 178,
+          "right": 645,
+          "bottom": 212
+        },
+        {
+          "left": 155,
+          "top": 178,
+          "right": 645,
+          "bottom": 212
+        },
+        {
+          "left": 155,
+          "top": 178,
+          "right": 645,
+          "bottom": 212
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-19",
+      "kind": "clock",
+      "values": [
+        0,
+        60,
+        120
+      ],
+      "knownPrimitives": 4,
+      "trialPrimitives": [
+        4,
+        4,
+        4
+      ],
+      "trialBounds": [
+        {
+          "left": 458,
+          "top": 68,
+          "right": 602,
+          "bottom": 212
+        },
+        {
+          "left": 458,
+          "top": 68,
+          "right": 602,
+          "bottom": 212
+        },
+        {
+          "left": 458,
+          "top": 68,
+          "right": 602,
+          "bottom": 212
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-20",
+      "kind": "balance",
+      "values": [
+        0,
+        150,
+        300
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 169,
+          "top": 58,
+          "right": 169,
+          "bottom": 225
+        },
+        {
+          "left": 169,
+          "top": 58,
+          "right": 377,
+          "bottom": 225
+        },
+        {
+          "left": 169,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-21",
+      "kind": "balance",
+      "values": [
+        0,
+        0.5,
+        1
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 486.88677978515625,
+          "top": 58,
+          "right": 486.88677978515625,
+          "bottom": 225
+        },
+        {
+          "left": 486.88677978515625,
+          "top": 58,
+          "right": 535.9434204101562,
+          "bottom": 225
+        },
+        {
+          "left": 486.88677978515625,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-23",
+      "kind": "grid",
+      "values": [
+        0,
+        5,
+        10
+      ],
+      "knownPrimitives": 6,
+      "trialPrimitives": [
+        0,
+        5,
+        10
+      ],
+      "trialBounds": [
+        null,
+        {
+          "left": 171,
+          "top": 52,
+          "right": 324,
+          "bottom": 180
+        },
+        {
+          "left": 171,
+          "top": 52,
+          "right": 354,
+          "bottom": 290
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-24",
+      "kind": "balance",
+      "values": [
+        0,
+        20,
+        40
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 142.44680786132812,
+          "top": 58,
+          "right": 142.44680786132812,
+          "bottom": 225
+        },
+        {
+          "left": 142.44680786132812,
+          "top": 58,
+          "right": 363.7234191894531,
+          "bottom": 225
+        },
+        {
+          "left": 142.44680786132812,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-25",
+      "kind": "fraction",
+      "values": [
+        0,
+        50,
+        100
+      ],
+      "knownPrimitives": 103,
+      "trialPrimitives": [
+        103,
+        103,
+        103
+      ],
+      "trialBounds": [
+        {
+          "left": 155,
+          "top": 108,
+          "right": 645,
+          "bottom": 142
+        },
+        {
+          "left": 155,
+          "top": 108,
+          "right": 645,
+          "bottom": 142
+        },
+        {
+          "left": 155,
+          "top": 108,
+          "right": 645,
+          "bottom": 142
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-27",
+      "kind": "digits",
+      "values": [
+        400000,
+        405000,
+        410000
+      ],
+      "knownPrimitives": 6,
+      "trialPrimitives": [
+        6,
+        6,
+        6
+      ],
+      "trialBounds": [
+        {
+          "left": 81,
+          "top": 182,
+          "right": 641,
+          "bottom": 246
+        },
+        {
+          "left": 81,
+          "top": 166,
+          "right": 641,
+          "bottom": 246
+        },
+        {
+          "left": 81,
+          "top": 182,
+          "right": 641,
+          "bottom": 246
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-28",
+      "kind": "digits",
+      "values": [
+        0,
+        5,
+        10
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 65,
+          "top": 154,
+          "right": 65,
+          "bottom": 260
+        },
+        {
+          "left": 65,
+          "top": 154,
+          "right": 350,
+          "bottom": 260
+        },
+        {
+          "left": 65,
+          "top": 154,
+          "right": 635,
+          "bottom": 260
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-30",
+      "kind": "transfer",
+      "values": [
+        0,
+        3,
+        5
+      ],
+      "knownPrimitives": 3,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 200,
+          "top": 164,
+          "right": 613.6363525390625,
+          "bottom": 245
+        },
+        {
+          "left": 200,
+          "top": 164,
+          "right": 572.2727355957031,
+          "bottom": 245
+        },
+        {
+          "left": 200,
+          "top": 164,
+          "right": 655,
+          "bottom": 245
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-31",
+      "kind": "balance",
+      "values": [
+        1,
+        5,
+        8
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 65,
+          "top": 58,
+          "right": 130,
+          "bottom": 225
+        },
+        {
+          "left": 65,
+          "top": 58,
+          "right": 390,
+          "bottom": 225
+        },
+        {
+          "left": 65,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-33",
+      "kind": "fraction",
+      "values": [
+        0,
+        0.5,
+        1
+      ],
+      "knownPrimitives": 30,
+      "trialPrimitives": [
+        15,
+        15,
+        15
+      ],
+      "trialBounds": [
+        {
+          "left": 155,
+          "top": 178,
+          "right": 645,
+          "bottom": 212
+        },
+        {
+          "left": 155,
+          "top": 178,
+          "right": 645,
+          "bottom": 212
+        },
+        {
+          "left": 155,
+          "top": 178,
+          "right": 645,
+          "bottom": 212
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-34",
+      "kind": "fraction",
+      "values": [
+        0,
+        10,
+        20
+      ],
+      "knownPrimitives": 23,
+      "trialPrimitives": [
+        23,
+        23,
+        23
+      ],
+      "trialBounds": [
+        {
+          "left": 155,
+          "top": 108,
+          "right": 645,
+          "bottom": 142
+        },
+        {
+          "left": 155,
+          "top": 108,
+          "right": 645,
+          "bottom": 142
+        },
+        {
+          "left": 155,
+          "top": 108,
+          "right": 645,
+          "bottom": 142
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-35",
+      "kind": "packing",
+      "values": [
+        1,
+        7,
+        12
+      ],
+      "knownPrimitives": 0,
+      "trialPrimitives": [
+        43,
+        49,
+        54
+      ],
+      "trialBounds": [
+        {
+          "left": 40,
+          "top": 57,
+          "right": 190,
+          "bottom": 155
+        },
+        {
+          "left": 40,
+          "top": 57,
+          "right": 700,
+          "bottom": 332
+        },
+        {
+          "left": 40,
+          "top": 57,
+          "right": 700,
+          "bottom": 312
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-38",
+      "kind": "balance",
+      "values": [
+        0,
+        8,
+        15
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 135,
+          "top": 58,
+          "right": 135,
+          "bottom": 225
+        },
+        {
+          "left": 135,
+          "top": 58,
+          "right": 375,
+          "bottom": 225
+        },
+        {
+          "left": 135,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-39",
+      "kind": "balance",
+      "values": [
+        0,
+        0.5,
+        1
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 65,
+          "top": 58,
+          "right": 65,
+          "bottom": 225
+        },
+        {
+          "left": 65,
+          "top": 58,
+          "right": 325,
+          "bottom": 225
+        },
+        {
+          "left": 65,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-41",
+      "kind": "balance",
+      "values": [
+        0,
+        5,
+        10
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 65,
+          "top": 58,
+          "right": 65,
+          "bottom": 225
+        },
+        {
+          "left": 65,
+          "top": 58,
+          "right": 325,
+          "bottom": 225
+        },
+        {
+          "left": 65,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-42",
+      "kind": "ratio",
+      "values": [
+        0,
+        20,
+        40
+      ],
+      "knownPrimitives": 1,
+      "trialPrimitives": [
+        9,
+        9,
+        9
+      ],
+      "trialBounds": [
+        {
+          "left": 155,
+          "top": 58,
+          "right": 155,
+          "bottom": 323
+        },
+        {
+          "left": 155,
+          "top": 58,
+          "right": 395,
+          "bottom": 323
+        },
+        {
+          "left": 155,
+          "top": 58,
+          "right": 635,
+          "bottom": 323
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-43",
+      "kind": "ratio",
+      "values": [
+        0,
+        15,
+        30
+      ],
+      "knownPrimitives": 1,
+      "trialPrimitives": [
+        8,
+        8,
+        8
+      ],
+      "trialBounds": [
+        {
+          "left": 155,
+          "top": 58,
+          "right": 155,
+          "bottom": 323
+        },
+        {
+          "left": 155,
+          "top": 58,
+          "right": 395,
+          "bottom": 323
+        },
+        {
+          "left": 155,
+          "top": 58,
+          "right": 635,
+          "bottom": 323
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-44",
+      "kind": "balance",
+      "values": [
+        0,
+        50,
+        100
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 65,
+          "top": 58,
+          "right": 65,
+          "bottom": 225
+        },
+        {
+          "left": 65,
+          "top": 58,
+          "right": 325,
+          "bottom": 225
+        },
+        {
+          "left": 65,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    },
+    {
+      "id": "pm-46",
+      "kind": "balance",
+      "values": [
+        0,
+        10,
+        20
+      ],
+      "knownPrimitives": 2,
+      "trialPrimitives": [
+        2,
+        2,
+        2
+      ],
+      "trialBounds": [
+        {
+          "left": 65,
+          "top": 58,
+          "right": 65,
+          "bottom": 225
+        },
+        {
+          "left": 65,
+          "top": 58,
+          "right": 325,
+          "bottom": 225
+        },
+        {
+          "left": 65,
+          "top": 58,
+          "right": 585,
+          "bottom": 225
+        }
+      ],
+      "distinctTrialStates": 3
+    }
+  ],
+  "interactions": {
+    "keyboard": true,
+    "plusMinus": true,
+    "mouseDrag": {
+      "from": 0,
+      "to": 8
+    },
+    "playPause": {
+      "from": 0,
+      "to": 1
+    },
+    "reducedMotion": true,
+    "reset": true,
+    "touchDrag": {
+      "from": 0,
+      "to": 8,
+      "targetFraction": 0.8
+    },
+    "autosaveReload": true,
+    "legacyCourseCheckpoint": {
+      "question": "pm-42",
+      "recommendedGrade": 6
+    }
+  },
+  "layouts": [
+    {
+      "width": 1440,
+      "documentWidth": 1440,
+      "bodyWidth": 1440,
+      "sceneWidth": 880,
+      "slider": {
+        "left": 474.390625,
+        "right": 1128,
+        "top": 478.125,
+        "bottom": 522.125,
+        "width": 653.609375
+      },
+      "controlCount": 1,
+      "controlVisible": true,
+      "screenshot": "output\\playwright\\primary-math-interaction\\core-stage\\screenshots\\primary-1440x1000.png"
+    },
+    {
+      "width": 768,
+      "documentWidth": 768,
+      "bodyWidth": 768,
+      "sceneWidth": 700,
+      "slider": {
+        "left": 87.390625,
+        "right": 593,
+        "top": 472.578125,
+        "bottom": 516.578125,
+        "width": 505.609375
+      },
+      "controlCount": 1,
+      "controlVisible": true,
+      "screenshot": "output\\playwright\\primary-math-interaction\\core-stage\\screenshots\\primary-768x1024.png"
+    },
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "sceneWidth": 660,
+      "slider": {
+        "left": 87.390625,
+        "right": 215,
+        "top": 452.578125,
+        "bottom": 496.578125,
+        "width": 127.609375
+      },
+      "controlCount": 1,
+      "controlVisible": true,
+      "screenshot": "output\\playwright\\primary-math-interaction\\core-stage\\screenshots\\primary-390x844.png"
+    }
+  ],
+  "host": {
+    "opened": true,
+    "ready": true,
+    "resumedQuestion": "pm-42",
+    "returned": true,
+    "iframeRemoved": true
+  },
+  "standalone": {},
+  "pageErrors": [],
+  "externalRequests": [],
+  "browser": "141.0.7390.37",
+  "semanticScreenshots": [
+    "output\\playwright\\primary-math-interaction\\core-stage\\screenshots\\model-pm-01-trial-4.png",
+    "output\\playwright\\primary-math-interaction\\core-stage\\screenshots\\model-pm-27-trial-403020.png",
+    "output\\playwright\\primary-math-interaction\\core-stage\\screenshots\\model-pm-35-trial-6.png",
+    "output\\playwright\\primary-math-interaction\\core-stage\\screenshots\\model-pm-35-trial-7.png",
+    "output\\playwright\\primary-math-interaction\\core-stage\\screenshots\\model-pm-42-trial-15.png",
+    "output\\playwright\\primary-math-interaction\\core-stage\\screenshots\\model-pm-42-trial-30.png"
+  ],
+  "semantics": [
+    {
+      "id": "pm-27",
+      "kind": "digits",
+      "placeGroups": [
+        {
+          "place": "十万位",
+          "visibleColumns": 1
+        },
+        {
+          "place": "万位",
+          "visibleColumns": 0
+        },
+        {
+          "place": "千位",
+          "visibleColumns": 1
+        },
+        {
+          "place": "百位",
+          "visibleColumns": 0
+        },
+        {
+          "place": "十位",
+          "visibleColumns": 1
+        },
+        {
+          "place": "个位",
+          "visibleColumns": 0
+        }
+      ]
+    },
+    {
+      "id": "pm-35",
+      "kind": "packing",
+      "bagCount": 6,
+      "applesPerBag": 3,
+      "orangesPerBag": 4
+    },
+    {
+      "id": "pm-42",
+      "kind": "ratio",
+      "parts": [
+        3,
+        5
+      ],
+      "partWidth": 22.499999999999996
+    },
+    {
+      "id": "pm-43",
+      "kind": "ratio",
+      "parts": [
+        2,
+        5
+      ],
+      "partWidth": 38.400000000000006
+    },
+    {
+      "id": "pm-13",
+      "kind": "groups",
+      "knownUnchanged": true,
+      "trialChanged": true
+    },
+    {
+      "id": "pm-15",
+      "kind": "clock",
+      "knownUnchanged": true,
+      "trialChanged": true
+    },
+    {
+      "id": "pm-17",
+      "kind": "fraction",
+      "knownUnchanged": true,
+      "trialChanged": true
+    },
+    {
+      "id": "pm-30",
+      "kind": "transfer",
+      "knownUnchanged": true,
+      "trialChanged": true
+    }
+  ],
+  "browserClosed": true,
+  "httpPort": 56247,
+  "serverClosed": true,
+  "portReleased": true
+}

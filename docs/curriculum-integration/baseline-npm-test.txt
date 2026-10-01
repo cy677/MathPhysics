@@ -1,0 +1,70 @@
+
+> mathphysics-science-island@0.4.0 test
+> node --test tests/*.test.mjs
+
+✔ all registered upstream Matter examples are catalogued, not sampled (1.3705ms)
+✔ all four complete PhET simulations, all screens and tangram retained (1.8296ms)
+✔ exact upstream file bytes match complete inventory hashes (330.0728ms)
+✔ unique IDs, local entries, all elementary grades, initial subset only (0.3867ms)
+✔ malformed storage and unknown entries cannot manufacture progression (1.6944ms)
+✔ import configuration is validated and does not import executable paths (0.3753ms)
+✔ license barriers are disclosed; unlicensed project is not vendored (0.4375ms)
+✔ six independently graded experiment entries share the playground without replacing existing activities (0.7471ms)
+✔ entry allowlist accepts exactly the six canonical mode URLs and preserves existing local paths (0.6864ms)
+✔ new experiments stay closed until individually selected and existing teaching choices survive reload (1.1153ms)
+✔ 24 lessons, valid sources, all drawings and answers finite at slider extremes (78.501ms)
+✔ normalization protects nonpositive widths and nonfinite parameters (0.2109ms)
+✔ square expansion, square difference, distributivity hold over many lengths (0.3264ms)
+✔ parallelogram cut and translated piece tile the final rectangle (0.6595ms)
+✔ difference-square cut is rigid and exactly fills the remaining rectangle (0.7948ms)
+✔ two triangles, two trapezoids, rhombus and central Pythagorean square (0.4394ms)
+✔ same-height triangle ratio is not similarity squared ratio (0.2486ms)
+✔ circle and cylinder use convergent polygon bounds, not an exact finite rectangle (0.1941ms)
+✔ pyramid factor validated by the nonoverlapping max-coordinate decomposition (2.0745ms)
+✔ cone and hemisphere Cavalieri sections match at every sampled height (2.0038ms)
+✔ numeric answers accept two decimals/fractions and reject malformed or infinite text (0.5311ms)
+✔ new local catalog is separate from upstream, bundled, and marked original MIT (2.4023ms)
+✔ every derivative reverses byte-for-byte to the pinned PhET source (1061.3719ms)
+✔ activity entry resolver preserves upstream data while selecting presentation adapters (2.6392ms)
+✔ host keeps PhET attribution and learning help (37.4211ms)
+✔ 63 distinct activities; 22 recommended entries with 18 non-PhET activities (4.7158ms)
+✔ legacy starter defaults upgrade once while preserving exploration records (0.8953ms)
+✔ custom and deliberately empty teaching selections are never overwritten (0.2724ms)
+✔ JSXGraph package files match their exact import hashes and carry MIT attribution (141.5071ms)
+✔ child-facing descriptions and host template do not show integration boilerplate (1.1655ms)
+✔ six dynamic activities use valid geometry, including degenerate triangles (0.5378ms)
+✔ reflection is an involution, rotation is isometric, similarity scales area by k squared (0.8317ms)
+✔ linear map fixes origin; determinant matches area and can collapse to a line (0.3337ms)
+✔ flat tangram uses all original polygon vertices, seven pieces and original snapshot (2.8192ms)
+✔ the selected interpreter runs Python 3 (77.692ms)
+✔ an explicit Python executable is used without shell quoting (223.7612ms)
+✔ script paths, arguments and failure exit codes survive the launcher (224.9063ms)
+✔ Python module arguments are supported (236.3587ms)
+✔ a missing explicit interpreter fails clearly without silently switching (100.5541ms)
+✔ a non-Python executable cannot pass interpreter detection (208.3776ms)
+✔ the native Python entrypoint works with a restricted PATH (215.3993ms)
+﹣ Linux falls back to a Python 3 interpreter named python (0.1404ms) # SKIP
+✔ PhET splash graphics cannot count as a successfully explored activity (1.2396ms)
+✔ SVG classroom adapters finish loading without a canvas (0.2684ms)
+✔ four complete routes, 62 explicit stages, eight labs, seven original vehicle diagrams (15.258ms)
+✔ launch vehicles, stations and representative return sequences are not conflated (0.4238ms)
+✔ every experimental slider endpoint produces finite bounded values (0.5139ms)
+✔ circular orbit at 400 km has plausible speed, period and gravity (0.3278ms)
+✔ RK4 preserves circular orbit radius and uses a labelled atmosphere boundary (14.3031ms)
+✔ thrust, staged mass, solar incidence and energy invariants (0.2691ms)
+✔ vacuum never reports an air-drag terminal speed; larger area lowers it (0.183ms)
+✔ docking requires alignment, slow relative speed and controlled attitude together (0.1687ms)
+✔ host retains third-party catalog and separate original entries (3.0329ms)
+✔ single-file builder has no external runtime scripts or styles (175.8917ms)
+✔ bundled JSXGraph glider follows its dynamic guide and retains area through moves and height updates (39.2371ms)
+✔ bundled JSXGraph fixed functional markers update on goal changes and reset (6.087ms)
+✔ equal-base equal-height triangles retain area while the apex slides, including outside the base (0.7469ms)
+✔ both visible mirror and vector targets are reachable with the existing quarter-grid controls (0.2547ms)
+ℹ tests 58
+ℹ suites 0
+ℹ pass 57
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 1711.4361

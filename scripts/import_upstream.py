@@ -5,6 +5,7 @@ No sim minification, puzzle truncation, remote iframe, CDN or source-code patchi
 from __future__ import annotations
 import concurrent.futures, hashlib, io, json, os, re, shutil, tarfile, time, urllib.request, zipfile
 from pathlib import Path, PurePosixPath
+from phet_registry import verified_additions
 ROOT = Path(__file__).resolve().parents[1]
 LOCK_PATH = ROOT / 'config/upstream-lock.json'
 LOCK = json.loads(LOCK_PATH.read_text()) if LOCK_PATH.exists() else {'schemaVersion':1,'files':{},'repositories':{}}
@@ -100,8 +101,10 @@ def inventory():
         title=re.search(r"\.title\s*=\s*['\"]([^'\"]+)",text)
         heavy=name.startswith('stress') or name in ['stats','substep','renderResize','events','collisionFiltering','remove','manipulation','compositeManipulation','raycasting','sleeping','sensors','views']
         activities.append({'id':'matter-'+name,'title':TITLES.get(name,title.group(1) if title else name),'zone':'physics','grades':[3,4,5,6] if not heavy else [5,6],'kind':'example','adapter':'matter','entry':f'vendor/matter/demo/mathphysics.html?example={name}','description':('开发参考示例；建议由教师陪同探索。' if heavy else '拖动物体，观察碰撞、运动和结构变化。'),'content':[title.group(1) if title else name],'license':'MIT (code); see bundled asset notices','source':f'https://github.com/liabru/matter-js/blob/0.20.0/examples/{name}.js','progressMode':'visit-only','completeUpstream':True,'teacherRecommended':heavy})
-    all_files={str(p.relative_to(ROOT)):{'bytes':p.stat().st_size,'sha256':digest(p.read_bytes())} for p in sorted((ROOT/'vendor').rglob('*')) if p.is_file()}
-    output={'schemaVersion':1,'generatedFrom':'Pinned full upstream distribution, not a sampled level list','activities':activities,'counts':{'phetSimulations':4,'phetScreens':13,'areaBuilderDifficultyLevels':6,'tangramBuiltInSnapshots':1,'matterExamples':len(ids),'launchableActivities':len(activities)},'excluded':[{'repository':'DennisWeiss/linear-transform-visualizer','reason':'No explicit repository license found; source not copied.'},{'repository':'phaserjs/phaser','reason':'Framework only, not a curriculum. Not needed for first-version integration.'},{'repository':'jsxgraph/jsxgraph','reason':'Optional drawing framework; not a selected set of game levels.'}],'files':all_files}
+    additions=verified_additions()
+    activities+=additions
+    all_files={p.relative_to(ROOT).as_posix():{'bytes':p.stat().st_size,'sha256':digest(p.read_bytes())} for p in sorted((ROOT/'vendor').rglob('*')) if p.is_file()}
+    output={'schemaVersion':1,'generatedFrom':'Pinned full upstream distribution, not a sampled level list','activities':activities,'counts':{'phetSimulations':4+len(additions),'phetScreens':13+sum(item['screenCount'] for item in additions),'areaBuilderDifficultyLevels':6,'tangramBuiltInSnapshots':1,'matterExamples':len(ids),'launchableActivities':len(activities)},'excluded':[{'repository':'DennisWeiss/linear-transform-visualizer','reason':'No explicit repository license found; source not copied.'},{'repository':'phaserjs/phaser','reason':'Framework only, not a curriculum. Not needed for first-version integration.'},{'repository':'jsxgraph/jsxgraph','reason':'Optional drawing framework; not a selected set of game levels.'}],'files':all_files}
     (ROOT/'config/inventory.json').write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n')
     print('INVENTORY',json.dumps(output['counts']),flush=True)
     return output
@@ -117,8 +120,15 @@ def main():
         text=data.decode('utf-8')
         if len(data)<100000 or 'phet' not in text.lower() or '<html' not in text.lower(): raise ValueError('Not a complete simulation: '+sim)
     for name,ver in [('poly-decomp','0.3.0'),('matter-wrap','0.2.0'),('pathseg','1.2.1')]: npm_package(name,ver)
-    template=ROOT/'src/adapters/matter.html'
-    if template.exists(): shutil.copyfile(template,ROOT/'vendor/matter/demo/mathphysics.html')
+    # Retain the pinned compatibility entry; the product now resolves to src/adapters/matter.html.
+    # Never import the evolving presentation page into the fixed vendor inventory.
+    template=ROOT/'scripts/fixtures/matter-legacy.html'
+    compatibility=ROOT/'vendor/matter/demo/mathphysics.html'
+    previous=ROOT/'config/inventory.json'
+    if previous.exists():
+        expected=json.loads(previous.read_text(encoding='utf-8'))['files'].get('vendor/matter/demo/mathphysics.html',{}).get('sha256')
+        if expected and digest(template.read_bytes())!=expected:raise ValueError('Pinned Matter compatibility entry changed')
+    shutil.copyfile(template,compatibility)
     LOCK_PATH.write_text(json.dumps(LOCK,ensure_ascii=False,indent=2)+'\n')
     output=inventory()
     lines=['# 全量整合清单','', '本文件由导入脚本生成。上游版本及全部文件SHA256见 config/upstream-lock.json 与 config/inventory.json。','', '保留全部已选内容，并不等于执行所有内容：只在进入活动时创建一个运行实例。','', '## 范围','', json.dumps(output['counts'],ensure_ascii=False), '', '## 重要边界','', '- Area Builder 保留全部6个难度等级和完整随机题目生成器；随机题库不是固定有限题目清单。','- PhET 其余项目是多页面实验，不虚构成关卡。全部原始导航保留。','- Tangram 的仓库只有1个内置快照；更多图形服务及上一题/下一题函数在上游未完成，不声称已获得不存在的服务器题库。','- Matter.js 保留完整仓库、全部注册示例和资源；其中性能压力测试默认关闭，但未删除。','- 无许可证的 linear-transform-visualizer 未复制；向量主题由完整 PhET Vector Addition 承担。','- Phaser、JSXGraph 是备选基础库，不是课程关卡库，本版未引入。','- 官方PhET HTML按当前CC BY-NC 4.0政策保守处理；源码快照单独保留其GPL许可证，源码快照不声称是官方成品的完整可复现构建依赖。','', '## 已整合活动','']

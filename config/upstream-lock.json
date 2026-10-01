@@ -78,6 +78,42 @@
       "sha256": "6183c0fb5a5f891e19ee7fd87e1010380bfd8a6f1e76bdc5146d29604f350c81",
       "bytes": 46734,
       "license": "Chromium's License"
+    },
+    "vendor/phet/fractions-intro.html": {
+      "bytes": 2877396,
+      "sha256": "d0cf4bbb8888d0a16628ad4a69df9ad5b49b4cc4b15d9433a979dfc1157448c3",
+      "url": "https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_all.html",
+      "license": "CC BY-NC 4.0 (official HTML; preserve embedded notices)"
+    },
+    "vendor/phet/fraction-matcher.html": {
+      "bytes": 2100862,
+      "sha256": "28d8fbb3aabe7d10b4b64bd02d26b6b9aa7e5025f4c226396f9d6cf057b1cbfc",
+      "url": "https://phet.colorado.edu/sims/html/fraction-matcher/latest/fraction-matcher_all.html",
+      "license": "CC BY-NC 4.0 (official HTML; preserve embedded notices)"
+    },
+    "vendor/phet/balancing-act.html": {
+      "bytes": 3509612,
+      "sha256": "fa365bacf9b52b0800b4596b307ac61d7675143443178288c8e832c6e3a76e6c",
+      "url": "https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act_all.html",
+      "license": "CC BY-NC 4.0 (official HTML; preserve embedded notices)"
+    },
+    "vendor/phet/circuit-construction-kit-dc.html": {
+      "bytes": 3926289,
+      "sha256": "4feae7b4823354d57112fc46c3bdca9de5c3612e7695cd8967b8c32f122736f1",
+      "url": "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_all.html",
+      "license": "CC BY-NC 4.0 (official HTML; preserve embedded notices)"
+    },
+    "vendor/phet/states-of-matter-basics.html": {
+      "bytes": 2670753,
+      "sha256": "fdb67dbaf55910c07246e074c8a68c18224cc7b037733fa581a29aee0ab2a762",
+      "url": "https://phet.colorado.edu/sims/html/states-of-matter-basics/latest/states-of-matter-basics_all.html",
+      "license": "CC BY-NC 4.0 (official HTML; preserve embedded notices)"
+    },
+    "vendor/phet/build-a-molecule.html": {
+      "bytes": 8771113,
+      "sha256": "2d60a20708150c70399c7798fc512a6fd7fc9ce726e87f695fd0040cc846a09a",
+      "url": "https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_all.html",
+      "license": "CC BY-NC 4.0 (official HTML; preserve embedded notices)"
     }
   },
   "repositories": {

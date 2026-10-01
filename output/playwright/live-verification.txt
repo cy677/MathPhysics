@@ -1,0 +1,67 @@
+### Result
+{"passed":true,"url":"https://124.70.198.189/mathphysics/","recommendedEntries":22,"totalEntries":57,"activities":[{"id":"jsxgraph-playground","ready":true,"src":"lessons/jsxgraph-playground/index.html"},{"id":"tangram-flat","ready":true,"src":"lessons/tangram-flat/index.html"},{"id":"matter-slingshot","ready":true,"src":"vendor/matter/demo/mathphysics.html?example=slingshot"},{"id":"spaceflight","ready":true,"src":"lessons/spaceflight/index.html"},{"id":"geometry-proofs","ready":true,"src":"lessons/geometric-proofs/index.html"},{"id":"forces-and-motion-basics","ready":true,"src":"src/phet/generated/forces-and-motion-basics.html?locale=zh_CN&webgl=false&allowLinks=false"},{"id":"area-builder","ready":true,"src":"src/phet/generated/area-builder.html?locale=zh_CN&webgl=false&allowLinks=false"},{"id":"energy-skate-park-basics","ready":true,"src":"src/phet/generated/energy-skate-park-basics.html?locale=zh_CN&webgl=false&allowLinks=false"},{"id":"vector-addition","ready":true,"src":"src/phet/generated/vector-addition.html?locale=zh_CN&webgl=false&allowLinks=false"}],"customSettingsPreserved":true,"visitsPreserved":true,"unrelatedStoragePreserved":true,"mobileWidth":390,"errors":[],"missing":[]}
+### Ran Playwright code
+```js
+await (async (page) => {
+  const base = 'https://124.70.198.189/mathphysics/';
+  const errors = [], missing = [], results = [];
+  page.on('pageerror', e => errors.push(e.message));
+  page.on('response', r => { if (r.url().startsWith(base) && r.status() >= 400) missing.push({url:r.url(),status:r.status()}); });
+  const check = (ok, label) => { if (!ok) throw Error(label); };
+  await page.setViewportSize({width:1400,height:1000});
+  if (await page.locator('[data-activity]').count() === 0) {
+    await page.locator('#teacher-open').click();
+    await page.locator('#open-recommended').click();
+    await page.locator('[data-close="teacher-dialog"]').click();
+  }
+  await page.locator('[data-activity]').first().waitFor();
+  check(await page.locator('[data-activity]').count() === 22, 'recommended entries');
+  await page.locator('#only-open').uncheck();
+  check(await page.locator('[data-activity]').count() === 57, 'full catalog');
+  await page.locator('#only-open').check();
+  await page.screenshot({path:'output/playwright/mathphysics-live-home.png',fullPage:true});
+  await page.evaluate(() => localStorage.setItem('mathphysics.deployment-preservation-probe','retained'));
+  for (const id of ['jsxgraph-playground','tangram-flat','matter-slingshot','spaceflight','geometry-proofs','forces-and-motion-basics','area-builder','energy-skate-park-basics','vector-addition']) {
+    await page.locator(`[data-launch="${id}"]`).click();
+    await page.waitForFunction(() => document.getElementById('loading').hidden, null, {timeout:90000});
+    check(await page.locator('iframe').count() === 1, `iframe ${id}`);
+    const src = await page.locator('iframe').getAttribute('src');
+    if (['forces-and-motion-basics','area-builder','energy-skate-park-basics','vector-addition'].includes(id)) check(src.includes('src/phet/generated/'), `new PhET entry ${id}`);
+    if (id === 'forces-and-motion-basics') {
+      await page.frameLocator('iframe').locator('#splash-container').waitFor({state:'detached',timeout:60000});
+      await page.screenshot({path:'output/playwright/mathphysics-live-phet.png'});
+    }
+    results.push({id,ready:true,src});
+    await page.locator('#player-back').click();
+    check(await page.locator('iframe').count() === 0, `cleanup ${id}`);
+  }
+  const stateBefore = await page.evaluate(() => JSON.parse(localStorage.getItem('mathphysics.state.v1')));
+  check(Object.keys(stateBefore.visited).length >= 9, 'visits recorded');
+  await page.locator('#teacher-open').click();
+  await page.locator('#close-all').click();
+  await page.locator('[data-close="teacher-dialog"]').click();
+  await page.reload();
+  await page.waitForFunction(() => document.getElementById('stats').textContent.includes('57'));
+  check(await page.locator('[data-activity]').count() === 0, 'intentionally empty selection preserved');
+  const stateAfter = await page.evaluate(() => JSON.parse(localStorage.getItem('mathphysics.state.v1')));
+  const visits = state => JSON.stringify(Object.entries(state.visited).sort(([a],[b]) => a.localeCompare(b)));
+  check(visits(stateAfter) === visits(stateBefore), 'visits preserved after update/reload');
+  check(await page.evaluate(() => localStorage.getItem('mathphysics.deployment-preservation-probe')) === 'retained', 'unrelated storage preserved');
+  await page.locator('#teacher-open').click();
+  await page.locator('#open-recommended').click();
+  await page.locator('[data-close="teacher-dialog"]').click();
+  await page.reload();
+  await page.locator('[data-activity]').first().waitFor();
+  check(await page.locator('[data-activity]').count() === 22, 'recommended settings persist');
+  await page.setViewportSize({width:390,height:844});
+  check(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'mobile horizontal overflow');
+  await page.screenshot({path:'output/playwright/mathphysics-live-mobile.png',fullPage:true});
+  await page.evaluate(() => localStorage.removeItem('mathphysics.deployment-preservation-probe'));
+  check(errors.length === 0, 'browser errors: '+JSON.stringify(errors));
+  check(missing.length === 0, 'missing local resources: '+JSON.stringify(missing));
+  return {passed:true,url:base,recommendedEntries:22,totalEntries:57,activities:results,customSettingsPreserved:true,visitsPreserved:true,unrelatedStoragePreserved:true,mobileWidth:390,errors,missing};
+}
+)(page);
+```
+### Events
+- New console entries: .playwright-cli\console-2026-09-30T06-08-44-068Z.log#L5-L8

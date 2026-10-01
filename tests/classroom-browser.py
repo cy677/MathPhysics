@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """Classroom v0.4 acceptance. Default: real HTTP; --inline: isolated bundles only."""
-import argparse,json,os,subprocess,time,traceback,urllib.request
+import argparse,json,os,subprocess,sys,time,traceback,urllib.request
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'scripts'))
+from build_display_adapters import resolve_entry
 parser=argparse.ArgumentParser();parser.add_argument('--inline',action='store_true');args=parser.parse_args()
 OUT=ROOT/'docs/classroom-screenshots';OUT.mkdir(parents=True,exist_ok=True)
-up=json.loads((ROOT/'config/inventory.json').read_text());local=json.loads((ROOT/'config/local-activities.json').read_text());defaults=json.loads((ROOT/'config/defaults.json').read_text());activities=up['activities']+local['activities']
+up=json.loads((ROOT/'config/inventory.json').read_text(encoding='utf-8'));local=json.loads((ROOT/'config/local-activities.json').read_text(encoding='utf-8'));defaults=json.loads((ROOT/'config/defaults.json').read_text(encoding='utf-8'));activities=up['activities']+local['activities']
+presentation=json.loads((ROOT/'config/presentation.json').read_text(encoding='utf-8'))
+visible_activities=[a for a in activities if a['adapter']!='matter' and not presentation['activities'].get(a['id'],{}).get('hidden',False)]
 report={'suite':'v0.4 isolated inline bundles' if args.inline else 'v0.4 actual HTTP, all activities, interactions and file:// bundles','results':[],'limitations':['Touch emulation is not a physical iPad Safari test.','Smoke tests verify execution, not every randomized upstream challenge.']}
 if args.inline:report['limitations'].append('Inline checks do not replace the real HTTP and file:// CI checks.')
 base='http://127.0.0.1:8784/';server=None
@@ -27,7 +31,7 @@ def drag_jxg_point(page,index,dx,dy):
 
 try:
  if not args.inline:
-  server=subprocess.Popen(['python3','scripts/serve.py','--port','8784'],cwd=ROOT,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+  server=subprocess.Popen([sys.executable,'scripts/serve.py','--port','8784'],cwd=ROOT,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
   for _ in range(60):
    try:
     if urllib.request.urlopen(base,timeout=1).status==200:break
@@ -44,76 +48,69 @@ try:
   ctx.route('**/*',route)
   page=ctx.new_page();page.set_default_timeout(12000);errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
   def load_module(folder,bundle):
-   if args.inline:page.set_content((ROOT/'dist'/bundle).read_text(),wait_until='load')
+   if args.inline:page.set_content((ROOT/'dist'/bundle).read_text(encoding='utf-8'),wait_until='load')
    else:page.goto(base+'lessons/'+folder+'/index.html')
    page.wait_for_function('window.__mpReady===true')
   if not args.inline:
    def host():
-    page.goto(base);page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==22
+    page.goto(base);page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==len(visible_activities)
     text=page.locator('#home').inner_text();assert not any(s in text for s in ['第一版统一','暂不改写','原版完整保留','未开放的内容不会被删除'])
     assert page.locator('[data-activity]').first.get_attribute('data-activity')=='jsxgraph-playground'
-    page.locator('#only-open').uncheck();assert page.locator('[data-activity]').count()==63
-    page.locator('#only-open').check()
+    assert page.locator('#teacher-open, #teacher-dialog, #only-open, button.locked').count()==0
     page.screenshot(path=str(OUT/'home.png'),full_page=True)
     page.locator('#library').scroll_into_view_if_needed();page.screenshot(path=str(OUT/'library.png'))
-    for id in ['jsxgraph-playground','tangram-flat','matter-slingshot','spaceflight','geometry-proofs']:
+    for id in ['jsxgraph-playground','tangram-flat','physics-demos','geometry-proofs','forces-and-motion-basics']:
      page.locator('[data-launch="'+id+'"]').click();page.wait_for_function('document.getElementById("loading").hidden');assert page.locator('iframe').count()==1
-     if id in ['jsxgraph-playground','tangram-flat','matter-slingshot']:page.screenshot(path=str(OUT/('host-'+id+'.png')))
-     if id=='jsxgraph-playground':page.frame_locator('iframe').locator('#back-home').click()
-     elif id=='geometry-proofs':page.frame_locator('iframe').locator('#back-home').click()
-     else:page.locator('#player-back').click()
+     if id in ['jsxgraph-playground','tangram-flat','physics-demos']:page.screenshot(path=str(OUT/('host-'+id+'.png')))
+     if id=='forces-and-motion-basics':
+      assert 'src/phet/generated/forces-and-motion-basics.html' in page.locator('iframe').get_attribute('src')
+      assert '视觉改编' in page.locator('#attribution').inner_text()
+      assert '拔河' in page.locator('#player-tip').inner_text()
+      page.frame_locator('iframe').locator('#splash-container').wait_for(state='detached')
+      page.screenshot(path=str(OUT/'host-phet-merged.png'))
+     page.locator('#player-back').click()
      page.wait_for_selector('iframe',state='detached');assert page.locator('iframe').count()==0
-    return {'defaultEntries':22,'nonPhET':18,'allEntries':63}
-   run('host-library-and-five-adapters',host)
+    return {'defaultEntries':len(visible_activities),'nonPhET':sum(a['adapter']!='phet' for a in visible_activities),'allEntries':len(visible_activities)}
+   run('host-library-and-adapters',host)
    def migration():
     key='mathphysics.state.v1';page.goto(base)
     page.evaluate('([key,val])=>localStorage.setItem(key,JSON.stringify(val))',[key,{'schemaVersion':1,'openIds':['area-builder','forces-and-motion-basics','vector-addition'],'visited':{'area-builder':123}}])
-    page.reload();page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==22
+    page.reload();page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==len(visible_activities)
     state=page.evaluate('(key)=>JSON.parse(localStorage.getItem(key))',key);assert state['visited']['area-builder']==123
     page.evaluate('([key,val])=>localStorage.setItem(key,JSON.stringify(val))',[key,{'schemaVersion':1,'openIds':[],'visited':{'spaceflight':456}}])
-    page.reload();page.wait_for_function('document.querySelector("#stats b")');assert page.locator('[data-activity]').count()==0
-    page.locator('#teacher-open').click();page.locator('#open-recommended').click();page.locator('[data-close="teacher-dialog"]').click();assert page.locator('[data-activity]').count()==22
+    page.reload();page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==len(visible_activities)
     state=page.evaluate('(key)=>JSON.parse(localStorage.getItem(key))',key);assert state['visited']['spaceflight']==456
-    page.locator('#teacher-open').click();page.locator('#open-all').click();page.locator('[data-close="teacher-dialog"]').click();page.reload();page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==63
-    page.locator('#teacher-open').click();page.locator('#restore-defaults').click();page.locator('[data-close="teacher-dialog"]').click()
-   run('legacy-migration-custom-empty-and-persistence',migration)
+    page.reload();page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==len(visible_activities)
+   run('legacy-closed-settings-no-longer-restrict-access-and-visits-persist',migration)
    def graded_entries():
     modes={'jsx-triangle':'triangle','jsx-mirror':'mirror','jsx-rotation':'rotate','jsx-scale':'scale','jsx-vectors':'vectors','jsx-linear':'linear'}
-    page.goto(base);page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==22
-    for id in modes:assert page.locator('[data-activity="'+id+'"]').count()==0
-    page.locator('#only-open').uncheck()
-    for id in modes:assert 'locked' in page.locator('[data-launch="'+id+'"]').get_attribute('class')
-    for grade,expected in [(1,['jsx-mirror']),(2,['jsx-triangle','jsx-mirror','jsx-rotation']),(3,['jsx-triangle','jsx-mirror','jsx-rotation','jsx-scale','jsx-vectors']),(5,list(modes))]:
+    page.goto(base);page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==len(visible_activities)
+    for id in modes:assert page.locator('[data-launch="'+id+'"]').is_enabled()
+    for grade,expected in [(1,[]),(2,['jsx-mirror']),(3,[]),(4,['jsx-rotation']),(5,['jsx-triangle']),(6,['jsx-scale','jsx-vectors','jsx-linear'])]:
      page.locator('[data-grade="'+str(grade)+'"]').click()
      visible=[id for id in modes if page.locator('[data-activity="'+id+'"]').count()]
      assert visible==expected,(grade,visible)
-    page.goto(base+'#activity/jsx-linear');page.reload();page.wait_for_selector('#toast:not([hidden])')
-    assert page.locator('iframe').count()==0;assert not page.locator('#player').is_visible()
-    page.locator('#teacher-open').click()
-    for id in modes:assert not page.locator('[data-open="'+id+'"]').is_checked()
-    page.locator('[data-open="jsx-linear"]').check();page.locator('[data-close="teacher-dialog"]').click()
-    assert page.locator('[data-activity]').count()==23
-    page.locator('[data-launch="jsx-linear"]').click()
+    page.locator('[data-grade="all"]').click()
+    page.goto(base+'#activity/jsx-linear');page.reload()
     page.wait_for_function('document.querySelector("iframe")?.contentWindow.__playground?.mode==="linear" && document.getElementById("loading").hidden')
     assert page.locator('iframe').get_attribute('src')=='lessons/jsxgraph-playground/index.html?mode=linear'
     page.reload()
     page.wait_for_function('document.querySelector("iframe")?.contentWindow.__playground?.mode==="linear" && document.getElementById("loading").hidden')
     state=page.evaluate('JSON.parse(localStorage.getItem("mathphysics.state.v1"))')
-    assert [id for id in modes if id in state['openIds']]==['jsx-linear']
     assert 'jsx-linear' in state['visited']
     page.locator('#player-back').click();page.wait_for_selector('iframe',state='detached')
-    page.locator('#teacher-open').click();page.locator('#restore-defaults').click();page.locator('[data-close="teacher-dialog"]').click()
-    page.goto(base+'#activity/jsx-linear');page.wait_for_selector('#toast:not([hidden])')
-    assert page.locator('iframe').count()==0;assert not page.locator('#player').is_visible()
+    assert page.locator('[data-activity]').count()==len(visible_activities)
+    for id in modes:assert page.locator('[data-launch="'+id+'"]').is_enabled()
     page.goto(base)
-    return {'independentEntries':6,'gradeFiltering':True,'closedByDefault':True,'teacherSelectionPersists':True,'deepLinkMode':'linear','closedDeepLinkBlocked':True}
-   run('graded-experiment-teacher-selection-and-deep-links',graded_entries)
+    return {'independentEntries':6,'gradeFiltering':True,'allOpen':True,'deepLinkMode':'linear','visitsPersist':True}
+   run('graded-experiment-all-open-and-deep-links',graded_entries)
    for a in activities:
     def activity(a=a):
      q=ctx.new_page();errs=[];missing=[];q.on('pageerror',lambda e:errs.append(str(e)));q.on('response',lambda r:missing.append(r.url) if r.url.startswith(base) and r.status>=400 else None)
      try:
-      q.goto(base+a['entry'],wait_until='load',timeout=60000)
-      q.wait_for_function('(adapter)=>{if(["matter","spaceflight","proofs","jsxgraph","tangram-flat"].includes(adapter))return window.__mpReady===true;if(adapter==="phet")return !!(window.phet?.joist?.sim||window.phet?.sim)&&!!document.querySelector("canvas,svg");return !!document.querySelector("canvas");}',arg=a['adapter'],timeout=25000)
+      entry=resolve_entry(a)
+      q.goto(base+entry,wait_until='load',timeout=60000)
+      q.wait_for_function('(adapter)=>{if(["matter","matter-library","spaceflight","proofs","jsxgraph","tangram-flat","primary-math"].includes(adapter))return window.__mpReady===true;if(adapter==="phet"){const sim=window.phet?.joist?.sim||window.phet?.sim,screens=sim?.simScreens||sim?.screens;return screens?.length&&screens.every(s=>s.model&&s.view)&&sim.isConstructionCompleteProperty?.value!==false&&!document.getElementById("splash-container");}return !!document.querySelector("canvas");}',arg=a['adapter'],timeout=25000)
       q.wait_for_timeout(160);assert not errs,errs;assert not missing,missing
       if a['adapter']=='matter':
        assert q.evaluate('Number.isFinite(__mpContext.engine.timing.timestamp)')
@@ -176,8 +173,8 @@ except Exception as e:report['results'].append({'id':'suite','passed':False,'err
 finally:
  if server:server.terminate();server.wait(timeout=10)
  report['total']=len(report['results']);report['passed']=all(r['passed'] for r in report['results']) and report['total']>0
- if not args.inline:report['passed']=report['passed'] and len([r for r in report['results'] if r['id'].startswith('activity-')])==63
+ if not args.inline:report['passed']=report['passed'] and len([r for r in report['results'] if r['id'].startswith('activity-')])==len(activities)
  report['blockedExternalRequestCount']=len(external) if 'external' in locals() else 0
  name='classroom-inline-report.json' if args.inline else 'classroom-browser-report.json'
- (ROOT/'docs'/name).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print('SUMMARY',report['passed'],report['total'],flush=True)
+ (ROOT/'docs'/name).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');print('SUMMARY',report['passed'],report['total'],flush=True)
 if not report['passed']:raise SystemExit(1)

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "openIds": [
+    "jsxgraph-playground",
+    "tangram-flat",
+    "matter-slingshot",
+    "spaceflight",
+    "geometry-proofs",
+    "matter-bridge",
+    "matter-car",
+    "matter-newtonsCradle",
+    "matter-catapult",
+    "matter-friction",
+    "matter-restitution",
+    "matter-ballPool",
+    "matter-pyramid",
+    "matter-cloth",
+    "matter-chains",
+    "matter-constraints",
+    "matter-stack",
+    "matter-gravity",
+    "area-builder",
+    "forces-and-motion-basics",
+    "energy-skate-park-basics",
+    "vector-addition"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "baseline": "current working-tree bytes before this interaction task",
+  "files": [
+    {
+      "path": "lessons/primary-math/app.mjs",
+      "beforeSHA256": "fb3534b7c5cb165b403410953d487b104856fcc31f5b23dde3d2210ec3750b66",
+      "backup": "docs/primary-math-interaction/before-source/lessons/primary-math/app.mjs",
+      "afterSHA256": "c7cc81af559ab25af5dad0ae5c62011135775d8a158574cfc37e6d512f0d9749",
+      "afterBytes": 5812,
+      "changed": true
+    },
+    {
+      "path": "lessons/primary-math/index.html",
+      "beforeSHA256": "bc38594322e19b4165dfd019c9dc112ad836c32a4557f4f1be5725b9ffe6f69b",
+      "backup": "docs/primary-math-interaction/before-source/lessons/primary-math/index.html",
+      "afterSHA256": "01837d3aaaf9f3b1e0e78fb1ad2b50f294ae306b0f6ea9e844f338aca3ab8937",
+      "afterBytes": 3580,
+      "changed": true
+    },
+    {
+      "path": "lessons/primary-math/style.css",
+      "beforeSHA256": "4997e43357010153f6532e43a783d784af97dd57835e19e7cd22009d58ab08d0",
+      "backup": "docs/primary-math-interaction/before-source/lessons/primary-math/style.css",
+      "afterSHA256": "e44025c38f0536f7958c2c3bbb1e252e563ec617ab7710fabc3aea8e47ed1fb2",
+      "afterBytes": 6241,
+      "changed": true
+    },
+    {
+      "path": "scripts/build_primary_math_standalone.py",
+      "beforeSHA256": "8aa598bade9b47f432b93d086634dadccbcf4115907e6edb181a2df7c74ba781",
+      "backup": "docs/primary-math-interaction/before-source/scripts/build_primary_math_standalone.py",
+      "afterSHA256": "b2bdedca1b28155f9817c65777ff22b7d9c0558a3c2a2ca0414bce4958f0d48e",
+      "afterBytes": 1435,
+      "changed": true
+    },
+    {
+      "path": "tests/primary-math-browser.py",
+      "beforeSHA256": "75dae77ce543a6944601c92d48614090391f568dc9b1a560c4f3ee7c4771a2ef",
+      "backup": "docs/primary-math-interaction/before-source/tests/primary-math-browser.py",
+      "afterSHA256": "191f6ffc4d51d075f58c91c3eddae1897ba5ebeaad4d407096812735b06812cc",
+      "afterBytes": 9167,
+      "changed": true
+    },
+    {
+      "path": "tests/primary-curriculum-browser.mjs",
+      "beforeSHA256": "c1b9d2eb3a5f32ff8fe67e421ce558c6c852d97e7819b6eb3e09d5f8022044b0",
+      "backup": "docs/primary-math-interaction/before-source/tests/primary-curriculum-browser.mjs",
+      "afterSHA256": "b31ef5d24432630cf787e8e1daa04473271ef402e48b47fa19735d5009165c11",
+      "afterBytes": 15610,
+      "changed": true
+    },
+    {
+      "path": "tests/progress-browser.mjs",
+      "beforeSHA256": "5f200252986a3b2c2c9820b9ce33d62e12cbbc90805acaba7562d0e8df6d1e4d",
+      "backup": "docs/primary-math-interaction/before-source/tests/progress-browser.mjs",
+      "afterSHA256": "6d92981d9ff4cde6b20589f117348d6ef693c08037dbc247204a5f95b9c1e48b",
+      "afterBytes": 18615,
+      "changed": true
+    },
+    {
+      "path": "dist/MathPhysics-Primary-Math.html",
+      "beforeSHA256": "220249f5dd34ec4f4646c776cf28613962e6e877a45c39884b0e8cc49decec56",
+      "backup": "hash-only generated artifact",
+      "afterSHA256": "f9c8a1439108d54a9ca2425dfd8ab137f13ddb502996f95c00f77686ed2898a0",
+      "afterBytes": 73937,
+      "changed": true
+    },
+    {
+      "path": "lessons/primary-math/models.mjs",
+      "beforeSHA256": null,
+      "backup": "new authored source",
+      "afterSHA256": "24b7abeaefa33959269eee757ff89bad836338ea1fff77f91bd3fa4dab83d7e3",
+      "afterBytes": 21862,
+      "changed": true
+    },
+    {
+      "path": "tests/curriculum-integration-browser.mjs",
+      "beforeSHA256": "1f1f8c119fc82507cacef04b5d869894801ec1242aa7c49438cc21b5a440a3c4",
+      "backup": "docs/primary-math-interaction/before-source/tests/curriculum-integration-browser.mjs",
+      "afterSHA256": "6707e78d7c026391b1e8df038da1b4f09d1422b666d166b9cc30b60a1af81d43",
+      "afterBytes": 31964,
+      "changed": true
+    }
+  ],
+  "scope": "Primary classroom, its standalone builder and four existing browser-contract tests only. Other current working-tree changes are retained.",
+  "checks": {
+    "nodeSyntax": "app.mjs, models.mjs, primary-curriculum-browser.mjs, progress-browser.mjs pass; curriculum-integration-browser.mjs passes",
+    "pythonSyntax": "primary-math-browser.py and build_primary_math_standalone.py AST parse pass",
+    "standaloneBuild": "npm run build:primary passes",
+    "unitTests": {
+      "command": "npm test",
+      "tests": 127,
+      "pass": 126,
+      "skip": 1,
+      "fail": 0
+    },
+    "modelStatic": "48/48 fixed known markup and distinct non-text trial markup at min/mid/max",
+    "standaloneModuleSyntax": "final concatenated JavaScript module passes node --check"
+  }
+}
