@@ -1,0 +1,23 @@
+{
+  "suite": "question bank failure propagation",
+  "checks": [
+    {
+      "id": "node-assertion-failure",
+      "exitCode": 1,
+      "passed": true
+    },
+    {
+      "id": "real-browser-assertion-failure",
+      "exitCode": 1,
+      "serverClosed": true,
+      "portReleased": true,
+      "passed": true
+    },
+    {
+      "id": "legacy-python-entry-preserves-child-failure",
+      "exitCode": 1,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

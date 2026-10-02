@@ -19,9 +19,9 @@ function dragon(x,y,scale=1,angle=0,{trunk=true,noseOpen=false,fire=false,p=0}={
 function shenzhou(x,y,scale=1,angle=0,{orbital=true,service=true,fire=false,p=0}={}){c.save();c.translate(x,y);c.rotate(angle);c.scale(scale,scale);if(service){rect(-28,0,56,61,'#bcc9d0',4,'#8194a7');line(-28,28,-72,28,'#98b9ca',4);line(28,28,72,28,'#98b9ca',4);panel(-117,7,65,46);panel(52,7,65,46);poly([[-15,61],[-20,77],[20,77],[15,61]],'#5b6d7b');if(fire)flame(0,77,45,p);}poly([[-27,0],[-29,-32],[-18,-58],[18,-58],[29,-32],[27,0]],'#dfe8e7','#8797a3');rect(-26,-3,52,7,'#3d596d');circle(0,-35,9,'#26537b','#92c3d3');if(orbital){rect(-23,-117,46,59,'#c6d8d9',8,'#839eae');rect(-13,-127,26,10,'#87a8b9',2);circle(0,-93,9,'#3f7186','#8ebcc8');}c.restore();}
 function sat(x,y,scale=1,angle=0,open=1){c.save();c.translate(x,y);c.rotate(angle);c.scale(scale,scale);rect(-24,-27,48,54,'#e7bd73',6,'#fff0c6');circle(0,0,11,'#688b9e','#f8daa7');line(-24,0,-40,0,'#e5ddb4',4);line(24,0,40,0,'#e5ddb4',4);if(open>.03){panel(-40-80*open,-30,80*open,60);panel(40,-30,80*open,60);}line(0,-27,12,-50,'#f2dfa3',3);circle(12,-52,4,C.gold);c.restore();}
 function craft(m,x,y,scale=1,angle=0,opt={}){if(m.craft==='dragon')dragon(x,y,scale,angle,opt);else if(m.craft==='shenzhou')shenzhou(x,y,scale,angle,opt);else sat(x,y,scale,angle,opt.open??1);}
-function rocket(x,y,scale=1,angle=0,{type='f9',crew=true,upper=false,third=false,boosters=true,tower=true,fairing=true,fire=false,p=0}={}){
+function rocket(x,y,scale=1,angle=0,{type='f9',crew=true,upper=false,third=false,boosters=true,tower=true,fairing=true,fire=false,p=0,noLabels=false}={}){
  c.save();c.translate(x,y);c.rotate(angle);c.scale(scale,scale);const accent=type==='f9'?C.teal:C.gold;const fh=upper?0:168,sh=third?0:75,th=type==='cz3a'?48:0,total=fh+sh+th;
- if(!upper){rect(-20,-fh,40,fh,'#e7eced',4,'#8b9cae');rect(-21,-17,42,14,'#344c61');for(let i=-1;i<=1;i++)poly([[i*11-5,0],[i*11-7,11],[i*11+7,11],[i*11+5,0]],'#71818b');if(fire)flame(0,11,85,p);text(type==='f9'?'F9':'CZ',0,-85,16,'#425f76','center',700);
+ if(!upper){rect(-20,-fh,40,fh,'#e7eced',4,'#8b9cae');rect(-21,-17,42,14,'#344c61');for(let i=-1;i<=1;i++)poly([[i*11-5,0],[i*11-7,11],[i*11+7,11],[i*11+5,0]],'#71818b');if(fire)flame(0,11,85,p);if(!noLabels)text(type==='f9'?'F9':type==='generic'?'学':'CZ',0,-85,16,'#425f76','center',700);
  if(type==='cz2f'&&boosters){for(const side of [-1,1]){rect(side*38-11,-130,22,135,'#c0d0dc',6,'#8094a9');poly([[side*38-11,-130],[side*38,-154],[side*38+11,-130]],'#dce8ed');if(fire)flame(side*38,6,60,p);}rect(-5,-139,10,25,'#9cb3bf',3);}
  }
  if(sh){rect(-20,-fh-sh,40,sh,'#f4f3ed',3,'#9dabb9');rect(-20,-fh-sh+57,40,11,type==='f9'?'#233648':'#b27464');if(upper&&fire)flame(0,4,66,p);}
@@ -36,8 +36,8 @@ function station(x,y,scale=1,type='iss',docked=false){c.save();c.translate(x,y);
  else {rect(-32,-40,64,145,'#dde8e8',15,'#8ba9bd');rect(-172,-57,344,49,'#d9e4e4',12,'#8ba9bd');circle(0,-28,28,'#ebeeee','#9cb5c1');for(const dx of [-148,148]){line(dx,-58,dx,-180,'#c0d6df',4);panel(dx-40,-198,80,100);line(dx,-6,dx,125,'#b9d2db',4);panel(dx-40,30,80,110);}line(-32,50,-66,50,'#b7d6e1',3);line(32,50,66,50,'#b7d6e1',3);panel(-125,29,62,45);panel(63,29,62,45);if(docked)shenzhou(0,172,.54,0,{orbital:true,service:true});}
  c.restore();}
 function note(t,y=565){text(t,W/2,y,19,C.muted,'center');}
-function routeMap(p,ellipse=false){earth(430,297,158);c.save();c.translate(430,297);c.rotate(-.25);c.beginPath();c.ellipse(ellipse?120:0,0,ellipse?350:232,ellipse?214:223,0,0,2*Math.PI);c.strokeStyle='#70e5d085';c.lineWidth=2;c.setLineDash([6,7]);c.stroke();c.setLineDash([]);let a=-2.7+p*3.2,x=(ellipse?120:0)+(ellipse?350:232)*Math.cos(a),y=(ellipse?214:223)*Math.sin(a);sat(x,y,.28,a+.3);c.restore();tag('引力始终指向地球',430,300);text('轨道示意 · 非比例',40,65,17,C.muted);}
-function scene(canvas,m,step,p,options={}){c=canvas.getContext('2d');c.save();c.scale(canvas.width/W,canvas.height/H);const sc=step.scene;bg(['pad','launch','recovery','splash','land','finish'].includes(sc),!['phase','coast','transfer','satellite','deorbit'].includes(sc));const rocketOpts={type:m.rocket,crew:m.crew,p};
+function routeMap(m,p,ellipse=false,sceneId='phase'){earth(430,297,158);c.save();c.translate(430,297);c.rotate(-.25);c.beginPath();c.ellipse(ellipse?120:0,0,ellipse?350:232,ellipse?214:223,0,0,2*Math.PI);c.strokeStyle='#70e5d085';c.lineWidth=2;c.setLineDash([6,7]);c.stroke();c.setLineDash([]);let a=-2.7+p*3.2,x=(ellipse?120:0)+(ellipse?350:232)*Math.cos(a),y=(ellipse?214:223)*Math.sin(a);if(sceneId==='coast'||sceneId==='transfer')rocket(x,y,.22,a+.3,{type:m.rocket,crew:false,upper:true,third:true,fairing:false,fire:sceneId==='transfer',p});else craft(m,x,y,.28,a+.3,{noseOpen:true});c.restore();tag('引力始终指向地球',430,300);text('轨道示意 · 非比例',40,65,17,C.muted);}
+function scene(canvas,m,step,p,options={}){c=canvas.getContext('2d');c.save();c.scale(canvas.width/W,canvas.height/H);const sc=step.scene;bg(['pad','launch','recovery','splash','land','finish'].includes(sc),!['phase','coast','transfer','satellite','deorbit'].includes(sc));const order=m.steps.findIndex(s=>s.id===step.id),past=m.steps.slice(0,Math.max(0,order)).map(s=>s.id);const rocketOpts={type:m.rocket,crew:m.crew,p,fairing:!past.includes('fairing'),tower:!past.includes('tower'),boosters:!past.includes('boosters'),upper:past.includes('fstage')||past.includes('cstage'),third:past.includes('third')};
  if(['pad','launch','turn'].includes(sc)){
   if(sc==='pad'){rect(460,155,26,361,'#3a6179',3);for(let y=178;y<480;y+=40){line(460,y,486,y+27,'#94acbb',2);line(486,y,460,y+27,'#647f92',2);}line(487,258,535,258,'#8aa4b3',7);rect(425,509,215,12,'#8ba0aa',2);rocket(549,500,.97,0,{...rocketOpts,fire:false});tag('安全检查',735,188);tag('导航与通信',763,249);tag(m.crew?'舱门 · 生命保障':'卫星 · 载荷检查',768,310);line(693,188,602,215,'#416984',1,[5,6]);line(695,310,600,290,'#416984',1,[5,6]);note('先准备，再出发。点击播放，开启一段任务。');}
   else if(sc==='launch'){rect(430,513,200,9,'#678c9e');rocket(520,510-p*195,.92,0,{...rocketOpts,fire:true});for(let i=0;i<8;i++)circle(450+i*20,510+(i%2)*10,20+p*24,'#a8cbda28');arrow(654,330,0,-105,C.teal,'推力');arrow(654,340,0,80,C.gold,'重力');note('离开发射台 · 动画高度与速度并非真实数据');}
@@ -46,7 +46,7 @@ function scene(canvas,m,step,p,options={}){c=canvas.getContext('2d');c.save();c.
  else if(['stage','boosters','tower','third','fairing','upper'].includes(sc)){
   const ang=.53;
   if(sc==='stage'||sc==='third'){
-   c.save();c.translate(440-p*70,453+p*30);c.rotate(ang);const ht=sc==='third'?74:168;rect(-22,-ht,44,ht,'#b8c7d4',3,'#9baebe');rect(-22,-17,44,17,'#3d566b');c.restore();rocket(505+p*45,288-p*28,.9,ang,{...rocketOpts,upper:true,third:sc==='third',boosters:false,tower:false,fairing:sc==='stage'&&m.id==='cn-sat',fire:p>.25});tag('完成工作的级段',264,420);tag('继续飞行的部分',735,201);note('分离前共同运动；分离后各自继续运动');
+   c.save();c.translate(440-p*70,453+p*30);c.rotate(ang);const ht=sc==='third'?74:168;rect(-22,-ht,44,ht,'#b8c7d4',3,'#9baebe');rect(-22,-17,44,17,'#3d566b');c.restore();rocket(505+p*45,288-p*28,.9,ang,{...rocketOpts,upper:true,third:sc==='third',boosters:false,tower:false,fairing:sc==='stage'&&rocketOpts.fairing,fire:p>.25});tag('完成工作的级段',264,420);tag('继续飞行的部分',735,201);note('分离前共同运动；分离后各自继续运动');
   } else if(sc==='boosters'){
    rocket(520,400,.82,.08,{...rocketOpts,boosters:false,tower:false,fire:true});for(const sign of [-1,1]){c.save();c.translate(520+sign*(52+p*94),360+p*55);c.rotate(sign*p*.3);rect(-13,-104,26,111,'#c7d6df',6);poly([[-13,-104],[0,-133],[13,-104]],'#e3edef');c.restore();}tag('四枚助推器 · 投影简化',750,415);note('这里只画出左右投影；芯一级仍继续工作');
   } else if(sc==='tower'){
@@ -59,7 +59,7 @@ function scene(canvas,m,step,p,options={}){c=canvas.getContext('2d');c.save();c.
   rocket(348,409,.75,.95,{...rocketOpts,upper:true,third:m.rocket==='cz3a',crew:false,fairing:false,fire:false});sat(560+p*145,245-p*40,.9,0,.2+p*.8);arrow(696,315,105,-35,C.teal,'保持运动');tag('小的相对分离速度',490,460);note('图形放大；卫星并不是从静止开始飞行');
  }
  else if(sc==='satellite'){earth(160,480,190);sat(554,263,1.35,.08,step.id==='commission'?.08+p*.92:1);for(let k=0;k<3;k++){c.beginPath();c.arc(557,263,135+k*24,-.27,.32);c.strokeStyle='#71ead0'+['66','44','22'][k];c.lineWidth=2;c.stroke();}tag(step.id==='service'?'业务运行 → 按轨道条件处置':'太阳翼展开 · 调姿 · 检查',562,430);note('通用教学卫星：真实结构和任务各不相同');}
- else if(['coast','transfer','phase'].includes(sc)){routeMap(p,sc!=='phase');if(sc==='phase'){station(590,115,.27,m.station);tag('先调整轨道和相位',773,422);}else tag(sc==='coast'?'关机滑行，等待时机':'椭圆转移轨道 → 后续变轨',675,487);note('路径用于解释概念；并非该型号的真实飞行轨迹');}
+ else if(['coast','transfer','phase'].includes(sc)){routeMap(m,p,sc!=='phase',sc);if(sc==='phase'){station(590,115,.27,m.station);tag('先调整轨道和相位',773,422);}else tag(sc==='coast'?'关机滑行，等待时机':'椭圆转移轨道 → 后续变轨',675,487);note('路径用于解释概念；并非该型号的真实飞行轨迹');}
  else if(sc==='craftSep'){
   c.save();c.translate(302,410);c.rotate(.95);rect(-24,-118,48,118,'#d6e5e8',5,'#93aebe');poly([[-14,0],[-22,22],[22,22],[14,0]],'#6e8a9e');c.restore();craft(m,539+p*117,281-p*43,1.02,.95,{noseOpen:false,open:0});tag('飞船带着已有速度独立飞行',630,450);note('上面级关机后分离；不是从静止开始飞行');
  }
@@ -68,7 +68,7 @@ function scene(canvas,m,step,p,options={}){c=canvas.getContext('2d');c.save();c.
    station(m.station==='iss'?736:784,269,.86,m.station);const final=sc==='dock'?556:470;const start=sc==='dock'?470:280;const x=sc==='undock'?556-p*220:start+p*(final-start);craft(m,x,269,m.craft==='dragon'?.9:.63,Math.PI/2,{noseOpen:true});line(x+78,269,591,269,'#71ead0',1,[4,5]);tag(sc==='undock'?'关舱门后缓慢撤离':sc==='dock'?'接触 → 捕获 → 锁紧 → 气密检查':'减小相对速度，校准位置与姿态',530,462);note('两者都在绕地球运动；这张图以空间站为参考');
  }
  else if(sc==='station'){station(540,252,m.station==='iss'?1.23:1.12,m.station,true);tag(m.station==='iss'?'国际合作 · 多次发射在轨组装':'三舱 T 字基本构型 · 大舱段由长征五号 B 发射',520,525);note('科学实验 · 锻炼 · 环境控制 · 电力与热管理');}
- else if(sc==='deorbit'){earth(269,318,154);craft(m,672,223,1.05,Math.PI/2,{orbital:m.craft!=='shenzhou',service:true,trunk:true,noseOpen:true,fire:false});arrow(763,258,112,0,C.teal,'速度');arrow(684,125,-114,0,C.gold,'制动推力');flame(758,220,0,p);c.beginPath();c.moveTo(693,271);c.bezierCurveTo(752,420,524,554,364,418);c.strokeStyle=C.gold;c.lineWidth=3;c.setLineDash([5,7]);c.stroke();c.setLineDash([]);note('制动后仍在运动，新的轨道低点进入大气');}
+ else if(sc==='deorbit'){earth(269,318,154);craft(m,672,223,1.05,Math.PI/2,{orbital:m.craft!=='shenzhou',service:true,trunk:true,noseOpen:true,fire:false});arrow(763,258,112,0,C.teal,'速度');arrow(684,125,-114,0,C.gold);text('制动推力',627,95,17,C.gold,'center');flame(758,220,0,p);c.beginPath();c.moveTo(693,271);c.bezierCurveTo(752,420,524,554,364,418);c.strokeStyle=C.gold;c.lineWidth=3;c.setLineDash([5,7]);c.stroke();c.setLineDash([]);note('制动后仍在运动，新的轨道低点进入大气');}
  else if(['trunk','orbitalSep','serviceSep'].includes(sc)){
   if(sc==='trunk'){dragon(520,247,1.5,0,{trunk:false,noseOpen:false});c.save();c.translate(520+p*110,267+p*120);c.rotate(p*.38);rect(-45,0,90,87,'#b7cbd7',5);panel(-36,15,72,51);c.restore();tag('离轨点火之后分离尾舱',740,454);}
   else if(sc==='orbitalSep'){shenzhou(500,345,1.3,0,{orbital:false});rect(470-p*50,192-p*76,60,75,'#cbdce0',12,'#97b4c3');tag('轨道舱先离开',726,150);tag('返回舱 + 推进舱，准备制动',550,495);}
@@ -92,12 +92,70 @@ function scene(canvas,m,step,p,options={}){c=canvas.getContext('2d');c.save();c.
   rect(0,459,W,151,'#154566');for(let i=0;i<13;i++)line(i*86,482+(i%3)*21,i*86+45,482+(i%3)*21,'#81bec855',2);rect(402,439,234,16,'#a9b5bb',3);rect(413,453,212,20,'#334e68',3);const y=285+Math.min(1,p*1.2)*152;rect(502,y-181,36,174,'#dce4e5',4,'#a7bac4');rect(501,y-15,38,15,'#2f465b',2);if(p<.88)flame(520,y,48*(1-p)+14,p);const spread=12+Math.min(1,p*2)*48;line(504,y-43,520-spread,y,'#c5d7df',5);line(536,y-43,520+spread,y,'#c5d7df',5);rect(490,y-160,12,17,'#7093a5',2);rect(538,y-160,12,17,'#7093a5',2);tag('并行支线 · 一级回收',747,199);text('上面级与载荷仍继续飞行',741,257,18,C.muted,'center');note('只示意海上回收的一种方案；不同任务安排不同');
  }
  text('原创结构示意 · 尺寸、距离与时间不按真实比例',30,586,14,'#90a9be');c.restore();}
-function lab(canvas,id,values,state={}){c=canvas.getContext('2d');c.save();c.scale(canvas.width/W,canvas.height/H);bg(false,false);const M=SpaceMath;
+
+function launchModel(state){
+ const compact=!!state.compact,label=(...args)=>{if(!compact)text(...args);};
+ bg(false,false);
+ const flight=state.flight,s=SpaceFlight.sampleAt(flight,state.flightTime||0),b=SpaceFlight.boosterAt(flight,state.flightTime||0),recovery=state.flightView==='recovery';
+ label(recovery?'一级怎样返回？主线仍在同时飞行':'从推力到轨道：看状态怎样触发事件',38,42,25,C.white,'left',600);
+ label('任意教学参数 · '+(flight?({f9:'猎鹰/龙任务构型',cz2f:'长二F/神舟构型',cz3a:'长三甲卫星构型'}[flight.config.rocket]):'离线计算')+' · 非遥测、非精确预报',38,77,16,C.muted);
+ if(!s){if(compact){text('正在准备教学计算',520,290,42,C.white,'center');return;}tag(state.flightError?'计算未完成，请重置重试':'正在准备状态驱动模型…',400,290);return;}
+ const cfg=flight.config,modelCraft={craft:cfg.mission==='us-crew'?'dragon':cfg.mission==='cn-crew'?'shenzhou':'sat'};
+ if(recovery&&b){
+  const all=flight.boosterSamples,minX=Math.min(b.targetX,...all.map(a=>a.downrangeM)),maxX=Math.max(b.targetX,...all.map(a=>a.downrangeM)),maxH=Math.max(1000,...all.map(a=>a.altitudeM));
+  const sx=540/Math.max(1000,maxX-minX),sy=320/maxH,map=a=>[76+(a.downrangeM-minX)*sx,462-a.altitudeM*sy];
+  line(76,462,616,462,'#9bb4c1',2);line(76,142,76,462,'#54738c',1);
+  const target=76+(b.targetX-minX)*sx;line(target,147,target,462,'#ffc58a66',1,[5,6]);rect(target-12,458,24,8,C.gold,2);label('教学目标',Math.max(120,Math.min(560,target)),490,17,C.gold,'center');
+  label('高度 '+(maxH/1000).toFixed(0)+' km',82,128,16,C.muted);label('横向跨度 '+((maxX-minX)/1000).toFixed(0)+' km',80,526,16,C.muted);label('横纵不同缩尺 · 非实际着陆位置',80,551,16,C.muted);
+  c.beginPath();let first=true;for(const a of all){if(a.tSec>b.tSec)break;const [x,y]=map(a);first?c.moveTo(x,y):c.lineTo(x,y);first=false;}const [x,y]=map(b);c.lineTo(x,y);c.strokeStyle='#c2a5ff';c.lineWidth=3;c.stroke();circle(x,y,6,C.white,'#c2a5ff',3);
+  if(!b.ended){const speed=Math.hypot(b.horizontalMps,b.verticalMps)||1;arrow(x,y,b.horizontalMps/speed*40,-b.verticalMps/speed*40,C.teal);arrow(x,y,0,32,C.gold);}
+ }else{
+  const ex=337,ey=320,radius=176,z=radius/LaunchAtlasCore.EARTH_RADIUS_M,map=a=>[ex+a.posEci.y*z,ey-a.posEci.x*z];earth(ex,ey,radius);circle(ex,ey,radius+120000*z,null,'#ffc58a77',1.5);
+  for(const [path,color] of [[flight.samples,C.teal],[flight.boosterSamples,'#c2a5ff']]){c.beginPath();let first=true;for(let i=0;i<path.length;i+=3){if(path[i].tSec>s.tSec)break;const [x,y]=map(path[i]);first?c.moveTo(x,y):c.lineTo(x,y);first=false;}c.strokeStyle=color;c.lineWidth=3;c.stroke();}
+  const [x,y]=map(s),speed=Math.hypot(s.velEci.x,s.velEci.y)||1,r=Math.hypot(s.posEci.x,s.posEci.y);circle(x,y,5,C.white,C.teal,3);arrow(x,y,s.velEci.y/speed*45,-s.velEci.x/speed*45,C.teal);arrow(x,y,-s.posEci.y/r*35,s.posEci.x/r*35,C.gold);
+  if(b){const [bx,by]=map(b);circle(bx,by,4,'#c2a5ff');}
+  label('主线 '+SpaceFlight.orbitStatus(s),38,530,17,C.white);label('青：载荷轨迹 / 惯性速度  紫：一级轨迹',38,554,15,C.muted);label('橙：引力；相对空气速度用于动压',38,577,14,C.muted);
+ }
+ rect(670,112,334,compact?340:416,'#153448',20,'#396179');label(recovery?'一级结构放大 · 非比例':'任务结构放大 · 非比例',837,143,18,C.muted,'center');
+ const frame=SpaceFlight.telemetry(flight,s.tSec,recovery?'recovery':'ascent'),body=frame.sample;
+ if(body){
+  const angle=body.angleDeg*Math.PI/180;
+  if(recovery){
+   const scale=.68,height=168,baseX=837-height*scale/2*Math.sin(angle),baseY=265+height*scale/2*Math.cos(angle);c.save();c.translate(baseX,baseY);c.rotate(angle);c.scale(scale,scale);rect(-20,-168,40,168,'#e7eced',4,'#8b9cae');rect(-22,-17,44,14,'#344c61');if(body.legs){line(-18,-8,-56,25,'#9bb4c1',5);line(18,-8,56,25,'#9bb4c1',5);}if(body.engineOn)flame(0,6,70,s.tSec);c.restore();
+  }else if(s.payloadSeparated){craft(modelCraft,837,295,.9,.2,{noseOpen:s.noseOpen,orbital:true,service:true,open:1});}
+  else{
+   const top=s.stageIndex===0?(cfg.rocket==='cz2f'&&s.towerAttached?408:cfg.rocket==='cz3a'?385:340):s.stageIndex===2?142:cfg.rocket==='cz3a'?217:172,scale=s.stageIndex===0?(cfg.rocket==='cz2f'?.42:cfg.rocket==='cz3a'?.43:.47):.6;
+   const low=s.engineOn?110:0,center=(low-top)/2,baseX=837+center*scale*Math.sin(angle),baseY=265-center*scale*Math.cos(angle);
+   rocket(baseX,baseY,scale,angle,{type:cfg.rocket,crew:cfg.crew,upper:s.stageIndex>0,third:s.stageIndex>1,fairing:s.fairingAttached,tower:s.towerAttached,boosters:s.boostersAttached,fire:s.engineOn,p:s.tSec,noLabels:compact});
+  }
+  const line1=recovery?(body.ended?(body.success?'接地条件全部满足':'接地条件未满足 / 不回收'):body.engineOn?'一级减速推进':'一级无动力继续运动'):s.payloadSeparated?'载荷保持原有轨道运动':s.engineOn?(s.stageIndex+1)+'级正在推进':'主线关机，运动仍继续';
+  label(line1,837,401,18,body.engineOn?C.teal:C.gold,'center');
+  label(recovery?'高度 '+(body.altitudeM/1000).toFixed(1)+' km':'近地点 '+(s.perigeeM/1000).toFixed(0)+' km',695,441,19,C.white);
+  label(recovery?'垂直速度 '+body.verticalMps.toFixed(1)+' m/s':'当前推进剂 '+s.upperFuelKg.toFixed(1)+' kg',695,476,18,C.muted);
+  label(recovery?'一级余油 '+body.fuelKg.toFixed(1)+' kg':'地心惯性速度 '+(s.velocityMps/1000).toFixed(2)+' km/s',695,508,17,C.muted);
+ }else{label('一级尚未分离',837,286,24,C.white,'center');}
+ const boosterLine=b?'一级 '+(b.altitudeM/1000).toFixed(1)+' km · '+b.verticalMps.toFixed(1)+' m/s · '+b.fuelKg.toFixed(1)+' kg余油'+(b.ended?'（接地状态冻结）':''):'一级尚未独立；分离前共享速度与位置';
+ label(boosterLine,38,602,15,C.muted);if(body){label((recovery?'一级动压 ':'主线动压 ')+(body.dynamicPressurePa/1000).toFixed(2)+' kPa',695,558,18,C.gold);label((recovery?'一级相对空气 ':'主线相对空气 ')+body.airspeedMps.toFixed(1)+' m/s',695,589,16,C.muted);}
+ if(compact){text(recovery?'一级返回':'上升与轨道',38,54,44,C.white,'left',600);text(recovery?'一级':'主线',837,143,40,C.muted,'center');text('读数与阶段说明在下方',38,582,40,C.muted);}
+}
+
+function lab(canvas,id,values,state={}){c=canvas.getContext('2d');c.save();c.scale(canvas.width/W,canvas.height/H);bg(false,false);const M=SpaceMath;if(id==='launch'){launchModel(state);c.restore();return;}
  if(id==='thrust'){const v=M.thrust(values.force,values.mass);line(130,489,475,489,'#426078',1,[6,6]);text('自由飞行的小模型',302,522,17,C.muted,'center');rect(270,315,90,142,'#d3e3e5',12,'#99c8cc');circle(315,355,22,'#183950','#79cdda');arrow(418,328,0,-Math.min(180,values.force*.6),C.teal,'F');arrow(225,360,0,values.mass*7,C.gold,'mg');text('推力',695,201,22,C.teal);text(values.force+' N',695,240,38,C.white);text('重力',695,308,22,C.gold);text(v.weight.toFixed(1)+' N',695,348,38,C.white);tag(v.acceleration>0?'向上加速':v.acceleration<0?'净力向下':'合力为零',650,447);note(`自由运动瞬时加速度：${v.acceleration.toFixed(2)} m/s²。台面支撑力不在此自由飞行模型内。`);}
  else if(id==='staging'){const v=M.staged(values.dry,values.discard);for(let i=0;i<2;i++){let x=298+i*410;rect(x-42,188,84,100,'#d9e9e6',8);if(i===0||!values.discard)rect(x-42,294,84,113,'#637d97',7);else{c.save();c.translate(x+80,397);c.rotate(.3);rect(-42,-50,84,113,'#637d97',7);c.restore();}arrow(x,157,0,-69,C.teal);text('相同推力 200 N',x,445,18,C.muted,'center');text((i===0?v.before:v.acceleration).toFixed(2)+' m/s²',x,494,34,i?C.teal:C.white,'center');tag(i?'实验组':'保留空级',x,68);}note('分离没有制造速度跳变；改变的是后续加速度。');}
  else if(id==='orbit'){
-  const o=state.orbit||M.orbit(values.alt,values.speed/100);const xs=o.points.map(p=>p[0]),ys=o.points.map(p=>p[1]);const minx=Math.min(-M.R,...xs),maxx=Math.max(M.R,...xs),miny=Math.min(-M.R,...ys),maxy=Math.max(M.R,...ys);const z=Math.min(610/(maxx-minx),440/(maxy-miny)),cx=365-(maxx+minx)*z/2,cy=300+(maxy+miny)*z/2;
-  earth(cx,cy,M.R*z);c.beginPath();o.points.forEach(([x,y],i)=>i?c.lineTo(cx+x*z,cy-y*z):c.moveTo(cx+x*z,cy-y*z));c.strokeStyle=o.stopped?C.gold:C.teal;c.lineWidth=2.5;c.stroke();const ix=Math.min(o.points.length-2,Math.floor((state.orbitPhase||0)*(o.points.length-1)));const q=o.points[ix],n=o.points[ix+1];const x=cx+q[0]*z,y=cy-q[1]*z;sat(x,y,.17,0);const dx=n[0]-q[0],dy=-(n[1]-q[1]),d=Math.hypot(dx,dy)||1;arrow(x,y,dx/d*45,dy/d*45,C.teal);let r=Math.hypot(q[0],q[1]);arrow(x,y,-q[0]/r*37,q[1]/r*37,C.gold);text('起始横向速度',785,130,20,C.muted,'center');text(o.initialSpeed.toFixed(2)+' km/s',785,171,32,C.white,'center');text('初始高度的圆轨道速度',785,238,17,C.muted,'center');text(o.speed.toFixed(2)+' km/s',785,273,25,C.teal,'center');text('理论轨道最低高度',785,340,17,C.muted,'center');text(o.perigee.toFixed(0)+' km',785,376,27,o.stopped?C.gold:C.white,'center');tag(o.stopped?'进入大气边界，停止计算':Math.abs(values.speed-100)<.1?'接近圆轨道':'椭圆轨道',770,461);note('青色：速度方向    橙色：引力方向。轨道大小按模型计算，飞行器图标放大。');
+  const o=state.orbit||M.orbit(values.alt,values.speed/100),a=M.orbitAt(o,state.orbitTime||0),q=a.q;
+  const xs=o.points.map(p=>p[0]),ys=o.points.map(p=>p[1]),minx=Math.min(-M.R,...xs),maxx=Math.max(M.R,...xs),miny=Math.min(-M.R,...ys),maxy=Math.max(M.R,...ys);
+  const z=Math.min(610/(maxx-minx),440/(maxy-miny)),cx=365-(maxx+minx)*z/2,cy=300+(maxy+miny)*z/2;
+  earth(cx,cy,M.R*z);circle(cx,cy,(M.R+M.ATM)*z,null,'#ffc58a99',1.5);
+  c.beginPath();o.points.forEach(([x,y],i)=>i?c.lineTo(cx+x*z,cy-y*z):c.moveTo(cx+x*z,cy-y*z));c.strokeStyle=o.stopped?C.gold:C.teal;c.lineWidth=2.5;c.stroke();
+  const x=cx+q[0]*z,y=cy-q[1]*z;sat(x,y,.17,0);const speed=Math.hypot(q[2],q[3]),r=Math.hypot(q[0],q[1]);
+  arrow(x,y,q[2]/speed*45,-q[3]/speed*45,C.teal);arrow(x,y,-q[0]/r*37,q[1]/r*37,C.gold);
+  text('起始横向速度（惯性系）',785,116,19,C.muted,'center');text(o.initialSpeed.toFixed(2)+' km/s',785,155,32,C.white,'center');
+  text('初始高度的圆轨道速度',785,218,17,C.muted,'center');text(o.speed.toFixed(2)+' km/s',785,252,25,C.teal,'center');
+  text('理论轨道最低高度',785,313,17,C.muted,'center');text(o.perigee.toFixed(0)+' km',785,348,27,o.stopped?C.gold:C.white,'center');
+  tag(o.stopped?'进入大气边界，停止计算':!o.bound?'逃逸趋势：轨迹不闭合':o.e<.0001?'近圆形轨道':'椭圆轨道',770,421);
+  text('模拟时间 '+a.tSec.toFixed(0)+' s',770,474,20,C.muted,'center');text('推力 = 0，引力仍在',770,511,20,C.gold,'center');
+  note('青：速度方向  橙：引力方向。无空气二体模型；图标放大，显示长度有限。');
  }
  else if(id==='dock'){
   const d=state.dock||{x:-12,y:2,vx:0,vy:0};const px=700+d.x*27,py=295-d.y*36;rect(80,285,620,20,'#71ead019',10);line(70,295,700,295,'#6de2c66b',2,[8,9]);station(850,295,.55,'iss');rect(691,273,12,44,'#8ce2cd',3);dragon(px-58.65,py,.69,Math.PI/2-values.angle*Math.PI/180,{noseOpen:true});const states={approaching:'正在接近',alignment:'横向偏差过大，请重试',speed:'接触速度不合适，请重试',angle:'姿态偏差过大，请重试',docked:'已对准并低速捕获'};tag(states[state.dockResult||'approaching'],490,110);text(`剩余距离 ${Math.max(0,-d.x).toFixed(1)} m`,150,431,24);text(`闭合速度 ${d.vx.toFixed(2)} m/s`,150,473,23,C.teal);text(`横向偏差 ${d.y.toFixed(2)} m`,626,431,24);text(`横向速度 ${d.vy.toFixed(2)} m/s`,626,473,23,C.gold);note('按钮改变速度；松开后继续滑行。动画只模拟短距离相对运动。');

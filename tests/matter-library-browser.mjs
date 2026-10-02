@@ -28,7 +28,7 @@ let browser, page;
 try {
   await fs.mkdir(output, {recursive: true});
   const browsersPath = path.join(root, '.test-deps/browsers');
-  if (await fs.stat(browsersPath).then(() => true, () => false)) process.env.PLAYWRIGHT_BROWSERS_PATH = browsersPath;
+  if (!process.env.PLAYWRIGHT_BROWSERS_PATH && await fs.stat(browsersPath).then(() => true, () => false)) process.env.PLAYWRIGHT_BROWSERS_PATH = browsersPath;
   const {chromium} = await import('playwright');
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const base = `http://127.0.0.1:${server.address().port}${prefix}`;
@@ -36,7 +36,7 @@ try {
   const read = async file => JSON.parse(await fs.readFile(path.join(root, file), 'utf8'));
   const [inventory, local, presentation] = await Promise.all(['config/inventory.json', 'config/local-activities.json', 'config/presentation.json'].map(read));
   const shown = displayActivities([...inventory.activities, ...local.activities], presentation);
-  browser = await chromium.launch({headless: true, args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader']});
+  browser = await chromium.launch({headless: true, ...(process.env.CHROMIUM_EXECUTABLE ? {executablePath: process.env.CHROMIUM_EXECUTABLE} : {}), args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader']});
   const context = await browser.newContext({viewport: {width: 1440, height: 1000}});
   await context.route('**/*', route => route.request().url().startsWith(base) ? route.continue() : route.abort());
   page = await context.newPage();
@@ -98,11 +98,13 @@ try {
   assert.deepEqual(saved.openIds, [MATTER_MODULE_ID, 'primary-math']);
   assert.ok(saved.visited['matter-bridge'] > 123 && saved.visited[MATTER_MODULE_ID]);
   await matterFrame().locator('#pause').click();
+  assert.equal(await matterFrame().locator('#pause').textContent(), '暂停');
+  await matterFrame().locator('#pause').click();
   assert.equal(await matterFrame().locator('#pause').textContent(), '继续');
   await page.locator('#player-reset').click();
-  await matterFrame().waitForFunction(() => document.getElementById('pause').textContent === '暂停' && window.__mpContext?.engine);
+  await matterFrame().waitForFunction(() => document.getElementById('pause').textContent === '继续' && window.__mpContext?.engine);
   await ready(matterFrame(), {example: 'bridge'});
-  assert.equal(await matterFrame().locator('#pause').textContent(), '暂停');
+  assert.equal(await matterFrame().locator('#pause').textContent(), '继续');
   assert.ok(matterFrame().url().includes('example=bridge'));
   await page.screenshot({path: path.join(output, 'bridge-desktop.png')});
   report.checks.push('Legacy bookmarks and visits; pause and reset preserve selected scene');
@@ -166,9 +168,10 @@ try {
     const body = Matter.Composite.allBodies(__mpContext.engine.world).find(body => !body.isStatic && body.position.x > 100 && body.position.x < 700 && body.position.y > 60 && body.position.y < 450);
     return {x: rect.x + body.position.x * rect.width / canvas.width, y: rect.y + body.position.y * rect.height / canvas.height};
   });
+  const beforeDrag=await page.evaluate(()=>Matter.Composite.allBodies(__mpContext.engine.world).filter(body=>!body.isStatic).map(body=>({...body.position})));
   await page.mouse.move(point.x, point.y);await page.mouse.down();
   await page.mouse.move(point.x + 55, point.y + 25, {steps: 8});
-  assert.ok(await page.evaluate(() => Matter.Composite.allConstraints(__mpContext.engine.world).some(constraint => constraint.label === 'Mouse Constraint' && constraint.bodyB)), 'Canvas drag did not pick up a body');
+  assert.ok(await page.evaluate(before=>Matter.Composite.allBodies(__mpContext.engine.world).filter(body=>!body.isStatic).some((body,index)=>body.position.x!==before[index].x||body.position.y!==before[index].y),beforeDrag), 'Paused canvas drag did not move a body');
   await page.mouse.up();
   report.checks.push('Canvas drag still selects physics bodies');
 
@@ -195,8 +198,10 @@ try {
 }
 finally {
   await browser?.close();
+  report.browserClosed = !browser?.isConnected();
   server.closeAllConnections();
   if (server.listening) await new Promise(resolve => server.close(resolve));
+  report.serverClosed = !server.listening;
   await fs.writeFile(path.join(output, 'report.json'), JSON.stringify(report, null, 2) + '\n');
   console.log(JSON.stringify(report, null, 2));
 }

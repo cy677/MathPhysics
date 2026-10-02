@@ -17,7 +17,6 @@
     "states-of-matter-basics",
     "build-a-molecule",
     "primary-math",
-    "question-bank",
     "jsx-triangle",
     "jsx-mirror",
     "jsx-rotation",
@@ -52,7 +51,7 @@
       "playHint": "选一道题，拖动滑块改变条件，再播放变换。试着解释每一步。"
     },
     "spaceflight": {
-      "hidden": true,
+      "hidden": false,
       "title": "从地球出发",
       "description": "发射火箭、接近空间站，再带宇航员安全回家。",
       "playHint": "选择一条任务路线。暂停看清每个阶段，也可以到实验室亲手对接。"
@@ -173,9 +172,9 @@
       "playHint": "拖动物体再松手，观察它们落向哪里。"
     },
     "matter-gyro": {
-      "title": "陀螺",
-      "description": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。",
-      "playHint": "拖动物体，再放开。观察形状、连接或运动发生了什么变化。"
+      "title": "倾斜盒子",
+      "description": "改变盒子的倾斜方向，观察模型重力怎样改变积木运动。",
+      "playHint": "先预测积木会向哪边移动，再用方向选项设置倾斜，走几帧比较。"
     },
     "matter-manipulation": {
       "title": "物体操作",
@@ -349,8 +348,8 @@
     },
     "primary-math": {
       "title": "数与生活",
-      "description": "按一到六年级探索数、量、统计和生活中的数学关系。",
-      "playHint": "选择年级和题目，先调整模型，再填写答案并解释为什么。"
+      "description": "按新加坡小学1—6年级，先理解知识和生活例子，再做基础、巩固与拔高练习。",
+      "playHint": "选择年级、学习层次和知识点，先读知识与例子、调整模型，再生成当前知识点练习。"
     },
     "fractions-intro": {
       "title": "分数拼拼乐",
@@ -383,9 +382,10 @@
       "playHint": "把原子从下方的小桶拖出来，靠近它们组成分子。把符合目标的分子拖到收集框；也可以切到“多个分子”或“自由探索”自由搭建。"
     },
     "question-bank": {
-      "title": "中文题库工坊",
-      "description": "选择知识点，生成中文练习，试试分步提示和不同难度。",
-      "playHint": "选择知识点、题型和难度，生成练习后填写答案。遇到困难先打开提示，再看看解题过程。"
+      "title": "数与生活",
+      "description": "已合并至数与生活，旧地址继续进入统一课堂。",
+      "playHint": "选择知识点、题型和难度，生成练习后填写答案。遇到困难先打开提示，再看看解题过程。",
+      "hidden": true
     }
   }
 }

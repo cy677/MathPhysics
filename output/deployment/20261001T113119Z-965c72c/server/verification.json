@@ -1,0 +1,22 @@
+{
+  "releaseId": "20261001T113119Z-965c72c",
+  "verifiedFiles": 1932,
+  "activityCount": 72,
+  "entryChecks": 30,
+  "servedResourceHashesMatch": 78,
+  "javascriptModuleMimeChecks": 15,
+  "publicReferenceChecks": 4,
+  "cacheRefreshReturns200": true,
+  "privatePathsHidden": true,
+  "meowServiceUnchanged": true,
+  "meowFilesUnchanged": true,
+  "meowHomeUnchanged": true,
+  "meowServiceConfigUnchanged": true,
+  "nginxOtherFilesUnchanged": true,
+  "databaseTables": 12,
+  "databaseUnchanged": true,
+  "databaseChangedTables": [],
+  "backupIntegrity": "ok",
+  "backup": "/srv/mathphysics/backups/20261001T113119Z-965c72c",
+  "passed": true
+}

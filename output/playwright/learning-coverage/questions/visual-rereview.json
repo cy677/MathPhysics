@@ -1,0 +1,633 @@
+{
+  "suite": "Question and Tangram visual rereview after framing/marker fixes",
+  "generatedAt": "2026-10-01T08:12:19.653Z",
+  "codingModel": "gpt-6.1-sol",
+  "codingReasoning": "max",
+  "visualStatus": "pending",
+  "sourceHashes": {
+    "lessons/primary-math/bank.mjs": "d9e5e784f8ca546514f1d0fb15e9aba98e1d2b20f41d1516792c2e071fa22ccb",
+    "lessons/primary-math/bank-guides.mjs": "4cc50a3f7677247dfc58ebe7a045e3f5f4bbaeb171689d34828fd3e17a1e5f4f",
+    "lessons/primary-math/curriculum.mjs": "841a765bc5dec00f71ec92d3ecc780498e747eacfb4ace247adf093af3837738",
+    "lessons/primary-math/curriculum-generators.mjs": "fb25e30babaabe5d78bf7dbbabad93bbc8e13b9aae796aeeec7bb2130d612764",
+    "lessons/primary-math/unit-guides.mjs": "0ca8848d68079913e3b8eb34b963b8551209ffe07723a487e518e03878221f9a",
+    "lessons/primary-math/app.mjs": "97a04cabde271b686d1850cca196dd036e917883c9f0d7ec8bc8f9eeaa5d76f6",
+    "lessons/primary-math/index.html": "1bfc8eae6e2c8f264c17433f477f785f63d8b142cb53ff0eb07e61e0e78f500e",
+    "lessons/primary-math/style.css": "e44025c38f0536f7958c2c3bbb1e252e563ec617ab7710fabc3aea8e47ed1fb2",
+    "lessons/primary-math/practice.css": "7ea8eef268d000f05aef533a6a5a8cb4792d1bc417cc0c384502b875ef85442d",
+    "lessons/primary-math/models.mjs": "422bc3ae1c1c660ce82eb3beaafeca7faddd51167f9fbf9a47f1d7fa93cfe98f",
+    "lessons/question-bank/generators.mjs": "c1723135fb971359f9d40a32f3061910195f39ba5dd0a68f251f28f6783a92c8",
+    "lessons/question-bank/teaching.mjs": "1f9615842e61e9f42f1d23aa766d0fa98d7d10c1edf117e96f4c97a405120742",
+    "lessons/question-bank/engine.mjs": "d5d8a5665be107b1875c74e814b465adad0b7605d2eba17605892338989f34f2",
+    "lessons/question-bank/app.mjs": "f31d1fc021913b3416388863a275e77082b91cc67f7e8bbaf88e0842398f8b26"
+  },
+  "counts": {
+    "fixedPrompts": 48,
+    "correctedModels": 9,
+    "modelStates": 27,
+    "responsive": 6,
+    "tangram": 2
+  },
+  "captureCount": 92,
+  "groups": {
+    "fixedPrompts": [
+      {
+        "id": "pm-01",
+        "path": "output/playwright/learning-coverage/questions/pm-01-prompt.png"
+      },
+      {
+        "id": "pm-02",
+        "path": "output/playwright/learning-coverage/questions/pm-02-prompt.png"
+      },
+      {
+        "id": "pm-03",
+        "path": "output/playwright/learning-coverage/questions/pm-03-prompt.png"
+      },
+      {
+        "id": "pm-04",
+        "path": "output/playwright/learning-coverage/questions/pm-04-prompt.png"
+      },
+      {
+        "id": "pm-05",
+        "path": "output/playwright/learning-coverage/questions/pm-05-prompt.png"
+      },
+      {
+        "id": "pm-06",
+        "path": "output/playwright/learning-coverage/questions/pm-06-prompt.png"
+      },
+      {
+        "id": "pm-07",
+        "path": "output/playwright/learning-coverage/questions/pm-07-prompt.png"
+      },
+      {
+        "id": "pm-08",
+        "path": "output/playwright/learning-coverage/questions/pm-08-prompt.png"
+      },
+      {
+        "id": "pm-09",
+        "path": "output/playwright/learning-coverage/questions/pm-09-prompt.png"
+      },
+      {
+        "id": "pm-10",
+        "path": "output/playwright/learning-coverage/questions/pm-10-prompt.png"
+      },
+      {
+        "id": "pm-11",
+        "path": "output/playwright/learning-coverage/questions/pm-11-prompt.png"
+      },
+      {
+        "id": "pm-12",
+        "path": "output/playwright/learning-coverage/questions/pm-12-prompt.png"
+      },
+      {
+        "id": "pm-13",
+        "path": "output/playwright/learning-coverage/questions/pm-13-prompt.png"
+      },
+      {
+        "id": "pm-14",
+        "path": "output/playwright/learning-coverage/questions/pm-14-prompt.png"
+      },
+      {
+        "id": "pm-15",
+        "path": "output/playwright/learning-coverage/questions/pm-15-prompt.png"
+      },
+      {
+        "id": "pm-16",
+        "path": "output/playwright/learning-coverage/questions/pm-16-prompt.png"
+      },
+      {
+        "id": "pm-17",
+        "path": "output/playwright/learning-coverage/questions/pm-17-prompt.png"
+      },
+      {
+        "id": "pm-18",
+        "path": "output/playwright/learning-coverage/questions/pm-18-prompt.png"
+      },
+      {
+        "id": "pm-19",
+        "path": "output/playwright/learning-coverage/questions/pm-19-prompt.png"
+      },
+      {
+        "id": "pm-20",
+        "path": "output/playwright/learning-coverage/questions/pm-20-prompt.png"
+      },
+      {
+        "id": "pm-21",
+        "path": "output/playwright/learning-coverage/questions/pm-21-prompt.png"
+      },
+      {
+        "id": "pm-22",
+        "path": "output/playwright/learning-coverage/questions/pm-22-prompt.png"
+      },
+      {
+        "id": "pm-23",
+        "path": "output/playwright/learning-coverage/questions/pm-23-prompt.png"
+      },
+      {
+        "id": "pm-24",
+        "path": "output/playwright/learning-coverage/questions/pm-24-prompt.png"
+      },
+      {
+        "id": "pm-25",
+        "path": "output/playwright/learning-coverage/questions/pm-25-prompt.png"
+      },
+      {
+        "id": "pm-26",
+        "path": "output/playwright/learning-coverage/questions/pm-26-prompt.png"
+      },
+      {
+        "id": "pm-27",
+        "path": "output/playwright/learning-coverage/questions/pm-27-prompt.png"
+      },
+      {
+        "id": "pm-28",
+        "path": "output/playwright/learning-coverage/questions/pm-28-prompt.png"
+      },
+      {
+        "id": "pm-29",
+        "path": "output/playwright/learning-coverage/questions/pm-29-prompt.png"
+      },
+      {
+        "id": "pm-30",
+        "path": "output/playwright/learning-coverage/questions/pm-30-prompt.png"
+      },
+      {
+        "id": "pm-31",
+        "path": "output/playwright/learning-coverage/questions/pm-31-prompt.png"
+      },
+      {
+        "id": "pm-32",
+        "path": "output/playwright/learning-coverage/questions/pm-32-prompt.png"
+      },
+      {
+        "id": "pm-33",
+        "path": "output/playwright/learning-coverage/questions/pm-33-prompt.png"
+      },
+      {
+        "id": "pm-34",
+        "path": "output/playwright/learning-coverage/questions/pm-34-prompt.png"
+      },
+      {
+        "id": "pm-35",
+        "path": "output/playwright/learning-coverage/questions/pm-35-prompt.png"
+      },
+      {
+        "id": "pm-36",
+        "path": "output/playwright/learning-coverage/questions/pm-36-prompt.png"
+      },
+      {
+        "id": "pm-37",
+        "path": "output/playwright/learning-coverage/questions/pm-37-prompt.png"
+      },
+      {
+        "id": "pm-38",
+        "path": "output/playwright/learning-coverage/questions/pm-38-prompt.png"
+      },
+      {
+        "id": "pm-39",
+        "path": "output/playwright/learning-coverage/questions/pm-39-prompt.png"
+      },
+      {
+        "id": "pm-40",
+        "path": "output/playwright/learning-coverage/questions/pm-40-prompt.png"
+      },
+      {
+        "id": "pm-41",
+        "path": "output/playwright/learning-coverage/questions/pm-41-prompt.png"
+      },
+      {
+        "id": "pm-42",
+        "path": "output/playwright/learning-coverage/questions/pm-42-prompt.png"
+      },
+      {
+        "id": "pm-43",
+        "path": "output/playwright/learning-coverage/questions/pm-43-prompt.png"
+      },
+      {
+        "id": "pm-44",
+        "path": "output/playwright/learning-coverage/questions/pm-44-prompt.png"
+      },
+      {
+        "id": "pm-45",
+        "path": "output/playwright/learning-coverage/questions/pm-45-prompt.png"
+      },
+      {
+        "id": "pm-46",
+        "path": "output/playwright/learning-coverage/questions/pm-46-prompt.png"
+      },
+      {
+        "id": "pm-47",
+        "path": "output/playwright/learning-coverage/questions/pm-47-prompt.png"
+      },
+      {
+        "id": "pm-48",
+        "path": "output/playwright/learning-coverage/questions/pm-48-prompt.png"
+      }
+    ],
+    "correctedModels": [
+      {
+        "id": "pm-12",
+        "path": "output/playwright/learning-coverage/questions/pm-12-model.png"
+      },
+      {
+        "id": "pm-24",
+        "path": "output/playwright/learning-coverage/questions/pm-24-model.png"
+      },
+      {
+        "id": "pm-28",
+        "path": "output/playwright/learning-coverage/questions/pm-28-model.png"
+      },
+      {
+        "id": "pm-31",
+        "path": "output/playwright/learning-coverage/questions/pm-31-model.png"
+      },
+      {
+        "id": "pm-38",
+        "path": "output/playwright/learning-coverage/questions/pm-38-model.png"
+      },
+      {
+        "id": "pm-39",
+        "path": "output/playwright/learning-coverage/questions/pm-39-model.png"
+      },
+      {
+        "id": "pm-41",
+        "path": "output/playwright/learning-coverage/questions/pm-41-model.png"
+      },
+      {
+        "id": "pm-44",
+        "path": "output/playwright/learning-coverage/questions/pm-44-model.png"
+      },
+      {
+        "id": "pm-46",
+        "path": "output/playwright/learning-coverage/questions/pm-46-model.png"
+      }
+    ],
+    "modelStates": [
+      {
+        "id": "pm-12",
+        "state": "min",
+        "value": 0,
+        "path": "output/playwright/learning-coverage/questions/pm-12-model-min.png"
+      },
+      {
+        "id": "pm-12",
+        "state": "answer",
+        "value": 6,
+        "path": "output/playwright/learning-coverage/questions/pm-12-model-answer.png"
+      },
+      {
+        "id": "pm-12",
+        "state": "max",
+        "value": 10,
+        "path": "output/playwright/learning-coverage/questions/pm-12-model-max.png"
+      },
+      {
+        "id": "pm-24",
+        "state": "min",
+        "value": 0,
+        "path": "output/playwright/learning-coverage/questions/pm-24-model-min.png"
+      },
+      {
+        "id": "pm-24",
+        "state": "answer",
+        "value": 29,
+        "path": "output/playwright/learning-coverage/questions/pm-24-model-answer.png"
+      },
+      {
+        "id": "pm-24",
+        "state": "max",
+        "value": 40,
+        "path": "output/playwright/learning-coverage/questions/pm-24-model-max.png"
+      },
+      {
+        "id": "pm-28",
+        "state": "min",
+        "value": 0,
+        "path": "output/playwright/learning-coverage/questions/pm-28-model-min.png"
+      },
+      {
+        "id": "pm-28",
+        "state": "answer",
+        "value": 6.35,
+        "path": "output/playwright/learning-coverage/questions/pm-28-model-answer.png"
+      },
+      {
+        "id": "pm-28",
+        "state": "max",
+        "value": 10,
+        "path": "output/playwright/learning-coverage/questions/pm-28-model-max.png"
+      },
+      {
+        "id": "pm-31",
+        "state": "min",
+        "value": 1,
+        "path": "output/playwright/learning-coverage/questions/pm-31-model-min.png"
+      },
+      {
+        "id": "pm-31",
+        "state": "answer",
+        "value": 4,
+        "path": "output/playwright/learning-coverage/questions/pm-31-model-answer.png"
+      },
+      {
+        "id": "pm-31",
+        "state": "max",
+        "value": 8,
+        "path": "output/playwright/learning-coverage/questions/pm-31-model-max.png"
+      },
+      {
+        "id": "pm-38",
+        "state": "min",
+        "value": 0,
+        "path": "output/playwright/learning-coverage/questions/pm-38-model-min.png"
+      },
+      {
+        "id": "pm-38",
+        "state": "answer",
+        "value": 9,
+        "path": "output/playwright/learning-coverage/questions/pm-38-model-answer.png"
+      },
+      {
+        "id": "pm-38",
+        "state": "max",
+        "value": 15,
+        "path": "output/playwright/learning-coverage/questions/pm-38-model-max.png"
+      },
+      {
+        "id": "pm-39",
+        "state": "min",
+        "value": 0,
+        "path": "output/playwright/learning-coverage/questions/pm-39-model-min.png"
+      },
+      {
+        "id": "pm-39",
+        "state": "answer",
+        "value": 0.4,
+        "path": "output/playwright/learning-coverage/questions/pm-39-model-answer.png"
+      },
+      {
+        "id": "pm-39",
+        "state": "max",
+        "value": 1,
+        "path": "output/playwright/learning-coverage/questions/pm-39-model-max.png"
+      },
+      {
+        "id": "pm-41",
+        "state": "min",
+        "value": 0,
+        "path": "output/playwright/learning-coverage/questions/pm-41-model-min.png"
+      },
+      {
+        "id": "pm-41",
+        "state": "answer",
+        "value": 6,
+        "path": "output/playwright/learning-coverage/questions/pm-41-model-answer.png"
+      },
+      {
+        "id": "pm-41",
+        "state": "max",
+        "value": 10,
+        "path": "output/playwright/learning-coverage/questions/pm-41-model-max.png"
+      },
+      {
+        "id": "pm-44",
+        "state": "min",
+        "value": 0,
+        "path": "output/playwright/learning-coverage/questions/pm-44-model-min.png"
+      },
+      {
+        "id": "pm-44",
+        "state": "answer",
+        "value": 60,
+        "path": "output/playwright/learning-coverage/questions/pm-44-model-answer.png"
+      },
+      {
+        "id": "pm-44",
+        "state": "max",
+        "value": 100,
+        "path": "output/playwright/learning-coverage/questions/pm-44-model-max.png"
+      },
+      {
+        "id": "pm-46",
+        "state": "min",
+        "value": 0,
+        "path": "output/playwright/learning-coverage/questions/pm-46-model-min.png"
+      },
+      {
+        "id": "pm-46",
+        "state": "answer",
+        "value": 12,
+        "path": "output/playwright/learning-coverage/questions/pm-46-model-answer.png"
+      },
+      {
+        "id": "pm-46",
+        "state": "max",
+        "value": 20,
+        "path": "output/playwright/learning-coverage/questions/pm-46-model-max.png"
+      }
+    ],
+    "responsive": [
+      {
+        "id": "low-mobile",
+        "selector": "#knowledge",
+        "top": 15.5,
+        "scrollY": 522,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "screenshot": "output/playwright/learning-coverage/questions/low-mobile-knowledge.png",
+        "path": "output/playwright/learning-coverage/questions/low-mobile-knowledge.png"
+      },
+      {
+        "id": "low-mobile",
+        "selector": "practice-workspace",
+        "top": 15.703125,
+        "scrollY": 4939,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "screenshot": "output/playwright/learning-coverage/questions/low-mobile-practice.png",
+        "path": "output/playwright/learning-coverage/questions/low-mobile-practice.png"
+      },
+      {
+        "id": "middle-tablet",
+        "selector": "#knowledge",
+        "top": 15.5,
+        "scrollY": 390,
+        "viewport": {
+          "width": 1024,
+          "height": 768
+        },
+        "screenshot": "output/playwright/learning-coverage/questions/middle-tablet-knowledge.png",
+        "path": "output/playwright/learning-coverage/questions/middle-tablet-knowledge.png"
+      },
+      {
+        "id": "middle-tablet",
+        "selector": "practice-layout",
+        "top": 16.1875,
+        "scrollY": 1940,
+        "viewport": {
+          "width": 1024,
+          "height": 768
+        },
+        "screenshot": "output/playwright/learning-coverage/questions/middle-tablet-practice.png",
+        "path": "output/playwright/learning-coverage/questions/middle-tablet-practice.png"
+      },
+      {
+        "id": "upper-desktop",
+        "selector": "#knowledge",
+        "top": 15.6875,
+        "scrollY": 443,
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "screenshot": "output/playwright/learning-coverage/questions/upper-desktop-knowledge.png",
+        "path": "output/playwright/learning-coverage/questions/upper-desktop-knowledge.png"
+      },
+      {
+        "id": "upper-desktop",
+        "selector": "practice-layout",
+        "top": 15.8125,
+        "scrollY": 3637,
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "screenshot": "output/playwright/learning-coverage/questions/upper-desktop-practice.png",
+        "path": "output/playwright/learning-coverage/questions/upper-desktop-practice.png"
+      }
+    ],
+    "tangram": [
+      {
+        "id": "tangram/square",
+        "path": "output/playwright/learning-coverage/local/tangram-square-question.png"
+      },
+      {
+        "id": "tangram/creative",
+        "path": "output/playwright/learning-coverage/local/tangram-creative-question.png"
+      }
+    ]
+  },
+  "functionalEvidence": {
+    "unitLog": "output/questions-visual-unit.log",
+    "unitTests": 233,
+    "parameterSamples": 9240,
+    "frozenCoreSamples": 924,
+    "fullBrowser": "output/playwright/learning-coverage/questions/report.json",
+    "modelRereviewLog": "output/questions-model-rereview.log",
+    "tangramReport": "output/playwright/learning-coverage/local/tangram-framing-rereview.json",
+    "questionSourceHashesMatch": true
+  },
+  "resolvedFindings": [
+    {
+      "id": "shared-alignment-marker-text",
+      "ids": [
+        "pm-12",
+        "pm-24",
+        "pm-28",
+        "pm-31",
+        "pm-38",
+        "pm-39",
+        "pm-41",
+        "pm-44",
+        "pm-46"
+      ],
+      "change": "Split shared balance/decimal alignment markers into intervals outside formula and caption bounds.",
+      "checks": "Every model using those branches checked at min/answer/max using SVG line and text bounding boxes."
+    },
+    {
+      "id": "viewport-start-position",
+      "change": "Capture true viewport with explicit top alignment and settled fonts/rendering; expand teaching so the practice workspace can reach the top.",
+      "checks": [
+        {
+          "id": "low-mobile",
+          "framing": [
+            {
+              "selector": "#knowledge",
+              "top": 15.5,
+              "scrollY": 522,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "screenshot": "output/playwright/learning-coverage/questions/low-mobile-knowledge.png"
+            },
+            {
+              "selector": "practice-workspace",
+              "top": 15.703125,
+              "scrollY": 4939,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "screenshot": "output/playwright/learning-coverage/questions/low-mobile-practice.png"
+            }
+          ]
+        },
+        {
+          "id": "middle-tablet",
+          "framing": [
+            {
+              "selector": "#knowledge",
+              "top": 15.5,
+              "scrollY": 390,
+              "viewport": {
+                "width": 1024,
+                "height": 768
+              },
+              "screenshot": "output/playwright/learning-coverage/questions/middle-tablet-knowledge.png"
+            },
+            {
+              "selector": "practice-layout",
+              "top": 16.1875,
+              "scrollY": 1940,
+              "viewport": {
+                "width": 1024,
+                "height": 768
+              },
+              "screenshot": "output/playwright/learning-coverage/questions/middle-tablet-practice.png"
+            }
+          ]
+        },
+        {
+          "id": "upper-desktop",
+          "framing": [
+            {
+              "selector": "#knowledge",
+              "top": 15.6875,
+              "scrollY": 443,
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "screenshot": "output/playwright/learning-coverage/questions/upper-desktop-knowledge.png"
+            },
+            {
+              "selector": "practice-layout",
+              "top": 15.8125,
+              "scrollY": 3637,
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "screenshot": "output/playwright/learning-coverage/questions/upper-desktop-practice.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "missing-fixed-prompt-evidence",
+      "change": "Add one original prompt+intent question-card screenshot per fixed question."
+    },
+    {
+      "id": "tangram-scroll-ancestor-capture",
+      "change": "Expand the actual viewport until the whole aside fits, capture the question panel, and restore the original viewport."
+    }
+  ],
+  "limits": [
+    "Functional geometry/framing checks passed; final visual review remains assigned to the reviewing agent."
+  ]
+}

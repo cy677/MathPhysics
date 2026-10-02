@@ -1,0 +1,27 @@
+{
+  "recordType": "Observed development-run failures and their resolution; historical evidence, not the current verification result",
+  "observations": [
+    {
+      "stage": "First complete native-question browser run, file:// Fraction Matcher startup",
+      "message": "Failed to execute 'insertRule' on 'CSSStyleSheet': Cannot access StyleSheet to insertRule",
+      "processExitCode": 1,
+      "cause": "Pinned legacy SceneryStyle selected the last document stylesheet, which was the later body theme.css link rather than its own head inline style.",
+      "resolution": "A reversible display-only build patch selects the created inline style's own sheet. Dedicated phet-display-compat-browser checks cover HTTP/file and delayed startup. The final native run passes five genuinely offline file representatives.",
+      "currentEvidence": "output/playwright/learning-coverage/phet-display-compat-browser-report.json"
+    },
+    {
+      "stage": "First run's report serialization",
+      "message": "TypeError: Converting circular structure to JSON",
+      "cause": "A native balance-direction enumeration object was copied into diagnostic proof.",
+      "resolution": "Proof records the enumeration's stable name. The final report writes successfully and retains zero browser errors."
+    },
+    {
+      "stage": "Provisional same-level restart viewport screenshot",
+      "observation": "The native Area Builder goal showed 24 while an earlier teaching card still showed 9 during the 150ms polling interval.",
+      "cause": "The capture wait checked only contextId, which stays the same on a native restart.",
+      "resolution": "Capture now waits until the panel fingerprint equals the current native challenge fingerprint, then settles fonts and two animation frames. All 69 final image paths were regenerated."
+    }
+  ],
+  "finalResult": "docs/learning-coverage/phet-questions.json",
+  "finalBrowserReport": "output/playwright/learning-coverage/phet-questions/browser-report.json"
+}

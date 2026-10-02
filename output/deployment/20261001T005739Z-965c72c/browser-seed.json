@@ -1,0 +1,22 @@
+{
+  "origins": [
+    {
+      "origin": "https://124.70.198.189",
+      "localStorage": [
+        {
+          "name": "mathphysics.state.v1",
+          "value": "{\"schemaVersion\":1,\"openIds\":[],\"visited\":{\"area-builder\":123456789,\"geometry-proofs\":987654321,\"spaceflight\":246810121},\"teacherPreview\":true}"
+        },
+        {
+          "name": "mathphysics.progress.v1.geometry-proofs",
+          "value": "{\"schemaVersion\":1,\"completed\":{\"rectangle/0\":123456789},\"checkpoint\":null}"
+        },
+        {
+          "name": "meow.deploy-preservation-check",
+          "value": "sample-record-20261001"
+        }
+      ]
+    }
+  ],
+  "cookies": []
+}

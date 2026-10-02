@@ -1,0 +1,20 @@
+{
+  "releaseId": "20261001T005739Z-965c72c",
+  "archiveSHA256": "62da4fdeebb81717a5857f0fbebe08781cf0bb0ff6dcb2861a64854758daef7d",
+  "originalUploadedArchiveSHA256": "92e706785d2189336fe4157ca319883b98c16f8161cec3d9db917509c2457515",
+  "deltaSHA256": "4ec3c1c9eb15b371fe48fb6eaef4dc68fd2014714691ff731edddb65acbc361b",
+  "uploadMethod": "base-plus-delta",
+  "verifiedFiles": 1873,
+  "sourceCommit": "965c72c95dc36ede7e66336c7e3c7287ef88b214",
+  "activityCount": 72,
+  "serverRebuildMatchesLocal": true,
+  "nodeVersion": "v24.14.0",
+  "tests": {
+    "tests": 197,
+    "pass": 197,
+    "fail": 0,
+    "skipped": 0
+  },
+  "ready": true,
+  "previousDeltaSHA256": "be18a3bc1092c38d4605cef9b02336cc1c772cccf133b765db05492c2dcfd58b"
+}

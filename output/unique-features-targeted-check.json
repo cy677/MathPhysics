@@ -1,0 +1,10 @@
+{
+  "syntaxPassed": true,
+  "unchangedRealInteractionAssertions": 24,
+  "serverUsesParentInterpreter": true,
+  "injectedExceptionExitCode": 1,
+  "browserFinallyInvoked": true,
+  "playwrightContextExited": true,
+  "actualServicePortReleased": true,
+  "note": "Failure probe uses a browser lifecycle stub; the complete real browser regression is assigned to root with matched Python 3.12 dependencies."
+}

@@ -1,0 +1,14 @@
+{
+  "suite": "Numbers and life / Singapore curriculum",
+  "combinations": 0,
+  "screenshots": [],
+  "limitations": [
+    "Chromium触屏模拟，不代表真实iPad Safari或课堂学习效果。"
+  ],
+  "base": "http://127.0.0.1:52812/MathPhysics/",
+  "passed": false,
+  "failure": "AssertionError [ERR_ASSERTION]: Injected browser assertion failure: CI must return a nonzero exit code\n    at file:///C:/Users/cheng/Desktop/MathPhysics/tests/numbers-life-browser.mjs:27:27",
+  "checks": [],
+  "pageErrors": [],
+  "serverClosed": true
+}

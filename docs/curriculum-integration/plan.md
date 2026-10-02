@@ -1,5 +1,7 @@
 # 按年级题库融合方案
 
+本文保留 2026-09-30 的融合计划。当前统一题库、全部开放方式、教学字段和 CI 验收以 [题库说明](../question-bank.md) 与 [全量覆盖清单](../learning-coverage/README.md) 为准；以下工作台和默认开放列表属于历史界面。
+
 日期：2026-09-30。来源分支：`origin/feat/primary-curriculum-questions-20260930`，固定提交 `a7187a2f86007d23f1a04f3f7b49a04d7a4e591a`；共同基线 `e0b0ad8a7d9ddb05c9a117afc96388200a9c3fcd`。
 
 ## 合并原则

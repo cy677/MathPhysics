@@ -157,3 +157,4 @@ button{border-color:var(--mp-line)}.board-card,.panel{border-radius:var(--mp-rad
 body.mp-embedded header,body.mp-embedded footer,body.mp-embedded .eyebrow{display:none}
 body.mp-embedded h1{font-size:24px}.board-state,.legend,footer{font-size:12px}
 @media(min-width:900px) and (min-height:580px){.workspace,.board-card,aside{min-height:0}body.mp-embedded main{padding-top:12px}}
+.learning-guide h2{font-size:14px;margin:16px 0 5px}.learning-guide h2:first-child{margin-top:0}.learning-guide p,.learning-list,.question-intent{font-size:13px;line-height:1.85;overflow-wrap:anywhere}.learning-list{padding-left:22px;margin:8px 0}.learning-list li+li{margin-top:8px}.question-solution{margin-top:12px;border-top:1px solid var(--mp-line)}.question-solution summary{padding:12px 0;font-size:13px;cursor:pointer}.question-solution b{font-size:13px}.challenge #next-hint{width:100%;white-space:normal;min-height:44px}.question-intent{color:var(--mp-muted)}

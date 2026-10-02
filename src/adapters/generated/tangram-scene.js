@@ -62,6 +62,34 @@ var choosingShape;
 
 init();
 animate();
+// Host controls use the existing puzzle placement/collision rules.
+window.__mpTangramControls = {
+  select(index) {
+    var tan = puzzle.actualTangram.tans[index];
+    if (!tan) return null;
+    var previous = puzzle.state;
+    if (puzzle.state === Puzzle.STATE_REVIEW) puzzle.showGame();
+    if (!tan.active) puzzle.selectTan(tan);
+    puzzle.selectedTan = tan;
+    if (previous !== puzzle.state) handleStateChanged(previous);
+    return tan;
+  },
+  move(index, dx, dy) {
+    var tan = this.select(index); if (!tan) return;
+    var position = tan.position.clone(); position.x += dx; position.y += dy;
+    if (puzzle.actualTangram.placeTan(tan, position, tan.rotation)) {
+      tan.active = true; puzzle.actualTangram.snapTan(tan);
+    }
+    syncTanTransforms(puzzle.actualTangram); updateGui(); renderFrame();
+  },
+  turn(index, degrees) {
+    var tan = this.select(index); if (!tan) return;
+    var previous = tan.rotation; tan.transform(tan.position, previous + degrees);
+    if (puzzle.actualTangram.hasCollisions(tan)) tan.transform(tan.position, previous);
+    syncTanTransforms(puzzle.actualTangram); updateGui(); renderFrame();
+  },
+  snapshot() { return puzzle.actualTangram.tans.map(t => ({ x:t.position.x, y:t.position.y, rotation:t.rotation, active:t.active })); }
+};
 
 function init() {
 	camera = new THREE.PerspectiveCamera(CAMERA_FOV, getAspectRatio(), CAMERA_NEAR, CAMERA_FAR);

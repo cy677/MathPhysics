@@ -45,8 +45,12 @@
         <h3 id="challenge"></h3>
         <div class="challenge-actions"><button id="check" class="primary">我做好了</button><button id="new-goal" class="quiet">下个测试 →</button></div>
         <p id="feedback" role="status"></p>
+        <p id="question-intent" class="question-intent"></p>
+        <button id="next-hint" class="quiet" type="button">给我下一步提示</button><ol id="question-hints" class="learning-list" aria-live="polite"></ol>
+        <details id="question-solution" class="question-solution"><summary>完整解题过程与常见错误</summary><ol id="question-steps" class="learning-list"></ol><b>常见错误</b><ul id="question-mistakes" class="learning-list"></ul></details>
       </section>
-      <details class="panel explanation"><summary>为什么会这样？</summary><p id="why"></p></details>
+      <section class="panel learning-guide" aria-label="本实验学习引导"><h2>观察什么</h2><p id="learn-observe"></p><h2>怎么操作</h2><ol id="learn-actions" class="learning-list"></ol><h2>为什么这样</h2><p id="learn-why"></p><h2>生活中的例子</h2><p id="learn-life"></p></section>
+      <details class="panel explanation"><summary>高年级：进一步理解原理</summary><p id="why"></p></details>
     </aside>
   </div>
 </main>

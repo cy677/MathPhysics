@@ -1,0 +1,9 @@
+{
+  "shell": "Git Bash",
+  "tee": "/usr/bin/tee",
+  "pipefail": true,
+  "injectedAssertionFailure": true,
+  "expectedExitCode": 1,
+  "actualExitCode": 1,
+  "passed": true
+}

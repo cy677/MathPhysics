@@ -49,6 +49,9 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -59,6 +62,7 @@ jobs:
           python-version: '3.12'
       - name: Check complete catalog and mathematics
         run: |
+          set -o pipefail
           npm ci --ignore-scripts
           npm test | tee docs/classroom-unit-report.txt
       - name: Build self-contained classroom files
@@ -69,6 +73,7 @@ jobs:
           npm run build:primary
       - name: Install browser test dependency
         run: |
+          npx playwright install --with-deps chromium
           node scripts/python.mjs -m pip install playwright==1.56.0
           node scripts/python.mjs -m playwright install --with-deps chromium
       - name: Verify real HTTP, file loading and interactions
@@ -77,6 +82,23 @@ jobs:
         run: node scripts/python.mjs tests/unique-features-browser.py
       - name: Verify geometry lessons
         run: node tests/geometry-browser.mjs
+      - name: Verify current questions and failure propagation
+        run: |
+          npm run test:questions:failure
+          npm run test:questions:browser
+          npm run test:questions:learning:browser
+      - name: Verify demonstration learning and classroom questions
+        run: |
+          npm run test:demo-learning:browser
+          npm run test:local-learning:browser
+      - name: Verify native generated questions and molecule collection targets
+        run: |
+          npm run test:phet-questions:browser
+          npm run test:phet-molecule-questions:browser
+      - name: Verify current science viewport layout and native input coordinates
+        run: |
+          npm run test:demo-layout:browser
+          npm run test:phet-display-compat:browser
       - name: Package offline classroom
         run: npm run package
       - uses: actions/upload-artifact@v4
@@ -100,4 +122,8 @@ jobs:
             docs/classroom-unit-report.txt
             docs/classroom-screenshots/
             docs/geometry-browser-report.json
+            docs/learning-coverage/
+            output/playwright/learning-coverage/
+            output/phet-questions-observed-history.json
+            output/playwright/numbers-life-sg/
           retention-days: 30

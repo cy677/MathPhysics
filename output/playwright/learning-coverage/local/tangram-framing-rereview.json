@@ -1,0 +1,66 @@
+{
+  "suite": "Tangram screenshot framing rereview",
+  "generatedAt": "2026-10-01T08:09:19.345Z",
+  "finding": "A tall panel was clipped by its scrolling aside during element screenshots.",
+  "resolution": "Expand the actual viewport until the whole aside fits, capture the question panel, and restore the original viewport.",
+  "captures": [
+    {
+      "id": "tangram/square",
+      "questionId": "square/none",
+      "screenshot": "output/playwright/learning-coverage/local/tangram-square-question.png",
+      "viewport": {
+        "width": 1512,
+        "height": 2909
+      },
+      "panel": {
+        "x": 1162,
+        "y": 684.671875,
+        "width": 307,
+        "height": 1610.03125
+      },
+      "checks": {
+        "wholePanelInViewport": true,
+        "asideNotClipping": true
+      },
+      "teachingFields": [
+        "intent",
+        "hints",
+        "steps",
+        "commonMistakes"
+      ],
+      "passed": true
+    },
+    {
+      "id": "tangram/creative",
+      "questionId": "creative/none",
+      "screenshot": "output/playwright/learning-coverage/local/tangram-creative-question.png",
+      "viewport": {
+        "width": 1512,
+        "height": 2957
+      },
+      "panel": {
+        "x": 1162,
+        "y": 684.671875,
+        "width": 307,
+        "height": 1634.078125
+      },
+      "checks": {
+        "wholePanelInViewport": true,
+        "asideNotClipping": true
+      },
+      "teachingFields": [
+        "intent",
+        "hints",
+        "steps",
+        "commonMistakes"
+      ],
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "passed": true,
+  "visualStatus": "pending",
+  "port": 56289,
+  "serverClosed": true,
+  "portReleased": true
+}

@@ -1,0 +1,19 @@
+{
+  "releaseId": "20261001T113119Z-965c72c",
+  "archiveSHA256": "9bc9f3ef8232c5cdf780b603b1d9cb56d7c9f01f4a32ffcb7f976a64abe39622",
+  "originalUploadedArchiveSHA256": "21b20458b92497db0924b4f7191bf520e9f208c8520519b1ef0bc2ef4d25bdbc",
+  "deltaSHA256": "f0f0c380f005247e7a9036f6ca181c6dab571e490c4b7da13bf1c3e5778926b5",
+  "uploadMethod": "base-plus-delta",
+  "verifiedFiles": 1932,
+  "sourceCommit": "965c72c95dc36ede7e66336c7e3c7287ef88b214",
+  "activityCount": 72,
+  "serverRebuildMatchesLocal": true,
+  "nodeVersion": "v24.14.0",
+  "tests": {
+    "tests": 493,
+    "pass": 490,
+    "fail": 0,
+    "skipped": 3
+  },
+  "ready": true
+}

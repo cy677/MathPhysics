@@ -1,0 +1,33 @@
+{
+  "suite": "Numbers and life / Singapore curriculum",
+  "combinations": 147,
+  "screenshots": [
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\numbers-life-sg\\desktop-knowledge.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\numbers-life-sg\\desktop-practice.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\numbers-life-sg\\tablet-knowledge.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\numbers-life-sg\\tablet-practice.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\numbers-life-sg\\mobile-knowledge.png",
+    "C:\\Users\\cheng\\Desktop\\MathPhysics\\output\\playwright\\numbers-life-sg\\mobile-practice.png"
+  ],
+  "limitations": [
+    "Chromium触屏模拟，不代表真实iPad Safari或课堂学习效果。"
+  ],
+  "base": "http://127.0.0.1:57642/MathPhysics/",
+  "passed": true,
+  "checks": [
+    "统一入口与知识在前、练习在后的顺序",
+    "49个知识点 × 3个学习层次全部实际生成",
+    "判题、提示、查看解析、刷新恢复与首次作答统计",
+    "原有模型、判题与48个生活挑战继续可用",
+    "旧版练习和正确作答完整恢复，保留自由练习设置",
+    "新版导出导入和学生版答案隔离",
+    "导入指定题型组合后，生成和刷新仍精确复现",
+    "旧课堂地址自动进入统一数与生活页面",
+    "首页只有一个入口，宿主iframe与旧活动链接可用",
+    "电脑、平板、手机布局与打印隐藏学习控制",
+    "单文件离线版无网络依赖并能生成课程练习",
+    "没有未捕获的页面错误"
+  ],
+  "pageErrors": [],
+  "serverClosed": true
+}

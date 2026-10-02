@@ -1,20 +1,22 @@
-# 中文参数化题库
+# 数与生活：练习引擎说明
 
-## 本次交付
+当前统一课堂及年级分类见[新加坡小学数学分类](singapore-primary-curriculum.md)。原题库入口已合并至“数与生活”；以下48个题型和默认API继续兼容旧配方。
 
-入口为 `lessons/question-bank/index.html`，主站增加“中文题库”分类与“中文题库工坊”活动。所有原有互动课程保持原样。界面、题干、提示、解析、反馈均为简体中文，不做教材映射，也不把难度当作教材年级。主站的 `[1,2,3,4,5,6]` 仅用于入口可见范围。
+## 兼容练习引擎
 
-本版有 **48 个独立实现的参数化题型、9 类知识点、3 档数值难度**。整数与运算 8 个，数感与规律 6 个，分数 9 个，小数 5 个，百分数与比例 3 个，测量与时间 5 个，面积与体积 5 个，统计与可能性 3 个，生活应用 4 个。每批可请求 1—500 题；某个题型的参数空间可能较小，无法生成足够的不重复题目时会明确报错，不会用重复题补足。
+课堂入口为 `lessons/primary-math/index.html`，主站统一显示“数与生活”。旧地址 `lessons/question-bank/index.html` 自动跳转到统一课堂的练习区。界面、题干、提示、解析、反馈均为简体中文；新的练习携带年级和知识点范围，旧配方保留原题目及独立难度，不自动转换为大纲年级。
+
+兼容旧配方的生成器有 **48 种题型、9 类知识点、3 档数值难度**；统一课堂另增29种课程模板，合计77种唯一生成模板。旧48种按类别为：整数与运算8种，数感与规律6种，分数9种，小数5种，百分数与比例3种，测量与时间5种，面积与体积5种，统计与可能性3种，生活应用4种。每批可请求1—500题；某个题型的参数空间较小，无法生成足够的不重复题目时会明确报错。
 
 这里的融合是知识点组织与统一生成接口的融合：参考 MathsMentales 的基础技能分类，补充 MathALÉA 方向的进阶主题。**没有批量导入这两个项目的题目或执行其代码；这 48 个生成器不是对上游完整题库的移植。** 未进行与所有其他分支题目的语义去重。当前批内去重按中文题干、答案类型和单位完成；跨批复习允许出现相同题目。
 
 ## 使用
 
-沿用项目原有 HTTP 服务。启动后从主站进入中文题库，也可直接访问 `/lessons/question-bank/index.html`。不要双击 HTML；ES 模块需要 HTTP 服务。该模块的生成和判题不调用外部服务，不需要模型 API、数据库或 npm 运行时依赖。
+沿用项目原有 HTTP 服务。启动后从主站进入“数与生活”，也可直接访问 `/lessons/primary-math/index.html`；旧题库地址自动跳到同一页面的练习区。源码 ES 模块通过 HTTP 服务运行；`npm run build:primary` 生成的单文件课堂可以离线打开。生成和判题不调用外部服务，不需要模型 API、数据库或 npm 运行时依赖。
 
-首页的“中文题库”主题可直接进入工坊，也支持年级与搜索筛选。所有活动沿用当前首页的直接访问方式；历史开放配置不限制入口，原有探索记录继续保留。题库使用独立存储键，不覆盖其他课堂进度。
+首页只有一个“数与生活”入口，支持年级与搜索筛选。历史开放配置不限制入口，原有探索记录继续保留。练习使用独立存储键，不覆盖其他课堂进度。
 
-在页面选择知识点、题型、难度、数量和练习名称后生成练习。练习名称作为复现种子。每题可以判分、逐步查看提示或查看解题过程。首次独立答对、已经答对、查看答案分别统计，重复提交不会加分。先提示再答对、订正答对、看过答案后答对均不算首次独立答对。首次独立答对后再复习解析，不会抹掉这次成绩。
+在页面选择年级、知识点、学习层次、题型、数量和练习名称后生成练习。练习名称作为复现种子；“生活拓展”保留旧版自由练习设置。每题都有题意、至少3个递进提示、分步解题过程和常见错误；一次点击只新增一步提示。首次独立答对、已经答对、查看答案分别统计，重复提交不会加分。先提示再答对、订正答对、看过答案后答对均不算首次独立答对。首次独立答对后再复习解析，不会抹掉这次成绩。
 
 ## 生成接口
 
@@ -43,22 +45,24 @@ const templates = listTemplates({topic: 'fractions'});
 
 ## 数据结构
 
-内部题目包含 `schemaVersion`、`engineVersion`、`id`、`templateId`、`title`、`topic`、`locale`、`difficulty`、`seed`、`fingerprint`、`params`、`prompt`、`answer`、`hints`、`explanation`、`visual`、`source`。参数仅是数据，不能放入动态 JavaScript。
+内部题目包含 `schemaVersion`、`engineVersion`、`id`、`templateId`、`title`、`topic`、`locale`、`difficulty`、`seed`、`fingerprint`、`params`、`prompt`、`answer`、`intent`、`hints`、`steps`、`commonMistakes`、`explanation`、`visual`、`source`；课程题目另含 `curriculum`。`intent` 说明本题所求，`hints` 为递进线索，`steps` 展示计算与检验，`commonMistakes` 针对本题的误用或易混条件。教学内容在生成后逐模板按实际参数派生，不消耗随机数。参数仅是数据，不能放入动态 JavaScript。
 
 数值答案的 `value` 为约分后的 `{n: "3", d: "4"}`，采用 BigInt 有理数精确比较。比较题使用 `type: "choice"`、候选项及正确选项。答案格式可以要求最简分数或百分号，可以声明单位。普通数值题接受等值的整数、小数、分数和百分数，约分题要求规范的最简分数，百分数题要求 `%`。不接受 `eval`、算式、指数记法、无穷大或含无关文字的输入。
 
-生成配方只包含版本、种子、难度、题量与题型 ID。导入会严格选择本地白名单生成器，并重新生成题目；文件中的题干、答案、HTML、代码均不被执行或直接使用。不是上游 JSON/YAML 通用执行器。跨生成器版本的配方会拒绝，以防题目悄悄变化。修改参数逻辑时必须提升 `core.mjs` 的版本。
+生成配方包含版本、种子、难度、题量与题型 ID；课程配方另含课程版本、年级及知识点 ID。导入会严格选择本地白名单生成器，并重新生成题目；文件中的题干、答案、HTML、代码均不被执行或直接使用。跨生成器版本的配方会拒绝。修改参数逻辑时必须提升 `core.mjs` 的版本。本次仅增补教学字段并更新提示、解析，完整教师 JSON 因此发生变化；题干、参数、答案、图示、指纹与 ID 的兼容性由924个冻结样本检查，旧配方和记录继续复现。
 
-学生版 JSON 不含答案、参数、提示和解析，但保留用于辨识与复现的生成元数据。这是开放教学题库，不能作为具有保密答案要求的考试系统；算法和种子可以重建答案。教师版包含完整题目和解答。页面支持浏览器打印，不依赖服务端 PDF。
+学生版 JSON 不含答案、参数、提示、步骤、常见错误或解析，但保留用于辨识与复现的生成元数据。教师版包含完整题目及4项教学内容。页面支持浏览器打印，不依赖服务端 PDF。
 
 ## 文件分工
 
 - `catalog.mjs`：48 个题型的元数据和参考来源。
 - `generators.mjs`：纯函数生成算法与中文提示、解析。
+- `teaching.mjs`：77种唯一模板的实际参数教学内容；课程内复用模板不重复计数。
 - `core.mjs`：确定性随机数、有理数、输入解析与判分。
 - `engine.mjs`：统一接口、白名单筛选、批内去重、配方与导出。
 - `session.mjs`：计分与本地记录；键名 `mathphysics.question-bank.v1`，不覆盖 `mathphysics.state.v1`。
-- `app.mjs`、`index.html`、`style.css`：独立练习页，可在主站 iframe 中运行。
+- `app.mjs`：挂载到统一课堂的练习界面；`index.html` 是旧入口重定向。
+- `../primary-math/`：49个知识点、29种新增课程模板、48个原生模型挑战，以及统一页面。
 
 本地记录仅保留当前一组练习及作答，不同步设备，也不上传服务器。生成新练习或导入新配方会替换当前题库练习记录，不影响主站或其他活动数据。配方导出恢复题目，不恢复历史分数。存储禁用或写满时给出提示，仍能练习。
 
@@ -91,13 +95,18 @@ MathALÉA 当前开发入口为 https://forge.apps.education.fr/coopmaths/mathal
 
 `tests/question-bank-integration.test.mjs` 检查本地入口白名单、就绪状态、全部旧活动入口及已有开放配置保护。
 
-融合后的页面通过 `src/theme.css` 与 `src/theme.js` 共用奶油白、森林绿和暖黄色主题；题目图示使用同一组颜色令牌。首页有独立练习册图示，嵌入时收起重复导航。生成器版本、题型 ID 和源码来源集中在本说明及导出数据中，练习页面保留题干、提示与解答。
+`tests/questions-learning.test.mjs` 逐项检查48个原生题、77种唯一模板和49个知识点；为全部模板及其年级引用检查3档层次、每档20种种子，合计9,240个教学样本，结果写入 `docs/learning-coverage/questions.json`。另检查924个冻结算法样本及学生版解答隔离。模板 ID 只计一次，各知识点引用关系单列。
 
 浏览器测试独立运行：
 ```bash
-python -m pip install playwright==1.56.0
-python -m playwright install chromium
+npm ci --ignore-scripts
+npx playwright install chromium
+npm run build:primary
+npm run test:questions:failure
 npm run test:questions:browser
+npm run test:questions:learning:browser
 ```
 
-可通过 `CHROMIUM_EXECUTABLE` 指定本地 Chromium；`QUESTION_BANK_SCREENSHOT` 可保存验收截图。分支 CI 运行全仓库 Node 测试与浏览器测试。物理 iPad/Safari 真机尚需另行验收，不把 Chromium 的窄屏检查等同于真机测试。
+本地与 CI 都运行 `tests/numbers-life-browser.mjs`：检查49知识点×3层次、旧入口跳转、实际作答、计分、导入导出和离线版；Python旧测试入口仅转发该脚本并保留退出码。`test:questions:failure` 实际注入 Node 与真实浏览器断言失败，检查退出码1、浏览器关闭及 HTTP 端口释放；Linux CI另验 `tee` 管道在 `pipefail` 下保留失败状态。
+
+`test:questions:learning:browser` 对77模板、48生活挑战和49知识点逐项操作并保存可读局部截图，报告为 `output/playwright/learning-coverage/questions/report.json`。主功能报告为 `output/playwright/numbers-life-sg/report.json`，失败传播证据为 `output/playwright/numbers-life-failure/propagation.json`。浏览器路径优先尊重 `PLAYWRIGHT_BROWSERS_PATH`；无外传配置时只在本地缓存存在时使用 `.test-deps/browsers`，否则采用 Playwright 默认缓存。可用 `CHROMIUM_EXECUTABLE` 指定已有浏览器。两个 CI 工作流使用明确的 Bash 与失败退出规则，任一断言失败均使任务失败。Chromium 的窄屏与触控模拟不等于真实 iPad/Safari 验收。

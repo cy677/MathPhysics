@@ -1,4 +1,5 @@
 import {decimal, numeric, rational, formatFraction} from './core.mjs';
+import {withTeaching} from './teaching.mjs';
 const F = (n,d) => formatFraction(rational(n,d));
 const relations = (a,b) => a > b ? '>' : a < b ? '<' : '=';
 const choices = value => ({type:'choice', value, choices:['<','=','>']});
@@ -6,7 +7,8 @@ const question = (prompt, answer, hints, explanation, params, visual = null) => 
 const result = (expression, n, d=1) => `${expression} = ${F(n,d)}。`;
 
 /** 参数由确定性 RNG 生成。每个分支都返回可序列化数据，不包含可执行表达式。 */
-export function buildQuestion(id, r, level) {
+export function buildQuestion(id,r,level){return withTeaching(id,buildOriginalQuestion(id,r,level),{difficulty:level});}
+function buildOriginalQuestion(id, r, level) {
   const max = [20,100,1000][level-1];
   let a=r.int(1,max), b=r.int(1,max), c=r.int(2,9);
   const calc = (prompt,n,hints,explanation,params,den=1,extra={}) => question(prompt,numeric(n,den,extra),hints,explanation,params);

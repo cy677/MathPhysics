@@ -1,0 +1,362 @@
+{
+  "passed": true,
+  "matter": [],
+  "phet": [
+    {
+      "id": "phet-forces-and-motion-basics",
+      "entry": "forces-and-motion-basics",
+      "screens": [
+        "phet-forces-and-motion-basics/net-force",
+        "phet-forces-and-motion-basics/motion",
+        "phet-forces-and-motion-basics/friction",
+        "phet-forces-and-motion-basics/acceleration"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true
+    },
+    {
+      "id": "phet-energy-skate-park-basics",
+      "entry": "energy-skate-park-basics",
+      "screens": [
+        "phet-energy-skate-park-basics/intro",
+        "phet-energy-skate-park-basics/friction",
+        "phet-energy-skate-park-basics/playground"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true
+    },
+    {
+      "id": "phet-area-builder",
+      "entry": "area-builder",
+      "screens": [
+        "phet-area-builder/explore",
+        "phet-area-builder/game"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true
+    },
+    {
+      "id": "phet-vector-addition",
+      "entry": "vector-addition",
+      "screens": [
+        "phet-vector-addition/explore-1d",
+        "phet-vector-addition/explore-2d",
+        "phet-vector-addition/lab",
+        "phet-vector-addition/equations"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true
+    },
+    {
+      "id": "phet-fractions-intro",
+      "entry": "fractions-intro",
+      "screens": [
+        "phet-fractions-intro/intro",
+        "phet-fractions-intro/game",
+        "phet-fractions-intro/lab"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true
+    },
+    {
+      "id": "phet-fraction-matcher",
+      "entry": "fraction-matcher",
+      "screens": [
+        "phet-fraction-matcher/fractions",
+        "phet-fraction-matcher/mixed-numbers"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true
+    },
+    {
+      "id": "phet-balancing-act",
+      "entry": "balancing-act",
+      "screens": [
+        "phet-balancing-act/intro",
+        "phet-balancing-act/balance-lab",
+        "phet-balancing-act/game"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc",
+      "entry": "circuit-construction-kit-dc",
+      "screens": [
+        "phet-circuit-construction-kit-dc/intro",
+        "phet-circuit-construction-kit-dc/lab"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true
+    },
+    {
+      "id": "phet-states-of-matter-basics",
+      "entry": "states-of-matter-basics",
+      "screens": [
+        "phet-states-of-matter-basics/states",
+        "phet-states-of-matter-basics/phase-changes"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true
+    },
+    {
+      "id": "phet-build-a-molecule",
+      "entry": "build-a-molecule",
+      "screens": [
+        "phet-build-a-molecule/single-molecule",
+        "phet-build-a-molecule/multiple-molecules",
+        "phet-build-a-molecule/playground"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true
+    }
+  ],
+  "pedagogicalChecks": [],
+  "errors": [],
+  "missing": [],
+  "screenshots": [
+    {
+      "id": "phet-forces-and-motion-basics-net-force",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-motion",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-friction",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-acceleration",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-host",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-host",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-intro",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-friction",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-playground",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-host",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-area-builder-explore",
+      "path": "output/playwright/learning-coverage/phet-area-builder-explore-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-area-builder-game",
+      "path": "output/playwright/learning-coverage/phet-area-builder-game-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-area-builder-host",
+      "path": "output/playwright/learning-coverage/phet-area-builder-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-area-builder-host",
+      "path": "output/playwright/learning-coverage/phet-area-builder-host-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "phet-vector-addition-explore-1d",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-explore-1d-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-vector-addition-explore-2d",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-explore-2d-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-vector-addition-lab",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-lab-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-vector-addition-equations",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-equations-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-vector-addition-host",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fractions-intro-intro",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-intro-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fractions-intro-game",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-game-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fractions-intro-lab",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-lab-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fractions-intro-host",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fraction-matcher-fractions",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-fractions-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fraction-matcher-mixed-numbers",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fraction-matcher-host",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-balancing-act-intro",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-intro-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-balancing-act-balance-lab",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-balance-lab-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-balancing-act-game",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-game-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-balancing-act-host",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-intro",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-lab",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-host",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-states-of-matter-basics-states",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-states-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-states-of-matter-basics-phase-changes",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-phase-changes-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-states-of-matter-basics-host",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-states-of-matter-basics-host",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-host-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "phet-build-a-molecule-single-molecule",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-build-a-molecule-multiple-molecules",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-build-a-molecule-playground",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-playground-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-build-a-molecule-host",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "tangram-legacy",
+      "path": "output/playwright/learning-coverage/tangram-legacy-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "tangram-legacy",
+      "path": "output/playwright/learning-coverage/tangram-legacy-mobile.png",
+      "viewport": "mobile"
+    }
+  ],
+  "base": "http://127.0.0.1:65303/MathPhysics/",
+  "phase": "build-a-molecule/host",
+  "hostLifecycle": {
+    "returned": true,
+    "switchedWithoutNavigation": true,
+    "resetWithoutNavigation": true,
+    "singlePanel": true
+  },
+  "legacyTangram": {
+    "fourPartGuide": true,
+    "keyboardMovement": true,
+    "screenshots": [
+      "output/playwright/learning-coverage/tangram-legacy-desktop.png",
+      "output/playwright/learning-coverage/tangram-legacy-mobile.png"
+    ]
+  },
+  "browserClosed": true,
+  "serverClosed": true
+}

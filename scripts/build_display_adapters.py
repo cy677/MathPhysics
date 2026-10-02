@@ -42,6 +42,36 @@ def build():
 
     for module in ['tangram', 'puzzle', 'three']:
         patch(f'"./{module}.js"', f'"../../../vendor/tangram/js/{module}.js"', kind='resource-path')
+    patch('init();\nanimate();', '''init();
+animate();
+// Host controls use the existing puzzle placement/collision rules.
+window.__mpTangramControls = {
+  select(index) {
+    var tan = puzzle.actualTangram.tans[index];
+    if (!tan) return null;
+    var previous = puzzle.state;
+    if (puzzle.state === Puzzle.STATE_REVIEW) puzzle.showGame();
+    if (!tan.active) puzzle.selectTan(tan);
+    puzzle.selectedTan = tan;
+    if (previous !== puzzle.state) handleStateChanged(previous);
+    return tan;
+  },
+  move(index, dx, dy) {
+    var tan = this.select(index); if (!tan) return;
+    var position = tan.position.clone(); position.x += dx; position.y += dy;
+    if (puzzle.actualTangram.placeTan(tan, position, tan.rotation)) {
+      tan.active = true; puzzle.actualTangram.snapTan(tan);
+    }
+    syncTanTransforms(puzzle.actualTangram); updateGui(); renderFrame();
+  },
+  turn(index, degrees) {
+    var tan = this.select(index); if (!tan) return;
+    var previous = tan.rotation; tan.transform(tan.position, previous + degrees);
+    if (puzzle.actualTangram.hasCollisions(tan)) tan.transform(tan.position, previous);
+    syncTanTransforms(puzzle.actualTangram); updateGui(); renderFrame();
+  },
+  snapshot() { return puzzle.actualTangram.tans.map(t => ({ x:t.position.x, y:t.position.y, rotation:t.rotation, active:t.active })); }
+};''', kind='host-controls')
     patch('const SERVER_URL', 'const themeColor = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();\n\nconst SERVER_URL')
     patch('new THREE.Color(0.5, 0.5, 0.5)', 'new THREE.Color(themeColor("--mp-page"))')
     patch('new Tangram.Color(0x29, 0xab, 0xe2)', 'new Tangram.Color(0x86, 0xa2, 0x81)')
@@ -62,12 +92,12 @@ def build():
     source_html = sources['index.html'].decode('utf-8')
     snapshot = re.search(r'var SNAPSHOT = .*?;', source_html).group(0)
     html = template.replace('<!-- MP_TANGRAM_SNAPSHOT -->', '<script>'+snapshot+'</script>')
-    (ROOT/'src/adapters/tangram.html').write_text(html, encoding='utf-8')
+    (ROOT/'src/adapters/tangram.html').write_bytes(html.encode('utf-8'))
     ledger = {'schemaVersion':1, 'source':'vendor/tangram/js/scene.js', 'upstreamSHA256':sha(sources['js/scene.js']),
               'output':'src/adapters/generated/tangram-scene.js', 'outputSHA256':sha(raw), 'edits':edits,
               'snapshotSourceSHA256':sha(sources['index.html']),
               'entrySHA256':sha(html.encode('utf-8'))}
-    (OUTPUT/'edit-ledger.json').write_text(json.dumps(ledger, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    (OUTPUT/'edit-ledger.json').write_bytes((json.dumps(ledger, ensure_ascii=False, indent=2)+'\n').encode('utf-8'))
     print('Tangram display adapter:', len(edits), 'reversible edits;', len(raw), 'bytes')
 
 if __name__ == '__main__':

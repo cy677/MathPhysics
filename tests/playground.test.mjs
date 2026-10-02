@@ -1,6 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';
 import {loadState,STORAGE_KEY} from '../src/state.js';
 import {triangleArea,triangleAngles,rotate,reflect,transform,determinant,add} from '../lessons/jsxgraph-playground/math.js';
+import {PLAYGROUND_TARGETS} from '../lessons/jsxgraph-playground/teaching.js';
 import * as T from '../vendor/tangram/js/tangram.js';import {SNAPSHOT} from '../lessons/tangram-flat/snapshot.js';
 const root=path.resolve(import.meta.dirname,'..'),json=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const up=json('config/inventory.json'),local=json('config/local-activities.json'),defaults=json('config/defaults.json'),presentation=json('config/presentation.json');
@@ -12,6 +13,11 @@ test('JSXGraph package files match their exact import hashes and carry MIT attri
 test('child-facing descriptions and host template do not show integration boilerplate',()=>{const forbidden=/原版.*完整保留|第一版统一|暂不改写|完整示例|不将浏览当作通关|完整内容已收录/;const html=fs.readFileSync(path.join(root,'index.html'),'utf8');assert.ok(!forbidden.test(html));for(const entry of Object.values(presentation.activities)){assert.ok(!forbidden.test(entry.description));assert.ok(entry.playHint.length>8);}});
 test('six dynamic activities use valid geometry, including degenerate triangles',()=>{const tri=[[0,0],[4,0],[1,3]];assert.equal(triangleArea(...tri),6);assert.ok(Math.abs(triangleAngles(...tri).reduce((a,b)=>a+b)-180)<1e-8);assert.equal(triangleArea([0,0],[2,0],[4,0]),0);assert.equal(triangleAngles([0,0],[0,0],[4,0])[0],null);});
 test('reflection is an involution, rotation is isometric, similarity scales area by k squared',()=>{for(let n=0;n<30;n++){const p=[n/7-2,n/3-3];assert.ok(reflect(reflect(p,1),1).every((v,i)=>Math.abs(v-p[i])<1e-10));const q=rotate(p,n*13);assert.ok(Math.abs(Math.hypot(...q)-Math.hypot(...p))<1e-8);}const tri=[[1,1],[3,1],[1,3]];for(const k of [.5,1,1.5,2,2.5])assert.ok(Math.abs(triangleArea(...tri.map(p=>p.map(x=>x*k)))-triangleArea(...tri)*k*k)<1e-8);});
-test('each dynamic geometry mode now offers six curriculum-linked challenge targets',()=>{const source=fs.readFileSync(path.join(root,'lessons/jsxgraph-playground/app.js'),'utf8');for(const mode of ['triangle','mirror','rotate','scale','vectors','linear'])assert.ok(source.includes(mode+':['),mode);assert.ok(source.includes('rotate:[180,270,90,360,45,135]'));assert.ok(source.includes('scale:[4,2.25,1,.25,6.25,1.5625]'));});
+test('each dynamic geometry mode retains its six original curriculum-linked challenge targets',()=>{
+ const expected={triangle:[6,4,8,10,12,3],mirror:[[3,2],[2,3],[4,1],[1,4],[-2,2],[0,3]],rotate:[180,270,90,360,45,135],scale:[4,2.25,1,.25,6.25,1.5625],vectors:[[4,3],[3,4],[5,2],[2,5],[1,4],[4,1]],linear:[[[2,0],[0,1]],[[1,0],[1,1]],[[0,1],[-1,0]],[[1,0],[0,2]],[[1,.5],[0,1]],[[1,0],[2,0]]]};
+ assert.deepEqual(PLAYGROUND_TARGETS,expected);
+ assert.equal(Object.keys(PLAYGROUND_TARGETS).length,6);for(const targets of Object.values(PLAYGROUND_TARGETS))assert.equal(targets.length,6);
+ const source=fs.readFileSync(path.join(root,'lessons/jsxgraph-playground/app.js'),'utf8');assert.match(source,/challengeSets\s*=\s*PLAYGROUND_TARGETS/);
+});
 test('linear map fixes origin; determinant matches area and can collapse to a line',()=>{const u=[1.5,.5],v=[.5,1.5];assert.deepEqual(transform([0,0],u,v),[0,0]);assert.deepEqual(transform([1,1],u,v),add(u,v));assert.equal(determinant(u,v),2);assert.equal(triangleArea([0,0],u,v)*2,Math.abs(determinant(u,v)));assert.equal(determinant([1,0],[2,0]),0);});
 test('flat tangram uses all original polygon vertices, seven pieces and original snapshot',()=>{const d=new T.Dissection(SNAPSHOT.dissection.id,SNAPSHOT.dissection.vertices,SNAPSHOT.dissection.polygons),t=new T.Tangram(d);assert.equal(t.tans.length,7);const area=ps=>Math.abs(ps.reduce((n,p,i)=>{const q=ps[(i+1)%ps.length];return n+p.x*q.y-p.y*q.x;},0))/2;assert.equal(t.tans.reduce((n,p)=>n+area(p.points),0),1);assert.equal(T.createShape(d,new T.Transforms(SNAPSHOT.transforms).transforms).tans.length,7);});

@@ -5,6 +5,7 @@ import hashlib
 import io
 import json
 import re
+import shutil
 import subprocess
 import sys
 import tarfile
@@ -22,6 +23,11 @@ output = ROOT / 'dist' / f'MathPhysics-server-{args.release}.tar.gz'
 if output.exists():
     raise SystemExit(f'Refusing to replace existing release: {output}')
 
+node = shutil.which('node')
+if not node:
+    raise SystemExit('Node.js 22 or newer is required to rebuild the spaceflight core')
+subprocess.run([node, str(ROOT / 'scripts/build_spaceflight_core.mjs')], cwd=ROOT, check=True)
+
 for script in ['build_display_adapters.py', 'build_phet_theme.py', 'build_geometry_standalone.py',
                'build_spaceflight_standalone.py', 'build_playground_standalone.py', 'build_primary_math_standalone.py']:
     subprocess.run([sys.executable, str(ROOT / 'scripts' / script)], cwd=ROOT, check=True)
@@ -36,8 +42,10 @@ for activity in inventory['activities'] + local['activities']:
 
 roots = ['index.html', 'README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md',
          'package.json', 'package-lock.json', 'src', 'lessons', 'config',
+         '.github/workflows/classroom.yml', '.github/workflows/question-bank.yml',
          'vendor', 'scripts', 'tests', 'deploy', 'modules', 'GET_PHET_WINDOWS.bat', 'get_phet.sh',
-         'docs/primary-math-curriculum.md', 'docs/primary-math-catalog.md', 'docs/question-bank.md']
+         'docs/primary-math-curriculum.md', 'docs/primary-math-catalog.md', 'docs/question-bank.md',
+         'docs/singapore-primary-curriculum.md']
 files = []
 for name in roots:
     source = ROOT / name

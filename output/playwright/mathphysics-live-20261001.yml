@@ -1,0 +1,354 @@
+- generic [active] [ref=f1e1]:
+  - link "跳到活动内容" [ref=f1e2] [cursor=pointer]:
+    - /url: "#library"
+  - banner [ref=f1e3]:
+    - link "科学小岛首页" [ref=f1e4] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f1e5]: △
+      - generic [ref=f1e6]:
+        - text: 科学小岛
+        - generic [ref=f1e7]: MATH + PHYSICS
+    - navigation "主导航" [ref=f1e8]:
+      - link "探索内容" [ref=f1e9] [cursor=pointer]:
+        - /url: "#library"
+      - button "来源与授权" [ref=f1e10] [cursor=pointer]
+    - generic [ref=f1e11]: 探索乐园
+  - main [ref=f1e12]:
+    - generic [ref=f1e13]:
+      - generic [ref=f1e14]:
+        - generic [ref=f1e15]: 给好奇心，一个可以动手的世界
+        - heading "小小探索家， 欢迎来到科学小岛。" [level=1] [ref=f1e17]: 小小探索家，欢迎来到科学小岛。
+        - paragraph [ref=f1e18]: 拼一块图形，点一盏灯，搭一个分子。让数学与科学，在你的手中发生。
+        - generic [ref=f1e19]:
+          - link "开始探索 ↗" [ref=f1e20] [cursor=pointer]:
+            - /url: "#library"
+            - text: 开始探索
+            - generic [ref=f1e21]: ↗
+          - generic [ref=f1e22]: 小学 1—6 年级观察 · 尝试 · 再发现
+      - generic [aria-hidden] [ref=f1e23]:
+        - generic [ref=f1e26]: 每一种尝试，都有新发现
+        - generic [ref=f1e51]: △ ＋ → ＝ 新发现
+    - region "四个探索主题" [ref=f1e52]:
+      - button "01 / 几何工坊 △ ◇ ○ 把想象，拼成形状 分数、拼图、面积与空间 前往几何工坊 ↗" [ref=f1e53] [cursor=pointer]:
+        - text: 01 / 几何工坊
+        - generic [ref=f1e54]: △ ◇ ○
+        - heading "把想象，拼成形状" [level=2] [ref=f1e55]
+        - paragraph [ref=f1e56]: 分数、拼图、面积与空间
+        - generic [ref=f1e57]: 前往几何工坊 ↗
+      - button "02 / 动力车间 ● ↗ ▰ 动手，让世界动起来 推拉、平衡、能量与电路 前往动力车间 ↗" [ref=f1e58] [cursor=pointer]:
+        - text: 02 / 动力车间
+        - generic [ref=f1e59]: ● ↗ ▰
+        - heading "动手，让世界动起来" [level=2] [ref=f1e60]
+        - paragraph [ref=f1e61]: 推拉、平衡、能量与电路
+        - generic [ref=f1e62]: 前往动力车间 ↗
+      - button "03 / 箭头港口 ↗ ＋ → 找到方向，也找到规律 方向、向量与分量的初步认识 前往箭头港口 ↗" [ref=f1e63] [cursor=pointer]:
+        - text: 03 / 箭头港口
+        - generic [ref=f1e64]: ↗ ＋ →
+        - heading "找到方向，也找到规律" [level=2] [ref=f1e65]
+        - paragraph [ref=f1e66]: 方向、向量与分量的初步认识
+        - generic [ref=f1e67]: 前往箭头港口 ↗
+      - button "04 / 微观天地 ● ○ ● 走近，微小的世界 冷热、物态、原子与分子 前往微观天地 ↗" [ref=f1e68] [cursor=pointer]:
+        - text: 04 / 微观天地
+        - generic [ref=f1e69]: ● ○ ●
+        - heading "走近，微小的世界" [level=2] [ref=f1e70]
+        - paragraph [ref=f1e71]: 冷热、物态、原子与分子
+        - generic [ref=f1e72]: 前往微观天地 ↗
+    - generic [ref=f1e73]:
+      - generic [ref=f1e74]:
+        - generic [ref=f1e75]:
+          - generic [ref=f1e76]: EXPLORER'S LIBRARY
+          - heading "今天，想发现什么？" [level=2] [ref=f1e77]
+        - generic [ref=f1e78]:
+          - generic [ref=f1e112]: 23个活动
+          - generic [ref=f1e113]: 2已探索
+      - generic [ref=f1e79]:
+        - generic [ref=f1e80]:
+          - generic [ref=f1e81]: 主题
+          - generic [ref=f1e82]:
+            - button "全部" [pressed] [ref=f1e83] [cursor=pointer]
+            - button "几何工坊" [ref=f1e84] [cursor=pointer]
+            - button "动力车间" [ref=f1e85] [cursor=pointer]
+            - button "箭头港口" [ref=f1e86] [cursor=pointer]
+            - button "微观天地" [ref=f1e87] [cursor=pointer]
+            - button "中文题库" [ref=f1e88] [cursor=pointer]
+          - generic [ref=f1e89]:
+            - generic [ref=f1e90]: ⌕
+            - searchbox "搜索活动" [ref=f1e91]
+        - generic [ref=f1e92]:
+          - generic [ref=f1e93]: 年级
+          - generic [ref=f1e94]:
+            - button "全年级" [pressed] [ref=f1e95] [cursor=pointer]
+            - button "一年级" [ref=f1e96] [cursor=pointer]
+            - button "二年级" [ref=f1e97] [cursor=pointer]
+            - button "三年级" [ref=f1e98] [cursor=pointer]
+            - button "四年级" [ref=f1e99] [cursor=pointer]
+            - button "五年级" [ref=f1e100] [cursor=pointer]
+            - button "六年级" [ref=f1e101] [cursor=pointer]
+        - paragraph [ref=f1e102]: 拖一拖、转一转，看看会发生什么。
+        - generic [ref=f1e103]:
+          - article [ref=f1e114]:
+            - generic [ref=f1e115]: 拖动几何
+            - generic [ref=f1e123]:
+              - generic [ref=f1e124]:
+                - heading "图形会变魔术" [level=3] [ref=f1e125]
+                - generic [ref=f1e126]: 2—6年级
+              - paragraph [ref=f1e127]: 拖动顶点找对称，转动图形，试试让整张网格变形。
+              - generic [ref=f1e128]:
+                - generic [ref=f1e129]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e130] [cursor=pointer]
+          - article [ref=f1e131]:
+            - generic [ref=f1e132]: 拼图探索
+            - generic [ref=f1e139]:
+              - generic [ref=f1e140]:
+                - heading "七巧板拼图" [level=3] [ref=f1e141]
+                - generic [ref=f1e142]: 1年级
+              - paragraph [ref=f1e143]: 转动七块拼板，拼出方形和创意轮廓。
+              - generic [ref=f1e144]:
+                - generic [ref=f1e145]: Tangram
+                - button "进入探索 ↗" [ref=f1e146] [cursor=pointer]
+          - article [ref=f1e147]:
+            - generic [ref=f1e148]: 分类演示
+            - generic [ref=f1e155]:
+              - generic [ref=f1e156]:
+                - heading "物理验收" [level=3] [ref=f1e157]
+                - generic [ref=f1e158]: 3—6年级
+              - paragraph [ref=f1e159]: 在五个分类中探索48个物理演示，观察材料、运动、机械与结构。
+              - generic [ref=f1e160]:
+                - generic [ref=f1e161]: Matter.js
+                - button "进入探索 ↗" [ref=f1e162] [cursor=pointer]
+          - article [ref=f1e163]:
+            - generic [ref=f1e164]:
+              - generic [ref=f1e165]: 几何证明题集
+              - img [aria-hidden] [ref=f1e166]:
+                - generic [ref=f1e170]: a²
+                - generic [ref=f1e171]: b²
+              - generic [ref=f1e172]: ✓ 已探索
+            - generic [ref=f1e173]:
+              - generic [ref=f1e174]:
+                - heading "看见公式" [level=3] [ref=f1e175]
+                - generic [ref=f1e176]: 3—6年级
+              - paragraph [ref=f1e177]: 把图形剪开再拼好，看见面积、比例和体积的秘密。
+              - generic [ref=f1e178]:
+                - generic [ref=f1e179]: MathPhysics
+                - button "进入探索 ↗" [ref=f1e180] [cursor=pointer]
+          - article [ref=f1e181]:
+            - generic [ref=f1e182]:
+              - generic [ref=f1e183]: 趣味挑战
+              - generic [aria-hidden] [ref=f1e184]: △ ◇ ○
+              - generic [ref=f1e185]: ✓ 已探索
+            - generic [ref=f1e186]:
+              - generic [ref=f1e187]:
+                - heading "围栏花园" [level=3] [ref=f1e188]
+                - generic [ref=f1e189]: 全年级
+              - paragraph [ref=f1e190]: 拼出花园，数一数面积，量一量围栏。
+              - generic [ref=f1e191]:
+                - generic [ref=f1e192]: PhET
+                - button "进入探索 ↗" [ref=f1e193] [cursor=pointer]
+          - article [ref=f1e194]:
+            - generic [ref=f1e195]:
+              - generic [ref=f1e196]: 互动实验
+              - generic [aria-hidden] [ref=f1e197]: ● ↗ ▰
+            - generic [ref=f1e198]:
+              - generic [ref=f1e199]:
+                - heading "推拉小车" [level=3] [ref=f1e200]
+                - generic [ref=f1e201]: 全年级
+              - paragraph [ref=f1e202]: 改变推力和货物，看看小车怎么动。
+              - generic [ref=f1e203]:
+                - generic [ref=f1e204]: PhET
+                - button "进入探索 ↗" [ref=f1e205] [cursor=pointer]
+          - article [ref=f1e206]:
+            - generic [ref=f1e207]:
+              - generic [ref=f1e208]: 互动实验
+              - generic [aria-hidden] [ref=f1e209]: ● ↗ ▰
+            - generic [ref=f1e210]:
+              - generic [ref=f1e211]:
+                - heading "轨道游乐场" [level=3] [ref=f1e212]
+                - generic [ref=f1e213]: 3—6年级
+              - paragraph [ref=f1e214]: 换一条轨道，看看滑板能到多高。
+              - generic [ref=f1e215]:
+                - generic [ref=f1e216]: PhET
+                - button "进入探索 ↗" [ref=f1e217] [cursor=pointer]
+          - article [ref=f1e218]:
+            - generic [ref=f1e219]:
+              - generic [ref=f1e220]: 互动实验
+              - generic [aria-hidden] [ref=f1e221]: ↗ ＋ →
+            - generic [ref=f1e222]:
+              - generic [ref=f1e223]:
+                - heading "箭头导航" [level=3] [ref=f1e224]
+                - generic [ref=f1e225]: 3—6年级
+              - paragraph [ref=f1e226]: 把箭头接在一起，看看最后到了哪里。
+              - generic [ref=f1e227]:
+                - generic [ref=f1e228]: PhET
+                - button "进入探索 ↗" [ref=f1e229] [cursor=pointer]
+          - article [ref=f1e230]:
+            - generic [ref=f1e231]: 互动实验
+            - generic [ref=f1e240]:
+              - generic [ref=f1e241]:
+                - heading "分数拼拼乐" [level=3] [ref=f1e242]
+                - generic [ref=f1e243]: 2—5年级
+              - paragraph [ref=f1e244]: 把圆饼、长条和数轴摆一摆，看见一个整体可以怎样分。
+              - generic [ref=f1e245]:
+                - generic [ref=f1e246]: PhET
+                - button "进入探索 ↗" [ref=f1e247] [cursor=pointer]
+          - article [ref=f1e248]:
+            - generic [ref=f1e249]:
+              - generic [ref=f1e250]: 趣味挑战
+              - img [aria-hidden] [ref=f1e251]:
+                - generic [ref=f1e257]: "1"
+                - generic [ref=f1e258]: "2"
+            - generic [ref=f1e259]:
+              - generic [ref=f1e260]:
+                - heading "分数找朋友" [level=3] [ref=f1e261]
+                - generic [ref=f1e262]: 3—6年级
+              - paragraph [ref=f1e263]: 给表示同一个数的图形和分数找到朋友。
+              - generic [ref=f1e264]:
+                - generic [ref=f1e265]: PhET
+                - button "进入探索 ↗" [ref=f1e266] [cursor=pointer]
+          - article [ref=f1e267]:
+            - generic [ref=f1e268]: 互动实验
+            - generic [ref=f1e274]:
+              - generic [ref=f1e275]:
+                - heading "跷跷板平衡" [level=3] [ref=f1e276]
+                - generic [ref=f1e277]: 3—6年级
+              - paragraph [ref=f1e278]: 把重物放在两边，找一找跷跷板平衡的办法。
+              - generic [ref=f1e279]:
+                - generic [ref=f1e280]: PhET
+                - button "进入探索 ↗" [ref=f1e281] [cursor=pointer]
+          - article [ref=f1e282]:
+            - generic [ref=f1e283]: 互动实验
+            - generic [ref=f1e291]:
+              - generic [ref=f1e292]:
+                - heading "点亮小灯泡" [level=3] [ref=f1e293]
+                - generic [ref=f1e294]: 4—6年级
+              - paragraph [ref=f1e295]: 用电池、导线和灯泡接出一条完整的电路。
+              - generic [ref=f1e296]:
+                - generic [ref=f1e297]: PhET
+                - button "进入探索 ↗" [ref=f1e298] [cursor=pointer]
+          - article [ref=f1e299]:
+            - generic [ref=f1e300]: 互动实验
+            - generic [ref=f1e322]:
+              - generic [ref=f1e323]:
+                - heading "冷热变变变" [level=3] [ref=f1e324]
+                - generic [ref=f1e325]: 4—6年级
+              - paragraph [ref=f1e326]: 加热或冷却，看看粒子怎样组成固体、液体和气体。
+              - generic [ref=f1e327]:
+                - generic [ref=f1e328]: PhET
+                - button "进入探索 ↗" [ref=f1e329] [cursor=pointer]
+          - article [ref=f1e330]:
+            - generic [ref=f1e331]:
+              - generic [ref=f1e332]: 互动实验
+              - img [aria-hidden] [ref=f1e333]:
+                - generic [ref=f1e338]: O
+                - generic [ref=f1e339]:
+                  - generic [ref=f1e340]: H
+                  - generic [ref=f1e341]: H
+            - generic [ref=f1e342]:
+              - generic [ref=f1e343]:
+                - heading "分子搭建工坊" [level=3] [ref=f1e344]
+                - generic [ref=f1e345]: 5—6年级
+              - paragraph [ref=f1e346]: 把不同的原子接在一起，搭出水和其他小分子。
+              - generic [ref=f1e347]:
+                - generic [ref=f1e348]: PhET
+                - button "进入探索 ↗" [ref=f1e349] [cursor=pointer]
+          - article [ref=f1e350]:
+            - generic [ref=f1e351]:
+              - generic [ref=f1e352]: 趣味挑战
+              - generic [aria-hidden] [ref=f1e353]: △ ◇ ○
+            - generic [ref=f1e354]:
+              - generic [ref=f1e355]:
+                - heading "数与生活" [level=3] [ref=f1e356]
+                - generic [ref=f1e357]: 全年级
+              - paragraph [ref=f1e358]: 按一到六年级探索数、量、统计和生活中的数学关系。
+              - generic [ref=f1e359]:
+                - generic [ref=f1e360]: MathPhysics
+                - button "进入探索 ↗" [ref=f1e361] [cursor=pointer]
+          - article [ref=f1e362]:
+            - generic [ref=f1e363]: 数学练习
+            - generic [ref=f1e372]:
+              - generic [ref=f1e373]:
+                - heading "中文题库工坊" [level=3] [ref=f1e374]
+                - generic [ref=f1e375]: 全年级
+              - paragraph [ref=f1e376]: 选择知识点，生成中文练习，试试分步提示和不同难度。
+              - generic [ref=f1e377]:
+                - generic [ref=f1e378]: MathPhysics
+                - button "进入探索 ↗" [ref=f1e379] [cursor=pointer]
+          - article [ref=f1e380]:
+            - generic [ref=f1e381]: 拖动几何
+            - generic [ref=f1e391]:
+              - generic [ref=f1e392]:
+                - heading "三角形滑滑梯" [level=3] [ref=f1e393]
+                - generic [ref=f1e394]: 5年级
+              - paragraph [ref=f1e395]: 自由拖动顶点，或切换等底等高，观察三角形面积的变化。
+              - generic [ref=f1e396]:
+                - generic [ref=f1e397]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e398] [cursor=pointer]
+          - article [ref=f1e399]:
+            - generic [ref=f1e400]: 拖动几何
+            - generic [ref=f1e408]:
+              - generic [ref=f1e409]:
+                - heading "镜子里的图形" [level=3] [ref=f1e410]
+                - generic [ref=f1e411]: 2年级
+              - paragraph [ref=f1e412]: 拖动彩色圆点，找一找镜子两边图形的对应关系。
+              - generic [ref=f1e413]:
+                - generic [ref=f1e414]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e415] [cursor=pointer]
+          - article [ref=f1e416]:
+            - generic [ref=f1e417]: 拖动几何
+            - generic [ref=f1e425]:
+              - generic [ref=f1e426]:
+                - heading "转一转图形" [level=3] [ref=f1e427]
+                - generic [ref=f1e428]: 4年级
+              - paragraph [ref=f1e429]: 绕原点转动小三角形，看看它的边长和面积会不会改变。
+              - generic [ref=f1e430]:
+                - generic [ref=f1e431]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e432] [cursor=pointer]
+          - article [ref=f1e433]:
+            - generic [ref=f1e434]: 拖动几何
+            - generic [ref=f1e440]:
+              - generic [ref=f1e441]:
+                - heading "图形放大镜" [level=3] [ref=f1e442]
+                - generic [ref=f1e443]: 6年级
+              - paragraph [ref=f1e444]: 同时放大图形的两个方向，比较边长和面积的倍数。
+              - generic [ref=f1e445]:
+                - generic [ref=f1e446]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e447] [cursor=pointer]
+          - article [ref=f1e448]:
+            - generic [ref=f1e449]: 拖动几何
+            - generic [ref=f1e458]:
+              - generic [ref=f1e459]:
+                - heading "箭头送快递" [level=3] [ref=f1e460]
+                - generic [ref=f1e461]: 6年级
+              - paragraph [ref=f1e462]: 拼接方向箭头，试着用不同走法到达同一个终点。
+              - generic [ref=f1e463]:
+                - generic [ref=f1e464]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e465] [cursor=pointer]
+          - article [ref=f1e466]:
+            - generic [ref=f1e467]: 拖动几何
+            - generic [ref=f1e475]:
+              - generic [ref=f1e476]:
+                - heading "网格变形机" [level=3] [ref=f1e477]
+                - generic [ref=f1e478]: 6年级
+              - paragraph [ref=f1e479]: 拖动两支方向箭头，让整张网格旋转、拉伸或剪切。
+              - generic [ref=f1e480]:
+                - generic [ref=f1e481]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e482] [cursor=pointer]
+          - article [ref=f1e483]:
+            - generic [ref=f1e484]:
+              - generic [ref=f1e485]: 拼图探索
+              - generic [aria-hidden] [ref=f1e486]: △ ◇ ○
+            - generic [ref=f1e487]:
+              - generic [ref=f1e488]:
+                - heading "立体七巧板" [level=3] [ref=f1e489]
+                - generic [ref=f1e490]: 全年级
+              - paragraph [ref=f1e491]: 拖动拼板，沿着角旋转，组合出新的形状。
+              - generic [ref=f1e492]:
+                - generic [ref=f1e493]: Tangram
+                - button "进入探索 ↗" [ref=f1e494] [cursor=pointer]
+    - generic [ref=f1e105]:
+      - strong [ref=f1e106]: 先尝试，再发现。
+      - paragraph [ref=f1e107]: 先猜一猜，再动手试一试。改变一个条件，把你的发现讲给同伴听。
+  - contentinfo [ref=f1e108]:
+    - text: MathPhysics · 科学小岛
+    - generic [ref=f1e109]: 几何 / 经典力学 / 向量初步
+    - link "来源与许可" [ref=f1e111] [cursor=pointer]:
+      - /url: THIRD_PARTY_NOTICES.md

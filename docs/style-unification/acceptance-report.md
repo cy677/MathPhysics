@@ -1,5 +1,7 @@
 # MathPhysics 前端风格统一验收
 
+本文保留 2026-09-30 的验收证据。以下入口数、工作台、PhET 屏幕数与测试数量仅代表当时状态；当前全部开放的目录、逐项教学与视觉结果见 [全量覆盖清单](../learning-coverage/README.md)。
+
 日期：2026-09-30。`npm test` 通过：58 项，57 通过、1 项平台条件跳过、0 失败；改动前基线为 57 项，56 通过、1 跳过。最终输出见[单测记录](unit-tests-final-2026-09-30.txt)。浏览器使用隔离的 Playwright Chromium context，站点通过 `/MathPhysics/` 子路径提供。
 
 首页、教师家长工作台、几何证明、航天课堂、JSXGraph、平面七巧板、Matter、原 Tangram、PhET 均纳入实际浏览器覆盖。63 个入口直接启动全部就绪；宿主逐个打开 63 个 iframe 并成功返回。巡检包含 Matter 48 个示例和 PhET 4 模块共 13 个屏幕；入口数据、资源及页面异常记录见[63 入口报告](../../output/playwright/style-unification/entry-sweep-2026-09-30T11-48-13.816Z/report.json)。页面矩阵对首页、几何证明、航天、JSXGraph、平面 Tangram、Matter 在桌面、平板、手机共生成 18 张截图，见[核心复验目录](../../output/playwright/style-unification/core-recheck-2026-09-30T11-36-43.161Z/)；首页和宿主交互也在其中。

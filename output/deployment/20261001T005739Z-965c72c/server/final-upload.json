@@ -1,0 +1,13 @@
+{
+  "releaseId": "20261001T005739Z-965c72c",
+  "baseArchiveSHA256": "92e706785d2189336fe4157ca319883b98c16f8161cec3d9db917509c2457515",
+  "finalArchiveSHA256": "62da4fdeebb81717a5857f0fbebe08781cf0bb0ff6dcb2861a64854758daef7d",
+  "patchSHA256": "4ec3c1c9eb15b371fe48fb6eaef4dc68fd2014714691ff731edddb65acbc361b",
+  "files": [
+    "BUILD.json",
+    "deploy/mathphysics.nginx.conf",
+    "scripts/build_display_adapters.py",
+    "src/adapters/generated/edit-ledger.json",
+    "src/adapters/tangram.html"
+  ]
+}

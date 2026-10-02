@@ -1,6 +1,8 @@
-# 看见公式：几何证明题集（v0.2）
+# 看见公式：几何证明题集
 
 本模块是独立编写的中文 HTML / SVG 互动演示，共 **24 个动态主题、48种问法**。每个主题可改变参数、逐步播放、拖动进度，并在两种不同问法之间切换、检查数值答案，并查看一般证明依据和适用条件。它不是 24 张静态公式卡，也不是线性代数的完整课程。
+
+每个主题都有观察目标、操作步骤、直观解释和生活例子，高年级可展开证明原理。每种问法提供题意、递进提示、解题过程和常见错误；修改参数或换例题后，讲解同步使用当前数值。逐项结果见 [学习内容全量覆盖与验收](learning-coverage/README.md)。
 
 ## 检索结论与授权
 
@@ -57,21 +59,21 @@
 
 ## 集成与运行
 
-旧 `config/inventory.json` 的 53 个上游活动保持不变。新模块通过 `config/local-activities.json` 单独登记，首页合计 **54 个活动入口**，本模块内部包含全部 24 题。不要将 54 个入口误称为 54 个关卡。
+模块通过 `config/local-activities.json` 登记，当前首页全部目录活动直接开放，无需开放设置。主题筛选和搜索只影响显示；入口数量由当前目录决定，不表示题目数量。历史关闭名单不限制访问，宿主保留探索记录，各课堂使用独立的完成存档。
 
-新安装默认开放 4 个入口，新增的第 4 个为本题集。已有浏览器保持原先的个人开放配置；请到“老师 / 家长”勾选“看见公式”，或恢复默认开放列表。原活动得分仍不自动同步，主界面只记录已探索。
-
-- 项目中运行：`python scripts/serve.py --open`，进入“几何工坊”。
+- 项目中运行：`npm start -- --open`，进入“几何工坊”。
 - 模块直接入口：`lessons/geometric-proofs/index.html`（通过静态服务访问）。
-- 生成独立单文件：`python scripts/build_geometry_standalone.py`。
+- 生成独立单文件：`npm run standalone:geometry`。
 - 输出：`dist/MathPhysics-Geometry-Proofs.html`。全部脚本与样式内嵌，不需要 CDN 或账号，可作为独立演示附件。
-- 修改题目数据：`catalog.js`；数值内核：`math.js`；图形：`draw.js`；交互：`app.js`。新例题需要同时增加目录、渲染函数及数学测试。
+- 修改题目数据：`catalog.js`；数值内核：`math.js`；图形：`draw.js`；交互：`app.js`；教学：`teaching.js`。新问法需要同时更新当前参数讲解和逐项验收。
 
 ## 验证记录
 
 `tests/geometry.test.mjs` 核对目录、参数边界、剪拼多边形面积、平方恒等式、相似比例、逼近关系、截面积及答案验证。
 
 `tests/geometry-browser.mjs` 在实际 HTTP 和 file:// 环境核对全部 24 题、主入口整合、控制按钮、数值反馈及 1024/390 像素布局。结果见 `docs/geometry-browser-report.json`（存在且 passed=true 才代表该次测试成功）。
+
+`npm run test:local-learning:browser` 逐项核对24个主题、48种问法在 HTTP 与 file:// 下的实际提示、解答、当前参数更新和操作，结果见 [local-classrooms.json](learning-coverage/local-classrooms.json)。视觉结果另列于 [本地课堂截图验收](learning-coverage/visual-local.md)。
 
 `docs/geometry-test-report.json` 是工作环境中通过内嵌 HTML 运行的独立检查记录，它不冒充实际 HTTP 或 file:// 测试。两种测试均不替代真实 iPad Safari 或课堂教学验证。
 

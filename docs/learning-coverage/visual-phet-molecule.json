@@ -1,0 +1,432 @@
+{
+  "title": "PhET Build a Molecule 原生题卡视觉验收",
+  "reviewerModel": "luna max",
+  "updatedDate": "2026-10-01",
+  "sourceReports": [
+    "docs/learning-coverage/phet-molecule-questions.json",
+    "docs/learning-coverage/phet-other-question-audit.json",
+    "docs/learning-coverage/visual-phet-molecule.json"
+  ],
+  "reviewVersions": {
+    "initialReview": {
+      "archivedImages": [
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-single-desktop-question.png",
+          "sha256": "876a03ae875bac9e4e9b3907e640d9263b7acf76eb18d6f374ff54f5f49ba3df"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-single-desktop-viewport.png",
+          "sha256": "b5cabe4e946e125693369eb019f0e1df565cd0e2bee88f2344917b49a40233e1"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-single-390-question.png",
+          "sha256": "fa518c8493f241ff78179f78275be6a69aa63247d52607aa4155cf298ddc9ffb"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-single-390-viewport.png",
+          "sha256": "4fda786277d892bd612801c4d11875f09b6e707ec303efadfe4cd854b1553399"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-multiple-desktop-question.png",
+          "sha256": "9faaca5b6c2dd1507dbcd56193a3bdf2a1bea80d06c365b3b1be03b2038acfe8"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-multiple-desktop-viewport.png",
+          "sha256": "75fb097f5938d22ab0e1fe1db0e9448a8009482a9503a759eb68ea8ae1969803"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-multiple-390-question.png",
+          "sha256": "29b9ade84cb2e27a26c2ba28fb1b018309370ebccc7c9ad7cb7ebddc8dc8ae7c"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-multiple-390-viewport.png",
+          "sha256": "6275c96025f05e93410ed2cc669bbb25608059c52de27de523368f18e3410697"
+        }
+      ],
+      "screenshotsActuallyViewed": 8,
+      "findings": [
+        {
+          "paths": [
+            "output/playwright/learning-coverage/phet-molecule/http-single-desktop-question.png",
+            "output/playwright/learning-coverage/phet-molecule/http-single-390-question.png",
+            "output/playwright/learning-coverage/phet-molecule/http-multiple-desktop-question.png",
+            "output/playwright/learning-coverage/phet-molecule/http-multiple-390-question.png"
+          ],
+          "id": "question-card-capture-incomplete",
+          "status": "pending_recapture",
+          "impact": "四张 question.png 均只显示题卡上半部，解题过程被中途截断，完整过程与常见错误没有进入画面；画面下半部为大块浅色空白。该证据范围异常不足以判定 live UI 本身有缺陷。",
+          "requestedHandling": "等待 Sol 重拍后再只复看这四张 question 截图。"
+        },
+        {
+          "paths": [
+            "output/playwright/learning-coverage/phet-molecule/http-single-desktop-viewport.png",
+            "output/playwright/learning-coverage/phet-molecule/http-single-390-viewport.png",
+            "output/playwright/learning-coverage/phet-molecule/http-multiple-desktop-viewport.png",
+            "output/playwright/learning-coverage/phet-molecule/http-multiple-390-viewport.png"
+          ],
+          "id": "native-target-preview-solid-black",
+          "status": "open_visual_observation",
+          "impact": "四张 viewport.png 中原生 collection 目标行的分子预览区呈纯黑矩形，没有可辨的原子结构图；相邻分子式和目标数量仍可见。无法仅凭截图判断黑块是否为有意占位，需 Sol/root triage。"
+        }
+      ],
+      "primaryImagePaths": 8,
+      "note": "First-review archive hashes are supplied by the current manifest; copies are not counted as new view_image paths in the supplemental review."
+    },
+    "supplementalRereview": {
+      "primaryImagesRephotographedAtSamePaths": 8,
+      "checkedDate": "2026-10-01",
+      "newComparisonPaths": 2,
+      "actualViewMethod": "view_image",
+      "screenshotPathsActuallyViewed": [
+        "output/playwright/learning-coverage/phet-molecule/http-single-desktop-question.png",
+        "output/playwright/learning-coverage/phet-molecule/http-single-desktop-viewport.png",
+        "output/playwright/learning-coverage/phet-molecule/http-single-390-question.png",
+        "output/playwright/learning-coverage/phet-molecule/http-single-390-viewport.png",
+        "output/playwright/learning-coverage/phet-molecule/http-multiple-desktop-question.png",
+        "output/playwright/learning-coverage/phet-molecule/http-multiple-desktop-viewport.png",
+        "output/playwright/learning-coverage/phet-molecule/http-multiple-390-question.png",
+        "output/playwright/learning-coverage/phet-molecule/http-multiple-390-viewport.png",
+        "output/playwright/learning-coverage/phet-molecule/native-empty-slots-comparison.png",
+        "output/playwright/learning-coverage/phet-molecule/themed-empty-slots-comparison.png"
+      ],
+      "uniquePathsActuallyViewed": 10,
+      "mainPathVersionDifferencesVerified": 8
+    }
+  },
+  "counts": {
+    "actualImagesViewedThisRereview": 10,
+    "resolvedInitialFindings": 2,
+    "primaryImagesViewed": 8,
+    "finalOpenFindings": 0,
+    "emptySlotComparisonImagesViewed": 2,
+    "mainImagePathsWithChangedBytes": 8,
+    "finalPrimaryPathsPassed": 8,
+    "initialImageVersionsPreviouslyReviewed": 8,
+    "finalComparisonPathsConfirmed": 2,
+    "currentRephotographedPrimaryVersionsPassed": 8,
+    "distinctImagePathsAcrossReviews": 10,
+    "imageVersionsViewedAcrossReviews": 18,
+    "archivedCopiesViewedThisRereview": 0
+  },
+  "background": {
+    "questionFamilies": [
+      "build-a-molecule/single-molecule/collection",
+      "build-a-molecule/multiple-molecules/collection"
+    ],
+    "nativeCollectionResults": {
+      "single": "collected quantity 1; 5 total; 4 remaining",
+      "multiple": "collected quantity 1; 10 total; 9 remaining"
+    },
+    "finiteCoverage": {
+      "scope": "Acceptance metadata only; not exhaustively visually enumerated.",
+      "boxGoalParameterSignatures": 103,
+      "referenceTypes": 26
+    },
+    "functionReportStatus": "passed",
+    "visibleQuestionCoverage": {
+      "progressiveHints": 4,
+      "bounds": "wholePanelInViewport=true; railNotClipping=true",
+      "multipleSolutionSteps": 15,
+      "commonMistakesPerMode": 4,
+      "singleSolutionSteps": 19
+    }
+  },
+  "findings": [
+    {
+      "finalStatus": "resolved_by_full_panel_recapture",
+      "resolution": "The refreshed card images visibly include all 4 progressive hints, the complete solution sequence (single:19 steps; multiple:15 steps), and 4 common mistakes. Machine bounds checks report wholePanelInViewport=true and railNotClipping=true.",
+      "initialStatus": "pending_recapture",
+      "firstReviewFinding": "Four question captures omitted later solution text and common mistakes because the scroll rail clipped the panel.",
+      "paths": [
+        "output/playwright/learning-coverage/phet-molecule/http-single-desktop-question.png",
+        "output/playwright/learning-coverage/phet-molecule/http-single-390-question.png",
+        "output/playwright/learning-coverage/phet-molecule/http-multiple-desktop-question.png",
+        "output/playwright/learning-coverage/phet-molecule/http-multiple-390-question.png"
+      ],
+      "id": "question-card-capture-incomplete"
+    },
+    {
+      "finalStatus": "resolved_as_expected_native_empty_slot",
+      "resolution": "The two actual comparison images show the same black empty slots in native and themed UI. Source comparison confirms quantity=0, black base fill and empty molecule layer; the recaptured quantity-one O2 slot displays a colored thumbnail.",
+      "initialStatus": "open_visual_observation",
+      "firstReviewFinding": "Four quantity-zero viewport captures showed solid black collection rectangles.",
+      "paths": [
+        "output/playwright/learning-coverage/phet-molecule/http-single-desktop-viewport.png",
+        "output/playwright/learning-coverage/phet-molecule/http-single-390-viewport.png",
+        "output/playwright/learning-coverage/phet-molecule/http-multiple-desktop-viewport.png",
+        "output/playwright/learning-coverage/phet-molecule/http-multiple-390-viewport.png",
+        "output/playwright/learning-coverage/phet-molecule/native-empty-slots-comparison.png",
+        "output/playwright/learning-coverage/phet-molecule/themed-empty-slots-comparison.png"
+      ],
+      "id": "native-target-preview-solid-black"
+    }
+  ],
+  "screenshots": [
+    {
+      "status": "passed",
+      "mode": "single-molecule/collection",
+      "kind": "question",
+      "findings": [],
+      "path": "output/playwright/learning-coverage/phet-molecule/http-single-desktop-question.png",
+      "version": {
+        "bytesChangedFromInitialArchive": true,
+        "currentSha256": "4b22d2547babcbf5a335c5855007a1c2c1538bc78c40b1d4c4ae7ee071dd5869",
+        "initialArchiveSha256": "876a03ae875bac9e4e9b3907e640d9263b7acf76eb18d6f374ff54f5f49ba3df",
+        "initialStatus": "pending_recapture",
+        "samePathSuperseded": true,
+        "initialArchivePath": "output/playwright/learning-coverage/phet-molecule/first-review/http-single-desktop-question.png"
+      },
+      "visualNotes": [
+        "四步提示、19步解题过程与4条常见错误完整可读；过程覆盖目标分子原子种类/数量与连接讲解。",
+        "卡片完整进入画面，标题/题意、提示、解题过程、常见错误无可见裁切、重叠。"
+      ],
+      "viewport": "desktop",
+      "visualFacts": {
+        "hintCount": 4,
+        "commonMistakeCount": 4,
+        "currentProgress": "collected=1; total=5; remaining=4",
+        "visualReview": "四步提示、19步解题过程与4条常见错误完整可读；过程覆盖目标分子原子种类/数量与连接讲解。",
+        "solutionStepCount": 19
+      }
+    },
+    {
+      "status": "passed",
+      "mode": "single-molecule/collection",
+      "kind": "viewport",
+      "findings": [],
+      "path": "output/playwright/learning-coverage/phet-molecule/http-single-desktop-viewport.png",
+      "version": {
+        "bytesChangedFromInitialArchive": true,
+        "currentSha256": "7a4fe9d3c05d523340f8b410ae2e009f89e23c1ef04c9191d8780f12bd28ad7e",
+        "initialArchiveSha256": "b5cabe4e946e125693369eb019f0e1df565cd0e2bee88f2344917b49a40233e1",
+        "initialStatus": "reviewed_with_observation",
+        "samePathSuperseded": true,
+        "initialArchivePath": "output/playwright/learning-coverage/phet-molecule/first-review/http-single-desktop-viewport.png"
+      },
+      "visualNotes": [
+        "视口模式：desktop；当前目标行、公式/数量可辨，主要操作区可见。",
+        "托盘、左右切换、重置/清理按钮、底部模式导航在截图中可见且无相互遮挡。",
+        "O2显示彩色橙色原子缩略图及3D入口。"
+      ],
+      "viewport": "desktop",
+      "visualFacts": {
+        "goalRows": [
+          "H2O 0/1",
+          "O2 1/1",
+          "H2 0/1",
+          "CO2 0/1",
+          "N2 0/1"
+        ],
+        "controls": "托盘、左右切换、重置/清理按钮、底部模式导航在截图中可见且无相互遮挡。",
+        "currentProgress": "collected=1; total=5; remaining=4",
+        "collectedThumbnail": "O2显示彩色橙色原子缩略图及3D入口。"
+      }
+    },
+    {
+      "status": "passed",
+      "mode": "single-molecule/collection",
+      "kind": "question",
+      "findings": [],
+      "path": "output/playwright/learning-coverage/phet-molecule/http-single-390-question.png",
+      "version": {
+        "bytesChangedFromInitialArchive": true,
+        "currentSha256": "02d6593f853d13db35ee1f55bf3b0bfaa83d7576d3b9011d3dedbe914fe3c756",
+        "initialArchiveSha256": "fa518c8493f241ff78179f78275be6a69aa63247d52607aa4155cf298ddc9ffb",
+        "initialStatus": "pending_recapture",
+        "samePathSuperseded": true,
+        "initialArchivePath": "output/playwright/learning-coverage/phet-molecule/first-review/http-single-390-question.png"
+      },
+      "visualNotes": [
+        "四步提示、19步解题过程与4条常见错误完整可读；过程覆盖目标分子原子种类/数量与连接讲解。",
+        "卡片完整进入画面，标题/题意、提示、解题过程、常见错误无可见裁切、重叠。"
+      ],
+      "viewport": "390px",
+      "visualFacts": {
+        "hintCount": 4,
+        "commonMistakeCount": 4,
+        "currentProgress": "collected=1; total=5; remaining=4",
+        "visualReview": "四步提示、19步解题过程与4条常见错误完整可读；过程覆盖目标分子原子种类/数量与连接讲解。",
+        "solutionStepCount": 19
+      }
+    },
+    {
+      "status": "passed",
+      "mode": "single-molecule/collection",
+      "kind": "viewport",
+      "findings": [],
+      "path": "output/playwright/learning-coverage/phet-molecule/http-single-390-viewport.png",
+      "version": {
+        "bytesChangedFromInitialArchive": true,
+        "currentSha256": "7125725c5e8aef443816dceb6ff4f990d5d93e7cc6e55d6dd79c3fc2ada51aee",
+        "initialArchiveSha256": "4fda786277d892bd612801c4d11875f09b6e707ec303efadfe4cd854b1553399",
+        "initialStatus": "reviewed_with_observation",
+        "samePathSuperseded": true,
+        "initialArchivePath": "output/playwright/learning-coverage/phet-molecule/first-review/http-single-390-viewport.png"
+      },
+      "visualNotes": [
+        "视口模式：390px；当前目标行、公式/数量可辨，主要操作区可见。",
+        "托盘、左右切换、重置/清理按钮、底部模式导航在截图中可见且无相互遮挡。",
+        "O2显示彩色橙色原子缩略图及3D入口。",
+        "模拟器与右侧目标栏在窄屏内缩放显示；字体比桌面小，但没有挡住操作或发生可见文字重叠。"
+      ],
+      "viewport": "390px",
+      "visualFacts": {
+        "goalRows": [
+          "H2O 0/1",
+          "O2 1/1",
+          "H2 0/1",
+          "CO2 0/1",
+          "N2 0/1"
+        ],
+        "controls": "托盘、左右切换、重置/清理按钮、底部模式导航在截图中可见且无相互遮挡。",
+        "currentProgress": "collected=1; total=5; remaining=4",
+        "collectedThumbnail": "O2显示彩色橙色原子缩略图及3D入口。"
+      }
+    },
+    {
+      "status": "passed",
+      "mode": "multiple-molecules/collection",
+      "kind": "question",
+      "findings": [],
+      "path": "output/playwright/learning-coverage/phet-molecule/http-multiple-desktop-question.png",
+      "version": {
+        "bytesChangedFromInitialArchive": true,
+        "currentSha256": "520188901abe3988f8df5c65d8cf8a8e17632720f91936ed84ff4c2aa29e9e6a",
+        "initialArchiveSha256": "9faaca5b6c2dd1507dbcd56193a3bdf2a1bea80d06c365b3b1be03b2038acfe8",
+        "initialStatus": "pending_recapture",
+        "samePathSuperseded": true,
+        "initialArchivePath": "output/playwright/learning-coverage/phet-molecule/first-review/http-multiple-desktop-question.png"
+      },
+      "visualNotes": [
+        "四步提示、15步解题过程与4条常见错误完整可读；过程覆盖多个目标的原子种类/数量、连接讲解与收集进度。",
+        "卡片完整进入画面，标题/题意、提示、解题过程、常见错误无可见裁切、重叠。"
+      ],
+      "viewport": "desktop",
+      "visualFacts": {
+        "hintCount": 4,
+        "commonMistakeCount": 4,
+        "currentProgress": "collected=1; total=10; remaining=9",
+        "visualReview": "四步提示、15步解题过程与4条常见错误完整可读；过程覆盖多个目标的原子种类/数量、连接讲解与收集进度。",
+        "solutionStepCount": 15
+      }
+    },
+    {
+      "status": "passed",
+      "mode": "multiple-molecules/collection",
+      "kind": "viewport",
+      "findings": [],
+      "path": "output/playwright/learning-coverage/phet-molecule/http-multiple-desktop-viewport.png",
+      "version": {
+        "bytesChangedFromInitialArchive": true,
+        "currentSha256": "0d0096856bf0674f1bbd57efdf50748243abeb07c9a775dbc22b1ed4cf49a41c",
+        "initialArchiveSha256": "75fb097f5938d22ab0e1fe1db0e9448a8009482a9503a759eb68ea8ae1969803",
+        "initialStatus": "reviewed_with_observation",
+        "samePathSuperseded": true,
+        "initialArchivePath": "output/playwright/learning-coverage/phet-molecule/first-review/http-multiple-desktop-viewport.png"
+      },
+      "visualNotes": [
+        "视口模式：desktop；当前目标行、公式/数量可辨，主要操作区可见。",
+        "托盘、左右切换、重置/清理按钮、底部模式导航在截图中可见且无相互遮挡。",
+        "O2显示彩色橙色原子缩略图及3D入口；其他未收集框保持空槽样式。"
+      ],
+      "viewport": "desktop",
+      "visualFacts": {
+        "goalRows": [
+          "2CO2，已收集0",
+          "2O2，已收集1",
+          "4H2，已收集0",
+          "2NH3，已收集0"
+        ],
+        "controls": "托盘、左右切换、重置/清理按钮、底部模式导航在截图中可见且无相互遮挡。",
+        "currentProgress": "collected=1; total=10; remaining=9",
+        "collectedThumbnail": "O2显示彩色橙色原子缩略图及3D入口；其他未收集框保持空槽样式。"
+      }
+    },
+    {
+      "status": "passed",
+      "mode": "multiple-molecules/collection",
+      "kind": "question",
+      "findings": [],
+      "path": "output/playwright/learning-coverage/phet-molecule/http-multiple-390-question.png",
+      "version": {
+        "bytesChangedFromInitialArchive": true,
+        "currentSha256": "4807e6b7e722f6f6eda61dbbde346dbdaf6d3338bb9d0afb9121065b9fffb954",
+        "initialArchiveSha256": "29b9ade84cb2e27a26c2ba28fb1b018309370ebccc7c9ad7cb7ebddc8dc8ae7c",
+        "initialStatus": "pending_recapture",
+        "samePathSuperseded": true,
+        "initialArchivePath": "output/playwright/learning-coverage/phet-molecule/first-review/http-multiple-390-question.png"
+      },
+      "visualNotes": [
+        "四步提示、15步解题过程与4条常见错误完整可读；过程覆盖多个目标的原子种类/数量、连接讲解与收集进度。",
+        "卡片完整进入画面，标题/题意、提示、解题过程、常见错误无可见裁切、重叠。"
+      ],
+      "viewport": "390px",
+      "visualFacts": {
+        "hintCount": 4,
+        "commonMistakeCount": 4,
+        "currentProgress": "collected=1; total=10; remaining=9",
+        "visualReview": "四步提示、15步解题过程与4条常见错误完整可读；过程覆盖多个目标的原子种类/数量、连接讲解与收集进度。",
+        "solutionStepCount": 15
+      }
+    },
+    {
+      "status": "passed",
+      "mode": "multiple-molecules/collection",
+      "kind": "viewport",
+      "findings": [],
+      "path": "output/playwright/learning-coverage/phet-molecule/http-multiple-390-viewport.png",
+      "version": {
+        "bytesChangedFromInitialArchive": true,
+        "currentSha256": "58d07e481262e7accf579645abc0bf736ff17b78a8dac2e2250495a35cbc17f9",
+        "initialArchiveSha256": "6275c96025f05e93410ed2cc669bbb25608059c52de27de523368f18e3410697",
+        "initialStatus": "reviewed_with_observation",
+        "samePathSuperseded": true,
+        "initialArchivePath": "output/playwright/learning-coverage/phet-molecule/first-review/http-multiple-390-viewport.png"
+      },
+      "visualNotes": [
+        "视口模式：390px；当前目标行、公式/数量可辨，主要操作区可见。",
+        "托盘、左右切换、重置/清理按钮、底部模式导航在截图中可见且无相互遮挡。",
+        "O2显示彩色橙色原子缩略图及3D入口；其他未收集框保持空槽样式。",
+        "模拟器与右侧目标栏在窄屏内缩放显示；字体比桌面小，但没有挡住操作或发生可见文字重叠。"
+      ],
+      "viewport": "390px",
+      "visualFacts": {
+        "goalRows": [
+          "2CO2，已收集0",
+          "2O2，已收集1",
+          "4H2，已收集0",
+          "2NH3，已收集0"
+        ],
+        "controls": "托盘、左右切换、重置/清理按钮、底部模式导航在截图中可见且无相互遮挡。",
+        "currentProgress": "collected=1; total=10; remaining=9",
+        "collectedThumbnail": "O2显示彩色橙色原子缩略图及3D入口；其他未收集框保持空槽样式。"
+      }
+    },
+    {
+      "visualNotes": [
+        "Native comparison and themed comparison both show solid black slots when quantity=0 and no molecule nodes are present.",
+        "The collected-quantity=1 O2 thumbnail in the recaptured single/multiple viewport is colored and has a visible 3D entry; the empty black slots match the native empty-slot semantics."
+      ],
+      "sha256": "bb3aa24bf84ff12cccf2e98aa6c2408293550e22135ac2d6672c400f15eba2b8",
+      "path": "output/playwright/learning-coverage/phet-molecule/native-empty-slots-comparison.png",
+      "findings": [],
+      "kind": "empty-slot-semantic-comparison",
+      "status": "passed"
+    },
+    {
+      "visualNotes": [
+        "Native comparison and themed comparison both show solid black slots when quantity=0 and no molecule nodes are present.",
+        "The collected-quantity=1 O2 thumbnail in the recaptured single/multiple viewport is colored and has a visible 3D entry; the empty black slots match the native empty-slot semantics."
+      ],
+      "sha256": "6b4b1fb76679c7637e25710eb281b2299b285bade6293c94089475296662c725",
+      "path": "output/playwright/learning-coverage/phet-molecule/themed-empty-slots-comparison.png",
+      "findings": [],
+      "kind": "empty-slot-semantic-comparison",
+      "status": "passed"
+    }
+  ],
+  "limitations": [
+    "This review covers the two collection screens and the listed eight primary images plus two empty-slot comparison images; it does not visually traverse all 26 molecule types or 103 goal parameter signatures.",
+    "390px simulator and target rail typography is smaller than desktop, but in the reviewed screenshots the target rows and main operations remain visible without overlap."
+  ]
+}

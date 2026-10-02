@@ -29,10 +29,24 @@
     "test:classroom:inline": "node scripts/python.mjs tests/classroom-browser.py --inline",
     "build:primary": "node scripts/python.mjs scripts/build_primary_math_standalone.py",
     "test:primary": "node --test tests/primary-math.test.mjs",
-    "test:primary:browser": "node scripts/python.mjs tests/primary-math-browser.py",
+    "test:primary:browser": "node tests/numbers-life-browser.mjs",
     "generate:questions": "node scripts/generate_questions.mjs",
     "test:questions": "node --test tests/question-bank*.test.mjs",
-    "test:questions:browser": "node scripts/python.mjs tests/question-bank-browser.py"
+    "test:questions:browser": "node tests/numbers-life-browser.mjs",
+    "test:questions:failure": "node tests/question-bank-failure.mjs",
+    "test:questions:learning": "node --test tests/questions-learning.test.mjs",
+    "test:questions:learning:browser": "node tests/questions-learning-browser.mjs",
+    "test:demo-learning": "node --test tests/demo-learning.test.mjs",
+    "test:demo-learning:browser": "node tests/demo-learning-browser.mjs",
+    "test:local-learning": "node --test tests/local-classrooms-learning.test.mjs",
+    "test:local-learning:browser": "node tests/local-classrooms-learning-browser.mjs",
+    "test:phet-questions": "node --test tests/phet-questions.test.mjs tests/phet-molecule-question-learning.test.mjs",
+    "test:phet-questions:browser": "node tests/phet-questions-browser.mjs",
+    "test:phet-molecule-questions:browser": "node tests/phet-molecule-question-browser.mjs",
+    "test:demo-layout:browser": "node tests/demo-layout-browser.mjs",
+    "test:phet-display-compat:browser": "node tests/phet-display-compat-browser.mjs",
+    "test:curriculum": "node --test tests/singapore-curriculum.test.mjs",
+    "test:curriculum:browser": "node tests/numbers-life-browser.mjs"
   },
   "devDependencies": {
     "playwright": "1.56.0"

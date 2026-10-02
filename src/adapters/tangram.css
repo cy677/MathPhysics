@@ -8,6 +8,11 @@ h1 { margin: 2px 0; font-size: 22px; line-height: 1.4; }
 header button { margin-left: auto; white-space: nowrap; font-size: 14px; }
 .instructions { margin: 0; padding: 10px 24px; background: var(--mp-leaf); color: var(--mp-ink); font-size: 13px; flex-shrink: 0; }
 #container { position: relative; flex: 1; min-height: 0; width: 100%; overflow: hidden; background: var(--mp-surface); }
+#tangram-workspace { flex:1; min-height:0; display:grid; grid-template-columns:minmax(0,1fr) 340px; }
+#tangram-learning { overflow:auto; padding:10px; border-left:1px solid var(--mp-line); }
+#tangram-learning .mp-learning-body { max-height:calc(100dvh - 320px); }
+body.mp-embedded #tangram-workspace { grid-template-columns:minmax(0,1fr); }
+body.mp-embedded #tangram-learning { display:none; }
 #container canvas { display: block; width: 100%; height: 100%; touch-action: none; }
 #container button { z-index: 2; margin: 12px; min-height: 44px; padding: 9px 12px; width: auto !important; height: auto !important; min-width: 104px; border: 1px solid var(--mp-line) !important; background: var(--mp-surface) !important; color: var(--mp-primary); font: 650 14px/1.4 var(--mp-font); box-shadow: var(--mp-shadow); }
 #container button:hover { background: var(--mp-leaf) !important; }
@@ -16,6 +21,10 @@ header button { margin-left: auto; white-space: nowrap; font-size: 14px; }
 #container button:focus-visible { outline: 3px solid var(--mp-focus); outline-offset: 3px; }
 footer { flex-shrink: 0; display: flex; justify-content: space-between; padding: 10px 24px; gap: 16px; border-top: 1px solid var(--mp-line); color: var(--mp-muted); font-size: 12px; }
 #error { position: fixed; z-index: 4; inset: 20% 8%; overflow: auto; padding: 24px; border: 1px solid var(--mp-line); border-radius: var(--mp-radius-card); background: var(--mp-gold-soft); color: var(--mp-error); }
+.piece-control { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:6px; padding:8px 12px; border-top:1px solid var(--mp-line); background:var(--mp-surface); }
+.piece-control label { font-size:13px; }
+.piece-control select { min-height:44px; padding:8px; font:inherit; border:1px solid var(--mp-line); border-radius:8px; background:var(--mp-surface); }
+.piece-control button { min-height:44px; }
 body.mp-embedded #back-home,body.mp-embedded header small,body.mp-embedded footer { display: none; }
 body.mp-embedded header { padding: 8px 16px; }
 body.mp-embedded h1 { font-size: 17px; }
@@ -26,4 +35,8 @@ body.mp-embedded h1 { font-size: 17px; }
   .instructions { padding: 9px 12px; font-size: 12px; }
   #container button { margin: 9px; min-width: 98px; font-size: 13px; }
   footer { padding: 9px 12px; flex-wrap: wrap; }
+  #tangram-workspace { display:flex; flex-direction:column; overflow:hidden; }
+  #container { flex:1; min-height:180px; }
+  #tangram-learning { flex-shrink:0; max-height:30dvh; overflow:auto; padding:6px; border-left:0; border-top:1px solid var(--mp-line); }
+  #tangram-learning .mp-learning-body { max-height:calc(30dvh - 62px); }
 }

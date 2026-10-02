@@ -65,7 +65,11 @@ try:
      if id=='forces-and-motion-basics':
       assert 'src/phet/generated/forces-and-motion-basics.html' in page.locator('iframe').get_attribute('src')
       assert '视觉改编' in page.locator('#attribution').inner_text()
-      assert '拔河' in page.locator('#player-tip').inner_text()
+      page.wait_for_function('document.querySelector("#player-tip .mp-learning-panel")?.dataset.guideId.startsWith("phet-forces-and-motion-basics")')
+      assert page.locator('#player-tip [data-guide-field]').count()==4
+      assert page.locator('#player-tip [data-learning-step]').count()==3
+      assert page.locator('#player-tip [data-learning-step="0"]').get_attribute('aria-current')=='step'
+      assert not page.locator('#player-tip [data-guide-field="why"]').is_visible()
       page.frame_locator('iframe').locator('#splash-container').wait_for(state='detached')
       page.screenshot(path=str(OUT/'host-phet-merged.png'))
      page.locator('#player-back').click()
@@ -110,11 +114,14 @@ try:
      try:
       entry=resolve_entry(a)
       q.goto(base+entry,wait_until='load',timeout=60000)
-      q.wait_for_function('(adapter)=>{if(["matter","matter-library","spaceflight","proofs","jsxgraph","tangram-flat","primary-math"].includes(adapter))return window.__mpReady===true;if(adapter==="phet"){const sim=window.phet?.joist?.sim||window.phet?.sim,screens=sim?.simScreens||sim?.screens;return screens?.length&&screens.every(s=>s.model&&s.view)&&sim.isConstructionCompleteProperty?.value!==false&&!document.getElementById("splash-container");}return !!document.querySelector("canvas");}',arg=a['adapter'],timeout=25000)
+      q.wait_for_function('(adapter)=>{if(["matter","matter-library","spaceflight","proofs","jsxgraph","tangram-flat","primary-math","question-bank"].includes(adapter))return window.__mpReady===true;if(adapter==="phet"){const sim=window.phet?.joist?.sim||window.phet?.sim,screens=sim?.simScreens||sim?.screens;return screens?.length&&screens.every(s=>s.model&&s.view)&&sim.isConstructionCompleteProperty?.value!==false&&!document.getElementById("splash-container");}return !!document.querySelector("canvas");}',arg=a['adapter'],timeout=25000)
+      if a['adapter']=='question-bank':assert '/primary-math/' in q.url and q.url.endswith('#practice'),q.url
       q.wait_for_timeout(160);assert not errs,errs;assert not missing,missing
       if a['adapter']=='matter':
        assert q.evaluate('Number.isFinite(__mpContext.engine.timing.timestamp)')
        if a['id'] in defaults['openIds']:
+        paused=q.evaluate('__mpContext.engine.timing.timestamp');q.wait_for_timeout(100);assert q.evaluate('__mpContext.engine.timing.timestamp')==paused
+        q.locator('#pause').click();q.wait_for_timeout(120);assert q.evaluate('__mpContext.engine.timing.timestamp')>paused
         q.locator('#pause').click();paused=q.evaluate('__mpContext.engine.timing.timestamp');q.wait_for_timeout(100);assert q.evaluate('__mpContext.engine.timing.timestamp')==paused
         q.locator('#pause').click();q.wait_for_timeout(120);assert q.evaluate('__mpContext.engine.timing.timestamp')>paused
      finally:q.close()
@@ -127,9 +134,11 @@ try:
     drag_jxg_point(page,0,.5,.5)
     page.locator('#reset').click()
     if mode=='linear':
-     page.locator('#check').click();assert '还差一点' in page.locator('#feedback').inner_text()
-     page.locator('[data-preset="line"]').click();assert page.evaluate('__playground.readings.areaFactor')==0
-     page.locator('[data-preset="stretch"]').click();page.locator('#check').click();assert '做到了' in page.locator('#feedback').inner_text();assert page.evaluate('__playground.readings.areaFactor')==2
+     page.locator('#check').click();assert page.locator('#feedback').get_attribute('class')=='retry'
+     page.locator('[data-preset="line"]').click();assert page.evaluate('__playground.readings.areaFactor')==0;page.locator('#check').click()
+     assert page.locator('#feedback').get_attribute('class')=='retry' and page.locator('#feedback').inner_text()
+     assert '面积倍数' in page.locator('#readings').inner_text() and '压成' in page.locator('#readings').inner_text()
+     page.locator('[data-preset="stretch"]').click();assert page.evaluate('__playground.readings.areaFactor')==2;page.locator('#check').click();assert page.locator('#feedback').get_attribute('class')=='success' and '做到了' in page.locator('#feedback').inner_text()
     elif mode=='rotate':put_value(page,'#parameter',180);page.locator('#check').click();assert '做到了' in page.locator('#feedback').inner_text()
     elif mode=='scale':put_value(page,'#parameter',2);page.locator('#check').click();assert '做到了' in page.locator('#feedback').inner_text()
     elif mode=='mirror':page.evaluate('__playground.points[0].setPosition(JXG.COORDS_BY_USER,[-3,2]);__playground.board.update()');page.locator('#check').click();assert '做到了' in page.locator('#feedback').inner_text()

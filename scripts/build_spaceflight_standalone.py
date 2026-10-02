@@ -8,7 +8,7 @@ source = root / 'lessons/spaceflight'
 html = inline_shared_theme((source/'index.html').read_text(encoding='utf-8'))
 css = (source/'styles.css').read_text(encoding='utf-8')
 html = html.replace('<link rel="stylesheet" href="styles.css">', '<style>\n'+css+'\n</style>')
-for name in ['data.js','math.js','draw.js','app.js']:
+for name in ['data.js','flight-core.js','mission-model.js','flight.js','math.js','teaching.js','draw.js','app.js']:
     code = (source/name).read_text(encoding='utf-8')
     if re.search(r'</script', code, re.I):
         raise ValueError('Unexpected script closing token in '+name)

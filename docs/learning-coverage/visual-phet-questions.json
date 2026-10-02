@@ -1,0 +1,1287 @@
+{
+  "title": "PhET 原生数理题视觉验收",
+  "review": {
+    "model": "gpt-6-luna",
+    "effort": "max",
+    "date": "2026-10-01",
+    "method": "逐张使用 tools.view_image(detail=original) 实际查看 screenshots 清单中的唯一 PNG；功能测试与机器布局检查只作上下文，不代替目视结果。",
+    "finalRereviewDate": "2026-10-01",
+    "finalRereviewMethod": "六张新的 rereview PNG 均逐张使用 tools.view_image(detail=original) 实际查看；机器捕获几何与 SHA 仅记录为旁证。"
+  },
+  "scope": {
+    "sourceManifest": "docs/learning-coverage/phet-questions.json",
+    "expectedUniqueImages": 69,
+    "fullCards": 66,
+    "responsiveViewports": 3,
+    "note": "覆盖46个配置题卡、15个题型代表卡、5个 file-backed 题卡与3个 viewport。并非对768个随机原生挑战样本逐图进行视觉穷举。",
+    "firstRoundUniqueImages": 69,
+    "targetedRereviewImages": 6,
+    "totalUniqueImagesActuallyViewed": 75
+  },
+  "summary": {
+    "originalQuestionItems": 69,
+    "firstRoundUniquePathsActuallyViewed": 69,
+    "targetedRereviewPathsActuallyViewed": 6,
+    "totalUniqueScreenshotPathsActuallyViewed": 75,
+    "configurationCards": 46,
+    "familyRepresentativeCards": 15,
+    "fileBackedCards": 5,
+    "responsiveViewports": 3,
+    "firstRoundPass": 62,
+    "firstRoundPassWithNote": 1,
+    "firstRoundFindings": 6,
+    "finalClearItems": 68,
+    "finalPassWithNoteItems": 1,
+    "resolvedFindings": 6,
+    "openFindings": 0
+  },
+  "result": "final_visual_review_complete",
+  "findings": [
+    {
+      "id": "fractions-intro/shape/level-3",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-3.png",
+      "code": "crop_top",
+      "impact": "题卡截图上边缘截断：未显示“本题学习”标题，题意首行贴边/缺失；下方提示与解答可见。",
+      "status": "resolved_by_targeted_rereview",
+      "firstRoundStatus": "open_in_first_round",
+      "firstRoundImagePath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-3.png",
+      "resolvedByPath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-3-rereview.png",
+      "resolvedById": "rereview/fractions-intro/shape/level-3",
+      "resolution": "完整卡可见。题意列出4/4、2/6、2/3及可用材料；步骤分别以1/1、1/3、1/2+1/6实现，算式与目标相符。三条提示、全部常见错误及末行均完整可读。"
+    },
+    {
+      "id": "fractions-intro/shape/level-4",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-4.png",
+      "code": "crop_top",
+      "impact": "题卡截图上边缘截断：未显示“本题学习”标题，题意首行贴边/缺失；下方提示与解答可见。",
+      "status": "resolved_by_targeted_rereview",
+      "firstRoundStatus": "open_in_first_round",
+      "firstRoundImagePath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-4.png",
+      "resolvedByPath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-4-rereview.png",
+      "resolvedById": "rereview/fractions-intro/shape/level-4",
+      "resolution": "完整卡可见。三个1/2目标对应1/2、1/3+1/6、1/3+1/6；题意、三提示、完整步骤和全部常见错误均可读至卡片底边。"
+    },
+    {
+      "id": "fractions-intro/shape/level-7",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-7.png",
+      "code": "crop_top",
+      "impact": "题卡截图上边缘截断：未显示“本题学习”标题，题意首行贴边/缺失；下方提示与解答可见。",
+      "status": "resolved_by_targeted_rereview",
+      "firstRoundStatus": "open_in_first_round",
+      "firstRoundImagePath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-7.png",
+      "resolvedByPath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-7-rereview.png",
+      "resolvedById": "rereview/fractions-intro/shape/level-7",
+      "resolution": "完整卡可见。2/3、2/3、1/2、1/2目标与1/2+1/6、1/4+1/4+1/6、三块1/6、四块1/8的步骤相符；全部字段完整可读。"
+    },
+    {
+      "id": "family/fractions-intro/shape-PIE",
+      "path": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-shape-PIE.png",
+      "code": "crop_top_bottom",
+      "impact": "截图上边缘从题意中段开始，缺少标题/题意开头；下边缘也未呈现完整常见错误与卡片底部。",
+      "status": "resolved_by_targeted_rereview",
+      "firstRoundStatus": "open_in_first_round",
+      "firstRoundImagePath": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-shape-PIE.png",
+      "resolvedByPath": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-shape-PIE-rereview.png",
+      "resolvedById": "rereview/family/fractions-intro/shape-PIE",
+      "resolution": "完整卡可见。圆形分数题意为1/3、1/2、2/2，步骤分别用1/3、1/2、1/1表示；三提示、完整解答及全部常见错误均可读。"
+    },
+    {
+      "id": "family/fractions-intro/number",
+      "path": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-number.png",
+      "code": "crop_top_bottom",
+      "impact": "截图上边缘从题意中段开始，缺少标题/题意开头；下边缘也未呈现完整常见错误与卡片底部。",
+      "status": "resolved_by_targeted_rereview",
+      "firstRoundStatus": "open_in_first_round",
+      "firstRoundImagePath": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-number.png",
+      "resolvedByPath": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-number-rereview.png",
+      "resolvedById": "rereview/family/fractions-intro/number",
+      "resolution": "完整卡可见。目标1/3、2/3、1/2与分子/分母卡及等值核对步骤相符；三提示、完整解答、全部常见错误及末行均可读。"
+    },
+    {
+      "id": "fraction-matcher/fractions/level-2",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-2.png",
+      "code": "crop_bottom",
+      "impact": "截图在“常见错误”第一条后结束，后两条及卡片底部未显示。",
+      "status": "resolved_by_targeted_rereview",
+      "firstRoundStatus": "open_in_first_round",
+      "firstRoundImagePath": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-2.png",
+      "resolvedByPath": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-2-rereview.png",
+      "resolvedById": "rereview/fraction-matcher/fractions/level-2",
+      "resolution": "完整卡可见。十二张卡的图形/数字分数描述与等值配对步骤清楚，分数乘法核对可读，三条常见错误和卡片底部完整呈现。"
+    }
+  ],
+  "limitations": [
+    "题卡截图展示的是题卡侧栏；具体 PhET 画布图形只在3张 viewport 样本中直接可见，因此不能据此声称已逐配置目视核对动态画布的每个分区与涂色状态。",
+    "69张截图是配置、题型代表、文件题卡和视口样本覆盖，不是对全部随机题态/768个样本的视觉穷举。",
+    "手机视口的原生控件虽可见，但比例偏小，单凭静态图无法验证实际触控命中体验。"
+  ],
+  "screenshots": [
+    {
+      "id": "area-builder/game/level-1",
+      "path": "output/playwright/learning-coverage/phet-questions/area-builder-game-level-1.png",
+      "group": "configuration-card",
+      "simulation": "area-builder",
+      "configuration": "level-1",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "area-builder/game/level-2",
+      "path": "output/playwright/learning-coverage/phet-questions/area-builder-game-level-2.png",
+      "group": "configuration-card",
+      "simulation": "area-builder",
+      "configuration": "level-2",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "area-builder/game/level-3",
+      "path": "output/playwright/learning-coverage/phet-questions/area-builder-game-level-3.png",
+      "group": "configuration-card",
+      "simulation": "area-builder",
+      "configuration": "level-3",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "area-builder/game/level-4",
+      "path": "output/playwright/learning-coverage/phet-questions/area-builder-game-level-4.png",
+      "group": "configuration-card",
+      "simulation": "area-builder",
+      "configuration": "level-4",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "area-builder/game/level-5",
+      "path": "output/playwright/learning-coverage/phet-questions/area-builder-game-level-5.png",
+      "group": "configuration-card",
+      "simulation": "area-builder",
+      "configuration": "level-5",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "area-builder/game/level-6",
+      "path": "output/playwright/learning-coverage/phet-questions/area-builder-game-level-6.png",
+      "group": "configuration-card",
+      "simulation": "area-builder",
+      "configuration": "level-6",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/area-builder/areaConstructed",
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaConstructed.png",
+      "group": "family-representative",
+      "simulation": "area-builder",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/area-builder/areaEntered-orthogonal",
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaEntered-orthogonal.png",
+      "group": "family-representative",
+      "simulation": "area-builder",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/area-builder/areaAndPerimeterConstructed",
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaAndPerimeterConstructed.png",
+      "group": "family-representative",
+      "simulation": "area-builder",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/area-builder/areaEntered-hole",
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaEntered-hole.png",
+      "group": "family-representative",
+      "simulation": "area-builder",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/area-builder/areaEntered-diagonal",
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaEntered-diagonal.png",
+      "group": "family-representative",
+      "simulation": "area-builder",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/area-builder/areaAndProportionConstructed",
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaAndProportionConstructed.png",
+      "group": "family-representative",
+      "simulation": "area-builder",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/area-builder/areaPerimeterAndProportionConstructed",
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaPerimeterAndProportionConstructed.png",
+      "group": "family-representative",
+      "simulation": "area-builder",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "area-mobile-current-question",
+      "path": "output/playwright/learning-coverage/phet-questions/area-mobile-current-question.png",
+      "group": "responsive-viewport",
+      "simulation": "area-builder",
+      "configuration": null,
+      "status": "pass_with_note",
+      "findingCode": null,
+      "observation": "手机视口中 PhET 原生画布控件整体偏小，触控目标不宽裕；截图中控件可见，题卡与画布没有重叠或遮挡。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/shape/level-1",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-1.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-1",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/shape/level-2",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-2.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-2",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/shape/level-3",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-3.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-3",
+      "status": "finding",
+      "findingCode": "crop_top",
+      "observation": "题卡截图上边缘截断：未显示“本题学习”标题，题意首行贴边/缺失；下方提示与解答可见。",
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "firstRoundStatus": "finding",
+      "finalStatus": "clear_after_targeted_rereview",
+      "resolvedByPath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-3-rereview.png",
+      "resolvedById": "rereview/fractions-intro/shape/level-3"
+    },
+    {
+      "id": "fractions-intro/shape/level-4",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-4.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-4",
+      "status": "finding",
+      "findingCode": "crop_top",
+      "observation": "题卡截图上边缘截断：未显示“本题学习”标题，题意首行贴边/缺失；下方提示与解答可见。",
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "firstRoundStatus": "finding",
+      "finalStatus": "clear_after_targeted_rereview",
+      "resolvedByPath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-4-rereview.png",
+      "resolvedById": "rereview/fractions-intro/shape/level-4"
+    },
+    {
+      "id": "fractions-intro/shape/level-5",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-5.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-5",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/shape/level-6",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-6.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-6",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/shape/level-7",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-7.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-7",
+      "status": "finding",
+      "findingCode": "crop_top",
+      "observation": "题卡截图上边缘截断：未显示“本题学习”标题，题意首行贴边/缺失；下方提示与解答可见。",
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "firstRoundStatus": "finding",
+      "finalStatus": "clear_after_targeted_rereview",
+      "resolvedByPath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-7-rereview.png",
+      "resolvedById": "rereview/fractions-intro/shape/level-7"
+    },
+    {
+      "id": "fractions-intro/shape/level-8",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-8.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-8",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/shape/level-9",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-9.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-9",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/shape/level-10",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-10.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-10",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/number/level-1",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-1.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-1",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/number/level-2",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-2.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-2",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/number/level-3",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-3.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-3",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/number/level-4",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-4.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-4",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/number/level-5",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-5.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-5",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/number/level-6",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-6.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-6",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/number/level-7",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-7.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-7",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/number/level-8",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-8.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-8",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/number/level-9",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-9.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-9",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fractions-intro/number/level-10",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-10.png",
+      "group": "configuration-card",
+      "simulation": "fractions-intro",
+      "configuration": "level-10",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/fractions-intro/shape-BAR",
+      "path": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-shape-BAR.png",
+      "group": "family-representative",
+      "simulation": "fractions-intro",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/fractions-intro/shape-PIE",
+      "path": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-shape-PIE.png",
+      "group": "family-representative",
+      "simulation": "fractions-intro",
+      "configuration": null,
+      "status": "finding",
+      "findingCode": "crop_top_bottom",
+      "observation": "截图上边缘从题意中段开始，缺少标题/题意开头；下边缘也未呈现完整常见错误与卡片底部。",
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "firstRoundStatus": "finding",
+      "finalStatus": "clear_after_targeted_rereview",
+      "resolvedByPath": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-shape-PIE-rereview.png",
+      "resolvedById": "rereview/family/fractions-intro/shape-PIE"
+    },
+    {
+      "id": "family/fractions-intro/number",
+      "path": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-number.png",
+      "group": "family-representative",
+      "simulation": "fractions-intro",
+      "configuration": null,
+      "status": "finding",
+      "findingCode": "crop_top_bottom",
+      "observation": "截图上边缘从题意中段开始，缺少标题/题意开头；下边缘也未呈现完整常见错误与卡片底部。",
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "firstRoundStatus": "finding",
+      "finalStatus": "clear_after_targeted_rereview",
+      "resolvedByPath": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-number-rereview.png",
+      "resolvedById": "rereview/family/fractions-intro/number"
+    },
+    {
+      "id": "fraction-matcher/fractions/level-1",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-1.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-1",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/fractions/level-2",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-2.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-2",
+      "status": "finding",
+      "findingCode": "crop_bottom",
+      "observation": "截图在“常见错误”第一条后结束，后两条及卡片底部未显示。",
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "firstRoundStatus": "finding",
+      "finalStatus": "clear_after_targeted_rereview",
+      "resolvedByPath": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-2-rereview.png",
+      "resolvedById": "rereview/fraction-matcher/fractions/level-2"
+    },
+    {
+      "id": "fraction-matcher/fractions/level-3",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-3.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-3",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/fractions/level-4",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-4.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-4",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/fractions/level-5",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-5.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-5",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/fractions/level-6",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-6.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-6",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/fractions/level-7",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-7.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-7",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/fractions/level-8",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-8.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-8",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/mixed-numbers/level-1",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-1.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-1",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/mixed-numbers/level-2",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-2.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-2",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/mixed-numbers/level-3",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-3.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-3",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/mixed-numbers/level-4",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-4.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-4",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/mixed-numbers/level-5",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-5.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-5",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/mixed-numbers/level-6",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-6.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-6",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/mixed-numbers/level-7",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-7.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-7",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "fraction-matcher/mixed-numbers/level-8",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-8.png",
+      "group": "configuration-card",
+      "simulation": "fraction-matcher",
+      "configuration": "level-8",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/fraction-matcher/fractions",
+      "path": "output/playwright/learning-coverage/phet-questions/family-fraction-matcher-fractions.png",
+      "group": "family-representative",
+      "simulation": "fraction-matcher",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/fraction-matcher/mixed-numbers",
+      "path": "output/playwright/learning-coverage/phet-questions/family-fraction-matcher-mixed-numbers.png",
+      "group": "family-representative",
+      "simulation": "fraction-matcher",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "matcher-tablet-current-question",
+      "path": "output/playwright/learning-coverage/phet-questions/matcher-tablet-current-question.png",
+      "group": "responsive-viewport",
+      "simulation": "fraction-matcher",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "画布与题卡分区清楚，无重叠；题卡内容延伸到视口下方，呈现为可滚动内容，当前视口可见部分文字清晰。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "balancing-act/game/level-1",
+      "path": "output/playwright/learning-coverage/phet-questions/balancing-act-game-level-1.png",
+      "group": "configuration-card",
+      "simulation": "balancing-act",
+      "configuration": "level-1",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "balancing-act/game/level-2",
+      "path": "output/playwright/learning-coverage/phet-questions/balancing-act-game-level-2.png",
+      "group": "configuration-card",
+      "simulation": "balancing-act",
+      "configuration": "level-2",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "balancing-act/game/level-3",
+      "path": "output/playwright/learning-coverage/phet-questions/balancing-act-game-level-3.png",
+      "group": "configuration-card",
+      "simulation": "balancing-act",
+      "configuration": "level-3",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "balancing-act/game/level-4",
+      "path": "output/playwright/learning-coverage/phet-questions/balancing-act-game-level-4.png",
+      "group": "configuration-card",
+      "simulation": "balancing-act",
+      "configuration": "level-4",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/balancing-act/position",
+      "path": "output/playwright/learning-coverage/phet-questions/family-balancing-act-position.png",
+      "group": "family-representative",
+      "simulation": "balancing-act",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/balancing-act/tilt",
+      "path": "output/playwright/learning-coverage/phet-questions/family-balancing-act-tilt.png",
+      "group": "family-representative",
+      "simulation": "balancing-act",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "family/balancing-act/mass",
+      "path": "output/playwright/learning-coverage/phet-questions/family-balancing-act-mass.png",
+      "group": "family-representative",
+      "simulation": "balancing-act",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "balance-desktop-current-question",
+      "path": "output/playwright/learning-coverage/phet-questions/balance-desktop-current-question.png",
+      "group": "responsive-viewport",
+      "simulation": "balancing-act",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "桌面视口中科学画布与题卡分栏清楚，控件和题卡可读，无遮挡或横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "file/area-builder/game/level-1",
+      "path": "output/playwright/learning-coverage/phet-questions/file-area-builder-game-level-1.png",
+      "group": "file-backed-card",
+      "simulation": "area-builder",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "file/fractions-intro/shape/level-1",
+      "path": "output/playwright/learning-coverage/phet-questions/file-fractions-intro-shape-level-1.png",
+      "group": "file-backed-card",
+      "simulation": "fractions-intro",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "file/fraction-matcher/fractions/level-1",
+      "path": "output/playwright/learning-coverage/phet-questions/file-fraction-matcher-fractions-level-1.png",
+      "group": "file-backed-card",
+      "simulation": "fraction-matcher",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "file/fraction-matcher/mixed-numbers/level-1",
+      "path": "output/playwright/learning-coverage/phet-questions/file-fraction-matcher-mixed-numbers-level-1.png",
+      "group": "file-backed-card",
+      "simulation": "fraction-matcher",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "file/balancing-act/game/level-1",
+      "path": "output/playwright/learning-coverage/phet-questions/file-balancing-act-game-level-1.png",
+      "group": "file-backed-card",
+      "simulation": "balancing-act",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "标题/题意、三步提示、解答步骤与常见错误均可读；截图内未见数学符号、数字或卡片边界裁切，也未见横向溢出。",
+      "actuallyViewed": true,
+      "viewDetail": "original"
+    },
+    {
+      "id": "rereview/fractions-intro/shape/level-3",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-3-rereview.png",
+      "group": "targeted-rereview",
+      "simulation": "fractions-intro",
+      "configuration": "level-3",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "完整卡可见。题意列出4/4、2/6、2/3及可用材料；步骤分别以1/1、1/3、1/2+1/6实现，算式与目标相符。三条提示、全部常见错误及末行均完整可读。",
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "replacesId": "fractions-intro/shape/level-3",
+      "replacesPath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-3.png",
+      "nativeValues": [
+        {
+          "numerator": 4,
+          "denominator": 4
+        },
+        {
+          "numerator": 2,
+          "denominator": 6
+        },
+        {
+          "numerator": 2,
+          "denominator": 3
+        }
+      ],
+      "family": "shape-BAR",
+      "fingerprint": "6992161f",
+      "imageSha256": "8a7991d982aeef7e7fa713932c8c9bca8b4bb3be4845fce8a1ead4f5e30edc4f",
+      "originalImageSha256": "dd8cbfeb29e470f4ef7270cb31b79b62ddba26ee96981a29179d44d94c6459e7",
+      "visualReview": {
+        "titleVisible": true,
+        "intentFirstLineVisible": true,
+        "allFieldsInRail": true,
+        "wholePanelVisible": true,
+        "lastMistakeLineVisible": true,
+        "lastMistakeHit": "LI",
+        "beforeScrollTop": 0,
+        "afterScrollTop": 0,
+        "screenshotClipMethod": "page screenshot with an explicit clip; no implicit element scrolling",
+        "browserCheckPassed": true
+      }
+    },
+    {
+      "id": "rereview/fractions-intro/shape/level-4",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-4-rereview.png",
+      "group": "targeted-rereview",
+      "simulation": "fractions-intro",
+      "configuration": "level-4",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "完整卡可见。三个1/2目标对应1/2、1/3+1/6、1/3+1/6；题意、三提示、完整步骤和全部常见错误均可读至卡片底边。",
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "replacesId": "fractions-intro/shape/level-4",
+      "replacesPath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-4.png",
+      "nativeValues": [
+        {
+          "numerator": 1,
+          "denominator": 2
+        },
+        {
+          "numerator": 1,
+          "denominator": 2
+        },
+        {
+          "numerator": 1,
+          "denominator": 2
+        }
+      ],
+      "family": "shape-PIE",
+      "fingerprint": "f2a787fd",
+      "imageSha256": "9b868a982223a3b0bd8e81f4b201288eb0e64b072ec8c27ede3deaaa286f8be6",
+      "originalImageSha256": "b98879cd10e1c02aaf9864f3d69f5920c797e4e34ce6c4077454283260bd867f",
+      "visualReview": {
+        "titleVisible": true,
+        "intentFirstLineVisible": true,
+        "allFieldsInRail": true,
+        "wholePanelVisible": true,
+        "lastMistakeLineVisible": true,
+        "lastMistakeHit": "LI",
+        "beforeScrollTop": 0,
+        "afterScrollTop": 0,
+        "screenshotClipMethod": "page screenshot with an explicit clip; no implicit element scrolling",
+        "browserCheckPassed": true
+      }
+    },
+    {
+      "id": "rereview/fractions-intro/shape/level-7",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-7-rereview.png",
+      "group": "targeted-rereview",
+      "simulation": "fractions-intro",
+      "configuration": "level-7",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "完整卡可见。2/3、2/3、1/2、1/2目标与1/2+1/6、1/4+1/4+1/6、三块1/6、四块1/8的步骤相符；全部字段完整可读。",
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "replacesId": "fractions-intro/shape/level-7",
+      "replacesPath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-7.png",
+      "nativeValues": [
+        {
+          "numerator": 2,
+          "denominator": 3
+        },
+        {
+          "numerator": 2,
+          "denominator": 3
+        },
+        {
+          "numerator": 1,
+          "denominator": 2
+        },
+        {
+          "numerator": 1,
+          "denominator": 2
+        }
+      ],
+      "family": "shape-PIE",
+      "fingerprint": "e44bef03",
+      "imageSha256": "562630fd42da7ed2150a836eed9c283175820ab447dbcf11c4940495472a1446",
+      "originalImageSha256": "0d7434d6a6d974d41d04107f01ec79e1859adc94966551132a852c7bca93c574",
+      "visualReview": {
+        "titleVisible": true,
+        "intentFirstLineVisible": true,
+        "allFieldsInRail": true,
+        "wholePanelVisible": true,
+        "lastMistakeLineVisible": true,
+        "lastMistakeHit": "LI",
+        "beforeScrollTop": 0,
+        "afterScrollTop": 0,
+        "screenshotClipMethod": "page screenshot with an explicit clip; no implicit element scrolling",
+        "browserCheckPassed": true
+      }
+    },
+    {
+      "id": "rereview/fraction-matcher/fractions/level-2",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-2-rereview.png",
+      "group": "targeted-rereview",
+      "simulation": "fraction-matcher",
+      "configuration": "level-2",
+      "status": "pass",
+      "findingCode": null,
+      "observation": "完整卡可见。十二张卡的图形/数字分数描述与等值配对步骤清楚，分数乘法核对可读，三条常见错误和卡片底部完整呈现。",
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "replacesId": "fraction-matcher/fractions/level-2",
+      "replacesPath": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-2.png",
+      "nativeValues": [
+        {
+          "numerator": 2,
+          "denominator": 3
+        },
+        {
+          "numerator": 1,
+          "denominator": 2
+        },
+        {
+          "numerator": 2,
+          "denominator": 4
+        },
+        {
+          "numerator": 2,
+          "denominator": 4
+        },
+        {
+          "numerator": 2,
+          "denominator": 6
+        },
+        {
+          "numerator": 1,
+          "denominator": 3
+        },
+        {
+          "numerator": 1,
+          "denominator": 2
+        },
+        {
+          "numerator": 2,
+          "denominator": 6
+        },
+        {
+          "numerator": 3,
+          "denominator": 4
+        },
+        {
+          "numerator": 1,
+          "denominator": 3
+        },
+        {
+          "numerator": 2,
+          "denominator": 3
+        },
+        {
+          "numerator": 3,
+          "denominator": 4
+        }
+      ],
+      "family": "fractions",
+      "fingerprint": "c7780506",
+      "imageSha256": "5ea488cf69e4eb2902c6cc219b8b80b6582355f6c4daf0cc6697a1ac0b432f0e",
+      "originalImageSha256": "cecd5afed9e68af3981f2bb9cad90ee00929c94e2527a1c671cf4caef1ee1a05",
+      "visualReview": {
+        "titleVisible": true,
+        "intentFirstLineVisible": true,
+        "allFieldsInRail": true,
+        "wholePanelVisible": true,
+        "lastMistakeLineVisible": true,
+        "lastMistakeHit": "LI",
+        "beforeScrollTop": 0,
+        "afterScrollTop": 0,
+        "screenshotClipMethod": "page screenshot with an explicit clip; no implicit element scrolling",
+        "browserCheckPassed": true
+      }
+    },
+    {
+      "id": "rereview/family/fractions-intro/shape-PIE",
+      "path": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-shape-PIE-rereview.png",
+      "group": "targeted-rereview",
+      "simulation": "fractions-intro",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "完整卡可见。圆形分数题意为1/3、1/2、2/2，步骤分别用1/3、1/2、1/1表示；三提示、完整解答及全部常见错误均可读。",
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "replacesId": "family/fractions-intro/shape-PIE",
+      "replacesPath": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-shape-PIE.png",
+      "nativeValues": [
+        {
+          "numerator": 1,
+          "denominator": 3
+        },
+        {
+          "numerator": 1,
+          "denominator": 2
+        },
+        {
+          "numerator": 2,
+          "denominator": 2
+        }
+      ],
+      "family": "shape-PIE",
+      "fingerprint": "75018edc",
+      "imageSha256": "608c539fbd672343648c97608d7e0a4e815d07f71a0f4cbe558157a12a511c8e",
+      "originalImageSha256": "d9920552ed7e3552318524d3bae995642b9937e4081239d0c607f36425444714",
+      "visualReview": {
+        "titleVisible": true,
+        "intentFirstLineVisible": true,
+        "allFieldsInRail": true,
+        "wholePanelVisible": true,
+        "lastMistakeLineVisible": true,
+        "lastMistakeHit": "LI",
+        "beforeScrollTop": 0,
+        "afterScrollTop": 0,
+        "screenshotClipMethod": "page screenshot with an explicit clip; no implicit element scrolling",
+        "browserCheckPassed": true
+      }
+    },
+    {
+      "id": "rereview/family/fractions-intro/number",
+      "path": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-number-rereview.png",
+      "group": "targeted-rereview",
+      "simulation": "fractions-intro",
+      "configuration": null,
+      "status": "pass",
+      "findingCode": null,
+      "observation": "完整卡可见。目标1/3、2/3、1/2与分子/分母卡及等值核对步骤相符；三提示、完整解答、全部常见错误及末行均可读。",
+      "actuallyViewed": true,
+      "viewDetail": "original",
+      "replacesId": "family/fractions-intro/number",
+      "replacesPath": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-number.png",
+      "nativeValues": [
+        {
+          "numerator": 1,
+          "denominator": 3
+        },
+        {
+          "numerator": 2,
+          "denominator": 3
+        },
+        {
+          "numerator": 1,
+          "denominator": 2
+        }
+      ],
+      "family": "number",
+      "fingerprint": "12d6cb54",
+      "imageSha256": "cd66b20645353f087c5e9ac51a142d32d2514d0451baf014862d28f15acc6146",
+      "originalImageSha256": "f4014c575a63e7aef05b8bfbe7d2222b20db0230005966072c2c81fb7cdfacb9",
+      "visualReview": {
+        "titleVisible": true,
+        "intentFirstLineVisible": true,
+        "allFieldsInRail": true,
+        "wholePanelVisible": true,
+        "lastMistakeLineVisible": true,
+        "lastMistakeHit": "LI",
+        "beforeScrollTop": 0,
+        "afterScrollTop": 0,
+        "screenshotClipMethod": "page screenshot with an explicit clip; no implicit element scrolling",
+        "browserCheckPassed": true
+      }
+    }
+  ],
+  "firstRoundSummary": {
+    "uniqueScreenshotPaths": 69,
+    "actuallyViewedWithOriginalDetail": 69,
+    "configurationCards": 46,
+    "familyRepresentativeCards": 15,
+    "fileBackedCards": 5,
+    "responsiveViewports": 3,
+    "pass": 62,
+    "passWithNote": 1,
+    "findings": 6
+  }
+}

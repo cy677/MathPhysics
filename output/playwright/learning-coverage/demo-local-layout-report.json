@@ -1,0 +1,500 @@
+{
+  "passed": true,
+  "phet": [],
+  "hostMobile": [],
+  "matterViews": [
+    {
+      "id": "matter-ragdoll",
+      "physicsUnchangedByCamera": true,
+      "resetReproducible": true,
+      "targetFullyInside": true,
+      "originalView": {
+        "mode": "fit",
+        "displayBounds": {
+          "min": {
+            "x": -89.33333333333331,
+            "y": -134
+          },
+          "max": {
+            "x": 889.3333333333333,
+            "y": 600
+          }
+        },
+        "physicsBounds": {
+          "min": {
+            "x": 0,
+            "y": 0
+          },
+          "max": {
+            "x": 800,
+            "y": 600
+          }
+        }
+      },
+      "fit": {
+        "view": {
+          "mode": "fit",
+          "displayBounds": {
+            "min": {
+              "x": 0,
+              "y": 0
+            },
+            "max": {
+              "x": 800,
+              "y": 600
+            }
+          },
+          "physicsBounds": {
+            "min": {
+              "x": 0,
+              "y": 0
+            },
+            "max": {
+              "x": 800,
+              "y": 600
+            }
+          }
+        },
+        "inside": true,
+        "elapsed": 1500.0000000000011
+      },
+      "trajectories": [
+        {
+          "mode": "original",
+          "digest": "5c37f1c7e4a8a2373ce6d845d9d1dc22e3b3a9ca6833c19996f6af050678e4e2",
+          "behavior": {
+            "loops": 1,
+            "initialWidth": 750,
+            "recycledAt": {
+              "x": 650,
+              "y": 1125
+            },
+            "width": 750.5,
+            "elapsed": 2499.9999999999995,
+            "physicsBounds": {
+              "min": {
+                "x": 0,
+                "y": 0
+              },
+              "max": {
+                "x": 800,
+                "y": 600
+              }
+            }
+          }
+        },
+        {
+          "mode": "fit",
+          "digest": "5c37f1c7e4a8a2373ce6d845d9d1dc22e3b3a9ca6833c19996f6af050678e4e2",
+          "behavior": {
+            "loops": 1,
+            "initialWidth": 750,
+            "recycledAt": {
+              "x": 650,
+              "y": 1125
+            },
+            "width": 750.5,
+            "elapsed": 2499.9999999999995,
+            "physicsBounds": {
+              "min": {
+                "x": 0,
+                "y": 0
+              },
+              "max": {
+                "x": 800,
+                "y": 600
+              }
+            }
+          }
+        }
+      ],
+      "screenshots": [
+        "output/playwright/learning-coverage/matter-ragdoll-desktop.png",
+        "output/playwright/learning-coverage/matter-ragdoll-mobile.png"
+      ]
+    },
+    {
+      "id": "matter-compositeManipulation",
+      "physicsUnchangedByCamera": true,
+      "resetReproducible": true,
+      "targetFullyInside": true,
+      "originalView": {
+        "mode": "fit",
+        "displayBounds": {
+          "min": {
+            "x": 0,
+            "y": 0
+          },
+          "max": {
+            "x": 800,
+            "y": 600
+          }
+        },
+        "physicsBounds": {
+          "min": {
+            "x": 0,
+            "y": 0
+          },
+          "max": {
+            "x": 800,
+            "y": 600
+          }
+        }
+      },
+      "fit": {
+        "view": {
+          "mode": "fit",
+          "displayBounds": {
+            "min": {
+              "x": -13.714936504434633,
+              "y": -11.571891954396236
+            },
+            "max": {
+              "x": 801.7142527680937,
+              "y": 600
+            }
+          },
+          "physicsBounds": {
+            "min": {
+              "x": 0,
+              "y": 0
+            },
+            "max": {
+              "x": 800,
+              "y": 600
+            }
+          }
+        },
+        "inside": true,
+        "elapsed": 1500.0000000000011
+      },
+      "trajectories": [
+        {
+          "mode": "original",
+          "digest": "1251c99bbf726785721b3abd5501540d30f95b5fd6cc7cc8c6577fbf31e0bcdd",
+          "behavior": {
+            "loops": 0,
+            "initialWidth": 160,
+            "width": 805.5495966758385,
+            "elapsed": 2499.9999999999995,
+            "physicsBounds": {
+              "min": {
+                "x": 0,
+                "y": 0
+              },
+              "max": {
+                "x": 800,
+                "y": 600
+              }
+            }
+          }
+        },
+        {
+          "mode": "fit",
+          "digest": "1251c99bbf726785721b3abd5501540d30f95b5fd6cc7cc8c6577fbf31e0bcdd",
+          "behavior": {
+            "loops": 0,
+            "initialWidth": 160,
+            "width": 805.5495966758385,
+            "elapsed": 2499.9999999999995,
+            "physicsBounds": {
+              "min": {
+                "x": 0,
+                "y": 0
+              },
+              "max": {
+                "x": 800,
+                "y": 600
+              }
+            }
+          }
+        }
+      ],
+      "screenshots": [
+        "output/playwright/learning-coverage/matter-compositeManipulation-desktop.png",
+        "output/playwright/learning-coverage/matter-compositeManipulation-mobile.png"
+      ]
+    }
+  ],
+  "matterPhases": [
+    {
+      "id": "matter-airFriction",
+      "operateHiddenWhy": true,
+      "explainVisibleWhy": true,
+      "screenshots": [
+        "output/playwright/learning-coverage/matter-airFriction-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-airFriction-explain-mobile.png"
+      ]
+    },
+    {
+      "id": "matter-bridge",
+      "operateHiddenWhy": true,
+      "explainVisibleWhy": true,
+      "screenshots": [
+        "output/playwright/learning-coverage/matter-bridge-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-bridge-explain-mobile.png"
+      ]
+    },
+    {
+      "id": "matter-slingshot",
+      "operateHiddenWhy": true,
+      "explainVisibleWhy": true,
+      "screenshots": [
+        "output/playwright/learning-coverage/matter-slingshot-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-slingshot-explain-mobile.png"
+      ]
+    },
+    {
+      "id": "matter-cloth",
+      "operateHiddenWhy": true,
+      "explainVisibleWhy": true,
+      "screenshots": [
+        "output/playwright/learning-coverage/matter-cloth-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-cloth-explain-mobile.png"
+      ]
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "operateHiddenWhy": true,
+      "explainVisibleWhy": true,
+      "screenshots": [
+        "output/playwright/learning-coverage/matter-collisionFiltering-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-collisionFiltering-explain-mobile.png"
+      ]
+    },
+    {
+      "id": "matter-substep",
+      "operateHiddenWhy": true,
+      "explainVisibleWhy": true,
+      "screenshots": [
+        "output/playwright/learning-coverage/matter-substep-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-substep-explain-mobile.png"
+      ]
+    },
+    {
+      "id": "matter-views",
+      "operateHiddenWhy": true,
+      "explainVisibleWhy": true,
+      "screenshots": [
+        "output/playwright/learning-coverage/matter-views-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-views-explain-mobile.png"
+      ]
+    }
+  ],
+  "legacy": [
+    {
+      "id": "tangram-legacy",
+      "viewport": "desktop",
+      "state": {
+        "canvas": {
+          "x": 0,
+          "y": 125.984375,
+          "width": 1100,
+          "height": 771.46875,
+          "top": 125.984375,
+          "right": 1100,
+          "bottom": 897.453125,
+          "left": 0
+        },
+        "guide": {
+          "x": 1100,
+          "y": 125.984375,
+          "width": 340,
+          "height": 771.46875,
+          "top": 125.984375,
+          "right": 1440,
+          "bottom": 897.453125,
+          "left": 1100
+        },
+        "buffer": {
+          "width": 1100,
+          "height": 771
+        }
+      },
+      "nonOverlapping": true,
+      "realKeyboardMove": true,
+      "screenshot": "output/playwright/learning-coverage/tangram-legacy-desktop.png"
+    },
+    {
+      "id": "tangram-legacy",
+      "viewport": "mobile",
+      "state": {
+        "canvas": {
+          "x": 0,
+          "y": 122.59375,
+          "width": 390,
+          "height": 319.921875,
+          "top": 122.59375,
+          "right": 390,
+          "bottom": 442.515625,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 442.515625,
+          "width": 390,
+          "height": 250.1875,
+          "top": 442.515625,
+          "right": 390,
+          "bottom": 692.703125,
+          "left": 0
+        },
+        "buffer": {
+          "width": 390,
+          "height": 320
+        }
+      },
+      "nonOverlapping": true,
+      "realKeyboardMove": true,
+      "screenshot": "output/playwright/learning-coverage/tangram-legacy-mobile.png"
+    }
+  ],
+  "pointerChecks": [],
+  "screenshots": [
+    {
+      "id": "tangram-legacy",
+      "path": "output/playwright/learning-coverage/tangram-legacy-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "tangram-legacy",
+      "path": "output/playwright/learning-coverage/tangram-legacy-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-ragdoll",
+      "path": "output/playwright/learning-coverage/matter-ragdoll-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-ragdoll",
+      "path": "output/playwright/learning-coverage/matter-ragdoll-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-compositeManipulation",
+      "path": "output/playwright/learning-coverage/matter-compositeManipulation-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-compositeManipulation",
+      "path": "output/playwright/learning-coverage/matter-compositeManipulation-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-airFriction",
+      "path": "output/playwright/learning-coverage/matter-airFriction-operate-mobile.png",
+      "viewport": "mobile",
+      "phase": "operate",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-airFriction",
+      "path": "output/playwright/learning-coverage/matter-airFriction-explain-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-bridge",
+      "path": "output/playwright/learning-coverage/matter-bridge-operate-mobile.png",
+      "viewport": "mobile",
+      "phase": "operate",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-bridge",
+      "path": "output/playwright/learning-coverage/matter-bridge-explain-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-slingshot",
+      "path": "output/playwright/learning-coverage/matter-slingshot-operate-mobile.png",
+      "viewport": "mobile",
+      "phase": "operate",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-slingshot",
+      "path": "output/playwright/learning-coverage/matter-slingshot-explain-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-cloth",
+      "path": "output/playwright/learning-coverage/matter-cloth-operate-mobile.png",
+      "viewport": "mobile",
+      "phase": "operate",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-cloth",
+      "path": "output/playwright/learning-coverage/matter-cloth-explain-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "path": "output/playwright/learning-coverage/matter-collisionFiltering-operate-mobile.png",
+      "viewport": "mobile",
+      "phase": "operate",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "path": "output/playwright/learning-coverage/matter-collisionFiltering-explain-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-substep",
+      "path": "output/playwright/learning-coverage/matter-substep-operate-mobile.png",
+      "viewport": "mobile",
+      "phase": "operate",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-substep",
+      "path": "output/playwright/learning-coverage/matter-substep-explain-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-views",
+      "path": "output/playwright/learning-coverage/matter-views-operate-mobile.png",
+      "viewport": "mobile",
+      "phase": "operate",
+      "capture": "viewport"
+    },
+    {
+      "id": "matter-views",
+      "path": "output/playwright/learning-coverage/matter-views-explain-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "base": "http://127.0.0.1:64313/MathPhysics/",
+  "browserClosed": true,
+  "serverClosed": true
+}

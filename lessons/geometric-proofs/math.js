@@ -1,4 +1,5 @@
 // Mathematical kernels, independent of DOM/rendering. MIT.
+import {geometryQuestionSupport} from './teaching.js';
 export const fmt = x => Number.isInteger(x) ? String(x) : Number(x.toFixed(3)).toString();
 export function normalize(lesson, values = {}) {
   const out = {};
@@ -54,7 +55,8 @@ export function question(lesson,v) {
   const ratio=['triangle-ratio','similarity','volume-scale'].includes(id);
   const target=ratio?(id==='triangle-ratio'?'左侧面积是右侧的几倍？':id==='similarity'?'终点图形的面积是原图形的几倍？':'放大后的体积是原体积的几倍？'):id==='pythagoras'?'求斜边 c 的长度。':id.endsWith('-net')?'求全部外表面的面积。':lesson.group==='solid'?'求完整立体的体积。':'求本题目标图形的面积。';
   const units=ratio?'倍':id==='pythagoras'?'长度单位':lesson.group==='solid'&&!id.endsWith('-net')?'立方单位':'平方单位';
-  return {prompt:'使用当前参数，'+target,answer,units};
+  const q={prompt:'使用当前参数，'+target,answer,units};
+  return {...q,...geometryQuestionSupport(id,v,0,q)};
 }
 export function extensionQuestion(lesson,v) {
   const {a,b,h,r,q,k,theta}=v, id=lesson.id;
@@ -85,7 +87,8 @@ export function extensionQuestion(lesson,v) {
     'volume-scale':()=>({prompt:'每条边扩大k倍后，一个面的面积是原来的几倍？',answer:k*k,units:'倍'})
   };
   if(!table[id]) throw Error('Unknown extension question: '+id);
-  return table[id]();
+  const supportedQuestion=table[id]();
+  return {...supportedQuestion,...geometryQuestionSupport(id,v,1,supportedQuestion)};
 }
 
 export function checkAnswer(text,expected) {

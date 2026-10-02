@@ -29,12 +29,15 @@ python3 scripts/build_primary_math_standalone.py
 
 | 主题 | 内容 |
 |---|---|
-| 几何工坊 | 分数拼图与配对、面积拼图、24个几何证明主题（48种问法）、平面七巧板、分年级图形变换挑战、48题“数与生活” |
+| 数与生活 | 新加坡小学1—6年级知识介绍、模型和基础／巩固／拔高练习 |
+| 几何工坊 | 分数拼图与配对、面积拼图、24个几何证明主题（48种问法）、平面七巧板、分年级图形变换挑战 |
 | 动力车间 | 弹弓、吊桥、小车、牛顿摆、摩擦、碰撞、平衡与电路、空间飞行课堂 |
 | 箭头港口 | 向量相加、旋转、缩放、线性变换网格 |
 | 微观天地 | 固体、液体与气体的粒子变化，原子与分子搭建 |
 
-Matter.js 的全部 **48个物理演示**合并为一个「物理验收」大模块，首页显示一个入口。模块内按材料与运动（6）、机械与经典实验（8）、形状与堆叠（12）、柔性与约束（5）、开发与呈现（17）选择演示。全部上游源码、资源和原有演示入口仍保留；这些演示不是48个教学关卡。几何证明课堂内有24个主题和48种问法、JSXGraph课堂内有6个实验与36个挑战目标、平面七巧板保留方形热身和原内置创意轮廓，并为每个轮廓提供3档挑战，共6张挑战卡。
+Matter.js 的全部 **48个物理演示**合并为一个「物理验收」大模块，首页显示一个入口。模块内按材料与运动（6）、机械与经典实验（8）、形状与堆叠（12）、柔性与约束（5）、开发与呈现（17）选择演示。每个场景有独立的预测、操作、解释任务，初始暂停，支持继续、单帧、30帧、专用操作和可复现重置。全部上游源码、资源和原有演示入口仍保留。几何证明课堂内有24个主题和48种问法、JSXGraph课堂内有6个实验与36个挑战目标、平面七巧板保留方形热身和原内置创意轮廓，并为每个轮廓提供3档挑战，共6张挑战卡。
+
+演示分别说明“观察什么、怎么操作、为什么这样、生活中的例子”，先用直观语言解释，再提供可展开的高年级原理。PhET引导跟随当前内部页面；图形、几何、航天与七巧板的题目讲解使用当前坐标和参数。逐项功能记录、截图和视觉评审见 [全量覆盖与验收](docs/learning-coverage/README.md)。
 
 目录中的所有活动均可直接进入，包括「物理验收」的48个演示、6个分年级图形实验和「数与生活」。首页保留主题、年级与搜索筛选，已移除老师 / 家长工作台、开放配置和“只看可玩的活动”。旧版保存的关闭名单不再限制访问，原有探索记录和课堂存档继续保留。6个分年级入口与“图形会变魔术”共用同一套实验。
 
@@ -46,23 +49,19 @@ Matter.js 的全部 **48个物理演示**合并为一个「物理验收」大模
 
 原上游内容没有删减：Area Builder 的6个难度和随机出题逻辑保留；其他 PhET 原导航保留；原三维 Tangram 也保留。平面七巧板另提供无需 WebGL 的入口。
 
-## 数与生活：48道原创数学题
+## 数与生活：知识介绍与分层练习
 
-新增覆盖推荐1—6年级的48题，每个推荐年级8题，包含数与运算、分数、小数、时间、单位、统计和条形图建模。支持人教、苏教、新加坡参考年级筛选；每题提供可调整模型、输入检查、提示、解析与反思问题。课堂在浏览器中保存完成记录，不保存或上传学生输入的答案。
+“数与生活”统一原模型课堂和中文练习，按新加坡小学一年级至六年级提供49个知识主题、中文讲解与英文名称、先备知识和生活例子。先理解知识，再调整对应模型，最后生成基础、巩固或拔高练习。五、六年级的官方Foundation范围另列于家长说明；学习层次“基础”不等于Foundation课程。
 
-在首页点击“数与生活”即可进入，也可通过静态服务直接访问 `lessons/primary-math/index.html`。小屏幕可在画板内横向滑动查看完整模型。
+首页只保留“数与生活”入口。原48个模型挑战可通过每个年级的“生活拓展”访问；原48种生成题型保留，并增加29种课程题型。新加坡课程模式限制年级范围，旧练习仍可按原设置恢复。每类有限题池明确提示题量上限。
 
-年级映射为编写者的选题建议，不是2026新版教材逐册认证。官方新版全文抓取及版本差异的限制、来源、去重范围见 [课程依据与去重记录](docs/primary-math-curriculum.md)。本批避开已有面积、体积、对称、向量等固定题目，不声称穷举上游随机出题的全部状态。
+每题与知识点例子都有题意、3步递进提示、分步解题过程和常见错误；生成题的讲解随本题实际参数变化。48个生活模型分别说明观察目标、真实操作、原理和生活用法。提示每次只展开一步，查看过程仍按原规则计入“查看答案”。
 
-新增模块的单元检查使用 `npm run test:primary`，独立离线构建使用 `npm run build:primary`，真实HTTP、file://和iframe检查使用 `npm run test:primary:browser`。当前融合范围与验收入口见 [融合方案](docs/curriculum-integration/plan.md) 和 [实施交接](docs/curriculum-integration/integration.md)。
+通过静态服务访问`lessons/primary-math/index.html`；旧的`lessons/question-bank/index.html`及旧活动链接自动进入统一课堂。练习继续使用`mathphysics.question-bank.v1`存储，模型继续使用原进度键。生成或导入练习会开始新一轮作答；切换学习主题不会覆盖上次练习。支持提示、解析、打印以及题目和练习设置的导入导出。
 
-## 中文题库工坊：48种可重复生成的练习
+[中英文检索、年级分类与覆盖范围](docs/singapore-primary-curriculum.md)记录依据、核验限制、各年级分层目标和未覆盖的细项。运行`npm run test:curriculum`检查算法与兼容，`npm run test:curriculum:browser`检查实际课堂、旧入口和离线版；`npm run build:primary`构建统一的单文件课堂。原引擎命令行说明见[练习引擎文档](docs/question-bank.md)。
 
-首页新增“中文题库”主题与“中文题库工坊”入口，沿用科学小岛的奶油白、森林绿和暖黄色。提供48个原创参数化题型、9类知识点和3档难度，支持生成1—500道不重复题目、自动判题、分步提示、解题过程、打印与练习导入导出。练习名称与题型、难度、数量一致时，可以复现同一组练习；难度不对应教材年级。
-
-题库可通过首页直接打开，也可访问 `lessons/question-bank/index.html`。当前练习和作答自动保存在独立的 `mathphysics.question-bank.v1` 键中，不覆盖其他课堂进度；“清除记录”页面也包含这份记录。生成新练习或恢复练习设置时会开始新一轮作答。
-
-运行 `npm run test:questions` 检查题型算法与接入，`npm run test:questions:browser` 检查真实浏览器交互。命令行生成与题型来源见 [中文题库说明](docs/question-bank.md)。
+`npm run test:questions:learning`检查48个固定题、77种唯一模板和49知识点，覆盖清单见 [题目逐项结果](docs/learning-coverage/questions.json)。`npm run test:questions:learning:browser`逐项保存教学展开后的截图；`npm run test:questions:failure`实测断言失败的退出码与服务清理。题库 CI 和本地使用同一统一页面测试，日志管道保留失败状态。
 
 ## PhET 内部视觉更新
 
@@ -73,6 +72,8 @@ Matter.js 的全部 **48个物理演示**合并为一个「物理验收」大模
 2026-10-01 接入分数入门、分数配对、平衡挑战、直流电路、物态变化和分子搭建六个完整模拟。首页使用独立图示、中文操作提示和年级筛选，内部画布、面板、按钮与导航沿用现有主题。分数填色、原子种类和电流等有学习含义的颜色保留。分数活动在“几何工坊”，平衡与电路在“动力车间”，物态与分子在“微观天地”。六项资源已经随分支提供，正常启动无需再次下载。
 
 新增资源清单和固定 SHA-256 位于 `modules/phet/manifest.json`、`modules/phet/lock.json`。`npm run build:phet` 先校验完整资源并登记活动，再生成可逆的主题版本；`npm run test:phet:browser` 检查六个新入口、单文件运行、旧记录保留，以及10个模块的原版/主题版模型对照。融合说明与视觉验收见 [新增 PhET 模块](docs/phet-expansion/integration.md)。
+
+10 个 PhET 模拟的 28 个内部页面均有独立的观察、操作、解释与生活例子。面积游戏、分数搭建、分数配对和平衡挑战的 46 个关卡配置，以及分子搭建的两个收集页面，另提供当前原生目标的题意、递进提示、解题过程和常见错误；数值、图形分份与收集进度变化时讲解同步更新。教学读取不调用原生随机生成器或改写科学模型。逐项功能与视觉结果见 [全量覆盖清单](docs/learning-coverage/README.md)。
 
 随项目提供的资源可直接运行。重新构建视觉版本仅需 Python：`python3 scripts/build_phet_theme.py`；开发环境也可统一使用 `npm run build:phet`。重新切分插画素材才需要 Sharp，可通过 `PHET_SHARP_PATH` 指定现有安装。执行 `npm test` 检查原文件哈希、可逆修改记录及现有活动；打开 `http://127.0.0.1:8000/tests/phet-runtime.html` 点击“运行检查”，可重跑原版和新版的数值对照。
 
@@ -106,8 +107,8 @@ config/presentation.json          首页排序、儿童文案和操作提示
 config/defaults.json              旧版推荐配置（首页不再使用）
 config/libraries-lock.json        JSXGraph校验清单
 lessons/geometric-proofs/         24个主题与48种问法
-lessons/primary-math/             48题数与生活
-lessons/question-bank/            48种中文参数化练习
+lessons/primary-math/             数与生活知识、课程分类与统一课堂
+lessons/question-bank/            练习引擎与旧入口兼容
 lessons/spaceflight/              太空飞行课堂
 lessons/jsxgraph-playground/      6个基于JSXGraph编写的实验
 lessons/tangram-flat/             原Tangram内核的SVG适配（GPL）
@@ -138,4 +139,4 @@ npm run package
 
 [几何题集说明](docs/geometry-proofs.md) · [几何分年级与扩题依据](docs/geometry-grade-expansion.md) · [课程依据与去重记录](docs/primary-math-curriculum.md) · [航天课堂说明](docs/spaceflight.md) · [v0.4修改说明](docs/v0.4-changes.md)
 
-本次全前端统一的范围与维护方式见 [实施方案](docs/style-unification/plan.md) 和 [产品维护交接](docs/style-unification/implementation.md)。
+当前维护命令见 [维护说明](docs/maintenance.md)，逐项功能与视觉结果见 [全量覆盖清单](docs/learning-coverage/README.md)。2026-09-30 的风格统一计划和交接保留在 [历史实施方案](docs/style-unification/plan.md) 与 [历史实现交接](docs/style-unification/implementation.md)。

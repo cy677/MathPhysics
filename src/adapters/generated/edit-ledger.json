@@ -3,7 +3,7 @@
   "source": "vendor/tangram/js/scene.js",
   "upstreamSHA256": "876278a5899ba0abe7ce949476d6020df6bd54259acbab2ef72a70ea9f6c7c4b",
   "output": "src/adapters/generated/tangram-scene.js",
-  "outputSHA256": "fb4ed907308f086e9fbeae5d4d5f5c815acc04ff41913f2ee646132fdee25bca",
+  "outputSHA256": "c69012e3df3168cc7e853aba9e2eb8c1af912073a36c5d21c9946f520df9c0f0",
   "edits": [
     {
       "kind": "resource-path",
@@ -30,6 +30,14 @@
       ]
     },
     {
+      "kind": "host-controls",
+      "old": "init();\nanimate();",
+      "new": "init();\nanimate();\n// Host controls use the existing puzzle placement/collision rules.\nwindow.__mpTangramControls = {\n  select(index) {\n    var tan = puzzle.actualTangram.tans[index];\n    if (!tan) return null;\n    var previous = puzzle.state;\n    if (puzzle.state === Puzzle.STATE_REVIEW) puzzle.showGame();\n    if (!tan.active) puzzle.selectTan(tan);\n    puzzle.selectedTan = tan;\n    if (previous !== puzzle.state) handleStateChanged(previous);\n    return tan;\n  },\n  move(index, dx, dy) {\n    var tan = this.select(index); if (!tan) return;\n    var position = tan.position.clone(); position.x += dx; position.y += dy;\n    if (puzzle.actualTangram.placeTan(tan, position, tan.rotation)) {\n      tan.active = true; puzzle.actualTangram.snapTan(tan);\n    }\n    syncTanTransforms(puzzle.actualTangram); updateGui(); renderFrame();\n  },\n  turn(index, degrees) {\n    var tan = this.select(index); if (!tan) return;\n    var previous = tan.rotation; tan.transform(tan.position, previous + degrees);\n    if (puzzle.actualTangram.hasCollisions(tan)) tan.transform(tan.position, previous);\n    syncTanTransforms(puzzle.actualTangram); updateGui(); renderFrame();\n  },\n  snapshot() { return puzzle.actualTangram.tans.map(t => ({ x:t.position.x, y:t.position.y, rotation:t.rotation, active:t.active })); }\n};",
+      "positions": [
+        1695
+      ]
+    },
+    {
       "kind": "presentation",
       "old": "const SERVER_URL",
       "new": "const themeColor = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();\n\nconst SERVER_URL",
@@ -42,7 +50,7 @@
       "old": "new THREE.Color(0.5, 0.5, 0.5)",
       "new": "new THREE.Color(themeColor(\"--mp-page\"))",
       "positions": [
-        1978
+        3259
       ]
     },
     {
@@ -58,7 +66,7 @@
       "old": "{ color: new THREE.Color(backgroundColor.r / 255.0,\n\t\t\tbackgroundColor.g / 255.0, backgroundColor.b / 255.0) }",
       "new": "{ color: urlEncodedSnapshot ? new THREE.Color(backgroundColor.r / 255.0,\n\t\t\tbackgroundColor.g / 255.0, backgroundColor.b / 255.0) : new THREE.Color(themeColor(\"--mp-surface\")) }",
       "positions": [
-        4125
+        5406
       ]
     },
     {
@@ -66,7 +74,7 @@
       "old": "return window.innerWidth / window.innerHeight;",
       "new": "var viewport = document.getElementById(\"container\");\n\treturn viewport.clientWidth / viewport.clientHeight;",
       "positions": [
-        6364
+        7645
       ]
     },
     {
@@ -74,8 +82,8 @@
       "old": "renderer.setSize(window.innerWidth, window.innerHeight);",
       "new": "renderer.setSize(container.clientWidth, container.clientHeight);",
       "positions": [
-        4730,
-        6853
+        6011,
+        8134
       ]
     },
     {
@@ -83,7 +91,7 @@
       "old": "var element = document.createElement(\"button\");",
       "new": "var element = document.createElement(\"button\");\n\tvar labels = { assemble: \"开始拼图\", review: \"看看目标\", more: \"更多图形\", share: \"分享拼图\", next: \"下一幅\", prev: \"上一幅\", yes: \"选这个\", no: \"返回\" };\n\telement.dataset.action = background;\n\telement.textContent = labels[background];\n\telement.setAttribute(\"aria-label\", labels[background]);\n\telement.title = labels[background];",
       "positions": [
-        8371
+        9652
       ]
     },
     {
@@ -91,7 +99,7 @@
       "old": "button.element.style = \"position: fixed;\"",
       "new": "button.element.style = \"position: absolute;\"",
       "positions": [
-        10187
+        11468
       ]
     },
     {
@@ -99,10 +107,10 @@
       "old": "+ \"px; border: none; background: url(res/\"\n\t\t\t\t+ button.background + \".svg) no-repeat;\";",
       "new": "+ \"px;\";",
       "positions": [
-        10322
+        11603
       ]
     }
   ],
   "snapshotSourceSHA256": "67c0af5929f0fa4e3da993c8d949675186f2f03b9398f0c37bf4069e3c16b5a1",
-  "entrySHA256": "a1cb94da4b24a3c45839b26611a6be2d0e7b8ac2133d3af43987c9dc73e9a760"
+  "entrySHA256": "920352f8a9b07f208fd8ec5badfbc10a9b349af42c823b177cbee4499725e221"
 }

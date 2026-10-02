@@ -13,7 +13,7 @@ html=(folder/'index.html').read_text(encoding='utf-8')
 html=inline_shared_theme(html)
 css=(folder/'styles.css').read_text(encoding='utf-8')
 parts=[]
-for name in ['catalog.js','math.js','draw.js','app.js']:
+for name in ['teaching.js','catalog.js','math.js','draw.js','app.js']:
     source=(folder/name).read_text(encoding='utf-8')
     source=re.sub(r'^import .*?;\s*$', '', source, flags=re.M)
     source=re.sub(r'^export ', '', source, flags=re.M)

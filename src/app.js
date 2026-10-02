@@ -3,10 +3,13 @@ import {isReady} from './readiness.js';
 import {isLocalActivityEntry,displayActivities} from './catalog.js';
 import {resolveActivityEntry} from './activity-entry.js';
 import {MATTER_MODULE_ID} from './matter-catalog.js';
+import './activity-learning.js';
+import './phet/question-learning.js';
+import './phet/molecule-question-learning.js';
 const $=id=>document.getElementById(id);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const storage={getItem:key=>window.localStorage.getItem(key),setItem:(key,value)=>window.localStorage.setItem(key,value)};
-const zones={geometry:'几何工坊',physics:'动力车间',vectors:'箭头港口',science:'微观天地',numbers:'中文题库'};
+const zones={geometry:'几何工坊',physics:'动力车间',vectors:'箭头港口',science:'微观天地',numbers:'数与生活'};
 const kinds={game:'趣味挑战',simulation:'互动实验',puzzle:'拼图探索',example:'物理游乐场',collection:'分类演示',proof:'几何证明题集',mission:'太空任务',construction:'拖动几何',practice:'数学练习'};
 const art={geometry:'△ ◇ ○',physics:'● ↗ ▰',vectors:'↗ ＋ →',science:'● ○ ●',numbers:'＋ − × ÷'};
 const phetTips={
@@ -15,7 +18,8 @@ const phetTips={
   'area-builder':'把方块拖到方格纸上，拼出自己的图形。比较面积和周长；进入“游戏”后，从六种难度中选一个挑战。',
   'vector-addition':'把箭头拖到坐标图中，拖动箭头尖改变方向和长度。打开“合向量”或分量，看看几个方向怎样合起来。'
 };
-let inventory,state,ids,activities,zone='all',grade='all',query='',current=null,frame=null,generation=0,timer,toastTimer;
+let inventory,state,ids,activities,zone='all',grade='all',query='',current=null,frame=null,generation=0,timer,toastTimer,learningPanel=null,questionPanel=null;
+const learningStyle=document.createElement('link');learningStyle.rel='stylesheet';learningStyle.href='src/learning.css';document.head.append(learningStyle);
 function toast(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4000);}
 function persist(){if(!saveState(storage,state))toast('浏览器未能保存设置，本次更改只在当前页面有效。');}
 function gradesLabel(a){const first=Math.min(...a.grades),last=Math.max(...a.grades);return a.grades.length===6?'全年级':first===last?first+'年级':first+'—'+last+'年级';}
@@ -90,6 +94,7 @@ function markReady(token){
   state.visited[current.id]=Date.now();persist();draw();
 }
 async function openActivity(id){
+  if(id==='question-bank')id='primary-math';
   let example=null;
   if(id.startsWith(MATTER_MODULE_ID+'/'))example=id.slice(MATTER_MODULE_ID.length+1);
   else if(inventory.activities.some(a=>a.id===id&&a.adapter==='matter'))example=id.slice(7);
@@ -100,6 +105,9 @@ async function openActivity(id){
   $('player-subtitle').textContent=zones[a.zone]+' / '+kinds[a.kind]+' / '+gradesLabel(a);
   $('player-tip').hidden=false;$('player-help').setAttribute('aria-expanded','true');
   $('player-tip').textContent=(a.adapter==='phet'?phetTips[a.id]:null)||a.playHint||'试着拖动物体，改变条件，看看会发生什么。';
+  learningPanel?.destroy();learningPanel=null;questionPanel?.dispose();questionPanel=null;window.__mpQuestionPanel=null;
+  const activityGuide=a.adapter==='phet'?window.MathPhysicsLearning.PHET_GUIDES[a.id]:a.adapter==='tangram'?window.MathPhysicsLearning.TANGRAM_GUIDE:null;
+  if(activityGuide){$('player-tip').textContent='';if(a.adapter==='phet'){questionPanel=window.MathPhysicsPhetQuestions.createPanel();window.__mpQuestionPanel=questionPanel;$('player-tip').append(questionPanel.element);}learningPanel=window.MathPhysicsLearning.createPanel(activityGuide);learningPanel.element.classList.add('mp-learning-host');learningPanel.element.open=true;$('player-tip').append(learningPanel.element);}
   $('loading').textContent='正在准备活动…';$('loading').className='';$('loading').hidden=false;setAttribution(a);
   history.replaceState(null,'','#activity/'+encodeURIComponent(a.id)+(example?'/'+encodeURIComponent(example):''));$('player-back').focus();
   try{
@@ -113,7 +121,7 @@ async function openActivity(id){
     $('stage').append(f);timer=setTimeout(check,150);
   }catch(error){if(token!==generation)return;$('loading').textContent=error.message;$('loading').className='error';}
 }
-function closeActivity(){++generation;clearTimeout(timer);frame?.remove();frame=null;current=null;$('player').hidden=true;document.body.classList.remove('playing');history.replaceState(null,'','#library');$('library').scrollIntoView();$('search').focus({preventScroll:true});}
+function closeActivity(){++generation;clearTimeout(timer);frame?.remove();frame=null;current=null;learningPanel?.destroy();learningPanel=null;questionPanel?.dispose();questionPanel=null;window.__mpQuestionPanel=null;$('player-tip').replaceChildren();$('player').hidden=true;document.body.classList.remove('playing');history.replaceState(null,'','#library');$('library').scrollIntoView();$('search').focus({preventScroll:true});}
 function wire(){
   document.addEventListener('click',event=>{
     const launch=event.target.closest('[data-launch]');if(launch){openActivity(launch.dataset.launch);return;}
@@ -127,7 +135,7 @@ function wire(){
   $('player-reset').onclick=()=>{if(current?.adapter==='matter-library'&&frame)frame.contentWindow.postMessage({type:'mp-reset'},location.origin);else if(current)openActivity(current.id);};
   $('player-help').onclick=()=>{$('player-tip').hidden=!$('player-tip').hidden;$('player-help').setAttribute('aria-expanded',String(!$('player-tip').hidden));};
   $('player-fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if($('player').requestFullscreen)await $('player').requestFullscreen();else toast('当前浏览器不支持网页全屏，请横屏查看。');}catch{toast('当前浏览器未允许网页全屏，请横屏查看。');}};
-  window.addEventListener('message',e=>{if(!frame||e.source!==frame.contentWindow||e.origin!==location.origin)return;if(e.data?.type==='mp-close'){closeActivity();return;}if(e.data?.type==='mp-ready'){
+  window.addEventListener('message',e=>{if(!frame||e.source!==frame.contentWindow||e.origin!==location.origin)return;if(e.data?.type==='mp-question-learning'&&questionPanel&&current?.adapter==='phet'&&e.data.id===current.id){questionPanel.update(e.data.question);return;}if(e.data?.type==='mp-learning'&&learningPanel&&current?.adapter==='phet'&&e.data.id===current.id){const guide=window.MathPhysicsLearning.PHET_GUIDES[current.id],next=e.data.screen===null?guide:guide.screens[e.data.screen];if(next)learningPanel.update(next);return;}if(e.data?.type==='mp-close'){closeActivity();return;}if(e.data?.type==='mp-ready'){
     if(current?.adapter==='matter-library'){
       const scene=inventory.activities.find(a=>a.id===e.data.id&&a.adapter==='matter');
       if(scene){state.visited[scene.id]=Date.now();history.replaceState(null,'','#activity/'+MATTER_MODULE_ID+'/'+encodeURIComponent(scene.id.slice(7)));}

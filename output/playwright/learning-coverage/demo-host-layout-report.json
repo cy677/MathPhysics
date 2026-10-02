@@ -1,0 +1,179 @@
+{
+  "passed": true,
+  "phet": [],
+  "hostMobile": [
+    {
+      "id": "phet-forces-and-motion-basics",
+      "nonOverlapping": true,
+      "panels": {
+        "science": {
+          "x": 0,
+          "y": 253.03125,
+          "width": 390,
+          "height": 547.96875,
+          "top": 253.03125,
+          "right": 390,
+          "bottom": 801,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 118,
+          "width": 390,
+          "height": 135.03125,
+          "top": 118,
+          "right": 390,
+          "bottom": 253.03125,
+          "left": 0
+        },
+        "frame": {
+          "x": 0,
+          "y": 253.03125,
+          "width": 390,
+          "height": 547.96875,
+          "top": 253.03125,
+          "right": 390,
+          "bottom": 801,
+          "left": 0
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-mobile.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-guide-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-area-builder",
+      "nonOverlapping": true,
+      "panels": {
+        "science": {
+          "x": 0,
+          "y": 253.03125,
+          "width": 390,
+          "height": 547.96875,
+          "top": 253.03125,
+          "right": 390,
+          "bottom": 801,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 118,
+          "width": 390,
+          "height": 135.03125,
+          "top": 118,
+          "right": 390,
+          "bottom": 253.03125,
+          "left": 0
+        },
+        "frame": {
+          "x": 0,
+          "y": 253.03125,
+          "width": 390,
+          "height": 547.96875,
+          "top": 253.03125,
+          "right": 390,
+          "bottom": 801,
+          "left": 0
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-area-builder-host-mobile.png",
+        "output/playwright/learning-coverage/phet-area-builder-host-guide-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-states-of-matter-basics",
+      "nonOverlapping": true,
+      "panels": {
+        "science": {
+          "x": 0,
+          "y": 253.03125,
+          "width": 390,
+          "height": 547.96875,
+          "top": 253.03125,
+          "right": 390,
+          "bottom": 801,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 118,
+          "width": 390,
+          "height": 135.03125,
+          "top": 118,
+          "right": 390,
+          "bottom": 253.03125,
+          "left": 0
+        },
+        "frame": {
+          "x": 0,
+          "y": 253.03125,
+          "width": 390,
+          "height": 547.96875,
+          "top": 253.03125,
+          "right": 390,
+          "bottom": 801,
+          "left": 0
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-host-mobile.png",
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-host-guide-mobile.png"
+      ]
+    }
+  ],
+  "matterViews": [],
+  "matterPhases": [],
+  "legacy": [],
+  "pointerChecks": [],
+  "screenshots": [
+    {
+      "id": "phet-forces-and-motion-basics-host",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-host",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-guide-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-area-builder-host",
+      "path": "output/playwright/learning-coverage/phet-area-builder-host-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-area-builder-host",
+      "path": "output/playwright/learning-coverage/phet-area-builder-host-guide-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-states-of-matter-basics-host",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-host-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-states-of-matter-basics-host",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-host-guide-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "base": "http://127.0.0.1:57178/MathPhysics/",
+  "browserClosed": true,
+  "serverClosed": true
+}

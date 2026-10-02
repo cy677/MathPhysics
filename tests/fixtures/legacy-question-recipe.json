@@ -1,0 +1,14 @@
+{
+  "recipe": {
+    "schemaVersion": 1,
+    "engineVersion": "1.0.0",
+    "locale": "zh-CN",
+    "seed": "兼容记录",
+    "difficulty": 2,
+    "count": 3,
+    "templateIds": [
+      "integer.add"
+    ]
+  },
+  "sha256": "65274725bb08dcc923e157a7212c69de7090447e8a9383bdb87e025c57d02074"
+}

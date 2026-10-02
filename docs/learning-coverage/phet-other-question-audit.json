@@ -1,0 +1,1484 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-10-01T08:59:41.172Z",
+  "status": "complete",
+  "scope": "Read-only audit of the six PhET modules outside the four game modules; 18 native screens. No scientific model/RNG/app/view/CSS edits.",
+  "summary": {
+    "modules": 6,
+    "screens": 18,
+    "questionTaskScreenFamilies": [
+      "build-a-molecule/single-molecule/collection",
+      "build-a-molecule/multiple-molecules/collection"
+    ],
+    "openCompetitionScreens": [
+      "forces-and-motion-basics/net-force"
+    ],
+    "freeExperimentScreens": 15,
+    "moleculeReferenceTypes": 26,
+    "moleculeBoxParameterKeys": 103,
+    "implementationGap": "BAM two collecting screens have actual molecule/count goals and native correctness/completion; require a read-only question reader. Forces tug-of-war has a result but no preset question/answer and remains an open demonstration."
+  },
+  "modules": [
+    {
+      "id": "forces-and-motion-basics",
+      "classification": "open-demonstration",
+      "reason": "Motion/Friction/Acceleration expose user force, mass stack, friction, position/velocity/acceleration; no target solution/check/score. Net Force is an open tug-of-war with chosen teams, no predefined answer.",
+      "screens": [
+        {
+          "id": "forces-and-motion-basics/net-force",
+          "nativeIndex": 0,
+          "label": "拔河比赛",
+          "classification": "open-competition",
+          "runtimeModelKeys": [
+            "_disposeEmitter",
+            "_isDisposable",
+            "_isDisposed",
+            "tandem",
+            "phetioID",
+            "phetioObjectInitialized",
+            "leftTeamColorProperty",
+            "rightTeamColorProperty",
+            "hasStartedProperty",
+            "isRunningProperty",
+            "numberPullersAttachedProperty",
+            "numberBluePullersAttachedProperty",
+            "numberRedPullersAttachedProperty",
+            "stateProperty",
+            "timeProperty",
+            "netForceProperty",
+            "leftForceProperty",
+            "rightForceProperty",
+            "speedProperty",
+            "durationProperty",
+            "showSumOfForcesProperty",
+            "showValuesProperty",
+            "showSpeedProperty",
+            "cartReturnedEmitter",
+            "resetAllEmitter",
+            "cart",
+            "knots",
+            "pullers"
+          ],
+          "resultFields": [
+            "stateProperty.value",
+            "cart.positionProperty.value",
+            "leftForceProperty.value",
+            "rightForceProperty.value",
+            "netForceProperty.value",
+            "pullers[].forceProperty.value / modeProperty.value"
+          ],
+          "completion": "NetForceModel.step: cart passes ±gameLength -> isRunningProperty=false; stateProperty='completed'; winner from cart.position sign. Teams/force selected freely; no assigned answer/question to grade.",
+          "minimumReader": "Keep existing four-part demonstration guide; if showing live result, read signed net force and winner only, do not introduce a new quiz."
+        },
+        {
+          "id": "forces-and-motion-basics/motion",
+          "nativeIndex": 1,
+          "label": "运动",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "screen",
+            "resetAllEmitter",
+            "stepEmitter",
+            "skateboard",
+            "accelerometer",
+            "stackedItems",
+            "appliedForceProperty",
+            "frictionForceProperty",
+            "frictionCoefficientProperty",
+            "sumOfForcesProperty",
+            "positionProperty",
+            "speedProperty",
+            "velocityProperty",
+            "accelerationProperty",
+            "pusherPositionProperty",
+            "pusherInteractionsEnabledProperty",
+            "showForceProperty",
+            "showValuesProperty",
+            "showSumOfForcesProperty",
+            "showSpeedProperty",
+            "showMassesProperty",
+            "showAccelerationProperty",
+            "speedClassificationProperty",
+            "previousSpeedClassificationProperty",
+            "directionProperty",
+            "timeSinceFallenProperty",
+            "fallenProperty",
+            "fallenDirectionProperty",
+            "timeProperty",
+            "isPlayingProperty",
+            "frictionZeroProperty",
+            "frictionNonZeroProperty",
+            "items",
+            "stopwatch",
+            "view"
+          ],
+          "exclusionEvidence": "Motion/Friction/Acceleration expose user force, mass stack, friction, position/velocity/acceleration; no target solution/check/score. Net Force is an open tug-of-war with chosen teams, no predefined answer.",
+          "currentParameterFields": [
+            "appliedForceProperty",
+            "frictionForceProperty",
+            "frictionCoefficientProperty",
+            "sumOfForcesProperty",
+            "velocityProperty",
+            "accelerationProperty",
+            "showForceProperty",
+            "showSumOfForcesProperty",
+            "showMassesProperty",
+            "showAccelerationProperty",
+            "frictionZeroProperty",
+            "frictionNonZeroProperty"
+          ]
+        },
+        {
+          "id": "forces-and-motion-basics/friction",
+          "nativeIndex": 2,
+          "label": "摩擦力",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "screen",
+            "resetAllEmitter",
+            "stepEmitter",
+            "skateboard",
+            "accelerometer",
+            "stackedItems",
+            "appliedForceProperty",
+            "frictionForceProperty",
+            "frictionCoefficientProperty",
+            "sumOfForcesProperty",
+            "positionProperty",
+            "speedProperty",
+            "velocityProperty",
+            "accelerationProperty",
+            "pusherPositionProperty",
+            "pusherInteractionsEnabledProperty",
+            "showForceProperty",
+            "showValuesProperty",
+            "showSumOfForcesProperty",
+            "showSpeedProperty",
+            "showMassesProperty",
+            "showAccelerationProperty",
+            "speedClassificationProperty",
+            "previousSpeedClassificationProperty",
+            "directionProperty",
+            "timeSinceFallenProperty",
+            "fallenProperty",
+            "fallenDirectionProperty",
+            "timeProperty",
+            "isPlayingProperty",
+            "frictionZeroProperty",
+            "frictionNonZeroProperty",
+            "items",
+            "stopwatch",
+            "view"
+          ],
+          "exclusionEvidence": "Motion/Friction/Acceleration expose user force, mass stack, friction, position/velocity/acceleration; no target solution/check/score. Net Force is an open tug-of-war with chosen teams, no predefined answer.",
+          "currentParameterFields": [
+            "appliedForceProperty",
+            "frictionForceProperty",
+            "frictionCoefficientProperty",
+            "sumOfForcesProperty",
+            "velocityProperty",
+            "accelerationProperty",
+            "showForceProperty",
+            "showSumOfForcesProperty",
+            "showMassesProperty",
+            "showAccelerationProperty",
+            "frictionZeroProperty",
+            "frictionNonZeroProperty"
+          ]
+        },
+        {
+          "id": "forces-and-motion-basics/acceleration",
+          "nativeIndex": 3,
+          "label": "加速度",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "screen",
+            "resetAllEmitter",
+            "stepEmitter",
+            "skateboard",
+            "accelerometer",
+            "stackedItems",
+            "appliedForceProperty",
+            "frictionForceProperty",
+            "frictionCoefficientProperty",
+            "sumOfForcesProperty",
+            "positionProperty",
+            "speedProperty",
+            "velocityProperty",
+            "accelerationProperty",
+            "pusherPositionProperty",
+            "pusherInteractionsEnabledProperty",
+            "showForceProperty",
+            "showValuesProperty",
+            "showSumOfForcesProperty",
+            "showSpeedProperty",
+            "showMassesProperty",
+            "showAccelerationProperty",
+            "speedClassificationProperty",
+            "previousSpeedClassificationProperty",
+            "directionProperty",
+            "timeSinceFallenProperty",
+            "fallenProperty",
+            "fallenDirectionProperty",
+            "timeProperty",
+            "isPlayingProperty",
+            "frictionZeroProperty",
+            "frictionNonZeroProperty",
+            "items",
+            "stopwatch",
+            "view"
+          ],
+          "exclusionEvidence": "Motion/Friction/Acceleration expose user force, mass stack, friction, position/velocity/acceleration; no target solution/check/score. Net Force is an open tug-of-war with chosen teams, no predefined answer.",
+          "currentParameterFields": [
+            "appliedForceProperty",
+            "frictionForceProperty",
+            "frictionCoefficientProperty",
+            "sumOfForcesProperty",
+            "velocityProperty",
+            "accelerationProperty",
+            "showForceProperty",
+            "showSumOfForcesProperty",
+            "showMassesProperty",
+            "showAccelerationProperty",
+            "frictionZeroProperty",
+            "frictionNonZeroProperty"
+          ]
+        }
+      ],
+      "source": "vendor/phet/forces-and-motion-basics.html",
+      "runtimeSource": "src/phet/generated/forces-and-motion-basics.html",
+      "sourceSha256": "11df6f73895d430c3638f5f49ea060c37a6ebad94855e116d4b7e971f522703b"
+    },
+    {
+      "id": "energy-skate-park-basics",
+      "classification": "open-demonstration",
+      "reason": "Three skater/track experiments expose track selection or editing and energy/time/friction; no native challenge list, target solution, correctness/score/completed state in these models.",
+      "screens": [
+        {
+          "id": "energy-skate-park-basics/intro",
+          "nativeIndex": 0,
+          "label": "入门",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "trackChangePending",
+            "trackChangedEmitter",
+            "showBarGraph",
+            "tracksDraggable",
+            "tracksConfigurable",
+            "defaultFriction",
+            "availableModelBoundsProperty",
+            "controlPointGroup",
+            "trackGroup",
+            "pieChartVisibleProperty",
+            "barGraphVisibleProperty",
+            "gridVisibleProperty",
+            "speedometerVisibleProperty",
+            "preferencesModel",
+            "speedValueVisibleProperty",
+            "referenceHeightVisibleProperty",
+            "measuringTapeVisibleProperty",
+            "barGraphScaleProperty",
+            "editButtonEnabledProperty",
+            "clearButtonEnabledProperty",
+            "isPlayingProperty",
+            "stopwatch",
+            "timeSpeedProperty",
+            "frictionProperty",
+            "measuringTapeBasePositionProperty",
+            "measuringTapeTipPositionProperty",
+            "isStickingToTrackProperty",
+            "userControlledPropertySet",
+            "skater",
+            "skaterInBoundsProperty",
+            "resetEmitter",
+            "skaterAttachedToTrackEmitter",
+            "skaterDetachedFromTrackEmitter",
+            "tracksJoinedEmitter",
+            "tracks",
+            "updateEmitter",
+            "eventTimer",
+            "saveSampleInterval",
+            "maxNumberOfSamples",
+            "sampleFadeDecay",
+            "timeSinceSampleSave",
+            "limitNumberOfSamples",
+            "pathVisibleProperty",
+            "preventSampleSave",
+            "sampleTimeProperty",
+            "dataSamples",
+            "batchRemoveSamplesEmitter",
+            "trackTypes",
+            "sceneProperty",
+            "skaterReturnedToGroundBySceneChangeEmitter"
+          ],
+          "exclusionEvidence": "Three skater/track experiments expose track selection or editing and energy/time/friction; no native challenge list, target solution, correctness/score/completed state in these models.",
+          "currentParameterFields": [
+            "availableModelBoundsProperty",
+            "referenceHeightVisibleProperty",
+            "frictionProperty",
+            "sceneProperty"
+          ]
+        },
+        {
+          "id": "energy-skate-park-basics/friction",
+          "nativeIndex": 1,
+          "label": "摩擦力",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "trackChangePending",
+            "trackChangedEmitter",
+            "showBarGraph",
+            "tracksDraggable",
+            "tracksConfigurable",
+            "defaultFriction",
+            "availableModelBoundsProperty",
+            "controlPointGroup",
+            "trackGroup",
+            "pieChartVisibleProperty",
+            "barGraphVisibleProperty",
+            "gridVisibleProperty",
+            "speedometerVisibleProperty",
+            "preferencesModel",
+            "speedValueVisibleProperty",
+            "referenceHeightVisibleProperty",
+            "measuringTapeVisibleProperty",
+            "barGraphScaleProperty",
+            "editButtonEnabledProperty",
+            "clearButtonEnabledProperty",
+            "isPlayingProperty",
+            "stopwatch",
+            "timeSpeedProperty",
+            "frictionProperty",
+            "measuringTapeBasePositionProperty",
+            "measuringTapeTipPositionProperty",
+            "isStickingToTrackProperty",
+            "userControlledPropertySet",
+            "skater",
+            "skaterInBoundsProperty",
+            "resetEmitter",
+            "skaterAttachedToTrackEmitter",
+            "skaterDetachedFromTrackEmitter",
+            "tracksJoinedEmitter",
+            "tracks",
+            "updateEmitter",
+            "eventTimer",
+            "saveSampleInterval",
+            "maxNumberOfSamples",
+            "sampleFadeDecay",
+            "timeSinceSampleSave",
+            "limitNumberOfSamples",
+            "pathVisibleProperty",
+            "preventSampleSave",
+            "sampleTimeProperty",
+            "dataSamples",
+            "batchRemoveSamplesEmitter",
+            "trackTypes",
+            "sceneProperty",
+            "skaterReturnedToGroundBySceneChangeEmitter"
+          ],
+          "exclusionEvidence": "Three skater/track experiments expose track selection or editing and energy/time/friction; no native challenge list, target solution, correctness/score/completed state in these models.",
+          "currentParameterFields": [
+            "availableModelBoundsProperty",
+            "referenceHeightVisibleProperty",
+            "frictionProperty",
+            "sceneProperty"
+          ]
+        },
+        {
+          "id": "energy-skate-park-basics/playground",
+          "nativeIndex": 2,
+          "label": "跟踪运动场",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "trackChangePending",
+            "trackChangedEmitter",
+            "showBarGraph",
+            "tracksDraggable",
+            "tracksConfigurable",
+            "defaultFriction",
+            "availableModelBoundsProperty",
+            "controlPointGroup",
+            "trackGroup",
+            "pieChartVisibleProperty",
+            "barGraphVisibleProperty",
+            "gridVisibleProperty",
+            "speedometerVisibleProperty",
+            "preferencesModel",
+            "speedValueVisibleProperty",
+            "referenceHeightVisibleProperty",
+            "measuringTapeVisibleProperty",
+            "barGraphScaleProperty",
+            "editButtonEnabledProperty",
+            "clearButtonEnabledProperty",
+            "isPlayingProperty",
+            "stopwatch",
+            "timeSpeedProperty",
+            "frictionProperty",
+            "measuringTapeBasePositionProperty",
+            "measuringTapeTipPositionProperty",
+            "isStickingToTrackProperty",
+            "userControlledPropertySet",
+            "skater",
+            "skaterInBoundsProperty",
+            "resetEmitter",
+            "skaterAttachedToTrackEmitter",
+            "skaterDetachedFromTrackEmitter",
+            "tracksJoinedEmitter",
+            "tracks",
+            "updateEmitter",
+            "eventTimer"
+          ],
+          "exclusionEvidence": "Three skater/track experiments expose track selection or editing and energy/time/friction; no native challenge list, target solution, correctness/score/completed state in these models.",
+          "currentParameterFields": [
+            "availableModelBoundsProperty",
+            "referenceHeightVisibleProperty",
+            "frictionProperty"
+          ]
+        }
+      ],
+      "source": "vendor/phet/energy-skate-park-basics.html",
+      "runtimeSource": "src/phet/generated/energy-skate-park-basics.html",
+      "sourceSha256": "6a3082d4592f773e24346ba8afa3f8f08bb56541f5d6cae5e1f46869c61a4016"
+    },
+    {
+      "id": "vector-addition",
+      "classification": "open-demonstration",
+      "reason": "1D/2D/Lab are editable vector/resultant scenes. Equations selects addition/subtraction/negation and derives the resultant from base vectors and multipliers; equation equality is a displayed identity, no hidden requested answer/correctness/game completion.",
+      "screens": [
+        {
+          "id": "vector-addition/explore1d",
+          "nativeIndex": 0,
+          "label": "一维向量",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "componentVectorStyleProperty",
+            "scenes",
+            "sceneProperty",
+            "horizontalScene",
+            "verticalScene"
+          ],
+          "exclusionEvidence": "1D/2D/Lab are editable vector/resultant scenes. Equations selects addition/subtraction/negation and derives the resultant from base vectors and multipliers; equation equality is a displayed identity, no hidden requested answer/correctness/game completion.",
+          "currentParameterFields": [
+            "sceneProperty"
+          ]
+        },
+        {
+          "id": "vector-addition/explore2d",
+          "nativeIndex": 1,
+          "label": "二维向量",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "componentVectorStyleProperty",
+            "scenes",
+            "sceneProperty",
+            "cartesianScene",
+            "polarScene"
+          ],
+          "exclusionEvidence": "1D/2D/Lab are editable vector/resultant scenes. Equations selects addition/subtraction/negation and derives the resultant from base vectors and multipliers; equation equality is a displayed identity, no hidden requested answer/correctness/game completion.",
+          "currentParameterFields": [
+            "sceneProperty"
+          ]
+        },
+        {
+          "id": "vector-addition/lab",
+          "nativeIndex": 2,
+          "label": "实验",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "componentVectorStyleProperty",
+            "scenes",
+            "sceneProperty",
+            "cartesianScene",
+            "polarScene"
+          ],
+          "exclusionEvidence": "1D/2D/Lab are editable vector/resultant scenes. Equations selects addition/subtraction/negation and derives the resultant from base vectors and multipliers; equation equality is a displayed identity, no hidden requested answer/correctness/game completion.",
+          "currentParameterFields": [
+            "sceneProperty"
+          ]
+        },
+        {
+          "id": "vector-addition/equations",
+          "nativeIndex": 3,
+          "label": "等式",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "componentVectorStyleProperty",
+            "scenes",
+            "sceneProperty",
+            "cartesianScene",
+            "polarScene"
+          ],
+          "exclusionEvidence": "1D/2D/Lab are editable vector/resultant scenes. Equations selects addition/subtraction/negation and derives the resultant from base vectors and multipliers; equation equality is a displayed identity, no hidden requested answer/correctness/game completion.",
+          "currentParameterFields": [
+            "sceneProperty"
+          ]
+        }
+      ],
+      "source": "vendor/phet/vector-addition.html",
+      "runtimeSource": "src/phet/generated/vector-addition.html",
+      "sourceSha256": "1e3e9e7dbac1bf79c85c3f6d8166f605598a5007ad15694d76d9ed2f9465dc1a"
+    },
+    {
+      "id": "circuit-construction-kit-dc",
+      "classification": "open-demonstration",
+      "reason": "Intro/Lab expose editable circuit element groups and derived current/voltage. hasCurrentFlowingProperty reports circuit physics, not an assigned target. modeProperty/blackBoxBounds belong to a separate Black Box Study feature; pinned two-screen DC starts EXPLORE, blackBoxBounds=null, circuit.blackBoxStudy=false, no challenge/score/correct-answer code.",
+      "screens": [
+        {
+          "id": "circuit-construction-kit-dc/intro",
+          "nativeIndex": 0,
+          "label": "入门",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "zoomAnimation",
+            "viewTypeProperty",
+            "addRealBulbsProperty",
+            "isShowNoncontactAmmeters",
+            "circuit",
+            "voltmeters",
+            "ammeters",
+            "isValueDepictionEnabledProperty",
+            "showLabelsProperty",
+            "showValuesProperty",
+            "zoomLevelProperty",
+            "zoomScaleProperty",
+            "animatedZoomScaleProperty",
+            "isPlayingProperty",
+            "modeProperty",
+            "revealingProperty",
+            "blackBoxBounds",
+            "stopwatch",
+            "stepEmitter"
+          ],
+          "exclusionEvidence": "Intro/Lab expose editable circuit element groups and derived current/voltage. hasCurrentFlowingProperty reports circuit physics, not an assigned target. modeProperty/blackBoxBounds belong to a separate Black Box Study feature; pinned two-screen DC starts EXPLORE, blackBoxBounds=null, circuit.blackBoxStudy=false, no challenge/score/correct-answer code.",
+          "currentParameterFields": [
+            "modeProperty"
+          ]
+        },
+        {
+          "id": "circuit-construction-kit-dc/lab",
+          "nativeIndex": 1,
+          "label": "实验室",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "zoomAnimation",
+            "viewTypeProperty",
+            "addRealBulbsProperty",
+            "isShowNoncontactAmmeters",
+            "circuit",
+            "voltmeters",
+            "ammeters",
+            "isValueDepictionEnabledProperty",
+            "showLabelsProperty",
+            "showValuesProperty",
+            "zoomLevelProperty",
+            "zoomScaleProperty",
+            "animatedZoomScaleProperty",
+            "isPlayingProperty",
+            "modeProperty",
+            "revealingProperty",
+            "blackBoxBounds",
+            "stopwatch",
+            "stepEmitter"
+          ],
+          "exclusionEvidence": "Intro/Lab expose editable circuit element groups and derived current/voltage. hasCurrentFlowingProperty reports circuit physics, not an assigned target. modeProperty/blackBoxBounds belong to a separate Black Box Study feature; pinned two-screen DC starts EXPLORE, blackBoxBounds=null, circuit.blackBoxStudy=false, no challenge/score/correct-answer code.",
+          "currentParameterFields": [
+            "modeProperty"
+          ]
+        }
+      ],
+      "source": "vendor/phet/circuit-construction-kit-dc.html",
+      "runtimeSource": "src/phet/generated/circuit-construction-kit-dc.html",
+      "sourceSha256": "4feae7b4823354d57112fc46c3bdca9de5c3612e7695cd8967b8c32f122736f1"
+    },
+    {
+      "id": "states-of-matter-basics",
+      "classification": "open-demonstration",
+      "reason": "States/Phase Changes expose substance, thermostat set point, particle count, container height and pressure. targetNumberOfMoleculesProperty is the requested pump particle count; targetContainerHeightProperty is the lid control set point; neither is a question goal. isExplodedProperty is a physical event, not judged completion.",
+      "screens": [
+        {
+          "id": "states-of-matter-basics/states",
+          "nativeIndex": 0,
+          "label": "状态",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "tandem",
+            "phetioType",
+            "phetioState",
+            "phetioReadOnly",
+            "phetioDocumentation",
+            "phetioEventType",
+            "phetioHighFrequency",
+            "phetioPlayback",
+            "phetioStudioControl",
+            "phetioDynamicElement",
+            "phetioFeatured",
+            "phetioEventMetadata",
+            "phetioComponentOptions",
+            "phetioWrapper",
+            "phetioObjectInitialized",
+            "phetioMessageStack",
+            "isDisposed",
+            "phetioIsArchetype",
+            "phetioBaselineMetadata",
+            "phetioArchetypePhetioID",
+            "linkedElements",
+            "phetioNotifiedObjectCreated",
+            "substanceProperty",
+            "containerHeightProperty",
+            "isExplodedProperty",
+            "temperatureSetPointProperty",
+            "pressureProperty",
+            "isPlayingProperty",
+            "heatingCoolingAmountProperty",
+            "targetNumberOfMoleculesProperty",
+            "maxNumberOfMoleculesProperty",
+            "numMoleculesQueuedForInjectionProperty",
+            "isInjectionAllowedProperty",
+            "resetEmitter",
+            "scaledAtoms",
+            "moleculeDataSet",
+            "normalizedContainerWidth",
+            "gravitationalAcceleration",
+            "normalizedContainerHeight",
+            "normalizedTotalContainerHeight",
+            "normalizedLidVelocityY",
+            "injectionPoint",
+            "particleDiameter",
+            "minModelTemperature",
+            "residualTime",
+            "moleculeInjectionHoldoffTimer",
+            "heightChangeThisStep",
+            "moleculeInjectedThisStep",
+            "atomPositionUpdater",
+            "phaseStateChanger",
+            "isoKineticThermostat",
+            "andersenThermostat",
+            "moleculeForceAndMotionCalculator",
+            "averageTemperatureDifference",
+            "thermostatRunPreviousStep",
+            "temperatureInKelvinProperty"
+          ],
+          "exclusionEvidence": "States/Phase Changes expose substance, thermostat set point, particle count, container height and pressure. targetNumberOfMoleculesProperty is the requested pump particle count; targetContainerHeightProperty is the lid control set point; neither is a question goal. isExplodedProperty is a physical event, not judged completion.",
+          "currentParameterFields": [
+            "substanceProperty",
+            "containerHeightProperty",
+            "temperatureSetPointProperty",
+            "pressureProperty",
+            "targetNumberOfMoleculesProperty",
+            "maxNumberOfMoleculesProperty",
+            "numMoleculesQueuedForInjectionProperty",
+            "temperatureInKelvinProperty"
+          ]
+        },
+        {
+          "id": "states-of-matter-basics/phase-changes",
+          "nativeIndex": 1,
+          "label": "相变",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "tandem",
+            "phetioType",
+            "phetioState",
+            "phetioReadOnly",
+            "phetioDocumentation",
+            "phetioEventType",
+            "phetioHighFrequency",
+            "phetioPlayback",
+            "phetioStudioControl",
+            "phetioDynamicElement",
+            "phetioFeatured",
+            "phetioEventMetadata",
+            "phetioComponentOptions",
+            "phetioWrapper",
+            "phetioObjectInitialized",
+            "phetioMessageStack",
+            "isDisposed",
+            "phetioIsArchetype",
+            "phetioBaselineMetadata",
+            "phetioArchetypePhetioID",
+            "linkedElements",
+            "phetioNotifiedObjectCreated",
+            "substanceProperty",
+            "containerHeightProperty",
+            "isExplodedProperty",
+            "temperatureSetPointProperty",
+            "pressureProperty",
+            "isPlayingProperty",
+            "heatingCoolingAmountProperty",
+            "targetNumberOfMoleculesProperty",
+            "maxNumberOfMoleculesProperty",
+            "numMoleculesQueuedForInjectionProperty",
+            "isInjectionAllowedProperty",
+            "resetEmitter",
+            "scaledAtoms",
+            "moleculeDataSet",
+            "normalizedContainerWidth",
+            "gravitationalAcceleration",
+            "normalizedContainerHeight",
+            "normalizedTotalContainerHeight",
+            "normalizedLidVelocityY",
+            "injectionPoint",
+            "particleDiameter",
+            "minModelTemperature",
+            "residualTime",
+            "moleculeInjectionHoldoffTimer",
+            "heightChangeThisStep",
+            "moleculeInjectedThisStep",
+            "atomPositionUpdater",
+            "phaseStateChanger",
+            "isoKineticThermostat",
+            "andersenThermostat",
+            "moleculeForceAndMotionCalculator",
+            "averageTemperatureDifference",
+            "thermostatRunPreviousStep",
+            "temperatureInKelvinProperty",
+            "phaseDiagramExpandedProperty",
+            "interactionPotentialExpandedProperty",
+            "adjustableAtomInteractionStrengthProperty",
+            "targetContainerHeightProperty",
+            "lidAboveInjectionPointProperty",
+            "phaseChangeModelConstructed"
+          ],
+          "exclusionEvidence": "States/Phase Changes expose substance, thermostat set point, particle count, container height and pressure. targetNumberOfMoleculesProperty is the requested pump particle count; targetContainerHeightProperty is the lid control set point; neither is a question goal. isExplodedProperty is a physical event, not judged completion.",
+          "currentParameterFields": [
+            "substanceProperty",
+            "containerHeightProperty",
+            "temperatureSetPointProperty",
+            "pressureProperty",
+            "targetNumberOfMoleculesProperty",
+            "maxNumberOfMoleculesProperty",
+            "numMoleculesQueuedForInjectionProperty",
+            "temperatureInKelvinProperty",
+            "targetContainerHeightProperty"
+          ]
+        }
+      ],
+      "source": "vendor/phet/states-of-matter-basics.html",
+      "runtimeSource": "src/phet/generated/states-of-matter-basics.html",
+      "sourceSha256": "fdb67dbaf55910c07246e074c8a68c18224cc7b037733fa581a29aee0ab2a762"
+    },
+    {
+      "id": "build-a-molecule",
+      "classification": "native-collection-goals",
+      "reason": "Single/Multiple collect specific reference molecular structures to a capacity. Playground has zero collection boxes and remains free molecule construction.",
+      "screens": [
+        {
+          "id": "build-a-molecule/single-molecule",
+          "nativeIndex": 0,
+          "label": "单个分子",
+          "classification": "collection-task-family",
+          "runtimeModelKeys": [
+            "currentCollectionProperty",
+            "buttonClickedProperty",
+            "addedCollectionEmitter",
+            "removedCollectionEmitter",
+            "collectionLayout",
+            "stepEmitter",
+            "collections",
+            "currentIndex",
+            "dialogMolecule",
+            "firstCollection",
+            "regenerateCallback"
+          ],
+          "currentGoals": [
+            {
+              "instanceBoxIndex": 0,
+              "stableGoalId": "build-a-molecule/single-molecule/cid-962/capacity-1",
+              "cid": 962,
+              "commonName": "water",
+              "molecularFormula": "H2O",
+              "atomCount": 3,
+              "bondCount": 2,
+              "capacity": 1,
+              "quantity": 0
+            },
+            {
+              "instanceBoxIndex": 1,
+              "stableGoalId": "build-a-molecule/single-molecule/cid-977/capacity-1",
+              "cid": 977,
+              "commonName": "molecular oxygen",
+              "molecularFormula": "O2",
+              "atomCount": 2,
+              "bondCount": 1,
+              "capacity": 1,
+              "quantity": 0
+            },
+            {
+              "instanceBoxIndex": 2,
+              "stableGoalId": "build-a-molecule/single-molecule/cid-783/capacity-1",
+              "cid": 783,
+              "commonName": "molecular hydrogen",
+              "molecularFormula": "H2",
+              "atomCount": 2,
+              "bondCount": 1,
+              "capacity": 1,
+              "quantity": 0
+            },
+            {
+              "instanceBoxIndex": 3,
+              "stableGoalId": "build-a-molecule/single-molecule/cid-280/capacity-1",
+              "cid": 280,
+              "commonName": "carbon dioxide",
+              "molecularFormula": "CO2",
+              "atomCount": 3,
+              "bondCount": 2,
+              "capacity": 1,
+              "quantity": 0
+            },
+            {
+              "instanceBoxIndex": 4,
+              "stableGoalId": "build-a-molecule/single-molecule/cid-947/capacity-1",
+              "cid": 947,
+              "commonName": "molecular nitrogen",
+              "molecularFormula": "N2",
+              "atomCount": 2,
+              "bondCount": 1,
+              "capacity": 1,
+              "quantity": 0
+            }
+          ],
+          "familyId": "build-a-molecule/single-molecule/collection",
+          "readerFields": [
+            "screen.model.currentCollectionProperty.value",
+            "collection.id (instance only)",
+            "collection.collectionBoxes[]",
+            "box.moleculeType.cid/commonName/molecularFormula/atoms/bonds",
+            "box.capacity",
+            "box.quantityProperty.value",
+            "collection.allCollectionBoxesFilledProperty.value"
+          ],
+          "correctness": "CollectionBox.willAllowMoleculeDrop(candidate): moleculeType.isEquivalent(candidate) && quantityProperty.value < capacity. isFull(): quantityProperty.value === capacity. KitCollection updates allCollectionBoxesFilledProperty from every box.isFull().",
+          "stableIdentity": "cid + capacity + screen is the stable goal signature; collection.id/currentIndex/box index distinguish session instances. moleculeId is a creation counter and is unsuitable as a stable ID.",
+          "minimumReader": "Read existing currentCollection and reference atoms/bonds; give current per-element counts, numbered bond adjacency/order, target capacity, collected and remaining quantities. Subscribe or poll without changing model/RNG. Formula alone cannot prove structural equivalence."
+        },
+        {
+          "id": "build-a-molecule/multiple-molecules",
+          "nativeIndex": 1,
+          "label": "多个分子",
+          "classification": "collection-task-family",
+          "runtimeModelKeys": [
+            "currentCollectionProperty",
+            "buttonClickedProperty",
+            "addedCollectionEmitter",
+            "removedCollectionEmitter",
+            "collectionLayout",
+            "stepEmitter",
+            "collections",
+            "currentIndex",
+            "dialogMolecule",
+            "firstCollection",
+            "regenerateCallback"
+          ],
+          "currentGoals": [
+            {
+              "instanceBoxIndex": 0,
+              "stableGoalId": "build-a-molecule/multiple-molecules/cid-280/capacity-2",
+              "cid": 280,
+              "commonName": "carbon dioxide",
+              "molecularFormula": "CO2",
+              "atomCount": 3,
+              "bondCount": 2,
+              "capacity": 2,
+              "quantity": 0
+            },
+            {
+              "instanceBoxIndex": 1,
+              "stableGoalId": "build-a-molecule/multiple-molecules/cid-977/capacity-2",
+              "cid": 977,
+              "commonName": "molecular oxygen",
+              "molecularFormula": "O2",
+              "atomCount": 2,
+              "bondCount": 1,
+              "capacity": 2,
+              "quantity": 0
+            },
+            {
+              "instanceBoxIndex": 2,
+              "stableGoalId": "build-a-molecule/multiple-molecules/cid-783/capacity-4",
+              "cid": 783,
+              "commonName": "molecular hydrogen",
+              "molecularFormula": "H2",
+              "atomCount": 2,
+              "bondCount": 1,
+              "capacity": 4,
+              "quantity": 0
+            },
+            {
+              "instanceBoxIndex": 3,
+              "stableGoalId": "build-a-molecule/multiple-molecules/cid-222/capacity-2",
+              "cid": 222,
+              "commonName": "ammonia",
+              "molecularFormula": "H3N",
+              "atomCount": 4,
+              "bondCount": 3,
+              "capacity": 2,
+              "quantity": 0
+            }
+          ],
+          "familyId": "build-a-molecule/multiple-molecules/collection",
+          "readerFields": [
+            "screen.model.currentCollectionProperty.value",
+            "collection.id (instance only)",
+            "collection.collectionBoxes[]",
+            "box.moleculeType.cid/commonName/molecularFormula/atoms/bonds",
+            "box.capacity",
+            "box.quantityProperty.value",
+            "collection.allCollectionBoxesFilledProperty.value"
+          ],
+          "correctness": "CollectionBox.willAllowMoleculeDrop(candidate): moleculeType.isEquivalent(candidate) && quantityProperty.value < capacity. isFull(): quantityProperty.value === capacity. KitCollection updates allCollectionBoxesFilledProperty from every box.isFull().",
+          "stableIdentity": "cid + capacity + screen is the stable goal signature; collection.id/currentIndex/box index distinguish session instances. moleculeId is a creation counter and is unsuitable as a stable ID.",
+          "minimumReader": "Read existing currentCollection and reference atoms/bonds; give current per-element counts, numbered bond adjacency/order, target capacity, collected and remaining quantities. Subscribe or poll without changing model/RNG. Formula alone cannot prove structural equivalence."
+        },
+        {
+          "id": "build-a-molecule/playground",
+          "nativeIndex": 2,
+          "label": "自由探索",
+          "classification": "free-experiment",
+          "runtimeModelKeys": [
+            "currentCollectionProperty",
+            "buttonClickedProperty",
+            "addedCollectionEmitter",
+            "removedCollectionEmitter",
+            "collectionLayout",
+            "stepEmitter",
+            "collections",
+            "currentIndex",
+            "dialogMolecule",
+            "firstCollection",
+            "regenerateCallback"
+          ],
+          "currentGoals": [],
+          "exclusionEvidence": "Current and first collections contain zero collectionBoxes; allCollectionBoxesFilledProperty false. No collect target exists on Playground."
+        }
+      ],
+      "source": "vendor/phet/build-a-molecule.html",
+      "runtimeSource": "src/phet/generated/build-a-molecule.html",
+      "sourceSha256": "2d60a20708150c70399c7798fc512a6fd7fc9ce726e87f695fd0040cc846a09a"
+    }
+  ],
+  "validation": {
+    "runtimeProbe": "all 18 screens navigated and existing public model values inspected after guide readiness; no model setter/RNG calls; no collection generated/solved during this audit",
+    "pageErrors": [],
+    "cleanup": {
+      "browserClosed": true,
+      "serverClosed": true,
+      "portReleased": true
+    },
+    "runtimeNavigation": "Old BAM Joist uses actual sim.screenProperty and sim.homeScreen; selectedScreenProperty preserves the home-screen selection. The reader prioritizes actual screenProperty and returns null when actual screen is outside sim.simScreens."
+  },
+  "limits": [
+    "Audit classifies native goals; it does not claim instructional implementation or solve every state.",
+    "Generated BAM collections have many combinations and repeated instances; finite enumeration here is of reference target molecules/capacities, not all collections/atom positions."
+  ],
+  "evidence": [
+    {
+      "path": "vendor/phet/build-a-molecule.html",
+      "symbol": "allCollectionBoxesFilledProperty",
+      "characterOffset": 8565186
+    },
+    {
+      "path": "vendor/phet/build-a-molecule.html",
+      "symbol": "willAllowMoleculeDrop",
+      "characterOffset": 8549454
+    },
+    {
+      "path": "vendor/phet/build-a-molecule.html",
+      "symbol": "generateKitCollection",
+      "characterOffset": 8654651
+    },
+    {
+      "path": "vendor/phet/build-a-molecule.html",
+      "symbol": "UA.collectionBoxMolecules=",
+      "characterOffset": 8398035
+    },
+    {
+      "path": "vendor/phet/build-a-molecule.html",
+      "symbol": "moleculeId=SA++",
+      "characterOffset": 2611638
+    },
+    {
+      "path": "vendor/sources/forces-and-motion-basics/js/netforce/model/NetForceModel.ts",
+      "lines": [
+        48,
+        52,
+        439,
+        449,
+        454,
+        468
+      ],
+      "symbols": [
+        "GAME_LENGTH",
+        "stateProperty",
+        "step",
+        "gameLength"
+      ]
+    },
+    {
+      "path": "vendor/sources/vector-addition/js/equations/model/EquationsScene.ts",
+      "lines": [
+        5,
+        8,
+        9,
+        10,
+        29,
+        60,
+        66
+      ],
+      "symbols": [
+        "equationTypeProperty",
+        "EquationsVectorSet"
+      ]
+    },
+    {
+      "path": "vendor/sources/energy-skate-park-basics/js/common/model/EnergySkateParkBasicsTrackSetModel.ts",
+      "symbols": [
+        "sceneProperty",
+        "trackTypes"
+      ]
+    }
+  ],
+  "moleculeCollectionPool": {
+    "sourceSymbol": "phet.buildAMolecule.MoleculeList.collectionBoxMolecules",
+    "count": 26,
+    "references": [
+      {
+        "cid": 280,
+        "commonName": "carbon dioxide",
+        "molecularFormula": "CO2",
+        "atomCount": 3,
+        "bondCount": 2,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 962,
+        "commonName": "water",
+        "molecularFormula": "H2O",
+        "atomCount": 3,
+        "bondCount": 2,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 947,
+        "commonName": "molecular nitrogen",
+        "molecularFormula": "N2",
+        "atomCount": 2,
+        "bondCount": 1,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 281,
+        "commonName": "carbon monoxide",
+        "molecularFormula": "CO",
+        "atomCount": 2,
+        "bondCount": 1,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 977,
+        "commonName": "molecular oxygen",
+        "molecularFormula": "O2",
+        "atomCount": 2,
+        "bondCount": 1,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 783,
+        "commonName": "molecular hydrogen",
+        "molecularFormula": "H2",
+        "atomCount": 2,
+        "bondCount": 1,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": [
+          4
+        ]
+      },
+      {
+        "cid": 222,
+        "commonName": "ammonia",
+        "molecularFormula": "H3N",
+        "atomCount": 4,
+        "bondCount": 3,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 24526,
+        "commonName": "molecular chlorine",
+        "molecularFormula": "Cl2",
+        "atomCount": 2,
+        "bondCount": 1,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 145068,
+        "commonName": "nitric oxide",
+        "molecularFormula": "NO",
+        "atomCount": 2,
+        "bondCount": 1,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 6326,
+        "commonName": "acetylene",
+        "molecularFormula": "C2H2",
+        "atomCount": 4,
+        "bondCount": 3,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 6331,
+        "commonName": "borane",
+        "molecularFormula": "BH3",
+        "atomCount": 4,
+        "bondCount": 3,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 6356,
+        "commonName": "trifluoroborane",
+        "molecularFormula": "BF3",
+        "atomCount": 4,
+        "bondCount": 3,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 6327,
+        "commonName": "chloromethane",
+        "molecularFormula": "CH3Cl",
+        "atomCount": 5,
+        "bondCount": 4,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 6325,
+        "commonName": "ethylene",
+        "molecularFormula": "C2H4",
+        "atomCount": 6,
+        "bondCount": 5,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 24524,
+        "commonName": "molecular fluorine",
+        "molecularFormula": "F2",
+        "atomCount": 2,
+        "bondCount": 1,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 11638,
+        "commonName": "fluoromethane",
+        "molecularFormula": "CH3F",
+        "atomCount": 5,
+        "bondCount": 4,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 712,
+        "commonName": "formaldehyde",
+        "molecularFormula": "CH2O",
+        "atomCount": 4,
+        "bondCount": 3,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 768,
+        "commonName": "hydrogen cyanide",
+        "molecularFormula": "CHN",
+        "atomCount": 3,
+        "bondCount": 2,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 784,
+        "commonName": "hydrogen peroxide",
+        "molecularFormula": "H2O2",
+        "atomCount": 4,
+        "bondCount": 3,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 402,
+        "commonName": "hydrogen sulfide",
+        "molecularFormula": "H2S",
+        "atomCount": 3,
+        "bondCount": 2,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 297,
+        "commonName": "methane",
+        "molecularFormula": "CH4",
+        "atomCount": 5,
+        "bondCount": 4,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 948,
+        "commonName": "nitrous oxide",
+        "molecularFormula": "N2O",
+        "atomCount": 3,
+        "bondCount": 2,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 24823,
+        "commonName": "ozone",
+        "molecularFormula": "O3",
+        "atomCount": 3,
+        "bondCount": 2,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 24404,
+        "commonName": "phosphine",
+        "molecularFormula": "H3P",
+        "atomCount": 4,
+        "bondCount": 3,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 23953,
+        "commonName": "silane",
+        "molecularFormula": "H4Si",
+        "atomCount": 5,
+        "bondCount": 4,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      },
+      {
+        "cid": 1119,
+        "commonName": "sulfur dioxide",
+        "molecularFormula": "O2S",
+        "atomCount": 3,
+        "bondCount": 2,
+        "singleCapacities": [
+          1
+        ],
+        "generatedMultipleCapacities": [
+          1,
+          2,
+          3
+        ],
+        "initialMultipleSpecialCapacities": []
+      }
+    ],
+    "singleBoxParameterKeys": 26,
+    "generatedMultipleBoxParameterKeys": 76,
+    "initialMultipleExtraKeys": 1,
+    "initialSingleBoxes": 5,
+    "initialMultipleBoxes": 4,
+    "generationEvidence": "BAMModel.generateKitCollection: choose unique members of collectionBoxMolecules; single capacity=1; multiple random integer 1..3 capped at 2 when C atom count>1. Initial Multiple H2 capacity=4 is separate. Original generator was only read, never invoked.",
+    "nativeStructureJudgment": "MoleculeStructure.isEquivalent compares element histogram and neighbor topology; checkEquivalency does not inspect bond.order. The simplified 2D tool edits adjacency, not double/triple bond order. Reference bond orders are explanatory advanced information only."
+  },
+  "followupImplementation": {
+    "status": "implemented-functionally-and-visually-verified",
+    "reader": "src/phet/molecule-question-learning.js",
+    "families": [
+      "build-a-molecule/single-molecule/collection",
+      "build-a-molecule/multiple-molecules/collection"
+    ],
+    "unitTest": "tests/phet-molecule-question-learning.test.mjs",
+    "browserTest": "tests/phet-molecule-question-browser.mjs",
+    "report": "docs/learning-coverage/phet-molecule-questions.json",
+    "visualReview": "passed_with_scope_notes",
+    "nativeSourceSha256": "2d60a20708150c70399c7798fc512a6fd7fc9ce726e87f695fd0040cc846a09a",
+    "visualReport": "docs/learning-coverage/visual-phet-molecule.json",
+    "scopeNote": "Original audit gap retained as history; both collection readers are now implemented. Native empty black slots at quantity zero are expected."
+  }
+}

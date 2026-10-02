@@ -2,15 +2,24 @@
   "suite": "v0.4 actual HTTP, all activities, interactions and file:// bundles",
   "results": [
     {
-      "id": "host-library-and-six-adapters",
+      "id": "host-library-and-adapters",
       "passed": true,
       "defaultEntries": 22,
-      "nonPhET": 18,
-      "allEntries": 57
+      "nonPhET": 12,
+      "allEntries": 22
     },
     {
-      "id": "legacy-migration-custom-empty-and-persistence",
+      "id": "legacy-closed-settings-no-longer-restrict-access-and-visits-persist",
       "passed": true
+    },
+    {
+      "id": "graded-experiment-all-open-and-deep-links",
+      "passed": true,
+      "independentEntries": 6,
+      "gradeFiltering": true,
+      "allOpen": true,
+      "deepLinkMode": "linear",
+      "visitsPersist": true
     },
     {
       "id": "activity-area-builder",
@@ -225,6 +234,34 @@
       "passed": true
     },
     {
+      "id": "activity-fractions-intro",
+      "passed": true
+    },
+    {
+      "id": "activity-fraction-matcher",
+      "passed": true
+    },
+    {
+      "id": "activity-balancing-act",
+      "passed": true
+    },
+    {
+      "id": "activity-circuit-construction-kit-dc",
+      "passed": true
+    },
+    {
+      "id": "activity-states-of-matter-basics",
+      "passed": true
+    },
+    {
+      "id": "activity-build-a-molecule",
+      "passed": true
+    },
+    {
+      "id": "activity-physics-demos",
+      "passed": true
+    },
+    {
       "id": "activity-geometry-proofs",
       "passed": true
     },
@@ -238,6 +275,38 @@
     },
     {
       "id": "activity-tangram-flat",
+      "passed": true
+    },
+    {
+      "id": "activity-jsx-triangle",
+      "passed": true
+    },
+    {
+      "id": "activity-jsx-mirror",
+      "passed": true
+    },
+    {
+      "id": "activity-jsx-rotation",
+      "passed": true
+    },
+    {
+      "id": "activity-jsx-scale",
+      "passed": true
+    },
+    {
+      "id": "activity-jsx-vectors",
+      "passed": true
+    },
+    {
+      "id": "activity-jsx-linear",
+      "passed": true
+    },
+    {
+      "id": "activity-primary-math",
+      "passed": true
+    },
+    {
+      "id": "activity-question-bank",
       "passed": true
     },
     {
@@ -323,7 +392,7 @@
     "Touch emulation is not a physical iPad Safari test.",
     "Smoke tests verify execution, not every randomized upstream challenge."
   ],
-  "total": 74,
+  "total": 90,
   "passed": true,
-  "blockedExternalRequestCount": 25
+  "blockedExternalRequestCount": 49
 }

@@ -79,7 +79,7 @@
         "4条任务路线",
         "发射、分离、入轨与返回",
         "近距离对接小游戏",
-        "8个原理实验",
+        "9个原理实验",
         "7套飞行器结构图解",
         "分年级讲解"
       ],
@@ -91,8 +91,8 @@
       "origin": "original",
       "routeCount": 4,
       "stageCount": 62,
-      "labCount": 8,
-      "playHint": "选择一条任务路线。暂停看清每个阶段，也可以到实验室亲手对接。"
+      "labCount": 9,
+      "playHint": "选任务看每段讲解，再到实验室试发射、关机与轨道；可暂停、重置和调整时间。"
     },
     {
       "id": "jsxgraph-playground",
@@ -302,7 +302,7 @@
     {
       "id": "primary-math",
       "title": "数与生活",
-      "zone": "geometry",
+      "zone": "numbers",
       "kind": "game",
       "adapter": "primary-math",
       "grades": [
@@ -313,16 +313,18 @@
         5,
         6
       ],
-      "description": "摆一摆数量，拨一拨时钟，用图解开48个生活中的数学小挑战。",
+      "description": "按新加坡小学1—6年级，先理解知识和生活例子，再做基础、巩固与拔高练习。",
       "content": [
-        "数与运算",
-        "分数与小数",
-        "时间与测量",
-        "条形图建模",
+        "新加坡小学数学大纲",
+        "数与代数",
+        "度量与几何",
         "统计",
-        "人教版参考",
-        "苏教版参考",
-        "新加坡参考"
+        "基础",
+        "巩固",
+        "拔高",
+        "知识介绍",
+        "生活模型",
+        "中文练习"
       ],
       "entry": "lessons/primary-math/index.html",
       "source": "https://github.com/cy677/MathPhysics",
@@ -331,11 +333,12 @@
       "completeUpstream": false,
       "progressMode": "visit-only",
       "lessonCount": 48,
-      "playHint": "选择年级和题目，先调整模型，再填写答案。试着用自己的话解释数量关系。"
+      "playHint": "选择年级、学习层次和知识点，先读知识与例子、调整模型，再生成当前知识点练习。",
+      "curriculumUnitCount": 49
     },
     {
       "id": "question-bank",
-      "title": "中文题库工坊",
+      "title": "数与生活",
       "zone": "numbers",
       "kind": "practice",
       "adapter": "question-bank",
@@ -347,7 +350,7 @@
         5,
         6
       ],
-      "description": "选择知识点，生成中文练习，试试分步提示和不同难度。",
+      "description": "已合并至数与生活，旧地址继续进入统一课堂。",
       "content": [
         "48个参数化题型",
         "整数、分数与小数",
@@ -362,7 +365,8 @@
       "generatorCount": 48,
       "completeUpstream": false,
       "origin": "original",
-      "playHint": "选择知识点、题型和难度，生成练习后填写答案。遇到困难先打开提示，再看看解题过程。"
+      "playHint": "选择知识点、题型和难度，生成练习后填写答案。遇到困难先打开提示，再看看解题过程。",
+      "mergedInto": "primary-math"
     }
   ]
 }

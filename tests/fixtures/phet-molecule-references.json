@@ -1,0 +1,643 @@
+{
+  "source": "Pinned vendor/phet/build-a-molecule.html; runtime phet.buildAMolecule.MoleculeList.collectionBoxMolecules. Read-only extraction 2026-10-01; IDs use PubChem cid, never moleculeId.",
+  "references": [
+    {
+      "cid": 280,
+      "commonName": "carbon dioxide",
+      "molecularFormula": "CO2",
+      "atoms": [
+        "O",
+        "O",
+        "C"
+      ],
+      "bonds": [
+        {
+          "a": 3,
+          "b": 1,
+          "order": 2
+        },
+        {
+          "a": 3,
+          "b": 2,
+          "order": 2
+        }
+      ]
+    },
+    {
+      "cid": 962,
+      "commonName": "water",
+      "molecularFormula": "H2O",
+      "atoms": [
+        "O",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 947,
+      "commonName": "molecular nitrogen",
+      "molecularFormula": "N2",
+      "atoms": [
+        "N",
+        "N"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 3
+        }
+      ]
+    },
+    {
+      "cid": 281,
+      "commonName": "carbon monoxide",
+      "molecularFormula": "CO",
+      "atoms": [
+        "O",
+        "C"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 3
+        }
+      ]
+    },
+    {
+      "cid": 977,
+      "commonName": "molecular oxygen",
+      "molecularFormula": "O2",
+      "atoms": [
+        "O",
+        "O"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 2
+        }
+      ]
+    },
+    {
+      "cid": 783,
+      "commonName": "molecular hydrogen",
+      "molecularFormula": "H2",
+      "atoms": [
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 222,
+      "commonName": "ammonia",
+      "molecularFormula": "H3N",
+      "atoms": [
+        "N",
+        "H",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 1,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 24526,
+      "commonName": "molecular chlorine",
+      "molecularFormula": "Cl2",
+      "atoms": [
+        "Cl",
+        "Cl"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 145068,
+      "commonName": "nitric oxide",
+      "molecularFormula": "NO",
+      "atoms": [
+        "O",
+        "N"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 2
+        }
+      ]
+    },
+    {
+      "cid": 6326,
+      "commonName": "acetylene",
+      "molecularFormula": "C2H2",
+      "atoms": [
+        "C",
+        "C",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 3
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 2,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 6331,
+      "commonName": "borane",
+      "molecularFormula": "BH3",
+      "atoms": [
+        "B",
+        "H",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 1,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 6356,
+      "commonName": "trifluoroborane",
+      "molecularFormula": "BF3",
+      "atoms": [
+        "F",
+        "F",
+        "F",
+        "B"
+      ],
+      "bonds": [
+        {
+          "a": 4,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 2,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 3,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 6327,
+      "commonName": "chloromethane",
+      "molecularFormula": "CH3Cl",
+      "atoms": [
+        "Cl",
+        "C",
+        "H",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 3,
+          "b": 2,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 2,
+          "order": 1
+        },
+        {
+          "a": 5,
+          "b": 2,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 6325,
+      "commonName": "ethylene",
+      "molecularFormula": "C2H4",
+      "atoms": [
+        "C",
+        "C",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 2
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 5,
+          "b": 2,
+          "order": 1
+        },
+        {
+          "a": 6,
+          "b": 2,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 24524,
+      "commonName": "molecular fluorine",
+      "molecularFormula": "F2",
+      "atoms": [
+        "F",
+        "F"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 11638,
+      "commonName": "fluoromethane",
+      "molecularFormula": "CH3F",
+      "atoms": [
+        "F",
+        "C",
+        "H",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 3,
+          "b": 2,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 2,
+          "order": 1
+        },
+        {
+          "a": 5,
+          "b": 2,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 712,
+      "commonName": "formaldehyde",
+      "molecularFormula": "CH2O",
+      "atoms": [
+        "O",
+        "C",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 2
+        },
+        {
+          "a": 3,
+          "b": 2,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 2,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 768,
+      "commonName": "hydrogen cyanide",
+      "molecularFormula": "CHN",
+      "atoms": [
+        "N",
+        "C",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 3
+        },
+        {
+          "a": 3,
+          "b": 2,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 784,
+      "commonName": "hydrogen peroxide",
+      "molecularFormula": "H2O2",
+      "atoms": [
+        "O",
+        "O",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 2,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 402,
+      "commonName": "hydrogen sulfide",
+      "molecularFormula": "H2S",
+      "atoms": [
+        "S",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 297,
+      "commonName": "methane",
+      "molecularFormula": "CH4",
+      "atoms": [
+        "C",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 5,
+          "b": 1,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 948,
+      "commonName": "nitrous oxide",
+      "molecularFormula": "N2O",
+      "atoms": [
+        "O",
+        "N",
+        "N"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 3,
+          "b": 2,
+          "order": 3
+        }
+      ]
+    },
+    {
+      "cid": 24823,
+      "commonName": "ozone",
+      "molecularFormula": "O3",
+      "atoms": [
+        "O",
+        "O",
+        "O"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "order": 2
+        }
+      ]
+    },
+    {
+      "cid": 24404,
+      "commonName": "phosphine",
+      "molecularFormula": "H3P",
+      "atoms": [
+        "P",
+        "H",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 1,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 23953,
+      "commonName": "silane",
+      "molecularFormula": "H4Si",
+      "atoms": [
+        "Si",
+        "H",
+        "H",
+        "H",
+        "H"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 4,
+          "b": 1,
+          "order": 1
+        },
+        {
+          "a": 5,
+          "b": 1,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "cid": 1119,
+      "commonName": "sulfur dioxide",
+      "molecularFormula": "O2S",
+      "atoms": [
+        "S",
+        "O",
+        "O"
+      ],
+      "bonds": [
+        {
+          "a": 2,
+          "b": 1,
+          "order": 2
+        },
+        {
+          "a": 3,
+          "b": 1,
+          "order": 2
+        }
+      ]
+    }
+  ]
+}

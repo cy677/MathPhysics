@@ -1,4 +1,5 @@
 import {add, determinant, transform, reflect, rotate, triangleArea, triangleAngles, near} from './math.js';
+import {PLAYGROUND_TARGETS,PLAYGROUND_GUIDES,playgroundQuestion} from './teaching.js';
 const $ = id => document.getElementById(id);
 const saves=window.MathPhysicsProgress.create('jsxgraph-playground',['triangle','mirror','rotate','scale','vectors','linear'].flatMap(id=>Array.from({length:6},(_,i)=>id+'/'+i)),$('save-status'));
 const colors=['#c87d47','#568ba6','#6f9567'];
@@ -20,7 +21,18 @@ const lessons = {
  vectors:['拼箭头','箭头接力','把两个方向箭头首尾相接，找到最后到达的位置。','先走橙色箭头，再走蓝色箭头。换个顺序会到同一处吗？','向量相加可以首尾相接，也可以把横向分量和纵向分量分别相加。箭头可以平移，但方向和长度不能改变。'],
  linear:['变形机','网格变形机','拖动两支单位方向箭头，整张网格就会跟着改变。','比较变形前后的格子，哪些线仍然平行？','一格横向和一格纵向的去向确定了整个线性变换。原点不动。平行四边形的面积倍数等于行列式的绝对值；压成线时面积是0。']
 };
-let board,points=[],mode='triangle',value=1,goal=0,readings={},triangleMode='free',targetMarker=null,selectedPoint=0;
+let board,points=[],mode='triangle',value=1,goal=0,readings={},triangleMode='free',targetMarker=null,selectedPoint=0,hintCount=0;
+let vectorLabelLayout=null;
+const escapeTeaching=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function questionSupport(){return playgroundQuestion(mode,goal%6,points.map(xy),value,triangleMode);}
+function renderTeaching(){
+ const g=PLAYGROUND_GUIDES[mode==='triangle'?'triangle/'+triangleMode:mode],q=questionSupport();
+ $('learn-observe').textContent=g.observe;$('learn-actions').innerHTML=g.actions.map(s=>'<li>'+escapeTeaching(s)+'</li>').join('');
+ $('learn-why').textContent=g.juniorWhy;$('learn-life').textContent=g.life;$('why').textContent=g.seniorWhy;
+ $('question-intent').textContent=q.intent;$('question-hints').innerHTML=q.hints.slice(0,hintCount).map(s=>'<li>'+escapeTeaching(s)+'</li>').join('');
+ $('next-hint').disabled=hintCount>=q.hints.length;$('next-hint').textContent=hintCount>=q.hints.length?'提示已全部展开':'给我下一步提示（'+hintCount+'/'+q.hints.length+'）';
+ $('question-steps').innerHTML=q.steps.map(s=>'<li>'+escapeTeaching(s)+'</li>').join('');$('question-mistakes').innerHTML=q.commonMistakes.map(s=>'<li>'+escapeTeaching(s)+'</li>').join('');
+}
 const xy=p=>[p.X(),p.Y()];
 const fmt=n=>Number.isFinite(n)?Number(n.toFixed(2)).toString():'—';
 const metric=(label,v,wide=false)=>'<div class="metric'+(wide?' metric-wide':'')+'"><span>'+label+'</span><b>'+v+'</b></div>';
@@ -45,6 +57,14 @@ function selectPoint(index){
  updatePointPosition();
 }
 function updatePointPosition(){const p=points[selectedPoint];if(p)$('point-position').textContent='('+xy(p).map(fmt).join(', ')+')';}
+function positionVectorLabels(width){
+ if(mode!=='vectors'||points.length!==2)return;
+ const narrow=width<580;if(vectorLabelLayout===narrow)return;vectorLabelLayout=narrow;
+ // On a narrow grid the initial endpoints are only one cell apart: put their
+ // full labels above/below the endpoints instead of between the two arrows.
+ points[0].setAttribute({label:{offset:narrow?[14,-20]:[12,13],anchorX:'left',anchorY:narrow?'top':'middle'}});
+ points[1].setAttribute({label:{offset:narrow?[14,20]:[12,-16],anchorX:'left',anchorY:narrow?'bottom':'top'}});
+}
 function setLegend(){
  const entries=mode==='triangle'?(triangleMode==='equal-height'?[[colors[2],'圆点 C · 左右拖动'],['#8d9d82','方点 A、B · 固定底边']]:[[colors[0],'实线 · 三角形'],[colors[2],'彩色圆点 · 可拖动']]):mode==='vectors'?[[colors[0],'第一步'],[colors[1],'第二步'],[colors[2],'终点'],['#ba8929','目标环']]:mode==='linear'?[[colors[0],'横向一步'],[colors[1],'纵向一步'],[colors[2],'变形后的格子']]:[[colors[0],'原来的图形'],[colors[1],mode==='mirror'?'镜子里的图形':'变化后的图形']];
  $('legend').innerHTML=entries.map(([color,label])=>'<span><i style="--legend-color:'+color+'"></i>'+label+'</span>').join('');
@@ -56,7 +76,7 @@ function invalidate(){if(!$('feedback').classList.contains('retry'))clearFeedbac
 function create(modeId,checkpoint=null){
  mode=lessons[modeId]?modeId:'triangle';window.__mpReady=false;
  if(board)JXG.JSXGraph.freeBoard(board);
- points=[];value=1;goal=0;targetMarker=null;selectedPoint=0;clearFeedback();
+ points=[];value=1;goal=0;targetMarker=null;selectedPoint=0;vectorLabelLayout=null;clearFeedback();
  const l=lessons[mode];$('title').textContent=l[1];$('intro').textContent=l[2];$('observe').textContent=l[3];$('why').textContent=l[4];$('controls').innerHTML='';
  document.body.dataset.experimentMode=mode;document.title=l[1]+' · 科学小岛';$('experiment').setAttribute('aria-labelledby','tab-'+mode);
  $('readings').classList.toggle('compact-metrics',mode==='triangle'&&triangleMode==='equal-height');
@@ -119,6 +139,7 @@ function create(modeId,checkpoint=null){
   targetMarker.setAttribute({size:12,fillOpacity:.12,strokeColor:'#a67512',strokeWidth:3,label:{offset:[-18,-20],anchorX:'right',anchorY:'top'}});
  }
  if(mode==='vectors'||mode==='linear')points[1].setAttribute({label:{offset:[12,-16],anchorY:'top'}});
+ positionVectorLabels(w);
  points.forEach((p,i)=>{p.on('drag',invalidate);if(!p.visProp.fixed){p.on('down',()=>selectPoint(i));p.on('up',resizeBoard);}});
  $('point-choice').innerHTML=points.map((p,i)=>mode==='triangle'&&triangleMode==='equal-height'&&i<2?'':'<option value="'+i+'">'+p.name+'</option>').join('');
  document.querySelectorAll('[data-move]').forEach(b=>b.disabled=mode==='triangle'&&triangleMode==='equal-height'&&['up','down'].includes(b.dataset.move));
@@ -148,18 +169,12 @@ function update(){
  $('readings').innerHTML=html;
  updatePointPosition();
  if($('feedback').classList.contains('retry'))$('feedback').textContent=retryHint(ps);
+ renderTeaching();
 }
-const challengeSets={
- triangle:[6,4,8,10,12,3],
- mirror:[[3,2],[2,3],[4,1],[1,4],[-2,2],[0,3]],
- rotate:[180,270,90,360,45,135],
- scale:[4,2.25,1,.25,6.25,1.5625],
- vectors:[[4,3],[3,4],[5,2],[2,5],[1,4],[4,1]],
- linear:[[[2,0],[0,1]],[[1,0],[1,1]],[[0,1],[-1,0]],[[1,0],[0,2]],[[1,.5],[0,1]],[[1,0],[2,0]]]
-};
+const challengeSets=PLAYGROUND_TARGETS;
 function challengeTarget(){const t=challengeSets[mode][goal%challengeSets[mode].length];return mode==='mirror'||mode==='vectors'?t:null;}
 function setGoal(){
- clearFeedback();const i=goal%challengeSets[mode].length,t=challengeSets[mode][i];
+ clearFeedback();hintCount=0;$('question-solution').open=false;const i=goal%challengeSets[mode].length,t=challengeSets[mode][i];
  const text={
   triangle:()=>`拼一个面积为${t}的三角形。`,
   mirror:()=>`把A的镜像点移到（${t[0]}，${t[1]}）。`,
@@ -221,13 +236,14 @@ $('tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>create(b.dataset.m
 $('tabs').onkeydown=e=>{const tabs=[...$('tabs').querySelectorAll('button')],i=tabs.indexOf(document.activeElement);if(i<0)return;const next={ArrowRight:(i+1)%tabs.length,ArrowLeft:(i+tabs.length-1)%tabs.length,Home:0,End:tabs.length-1}[e.key];if(next===undefined)return;e.preventDefault();create(tabs[next].dataset.mode);tabs[next].focus();};
 $('point-choice').onchange=e=>selectPoint(Number(e.target.value));
 $('reset').onclick=()=>create(mode);$('check').onclick=check;$('new-goal').onclick=()=>{goal++;setGoal();};
+$('next-hint').onclick=()=>{hintCount=Math.min(hintCount+1,3);renderTeaching();};
 document.querySelectorAll('[data-move]').forEach(b=>b.onclick=()=>{const p=points[Number($('point-choice').value)||0],v={left:[-.25,0],right:[.25,0],up:[0,.25],down:[0,-.25]}[b.dataset.move];p.setPosition(JXG.COORDS_BY_USER,add(xy(p),v));invalidate();board.update();resizeBoard();});
 $('back-home').onclick=e=>{if(parent!==window){e.preventDefault();parent.postMessage({type:'mp-close'},location.origin);}};
-window.__playground={get board(){return board;},get points(){return points;},get mode(){return mode;},get readings(){return readings;},get triangleMode(){return triangleMode;},get targetMarker(){return targetMarker;},create,check};
+window.__playground={get board(){return board;},get points(){return points;},get mode(){return mode;},get readings(){return readings;},get triangleMode(){return triangleMode;},get targetMarker(){return targetMarker;},get question(){return questionSupport();},create,check};
 let resizeFrame;
 const checkpoint=saves.resume(),requested=new URLSearchParams(location.search).get('mode'),savedMode=checkpoint?.levelId.split('/')[0];
 if(checkpoint&&(!requested||requested===savedMode)&&['free','equal-height'].includes(checkpoint.triangleMode))triangleMode=checkpoint.triangleMode;
 try{create(requested||savedMode||'triangle',checkpoint);}catch(e){$('intro').textContent='画板暂时没有打开，请重新加载页面。';console.error(e);}
 window.render_game_to_text=()=>JSON.stringify({mode,goal:goal%challengeSets[mode].length,triangleMode,value,points:points.map(xy),readings,save:saves.snapshot()});
-function resizeBoard(){cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{if(!board)return;const w=$('board').clientWidth,h=$('board').clientHeight;if(w<1||h<1)return;board.resizeContainer(w,h,true);board.setBoundingBox(viewBounds(w,h),false);});}
+function resizeBoard(){cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{if(!board)return;const w=$('board').clientWidth,h=$('board').clientHeight;if(w<1||h<1)return;board.resizeContainer(w,h,true);positionVectorLabels(w);board.setBoundingBox(viewBounds(w,h),false);});}
 if(typeof ResizeObserver!=='undefined')new ResizeObserver(resizeBoard).observe($('board'));else window.addEventListener('resize',resizeBoard);

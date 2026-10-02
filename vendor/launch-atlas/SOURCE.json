@@ -1,0 +1,34 @@
+{
+  "repository": "https://github.com/exiztinz/rocket-launch-simulator",
+  "commit": "b8b570cd2f25b0531724c776631160c48bba06fd",
+  "retrievedUtc": "2026-10-01T07:10:55.7346329Z",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/exiztinz/rocket-launch-simulator/b8b570cd2f25b0531724c776631160c48bba06fd/LICENSE",
+      "bytes": 1071,
+      "sha256": "d5b282a0c1faec2823e42e3eae6871b8c19a5608b5f654e2a237fa87dcbec8ac"
+    },
+    {
+      "path": "src/simulation/flightMath.js",
+      "url": "https://raw.githubusercontent.com/exiztinz/rocket-launch-simulator/b8b570cd2f25b0531724c776631160c48bba06fd/src/simulation/flightMath.js",
+      "bytes": 2135,
+      "sha256": "99b185b06dca9f4e6cfea7a9e6fb6a6d0d6cc959f1d2504b08a6fb2d31eb01de"
+    },
+    {
+      "path": "src/simulation/trajectory.js",
+      "url": "https://raw.githubusercontent.com/exiztinz/rocket-launch-simulator/b8b570cd2f25b0531724c776631160c48bba06fd/src/simulation/trajectory.js",
+      "bytes": 16177,
+      "sha256": "9d8a30b579e80abb4af2be089299437e36d1d5f589eeb6bb5de16b33cae15ac2"
+    },
+    {
+      "path": "src/simulation/playback.js",
+      "url": "https://raw.githubusercontent.com/exiztinz/rocket-launch-simulator/b8b570cd2f25b0531724c776631160c48bba06fd/src/simulation/playback.js",
+      "bytes": 1423,
+      "sha256": "31d3bd670b9c15c362bfc834933342ad0d4bc5d375a12d8cf765e90a1a99c569"
+    }
+  ],
+  "excluded": [
+    "all upstream textures, models, fonts, Three, Chart, presets, live APIs"
+  ]
+}

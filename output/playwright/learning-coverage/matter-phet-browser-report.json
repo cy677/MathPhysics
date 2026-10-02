@@ -1,0 +1,1386 @@
+{
+  "passed": true,
+  "matter": [
+    {
+      "id": "matter-airFriction",
+      "control": "air-drag",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        false,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 7,
+      "screenshot": "output/playwright/learning-coverage/matter-airFriction-desktop.png"
+    },
+    {
+      "id": "matter-friction",
+      "control": "surface-friction",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 10,
+      "screenshot": "output/playwright/learning-coverage/matter-friction-desktop.png"
+    },
+    {
+      "id": "matter-staticFriction",
+      "control": "static-grip",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        false,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 11,
+      "screenshot": "output/playwright/learning-coverage/matter-staticFriction-desktop.png"
+    },
+    {
+      "id": "matter-restitution",
+      "control": "bounce",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 9,
+      "screenshot": "output/playwright/learning-coverage/matter-restitution-desktop.png"
+    },
+    {
+      "id": "matter-gravity",
+      "control": "gravity-direction",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 59,
+      "screenshot": "output/playwright/learning-coverage/matter-gravity-desktop.png"
+    },
+    {
+      "id": "matter-timescale",
+      "control": "clock-rate",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        false,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 73,
+      "screenshot": "output/playwright/learning-coverage/matter-timescale-desktop.png"
+    },
+    {
+      "id": "matter-bridge",
+      "control": "bridge-load",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 35,
+      "screenshot": "output/playwright/learning-coverage/matter-bridge-desktop.png"
+    },
+    {
+      "id": "matter-car",
+      "control": "wheel-spin",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 13,
+      "screenshot": "output/playwright/learning-coverage/matter-car-desktop.png"
+    },
+    {
+      "id": "matter-catapult",
+      "control": "catapult-mass",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        false,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 11,
+      "screenshot": "output/playwright/learning-coverage/matter-catapult-desktop.png"
+    },
+    {
+      "id": "matter-slingshot",
+      "control": "pull-distance",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 37,
+      "screenshot": "output/playwright/learning-coverage/matter-slingshot-desktop.png"
+    },
+    {
+      "id": "matter-newtonsCradle",
+      "control": "cradle-count",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 12,
+      "screenshot": "output/playwright/learning-coverage/matter-newtonsCradle-desktop.png"
+    },
+    {
+      "id": "matter-doublePendulum",
+      "control": "pendulum-angle",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 2,
+      "screenshot": "output/playwright/learning-coverage/matter-doublePendulum-desktop.png"
+    },
+    {
+      "id": "matter-wreckingBall",
+      "control": "wreck-angle",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 55,
+      "screenshot": "output/playwright/learning-coverage/matter-wreckingBall-desktop.png"
+    },
+    {
+      "id": "matter-gyro",
+      "control": "tilt-direction",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 54,
+      "screenshot": "output/playwright/learning-coverage/matter-gyro-desktop.png"
+    },
+    {
+      "id": "matter-mixed",
+      "control": "shape-launch",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 54,
+      "screenshot": "output/playwright/learning-coverage/matter-mixed-desktop.png"
+    },
+    {
+      "id": "matter-stack",
+      "control": "stack-support",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 54,
+      "screenshot": "output/playwright/learning-coverage/matter-stack-desktop.png"
+    },
+    {
+      "id": "matter-circleStack",
+      "control": "circle-gap",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 104,
+      "screenshot": "output/playwright/learning-coverage/matter-circleStack-desktop.png"
+    },
+    {
+      "id": "matter-compound",
+      "control": "compound-turn",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 3,
+      "screenshot": "output/playwright/learning-coverage/matter-compound-desktop.png"
+    },
+    {
+      "id": "matter-compoundStack",
+      "control": "cross-support",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 76,
+      "screenshot": "output/playwright/learning-coverage/matter-compoundStack-desktop.png"
+    },
+    {
+      "id": "matter-pyramid",
+      "control": "pyramid-gap",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 68,
+      "screenshot": "output/playwright/learning-coverage/matter-pyramid-desktop.png"
+    },
+    {
+      "id": "matter-avalanche",
+      "control": "avalanche-slope",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        false,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 103,
+      "screenshot": "output/playwright/learning-coverage/matter-avalanche-desktop.png"
+    },
+    {
+      "id": "matter-ballPool",
+      "control": "pool-kick",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 84,
+      "screenshot": "output/playwright/learning-coverage/matter-ballPool-desktop.png"
+    },
+    {
+      "id": "matter-rounded",
+      "control": "rounded-angle",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 12,
+      "screenshot": "output/playwright/learning-coverage/matter-rounded-desktop.png"
+    },
+    {
+      "id": "matter-concave",
+      "control": "concave-turn",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 28,
+      "screenshot": "output/playwright/learning-coverage/matter-concave-desktop.png"
+    },
+    {
+      "id": "matter-svg",
+      "control": "svg-hulls",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 9,
+      "screenshot": "output/playwright/learning-coverage/matter-svg-desktop.png"
+    },
+    {
+      "id": "matter-terrain",
+      "control": "terrain-bounce",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 163,
+      "screenshot": "output/playwright/learning-coverage/matter-terrain-desktop.png"
+    },
+    {
+      "id": "matter-cloth",
+      "control": "cloth-lift",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 243,
+      "screenshot": "output/playwright/learning-coverage/matter-cloth-desktop.png"
+    },
+    {
+      "id": "matter-softBody",
+      "control": "soft-stiffness",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 69,
+      "screenshot": "output/playwright/learning-coverage/matter-softBody-desktop.png"
+    },
+    {
+      "id": "matter-ragdoll",
+      "control": "ragdoll-arm",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 69,
+      "screenshot": "output/playwright/learning-coverage/matter-ragdoll-desktop.png"
+    },
+    {
+      "id": "matter-chains",
+      "control": "chain-pull",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 32,
+      "screenshot": "output/playwright/learning-coverage/matter-chains-desktop.png"
+    },
+    {
+      "id": "matter-constraints",
+      "control": "constraint-stiffness",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        false,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 17,
+      "screenshot": "output/playwright/learning-coverage/matter-constraints-desktop.png"
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "control": "collision-mask",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        false,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 49,
+      "screenshot": "output/playwright/learning-coverage/matter-collisionFiltering-desktop.png"
+    },
+    {
+      "id": "matter-compositeManipulation",
+      "control": "composite-edit",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 20,
+      "screenshot": "output/playwright/learning-coverage/matter-compositeManipulation-desktop.png"
+    },
+    {
+      "id": "matter-events",
+      "control": "collision-event",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 40,
+      "screenshot": "output/playwright/learning-coverage/matter-events-desktop.png"
+    },
+    {
+      "id": "matter-manipulation",
+      "control": "body-edit",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 12,
+      "screenshot": "output/playwright/learning-coverage/matter-manipulation-desktop.png"
+    },
+    {
+      "id": "matter-raycasting",
+      "control": "ray-endpoint",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 53,
+      "screenshot": "output/playwright/learning-coverage/matter-raycasting-desktop.png"
+    },
+    {
+      "id": "matter-remove",
+      "control": "world-edit",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 54,
+      "screenshot": "output/playwright/learning-coverage/matter-remove-desktop.png"
+    },
+    {
+      "id": "matter-renderResize",
+      "control": "canvas-size",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 54,
+      "screenshot": "output/playwright/learning-coverage/matter-renderResize-desktop.png"
+    },
+    {
+      "id": "matter-sensors",
+      "control": "sensor-solid",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        false,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 3,
+      "screenshot": "output/playwright/learning-coverage/matter-sensors-desktop.png"
+    },
+    {
+      "id": "matter-sleeping",
+      "control": "sleep-state",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 40,
+      "screenshot": "output/playwright/learning-coverage/matter-sleeping-desktop.png"
+    },
+    {
+      "id": "matter-sprites",
+      "control": "sprite-visible",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 44,
+      "screenshot": "output/playwright/learning-coverage/matter-sprites-desktop.png"
+    },
+    {
+      "id": "matter-stats",
+      "control": "stats-load",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 121,
+      "screenshot": "output/playwright/learning-coverage/matter-stats-desktop.png"
+    },
+    {
+      "id": "matter-stress",
+      "control": "stress-gap",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 274,
+      "screenshot": "output/playwright/learning-coverage/matter-stress-desktop.png"
+    },
+    {
+      "id": "matter-stress2",
+      "control": "stress2-base",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 454,
+      "screenshot": "output/playwright/learning-coverage/matter-stress2-desktop.png"
+    },
+    {
+      "id": "matter-stress3",
+      "control": "stress3-drag",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        false,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 688,
+      "screenshot": "output/playwright/learning-coverage/matter-stress3-desktop.png"
+    },
+    {
+      "id": "matter-stress4",
+      "control": "stress4-gravity",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 1291,
+      "screenshot": "output/playwright/learning-coverage/matter-stress4-desktop.png"
+    },
+    {
+      "id": "matter-substep",
+      "control": "substeps",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 6,
+      "screenshot": "output/playwright/learning-coverage/matter-substep-desktop.png"
+    },
+    {
+      "id": "matter-views",
+      "control": "view-pan",
+      "initialPaused": true,
+      "realPause": true,
+      "singleStep": true,
+      "finiteSteps": true,
+      "actionChanges": [
+        true,
+        true
+      ],
+      "resetReproducible": true,
+      "bodyCount": 44,
+      "screenshot": "output/playwright/learning-coverage/matter-views-desktop.png"
+    }
+  ],
+  "phet": [
+    {
+      "id": "phet-forces-and-motion-basics",
+      "entry": "forces-and-motion-basics",
+      "screens": [
+        "phet-forces-and-motion-basics/net-force",
+        "phet-forces-and-motion-basics/motion",
+        "phet-forces-and-motion-basics/friction",
+        "phet-forces-and-motion-basics/acceleration"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true,
+      "keyboardGuide": true
+    },
+    {
+      "id": "phet-energy-skate-park-basics",
+      "entry": "energy-skate-park-basics",
+      "screens": [
+        "phet-energy-skate-park-basics/intro",
+        "phet-energy-skate-park-basics/friction",
+        "phet-energy-skate-park-basics/playground"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true,
+      "keyboardGuide": true
+    },
+    {
+      "id": "phet-area-builder",
+      "entry": "area-builder",
+      "screens": [
+        "phet-area-builder/explore",
+        "phet-area-builder/game"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true,
+      "keyboardGuide": true
+    },
+    {
+      "id": "phet-vector-addition",
+      "entry": "vector-addition",
+      "screens": [
+        "phet-vector-addition/explore-1d",
+        "phet-vector-addition/explore-2d",
+        "phet-vector-addition/lab",
+        "phet-vector-addition/equations"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true,
+      "keyboardGuide": true
+    },
+    {
+      "id": "phet-fractions-intro",
+      "entry": "fractions-intro",
+      "screens": [
+        "phet-fractions-intro/intro",
+        "phet-fractions-intro/game",
+        "phet-fractions-intro/lab"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true,
+      "keyboardGuide": true
+    },
+    {
+      "id": "phet-fraction-matcher",
+      "entry": "fraction-matcher",
+      "screens": [
+        "phet-fraction-matcher/fractions",
+        "phet-fraction-matcher/mixed-numbers"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true,
+      "keyboardGuide": true
+    },
+    {
+      "id": "phet-balancing-act",
+      "entry": "balancing-act",
+      "screens": [
+        "phet-balancing-act/intro",
+        "phet-balancing-act/balance-lab",
+        "phet-balancing-act/game"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true,
+      "keyboardGuide": true
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc",
+      "entry": "circuit-construction-kit-dc",
+      "screens": [
+        "phet-circuit-construction-kit-dc/intro",
+        "phet-circuit-construction-kit-dc/lab"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true,
+      "keyboardGuide": true
+    },
+    {
+      "id": "phet-states-of-matter-basics",
+      "entry": "states-of-matter-basics",
+      "screens": [
+        "phet-states-of-matter-basics/states",
+        "phet-states-of-matter-basics/phase-changes"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true,
+      "keyboardGuide": true
+    },
+    {
+      "id": "phet-build-a-molecule",
+      "entry": "build-a-molecule",
+      "screens": [
+        "phet-build-a-molecule/single-molecule",
+        "phet-build-a-molecule/multiple-molecules",
+        "phet-build-a-molecule/playground"
+      ],
+      "standaloneGuide": true,
+      "currentScreenUpdates": true,
+      "hostGuide": true,
+      "keyboardGuide": true
+    }
+  ],
+  "pedagogicalChecks": [
+    {
+      "id": "matter-airFriction",
+      "check": "at equal simulated time, original drag order gives decreasing fall distance",
+      "values": [
+        227.92674883962752,
+        183.76742508286532,
+        159.39311229021362
+      ]
+    },
+    {
+      "id": "matter-sensors",
+      "check": "sensor registers passage while solid variant blocks",
+      "sensor": {
+        "ball": 545.1919975215734,
+        "starts": 2
+      },
+      "solid": 245.18803343143205
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "screenshots": [
+    {
+      "id": "matter-airFriction",
+      "path": "output/playwright/learning-coverage/matter-airFriction-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-friction",
+      "path": "output/playwright/learning-coverage/matter-friction-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-staticFriction",
+      "path": "output/playwright/learning-coverage/matter-staticFriction-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-restitution",
+      "path": "output/playwright/learning-coverage/matter-restitution-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-gravity",
+      "path": "output/playwright/learning-coverage/matter-gravity-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-timescale",
+      "path": "output/playwright/learning-coverage/matter-timescale-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-bridge",
+      "path": "output/playwright/learning-coverage/matter-bridge-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-car",
+      "path": "output/playwright/learning-coverage/matter-car-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-catapult",
+      "path": "output/playwright/learning-coverage/matter-catapult-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-slingshot",
+      "path": "output/playwright/learning-coverage/matter-slingshot-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-newtonsCradle",
+      "path": "output/playwright/learning-coverage/matter-newtonsCradle-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-doublePendulum",
+      "path": "output/playwright/learning-coverage/matter-doublePendulum-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-wreckingBall",
+      "path": "output/playwright/learning-coverage/matter-wreckingBall-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-gyro",
+      "path": "output/playwright/learning-coverage/matter-gyro-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-mixed",
+      "path": "output/playwright/learning-coverage/matter-mixed-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-stack",
+      "path": "output/playwright/learning-coverage/matter-stack-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-circleStack",
+      "path": "output/playwright/learning-coverage/matter-circleStack-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-compound",
+      "path": "output/playwright/learning-coverage/matter-compound-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-compoundStack",
+      "path": "output/playwright/learning-coverage/matter-compoundStack-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-pyramid",
+      "path": "output/playwright/learning-coverage/matter-pyramid-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-avalanche",
+      "path": "output/playwright/learning-coverage/matter-avalanche-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-ballPool",
+      "path": "output/playwright/learning-coverage/matter-ballPool-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-rounded",
+      "path": "output/playwright/learning-coverage/matter-rounded-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-concave",
+      "path": "output/playwright/learning-coverage/matter-concave-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-svg",
+      "path": "output/playwright/learning-coverage/matter-svg-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-terrain",
+      "path": "output/playwright/learning-coverage/matter-terrain-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-cloth",
+      "path": "output/playwright/learning-coverage/matter-cloth-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-softBody",
+      "path": "output/playwright/learning-coverage/matter-softBody-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-ragdoll",
+      "path": "output/playwright/learning-coverage/matter-ragdoll-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-chains",
+      "path": "output/playwright/learning-coverage/matter-chains-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-constraints",
+      "path": "output/playwright/learning-coverage/matter-constraints-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "path": "output/playwright/learning-coverage/matter-collisionFiltering-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-compositeManipulation",
+      "path": "output/playwright/learning-coverage/matter-compositeManipulation-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-events",
+      "path": "output/playwright/learning-coverage/matter-events-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-manipulation",
+      "path": "output/playwright/learning-coverage/matter-manipulation-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-raycasting",
+      "path": "output/playwright/learning-coverage/matter-raycasting-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-remove",
+      "path": "output/playwright/learning-coverage/matter-remove-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-renderResize",
+      "path": "output/playwright/learning-coverage/matter-renderResize-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-sensors",
+      "path": "output/playwright/learning-coverage/matter-sensors-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-sleeping",
+      "path": "output/playwright/learning-coverage/matter-sleeping-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-sprites",
+      "path": "output/playwright/learning-coverage/matter-sprites-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-stats",
+      "path": "output/playwright/learning-coverage/matter-stats-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-stress",
+      "path": "output/playwright/learning-coverage/matter-stress-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-stress2",
+      "path": "output/playwright/learning-coverage/matter-stress2-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-stress3",
+      "path": "output/playwright/learning-coverage/matter-stress3-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-stress4",
+      "path": "output/playwright/learning-coverage/matter-stress4-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-substep",
+      "path": "output/playwright/learning-coverage/matter-substep-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-views",
+      "path": "output/playwright/learning-coverage/matter-views-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "matter-airFriction",
+      "path": "output/playwright/learning-coverage/matter-airFriction-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "matter-bridge",
+      "path": "output/playwright/learning-coverage/matter-bridge-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "matter-slingshot",
+      "path": "output/playwright/learning-coverage/matter-slingshot-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "matter-cloth",
+      "path": "output/playwright/learning-coverage/matter-cloth-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "path": "output/playwright/learning-coverage/matter-collisionFiltering-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "matter-substep",
+      "path": "output/playwright/learning-coverage/matter-substep-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "matter-views",
+      "path": "output/playwright/learning-coverage/matter-views-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-net-force",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-motion",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-friction",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-acceleration",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-host",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-host",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-intro",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-friction",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-playground",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-host",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-area-builder-explore",
+      "path": "output/playwright/learning-coverage/phet-area-builder-explore-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-area-builder-game",
+      "path": "output/playwright/learning-coverage/phet-area-builder-game-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-area-builder-host",
+      "path": "output/playwright/learning-coverage/phet-area-builder-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-area-builder-host",
+      "path": "output/playwright/learning-coverage/phet-area-builder-host-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "phet-vector-addition-explore-1d",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-explore-1d-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-vector-addition-explore-2d",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-explore-2d-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-vector-addition-lab",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-lab-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-vector-addition-equations",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-equations-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-vector-addition-host",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fractions-intro-intro",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-intro-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fractions-intro-game",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-game-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fractions-intro-lab",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-lab-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fractions-intro-host",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fraction-matcher-fractions",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-fractions-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fraction-matcher-mixed-numbers",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-fraction-matcher-host",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-balancing-act-intro",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-intro-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-balancing-act-balance-lab",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-balance-lab-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-balancing-act-game",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-game-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-balancing-act-host",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-intro",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-lab",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-host",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-states-of-matter-basics-states",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-states-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-states-of-matter-basics-phase-changes",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-phase-changes-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-states-of-matter-basics-host",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-states-of-matter-basics-host",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-host-mobile.png",
+      "viewport": "mobile"
+    },
+    {
+      "id": "phet-build-a-molecule-single-molecule",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-build-a-molecule-multiple-molecules",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-build-a-molecule-playground",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-playground-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "phet-build-a-molecule-host",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-host-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "tangram-legacy",
+      "path": "output/playwright/learning-coverage/tangram-legacy-desktop.png",
+      "viewport": "desktop"
+    },
+    {
+      "id": "tangram-legacy",
+      "path": "output/playwright/learning-coverage/tangram-legacy-mobile.png",
+      "viewport": "mobile"
+    }
+  ],
+  "base": "http://127.0.0.1:61172/MathPhysics/",
+  "hostLifecycle": {
+    "returned": true,
+    "switchedWithoutNavigation": true,
+    "resetWithoutNavigation": true,
+    "singlePanel": true
+  },
+  "legacyTangram": {
+    "fourPartGuide": true,
+    "keyboardMovement": true,
+    "screenshots": [
+      "output/playwright/learning-coverage/tangram-legacy-desktop.png",
+      "output/playwright/learning-coverage/tangram-legacy-mobile.png"
+    ]
+  },
+  "browserClosed": true,
+  "serverClosed": true
+}

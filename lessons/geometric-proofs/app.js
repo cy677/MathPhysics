@@ -5,7 +5,7 @@ import {draw} from './draw.js';
 const el=id=>document.getElementById(id);
 const saveStatus=document.createElement('p');saveStatus.id='save-status';saveStatus.className='mp-save-status';saveStatus.setAttribute('role','status');el('feedback').before(saveStatus);
 const saves=window.MathPhysicsProgress.create('geometry-proofs',LESSONS.flatMap(l=>[l.id+'/0',l.id+'/1']),saveStatus);
-let current,values,progress=0,animation=0,startTime=0,selectedStep=-1,questionVariant=0;
+let current,values,progress=0,animation=0,startTime=0,selectedStep=-1,questionVariant=0,hintCount=0;
 const remembered=new Map();
 const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function visibleLessons(){return LESSONS.filter(l=>(el('group-filter').value==='all'||l.group===el('group-filter').value)&&(el('grade-filter').value==='all'||l.grades.includes(Number(el('grade-filter').value))));}
@@ -27,13 +27,19 @@ function filterLessons(){
 }
 function navigate(offset){const list=visibleLessons(),index=list.indexOf(current);if(index>=0&&list[index+offset])select(list[index+offset].id);}
 function stop(){cancelAnimationFrame(animation);animation=0;el('play').textContent='▶ 播放';}
-function clearAnswer(){el('answer').value='';el('feedback').textContent='';el('feedback').className='';}
+function clearAnswer(){el('answer').value='';el('feedback').textContent='';el('feedback').className='';hintCount=0;el('question-solution').open=false;}
+function renderTeaching(q){
+ const g=current.teaching;el('learn-observe').textContent=g.observe;el('learn-actions').innerHTML=g.actions.map(s=>'<li>'+safe(s)+'</li>').join('');el('learn-why').textContent=g.juniorWhy;el('learn-life').textContent=g.life;
+ el('question-intent').textContent=q.intent;el('question-hints').innerHTML=q.hints.slice(0,hintCount).map(s=>'<li>'+safe(s)+'</li>').join('');el('next-hint').disabled=hintCount>=q.hints.length;el('next-hint').textContent=hintCount>=q.hints.length?'提示已全部展开':'给我下一步提示（'+hintCount+'/'+q.hints.length+'）';
+ el('question-steps').innerHTML=q.steps.map(s=>'<li>'+safe(s)+'</li>').join('');el('question-mistakes').innerHTML=q.commonMistakes.map(s=>'<li>'+safe(s)+'</li>').join('');
+}
 function render(){
  el('drawing').innerHTML=draw(current.id,values,progress);
  el('timeline').value=Math.round(progress*100);el('progress-label').textContent=Math.round(progress*100)+'%';
  const s=Math.min(2,Math.floor(progress*2+.02));
  if(s!==selectedStep){selectedStep=s;el('explanation').textContent=current.steps[s];document.querySelectorAll('[data-step]').forEach(b=>b.setAttribute('aria-current',String(Number(b.dataset.step)===s)));}
  const q=questionVariant?extensionQuestion(current,values):question(current,values);el('formula').textContent=current.formula;el('result').textContent=fmt(q.answer)+' '+q.units;el('question').textContent=q.prompt;
+ renderTeaching(q);
  saves.show(current.id+'/'+questionVariant);
 }
 function parameters(){
@@ -66,7 +72,8 @@ el('new-example').onclick=()=>{stop();const next={};for(const p of current.param
 el('formula-toggle').onchange=()=>document.body.classList.toggle('no-formula',!el('formula-toggle').checked);
 el('practice').addEventListener('submit',event=>{event.preventDefault();const q=questionVariant?extensionQuestion(current,values):question(current,values),answer=checkAnswer(el('answer').value,q.answer),feedback=el('feedback');feedback.className=answer===true?'good':'error';feedback.textContent=answer===null?'请填有限数值或分数，例如 12、3.14、1/2。':answer?'本题数值核对正确。再说一说：图形为什么能这样分解？':'再检查对应的底、高或缩放倍数。可以打开下方的证明依据。';});
 el('practice').addEventListener('submit',()=>{if(el('feedback').className==='good')saves.complete(current.id+'/'+questionVariant,{values:{...values}});});
-el('reveal').onclick=()=>{const q=questionVariant?extensionQuestion(current,values):question(current,values);el('feedback').className='';el('feedback').textContent=questionVariant?'这道扩展题的参考答案：'+fmt(q.answer)+' '+q.units+'。请结合上方动态图形说明数量关系。':current.formula+'；代入：'+calculation(current.id,values)+' '+q.units+'。试着改变一个条件，再算一算。';};
+el('next-hint').onclick=()=>{hintCount=Math.min(3,hintCount+1);render();};
+el('reveal').onclick=()=>{el('question-solution').open=true;el('question-solution').scrollIntoView({block:'nearest',behavior:'smooth'});};
 el('previous').onclick=()=>navigate(-1);el('next').onclick=()=>navigate(1);
 window.addEventListener('pagehide',stop);document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
 if(innerWidth<=1000)el('directory').open=false;
@@ -76,6 +83,7 @@ if(savedLesson&&(!requested||requested===savedLesson))remembered.set(savedLesson
 select(requested||savedLesson,false);
 if(current.id===savedLesson){questionVariant=Number(checkpoint.levelId.split('/')[1]);el('new-question').textContent=questionVariant?'回到基础问法':'换一种问法';render();}
 window.render_game_to_text=()=>JSON.stringify({lesson:current?.id,variant:questionVariant,values,progress,save:saves.snapshot()});
+window.__geometryLearning={get question(){return questionVariant?extensionQuestion(current,values):question(current,values);},get teaching(){return current.teaching;}};
 
 const homeLink=el('back-home');
 if(homeLink)homeLink.addEventListener('click',event=>{if(parent!==window){event.preventDefault();parent.postMessage({type:'mp-close'},location.origin);}});

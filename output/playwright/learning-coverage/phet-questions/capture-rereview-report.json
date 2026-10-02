@@ -1,0 +1,3382 @@
+{
+  "passed": true,
+  "sourceHashesMatch": true,
+  "checks": [
+    {
+      "id": "fractions-intro/shape/level-3",
+      "kind": "level",
+      "originalPath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-3.png",
+      "originalSHA256": "dd8cbfeb29e470f4ef7270cb31b79b62ddba26ee96981a29179d44d94c6459e7",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-3-rereview.png",
+      "sha256": "8a7991d982aeef7e7fa713932c8c9bca8b4bb3be4845fce8a1ead4f5e30edc4f",
+      "question": {
+        "id": "fractions-intro/shape/level-3/native-1",
+        "contextId": "fractions-intro/shape/level-3",
+        "familyId": "fractions-intro/shape-BAR",
+        "simId": "fractions-intro",
+        "screen": 1,
+        "level": 3,
+        "mode": "shape",
+        "fingerprint": "6992161f",
+        "family": "shape-BAR",
+        "params": {
+          "mode": "shape",
+          "type": "BAR",
+          "targets": [
+            {
+              "n": 4,
+              "d": 4,
+              "index": 0,
+              "done": false
+            },
+            {
+              "n": 2,
+              "d": 6,
+              "index": 1,
+              "done": false
+            },
+            {
+              "n": 2,
+              "d": 3,
+              "index": 2,
+              "done": false
+            }
+          ],
+          "pool": [
+            {
+              "key": 1,
+              "count": 1
+            },
+            {
+              "key": 2,
+              "count": 1
+            },
+            {
+              "key": 3,
+              "count": 3
+            },
+            {
+              "key": 6,
+              "count": 9
+            }
+          ],
+          "maxContainers": 1,
+          "plans": [
+            {
+              "counts": [
+                {
+                  "d": 1,
+                  "count": 1
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 1
+                  }
+                ]
+              ]
+            },
+            {
+              "counts": [
+                {
+                  "d": 3,
+                  "count": 1
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 3
+                  }
+                ]
+              ]
+            },
+            {
+              "counts": [
+                {
+                  "d": 2,
+                  "count": 1
+                },
+                {
+                  "d": 6,
+                  "count": 1
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 2
+                  },
+                  {
+                    "d": 6
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "intent": "本轮用条形分数拼块完成第1框4/4、第2框2/6、第3框2/3。已经完成0框，余下材料有1块1/1、1块1/2、3块1/3、9块1/6。",
+        "hints": [
+          "先看第1框4/4、第2框2/6、第3框2/3，每个目标都以同样大小的1个整体为单位。",
+          "可用的小块是1/1、1/2、1/3、1/6；不同大小的小块先换成相同的单位再相加。",
+          "选择的小块加起来要等于目标；超过1个整体时，分到多个容器，每个容器不超过1。"
+        ],
+        "steps": [
+          "第1框，目标4/4：取1块1/1；1×1/1 = 4/4。",
+          "该框第1个容器放1/1，这一容器不超过1个整体。",
+          "第2框，目标2/6：取1块1/3；1×1/3 = 2/6。",
+          "该框第1个容器放1/3，这一容器不超过1个整体。",
+          "第3框，目标2/3：取1块1/2、1块1/6；1×1/2 + 1×1/6 = 2/3。",
+          "该框第1个容器放1/2 + 1/6，这一容器不超过1个整体。",
+          "按这份分配逐框摆好并拖到对应目标；同一小块或数字卡不能重复使用。"
+        ],
+        "commonMistakes": [
+          "把目标4/4的分母当作要拿的块数；分母表示每份大小，分子才表示份数。",
+          "不同分母不能直接把分母相加；每个容器必须以同一个整体为单位。",
+          "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。"
+        ]
+      },
+      "nativeValues": [
+        {
+          "n": 4,
+          "d": 4
+        },
+        {
+          "n": 2,
+          "d": 6
+        },
+        {
+          "n": 2,
+          "d": 3
+        }
+      ],
+      "passed": true,
+      "capture": {
+        "method": "page screenshot with an explicit clip; no implicit element scrolling",
+        "viewport": {
+          "width": 1440,
+          "height": 1100
+        },
+        "clip": {
+          "x": 1093,
+          "y": 12,
+          "width": 335,
+          "height": 966
+        },
+        "panel": {
+          "x": 1093,
+          "y": 12,
+          "width": 335,
+          "height": 965.5,
+          "top": 12,
+          "right": 1428,
+          "bottom": 977.5,
+          "left": 1093
+        },
+        "wholePanelVisible": true,
+        "allFieldsInRail": true,
+        "lastMistakeLineVisible": true,
+        "before": {
+          "windowScroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rail": {
+            "rect": {
+              "x": 1080,
+              "y": 0,
+              "width": 360,
+              "height": 1100,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1100,
+              "left": 1080
+            },
+            "scrollHeight": 1100,
+            "clientHeight": 1100,
+            "scrollTop": 0,
+            "scrollLeft": 0
+          },
+          "panel": {
+            "x": 1093,
+            "y": 12,
+            "width": 335,
+            "height": 965.5,
+            "top": 12,
+            "right": 1428,
+            "bottom": 977.5,
+            "left": 1093
+          },
+          "fields": {
+            "intent": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "hints": {
+              "x": 1108,
+              "y": 182.5625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 182.5625,
+              "right": 1413,
+              "bottom": 326.90625,
+              "left": 1108
+            },
+            "steps": {
+              "x": 1108,
+              "y": 430.296875,
+              "width": 305,
+              "height": 343.46875,
+              "top": 430.296875,
+              "right": 1413,
+              "bottom": 773.765625,
+              "left": 1108
+            },
+            "commonMistakes": {
+              "x": 1108,
+              "y": 812.15625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 812.15625,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1108
+            }
+          },
+          "allFieldsInRail": true,
+          "title": {
+            "text": "本题学习",
+            "rect": {
+              "x": 1108,
+              "y": 25,
+              "width": 305,
+              "height": 22.390625,
+              "top": 25,
+              "right": 1413,
+              "bottom": 47.390625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 27,
+              "width": 56,
+              "height": 18,
+              "top": 27,
+              "right": 1164,
+              "bottom": 45,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "H3"
+          },
+          "intentFirstLine": {
+            "text": "本轮用条形分数拼块完成第1框4/4、第2框2/6、第3框2/3。已经完成0框，余下材料有1块1/1、1块1/2、3块1/3、9块1/6。",
+            "rect": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 55.390625,
+              "width": 299.234375,
+              "height": 18,
+              "top": 55.390625,
+              "right": 1407.234375,
+              "bottom": 73.390625,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "P"
+          },
+          "lastMistake": {
+            "text": "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。",
+            "rect": {
+              "x": 1132,
+              "y": 911.71875,
+              "width": 281,
+              "height": 44.78125,
+              "top": 911.71875,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1132
+            },
+            "line": {
+              "x": 1132,
+              "y": 936.109375,
+              "width": 126,
+              "height": 18,
+              "top": 936.109375,
+              "right": 1258,
+              "bottom": 954.109375,
+              "left": 1132
+            },
+            "visible": true,
+            "hit": "LI"
+          },
+          "fingerprint": "6992161f"
+        },
+        "after": {
+          "windowScroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rail": {
+            "rect": {
+              "x": 1080,
+              "y": 0,
+              "width": 360,
+              "height": 1100,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1100,
+              "left": 1080
+            },
+            "scrollHeight": 1100,
+            "clientHeight": 1100,
+            "scrollTop": 0,
+            "scrollLeft": 0
+          },
+          "panel": {
+            "x": 1093,
+            "y": 12,
+            "width": 335,
+            "height": 965.5,
+            "top": 12,
+            "right": 1428,
+            "bottom": 977.5,
+            "left": 1093
+          },
+          "fields": {
+            "intent": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "hints": {
+              "x": 1108,
+              "y": 182.5625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 182.5625,
+              "right": 1413,
+              "bottom": 326.90625,
+              "left": 1108
+            },
+            "steps": {
+              "x": 1108,
+              "y": 430.296875,
+              "width": 305,
+              "height": 343.46875,
+              "top": 430.296875,
+              "right": 1413,
+              "bottom": 773.765625,
+              "left": 1108
+            },
+            "commonMistakes": {
+              "x": 1108,
+              "y": 812.15625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 812.15625,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1108
+            }
+          },
+          "allFieldsInRail": true,
+          "title": {
+            "text": "本题学习",
+            "rect": {
+              "x": 1108,
+              "y": 25,
+              "width": 305,
+              "height": 22.390625,
+              "top": 25,
+              "right": 1413,
+              "bottom": 47.390625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 27,
+              "width": 56,
+              "height": 18,
+              "top": 27,
+              "right": 1164,
+              "bottom": 45,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "H3"
+          },
+          "intentFirstLine": {
+            "text": "本轮用条形分数拼块完成第1框4/4、第2框2/6、第3框2/3。已经完成0框，余下材料有1块1/1、1块1/2、3块1/3、9块1/6。",
+            "rect": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 55.390625,
+              "width": 299.234375,
+              "height": 18,
+              "top": 55.390625,
+              "right": 1407.234375,
+              "bottom": 73.390625,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "P"
+          },
+          "lastMistake": {
+            "text": "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。",
+            "rect": {
+              "x": 1132,
+              "y": 911.71875,
+              "width": 281,
+              "height": 44.78125,
+              "top": 911.71875,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1132
+            },
+            "line": {
+              "x": 1132,
+              "y": 936.109375,
+              "width": 126,
+              "height": 18,
+              "top": 936.109375,
+              "right": 1258,
+              "bottom": 954.109375,
+              "left": 1132
+            },
+            "visible": true,
+            "hit": "LI"
+          },
+          "fingerprint": "6992161f"
+        }
+      }
+    },
+    {
+      "id": "fractions-intro/shape/level-4",
+      "kind": "level",
+      "originalPath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-4.png",
+      "originalSHA256": "b98879cd10e1c02aaf9864f3d69f5920c797e4e34ce6c4077454283260bd867f",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-4-rereview.png",
+      "sha256": "9b868a982223a3b0bd8e81f4b201288eb0e64b072ec8c27ede3deaaa286f8be6",
+      "question": {
+        "id": "fractions-intro/shape/level-4/native-1",
+        "contextId": "fractions-intro/shape/level-4",
+        "familyId": "fractions-intro/shape-PIE",
+        "simId": "fractions-intro",
+        "screen": 1,
+        "level": 4,
+        "mode": "shape",
+        "fingerprint": "f2a787fd",
+        "family": "shape-PIE",
+        "params": {
+          "mode": "shape",
+          "type": "PIE",
+          "targets": [
+            {
+              "n": 1,
+              "d": 2,
+              "index": 0,
+              "done": false
+            },
+            {
+              "n": 1,
+              "d": 2,
+              "index": 1,
+              "done": false
+            },
+            {
+              "n": 1,
+              "d": 2,
+              "index": 2,
+              "done": false
+            }
+          ],
+          "pool": [
+            {
+              "key": 2,
+              "count": 1
+            },
+            {
+              "key": 3,
+              "count": 3
+            },
+            {
+              "key": 4,
+              "count": 3
+            },
+            {
+              "key": 6,
+              "count": 2
+            }
+          ],
+          "maxContainers": 1,
+          "plans": [
+            {
+              "counts": [
+                {
+                  "d": 2,
+                  "count": 1
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 2
+                  }
+                ]
+              ]
+            },
+            {
+              "counts": [
+                {
+                  "d": 3,
+                  "count": 1
+                },
+                {
+                  "d": 6,
+                  "count": 1
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 3
+                  },
+                  {
+                    "d": 6
+                  }
+                ]
+              ]
+            },
+            {
+              "counts": [
+                {
+                  "d": 3,
+                  "count": 1
+                },
+                {
+                  "d": 6,
+                  "count": 1
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 3
+                  },
+                  {
+                    "d": 6
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "intent": "本轮用圆形分数拼块完成第1框1/2、第2框1/2、第3框1/2。已经完成0框，余下材料有1块1/2、3块1/3、3块1/4、2块1/6。",
+        "hints": [
+          "先看第1框1/2、第2框1/2、第3框1/2，每个目标都以同样大小的1个整体为单位。",
+          "可用的小块是1/2、1/3、1/4、1/6；不同大小的小块先换成相同的单位再相加。",
+          "选择的小块加起来要等于目标；超过1个整体时，分到多个容器，每个容器不超过1。"
+        ],
+        "steps": [
+          "第1框，目标1/2：取1块1/2；1×1/2 = 1/2。",
+          "该框第1个容器放1/2，这一容器不超过1个整体。",
+          "第2框，目标1/2：取1块1/3、1块1/6；1×1/3 + 1×1/6 = 1/2。",
+          "该框第1个容器放1/3 + 1/6，这一容器不超过1个整体。",
+          "第3框，目标1/2：取1块1/3、1块1/6；1×1/3 + 1×1/6 = 1/2。",
+          "该框第1个容器放1/3 + 1/6，这一容器不超过1个整体。",
+          "按这份分配逐框摆好并拖到对应目标；同一小块或数字卡不能重复使用。"
+        ],
+        "commonMistakes": [
+          "把目标1/2的分母当作要拿的块数；分母表示每份大小，分子才表示份数。",
+          "不同分母不能直接把分母相加；每个容器必须以同一个整体为单位。",
+          "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。"
+        ]
+      },
+      "nativeValues": [
+        {
+          "n": 1,
+          "d": 2
+        },
+        {
+          "n": 1,
+          "d": 2
+        },
+        {
+          "n": 1,
+          "d": 2
+        }
+      ],
+      "passed": true,
+      "capture": {
+        "method": "page screenshot with an explicit clip; no implicit element scrolling",
+        "viewport": {
+          "width": 1440,
+          "height": 1100
+        },
+        "clip": {
+          "x": 1093,
+          "y": 12,
+          "width": 335,
+          "height": 966
+        },
+        "panel": {
+          "x": 1093,
+          "y": 12,
+          "width": 335,
+          "height": 965.5,
+          "top": 12,
+          "right": 1428,
+          "bottom": 977.5,
+          "left": 1093
+        },
+        "wholePanelVisible": true,
+        "allFieldsInRail": true,
+        "lastMistakeLineVisible": true,
+        "before": {
+          "windowScroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rail": {
+            "rect": {
+              "x": 1080,
+              "y": 0,
+              "width": 360,
+              "height": 1100,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1100,
+              "left": 1080
+            },
+            "scrollHeight": 1100,
+            "clientHeight": 1100,
+            "scrollTop": 0,
+            "scrollLeft": 0
+          },
+          "panel": {
+            "x": 1093,
+            "y": 12,
+            "width": 335,
+            "height": 965.5,
+            "top": 12,
+            "right": 1428,
+            "bottom": 977.5,
+            "left": 1093
+          },
+          "fields": {
+            "intent": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "hints": {
+              "x": 1108,
+              "y": 182.5625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 182.5625,
+              "right": 1413,
+              "bottom": 326.90625,
+              "left": 1108
+            },
+            "steps": {
+              "x": 1108,
+              "y": 430.296875,
+              "width": 305,
+              "height": 343.46875,
+              "top": 430.296875,
+              "right": 1413,
+              "bottom": 773.765625,
+              "left": 1108
+            },
+            "commonMistakes": {
+              "x": 1108,
+              "y": 812.15625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 812.15625,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1108
+            }
+          },
+          "allFieldsInRail": true,
+          "title": {
+            "text": "本题学习",
+            "rect": {
+              "x": 1108,
+              "y": 25,
+              "width": 305,
+              "height": 22.390625,
+              "top": 25,
+              "right": 1413,
+              "bottom": 47.390625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 27,
+              "width": 56,
+              "height": 18,
+              "top": 27,
+              "right": 1164,
+              "bottom": 45,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "H3"
+          },
+          "intentFirstLine": {
+            "text": "本轮用圆形分数拼块完成第1框1/2、第2框1/2、第3框1/2。已经完成0框，余下材料有1块1/2、3块1/3、3块1/4、2块1/6。",
+            "rect": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 55.390625,
+              "width": 299.234375,
+              "height": 18,
+              "top": 55.390625,
+              "right": 1407.234375,
+              "bottom": 73.390625,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "P"
+          },
+          "lastMistake": {
+            "text": "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。",
+            "rect": {
+              "x": 1132,
+              "y": 911.71875,
+              "width": 281,
+              "height": 44.78125,
+              "top": 911.71875,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1132
+            },
+            "line": {
+              "x": 1132,
+              "y": 936.109375,
+              "width": 126,
+              "height": 18,
+              "top": 936.109375,
+              "right": 1258,
+              "bottom": 954.109375,
+              "left": 1132
+            },
+            "visible": true,
+            "hit": "LI"
+          },
+          "fingerprint": "f2a787fd"
+        },
+        "after": {
+          "windowScroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rail": {
+            "rect": {
+              "x": 1080,
+              "y": 0,
+              "width": 360,
+              "height": 1100,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1100,
+              "left": 1080
+            },
+            "scrollHeight": 1100,
+            "clientHeight": 1100,
+            "scrollTop": 0,
+            "scrollLeft": 0
+          },
+          "panel": {
+            "x": 1093,
+            "y": 12,
+            "width": 335,
+            "height": 965.5,
+            "top": 12,
+            "right": 1428,
+            "bottom": 977.5,
+            "left": 1093
+          },
+          "fields": {
+            "intent": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "hints": {
+              "x": 1108,
+              "y": 182.5625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 182.5625,
+              "right": 1413,
+              "bottom": 326.90625,
+              "left": 1108
+            },
+            "steps": {
+              "x": 1108,
+              "y": 430.296875,
+              "width": 305,
+              "height": 343.46875,
+              "top": 430.296875,
+              "right": 1413,
+              "bottom": 773.765625,
+              "left": 1108
+            },
+            "commonMistakes": {
+              "x": 1108,
+              "y": 812.15625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 812.15625,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1108
+            }
+          },
+          "allFieldsInRail": true,
+          "title": {
+            "text": "本题学习",
+            "rect": {
+              "x": 1108,
+              "y": 25,
+              "width": 305,
+              "height": 22.390625,
+              "top": 25,
+              "right": 1413,
+              "bottom": 47.390625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 27,
+              "width": 56,
+              "height": 18,
+              "top": 27,
+              "right": 1164,
+              "bottom": 45,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "H3"
+          },
+          "intentFirstLine": {
+            "text": "本轮用圆形分数拼块完成第1框1/2、第2框1/2、第3框1/2。已经完成0框，余下材料有1块1/2、3块1/3、3块1/4、2块1/6。",
+            "rect": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 55.390625,
+              "width": 299.234375,
+              "height": 18,
+              "top": 55.390625,
+              "right": 1407.234375,
+              "bottom": 73.390625,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "P"
+          },
+          "lastMistake": {
+            "text": "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。",
+            "rect": {
+              "x": 1132,
+              "y": 911.71875,
+              "width": 281,
+              "height": 44.78125,
+              "top": 911.71875,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1132
+            },
+            "line": {
+              "x": 1132,
+              "y": 936.109375,
+              "width": 126,
+              "height": 18,
+              "top": 936.109375,
+              "right": 1258,
+              "bottom": 954.109375,
+              "left": 1132
+            },
+            "visible": true,
+            "hit": "LI"
+          },
+          "fingerprint": "f2a787fd"
+        }
+      }
+    },
+    {
+      "id": "fractions-intro/shape/level-7",
+      "kind": "level",
+      "originalPath": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-7.png",
+      "originalSHA256": "0d7434d6a6d974d41d04107f01ec79e1859adc94966551132a852c7bca93c574",
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-7-rereview.png",
+      "sha256": "562630fd42da7ed2150a836eed9c283175820ab447dbcf11c4940495472a1446",
+      "question": {
+        "id": "fractions-intro/shape/level-7/native-1",
+        "contextId": "fractions-intro/shape/level-7",
+        "familyId": "fractions-intro/shape-PIE",
+        "simId": "fractions-intro",
+        "screen": 1,
+        "level": 7,
+        "mode": "shape",
+        "fingerprint": "e44bef03",
+        "family": "shape-PIE",
+        "params": {
+          "mode": "shape",
+          "type": "PIE",
+          "targets": [
+            {
+              "n": 2,
+              "d": 3,
+              "index": 0,
+              "done": false
+            },
+            {
+              "n": 2,
+              "d": 3,
+              "index": 1,
+              "done": false
+            },
+            {
+              "n": 1,
+              "d": 2,
+              "index": 2,
+              "done": false
+            },
+            {
+              "n": 1,
+              "d": 2,
+              "index": 3,
+              "done": false
+            }
+          ],
+          "pool": [
+            {
+              "key": 2,
+              "count": 1
+            },
+            {
+              "key": 4,
+              "count": 2
+            },
+            {
+              "key": 6,
+              "count": 5
+            },
+            {
+              "key": 8,
+              "count": 4
+            }
+          ],
+          "maxContainers": 1,
+          "plans": [
+            {
+              "counts": [
+                {
+                  "d": 2,
+                  "count": 1
+                },
+                {
+                  "d": 6,
+                  "count": 1
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 2
+                  },
+                  {
+                    "d": 6
+                  }
+                ]
+              ]
+            },
+            {
+              "counts": [
+                {
+                  "d": 4,
+                  "count": 2
+                },
+                {
+                  "d": 6,
+                  "count": 1
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 4
+                  },
+                  {
+                    "d": 4
+                  },
+                  {
+                    "d": 6
+                  }
+                ]
+              ]
+            },
+            {
+              "counts": [
+                {
+                  "d": 6,
+                  "count": 3
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 6
+                  },
+                  {
+                    "d": 6
+                  },
+                  {
+                    "d": 6
+                  }
+                ]
+              ]
+            },
+            {
+              "counts": [
+                {
+                  "d": 8,
+                  "count": 4
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 8
+                  },
+                  {
+                    "d": 8
+                  },
+                  {
+                    "d": 8
+                  },
+                  {
+                    "d": 8
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "intent": "本轮用圆形分数拼块完成第1框2/3、第2框2/3、第3框1/2、第4框1/2。已经完成0框，余下材料有1块1/2、2块1/4、5块1/6、4块1/8。",
+        "hints": [
+          "先看第1框2/3、第2框2/3、第3框1/2、第4框1/2，每个目标都以同样大小的1个整体为单位。",
+          "可用的小块是1/2、1/4、1/6、1/8；不同大小的小块先换成相同的单位再相加。",
+          "选择的小块加起来要等于目标；超过1个整体时，分到多个容器，每个容器不超过1。"
+        ],
+        "steps": [
+          "第1框，目标2/3：取1块1/2、1块1/6；1×1/2 + 1×1/6 = 2/3。",
+          "该框第1个容器放1/2 + 1/6，这一容器不超过1个整体。",
+          "第2框，目标2/3：取2块1/4、1块1/6；2×1/4 + 1×1/6 = 2/3。",
+          "该框第1个容器放1/4 + 1/4 + 1/6，这一容器不超过1个整体。",
+          "第3框，目标1/2：取3块1/6；3×1/6 = 1/2。",
+          "该框第1个容器放1/6 + 1/6 + 1/6，这一容器不超过1个整体。",
+          "第4框，目标1/2：取4块1/8；4×1/8 = 1/2。",
+          "该框第1个容器放1/8 + 1/8 + 1/8 + 1/8，这一容器不超过1个整体。",
+          "按这份分配逐框摆好并拖到对应目标；同一小块或数字卡不能重复使用。"
+        ],
+        "commonMistakes": [
+          "把目标2/3的分母当作要拿的块数；分母表示每份大小，分子才表示份数。",
+          "不同分母不能直接把分母相加；每个容器必须以同一个整体为单位。",
+          "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。"
+        ]
+      },
+      "nativeValues": [
+        {
+          "n": 2,
+          "d": 3
+        },
+        {
+          "n": 2,
+          "d": 3
+        },
+        {
+          "n": 1,
+          "d": 2
+        },
+        {
+          "n": 1,
+          "d": 2
+        }
+      ],
+      "passed": true,
+      "capture": {
+        "method": "page screenshot with an explicit clip; no implicit element scrolling",
+        "viewport": {
+          "width": 1440,
+          "height": 1184
+        },
+        "clip": {
+          "x": 1093,
+          "y": 12,
+          "width": 335,
+          "height": 1088
+        },
+        "panel": {
+          "x": 1093,
+          "y": 12,
+          "width": 335,
+          "height": 1087.453125,
+          "top": 12,
+          "right": 1428,
+          "bottom": 1099.453125,
+          "left": 1093
+        },
+        "wholePanelVisible": true,
+        "allFieldsInRail": true,
+        "lastMistakeLineVisible": true,
+        "before": {
+          "windowScroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rail": {
+            "rect": {
+              "x": 1080,
+              "y": 0,
+              "width": 360,
+              "height": 1184,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1184,
+              "left": 1080
+            },
+            "scrollHeight": 1187,
+            "clientHeight": 1184,
+            "scrollTop": 0,
+            "scrollLeft": 0
+          },
+          "panel": {
+            "x": 1093,
+            "y": 12,
+            "width": 335,
+            "height": 1087.453125,
+            "top": 12,
+            "right": 1428,
+            "bottom": 1099.453125,
+            "left": 1093
+          },
+          "fields": {
+            "intent": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "hints": {
+              "x": 1108,
+              "y": 182.5625,
+              "width": 305,
+              "height": 166.734375,
+              "top": 182.5625,
+              "right": 1413,
+              "bottom": 349.296875,
+              "left": 1108
+            },
+            "steps": {
+              "x": 1108,
+              "y": 452.6875,
+              "width": 305,
+              "height": 443.03125,
+              "top": 452.6875,
+              "right": 1413,
+              "bottom": 895.71875,
+              "left": 1108
+            },
+            "commonMistakes": {
+              "x": 1108,
+              "y": 934.109375,
+              "width": 305,
+              "height": 144.34375,
+              "top": 934.109375,
+              "right": 1413,
+              "bottom": 1078.453125,
+              "left": 1108
+            }
+          },
+          "allFieldsInRail": true,
+          "title": {
+            "text": "本题学习",
+            "rect": {
+              "x": 1108,
+              "y": 25,
+              "width": 305,
+              "height": 22.390625,
+              "top": 25,
+              "right": 1413,
+              "bottom": 47.390625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 27,
+              "width": 56,
+              "height": 18,
+              "top": 27,
+              "right": 1164,
+              "bottom": 45,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "H3"
+          },
+          "intentFirstLine": {
+            "text": "本轮用圆形分数拼块完成第1框2/3、第2框2/3、第3框1/2、第4框1/2。已经完成0框，余下材料有1块1/2、2块1/4、5块1/6、4块1/8。",
+            "rect": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 55.390625,
+              "width": 299.234375,
+              "height": 18,
+              "top": 55.390625,
+              "right": 1407.234375,
+              "bottom": 73.390625,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "P"
+          },
+          "lastMistake": {
+            "text": "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。",
+            "rect": {
+              "x": 1132,
+              "y": 1033.671875,
+              "width": 281,
+              "height": 44.78125,
+              "top": 1033.671875,
+              "right": 1413,
+              "bottom": 1078.453125,
+              "left": 1132
+            },
+            "line": {
+              "x": 1132,
+              "y": 1058.0625,
+              "width": 126,
+              "height": 18,
+              "top": 1058.0625,
+              "right": 1258,
+              "bottom": 1076.0625,
+              "left": 1132
+            },
+            "visible": true,
+            "hit": "LI"
+          },
+          "fingerprint": "e44bef03"
+        },
+        "after": {
+          "windowScroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rail": {
+            "rect": {
+              "x": 1080,
+              "y": 0,
+              "width": 360,
+              "height": 1184,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1184,
+              "left": 1080
+            },
+            "scrollHeight": 1187,
+            "clientHeight": 1184,
+            "scrollTop": 0,
+            "scrollLeft": 0
+          },
+          "panel": {
+            "x": 1093,
+            "y": 12,
+            "width": 335,
+            "height": 1087.453125,
+            "top": 12,
+            "right": 1428,
+            "bottom": 1099.453125,
+            "left": 1093
+          },
+          "fields": {
+            "intent": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "hints": {
+              "x": 1108,
+              "y": 182.5625,
+              "width": 305,
+              "height": 166.734375,
+              "top": 182.5625,
+              "right": 1413,
+              "bottom": 349.296875,
+              "left": 1108
+            },
+            "steps": {
+              "x": 1108,
+              "y": 452.6875,
+              "width": 305,
+              "height": 443.03125,
+              "top": 452.6875,
+              "right": 1413,
+              "bottom": 895.71875,
+              "left": 1108
+            },
+            "commonMistakes": {
+              "x": 1108,
+              "y": 934.109375,
+              "width": 305,
+              "height": 144.34375,
+              "top": 934.109375,
+              "right": 1413,
+              "bottom": 1078.453125,
+              "left": 1108
+            }
+          },
+          "allFieldsInRail": true,
+          "title": {
+            "text": "本题学习",
+            "rect": {
+              "x": 1108,
+              "y": 25,
+              "width": 305,
+              "height": 22.390625,
+              "top": 25,
+              "right": 1413,
+              "bottom": 47.390625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 27,
+              "width": 56,
+              "height": 18,
+              "top": 27,
+              "right": 1164,
+              "bottom": 45,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "H3"
+          },
+          "intentFirstLine": {
+            "text": "本轮用圆形分数拼块完成第1框2/3、第2框2/3、第3框1/2、第4框1/2。已经完成0框，余下材料有1块1/2、2块1/4、5块1/6、4块1/8。",
+            "rect": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 55.390625,
+              "width": 299.234375,
+              "height": 18,
+              "top": 55.390625,
+              "right": 1407.234375,
+              "bottom": 73.390625,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "P"
+          },
+          "lastMistake": {
+            "text": "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。",
+            "rect": {
+              "x": 1132,
+              "y": 1033.671875,
+              "width": 281,
+              "height": 44.78125,
+              "top": 1033.671875,
+              "right": 1413,
+              "bottom": 1078.453125,
+              "left": 1132
+            },
+            "line": {
+              "x": 1132,
+              "y": 1058.0625,
+              "width": 126,
+              "height": 18,
+              "top": 1058.0625,
+              "right": 1258,
+              "bottom": 1076.0625,
+              "left": 1132
+            },
+            "visible": true,
+            "hit": "LI"
+          },
+          "fingerprint": "e44bef03"
+        }
+      }
+    },
+    {
+      "id": "fraction-matcher/fractions/level-2",
+      "kind": "level",
+      "originalPath": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-2.png",
+      "originalSHA256": "cecd5afed9e68af3981f2bb9cad90ee00929c94e2527a1c671cf4caef1ee1a05",
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-2-rereview.png",
+      "sha256": "5ea488cf69e4eb2902c6cc219b8b80b6582355f6c4daf0cc6697a1ac0b432f0e",
+      "question": {
+        "id": "fraction-matcher/fractions/level-2/native-1",
+        "contextId": "fraction-matcher/fractions/level-2",
+        "familyId": "fraction-matcher/fractions",
+        "simId": "fraction-matcher",
+        "screen": 0,
+        "level": 2,
+        "mode": "fractions",
+        "fingerprint": "c7780506",
+        "family": "fractions",
+        "params": {
+          "mixed": false,
+          "cards": [
+            {
+              "n": 2,
+              "d": 3,
+              "index": 1,
+              "shape": false,
+              "partitions": [],
+              "mixed": false,
+              "atTarget": false
+            },
+            {
+              "n": 1,
+              "d": 2,
+              "index": 2,
+              "shape": true,
+              "partitions": [
+                {
+                  "n": 1,
+                  "d": 2
+                }
+              ],
+              "mixed": false,
+              "atTarget": false
+            },
+            {
+              "n": 2,
+              "d": 4,
+              "index": 3,
+              "shape": true,
+              "partitions": [
+                {
+                  "n": 2,
+                  "d": 4
+                }
+              ],
+              "mixed": false,
+              "atTarget": false
+            },
+            {
+              "n": 2,
+              "d": 4,
+              "index": 4,
+              "shape": true,
+              "partitions": [
+                {
+                  "n": 2,
+                  "d": 4
+                }
+              ],
+              "mixed": false,
+              "atTarget": false
+            },
+            {
+              "n": 2,
+              "d": 6,
+              "index": 5,
+              "shape": true,
+              "partitions": [
+                {
+                  "n": 2,
+                  "d": 6
+                }
+              ],
+              "mixed": false,
+              "atTarget": false
+            },
+            {
+              "n": 1,
+              "d": 3,
+              "index": 6,
+              "shape": true,
+              "partitions": [
+                {
+                  "n": 1,
+                  "d": 3
+                }
+              ],
+              "mixed": false,
+              "atTarget": false
+            },
+            {
+              "n": 1,
+              "d": 2,
+              "index": 7,
+              "shape": false,
+              "partitions": [],
+              "mixed": false,
+              "atTarget": false
+            },
+            {
+              "n": 2,
+              "d": 6,
+              "index": 8,
+              "shape": true,
+              "partitions": [
+                {
+                  "n": 2,
+                  "d": 6
+                }
+              ],
+              "mixed": false,
+              "atTarget": false
+            },
+            {
+              "n": 3,
+              "d": 4,
+              "index": 9,
+              "shape": false,
+              "partitions": [],
+              "mixed": false,
+              "atTarget": false
+            },
+            {
+              "n": 1,
+              "d": 3,
+              "index": 10,
+              "shape": true,
+              "partitions": [
+                {
+                  "n": 1,
+                  "d": 3
+                }
+              ],
+              "mixed": false,
+              "atTarget": false
+            },
+            {
+              "n": 2,
+              "d": 3,
+              "index": 11,
+              "shape": true,
+              "partitions": [
+                {
+                  "n": 2,
+                  "d": 3
+                }
+              ],
+              "mixed": false,
+              "atTarget": false
+            },
+            {
+              "n": 3,
+              "d": 4,
+              "index": 12,
+              "shape": true,
+              "partitions": [
+                {
+                  "n": 3,
+                  "d": 4
+                }
+              ],
+              "mixed": false,
+              "atTarget": false
+            }
+          ],
+          "selected": [
+            null,
+            null
+          ],
+          "pairs": [
+            [
+              {
+                "n": 2,
+                "d": 3,
+                "index": 1,
+                "shape": false,
+                "mixed": false
+              },
+              {
+                "n": 2,
+                "d": 3,
+                "index": 11,
+                "shape": true,
+                "mixed": false
+              }
+            ],
+            [
+              {
+                "n": 1,
+                "d": 2,
+                "index": 2,
+                "shape": true,
+                "mixed": false
+              },
+              {
+                "n": 2,
+                "d": 4,
+                "index": 3,
+                "shape": true,
+                "mixed": false
+              }
+            ],
+            [
+              {
+                "n": 2,
+                "d": 4,
+                "index": 4,
+                "shape": true,
+                "mixed": false
+              },
+              {
+                "n": 1,
+                "d": 2,
+                "index": 7,
+                "shape": false,
+                "mixed": false
+              }
+            ],
+            [
+              {
+                "n": 2,
+                "d": 6,
+                "index": 5,
+                "shape": true,
+                "mixed": false
+              },
+              {
+                "n": 1,
+                "d": 3,
+                "index": 6,
+                "shape": true,
+                "mixed": false
+              }
+            ],
+            [
+              {
+                "n": 2,
+                "d": 6,
+                "index": 8,
+                "shape": true,
+                "mixed": false
+              },
+              {
+                "n": 1,
+                "d": 3,
+                "index": 10,
+                "shape": true,
+                "mixed": false
+              }
+            ],
+            [
+              {
+                "n": 3,
+                "d": 4,
+                "index": 9,
+                "shape": false,
+                "mixed": false
+              },
+              {
+                "n": 3,
+                "d": 4,
+                "index": 12,
+                "shape": true,
+                "mixed": false
+              }
+            ]
+          ]
+        },
+        "intent": "把当前12张卡片配成6对等值分数。可见卡片是数字卡2/3、图形卡（涂色量1/2个整体）、图形卡（涂色量2/4个整体）、图形卡（涂色量2/4个整体）、图形卡（涂色量2/6个整体）、图形卡（涂色量1/3个整体）、数字卡1/2、图形卡（涂色量2/6个整体）、数字卡3/4、图形卡（涂色量1/3个整体）、图形卡（涂色量2/3个整体）、图形卡（涂色量3/4个整体）。",
+        "hints": [
+          "当前有12张未收集卡。一张图形卡的第1个整体分2份、涂1份。先数整体与等份。",
+          "从2/3开始找一个表示同样数值的伙伴；约分或通分后比较。",
+          "分子和分母同时扩大或缩小相同倍数可保持分数值；把一对放到比较位置再检查。"
+        ],
+        "steps": [
+          "第1对中的图形卡（涂色量2/3个整体）：第1个整体涂2/3，涂色量相加2/3 = 2/3。",
+          "第1对：数字卡2/3与图形卡（涂色量2/3个整体）；2×3 = 2×3 = 6，所以等值。",
+          "第2对中的图形卡（涂色量1/2个整体）：第1个整体涂1/2，涂色量相加1/2 = 1/2。",
+          "第2对中的图形卡（涂色量2/4个整体）：第1个整体涂2/4，涂色量相加2/4 = 2/4。",
+          "第2对：图形卡（涂色量1/2个整体）与图形卡（涂色量2/4个整体）；1×4 = 2×2 = 4，所以等值。",
+          "第3对中的图形卡（涂色量2/4个整体）：第1个整体涂2/4，涂色量相加2/4 = 2/4。",
+          "第3对：图形卡（涂色量2/4个整体）与数字卡1/2；2×2 = 1×4 = 4，所以等值。",
+          "第4对中的图形卡（涂色量2/6个整体）：第1个整体涂2/6，涂色量相加2/6 = 2/6。",
+          "第4对中的图形卡（涂色量1/3个整体）：第1个整体涂1/3，涂色量相加1/3 = 1/3。",
+          "第4对：图形卡（涂色量2/6个整体）与图形卡（涂色量1/3个整体）；2×3 = 1×6 = 6，所以等值。",
+          "第5对中的图形卡（涂色量2/6个整体）：第1个整体涂2/6，涂色量相加2/6 = 2/6。",
+          "第5对中的图形卡（涂色量1/3个整体）：第1个整体涂1/3，涂色量相加1/3 = 1/3。",
+          "第5对：图形卡（涂色量2/6个整体）与图形卡（涂色量1/3个整体）；2×3 = 1×6 = 6，所以等值。",
+          "第6对中的图形卡（涂色量3/4个整体）：第1个整体涂3/4，涂色量相加3/4 = 3/4。",
+          "第6对：数字卡3/4与图形卡（涂色量3/4个整体）；3×4 = 3×4 = 12，所以等值。"
+        ],
+        "commonMistakes": [
+          "像2/3这样的卡要比较分数值，不是只比较分子或分母。",
+          "不同大小的分块，涂了同样块数也不保证等值。",
+          "图形里的每个完整整体是同一个单位，不能把两个整体误当成一个。"
+        ]
+      },
+      "nativeValues": [
+        {
+          "n": 2,
+          "d": 3
+        },
+        {
+          "n": 1,
+          "d": 2
+        },
+        {
+          "n": 2,
+          "d": 4
+        },
+        {
+          "n": 2,
+          "d": 4
+        },
+        {
+          "n": 2,
+          "d": 6
+        },
+        {
+          "n": 1,
+          "d": 3
+        },
+        {
+          "n": 1,
+          "d": 2
+        },
+        {
+          "n": 2,
+          "d": 6
+        },
+        {
+          "n": 3,
+          "d": 4
+        },
+        {
+          "n": 1,
+          "d": 3
+        },
+        {
+          "n": 2,
+          "d": 3
+        },
+        {
+          "n": 3,
+          "d": 4
+        }
+      ],
+      "passed": true,
+      "capture": {
+        "method": "page screenshot with an explicit clip; no implicit element scrolling",
+        "viewport": {
+          "width": 1440,
+          "height": 1639
+        },
+        "clip": {
+          "x": 1093,
+          "y": 12,
+          "width": 335,
+          "height": 1543
+        },
+        "panel": {
+          "x": 1093,
+          "y": 12,
+          "width": 335,
+          "height": 1542.875,
+          "top": 12,
+          "right": 1428,
+          "bottom": 1554.875,
+          "left": 1093
+        },
+        "wholePanelVisible": true,
+        "allFieldsInRail": true,
+        "lastMistakeLineVisible": true,
+        "before": {
+          "windowScroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rail": {
+            "rect": {
+              "x": 1080,
+              "y": 0,
+              "width": 360,
+              "height": 1639,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1639,
+              "left": 1080
+            },
+            "scrollHeight": 1643,
+            "clientHeight": 1639,
+            "scrollTop": 0,
+            "scrollLeft": 0
+          },
+          "panel": {
+            "x": 1093,
+            "y": 12,
+            "width": 335,
+            "height": 1542.875,
+            "top": 12,
+            "right": 1428,
+            "bottom": 1554.875,
+            "left": 1093
+          },
+          "fields": {
+            "intent": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 179.125,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 232.515625,
+              "left": 1108
+            },
+            "hints": {
+              "x": 1108,
+              "y": 294.515625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 294.515625,
+              "right": 1413,
+              "bottom": 438.859375,
+              "left": 1108
+            },
+            "steps": {
+              "x": 1108,
+              "y": 542.25,
+              "width": 305,
+              "height": 808.890625,
+              "top": 542.25,
+              "right": 1413,
+              "bottom": 1351.140625,
+              "left": 1108
+            },
+            "commonMistakes": {
+              "x": 1108,
+              "y": 1389.53125,
+              "width": 305,
+              "height": 144.34375,
+              "top": 1389.53125,
+              "right": 1413,
+              "bottom": 1533.875,
+              "left": 1108
+            }
+          },
+          "allFieldsInRail": true,
+          "title": {
+            "text": "本题学习",
+            "rect": {
+              "x": 1108,
+              "y": 25,
+              "width": 305,
+              "height": 22.390625,
+              "top": 25,
+              "right": 1413,
+              "bottom": 47.390625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 27,
+              "width": 56,
+              "height": 18,
+              "top": 27,
+              "right": 1164,
+              "bottom": 45,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "H3"
+          },
+          "intentFirstLine": {
+            "text": "把当前12张卡片配成6对等值分数。可见卡片是数字卡2/3、图形卡（涂色量1/2个整体）、图形卡（涂色量2/4个整体）、图形卡（涂色量2/4个整体）、图形卡（涂色量2/6个整体）、图形卡（涂色量1/3个整体）、数字卡1/2、图形卡（涂色量2/6个整体）、数字卡3/4、图形卡（涂色量1/3个整体）、图形卡（涂色量2/3个整体）、图形卡（涂色量3/4个整体）。",
+            "rect": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 179.125,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 232.515625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 55.390625,
+              "width": 304.640625,
+              "height": 18,
+              "top": 55.390625,
+              "right": 1412.640625,
+              "bottom": 73.390625,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "P"
+          },
+          "lastMistake": {
+            "text": "图形里的每个完整整体是同一个单位，不能把两个整体误当成一个。",
+            "rect": {
+              "x": 1132,
+              "y": 1489.09375,
+              "width": 281,
+              "height": 44.78125,
+              "top": 1489.09375,
+              "right": 1413,
+              "bottom": 1533.875,
+              "left": 1132
+            },
+            "line": {
+              "x": 1132,
+              "y": 1513.484375,
+              "width": 140,
+              "height": 18,
+              "top": 1513.484375,
+              "right": 1272,
+              "bottom": 1531.484375,
+              "left": 1132
+            },
+            "visible": true,
+            "hit": "LI"
+          },
+          "fingerprint": "c7780506"
+        },
+        "after": {
+          "windowScroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rail": {
+            "rect": {
+              "x": 1080,
+              "y": 0,
+              "width": 360,
+              "height": 1639,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1639,
+              "left": 1080
+            },
+            "scrollHeight": 1643,
+            "clientHeight": 1639,
+            "scrollTop": 0,
+            "scrollLeft": 0
+          },
+          "panel": {
+            "x": 1093,
+            "y": 12,
+            "width": 335,
+            "height": 1542.875,
+            "top": 12,
+            "right": 1428,
+            "bottom": 1554.875,
+            "left": 1093
+          },
+          "fields": {
+            "intent": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 179.125,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 232.515625,
+              "left": 1108
+            },
+            "hints": {
+              "x": 1108,
+              "y": 294.515625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 294.515625,
+              "right": 1413,
+              "bottom": 438.859375,
+              "left": 1108
+            },
+            "steps": {
+              "x": 1108,
+              "y": 542.25,
+              "width": 305,
+              "height": 808.890625,
+              "top": 542.25,
+              "right": 1413,
+              "bottom": 1351.140625,
+              "left": 1108
+            },
+            "commonMistakes": {
+              "x": 1108,
+              "y": 1389.53125,
+              "width": 305,
+              "height": 144.34375,
+              "top": 1389.53125,
+              "right": 1413,
+              "bottom": 1533.875,
+              "left": 1108
+            }
+          },
+          "allFieldsInRail": true,
+          "title": {
+            "text": "本题学习",
+            "rect": {
+              "x": 1108,
+              "y": 25,
+              "width": 305,
+              "height": 22.390625,
+              "top": 25,
+              "right": 1413,
+              "bottom": 47.390625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 27,
+              "width": 56,
+              "height": 18,
+              "top": 27,
+              "right": 1164,
+              "bottom": 45,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "H3"
+          },
+          "intentFirstLine": {
+            "text": "把当前12张卡片配成6对等值分数。可见卡片是数字卡2/3、图形卡（涂色量1/2个整体）、图形卡（涂色量2/4个整体）、图形卡（涂色量2/4个整体）、图形卡（涂色量2/6个整体）、图形卡（涂色量1/3个整体）、数字卡1/2、图形卡（涂色量2/6个整体）、数字卡3/4、图形卡（涂色量1/3个整体）、图形卡（涂色量2/3个整体）、图形卡（涂色量3/4个整体）。",
+            "rect": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 179.125,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 232.515625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 55.390625,
+              "width": 304.640625,
+              "height": 18,
+              "top": 55.390625,
+              "right": 1412.640625,
+              "bottom": 73.390625,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "P"
+          },
+          "lastMistake": {
+            "text": "图形里的每个完整整体是同一个单位，不能把两个整体误当成一个。",
+            "rect": {
+              "x": 1132,
+              "y": 1489.09375,
+              "width": 281,
+              "height": 44.78125,
+              "top": 1489.09375,
+              "right": 1413,
+              "bottom": 1533.875,
+              "left": 1132
+            },
+            "line": {
+              "x": 1132,
+              "y": 1513.484375,
+              "width": 140,
+              "height": 18,
+              "top": 1513.484375,
+              "right": 1272,
+              "bottom": 1531.484375,
+              "left": 1132
+            },
+            "visible": true,
+            "hit": "LI"
+          },
+          "fingerprint": "c7780506"
+        }
+      }
+    },
+    {
+      "id": "fractions-intro/shape-PIE",
+      "kind": "family",
+      "originalPath": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-shape-PIE.png",
+      "originalSHA256": "d9920552ed7e3552318524d3bae995642b9937e4081239d0c607f36425444714",
+      "path": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-shape-PIE-rereview.png",
+      "sha256": "608c539fbd672343648c97608d7e0a4e815d07f71a0f4cbe558157a12a511c8e",
+      "question": {
+        "id": "fractions-intro/shape/level-1/native-2",
+        "contextId": "fractions-intro/shape/level-1",
+        "familyId": "fractions-intro/shape-PIE",
+        "simId": "fractions-intro",
+        "screen": 1,
+        "level": 1,
+        "mode": "shape",
+        "fingerprint": "75018edc",
+        "family": "shape-PIE",
+        "params": {
+          "mode": "shape",
+          "type": "PIE",
+          "targets": [
+            {
+              "n": 1,
+              "d": 3,
+              "index": 0,
+              "done": false
+            },
+            {
+              "n": 1,
+              "d": 2,
+              "index": 1,
+              "done": false
+            },
+            {
+              "n": 2,
+              "d": 2,
+              "index": 2,
+              "done": false
+            }
+          ],
+          "pool": [
+            {
+              "key": 1,
+              "count": 2
+            },
+            {
+              "key": 2,
+              "count": 2
+            },
+            {
+              "key": 3,
+              "count": 3
+            }
+          ],
+          "maxContainers": 1,
+          "plans": [
+            {
+              "counts": [
+                {
+                  "d": 3,
+                  "count": 1
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 3
+                  }
+                ]
+              ]
+            },
+            {
+              "counts": [
+                {
+                  "d": 2,
+                  "count": 1
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 2
+                  }
+                ]
+              ]
+            },
+            {
+              "counts": [
+                {
+                  "d": 1,
+                  "count": 1
+                }
+              ],
+              "containers": [
+                [
+                  {
+                    "d": 1
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "intent": "本轮用圆形分数拼块完成第1框1/3、第2框1/2、第3框2/2。已经完成0框，余下材料有2块1/1、2块1/2、3块1/3。",
+        "hints": [
+          "先看第1框1/3、第2框1/2、第3框2/2，每个目标都以同样大小的1个整体为单位。",
+          "可用的小块是1/1、1/2、1/3；不同大小的小块先换成相同的单位再相加。",
+          "选择的小块加起来要等于目标；超过1个整体时，分到多个容器，每个容器不超过1。"
+        ],
+        "steps": [
+          "第1框，目标1/3：取1块1/3；1×1/3 = 1/3。",
+          "该框第1个容器放1/3，这一容器不超过1个整体。",
+          "第2框，目标1/2：取1块1/2；1×1/2 = 1/2。",
+          "该框第1个容器放1/2，这一容器不超过1个整体。",
+          "第3框，目标2/2：取1块1/1；1×1/1 = 2/2。",
+          "该框第1个容器放1/1，这一容器不超过1个整体。",
+          "按这份分配逐框摆好并拖到对应目标；同一小块或数字卡不能重复使用。"
+        ],
+        "commonMistakes": [
+          "把目标1/3的分母当作要拿的块数；分母表示每份大小，分子才表示份数。",
+          "不同分母不能直接把分母相加；每个容器必须以同一个整体为单位。",
+          "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。"
+        ]
+      },
+      "nativeValues": [
+        {
+          "n": 1,
+          "d": 3
+        },
+        {
+          "n": 1,
+          "d": 2
+        },
+        {
+          "n": 2,
+          "d": 2
+        }
+      ],
+      "passed": true,
+      "capture": {
+        "method": "page screenshot with an explicit clip; no implicit element scrolling",
+        "viewport": {
+          "width": 1440,
+          "height": 1100
+        },
+        "clip": {
+          "x": 1093,
+          "y": 12,
+          "width": 335,
+          "height": 966
+        },
+        "panel": {
+          "x": 1093,
+          "y": 12,
+          "width": 335,
+          "height": 965.5,
+          "top": 12,
+          "right": 1428,
+          "bottom": 977.5,
+          "left": 1093
+        },
+        "wholePanelVisible": true,
+        "allFieldsInRail": true,
+        "lastMistakeLineVisible": true,
+        "before": {
+          "windowScroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rail": {
+            "rect": {
+              "x": 1080,
+              "y": 0,
+              "width": 360,
+              "height": 1100,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1100,
+              "left": 1080
+            },
+            "scrollHeight": 1100,
+            "clientHeight": 1100,
+            "scrollTop": 0,
+            "scrollLeft": 0
+          },
+          "panel": {
+            "x": 1093,
+            "y": 12,
+            "width": 335,
+            "height": 965.5,
+            "top": 12,
+            "right": 1428,
+            "bottom": 977.5,
+            "left": 1093
+          },
+          "fields": {
+            "intent": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "hints": {
+              "x": 1108,
+              "y": 182.5625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 182.5625,
+              "right": 1413,
+              "bottom": 326.90625,
+              "left": 1108
+            },
+            "steps": {
+              "x": 1108,
+              "y": 430.296875,
+              "width": 305,
+              "height": 343.46875,
+              "top": 430.296875,
+              "right": 1413,
+              "bottom": 773.765625,
+              "left": 1108
+            },
+            "commonMistakes": {
+              "x": 1108,
+              "y": 812.15625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 812.15625,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1108
+            }
+          },
+          "allFieldsInRail": true,
+          "title": {
+            "text": "本题学习",
+            "rect": {
+              "x": 1108,
+              "y": 25,
+              "width": 305,
+              "height": 22.390625,
+              "top": 25,
+              "right": 1413,
+              "bottom": 47.390625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 27,
+              "width": 56,
+              "height": 18,
+              "top": 27,
+              "right": 1164,
+              "bottom": 45,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "H3"
+          },
+          "intentFirstLine": {
+            "text": "本轮用圆形分数拼块完成第1框1/3、第2框1/2、第3框2/2。已经完成0框，余下材料有2块1/1、2块1/2、3块1/3。",
+            "rect": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 55.390625,
+              "width": 299.234375,
+              "height": 18,
+              "top": 55.390625,
+              "right": 1407.234375,
+              "bottom": 73.390625,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "P"
+          },
+          "lastMistake": {
+            "text": "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。",
+            "rect": {
+              "x": 1132,
+              "y": 911.71875,
+              "width": 281,
+              "height": 44.78125,
+              "top": 911.71875,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1132
+            },
+            "line": {
+              "x": 1132,
+              "y": 936.109375,
+              "width": 126,
+              "height": 18,
+              "top": 936.109375,
+              "right": 1258,
+              "bottom": 954.109375,
+              "left": 1132
+            },
+            "visible": true,
+            "hit": "LI"
+          },
+          "fingerprint": "75018edc"
+        },
+        "after": {
+          "windowScroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rail": {
+            "rect": {
+              "x": 1080,
+              "y": 0,
+              "width": 360,
+              "height": 1100,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1100,
+              "left": 1080
+            },
+            "scrollHeight": 1100,
+            "clientHeight": 1100,
+            "scrollTop": 0,
+            "scrollLeft": 0
+          },
+          "panel": {
+            "x": 1093,
+            "y": 12,
+            "width": 335,
+            "height": 965.5,
+            "top": 12,
+            "right": 1428,
+            "bottom": 977.5,
+            "left": 1093
+          },
+          "fields": {
+            "intent": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "hints": {
+              "x": 1108,
+              "y": 182.5625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 182.5625,
+              "right": 1413,
+              "bottom": 326.90625,
+              "left": 1108
+            },
+            "steps": {
+              "x": 1108,
+              "y": 430.296875,
+              "width": 305,
+              "height": 343.46875,
+              "top": 430.296875,
+              "right": 1413,
+              "bottom": 773.765625,
+              "left": 1108
+            },
+            "commonMistakes": {
+              "x": 1108,
+              "y": 812.15625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 812.15625,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1108
+            }
+          },
+          "allFieldsInRail": true,
+          "title": {
+            "text": "本题学习",
+            "rect": {
+              "x": 1108,
+              "y": 25,
+              "width": 305,
+              "height": 22.390625,
+              "top": 25,
+              "right": 1413,
+              "bottom": 47.390625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 27,
+              "width": 56,
+              "height": 18,
+              "top": 27,
+              "right": 1164,
+              "bottom": 45,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "H3"
+          },
+          "intentFirstLine": {
+            "text": "本轮用圆形分数拼块完成第1框1/3、第2框1/2、第3框2/2。已经完成0框，余下材料有2块1/1、2块1/2、3块1/3。",
+            "rect": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 55.390625,
+              "width": 299.234375,
+              "height": 18,
+              "top": 55.390625,
+              "right": 1407.234375,
+              "bottom": 73.390625,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "P"
+          },
+          "lastMistake": {
+            "text": "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。",
+            "rect": {
+              "x": 1132,
+              "y": 911.71875,
+              "width": 281,
+              "height": 44.78125,
+              "top": 911.71875,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1132
+            },
+            "line": {
+              "x": 1132,
+              "y": 936.109375,
+              "width": 126,
+              "height": 18,
+              "top": 936.109375,
+              "right": 1258,
+              "bottom": 954.109375,
+              "left": 1132
+            },
+            "visible": true,
+            "hit": "LI"
+          },
+          "fingerprint": "75018edc"
+        }
+      }
+    },
+    {
+      "id": "fractions-intro/number",
+      "kind": "family",
+      "originalPath": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-number.png",
+      "originalSHA256": "f4014c575a63e7aef05b8bfbe7d2222b20db0230005966072c2c81fb7cdfacb9",
+      "path": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-number-rereview.png",
+      "sha256": "cd66b20645353f087c5e9ac51a142d32d2514d0451baf014862d28f15acc6146",
+      "question": {
+        "id": "fractions-intro/number/level-1/native-1",
+        "contextId": "fractions-intro/number/level-1",
+        "familyId": "fractions-intro/number",
+        "simId": "fractions-intro",
+        "screen": 1,
+        "level": 1,
+        "mode": "number",
+        "fingerprint": "12d6cb54",
+        "family": "number",
+        "params": {
+          "mode": "number",
+          "type": "NUMBER",
+          "targets": [
+            {
+              "n": 1,
+              "d": 3,
+              "index": 0,
+              "done": false
+            },
+            {
+              "n": 2,
+              "d": 3,
+              "index": 1,
+              "done": false
+            },
+            {
+              "n": 1,
+              "d": 2,
+              "index": 2,
+              "done": false
+            }
+          ],
+          "pool": [
+            {
+              "key": 1,
+              "count": 2
+            },
+            {
+              "key": 2,
+              "count": 2
+            },
+            {
+              "key": 3,
+              "count": 2
+            }
+          ],
+          "maxContainers": 1,
+          "plans": [
+            {
+              "n": 1,
+              "d": 3
+            },
+            {
+              "n": 2,
+              "d": 3
+            },
+            {
+              "n": 1,
+              "d": 2
+            }
+          ]
+        },
+        "intent": "本轮用数字卡组成分数完成第1框1/3、第2框2/3、第3框1/2。已经完成0框，余下材料有2张数字1、2张数字2、2张数字3。",
+        "hints": [
+          "先看第1框1/3、第2框2/3、第3框1/2，每个目标都以同样大小的1个整体为单位。",
+          "可用数字1、2、3；上格是分子，下格是分母，分母不能为0。",
+          "利用分子、分母同时乘同一个正整数的等值关系；每张卡只能在一个位置使用。"
+        ],
+        "steps": [
+          "第1框，目标1/3：分子格放1，分母格放3，得到1/3。",
+          "等值核对：1×3 = 1×3 = 3，所以1/3与1/3表示同样的数。",
+          "第2框，目标2/3：分子格放2，分母格放3，得到2/3。",
+          "等值核对：2×3 = 2×3 = 6，所以2/3与2/3表示同样的数。",
+          "第3框，目标1/2：分子格放1，分母格放2，得到1/2。",
+          "等值核对：1×2 = 1×2 = 2，所以1/2与1/2表示同样的数。",
+          "按这份分配逐框摆好并拖到对应目标；同一小块或数字卡不能重复使用。"
+        ],
+        "commonMistakes": [
+          "把目标1/3的分母当作要拿的块数；分母表示每份大小，分子才表示份数。",
+          "只改分子或只改分母会改变数值；等值分数要同时改变两者。",
+          "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。"
+        ]
+      },
+      "nativeValues": [
+        {
+          "n": 1,
+          "d": 3
+        },
+        {
+          "n": 2,
+          "d": 3
+        },
+        {
+          "n": 1,
+          "d": 2
+        }
+      ],
+      "passed": true,
+      "capture": {
+        "method": "page screenshot with an explicit clip; no implicit element scrolling",
+        "viewport": {
+          "width": 1440,
+          "height": 1100
+        },
+        "clip": {
+          "x": 1093,
+          "y": 12,
+          "width": 335,
+          "height": 966
+        },
+        "panel": {
+          "x": 1093,
+          "y": 12,
+          "width": 335,
+          "height": 965.5,
+          "top": 12,
+          "right": 1428,
+          "bottom": 977.5,
+          "left": 1093
+        },
+        "wholePanelVisible": true,
+        "allFieldsInRail": true,
+        "lastMistakeLineVisible": true,
+        "before": {
+          "windowScroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rail": {
+            "rect": {
+              "x": 1080,
+              "y": 0,
+              "width": 360,
+              "height": 1100,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1100,
+              "left": 1080
+            },
+            "scrollHeight": 1100,
+            "clientHeight": 1100,
+            "scrollTop": 0,
+            "scrollLeft": 0
+          },
+          "panel": {
+            "x": 1093,
+            "y": 12,
+            "width": 335,
+            "height": 965.5,
+            "top": 12,
+            "right": 1428,
+            "bottom": 977.5,
+            "left": 1093
+          },
+          "fields": {
+            "intent": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "hints": {
+              "x": 1108,
+              "y": 182.5625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 182.5625,
+              "right": 1413,
+              "bottom": 326.90625,
+              "left": 1108
+            },
+            "steps": {
+              "x": 1108,
+              "y": 430.296875,
+              "width": 305,
+              "height": 343.46875,
+              "top": 430.296875,
+              "right": 1413,
+              "bottom": 773.765625,
+              "left": 1108
+            },
+            "commonMistakes": {
+              "x": 1108,
+              "y": 812.15625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 812.15625,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1108
+            }
+          },
+          "allFieldsInRail": true,
+          "title": {
+            "text": "本题学习",
+            "rect": {
+              "x": 1108,
+              "y": 25,
+              "width": 305,
+              "height": 22.390625,
+              "top": 25,
+              "right": 1413,
+              "bottom": 47.390625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 27,
+              "width": 56,
+              "height": 18,
+              "top": 27,
+              "right": 1164,
+              "bottom": 45,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "H3"
+          },
+          "intentFirstLine": {
+            "text": "本轮用数字卡组成分数完成第1框1/3、第2框2/3、第3框1/2。已经完成0框，余下材料有2张数字1、2张数字2、2张数字3。",
+            "rect": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 55.390625,
+              "width": 276.828125,
+              "height": 18,
+              "top": 55.390625,
+              "right": 1384.828125,
+              "bottom": 73.390625,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "P"
+          },
+          "lastMistake": {
+            "text": "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。",
+            "rect": {
+              "x": 1132,
+              "y": 911.71875,
+              "width": 281,
+              "height": 44.78125,
+              "top": 911.71875,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1132
+            },
+            "line": {
+              "x": 1132,
+              "y": 936.109375,
+              "width": 126,
+              "height": 18,
+              "top": 936.109375,
+              "right": 1258,
+              "bottom": 954.109375,
+              "left": 1132
+            },
+            "visible": true,
+            "hit": "LI"
+          },
+          "fingerprint": "12d6cb54"
+        },
+        "after": {
+          "windowScroll": {
+            "x": 0,
+            "y": 0
+          },
+          "rail": {
+            "rect": {
+              "x": 1080,
+              "y": 0,
+              "width": 360,
+              "height": 1100,
+              "top": 0,
+              "right": 1440,
+              "bottom": 1100,
+              "left": 1080
+            },
+            "scrollHeight": 1100,
+            "clientHeight": 1100,
+            "scrollTop": 0,
+            "scrollLeft": 0
+          },
+          "panel": {
+            "x": 1093,
+            "y": 12,
+            "width": 335,
+            "height": 965.5,
+            "top": 12,
+            "right": 1428,
+            "bottom": 977.5,
+            "left": 1093
+          },
+          "fields": {
+            "intent": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "hints": {
+              "x": 1108,
+              "y": 182.5625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 182.5625,
+              "right": 1413,
+              "bottom": 326.90625,
+              "left": 1108
+            },
+            "steps": {
+              "x": 1108,
+              "y": 430.296875,
+              "width": 305,
+              "height": 343.46875,
+              "top": 430.296875,
+              "right": 1413,
+              "bottom": 773.765625,
+              "left": 1108
+            },
+            "commonMistakes": {
+              "x": 1108,
+              "y": 812.15625,
+              "width": 305,
+              "height": 144.34375,
+              "top": 812.15625,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1108
+            }
+          },
+          "allFieldsInRail": true,
+          "title": {
+            "text": "本题学习",
+            "rect": {
+              "x": 1108,
+              "y": 25,
+              "width": 305,
+              "height": 22.390625,
+              "top": 25,
+              "right": 1413,
+              "bottom": 47.390625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 27,
+              "width": 56,
+              "height": 18,
+              "top": 27,
+              "right": 1164,
+              "bottom": 45,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "H3"
+          },
+          "intentFirstLine": {
+            "text": "本轮用数字卡组成分数完成第1框1/3、第2框2/3、第3框1/2。已经完成0框，余下材料有2张数字1、2张数字2、2张数字3。",
+            "rect": {
+              "x": 1108,
+              "y": 53.390625,
+              "width": 305,
+              "height": 67.171875,
+              "top": 53.390625,
+              "right": 1413,
+              "bottom": 120.5625,
+              "left": 1108
+            },
+            "line": {
+              "x": 1108,
+              "y": 55.390625,
+              "width": 276.828125,
+              "height": 18,
+              "top": 55.390625,
+              "right": 1384.828125,
+              "bottom": 73.390625,
+              "left": 1108
+            },
+            "visible": true,
+            "hit": "P"
+          },
+          "lastMistake": {
+            "text": "把已经用在一框中的材料又算进另一框；要按本轮可用数量分配。",
+            "rect": {
+              "x": 1132,
+              "y": 911.71875,
+              "width": 281,
+              "height": 44.78125,
+              "top": 911.71875,
+              "right": 1413,
+              "bottom": 956.5,
+              "left": 1132
+            },
+            "line": {
+              "x": 1132,
+              "y": 936.109375,
+              "width": 126,
+              "height": 18,
+              "top": 936.109375,
+              "right": 1258,
+              "bottom": 954.109375,
+              "left": 1132
+            },
+            "visible": true,
+            "hit": "LI"
+          },
+          "fingerprint": "12d6cb54"
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "startedAt": "2026-10-01T10:00:42.408Z",
+  "originalImageHashes": [
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/area-builder-game-level-1.png",
+      "sha256": "10ee574e538831cea5592e036a2c42bc988cf1c2a5af62fa0d8d2e845605bbc7"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/area-builder-game-level-2.png",
+      "sha256": "5b8fa5070bf925efa04cf42a5d021575414331cf0b7922abd74dda1913b8b7b5"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/area-builder-game-level-3.png",
+      "sha256": "dc0480a041deece7182588f79e779cec86f1fdd888b0e942f1eae48f486e57c2"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/area-builder-game-level-4.png",
+      "sha256": "36de6766dee8199fca913fd258990f7b8b508f706152073d64513035e50f11c5"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/area-builder-game-level-5.png",
+      "sha256": "3d98faedd326fff7a7bd9c1bcf2fc651c84ffeae91c1da70a7dbaf1fbf3002c0"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/area-builder-game-level-6.png",
+      "sha256": "e20c663786f6c591d19075efce7fc86aee4c9623da9bc44bf3c2c4e3dafb112d"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaConstructed.png",
+      "sha256": "1ed8dd12fd529239cf56f726a972daa15104f2c4893dd752ce5ac6972c8890a7"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaEntered-orthogonal.png",
+      "sha256": "50d4308a784a4d5dbf300278d786e94395370c078899c5afdbc1dfe95367b193"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaAndPerimeterConstructed.png",
+      "sha256": "76674caba85a3b0185422299853e9eacb7303ae3a07c48360217ffc255e12fdd"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaEntered-hole.png",
+      "sha256": "6e6a9da371355eb20beeabb5f4659a1fed2d15f04b77c2bfbec22ccf116382e0"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaEntered-diagonal.png",
+      "sha256": "a607fb6d977fc7e0ab7a4b376a0d75e486ae23037a66f48bd06f1d744dce2e4e"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaAndProportionConstructed.png",
+      "sha256": "6a19f4f777016327fe7269ea1190791ef1b98e3399b4a2728b0a885d93b36e06"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-area-builder-areaPerimeterAndProportionConstructed.png",
+      "sha256": "fdaebe6409b084a636e5bc2a1eb3ef7e93780ebd7fb977ca1bdb436d0b7dea51"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/area-mobile-current-question.png",
+      "sha256": "026d03949db6c59fcec167790c4082f9a6a3401c7bebca1a75f51e888de0fb2d"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-1.png",
+      "sha256": "95668e19ccfdb67db0b87895138dd29289f1b97c3a4eeaadf1370743c3bb97df"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-2.png",
+      "sha256": "6abc608aa76f3c6936008e0cd592e2d7ca252c3f313b7a7b373442e42e11480a"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-3.png",
+      "sha256": "dd8cbfeb29e470f4ef7270cb31b79b62ddba26ee96981a29179d44d94c6459e7"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-4.png",
+      "sha256": "b98879cd10e1c02aaf9864f3d69f5920c797e4e34ce6c4077454283260bd867f"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-5.png",
+      "sha256": "ad165d0f36b3a1d528432136c5a1a3617b846c4a7b470fcaf38d18ccce8523b8"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-6.png",
+      "sha256": "140b68a2c2cf6b0f22edb350a1ac44b330547deb0907befc5ca957c062187625"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-7.png",
+      "sha256": "0d7434d6a6d974d41d04107f01ec79e1859adc94966551132a852c7bca93c574"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-8.png",
+      "sha256": "d01ac5f215acc88ca2c181ff70002d63890cc858cec28f252c4bc18057722240"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-9.png",
+      "sha256": "64acb9f44da63d9808834bb24f47cfa70717c7373902672b846238db5e94703e"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-shape-level-10.png",
+      "sha256": "8b56d5a000b6492e4567a1a8c190963c5e4312dc18945372131d9b2391c28902"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-1.png",
+      "sha256": "f4014c575a63e7aef05b8bfbe7d2222b20db0230005966072c2c81fb7cdfacb9"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-2.png",
+      "sha256": "f208f244f06715d5b3b0ebb6d28e92e5ee41d75908a6602c03399d8676067fd1"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-3.png",
+      "sha256": "210c210053029c450e94431b50eda16c6d18dfe6dfeb1e7a217cd18faa413679"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-4.png",
+      "sha256": "d6d64b34aaffa657aeeead762d8a5e3567740b7454de25d9fc30c9177fe6bf0c"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-5.png",
+      "sha256": "4e05b9fd320539f0c34b61d583097683c5f7ae25f1fec679e4632479ee4f2c90"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-6.png",
+      "sha256": "8e8d74b9c54bd6b6e9371d976774506032a59b2a011ab6f880c477c5516803bb"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-7.png",
+      "sha256": "e1d437cb8a82a6c011ac82682bc37b842581ce5aa88ed66bcf3927b0797e9e7b"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-8.png",
+      "sha256": "7f2451aa27694825cfd6508f5df1d9c8dd32729c7aef04fa056fd6f9bd638a47"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-9.png",
+      "sha256": "87b5cf63481093f6877b61583fe9e411f2ba962dd98c5d2af3b316585268317e"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fractions-intro-number-level-10.png",
+      "sha256": "16c8a188b5521e0a4ddb90192f5748eddbc16c5ca84854d1f36ad4dc2639a980"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-shape-BAR.png",
+      "sha256": "9a0e88d5171828fb16840c67ee135c95f8d6a0828d5d8afb21d5368500231c3a"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-shape-PIE.png",
+      "sha256": "d9920552ed7e3552318524d3bae995642b9937e4081239d0c607f36425444714"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-fractions-intro-number.png",
+      "sha256": "f4014c575a63e7aef05b8bfbe7d2222b20db0230005966072c2c81fb7cdfacb9"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-1.png",
+      "sha256": "bfed3458c45b16c716a157bdd215225433b5e391f989b4641d3a159798dd99b5"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-2.png",
+      "sha256": "cecd5afed9e68af3981f2bb9cad90ee00929c94e2527a1c671cf4caef1ee1a05"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-3.png",
+      "sha256": "054cf7ceab31a1b8e86dbf2fecea7c3450900ffa6ec8b7bed553949e4fcf3a4e"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-4.png",
+      "sha256": "464aea4b51e31a9f020053c8be08d07ab6e47e26ce6a9f9817b412d84ee4c470"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-5.png",
+      "sha256": "b5c52ee1983ab152c3564ba8bd7a50160343edd3fb593eb373ab3212cb09edea"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-6.png",
+      "sha256": "8e81248ef0fff862eb0aba8ba26e3c23f2e557e7741a6432f5f7e90236f394ce"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-7.png",
+      "sha256": "2de97625ee1f888e241fdca90548daf26227fd74615190875313951ca991fbaf"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-fractions-level-8.png",
+      "sha256": "15ddd2c9635e9589cd5449ed86cf84abfbd1c15f3a77a4c9bf966a061a0d2007"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-1.png",
+      "sha256": "d6a01bdbcab9de4cae572957e4cce64296e12f1108df1ae6ae53af3eecb6b238"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-2.png",
+      "sha256": "ecd427f37b4d812063a9db5c3787a63755f47346fcaac221932b89a943891b05"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-3.png",
+      "sha256": "639f7e419e0e58ddfc20bc4147d12046d31a02f4c3f88f78cb87e8c021a20b8d"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-4.png",
+      "sha256": "d0dc7487367b946634ec4de0804c193ae67d26aa444593d1e8c992505f629078"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-5.png",
+      "sha256": "cc8a1fd37ec37cea7ec5c728c47b198179b09f7dfca5cb9bdfb131f60135c649"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-6.png",
+      "sha256": "e8058841cdfe8a2ec17309fca9268b239295de4993c7b0202fe5bf9d97f868d3"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-7.png",
+      "sha256": "f286f40a0bfe2279d4c945c6ffdbc2802fe368a5421bb249d78f86f148b36f87"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/fraction-matcher-mixed-numbers-level-8.png",
+      "sha256": "f96365c05c9e9eb17b5ddba46b82ca932070a7c5cfe79632de3058e45a4059ec"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-fraction-matcher-fractions.png",
+      "sha256": "9ea63e0076ed46c40b4bb7a30e5c1235ec0ee90a16e4c7ee5a868d9e5938c64d"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-fraction-matcher-mixed-numbers.png",
+      "sha256": "6cc9dae92a6bea178eb8dcf49fab6cc497ca14b159ed1742c4a067671a37845e"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/matcher-tablet-current-question.png",
+      "sha256": "990f5ee7eb102c1bee39b81f0638dd37d428f2783d76ea7ffe4dc22d7792e436"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/balancing-act-game-level-1.png",
+      "sha256": "301b3fd688f54a4cdea0758dfc4d04d14ae421bb925c146a9b8f19b987c225dc"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/balancing-act-game-level-2.png",
+      "sha256": "eff2ec48806706db53f36cfd110d0f044a1a1f3b85f56c7af31ff60d476a0034"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/balancing-act-game-level-3.png",
+      "sha256": "e5950e8afbf615eb99f2ca4d4de534936906c31fa87e8dd45ef5b30c06b9c834"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/balancing-act-game-level-4.png",
+      "sha256": "83f33ed4e210f2e31b4311974f811de254f19770e21e69b995d174186b0351e1"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-balancing-act-position.png",
+      "sha256": "dbd9c27d5b7ab53e2ee281cfdc30505e4b0e5e95a30ba0607807122ce228384f"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-balancing-act-tilt.png",
+      "sha256": "1bbb6dd533ada6453fe121952b73ca5bb691cedad92bab5f14bd2db6d86e4f91"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/family-balancing-act-mass.png",
+      "sha256": "94af7ed07a2f9728242d3d90ca5f0d269a5ad3a2363fe507498af40bdf3171ee"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/balance-desktop-current-question.png",
+      "sha256": "ba3bc014764b9e1fb4c1a4f3441fa005f8ae53884ead4bf16fb853413a348ad3"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/file-area-builder-game-level-1.png",
+      "sha256": "82e03bbdaabe9c34a3a82990040b82293733131b67e855034726c58710954f6e"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/file-fractions-intro-shape-level-1.png",
+      "sha256": "558328b2313c9cbcf7b6347377c1f4ed072835be9afc07c5f4c0cbfa056859bb"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/file-fraction-matcher-fractions-level-1.png",
+      "sha256": "41eb344889def964ea1868c9ca6cb5fba2459f8599115bbb192b0da69cc01d3f"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/file-fraction-matcher-mixed-numbers-level-1.png",
+      "sha256": "f3510f21d273982f511f0e4707e800023073cb18816d306a7d4f7e521ecb424e"
+    },
+    {
+      "path": "output/playwright/learning-coverage/phet-questions/file-balancing-act-game-level-1.png",
+      "sha256": "fbfe7f80f96ff34b033a531a41c1c5b463e6e7014dd67dd83c79ee2b85670269"
+    }
+  ],
+  "port": 52377,
+  "all69OriginalsUnchanged": true,
+  "browserClosed": true,
+  "serverClosed": true,
+  "finishedAt": "2026-10-01T10:00:52.567Z",
+  "captureMethodFindings": {
+    "reportedBy": "Independent Luna review of six original image paths; reviewed image byte hashes were not supplied.",
+    "oldProofLimitation": "Old Locator.screenshot evidence checked geometry only before the screenshot and omitted the title; an implicit scroll or reflow inside capture could not be ruled out.",
+    "currentScope": "Production code was unchanged. Six freshly generated native questions were captured with page clips and before/after geometry, scroll, text-line hit-tests and fingerprint checks. Visual acceptance remains with the independent reviewer."
+  }
+}

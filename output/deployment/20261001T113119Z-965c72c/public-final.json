@@ -1,0 +1,10 @@
+{
+  "checkedAtUTC": "2026-10-01T12:06:10.2325279Z",
+  "status": 200,
+  "manifestFiles": 1932,
+  "releaseId": "20261001T113119Z-965c72c",
+  "cacheControl": [
+    "must-revalidate, no-cache"
+  ],
+  "publicManifestMatchesLocal": true
+}

@@ -1,0 +1,2211 @@
+{
+  "passed": false,
+  "phet": [
+    {
+      "id": "phet-forces-and-motion-basics/net-force",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-desktop.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-forces-and-motion-basics/motion",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-desktop.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-forces-and-motion-basics/friction",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-desktop.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-forces-and-motion-basics/acceleration",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-desktop.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-energy-skate-park-basics/intro",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-desktop.png",
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-energy-skate-park-basics/friction",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-desktop.png",
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-energy-skate-park-basics/playground",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-desktop.png",
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-area-builder/explore",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-area-builder-explore-desktop.png",
+        "output/playwright/learning-coverage/phet-area-builder-explore-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-area-builder/game",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-area-builder-game-desktop.png",
+        "output/playwright/learning-coverage/phet-area-builder-game-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-vector-addition/explore-1d",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-vector-addition-explore-1d-desktop.png",
+        "output/playwright/learning-coverage/phet-vector-addition-explore-1d-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-vector-addition/explore-2d",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-vector-addition-explore-2d-desktop.png",
+        "output/playwright/learning-coverage/phet-vector-addition-explore-2d-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-vector-addition/lab",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-vector-addition-lab-desktop.png",
+        "output/playwright/learning-coverage/phet-vector-addition-lab-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-vector-addition/equations",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-vector-addition-equations-desktop.png",
+        "output/playwright/learning-coverage/phet-vector-addition-equations-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-fractions-intro/intro",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-fractions-intro-intro-desktop.png",
+        "output/playwright/learning-coverage/phet-fractions-intro-intro-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-fractions-intro/game",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-fractions-intro-game-desktop.png",
+        "output/playwright/learning-coverage/phet-fractions-intro-game-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-fractions-intro/lab",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-fractions-intro-lab-desktop.png",
+        "output/playwright/learning-coverage/phet-fractions-intro-lab-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-fraction-matcher/fractions",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-fraction-matcher-fractions-desktop.png",
+        "output/playwright/learning-coverage/phet-fraction-matcher-fractions-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-fraction-matcher/mixed-numbers",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-desktop.png",
+        "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-balancing-act/intro",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-balancing-act-intro-desktop.png",
+        "output/playwright/learning-coverage/phet-balancing-act-intro-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-balancing-act/balance-lab",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-balancing-act-balance-lab-desktop.png",
+        "output/playwright/learning-coverage/phet-balancing-act-balance-lab-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-balancing-act/game",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-balancing-act-game-desktop.png",
+        "output/playwright/learning-coverage/phet-balancing-act-game-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc/intro",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-desktop.png",
+        "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc/lab",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-desktop.png",
+        "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-states-of-matter-basics/states",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-states-desktop.png",
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-states-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-states-of-matter-basics/phase-changes",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-phase-changes-desktop.png",
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-phase-changes-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-build-a-molecule/single-molecule",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-desktop.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-build-a-molecule/multiple-molecules",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-desktop.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-mobile.png"
+      ]
+    },
+    {
+      "id": "phet-build-a-molecule/playground",
+      "nonOverlapping": true,
+      "displayMatchesScience": true,
+      "desktop": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1000,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1000,
+          "left": 0
+        },
+        "guide": {
+          "x": 1080,
+          "y": 0,
+          "width": 360,
+          "height": 1000,
+          "top": 0,
+          "right": 1440,
+          "bottom": 1000,
+          "left": 1080
+        },
+        "display": {
+          "width": 1080,
+          "height": 1000
+        }
+      },
+      "mobile": {
+        "science": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 489.53125,
+          "top": 0,
+          "right": 390,
+          "bottom": 489.53125,
+          "left": 0
+        },
+        "guide": {
+          "x": 0,
+          "y": 489.53125,
+          "width": 390,
+          "height": 354.46875,
+          "top": 489.53125,
+          "right": 390,
+          "bottom": 844,
+          "left": 0
+        },
+        "display": {
+          "width": 390,
+          "height": 490
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/phet-build-a-molecule-playground-desktop.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-playground-mobile.png"
+      ]
+    }
+  ],
+  "hostMobile": [],
+  "matterViews": [],
+  "matterPhases": [],
+  "legacy": [],
+  "pointerChecks": [
+    {
+      "id": "phet-area-builder",
+      "viewport": "desktop",
+      "actualPointerDrag": true,
+      "source": "upstream creator/toolbox globalBounds",
+      "fixture": {
+        "start": {
+          "x": 544.921875,
+          "y": 675.078125
+        },
+        "end": {
+          "x": 180,
+          "y": 311.5625
+        },
+        "before": 0,
+        "areaBefore": 0
+      },
+      "after": {
+        "count": 1,
+        "area": 1
+      },
+      "result": "new square placed on board"
+    },
+    {
+      "id": "phet-area-builder",
+      "viewport": "mobile",
+      "actualPointerDrag": true,
+      "source": "upstream creator/toolbox globalBounds",
+      "fixture": {
+        "start": {
+          "x": 196.77734375,
+          "y": 308.22265625
+        },
+        "end": {
+          "x": 81.25,
+          "y": 176.953125
+        },
+        "before": 1,
+        "areaBefore": 1
+      },
+      "after": {
+        "count": 2,
+        "area": 2
+      },
+      "result": "new square placed on board"
+    },
+    {
+      "id": "phet-vector-addition",
+      "viewport": "desktop",
+      "actualPointerDrag": true,
+      "source": "upstream creator/toolbox globalBounds",
+      "fixture": {
+        "start": {
+          "x": 900.0703125,
+          "y": 551.4907892417552
+        },
+        "end": {
+          "x": 421.34199142456055,
+          "y": 492.96875
+        },
+        "before": 0
+      },
+      "after": {
+        "count": 1
+      },
+      "result": "new vector added to graph"
+    },
+    {
+      "id": "phet-vector-addition",
+      "viewport": "mobile",
+      "actualPointerDrag": true,
+      "source": "upstream creator/toolbox globalBounds",
+      "fixture": {
+        "start": {
+          "x": 325.025390625,
+          "y": 285.1552734375
+        },
+        "end": {
+          "x": 152.1512746810913,
+          "y": 242.4609375
+        },
+        "before": 1
+      },
+      "after": {
+        "count": 2
+      },
+      "result": "new vector added to graph"
+    }
+  ],
+  "screenshots": [
+    {
+      "id": "phet-forces-and-motion-basics-net-force",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-net-force",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-motion",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-motion",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-friction",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-friction",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-acceleration",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-forces-and-motion-basics-acceleration",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-intro",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-intro",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-friction",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-friction",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-playground",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-energy-skate-park-basics-playground",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-area-builder-explore",
+      "path": "output/playwright/learning-coverage/phet-area-builder-explore-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-area-builder-explore",
+      "path": "output/playwright/learning-coverage/phet-area-builder-explore-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-area-builder-game",
+      "path": "output/playwright/learning-coverage/phet-area-builder-game-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-area-builder-game",
+      "path": "output/playwright/learning-coverage/phet-area-builder-game-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-vector-addition-explore-1d",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-explore-1d-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-vector-addition-explore-1d",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-explore-1d-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-vector-addition-explore-2d",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-explore-2d-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-vector-addition-explore-2d",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-explore-2d-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-vector-addition-lab",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-lab-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-vector-addition-lab",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-lab-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-vector-addition-equations",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-equations-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-vector-addition-equations",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-equations-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-fractions-intro-intro",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-intro-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-fractions-intro-intro",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-intro-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-fractions-intro-game",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-game-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-fractions-intro-game",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-game-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-fractions-intro-lab",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-lab-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-fractions-intro-lab",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-lab-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-fraction-matcher-fractions",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-fractions-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-fraction-matcher-fractions",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-fractions-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-fraction-matcher-mixed-numbers",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-fraction-matcher-mixed-numbers",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-balancing-act-intro",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-intro-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-balancing-act-intro",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-intro-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-balancing-act-balance-lab",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-balance-lab-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-balancing-act-balance-lab",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-balance-lab-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-balancing-act-game",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-game-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-balancing-act-game",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-game-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-intro",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-intro",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-lab",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-lab",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-states-of-matter-basics-states",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-states-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-states-of-matter-basics-states",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-states-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-states-of-matter-basics-phase-changes",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-phase-changes-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-states-of-matter-basics-phase-changes",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-phase-changes-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-build-a-molecule-single-molecule",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-build-a-molecule-single-molecule",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-build-a-molecule-multiple-molecules",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-build-a-molecule-multiple-molecules",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-build-a-molecule-playground",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-playground-desktop.png",
+      "viewport": "desktop",
+      "phase": "explain",
+      "capture": "viewport"
+    },
+    {
+      "id": "phet-build-a-molecule-playground",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-playground-mobile.png",
+      "viewport": "mobile",
+      "phase": "explain",
+      "capture": "viewport"
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "base": "http://127.0.0.1:51336/MathPhysics/",
+  "current": "build-a-molecule",
+  "failure": "page.waitForFunction: TypeError: Cannot read properties of null (reading 'dataset')\n    at eval (eval at predicate (eval at evaluate (:290:30)), <anonymous>:1:77)\n    at predicate (eval at evaluate (:290:30), <anonymous>:7:23)\n    at next (eval at evaluate (:290:30), <anonymous>:29:29)\n    at C:\\Users\\cheng\\Desktop\\MathPhysics\\tests\\demo-layout-browser.mjs:59:105",
+  "diagnostics": {
+    "url": "http://127.0.0.1:51336/MathPhysics/#activity/forces-and-motion-basics"
+  },
+  "browserClosed": true,
+  "serverClosed": true
+}

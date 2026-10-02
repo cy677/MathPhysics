@@ -9,6 +9,12 @@
     "forces-and-motion-basics",
     "energy-skate-park-basics",
     "vector-addition",
+    "fractions-intro",
+    "fraction-matcher",
+    "balancing-act",
+    "circuit-construction-kit-dc",
+    "states-of-matter-basics",
+    "build-a-molecule",
     "primary-math",
     "jsx-triangle",
     "jsx-mirror",
@@ -100,5 +106,7 @@
     "Canvas drag still selects physics bodies",
     "Mobile categories, lists and canvas fit without horizontal overflow"
   ],
-  "base": "http://127.0.0.1:58543/MathPhysics/"
+  "base": "http://127.0.0.1:55090/MathPhysics/",
+  "browserClosed": true,
+  "serverClosed": true
 }

@@ -6,15 +6,18 @@
   <link rel="icon" href="../../vendor/tangram/favicon.ico">
   <link rel="stylesheet" href="../theme.css">
   <link rel="stylesheet" href="tangram.css">
+  <link rel="stylesheet" href="../learning.css">
 </head>
 <body class="mp-page mp-tangram">
   <header><a id="back-home" href="../../index.html">← 科学小岛</a><div><small>几何工坊 · 移动与旋转</small><h1>立体七巧板</h1></div><button id="reset">重新开始</button></header>
-  <p class="instructions" id="instructions">先看清目标图形，再点“开始拼图”。拖动拼块，点一下拼块可以转向。</p>
-  <main id="container" aria-label="立体七巧板拼图画布" aria-describedby="instructions"></main>
+  <p class="instructions" id="instructions">先看清目标图形，再点“开始拼图”。拖拼板内部移动，拖住一角转动；也可用下方按钮。</p>
+  <div id="tangram-workspace"><main id="container" aria-label="立体七巧板拼图画布" aria-describedby="instructions"></main><aside id="tangram-learning" aria-label="实验引导"></aside></div>
+  <div id="piece-control" class="piece-control"><label for="piece-choice">移动拼板</label><select id="piece-choice" aria-label="选择拼板"></select><button data-piece-move="left" aria-label="拼板向左">←</button><button data-piece-move="up" aria-label="拼板向上">↑</button><button data-piece-move="down" aria-label="拼板向下">↓</button><button data-piece-move="right" aria-label="拼板向右">→</button><button id="piece-turn-left">转15° ↶</button><button id="piece-turn-right">转15° ↷</button></div>
   <div id="error" role="alert" hidden></div>
   <footer><span>七块拼板，试着拼出目标图形。</span><a href="../../vendor/tangram/LICENSE" target="_blank" rel="noopener">Tangram · GPL-3.0</a></footer>
   <!-- MP_TANGRAM_SNAPSHOT -->
   <script src="../theme.js"></script>
+  <script src="../activity-learning.js"></script>
   <script type="module" src="tangram-view.js"></script>
 </body>
 </html>

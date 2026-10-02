@@ -1,4 +1,5 @@
 // Original MathPhysics lesson descriptions and metadata. MIT. No upstream course text/assets copied.
+import {GEOMETRY_GUIDES} from './teaching.js';
 export const GROUPS = {area:'面积工坊',ratio:'比例与相似',algebra:'代数拼图',solid:'立体空间'};
 const p=(key,label,min,max,value,step=1)=>({key,label,min,max,value,step});
 const a=()=>p('a','长度 a',2,8,6), b=()=>p('b','长度 b',1,6,3), h=()=>p('h','垂直高度 h',2,6,4), r=()=>p('r','半径 r',1,5,3);
@@ -14,7 +15,7 @@ export const SOURCES={
   circle:{title:'Mathigon：圆与圆周率（参考阅读，未复制内容）',url:'https://mathigon.org/course/circles/introduction'}
 };
 function lesson(id,title,group,grades,formula,params,steps,why,condition,sources,level='基础'){
-  return {id,title,group,grades,formula,params,steps,why,condition,sources,level};
+  return {id,title,group,grades,formula,params,steps,why,condition,sources,level,teaching:GEOMETRY_GUIDES[id]};
 }
 export const LESSONS=[
 lesson('rectangle','长方形与正方形：数方格','area',[3],'S = ab；a = b 时 S = a²',[a(),b()],

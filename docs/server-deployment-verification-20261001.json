@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-01",
+  "passed": true,
+  "releaseId": "20261001T005739Z-965c72c",
+  "previousReleaseId": "20260930T061500Z",
+  "sourceCommit": "965c72c95dc36ede7e66336c7e3c7287ef88b214",
+  "includesLocalChanges": true,
+  "urls": {
+    "meow": "https://124.70.198.189/",
+    "mathphysics": "https://124.70.198.189/mathphysics/"
+  },
+  "archiveSHA256": "62da4fdeebb81717a5857f0fbebe08781cf0bb0ff6dcb2861a64854758daef7d",
+  "localTests": {
+    "skipped": 1,
+    "failed": 0,
+    "passed": 196,
+    "total": 197,
+    "skipReason": "Linux-only interpreter fallback check"
+  },
+  "serverTests": {
+    "tests": 197,
+    "pass": 197,
+    "fail": 0,
+    "skipped": 0
+  },
+  "server": {
+    "releaseId": "20261001T005739Z-965c72c",
+    "verifiedFiles": 1873,
+    "activityCount": 72,
+    "entryChecks": 30,
+    "servedResourceHashesMatch": 28,
+    "javascriptModuleMimeChecks": 10,
+    "cacheRefreshReturns200": true,
+    "privatePathsHidden": true,
+    "meowServiceUnchanged": true,
+    "meowFilesUnchanged": true,
+    "meowHomeUnchanged": true,
+    "meowServiceConfigUnchanged": true,
+    "nginxOtherFilesUnchanged": true,
+    "databaseTables": 12,
+    "databaseUnchanged": true,
+    "databaseChangedTables": [],
+    "backupIntegrity": "ok",
+    "backup": "/srv/mathphysics/backups/20261001T005739Z-965c72c",
+    "passed": true
+  },
+  "browser": {
+    "passed": true,
+    "url": "https://124.70.198.189/mathphysics/#activity/question-bank",
+    "releaseId": "20261001T005739Z-965c72c",
+    "activities": [
+      {
+        "id": "fractions-intro",
+        "title": "分数拼拼乐",
+        "screens": 3,
+        "artReady": true,
+        "icons": 4,
+        "loaded": true
+      },
+      {
+        "id": "fraction-matcher",
+        "title": "分数找朋友",
+        "screens": 2,
+        "artReady": true,
+        "icons": 4,
+        "loaded": true
+      },
+      {
+        "id": "balancing-act",
+        "title": "跷跷板平衡",
+        "screens": 3,
+        "artReady": true,
+        "icons": 4,
+        "loaded": true
+      },
+      {
+        "id": "circuit-construction-kit-dc",
+        "title": "点亮小灯泡",
+        "screens": 2,
+        "artReady": true,
+        "icons": 3,
+        "loaded": true
+      },
+      {
+        "id": "states-of-matter-basics",
+        "title": "冷热变变变",
+        "screens": 2,
+        "artReady": true,
+        "icons": 4,
+        "loaded": true
+      },
+      {
+        "id": "build-a-molecule",
+        "title": "分子搭建工坊",
+        "screens": 3,
+        "artReady": true,
+        "icons": 3,
+        "loaded": true
+      }
+    ],
+    "errors": [],
+    "failedResources": [],
+    "oldExplorationRecordsPreserved": true,
+    "oldGeometryProgressPreserved": true,
+    "unrelatedStoragePreserved": true,
+    "sourceCommit": "965c72c95dc36ede7e66336c7e3c7287ef88b214",
+    "registeredActivities": 72,
+    "visibleActivities": 23,
+    "questionBank": {
+      "loaded": true,
+      "generatedQuestions": 3,
+      "answerCheckPassed": true,
+      "refreshRestoresWorksheetAndAnswers": true
+    },
+    "geometryCompletionRestored": true,
+    "primaryMathLoaded": true,
+    "mobileWidth": 390
+  },
+  "changedSourceFiles": [
+    "scripts/build_display_adapters.py",
+    "deploy/mathphysics.nginx.conf"
+  ],
+  "screenshots": [
+    "../output/playwright/mathphysics-live-home-20261001.png",
+    "../output/playwright/mathphysics-live-question-bank-20261001.png",
+    "../output/playwright/mathphysics-live-phet-20261001.png",
+    "../output/playwright/mathphysics-live-mobile-20261001.png"
+  ],
+  "cleanup": {
+    "sshSessionClosed": true,
+    "testBrowserClosed": true,
+    "temporaryServerUploadsRemoved": true,
+    "testBrowserListeningPortsReleased": true,
+    "oldReleaseAndBackupRetained": true
+  }
+}

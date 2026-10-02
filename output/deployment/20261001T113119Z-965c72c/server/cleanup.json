@@ -1,0 +1,12 @@
+{
+  "releaseId": "20261001T113119Z-965c72c",
+  "temporaryUploadsRemoved": true,
+  "helperArchived": "/srv/mathphysics/backups/20261001T113119Z-965c72c/remote-deploy-20261001T113119Z-965c72c.py",
+  "backupRetained": "/srv/mathphysics/backups/20261001T113119Z-965c72c",
+  "retainedReleases": [
+    "20260930T061500Z",
+    "20261001T005739Z-965c72c",
+    "20261001T113119Z-965c72c"
+  ],
+  "current": "/srv/mathphysics/releases/20261001T113119Z-965c72c"
+}

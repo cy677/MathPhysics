@@ -1,0 +1,86 @@
+- generic [ref=f3e1]:
+  - link "跳到活动内容" [ref=f3e2] [cursor=pointer]:
+    - /url: "#library"
+  - banner [ref=f3e3]:
+    - link "科学小岛首页" [ref=f3e4] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f3e5]: △
+      - generic [ref=f3e6]:
+        - text: 科学小岛
+        - generic [ref=f3e7]: MATH + PHYSICS
+    - navigation "主导航" [ref=f3e8]:
+      - link "探索内容" [ref=f3e9] [cursor=pointer]:
+        - /url: "#library"
+      - button "来源与授权" [ref=f3e10] [cursor=pointer]
+    - generic [ref=f3e11]: 探索乐园
+  - main [ref=f3e12]:
+    - generic [ref=f3e13]:
+      - generic [ref=f3e14]:
+        - generic [ref=f3e15]: 给好奇心，一个可以动手的世界
+        - heading "小小探索家， 欢迎来到科学小岛。" [level=1] [ref=f3e17]: 小小探索家，欢迎来到科学小岛。
+        - paragraph [ref=f3e18]: 拼一块图形，点一盏灯，搭一个分子。让数学与科学，在你的手中发生。
+        - generic [ref=f3e19]
+      - generic [aria-hidden] [ref=f3e23]:
+        - generic [ref=f3e26]: 每一种尝试，都有新发现
+        - generic [ref=f3e51]: △ ＋ → ＝ 新发现
+    - region "四个探索主题" [ref=f3e52]:
+      - button "01 / 几何工坊 △ ◇ ○ 把想象，拼成形状 分数、拼图、面积与空间 前往几何工坊 ↗" [ref=f3e53] [cursor=pointer]:
+        - text: 01 / 几何工坊
+        - generic [ref=f3e54]: △ ◇ ○
+        - heading "把想象，拼成形状" [level=2] [ref=f3e55]
+        - paragraph [ref=f3e56]: 分数、拼图、面积与空间
+        - generic [ref=f3e57]: 前往几何工坊 ↗
+      - button "02 / 动力车间 ● ↗ ▰ 动手，让世界动起来 推拉、平衡、能量与电路 前往动力车间 ↗" [ref=f3e58] [cursor=pointer]:
+        - text: 02 / 动力车间
+        - generic [ref=f3e59]: ● ↗ ▰
+        - heading "动手，让世界动起来" [level=2] [ref=f3e60]
+        - paragraph [ref=f3e61]: 推拉、平衡、能量与电路
+        - generic [ref=f3e62]: 前往动力车间 ↗
+      - button "03 / 箭头港口 ↗ ＋ → 找到方向，也找到规律 方向、向量与分量的初步认识 前往箭头港口 ↗" [ref=f3e63] [cursor=pointer]:
+        - text: 03 / 箭头港口
+        - generic [ref=f3e64]: ↗ ＋ →
+        - heading "找到方向，也找到规律" [level=2] [ref=f3e65]
+        - paragraph [ref=f3e66]: 方向、向量与分量的初步认识
+        - generic [ref=f3e67]: 前往箭头港口 ↗
+      - button "04 / 微观天地 ● ○ ● 走近，微小的世界 冷热、物态、原子与分子 前往微观天地 ↗" [ref=f3e68] [cursor=pointer]:
+        - text: 04 / 微观天地
+        - generic [ref=f3e69]: ● ○ ●
+        - heading "走近，微小的世界" [level=2] [ref=f3e70]
+        - paragraph [ref=f3e71]: 冷热、物态、原子与分子
+        - generic [ref=f3e72]: 前往微观天地 ↗
+    - generic [ref=f3e73]:
+      - generic [ref=f3e74]:
+        - generic [ref=f3e75]
+        - generic [ref=f3e78]
+      - generic [ref=f3e81]:
+        - generic [ref=f3e82]
+        - generic [ref=f3e94]
+        - paragraph [ref=f3e104]: 拖一拖、转一转，看看会发生什么。
+        - generic [ref=f3e105]
+    - generic [ref=f3e488]:
+      - strong [ref=f3e489]: 先尝试，再发现。
+      - paragraph [ref=f3e490]: 先猜一猜，再动手试一试。改变一个条件，把你的发现讲给同伴听。
+  - contentinfo [ref=f3e491]:
+    - text: MathPhysics · 科学小岛
+    - generic [ref=f3e492]: 几何 / 经典力学 / 向量初步
+    - link "来源与许可" [ref=f3e494] [cursor=pointer]:
+      - /url: THIRD_PARTY_NOTICES.md
+  - region "互动活动" [ref=f3e495]:
+    - generic [ref=f3e496]:
+      - button "← 返回小岛" [active] [ref=f3e497] [cursor=pointer]
+      - generic [ref=f3e498]:
+        - heading "看见公式" [level=2] [ref=f3e499]
+        - text: 几何工坊 / 几何证明题集 / 3—6年级
+      - generic [ref=f3e500]:
+        - button "玩法说明" [expanded] [ref=f3e501] [cursor=pointer]
+        - button "重新开始" [ref=f3e502] [cursor=pointer]
+        - button "全屏" [ref=f3e503] [cursor=pointer]
+    - generic [ref=f3e504]: 选一道题，拖动滑块改变条件，再播放变换。试着解释每一步。
+    - iframe [ref=f3e506]:
+      - generic [ref=f5e2]:
+        - complementary [ref=f5e3]
+        - main [ref=f5e67]
+    - generic [ref=f3e507]:
+      - text: MathPhysics · MIT ·
+      - link "源码与许可" [ref=f3e508] [cursor=pointer]:
+        - /url: https://github.com/cy677/MathPhysics

@@ -19,3 +19,16 @@ develop-web-game 官方客户端补跑退出 0，已查看 luna-skill-client/sho
 隐藏入口验收由 gpt-6-luna / max 完成：相关单元测试 75 / 75 通过，定向浏览器检查 13 / 13 通过，页面异常为 0。全部开放、教师预览、搜索、旧 hash 均不露出宿主入口；旧配置、访问记录和存档刷新后保留，航天独立课堂及其他课堂仍可正常启动。已实际查看 1024px / 390px 的活动目录和管理截图，以及官方 develop-web-game 客户端截图。通过报告位于 output/playwright/hidden-spaceflight/report.json。
 
 隐藏入口验收（2026-09-30）：`node --test tests/catalog.test.mjs tests/playground.test.mjs tests/primary-math.test.mjs` 75 项通过；定向浏览器报告 13 项通过，覆盖搜索、关闭开放过滤、管理、全部开放/教师预览、旧开放和访问记录/课堂存档刷新保留、旧 hash 不创建 iframe、直接课堂访问与其他活动启动。1024px / 390px 截图实查，目录及管理页无页面横溢或页面错误；官方 develop-web-game 客户端退出 0。报告和截图位于 `output/playwright/hidden-spaceflight/`。
+
+2026-10-01 航天本地融合：保留四条路线62节点、原8实验及7图解，新增发射与关机滑行实验。固定 Launch Atlas MIT 提交 b8b570cd2f25b0531724c776631160c48bba06fd，只复用三计算模块，原版权和完整许可证保留。无纹理或3D依赖。教学参数与真实任务定性流程分开，关机保留位置/速度，轨道按近地点与能量判断。增加默认逐段暂停、重置、模型时间压缩和当前状态反馈。20项单元检查通过，真实HTTP核心关机滑行已通过；全浏览器功能验收和父任务另行视觉验收进行中。全部改动仅本地，不上传或重试旧任务拒绝的GitHub发布。
+
+2026-10-01 state-events-v1：替换旧固定阶段实验。A/B状态事件、动态MaxQ、完整参数重算、独立一级海上/返场/不回收、严格接地及失败判定已实现并接入旅程。28项新版本单元测试与16组完整浏览器检查通过；无远端运行依赖或页面异常。约203KB离线HTML。父任务视觉验收未完成，实际项目未合入。六个相关文件已有并行教学修改，已保存现状，必须差异合并。旧20测试/13浏览器报告仅代表此前版本。
+
+
+## integration-v2 定点修复（2026-10-01）
+
+修复独立验收提出的两项P2：回收Canvas的动压与空速现在取一级样本，主线与一级分别呈现DOM读数；一级样本只增加已有观测量airspeedMps输出，RK4、质量、控制、任务门限和事件均未改。已审integration-v1-speed-reference保存于任务工作区acceptance目录。
+
+窄屏飞行Canvas只保留图形与大字标题；关键高度、空速、惯性速度、动压、状态和最新事件在14px以上DOM中显示。实验条提供可见滑动提示与前后按钮，滑条和导航命中区域至少44px。1024/桌面继续保留原完整Canvas。
+
+新增回归核对任意时刻一级读数，逐一比较v1/v2四任务与回收模式轨迹/事件，并检查真实指针拖进度、连续暂停恢复、RTLS/不回收/长二F及参数A/B。运行node --test tests/spaceflight.test.mjs tests/spaceflight-fusion.test.mjs tests/spaceflight-integration.test.mjs；定点浏览器tests/spaceflight-v2-browser.mjs。报告与三尺寸截图在任务工作区checks/integration-v2-final，独立视觉结论仍由luna提供。本轮只在隔离副本修改，未写回实际项目或发布。

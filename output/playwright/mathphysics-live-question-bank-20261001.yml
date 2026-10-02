@@ -1,0 +1,805 @@
+- generic [ref=f1e1]:
+  - link "跳到活动内容" [ref=f1e2] [cursor=pointer]:
+    - /url: "#library"
+  - banner [ref=f1e3]:
+    - link "科学小岛首页" [ref=f1e4] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f1e5]: △
+      - generic [ref=f1e6]:
+        - text: 科学小岛
+        - generic [ref=f1e7]: MATH + PHYSICS
+    - navigation "主导航" [ref=f1e8]:
+      - link "探索内容" [ref=f1e9] [cursor=pointer]:
+        - /url: "#library"
+      - button "来源与授权" [ref=f1e10] [cursor=pointer]
+    - generic [ref=f1e11]: 探索乐园
+  - main [ref=f1e12]:
+    - generic [ref=f1e13]:
+      - generic [ref=f1e14]:
+        - generic [ref=f1e15]: 给好奇心，一个可以动手的世界
+        - heading "小小探索家， 欢迎来到科学小岛。" [level=1] [ref=f1e17]: 小小探索家，欢迎来到科学小岛。
+        - paragraph [ref=f1e18]: 拼一块图形，点一盏灯，搭一个分子。让数学与科学，在你的手中发生。
+        - generic [ref=f1e19]:
+          - link "开始探索 ↗" [ref=f1e20] [cursor=pointer]:
+            - /url: "#library"
+            - text: 开始探索
+            - generic [ref=f1e21]: ↗
+          - generic [ref=f1e22]: 小学 1—6 年级观察 · 尝试 · 再发现
+      - generic [aria-hidden] [ref=f1e23]:
+        - generic [ref=f1e26]: 每一种尝试，都有新发现
+        - generic [ref=f1e51]: △ ＋ → ＝ 新发现
+    - region "四个探索主题" [ref=f1e52]:
+      - button "01 / 几何工坊 △ ◇ ○ 把想象，拼成形状 分数、拼图、面积与空间 前往几何工坊 ↗" [ref=f1e53] [cursor=pointer]:
+        - text: 01 / 几何工坊
+        - generic [ref=f1e54]: △ ◇ ○
+        - heading "把想象，拼成形状" [level=2] [ref=f1e55]
+        - paragraph [ref=f1e56]: 分数、拼图、面积与空间
+        - generic [ref=f1e57]: 前往几何工坊 ↗
+      - button "02 / 动力车间 ● ↗ ▰ 动手，让世界动起来 推拉、平衡、能量与电路 前往动力车间 ↗" [ref=f1e58] [cursor=pointer]:
+        - text: 02 / 动力车间
+        - generic [ref=f1e59]: ● ↗ ▰
+        - heading "动手，让世界动起来" [level=2] [ref=f1e60]
+        - paragraph [ref=f1e61]: 推拉、平衡、能量与电路
+        - generic [ref=f1e62]: 前往动力车间 ↗
+      - button "03 / 箭头港口 ↗ ＋ → 找到方向，也找到规律 方向、向量与分量的初步认识 前往箭头港口 ↗" [ref=f1e63] [cursor=pointer]:
+        - text: 03 / 箭头港口
+        - generic [ref=f1e64]: ↗ ＋ →
+        - heading "找到方向，也找到规律" [level=2] [ref=f1e65]
+        - paragraph [ref=f1e66]: 方向、向量与分量的初步认识
+        - generic [ref=f1e67]: 前往箭头港口 ↗
+      - button "04 / 微观天地 ● ○ ● 走近，微小的世界 冷热、物态、原子与分子 前往微观天地 ↗" [ref=f1e68] [cursor=pointer]:
+        - text: 04 / 微观天地
+        - generic [ref=f1e69]: ● ○ ●
+        - heading "走近，微小的世界" [level=2] [ref=f1e70]
+        - paragraph [ref=f1e71]: 冷热、物态、原子与分子
+        - generic [ref=f1e72]: 前往微观天地 ↗
+    - generic [ref=f1e73]:
+      - generic [ref=f1e74]:
+        - generic [ref=f1e75]:
+          - generic [ref=f1e76]: EXPLORER'S LIBRARY
+          - heading "今天，想发现什么？" [level=2] [ref=f1e77]
+        - generic [ref=f1e78]:
+          - generic [ref=f1e509]: 23个活动
+          - generic [ref=f1e510]: 3已探索
+      - generic [ref=f1e79]:
+        - generic [ref=f1e80]:
+          - generic [ref=f1e81]: 主题
+          - generic [ref=f1e82]:
+            - button "全部" [pressed] [ref=f1e83] [cursor=pointer]
+            - button "几何工坊" [ref=f1e84] [cursor=pointer]
+            - button "动力车间" [ref=f1e85] [cursor=pointer]
+            - button "箭头港口" [ref=f1e86] [cursor=pointer]
+            - button "微观天地" [ref=f1e87] [cursor=pointer]
+            - button "中文题库" [ref=f1e88] [cursor=pointer]
+          - generic [ref=f1e89]:
+            - generic [ref=f1e90]: ⌕
+            - searchbox "搜索活动" [ref=f1e91]
+        - generic [ref=f1e92]:
+          - generic [ref=f1e93]: 年级
+          - generic [ref=f1e94]:
+            - button "全年级" [pressed] [ref=f1e95] [cursor=pointer]
+            - button "一年级" [ref=f1e96] [cursor=pointer]
+            - button "二年级" [ref=f1e97] [cursor=pointer]
+            - button "三年级" [ref=f1e98] [cursor=pointer]
+            - button "四年级" [ref=f1e99] [cursor=pointer]
+            - button "五年级" [ref=f1e100] [cursor=pointer]
+            - button "六年级" [ref=f1e101] [cursor=pointer]
+        - paragraph [ref=f1e102]: 拖一拖、转一转，看看会发生什么。
+        - generic [ref=f1e103]:
+          - article [ref=f1e511]:
+            - generic [ref=f1e512]: 拖动几何
+            - generic [ref=f1e520]:
+              - generic [ref=f1e521]:
+                - heading "图形会变魔术" [level=3] [ref=f1e522]
+                - generic [ref=f1e523]: 2—6年级
+              - paragraph [ref=f1e524]: 拖动顶点找对称，转动图形，试试让整张网格变形。
+              - generic [ref=f1e525]:
+                - generic [ref=f1e526]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e527] [cursor=pointer]
+          - article [ref=f1e528]:
+            - generic [ref=f1e529]: 拼图探索
+            - generic [ref=f1e536]:
+              - generic [ref=f1e537]:
+                - heading "七巧板拼图" [level=3] [ref=f1e538]
+                - generic [ref=f1e539]: 1年级
+              - paragraph [ref=f1e540]: 转动七块拼板，拼出方形和创意轮廓。
+              - generic [ref=f1e541]:
+                - generic [ref=f1e542]: Tangram
+                - button "进入探索 ↗" [ref=f1e543] [cursor=pointer]
+          - article [ref=f1e544]:
+            - generic [ref=f1e545]: 分类演示
+            - generic [ref=f1e552]:
+              - generic [ref=f1e553]:
+                - heading "物理验收" [level=3] [ref=f1e554]
+                - generic [ref=f1e555]: 3—6年级
+              - paragraph [ref=f1e556]: 在五个分类中探索48个物理演示，观察材料、运动、机械与结构。
+              - generic [ref=f1e557]:
+                - generic [ref=f1e558]: Matter.js
+                - button "进入探索 ↗" [ref=f1e559] [cursor=pointer]
+          - article [ref=f1e560]:
+            - generic [ref=f1e561]:
+              - generic [ref=f1e562]: 几何证明题集
+              - img [aria-hidden] [ref=f1e563]:
+                - generic [ref=f1e567]: a²
+                - generic [ref=f1e568]: b²
+              - generic [ref=f1e569]: ✓ 已探索
+            - generic [ref=f1e570]:
+              - generic [ref=f1e571]:
+                - heading "看见公式" [level=3] [ref=f1e572]
+                - generic [ref=f1e573]: 3—6年级
+              - paragraph [ref=f1e574]: 把图形剪开再拼好，看见面积、比例和体积的秘密。
+              - generic [ref=f1e575]:
+                - generic [ref=f1e576]: MathPhysics
+                - button "进入探索 ↗" [ref=f1e577] [cursor=pointer]
+          - article [ref=f1e578]:
+            - generic [ref=f1e579]:
+              - generic [ref=f1e580]: 趣味挑战
+              - generic [aria-hidden] [ref=f1e581]: △ ◇ ○
+              - generic [ref=f1e582]: ✓ 已探索
+            - generic [ref=f1e583]:
+              - generic [ref=f1e584]:
+                - heading "围栏花园" [level=3] [ref=f1e585]
+                - generic [ref=f1e586]: 全年级
+              - paragraph [ref=f1e587]: 拼出花园，数一数面积，量一量围栏。
+              - generic [ref=f1e588]:
+                - generic [ref=f1e589]: PhET
+                - button "进入探索 ↗" [ref=f1e590] [cursor=pointer]
+          - article [ref=f1e591]:
+            - generic [ref=f1e592]:
+              - generic [ref=f1e593]: 互动实验
+              - generic [aria-hidden] [ref=f1e594]: ● ↗ ▰
+            - generic [ref=f1e595]:
+              - generic [ref=f1e596]:
+                - heading "推拉小车" [level=3] [ref=f1e597]
+                - generic [ref=f1e598]: 全年级
+              - paragraph [ref=f1e599]: 改变推力和货物，看看小车怎么动。
+              - generic [ref=f1e600]:
+                - generic [ref=f1e601]: PhET
+                - button "进入探索 ↗" [ref=f1e602] [cursor=pointer]
+          - article [ref=f1e603]:
+            - generic [ref=f1e604]:
+              - generic [ref=f1e605]: 互动实验
+              - generic [aria-hidden] [ref=f1e606]: ● ↗ ▰
+            - generic [ref=f1e607]:
+              - generic [ref=f1e608]:
+                - heading "轨道游乐场" [level=3] [ref=f1e609]
+                - generic [ref=f1e610]: 3—6年级
+              - paragraph [ref=f1e611]: 换一条轨道，看看滑板能到多高。
+              - generic [ref=f1e612]:
+                - generic [ref=f1e613]: PhET
+                - button "进入探索 ↗" [ref=f1e614] [cursor=pointer]
+          - article [ref=f1e615]:
+            - generic [ref=f1e616]:
+              - generic [ref=f1e617]: 互动实验
+              - generic [aria-hidden] [ref=f1e618]: ↗ ＋ →
+            - generic [ref=f1e619]:
+              - generic [ref=f1e620]:
+                - heading "箭头导航" [level=3] [ref=f1e621]
+                - generic [ref=f1e622]: 3—6年级
+              - paragraph [ref=f1e623]: 把箭头接在一起，看看最后到了哪里。
+              - generic [ref=f1e624]:
+                - generic [ref=f1e625]: PhET
+                - button "进入探索 ↗" [ref=f1e626] [cursor=pointer]
+          - article [ref=f1e627]:
+            - generic [ref=f1e628]: 互动实验
+            - generic [ref=f1e637]:
+              - generic [ref=f1e638]:
+                - heading "分数拼拼乐" [level=3] [ref=f1e639]
+                - generic [ref=f1e640]: 2—5年级
+              - paragraph [ref=f1e641]: 把圆饼、长条和数轴摆一摆，看见一个整体可以怎样分。
+              - generic [ref=f1e642]:
+                - generic [ref=f1e643]: PhET
+                - button "进入探索 ↗" [ref=f1e644] [cursor=pointer]
+          - article [ref=f1e645]:
+            - generic [ref=f1e646]:
+              - generic [ref=f1e647]: 趣味挑战
+              - img [aria-hidden] [ref=f1e648]:
+                - generic [ref=f1e654]: "1"
+                - generic [ref=f1e655]: "2"
+            - generic [ref=f1e656]:
+              - generic [ref=f1e657]:
+                - heading "分数找朋友" [level=3] [ref=f1e658]
+                - generic [ref=f1e659]: 3—6年级
+              - paragraph [ref=f1e660]: 给表示同一个数的图形和分数找到朋友。
+              - generic [ref=f1e661]:
+                - generic [ref=f1e662]: PhET
+                - button "进入探索 ↗" [ref=f1e663] [cursor=pointer]
+          - article [ref=f1e664]:
+            - generic [ref=f1e665]: 互动实验
+            - generic [ref=f1e671]:
+              - generic [ref=f1e672]:
+                - heading "跷跷板平衡" [level=3] [ref=f1e673]
+                - generic [ref=f1e674]: 3—6年级
+              - paragraph [ref=f1e675]: 把重物放在两边，找一找跷跷板平衡的办法。
+              - generic [ref=f1e676]:
+                - generic [ref=f1e677]: PhET
+                - button "进入探索 ↗" [ref=f1e678] [cursor=pointer]
+          - article [ref=f1e679]:
+            - generic [ref=f1e680]: 互动实验
+            - generic [ref=f1e688]:
+              - generic [ref=f1e689]:
+                - heading "点亮小灯泡" [level=3] [ref=f1e690]
+                - generic [ref=f1e691]: 4—6年级
+              - paragraph [ref=f1e692]: 用电池、导线和灯泡接出一条完整的电路。
+              - generic [ref=f1e693]:
+                - generic [ref=f1e694]: PhET
+                - button "进入探索 ↗" [ref=f1e695] [cursor=pointer]
+          - article [ref=f1e696]:
+            - generic [ref=f1e697]: 互动实验
+            - generic [ref=f1e719]:
+              - generic [ref=f1e720]:
+                - heading "冷热变变变" [level=3] [ref=f1e721]
+                - generic [ref=f1e722]: 4—6年级
+              - paragraph [ref=f1e723]: 加热或冷却，看看粒子怎样组成固体、液体和气体。
+              - generic [ref=f1e724]:
+                - generic [ref=f1e725]: PhET
+                - button "进入探索 ↗" [ref=f1e726] [cursor=pointer]
+          - article [ref=f1e727]:
+            - generic [ref=f1e728]:
+              - generic [ref=f1e729]: 互动实验
+              - img [aria-hidden] [ref=f1e730]:
+                - generic [ref=f1e735]: O
+                - generic [ref=f1e736]:
+                  - generic [ref=f1e737]: H
+                  - generic [ref=f1e738]: H
+            - generic [ref=f1e739]:
+              - generic [ref=f1e740]:
+                - heading "分子搭建工坊" [level=3] [ref=f1e741]
+                - generic [ref=f1e742]: 5—6年级
+              - paragraph [ref=f1e743]: 把不同的原子接在一起，搭出水和其他小分子。
+              - generic [ref=f1e744]:
+                - generic [ref=f1e745]: PhET
+                - button "进入探索 ↗" [ref=f1e746] [cursor=pointer]
+          - article [ref=f1e747]:
+            - generic [ref=f1e748]:
+              - generic [ref=f1e749]: 趣味挑战
+              - generic [aria-hidden] [ref=f1e750]: △ ◇ ○
+            - generic [ref=f1e751]:
+              - generic [ref=f1e752]:
+                - heading "数与生活" [level=3] [ref=f1e753]
+                - generic [ref=f1e754]: 全年级
+              - paragraph [ref=f1e755]: 按一到六年级探索数、量、统计和生活中的数学关系。
+              - generic [ref=f1e756]:
+                - generic [ref=f1e757]: MathPhysics
+                - button "进入探索 ↗" [ref=f1e758] [cursor=pointer]
+          - article [ref=f1e759]:
+            - generic [ref=f1e760]:
+              - generic [ref=f1e761]: 数学练习
+              - generic [ref=f1e769]: ✓ 已探索
+            - generic [ref=f1e770]:
+              - generic [ref=f1e771]:
+                - heading "中文题库工坊" [level=3] [ref=f1e772]
+                - generic [ref=f1e773]: 全年级
+              - paragraph [ref=f1e774]: 选择知识点，生成中文练习，试试分步提示和不同难度。
+              - generic [ref=f1e775]:
+                - generic [ref=f1e776]: MathPhysics
+                - button "进入探索 ↗" [ref=f1e777] [cursor=pointer]
+          - article [ref=f1e778]:
+            - generic [ref=f1e779]: 拖动几何
+            - generic [ref=f1e789]:
+              - generic [ref=f1e790]:
+                - heading "三角形滑滑梯" [level=3] [ref=f1e791]
+                - generic [ref=f1e792]: 5年级
+              - paragraph [ref=f1e793]: 自由拖动顶点，或切换等底等高，观察三角形面积的变化。
+              - generic [ref=f1e794]:
+                - generic [ref=f1e795]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e796] [cursor=pointer]
+          - article [ref=f1e797]:
+            - generic [ref=f1e798]: 拖动几何
+            - generic [ref=f1e806]:
+              - generic [ref=f1e807]:
+                - heading "镜子里的图形" [level=3] [ref=f1e808]
+                - generic [ref=f1e809]: 2年级
+              - paragraph [ref=f1e810]: 拖动彩色圆点，找一找镜子两边图形的对应关系。
+              - generic [ref=f1e811]:
+                - generic [ref=f1e812]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e813] [cursor=pointer]
+          - article [ref=f1e814]:
+            - generic [ref=f1e815]: 拖动几何
+            - generic [ref=f1e823]:
+              - generic [ref=f1e824]:
+                - heading "转一转图形" [level=3] [ref=f1e825]
+                - generic [ref=f1e826]: 4年级
+              - paragraph [ref=f1e827]: 绕原点转动小三角形，看看它的边长和面积会不会改变。
+              - generic [ref=f1e828]:
+                - generic [ref=f1e829]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e830] [cursor=pointer]
+          - article [ref=f1e831]:
+            - generic [ref=f1e832]: 拖动几何
+            - generic [ref=f1e838]:
+              - generic [ref=f1e839]:
+                - heading "图形放大镜" [level=3] [ref=f1e840]
+                - generic [ref=f1e841]: 6年级
+              - paragraph [ref=f1e842]: 同时放大图形的两个方向，比较边长和面积的倍数。
+              - generic [ref=f1e843]:
+                - generic [ref=f1e844]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e845] [cursor=pointer]
+          - article [ref=f1e846]:
+            - generic [ref=f1e847]: 拖动几何
+            - generic [ref=f1e856]:
+              - generic [ref=f1e857]:
+                - heading "箭头送快递" [level=3] [ref=f1e858]
+                - generic [ref=f1e859]: 6年级
+              - paragraph [ref=f1e860]: 拼接方向箭头，试着用不同走法到达同一个终点。
+              - generic [ref=f1e861]:
+                - generic [ref=f1e862]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e863] [cursor=pointer]
+          - article [ref=f1e864]:
+            - generic [ref=f1e865]: 拖动几何
+            - generic [ref=f1e873]:
+              - generic [ref=f1e874]:
+                - heading "网格变形机" [level=3] [ref=f1e875]
+                - generic [ref=f1e876]: 6年级
+              - paragraph [ref=f1e877]: 拖动两支方向箭头，让整张网格旋转、拉伸或剪切。
+              - generic [ref=f1e878]:
+                - generic [ref=f1e879]: JSXGraph
+                - button "进入探索 ↗" [ref=f1e880] [cursor=pointer]
+          - article [ref=f1e881]:
+            - generic [ref=f1e882]:
+              - generic [ref=f1e883]: 拼图探索
+              - generic [aria-hidden] [ref=f1e884]: △ ◇ ○
+            - generic [ref=f1e885]:
+              - generic [ref=f1e886]:
+                - heading "立体七巧板" [level=3] [ref=f1e887]
+                - generic [ref=f1e888]: 全年级
+              - paragraph [ref=f1e889]: 拖动拼板，沿着角旋转，组合出新的形状。
+              - generic [ref=f1e890]:
+                - generic [ref=f1e891]: Tangram
+                - button "进入探索 ↗" [ref=f1e892] [cursor=pointer]
+    - generic [ref=f1e105]:
+      - strong [ref=f1e106]: 先尝试，再发现。
+      - paragraph [ref=f1e107]: 先猜一猜，再动手试一试。改变一个条件，把你的发现讲给同伴听。
+  - contentinfo [ref=f1e108]:
+    - text: MathPhysics · 科学小岛
+    - generic [ref=f1e109]: 几何 / 经典力学 / 向量初步
+    - link "来源与许可" [ref=f1e111] [cursor=pointer]:
+      - /url: THIRD_PARTY_NOTICES.md
+  - region "互动活动" [ref=f1e495]:
+    - generic [ref=f1e496]:
+      - button "← 返回小岛" [active] [ref=f1e497] [cursor=pointer]
+      - generic [ref=f1e498]:
+        - heading "中文题库工坊" [level=2] [ref=f1e499]
+        - text: 中文题库 / 数学练习 / 全年级
+      - generic [ref=f1e500]:
+        - button "玩法说明" [expanded] [ref=f1e501] [cursor=pointer]
+        - button "重新开始" [ref=f1e502] [cursor=pointer]
+        - button "全屏" [ref=f1e503] [cursor=pointer]
+    - generic [ref=f1e504]: 选择知识点、题型和难度，生成练习后填写答案。遇到困难先打开提示，再看看解题过程。
+    - iframe [ref=f1e893]:
+      - main [ref=f2e2]:
+        - generic [ref=f2e3]:
+          - paragraph [ref=f2e4]: 想一想 · 算一算 · 试一试
+          - heading "中文题库工坊" [level=1] [ref=f2e5]
+          - paragraph [ref=f2e6]: 选择想练习的知识点，生成属于你的练习。遇到困难时，可以一步一步看提示。
+        - generic [ref=f2e7]:
+          - complementary [ref=f2e8]:
+            - heading "01 选一组练习" [level=2] [ref=f2e9]
+            - generic [ref=f2e10]:
+              - generic [ref=f2e11]:
+                - text: 知识点
+                - combobox "知识点" [ref=f2e12] [cursor=pointer]:
+                  - option "全部知识点" [selected]
+                  - option "整数与运算"
+                  - option "数感与规律"
+                  - option "分数"
+                  - option "小数"
+                  - option "百分数与比例"
+                  - option "测量与时间"
+                  - option "面积与体积"
+                  - option "统计与可能性"
+                  - option "生活应用"
+              - generic [ref=f2e13]:
+                - text: 题型
+                - combobox "题型" [ref=f2e14] [cursor=pointer]:
+                  - option "混合题型" [selected]
+                  - option "整数加法"
+                  - option "整数减法"
+                  - option "乘法练习"
+                  - option "整除练习"
+                  - option "寻找未知加数"
+                  - option "先乘除后加减"
+                  - option "带括号的运算"
+                  - option "求除法的余数"
+                  - option "认识数位"
+                  - option "四舍五入"
+                  - option "比较整数大小"
+                  - option "等差数列找规律"
+                  - option "求一个数的两倍"
+                  - option "求一个数的一半"
+                  - option "分数约分"
+                  - option "补全等值分数"
+                  - option "分数比较"
+                  - option "同分母分数加法"
+                  - option "异分母分数加法"
+                  - option "分数减法"
+                  - option "分数乘法"
+                  - option "分数除法"
+                  - option "求一个数量的几分之几"
+                  - option "小数加法"
+                  - option "小数减法"
+                  - option "小数乘法"
+                  - option "小数除以整数"
+                  - option "小数乘以十的整次幂"
+                  - option "小数化百分数"
+                  - option "求一个数量的百分之几"
+                  - option "折扣与现价"
+                  - option "长度单位换算"
+                  - option "质量单位换算"
+                  - option "面积单位换算"
+                  - option "时与分的换算"
+                  - option "计算经过时间"
+                  - option "长方形周长"
+                  - option "长方形面积"
+                  - option "三角形面积"
+                  - option "长方体体积"
+                  - option "三角形内角和"
+                  - option "求平均数"
+                  - option "最大值与最小值之差"
+                  - option "摸球的可能性"
+                  - option "购物总价"
+                  - option "购物找零"
+                  - option "平均分配"
+                  - option "路程、速度和时间"
+              - generic [ref=f2e15]:
+                - text: 难度
+                - combobox "难度" [ref=f2e16] [cursor=pointer]:
+                  - option "基础" [selected]
+                  - option "提高"
+                  - option "挑战"
+              - generic [ref=f2e17]:
+                - text: 题目数量
+                - spinbutton "题目数量" [ref=f2e18]: "20"
+              - generic [ref=f2e19]:
+                - text: 练习名称
+                - textbox "练习名称" [ref=f2e20]: 科学小岛
+              - paragraph [ref=f2e21]: 名称、题型、难度和数量相同，就能再次生成这组练习。
+              - button "生成练习" [ref=f2e22] [cursor=pointer]
+              - button "换一组随机练习" [ref=f2e23] [cursor=pointer]
+            - paragraph [ref=f2e24]: 已提供 48 个题型、9 类知识点。难度不代表教材年级。
+            - group [ref=f2e25]:
+              - generic "导出与恢复" [ref=f2e26] [cursor=pointer]
+            - group [ref=f2e27]:
+              - generic "题型与来源说明" [ref=f2e28] [cursor=pointer]
+          - region "练习题" [ref=f2e29]:
+            - heading "02 想一想，试着回答" [level=2] [ref=f2e30]
+            - status
+            - generic [ref=f2e31]:
+              - generic [ref=f2e32]:
+                - strong [ref=f2e33]: "0"
+                - text: 首次独立答对
+              - generic [ref=f2e34]:
+                - strong [ref=f2e35]: "0"
+                - text: 已经答对
+              - generic [ref=f2e36]:
+                - strong [ref=f2e37]: "0"
+                - text: 查看答案
+              - generic [ref=f2e38]:
+                - strong [ref=f2e39]: "20"
+                - text: 题目总数
+            - paragraph [ref=f2e40]: 本组包含 48 种题型 · 基础 · 科学小岛
+            - generic [ref=f2e41]:
+              - article [ref=f2e42]:
+                - generic [ref=f2e43]:
+                  - generic [ref=f2e44]: 第 1 题
+                  - generic [ref=f2e45]: 数感与规律 · 求一个数的两倍
+                - heading "5 的两倍是多少？" [level=3] [ref=f2e46]
+                - generic [ref=f2e47]:
+                  - generic [ref=f2e48]: 你的答案
+                  - generic [ref=f2e49]:
+                    - textbox "你的答案" [ref=f2e50]:
+                      - /placeholder: 整数、小数或分数
+                    - button "检查答案" [ref=f2e51] [cursor=pointer]
+                - status [ref=f2e52]
+                - generic [ref=f2e53]:
+                  - button "提示 0/2" [ref=f2e54] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e55] [cursor=pointer]
+              - article [ref=f2e56]:
+                - generic [ref=f2e57]:
+                  - generic [ref=f2e58]: 第 2 题
+                  - generic [ref=f2e59]: 整数与运算 · 整数加法
+                - heading "计算 7 + 2。" [level=3] [ref=f2e60]
+                - generic [ref=f2e61]:
+                  - generic [ref=f2e62]: 你的答案
+                  - generic [ref=f2e63]:
+                    - textbox "你的答案" [ref=f2e64]:
+                      - /placeholder: 整数、小数或分数
+                    - button "检查答案" [ref=f2e65] [cursor=pointer]
+                - status [ref=f2e66]
+                - generic [ref=f2e67]:
+                  - button "提示 0/2" [ref=f2e68] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e69] [cursor=pointer]
+              - article [ref=f2e70]:
+                - generic [ref=f2e71]:
+                  - generic [ref=f2e72]: 第 3 题
+                  - generic [ref=f2e73]: 数感与规律 · 求一个数的一半
+                - heading "36 的一半是多少？" [level=3] [ref=f2e74]
+                - generic [ref=f2e75]:
+                  - generic [ref=f2e76]: 你的答案
+                  - generic [ref=f2e77]:
+                    - textbox "你的答案" [ref=f2e78]:
+                      - /placeholder: 整数、小数或分数
+                    - button "检查答案" [ref=f2e79] [cursor=pointer]
+                - status [ref=f2e80]
+                - generic [ref=f2e81]:
+                  - button "提示 0/2" [ref=f2e82] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e83] [cursor=pointer]
+              - article [ref=f2e84]:
+                - generic [ref=f2e85]:
+                  - generic [ref=f2e86]: 第 4 题
+                  - generic [ref=f2e87]: 统计与可能性 · 求平均数
+                - heading "数据 15、1、12、20 的平均数是多少？" [level=3] [ref=f2e88]
+                - generic [ref=f2e89]:
+                  - generic [ref=f2e90]: 你的答案
+                  - generic [ref=f2e91]:
+                    - textbox "你的答案" [ref=f2e92]:
+                      - /placeholder: 整数、小数或分数
+                    - button "检查答案" [ref=f2e93] [cursor=pointer]
+                - status [ref=f2e94]
+                - generic [ref=f2e95]:
+                  - button "提示 0/2" [ref=f2e96] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e97] [cursor=pointer]
+              - article [ref=f2e98]:
+                - generic [ref=f2e99]:
+                  - generic [ref=f2e100]: 第 5 题
+                  - generic [ref=f2e101]: 整数与运算 · 乘法练习
+                - heading "计算 6 × 4。" [level=3] [ref=f2e102]
+                - generic [ref=f2e103]:
+                  - generic [ref=f2e104]: 你的答案
+                  - generic [ref=f2e105]:
+                    - textbox "你的答案" [ref=f2e106]:
+                      - /placeholder: 整数、小数或分数
+                    - button "检查答案" [ref=f2e107] [cursor=pointer]
+                - status [ref=f2e108]
+                - generic [ref=f2e109]:
+                  - button "提示 0/2" [ref=f2e110] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e111] [cursor=pointer]
+              - article [ref=f2e112]:
+                - generic [ref=f2e113]:
+                  - generic [ref=f2e114]: 第 6 题
+                  - generic [ref=f2e115]: 面积与体积 · 长方形周长
+                - heading "长方形长 4 厘米、宽 2 厘米，周长是多少厘米？" [level=3] [ref=f2e116]
+                - img "长方形长与宽示意图，不按比例绘制" [ref=f2e117]:
+                  - generic [ref=f2e119]: "2"
+                  - generic [ref=f2e120]: 4 厘米
+                  - generic [ref=f2e121]: 示意图，不按比例绘制
+                - generic [ref=f2e122]:
+                  - generic [ref=f2e123]: 你的答案
+                  - generic [ref=f2e124]:
+                    - textbox "你的答案" [ref=f2e125]:
+                      - /placeholder: 整数、小数或分数
+                    - generic [ref=f2e126]: 厘米
+                    - button "检查答案" [ref=f2e127] [cursor=pointer]
+                - status [ref=f2e128]
+                - generic [ref=f2e129]:
+                  - button "提示 0/2" [ref=f2e130] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e131] [cursor=pointer]
+              - article [ref=f2e132]:
+                - generic [ref=f2e133]:
+                  - generic [ref=f2e134]: 第 7 题
+                  - generic [ref=f2e135]: 整数与运算 · 整数减法
+                - heading "计算 6 − 1。" [level=3] [ref=f2e136]
+                - generic [ref=f2e137]:
+                  - generic [ref=f2e138]: 你的答案
+                  - generic [ref=f2e139]:
+                    - textbox "你的答案" [ref=f2e140]:
+                      - /placeholder: 整数、小数或分数
+                    - button "检查答案" [ref=f2e141] [cursor=pointer]
+                - status [ref=f2e142]
+                - generic [ref=f2e143]:
+                  - button "提示 0/2" [ref=f2e144] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e145] [cursor=pointer]
+              - article [ref=f2e146]:
+                - generic [ref=f2e147]:
+                  - generic [ref=f2e148]: 第 8 题
+                  - generic [ref=f2e149]: 整数与运算 · 带括号的运算
+                - heading "计算 (13 + 16) × 2。" [level=3] [ref=f2e150]
+                - generic [ref=f2e151]:
+                  - generic [ref=f2e152]: 你的答案
+                  - generic [ref=f2e153]:
+                    - textbox "你的答案" [ref=f2e154]:
+                      - /placeholder: 整数、小数或分数
+                    - button "检查答案" [ref=f2e155] [cursor=pointer]
+                - status [ref=f2e156]
+                - generic [ref=f2e157]:
+                  - button "提示 0/2" [ref=f2e158] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e159] [cursor=pointer]
+              - article [ref=f2e160]:
+                - generic [ref=f2e161]:
+                  - generic [ref=f2e162]: 第 9 题
+                  - generic [ref=f2e163]: 测量与时间 · 时与分的换算
+                - heading "2 小时 33 分钟一共是多少分钟？" [level=3] [ref=f2e164]
+                - generic [ref=f2e165]:
+                  - generic [ref=f2e166]: 你的答案
+                  - generic [ref=f2e167]:
+                    - textbox "你的答案" [ref=f2e168]:
+                      - /placeholder: 整数、小数或分数
+                    - generic [ref=f2e169]: 分钟
+                    - button "检查答案" [ref=f2e170] [cursor=pointer]
+                - status [ref=f2e171]
+                - generic [ref=f2e172]:
+                  - button "提示 0/2" [ref=f2e173] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e174] [cursor=pointer]
+              - article [ref=f2e175]:
+                - generic [ref=f2e176]:
+                  - generic [ref=f2e177]: 第 10 题
+                  - generic [ref=f2e178]: 数感与规律 · 等差数列找规律
+                - heading "这列数每次增加相同的数：7，16，25，34，□。" [level=3] [ref=f2e179]
+                - generic [ref=f2e180]:
+                  - generic [ref=f2e181]: 你的答案
+                  - generic [ref=f2e182]:
+                    - textbox "你的答案" [ref=f2e183]:
+                      - /placeholder: 整数、小数或分数
+                    - button "检查答案" [ref=f2e184] [cursor=pointer]
+                - status [ref=f2e185]
+                - generic [ref=f2e186]:
+                  - button "提示 0/2" [ref=f2e187] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e188] [cursor=pointer]
+              - article [ref=f2e189]:
+                - generic [ref=f2e190]:
+                  - generic [ref=f2e191]: 第 11 题
+                  - generic [ref=f2e192]: 分数 · 分数约分
+                - heading "把 8/20 约成最简分数。" [level=3] [ref=f2e193]
+                - generic [ref=f2e194]:
+                  - generic [ref=f2e195]: 你的答案
+                  - generic [ref=f2e196]:
+                    - textbox "你的答案" [ref=f2e197]:
+                      - /placeholder: 例如 3/4
+                    - button "检查答案" [ref=f2e198] [cursor=pointer]
+                - status [ref=f2e199]
+                - generic [ref=f2e200]:
+                  - button "提示 0/2" [ref=f2e201] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e202] [cursor=pointer]
+              - article [ref=f2e203]:
+                - generic [ref=f2e204]:
+                  - generic [ref=f2e205]: 第 12 题
+                  - generic [ref=f2e206]: 测量与时间 · 计算经过时间
+                - heading "同一天从 12:59 到 13:44，经过多少分钟？" [level=3] [ref=f2e207]
+                - generic [ref=f2e208]:
+                  - generic [ref=f2e209]: 你的答案
+                  - generic [ref=f2e210]:
+                    - textbox "你的答案" [ref=f2e211]:
+                      - /placeholder: 整数、小数或分数
+                    - generic [ref=f2e212]: 分钟
+                    - button "检查答案" [ref=f2e213] [cursor=pointer]
+                - status [ref=f2e214]
+                - generic [ref=f2e215]:
+                  - button "提示 0/2" [ref=f2e216] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e217] [cursor=pointer]
+              - article [ref=f2e218]:
+                - generic [ref=f2e219]:
+                  - generic [ref=f2e220]: 第 13 题
+                  - generic [ref=f2e221]: 测量与时间 · 面积单位换算
+                - heading "7 平方米 = 多少平方厘米？" [level=3] [ref=f2e222]
+                - generic [ref=f2e223]:
+                  - generic [ref=f2e224]: 你的答案
+                  - generic [ref=f2e225]:
+                    - textbox "你的答案" [ref=f2e226]:
+                      - /placeholder: 整数、小数或分数
+                    - generic [ref=f2e227]: 平方厘米
+                    - button "检查答案" [ref=f2e228] [cursor=pointer]
+                - status [ref=f2e229]
+                - generic [ref=f2e230]:
+                  - button "提示 0/2" [ref=f2e231] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e232] [cursor=pointer]
+              - article [ref=f2e233]:
+                - generic [ref=f2e234]:
+                  - generic [ref=f2e235]: 第 14 题
+                  - generic [ref=f2e236]: 小数 · 小数除以整数
+                - heading "计算 78.6 ÷ 2。" [level=3] [ref=f2e237]
+                - generic [ref=f2e238]:
+                  - generic [ref=f2e239]: 你的答案
+                  - generic [ref=f2e240]:
+                    - textbox "你的答案" [ref=f2e241]:
+                      - /placeholder: 整数、小数或分数
+                    - button "检查答案" [ref=f2e242] [cursor=pointer]
+                - status [ref=f2e243]
+                - generic [ref=f2e244]:
+                  - button "提示 0/2" [ref=f2e245] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e246] [cursor=pointer]
+              - article [ref=f2e247]:
+                - generic [ref=f2e248]:
+                  - generic [ref=f2e249]: 第 15 题
+                  - generic [ref=f2e250]: 测量与时间 · 长度单位换算
+                - heading "21 米 = 多少厘米？" [level=3] [ref=f2e251]
+                - generic [ref=f2e252]:
+                  - generic [ref=f2e253]: 你的答案
+                  - generic [ref=f2e254]:
+                    - textbox "你的答案" [ref=f2e255]:
+                      - /placeholder: 整数、小数或分数
+                    - generic [ref=f2e256]: 厘米
+                    - button "检查答案" [ref=f2e257] [cursor=pointer]
+                - status [ref=f2e258]
+                - generic [ref=f2e259]:
+                  - button "提示 0/2" [ref=f2e260] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e261] [cursor=pointer]
+              - article [ref=f2e262]:
+                - generic [ref=f2e263]:
+                  - generic [ref=f2e264]: 第 16 题
+                  - generic [ref=f2e265]: 分数 · 分数比较
+                - heading "比较 3/4 □ 2/6。" [level=3] [ref=f2e266]
+                - generic [ref=f2e267]:
+                  - generic [ref=f2e268]: 你的答案
+                  - generic [ref=f2e269]:
+                    - combobox "你的答案" [ref=f2e270] [cursor=pointer]:
+                      - option "请选择" [selected]
+                      - option "<"
+                      - option "="
+                      - option ">"
+                    - button "检查答案" [ref=f2e271] [cursor=pointer]
+                - status [ref=f2e272]
+                - generic [ref=f2e273]:
+                  - button "提示 0/2" [ref=f2e274] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e275] [cursor=pointer]
+              - article [ref=f2e276]:
+                - generic [ref=f2e277]:
+                  - generic [ref=f2e278]: 第 17 题
+                  - generic [ref=f2e279]: 数感与规律 · 比较整数大小
+                - heading "在 6 □ 9 中选择正确符号。" [level=3] [ref=f2e280]
+                - generic [ref=f2e281]:
+                  - generic [ref=f2e282]: 你的答案
+                  - generic [ref=f2e283]:
+                    - combobox "你的答案" [ref=f2e284] [cursor=pointer]:
+                      - option "请选择" [selected]
+                      - option "<"
+                      - option "="
+                      - option ">"
+                    - button "检查答案" [ref=f2e285] [cursor=pointer]
+                - status [ref=f2e286]
+                - generic [ref=f2e287]:
+                  - button "提示 0/2" [ref=f2e288] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e289] [cursor=pointer]
+              - article [ref=f2e290]:
+                - generic [ref=f2e291]:
+                  - generic [ref=f2e292]: 第 18 题
+                  - generic [ref=f2e293]: 小数 · 小数减法
+                - heading "计算 15.7 − 9.4。" [level=3] [ref=f2e294]
+                - generic [ref=f2e295]:
+                  - generic [ref=f2e296]: 你的答案
+                  - generic [ref=f2e297]:
+                    - textbox "你的答案" [ref=f2e298]:
+                      - /placeholder: 整数、小数或分数
+                    - button "检查答案" [ref=f2e299] [cursor=pointer]
+                - status [ref=f2e300]
+                - generic [ref=f2e301]:
+                  - button "提示 0/2" [ref=f2e302] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e303] [cursor=pointer]
+              - article [ref=f2e304]:
+                - generic [ref=f2e305]:
+                  - generic [ref=f2e306]: 第 19 题
+                  - generic [ref=f2e307]: 生活应用 · 平均分配
+                - heading "把 56 支铅笔平均分给 8 个小组，每组分到多少支？" [level=3] [ref=f2e308]
+                - generic [ref=f2e309]:
+                  - generic [ref=f2e310]: 你的答案
+                  - generic [ref=f2e311]:
+                    - textbox "你的答案" [ref=f2e312]:
+                      - /placeholder: 整数、小数或分数
+                    - generic [ref=f2e313]: 支
+                    - button "检查答案" [ref=f2e314] [cursor=pointer]
+                - status [ref=f2e315]
+                - generic [ref=f2e316]:
+                  - button "提示 0/2" [ref=f2e317] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e318] [cursor=pointer]
+              - article [ref=f2e319]:
+                - generic [ref=f2e320]:
+                  - generic [ref=f2e321]: 第 20 题
+                  - generic [ref=f2e322]: 面积与体积 · 长方形面积
+                - heading "长方形长 4 厘米、宽 5 厘米，面积是多少平方厘米？" [level=3] [ref=f2e323]
+                - img "长方形长与宽示意图，不按比例绘制" [ref=f2e324]:
+                  - generic [ref=f2e326]: "5"
+                  - generic [ref=f2e327]: 4 厘米
+                  - generic [ref=f2e328]: 示意图，不按比例绘制
+                - generic [ref=f2e329]:
+                  - generic [ref=f2e330]: 你的答案
+                  - generic [ref=f2e331]:
+                    - textbox "你的答案" [ref=f2e332]:
+                      - /placeholder: 整数、小数或分数
+                    - generic [ref=f2e333]: 平方厘米
+                    - button "检查答案" [ref=f2e334] [cursor=pointer]
+                - status [ref=f2e335]
+                - generic [ref=f2e336]:
+                  - button "提示 0/2" [ref=f2e337] [cursor=pointer]
+                  - button "查看解题过程" [ref=f2e338] [cursor=pointer]
+    - generic [ref=f1e507]:
+      - text: MathPhysics · MIT ·
+      - link "源码与许可" [ref=f1e508] [cursor=pointer]:
+        - /url: https://github.com/cy677/MathPhysics

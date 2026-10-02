@@ -1,0 +1,3584 @@
+{
+  "schemaVersion": 2,
+  "title": "Matter、PhET 与旧 Tangram 增量视觉验收记录",
+  "createdAt": "2026-10-01",
+  "status": "targeted_delta_review_complete_with_scope_notes",
+  "reviewer": {
+    "model": "gpt-6-luna",
+    "reasoningEffort": "max",
+    "method": "82张增量截图逐张使用 view_image(detail=original)；首轮98张按原记录保留。"
+  },
+  "sources": {
+    "initialVisualReport": "docs/learning-coverage/visual-matter-phet.json",
+    "initialBrowserReport": "output/playwright/learning-coverage/matter-phet-browser-report.json",
+    "deltaBrowserReport": "output/playwright/learning-coverage/demo-layout-browser-report.json",
+    "deltaBrowserCommand": "npm run test:demo-layout:browser",
+    "deltaBrowserPassed": true,
+    "errors": 0,
+    "missing": 0,
+    "browserClosed": true,
+    "serverClosed": true
+  },
+  "rounds": [
+    {
+      "id": "baseline-98",
+      "model": "gpt-6-luna",
+      "reasoningEffort": "max",
+      "screenshotPaths": 98,
+      "actuallyViewed": 98,
+      "method": "view_image(detail=original)",
+      "findings": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
+      ]
+    },
+    {
+      "id": "layout-recheck-82",
+      "model": "gpt-6-luna",
+      "reasoningEffort": "max",
+      "source": "output/playwright/learning-coverage/demo-layout-browser-report.json",
+      "screenshotRows": 82,
+      "uniquePaths": 82,
+      "actuallyViewed": 82,
+      "method": "view_image(detail=original)",
+      "capture": "all records have capture=viewport"
+    }
+  ],
+  "summary": {
+    "initialUniquePaths": 98,
+    "deltaScreenshotRows": 82,
+    "deltaUniquePaths": 82,
+    "deltaActuallyViewed": 82,
+    "repeatedPathsViewedAgain": 35,
+    "deltaOnlyPaths": 47,
+    "baselineOnlyPaths": 63,
+    "unionUniquePaths": 145,
+    "deltaGroups": {
+      "phetStandalone": {
+        "count": 56,
+        "desktop": 28,
+        "mobile": 28
+      },
+      "phetHostMobile": {
+        "count": 6,
+        "frame": 3,
+        "separateGuide": 3
+      },
+      "matterViews": {
+        "desktop": 2,
+        "mobile": 2
+      },
+      "matterMobilePhases": {
+        "operate": 7,
+        "explain": 7
+      },
+      "legacyTangram": 2
+    },
+    "unionGroupCounts": {
+      "matter-desktop": 48,
+      "matter-mobile": 23,
+      "phet-standalone": 56,
+      "phet-host-desktop": 10,
+      "phet-host-mobile": 6,
+      "legacy-tangram": 2
+    },
+    "outcome": "本轮指定的82张更新图均已目视；F1–F5历史视觉问题均有本轮证据复核结论。该状态仅表示布局增量复审完成，不混同静态目视与机器交互断言。"
+  },
+  "visualChecks": {
+    "phetStandalone": "28个screen各有桌面与390宽mobile截图。桌面guide在science canvas右侧独立栏，手机guide在canvas下方；Area Builder网格/级卡、向量工作区、分数图形/卡片、平衡物块等主体与原生控件可见。手机PhET内部界面相对缩小，标签/图标较小，但没有被裁掉或与guide相交。",
+    "phetHostMobile": "三组为390 CSS px viewport图，科学区frame位于guide下方，另有单独guide截图；目视没有叠盖。host frame图展示PhET chooser/入口状态，活动screen布局由独立PhET的28张mobile图覆盖。",
+    "legacyTangram": "桌面guide与canvas左右分离；手机canvas在上、guide居中、方向/旋转控件在下，目标图、拼板和控件均可见。实际键盘移动仅引用browser报告。",
+    "matterViews": "布偶主体及左臂、自动台阶主要段在桌面/手机画幅内可辨；外围彩色物体仍贴近或局部触边。组合方块组在桌面/手机新图中整体落在render canvas内。",
+    "matterMobilePhases": "7个demo各有operate和explain移动图。操作阶段参数选项、专用按钮、结果提示和操作文字可见；explain显示why与生活例子。页面竖向展开，未见横向溢出。",
+    "bamCollection": "4张single-/multiple-molecules图中公式和已收集数量可读；数量0时collection槽呈黑色。父Agent提供的源码核查将此解释为未填充分子前的CollectionBoxNode原生空槽，不作为预览故障或遮挡发现。数量大于0的缩略图替换证据由另一项跟进补拍。"
+  },
+  "machineEvidence": {
+    "report": "output/playwright/learning-coverage/demo-layout-browser-report.json",
+    "status": "passed",
+    "errorCount": 0,
+    "missingCount": 0,
+    "browserClosed": true,
+    "serverClosed": true,
+    "phetScreens": {
+      "count": 28,
+      "nonOverlapping": 28,
+      "displayMatchesScience": 28
+    },
+    "hostMobile": {
+      "count": 3,
+      "nonOverlapping": 3,
+      "viewportWidth390": 3
+    },
+    "pointerChecks": {
+      "count": 4,
+      "successfulActualPointerDrags": 4,
+      "coverage": "Area Builder与Vector Addition各桌面/手机一次；报告记录新增方块/向量。"
+    },
+    "matterViews": {
+      "count": 2,
+      "targetsFullyInside": 2,
+      "physicsUnchangedByCamera": 2
+    },
+    "matterPhases": {
+      "count": 7,
+      "operateHiddenWhy": 7,
+      "explainVisibleWhy": 7
+    },
+    "legacy": {
+      "count": 2,
+      "nonOverlapping": 2,
+      "realKeyboardMove": 2
+    }
+  },
+  "resolvedFindings": [
+    {
+      "id": "F1",
+      "severity": "moderate",
+      "status": "resolved_by_layout_recheck",
+      "title": "PhET 独立页的第三步教学浮层遮挡科学操作区",
+      "impact": "多张独立页展开的说明层侵入模拟器右侧场景。直接受影响的核心区包括：Area Builder 网格和关卡卡片、Vector Addition 向量选择区、Fractions 图形/关卡区域、Balancing Act 物块选择区、Circuit Construction Kit 电路工作区、Build a Molecule 目标/结果区。Forces 与 Energy 场景内容也有部分被盖住。文字可读，但遮挡区无法直接观察或拖放；折叠入口可见不构成通过。",
+      "evidence": [
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-desktop.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-desktop.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-desktop.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-desktop.png",
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-desktop.png",
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-desktop.png",
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-desktop.png",
+        "output/playwright/learning-coverage/phet-area-builder-explore-desktop.png",
+        "output/playwright/learning-coverage/phet-area-builder-game-desktop.png",
+        "output/playwright/learning-coverage/phet-vector-addition-explore-1d-desktop.png",
+        "output/playwright/learning-coverage/phet-vector-addition-explore-2d-desktop.png",
+        "output/playwright/learning-coverage/phet-vector-addition-lab-desktop.png",
+        "output/playwright/learning-coverage/phet-fractions-intro-intro-desktop.png",
+        "output/playwright/learning-coverage/phet-fractions-intro-game-desktop.png",
+        "output/playwright/learning-coverage/phet-fractions-intro-lab-desktop.png",
+        "output/playwright/learning-coverage/phet-fraction-matcher-fractions-desktop.png",
+        "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-desktop.png",
+        "output/playwright/learning-coverage/phet-balancing-act-intro-desktop.png",
+        "output/playwright/learning-coverage/phet-balancing-act-balance-lab-desktop.png",
+        "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-desktop.png",
+        "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-desktop.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-desktop.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-desktop.png"
+      ],
+      "retakeRequired": false,
+      "initialStatus": "pending_layout_adjustment_and_retake",
+      "resolution": "桌面guide位于模拟器右侧独立栏，手机guide位于科学画幅下方；28个screen的desktop/mobile画面均不相交，主体控件和图形可见。",
+      "resolutionEvidence": [
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-desktop.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-mobile.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-desktop.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-mobile.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-desktop.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-mobile.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-desktop.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-mobile.png",
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-desktop.png",
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-mobile.png",
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-desktop.png",
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-mobile.png",
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-desktop.png",
+        "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-mobile.png",
+        "output/playwright/learning-coverage/phet-area-builder-explore-desktop.png",
+        "output/playwright/learning-coverage/phet-area-builder-explore-mobile.png",
+        "output/playwright/learning-coverage/phet-area-builder-game-desktop.png",
+        "output/playwright/learning-coverage/phet-area-builder-game-mobile.png",
+        "output/playwright/learning-coverage/phet-vector-addition-explore-1d-desktop.png",
+        "output/playwright/learning-coverage/phet-vector-addition-explore-1d-mobile.png",
+        "output/playwright/learning-coverage/phet-vector-addition-explore-2d-desktop.png",
+        "output/playwright/learning-coverage/phet-vector-addition-explore-2d-mobile.png",
+        "output/playwright/learning-coverage/phet-vector-addition-lab-desktop.png",
+        "output/playwright/learning-coverage/phet-vector-addition-lab-mobile.png",
+        "output/playwright/learning-coverage/phet-vector-addition-equations-desktop.png",
+        "output/playwright/learning-coverage/phet-vector-addition-equations-mobile.png",
+        "output/playwright/learning-coverage/phet-fractions-intro-intro-desktop.png",
+        "output/playwright/learning-coverage/phet-fractions-intro-intro-mobile.png",
+        "output/playwright/learning-coverage/phet-fractions-intro-game-desktop.png",
+        "output/playwright/learning-coverage/phet-fractions-intro-game-mobile.png",
+        "output/playwright/learning-coverage/phet-fractions-intro-lab-desktop.png",
+        "output/playwright/learning-coverage/phet-fractions-intro-lab-mobile.png",
+        "output/playwright/learning-coverage/phet-fraction-matcher-fractions-desktop.png",
+        "output/playwright/learning-coverage/phet-fraction-matcher-fractions-mobile.png",
+        "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-desktop.png",
+        "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-mobile.png",
+        "output/playwright/learning-coverage/phet-balancing-act-intro-desktop.png",
+        "output/playwright/learning-coverage/phet-balancing-act-intro-mobile.png",
+        "output/playwright/learning-coverage/phet-balancing-act-balance-lab-desktop.png",
+        "output/playwright/learning-coverage/phet-balancing-act-balance-lab-mobile.png",
+        "output/playwright/learning-coverage/phet-balancing-act-game-desktop.png",
+        "output/playwright/learning-coverage/phet-balancing-act-game-mobile.png",
+        "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-desktop.png",
+        "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-mobile.png",
+        "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-desktop.png",
+        "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-mobile.png",
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-states-desktop.png",
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-states-mobile.png",
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-phase-changes-desktop.png",
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-phase-changes-mobile.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-desktop.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-mobile.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-desktop.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-mobile.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-playground-desktop.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-playground-mobile.png"
+      ]
+    },
+    {
+      "id": "F2",
+      "severity": "moderate",
+      "status": "resolved_viewport_and_guide_separation",
+      "title": "PhET 宿主移动端截图为 fullPage 长图，不能代表实际视口",
+      "impact": "三张移动图把宿主内容和模拟器缩得很小，并在长图下方重复出现引导/模拟器区域。无法据此判断首屏科学操作区、教学面板和滚动关系是否可读、可达。",
+      "evidence": [
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-mobile.png",
+        "output/playwright/learning-coverage/phet-area-builder-host-mobile.png",
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-host-mobile.png"
+      ],
+      "retakeRequired": false,
+      "initialStatus": "pending_mobile_layout_and_retake",
+      "resolution": "三组host mobile均为390 CSS px真实viewport；science frame与guide纵向分区，并另有guide截图。host画面显示PhET chooser/入口，活动screen由28张独立mobile screen截图覆盖。",
+      "resolutionEvidence": [
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-mobile.png",
+        "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-guide-mobile.png",
+        "output/playwright/learning-coverage/phet-area-builder-host-mobile.png",
+        "output/playwright/learning-coverage/phet-area-builder-host-guide-mobile.png",
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-host-mobile.png",
+        "output/playwright/learning-coverage/phet-states-of-matter-basics-host-guide-mobile.png"
+      ]
+    },
+    {
+      "id": "F3",
+      "severity": "moderate",
+      "status": "resolved_canvas_and_controls_separated",
+      "title": "旧版 Tangram 展开教学面板遮挡拼图区",
+      "impact": "桌面图右侧说明层覆盖部分画布；移动图几乎盖住整个拖动区，只剩下方少量拼板露出。方向键和旋转按钮仍可见，但目标轮廓与拼板工作区被遮挡，无法据此确认拖放区可达。",
+      "evidence": [
+        "output/playwright/learning-coverage/tangram-legacy-desktop.png",
+        "output/playwright/learning-coverage/tangram-legacy-mobile.png"
+      ],
+      "retakeRequired": false,
+      "initialStatus": "pending_layout_adjustment_and_retake",
+      "resolution": "桌面canvas与右侧guide分栏；移动canvas、guide与方向/旋转操作条分区，目标板和七块拼板可见。键盘行为另记机器检查。",
+      "resolutionEvidence": [
+        "output/playwright/learning-coverage/tangram-legacy-desktop.png",
+        "output/playwright/learning-coverage/tangram-legacy-mobile.png"
+      ]
+    },
+    {
+      "id": "F4",
+      "severity": "low",
+      "status": "resolved_for_primary_objects",
+      "title": "Matter 布偶和组合放大场景部分对象超出画布",
+      "impact": "ragdoll 图左上裁切蓝色多边形和鲑红色矩形；布偶身体/左臂及自动移动台阶仍完整可见，因此本课预测/操作目标可辨，边缘对象不是教学焦点。compositeManipulation 图的大矩形在画布上、下、左边界被裁；中间相邻方块仍可观察局部间距，但整组外框及整体缩放范围无法核对。这是显示证据可读性问题，不要求改变物理模型或上游变换。",
+      "evidence": [
+        "output/playwright/learning-coverage/matter-ragdoll-desktop.png",
+        "output/playwright/learning-coverage/matter-compositeManipulation-desktop.png"
+      ],
+      "retakeRequired": false,
+      "initialStatus": "pending_visual_recheck_no_model_change_requested",
+      "resolution": "新图中布偶身体/左臂及台阶主要段可辨，组合方块组整体在画布内。少量非焦点多边形仍贴近上沿；未遮住预测/操作目标。",
+      "resolutionEvidence": [
+        "output/playwright/learning-coverage/matter-ragdoll-desktop.png",
+        "output/playwright/learning-coverage/matter-ragdoll-mobile.png",
+        "output/playwright/learning-coverage/matter-compositeManipulation-desktop.png",
+        "output/playwright/learning-coverage/matter-compositeManipulation-mobile.png"
+      ]
+    },
+    {
+      "id": "F5",
+      "severity": "moderate",
+      "status": "resolved_operation_and_explain_evidence",
+      "title": "七张 Matter 移动端图停在第 3 步，未覆盖约定的操作阶段",
+      "impact": "截图均选中“3 说说发现”，而本轮小屏验收要求检查“2 再操作”。暂停、单步、30 帧按钮可见且纵向排布未见横向溢出；操作参数卡片在当前首屏下方。阶段不符，因此不能核验操作卡、专用操作栏和说明在操作阶段的实际排版及可达性。",
+      "evidence": [
+        "output/playwright/learning-coverage/matter-airFriction-mobile.png",
+        "output/playwright/learning-coverage/matter-bridge-mobile.png",
+        "output/playwright/learning-coverage/matter-slingshot-mobile.png",
+        "output/playwright/learning-coverage/matter-cloth-mobile.png",
+        "output/playwright/learning-coverage/matter-collisionFiltering-mobile.png",
+        "output/playwright/learning-coverage/matter-substep-mobile.png",
+        "output/playwright/learning-coverage/matter-views-mobile.png"
+      ],
+      "retakeRequired": false,
+      "initialStatus": "pending_operation_stage_retake",
+      "resolution": "七个演示各有operate与explain移动截图；操作阶段参数选择、专用按钮与操作说明可见，解释阶段显示why文字。",
+      "resolutionEvidence": [
+        "output/playwright/learning-coverage/matter-airFriction-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-airFriction-explain-mobile.png",
+        "output/playwright/learning-coverage/matter-bridge-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-bridge-explain-mobile.png",
+        "output/playwright/learning-coverage/matter-slingshot-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-slingshot-explain-mobile.png",
+        "output/playwright/learning-coverage/matter-cloth-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-cloth-explain-mobile.png",
+        "output/playwright/learning-coverage/matter-collisionFiltering-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-collisionFiltering-explain-mobile.png",
+        "output/playwright/learning-coverage/matter-substep-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-substep-explain-mobile.png",
+        "output/playwright/learning-coverage/matter-views-operate-mobile.png",
+        "output/playwright/learning-coverage/matter-views-explain-mobile.png"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "BAM-EMPTY-SLOTS",
+      "severity": "informational",
+      "status": "source-explained_separate-qty1-evidence-pending",
+      "paths": [
+        "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-desktop.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-mobile.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-desktop.png",
+        "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-mobile.png"
+      ],
+      "detail": "黑色槽与计数0同时出现，是本轮空收集槽状态；公式/数量与引导没有遮挡。父Agent报告源码中CollectionBoxNode在未添加分子前初始化为黑色空矩形。正数量缩略图的后续截图不在本轮82图中。"
+    },
+    {
+      "id": "PHET-MOBILE-SCALE",
+      "severity": "note",
+      "status": "visible_no_overlap",
+      "detail": "390宽画面中PhET原生场景和控件整体缩小；主体仍在画幅内，但截图无法证明小标签的实际触屏命中率。"
+    },
+    {
+      "id": "PHET-HOST-ENTRY-STATE",
+      "severity": "note",
+      "status": "scope_note",
+      "detail": "三张host mobile合成图显示模拟器chooser/入口而非活动screen；专门PhET mobile screen图覆盖活动screen。"
+    },
+    {
+      "id": "RAGDOLL-EDGE-SHAPES",
+      "severity": "note",
+      "status": "nonblocking",
+      "paths": [
+        "output/playwright/learning-coverage/matter-ragdoll-desktop.png",
+        "output/playwright/learning-coverage/matter-ragdoll-mobile.png"
+      ],
+      "detail": "少量非教学焦点多边形贴近画布上沿；布偶/左臂和主要台阶仍可见。"
+    }
+  ],
+  "limitations": [
+    "82张新截图已全部实际打开查看；35条路径与首轮98图相同路径，重新查看的是本轮重新生成的图像；union按path去重后共145条。",
+    "63条首轮路径未在本次布局增量中重拍，仍保留首轮目视状态；它们不属于本轮82张新增验收。",
+    "截图目视不证明触屏、鼠标拖放、按钮、键盘或科学模型行为；相关行为只按demo-layout-browser-report.json中的机器检查记录。",
+    "本轮仅更新这两份视觉报告，未修改应用代码、测试或vendor。"
+  ],
+  "screenshots": [
+    {
+      "id": "matter-airFriction",
+      "path": "output/playwright/learning-coverage/matter-airFriction-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 1
+    },
+    {
+      "id": "matter-friction",
+      "path": "output/playwright/learning-coverage/matter-friction-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 2
+    },
+    {
+      "id": "matter-staticFriction",
+      "path": "output/playwright/learning-coverage/matter-staticFriction-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 3
+    },
+    {
+      "id": "matter-restitution",
+      "path": "output/playwright/learning-coverage/matter-restitution-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 4
+    },
+    {
+      "id": "matter-gravity",
+      "path": "output/playwright/learning-coverage/matter-gravity-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 5
+    },
+    {
+      "id": "matter-timescale",
+      "path": "output/playwright/learning-coverage/matter-timescale-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 6
+    },
+    {
+      "id": "matter-bridge",
+      "path": "output/playwright/learning-coverage/matter-bridge-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 7
+    },
+    {
+      "id": "matter-car",
+      "path": "output/playwright/learning-coverage/matter-car-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 8
+    },
+    {
+      "id": "matter-catapult",
+      "path": "output/playwright/learning-coverage/matter-catapult-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 9
+    },
+    {
+      "id": "matter-slingshot",
+      "path": "output/playwright/learning-coverage/matter-slingshot-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 10
+    },
+    {
+      "id": "matter-newtonsCradle",
+      "path": "output/playwright/learning-coverage/matter-newtonsCradle-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 11
+    },
+    {
+      "id": "matter-doublePendulum",
+      "path": "output/playwright/learning-coverage/matter-doublePendulum-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 12
+    },
+    {
+      "id": "matter-wreckingBall",
+      "path": "output/playwright/learning-coverage/matter-wreckingBall-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 13
+    },
+    {
+      "id": "matter-gyro",
+      "path": "output/playwright/learning-coverage/matter-gyro-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 14
+    },
+    {
+      "id": "matter-mixed",
+      "path": "output/playwright/learning-coverage/matter-mixed-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 15
+    },
+    {
+      "id": "matter-stack",
+      "path": "output/playwright/learning-coverage/matter-stack-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 16
+    },
+    {
+      "id": "matter-circleStack",
+      "path": "output/playwright/learning-coverage/matter-circleStack-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 17
+    },
+    {
+      "id": "matter-compound",
+      "path": "output/playwright/learning-coverage/matter-compound-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 18
+    },
+    {
+      "id": "matter-compoundStack",
+      "path": "output/playwright/learning-coverage/matter-compoundStack-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 19
+    },
+    {
+      "id": "matter-pyramid",
+      "path": "output/playwright/learning-coverage/matter-pyramid-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 20
+    },
+    {
+      "id": "matter-avalanche",
+      "path": "output/playwright/learning-coverage/matter-avalanche-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 21
+    },
+    {
+      "id": "matter-ballPool",
+      "path": "output/playwright/learning-coverage/matter-ballPool-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 22
+    },
+    {
+      "id": "matter-rounded",
+      "path": "output/playwright/learning-coverage/matter-rounded-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 23
+    },
+    {
+      "id": "matter-concave",
+      "path": "output/playwright/learning-coverage/matter-concave-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 24
+    },
+    {
+      "id": "matter-svg",
+      "path": "output/playwright/learning-coverage/matter-svg-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 25
+    },
+    {
+      "id": "matter-terrain",
+      "path": "output/playwright/learning-coverage/matter-terrain-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 26
+    },
+    {
+      "id": "matter-cloth",
+      "path": "output/playwright/learning-coverage/matter-cloth-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 27
+    },
+    {
+      "id": "matter-softBody",
+      "path": "output/playwright/learning-coverage/matter-softBody-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 28
+    },
+    {
+      "id": "matter-ragdoll",
+      "path": "output/playwright/learning-coverage/matter-ragdoll-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F4"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F4"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "RAGDOLL-PRIMARY-FITS",
+        "PERIPHERAL-SHAPES-TOUCH-EDGE"
+      ],
+      "status": "viewed_again_with_note",
+      "ordinal": 29
+    },
+    {
+      "id": "matter-chains",
+      "path": "output/playwright/learning-coverage/matter-chains-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 30
+    },
+    {
+      "id": "matter-constraints",
+      "path": "output/playwright/learning-coverage/matter-constraints-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 31
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "path": "output/playwright/learning-coverage/matter-collisionFiltering-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 32
+    },
+    {
+      "id": "matter-compositeManipulation",
+      "path": "output/playwright/learning-coverage/matter-compositeManipulation-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F4"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F4"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "COMPOSITE-GROUP-FITS"
+      ],
+      "status": "viewed_again_with_note",
+      "ordinal": 33
+    },
+    {
+      "id": "matter-events",
+      "path": "output/playwright/learning-coverage/matter-events-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 34
+    },
+    {
+      "id": "matter-manipulation",
+      "path": "output/playwright/learning-coverage/matter-manipulation-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 35
+    },
+    {
+      "id": "matter-raycasting",
+      "path": "output/playwright/learning-coverage/matter-raycasting-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 36
+    },
+    {
+      "id": "matter-remove",
+      "path": "output/playwright/learning-coverage/matter-remove-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 37
+    },
+    {
+      "id": "matter-renderResize",
+      "path": "output/playwright/learning-coverage/matter-renderResize-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 38
+    },
+    {
+      "id": "matter-sensors",
+      "path": "output/playwright/learning-coverage/matter-sensors-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 39
+    },
+    {
+      "id": "matter-sleeping",
+      "path": "output/playwright/learning-coverage/matter-sleeping-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 40
+    },
+    {
+      "id": "matter-sprites",
+      "path": "output/playwright/learning-coverage/matter-sprites-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 41
+    },
+    {
+      "id": "matter-stats",
+      "path": "output/playwright/learning-coverage/matter-stats-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 42
+    },
+    {
+      "id": "matter-stress",
+      "path": "output/playwright/learning-coverage/matter-stress-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 43
+    },
+    {
+      "id": "matter-stress2",
+      "path": "output/playwright/learning-coverage/matter-stress2-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 44
+    },
+    {
+      "id": "matter-stress3",
+      "path": "output/playwright/learning-coverage/matter-stress3-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 45
+    },
+    {
+      "id": "matter-stress4",
+      "path": "output/playwright/learning-coverage/matter-stress4-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 46
+    },
+    {
+      "id": "matter-substep",
+      "path": "output/playwright/learning-coverage/matter-substep-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 47
+    },
+    {
+      "id": "matter-views",
+      "path": "output/playwright/learning-coverage/matter-views-desktop.png",
+      "viewport": "desktop",
+      "groupID": "matter-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 48
+    },
+    {
+      "id": "matter-airFriction",
+      "path": "output/playwright/learning-coverage/matter-airFriction-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F5"
+        ]
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [
+        "F5"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 49
+    },
+    {
+      "id": "matter-bridge",
+      "path": "output/playwright/learning-coverage/matter-bridge-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F5"
+        ]
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [
+        "F5"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 50
+    },
+    {
+      "id": "matter-slingshot",
+      "path": "output/playwright/learning-coverage/matter-slingshot-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F5"
+        ]
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [
+        "F5"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 51
+    },
+    {
+      "id": "matter-cloth",
+      "path": "output/playwright/learning-coverage/matter-cloth-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F5"
+        ]
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [
+        "F5"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 52
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "path": "output/playwright/learning-coverage/matter-collisionFiltering-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F5"
+        ]
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [
+        "F5"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 53
+    },
+    {
+      "id": "matter-substep",
+      "path": "output/playwright/learning-coverage/matter-substep-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F5"
+        ]
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [
+        "F5"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 54
+    },
+    {
+      "id": "matter-views",
+      "path": "output/playwright/learning-coverage/matter-views-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F5"
+        ]
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [
+        "F5"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 55
+    },
+    {
+      "id": "phet-forces-and-motion-basics-net-force",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 56
+    },
+    {
+      "id": "phet-forces-and-motion-basics-motion",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 57
+    },
+    {
+      "id": "phet-forces-and-motion-basics-friction",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 58
+    },
+    {
+      "id": "phet-forces-and-motion-basics-acceleration",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 59
+    },
+    {
+      "id": "phet-forces-and-motion-basics-host",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-host-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 60
+    },
+    {
+      "id": "phet-forces-and-motion-basics-host",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-host-mobile",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F2"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F2"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "HOST-FRAME-SHOWS-CHOOSER"
+      ],
+      "status": "viewed_again_with_note",
+      "ordinal": 61
+    },
+    {
+      "id": "phet-energy-skate-park-basics-intro",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 62
+    },
+    {
+      "id": "phet-energy-skate-park-basics-friction",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 63
+    },
+    {
+      "id": "phet-energy-skate-park-basics-playground",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 64
+    },
+    {
+      "id": "phet-energy-skate-park-basics-host",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-host-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-host-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 65
+    },
+    {
+      "id": "phet-area-builder-explore",
+      "path": "output/playwright/learning-coverage/phet-area-builder-explore-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 66
+    },
+    {
+      "id": "phet-area-builder-game",
+      "path": "output/playwright/learning-coverage/phet-area-builder-game-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 67
+    },
+    {
+      "id": "phet-area-builder-host",
+      "path": "output/playwright/learning-coverage/phet-area-builder-host-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-host-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 68
+    },
+    {
+      "id": "phet-area-builder-host",
+      "path": "output/playwright/learning-coverage/phet-area-builder-host-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-host-mobile",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F2"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F2"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "HOST-FRAME-SHOWS-CHOOSER"
+      ],
+      "status": "viewed_again_with_note",
+      "ordinal": 69
+    },
+    {
+      "id": "phet-vector-addition-explore-1d",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-explore-1d-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 70
+    },
+    {
+      "id": "phet-vector-addition-explore-2d",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-explore-2d-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 71
+    },
+    {
+      "id": "phet-vector-addition-lab",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-lab-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 72
+    },
+    {
+      "id": "phet-vector-addition-equations",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-equations-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 73
+    },
+    {
+      "id": "phet-vector-addition-host",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-host-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-host-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 74
+    },
+    {
+      "id": "phet-fractions-intro-intro",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-intro-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 75
+    },
+    {
+      "id": "phet-fractions-intro-game",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-game-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 76
+    },
+    {
+      "id": "phet-fractions-intro-lab",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-lab-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 77
+    },
+    {
+      "id": "phet-fractions-intro-host",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-host-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-host-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 78
+    },
+    {
+      "id": "phet-fraction-matcher-fractions",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-fractions-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 79
+    },
+    {
+      "id": "phet-fraction-matcher-mixed-numbers",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 80
+    },
+    {
+      "id": "phet-fraction-matcher-host",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-host-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-host-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 81
+    },
+    {
+      "id": "phet-balancing-act-intro",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-intro-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 82
+    },
+    {
+      "id": "phet-balancing-act-balance-lab",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-balance-lab-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 83
+    },
+    {
+      "id": "phet-balancing-act-game",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-game-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 84
+    },
+    {
+      "id": "phet-balancing-act-host",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-host-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-host-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 85
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-intro",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 86
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-lab",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 87
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-host",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-host-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-host-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 88
+    },
+    {
+      "id": "phet-states-of-matter-basics-states",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-states-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 89
+    },
+    {
+      "id": "phet-states-of-matter-basics-phase-changes",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-phase-changes-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 90
+    },
+    {
+      "id": "phet-states-of-matter-basics-host",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-host-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-host-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 91
+    },
+    {
+      "id": "phet-states-of-matter-basics-host",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-host-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-host-mobile",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F2"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F2"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "HOST-FRAME-SHOWS-CHOOSER"
+      ],
+      "status": "viewed_again_with_note",
+      "ordinal": 92
+    },
+    {
+      "id": "phet-build-a-molecule-single-molecule",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "BAM-EMPTY-SLOTS"
+      ],
+      "status": "viewed_again_with_note",
+      "ordinal": 93
+    },
+    {
+      "id": "phet-build-a-molecule-multiple-molecules",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F1"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F1"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "BAM-EMPTY-SLOTS"
+      ],
+      "status": "viewed_again_with_note",
+      "ordinal": 94
+    },
+    {
+      "id": "phet-build-a-molecule-playground",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-playground-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-standalone",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_again",
+      "ordinal": 95
+    },
+    {
+      "id": "phet-build-a-molecule-host",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-host-desktop.png",
+      "viewport": "desktop",
+      "groupID": "phet-host-desktop",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "findingIds": []
+      },
+      "deltaReview": null,
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_baseline_only",
+      "ordinal": 96
+    },
+    {
+      "id": "tangram-legacy",
+      "path": "output/playwright/learning-coverage/tangram-legacy-desktop.png",
+      "viewport": "desktop",
+      "groupID": "legacy-tangram",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F3"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "desktop",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F3"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "TANGRAM-CANVAS-GUIDE-SEPARATED"
+      ],
+      "status": "viewed_again_with_note",
+      "ordinal": 97
+    },
+    {
+      "id": "tangram-legacy",
+      "path": "output/playwright/learning-coverage/tangram-legacy-mobile.png",
+      "viewport": "mobile",
+      "groupID": "legacy-tangram",
+      "initialReview": {
+        "roundID": "baseline-98",
+        "actuallyViewed": true,
+        "status": "viewed_with_findings",
+        "findingIds": [
+          "F3"
+        ]
+      },
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [
+        "F3"
+      ],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "TANGRAM-CANVAS-GUIDE-SEPARATED"
+      ],
+      "status": "viewed_again_with_note",
+      "ordinal": 98
+    },
+    {
+      "id": "phet-forces-and-motion-basics-net-force",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 99
+    },
+    {
+      "id": "phet-forces-and-motion-basics-motion",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 100
+    },
+    {
+      "id": "phet-forces-and-motion-basics-friction",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 101
+    },
+    {
+      "id": "phet-forces-and-motion-basics-acceleration",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 102
+    },
+    {
+      "id": "phet-energy-skate-park-basics-intro",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 103
+    },
+    {
+      "id": "phet-energy-skate-park-basics-friction",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 104
+    },
+    {
+      "id": "phet-energy-skate-park-basics-playground",
+      "path": "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 105
+    },
+    {
+      "id": "phet-area-builder-explore",
+      "path": "output/playwright/learning-coverage/phet-area-builder-explore-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 106
+    },
+    {
+      "id": "phet-area-builder-game",
+      "path": "output/playwright/learning-coverage/phet-area-builder-game-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 107
+    },
+    {
+      "id": "phet-vector-addition-explore-1d",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-explore-1d-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 108
+    },
+    {
+      "id": "phet-vector-addition-explore-2d",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-explore-2d-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 109
+    },
+    {
+      "id": "phet-vector-addition-lab",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-lab-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 110
+    },
+    {
+      "id": "phet-vector-addition-equations",
+      "path": "output/playwright/learning-coverage/phet-vector-addition-equations-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 111
+    },
+    {
+      "id": "phet-fractions-intro-intro",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-intro-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 112
+    },
+    {
+      "id": "phet-fractions-intro-game",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-game-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 113
+    },
+    {
+      "id": "phet-fractions-intro-lab",
+      "path": "output/playwright/learning-coverage/phet-fractions-intro-lab-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 114
+    },
+    {
+      "id": "phet-fraction-matcher-fractions",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-fractions-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 115
+    },
+    {
+      "id": "phet-fraction-matcher-mixed-numbers",
+      "path": "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 116
+    },
+    {
+      "id": "phet-balancing-act-intro",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-intro-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 117
+    },
+    {
+      "id": "phet-balancing-act-balance-lab",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-balance-lab-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 118
+    },
+    {
+      "id": "phet-balancing-act-game",
+      "path": "output/playwright/learning-coverage/phet-balancing-act-game-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 119
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-intro",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 120
+    },
+    {
+      "id": "phet-circuit-construction-kit-dc-lab",
+      "path": "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 121
+    },
+    {
+      "id": "phet-states-of-matter-basics-states",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-states-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 122
+    },
+    {
+      "id": "phet-states-of-matter-basics-phase-changes",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-phase-changes-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 123
+    },
+    {
+      "id": "phet-build-a-molecule-single-molecule",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "BAM-EMPTY-SLOTS"
+      ],
+      "status": "viewed_latest_with_note",
+      "ordinal": 124
+    },
+    {
+      "id": "phet-build-a-molecule-multiple-molecules",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "BAM-EMPTY-SLOTS"
+      ],
+      "status": "viewed_latest_with_note",
+      "ordinal": 125
+    },
+    {
+      "id": "phet-build-a-molecule-playground",
+      "path": "output/playwright/learning-coverage/phet-build-a-molecule-playground-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-standalone",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 126
+    },
+    {
+      "id": "phet-forces-and-motion-basics-host",
+      "path": "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-guide-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-host-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "HOST-GUIDE-SEPARATE-CAPTURE"
+      ],
+      "status": "viewed_latest_with_note",
+      "ordinal": 127
+    },
+    {
+      "id": "phet-area-builder-host",
+      "path": "output/playwright/learning-coverage/phet-area-builder-host-guide-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-host-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "HOST-GUIDE-SEPARATE-CAPTURE"
+      ],
+      "status": "viewed_latest_with_note",
+      "ordinal": 128
+    },
+    {
+      "id": "phet-states-of-matter-basics-host",
+      "path": "output/playwright/learning-coverage/phet-states-of-matter-basics-host-guide-mobile.png",
+      "viewport": "mobile",
+      "groupID": "phet-host-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "HOST-GUIDE-SEPARATE-CAPTURE"
+      ],
+      "status": "viewed_latest_with_note",
+      "ordinal": 129
+    },
+    {
+      "id": "matter-ragdoll",
+      "path": "output/playwright/learning-coverage/matter-ragdoll-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "RAGDOLL-PRIMARY-FITS",
+        "PERIPHERAL-SHAPES-TOUCH-EDGE"
+      ],
+      "status": "viewed_latest_with_note",
+      "ordinal": 130
+    },
+    {
+      "id": "matter-compositeManipulation",
+      "path": "output/playwright/learning-coverage/matter-compositeManipulation-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [
+        "COMPOSITE-GROUP-FITS"
+      ],
+      "status": "viewed_latest_with_note",
+      "ordinal": 131
+    },
+    {
+      "id": "matter-airFriction",
+      "path": "output/playwright/learning-coverage/matter-airFriction-operate-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "operate",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 132
+    },
+    {
+      "id": "matter-airFriction",
+      "path": "output/playwright/learning-coverage/matter-airFriction-explain-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 133
+    },
+    {
+      "id": "matter-bridge",
+      "path": "output/playwright/learning-coverage/matter-bridge-operate-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "operate",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 134
+    },
+    {
+      "id": "matter-bridge",
+      "path": "output/playwright/learning-coverage/matter-bridge-explain-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 135
+    },
+    {
+      "id": "matter-slingshot",
+      "path": "output/playwright/learning-coverage/matter-slingshot-operate-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "operate",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 136
+    },
+    {
+      "id": "matter-slingshot",
+      "path": "output/playwright/learning-coverage/matter-slingshot-explain-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 137
+    },
+    {
+      "id": "matter-cloth",
+      "path": "output/playwright/learning-coverage/matter-cloth-operate-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "operate",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 138
+    },
+    {
+      "id": "matter-cloth",
+      "path": "output/playwright/learning-coverage/matter-cloth-explain-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 139
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "path": "output/playwright/learning-coverage/matter-collisionFiltering-operate-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "operate",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 140
+    },
+    {
+      "id": "matter-collisionFiltering",
+      "path": "output/playwright/learning-coverage/matter-collisionFiltering-explain-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 141
+    },
+    {
+      "id": "matter-substep",
+      "path": "output/playwright/learning-coverage/matter-substep-operate-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "operate",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 142
+    },
+    {
+      "id": "matter-substep",
+      "path": "output/playwright/learning-coverage/matter-substep-explain-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 143
+    },
+    {
+      "id": "matter-views",
+      "path": "output/playwright/learning-coverage/matter-views-operate-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "operate",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 144
+    },
+    {
+      "id": "matter-views",
+      "path": "output/playwright/learning-coverage/matter-views-explain-mobile.png",
+      "viewport": "mobile",
+      "groupID": "matter-mobile",
+      "initialReview": null,
+      "deltaReview": {
+        "roundID": "layout-recheck-82",
+        "actuallyViewed": true,
+        "status": "viewed",
+        "viewport": "mobile",
+        "phase": "explain",
+        "capture": "viewport",
+        "detail": "original"
+      },
+      "historicalFindingIds": [],
+      "currentFindingIds": [],
+      "visualNoteIds": [],
+      "status": "viewed_latest",
+      "ordinal": 145
+    }
+  ]
+}

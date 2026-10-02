@@ -70,3 +70,8 @@ JSXGraph 1.12.2 来自 https://github.com/jsxgraph/jsxgraph 的 npm 发行包，
 界面文字整理不删除法定版权标识。PhET 活动画面及其品牌标识保持可见，播放页保留所需署名。Matter 的 48 个原始示例代码保留，修改的 `demo/mathphysics.html` 是先前由本项目生成的加载器，并非上游示例。
 
 「物理验收」将全部48个 Matter.js 演示按五类组织在同一个入口中。分类导航位于 `src/matter-catalog.js` 和 `src/adapters/matter.html`，不修改上游示例、科学参数或资源。
+
+
+## Launch Atlas calculation core (local spaceflight fusion, 2026-10-01)
+
+Source: https://github.com/exiztinz/rocket-launch-simulator, pinned commit b8b570cd2f25b0531724c776631160c48bba06fd. MIT, Copyright (c) 2025 Joseph Tascona. Complete license: vendor/launch-atlas/LICENSE; preserved raw sources and SHA-256: vendor/launch-atlas/SOURCE.json. The complete license is also in flight-core.js and the standalone classroom. Local changes convert modules to a classic-script factory, set RK4 dt=0.25s and scale-independent engine visibility. MathPhysics uses arbitrary teaching parameters, never upstream vehicle figures for Shenzhou or Long March. No upstream textures, presets, 3D assets, fonts or runtime dependencies are included. See docs/spaceflight-fusion.md.

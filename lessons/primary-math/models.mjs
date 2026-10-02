@@ -7,6 +7,8 @@ const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 const text=(x,y,s,size=17,anchor='start')=>`<text x="${x}" y="${y}" font-size="${size}" text-anchor="${anchor}">${escape(s)}</text>`;
 const box=(x,y,w,h,color,attrs='')=>`<rect x="${x}" y="${y}" width="${Math.max(0,w)}" height="${Math.max(0,h)}" rx="4" fill="${color}" ${attrs}/>`;
 const stroke=(x1,y1,x2,y2,color='#afc0ad',width=2,attrs='')=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width}" ${attrs}/>`;
+// Leave gaps around the equation/captions while retaining a shared endpoint guide.
+const alignmentMarker=(x,segments)=>segments.map(([y1,y2])=>stroke(x,y1,x,y2,ink,2,'stroke-dasharray="4 4" data-role="trial-alignment-marker"')).join('');
 const dot=(x,y,r,color,attrs='')=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${color}" ${attrs}/>`;
 const modelGroup=(role,contents,attrs='')=>`<g data-role="${role}" ${attrs}>${contents}</g>`;
 const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
@@ -37,7 +39,7 @@ export function renderTrialModel(q,x){
     const [b,a,target]=v.slice(1,4),scale=520/Math.max(target,b+a*max,1),out=b+a*x;
     known=text(35,37,'用你的尝试拼一拼',16)+box(65,58,b*scale,42,colors[1])+text(35,171,'题目给定的数量',16)+box(65,190,target*scale,35,colors[2])+text(65,252,`${format(target)}（给定）`,16);
     const term=a===1?format(x):`${format(a)} × ${format(x)}`;
-    trial=box(65+b*scale,58,a*x*scale,42,colors[0],'data-role="trial-quantity"')+stroke(65+out*scale,105,65+out*scale,225,ink,2,'stroke-dasharray="4 4"')+text(65,133,`${b?format(b)+' + ':''}${term} = ${format(out)}`);
+    trial=box(65+b*scale,58,a*x*scale,42,colors[0],'data-role="trial-quantity"')+alignmentMarker(65+out*scale,[[105,112],[145,150],[180,225]])+text(65,133,`${b?format(b)+' + ':''}${term} = ${format(out)}`);
     note='绿色部分跟着你的尝试改变。看看拼出的数量能否和蓝色纸带对齐。';
   }else if(kind==='transfer'){
     const scale=455/Math.max(v[1]+max,v[2],1),labels=['第一边','第二边'];
@@ -64,7 +66,7 @@ export function renderTrialModel(q,x){
     if(q.goal==='decimal-addition-alignment'){
       const scale=570/max;
       known+=text(45,95,'接起来的两段',15)+box(65,112,v[1][0]*scale,34,colors[1])+box(65+v[1][0]*scale,112,v[1][1]*scale,34,colors[2]);
-      trial=text(45,196,'你试铺的轨道',15)+box(65,214,x*scale,34,colors[0],'data-role="trial-track"')+stroke(65+x*scale,154,65+x*scale,260,ink,2,'stroke-dasharray="4 4"');
+      trial=text(45,196,'你试铺的轨道',15)+box(65,214,x*scale,34,colors[0],'data-role="trial-track"')+alignmentMarker(65+x*scale,[[154,174],[205,260]]);
       note='上面的两段轨道不变。拖动滑块，试铺一条同样长的轨道。';
     }else if(q.goal==='large-place-value-zero'){
       const names=['十万位','万位','千位','百位','十位','个位'],digits=String(Math.round(x)).padStart(6,'0').split('').map(Number);

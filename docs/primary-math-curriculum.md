@@ -1,4 +1,6 @@
-# 数与生活：小学数学补充题集
+# 数与生活：原48题的历史编写记录
+
+> 2026-10-01起，统一课堂、最新课程分类及核验范围以[新加坡小学数学分类](singapore-primary-curriculum.md)为准。以下保留原题编写来源，旧界面说明不代表当前产品。
 
 检索与编写日期：2026-09-30。题库来源为 `origin/feat/primary-curriculum-questions-20260930` 固定提交 `a7187a2f86007d23f1a04f3f7b49a04d7a4e591a`；历史去重比对基线为 `cy677/MathPhysics` 的 `e0b0ad8a7d9ddb05c9a117afc96388200a9c3fcd`。本次融合以当前本地统一风格与产品代码为基线，不重新开展课程研究。
 
@@ -51,35 +53,39 @@
 
 去重结论限于已读取的固定题目与活动目录及本批文本。没有穷举PhET等上游随机生成器的全部状态，也没有检索互联网上每一篇习题，不能保证与世界上任何现存题目的数学结构都不同。基础运算原理本身会重复使用。
 
-## 使用与集成
+## 当前使用与集成
 
-运行 `npm start -- --open`（或 Windows `py -3 scripts/serve.py --open`、Linux `python3 scripts/serve.py --open`）。本模块在现有活动目录中登记为“数与生活”，沿用已有几何工坊分类以避免改动宿主分类结构。活动入口总数由63变为64，但这不代表64道题；本课堂内部有48题。
+运行 `npm start -- --open`（或 Windows `py -3 scripts/serve.py --open`、Linux `python3 scripts/serve.py --open`）。首页“数与生活”是统一入口，位于数与生活分类；原48个模型挑战和生成练习在同一课堂内使用。当前目录与课程范围以 [新加坡小学数学分类](singapore-primary-curriculum.md) 为准，不使用原分支的入口数量判断题目数量。
 
-本次不修改默认开放列表或旧用户的家长设置。请在“老师 / 家长”勾选“数与生活”，也可通过静态服务直接打开 `lessons/primary-math/index.html`。旧的推荐列表仍为22项，点击“开放推荐活动”不会自动开放本批新入口。
+当前首页已移除“老师 / 家长”开放设置，所有目录活动直接可进入。也可通过静态服务直接打开 `lessons/primary-math/index.html`；旧 `lessons/question-bank/index.html` 自动跳到统一课堂练习区。历史开放名单不限制当前访问。
 
 只将新路径加入 `src/catalog.js` 的精确白名单，并增加对应的就绪检测；不放宽任意查询参数、外链或目录跳转限制。既有10个本地活动的ID、入口、来源与许可保留；几何内容按推荐首次系统学习年级细化，补入几何48种问法、JSXGraph36个目标与七巧板6张挑战卡的计数。共享主题与原有展示适配器保留，固定上游资源不改写。
 
-本课堂不读写旧的 `mathphysics.state.v1`，不保存或上传学生答案，不将模型播放、访问、查看提示认定为掌握。家长配置与浏览记录仍由原宿主处理。数值反馈仅检查当前输入，口头解释由教师或家长判断。试验滑块不自动提交答案，也不是自动评分的操作技能测试。
+模型完成记录使用 `mathphysics.progress.v1.primary-math`，练习与作答使用 `mathphysics.question-bank.v1`，不覆盖宿主浏览记录 `mathphysics.state.v1`。答对会自动保存，模型播放、访问或查看提示不算完成；滑块不自动提交答案。数值反馈检查当前输入，口头解释仍需教学判断。
 
 小屏设备的模型使用内部横向滚动保留字的大小，页面本身不应横向溢出；可使用滑块、左右按键和加减按钮。减少动态效果设置下，播放按钮只前进一步。图形有文字替代说明。
 
 ## 文件与验证
 
-- `lessons/primary-math/bank.mjs`：48题、算式树、参数和参考年级。
+- `lessons/primary-math/bank.mjs`、`bank-guides.mjs`：48题、算式树、参考年级、4项题目讲解与模型4项说明。
+- `curriculum.mjs`、`unit-guides.mjs`、`curriculum-generators.mjs`：49个知识点与分步例子、年级范围和29种新增课程模板。
 - `math.mjs`：受限算术树、输入解析、判分；不用eval。
 - `app.mjs`、`style.css`、`index.html`：课堂交互与图形。
 - `scripts/build_primary_math_standalone.py`：构建独立HTML，不依赖CDN。
-- `tests/primary-math.test.mjs`、`tests/primary-math-browser.py`：新增内容和集成契约检查。
+- `tests/primary-math.test.mjs`、`tests/questions-learning.test.mjs`：原题、教学内容及兼容检查。
+- `tests/numbers-life-browser.mjs`、`tests/questions-learning-browser.mjs`：当前统一页面操作与逐项教学截图。
 
 ```bash
 node --test tests/primary-math.test.mjs
+npm ci --ignore-scripts
+npx playwright install chromium
 npm run build:primary
-# 需要已安装Python Playwright及Chromium；可用CHROMIUM_PATH指定系统浏览器。
 npm run test:primary:browser
-# 无法导航本地URL的受限环境，仅检查独立HTML的内嵌执行：
-npm run test:primary:browser -- --inline
+npm run test:questions:learning
+npm run test:questions:learning:browser
+npm run test:questions:failure
 ```
 
-本次融合的构建、静态检查与独立浏览器验收记录在仓库的 `docs/curriculum-integration/integration.md` 与专用验收目录中记录。来源分支的旧运行报告不迁入，也不作为当前验收证据；仓库已具有完整固定上游资源。浏览器触控模拟不等于真实iPad Safari测试，数值检查不认定课堂教学效果。
+当前逐项覆盖清单为 `docs/learning-coverage/questions.json`，主功能报告为 `output/playwright/numbers-life-sg/report.json`，教学截图及报告为 `output/playwright/learning-coverage/questions/`。可通过 `CHROMIUM_EXECUTABLE` 指定已有 Chromium。来源分支的旧 Python 界面测试、`--inline` 命令和旧报告属于历史材料，不能代替当前统一页面验收。浏览器触控模拟不等于真实iPad Safari测试。
 
 新增代码、题目和模型按本仓库MIT许可；原有第三方许可不变。

@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "MathPhysics 中文题目（内部完整格式）",
   "type": "object",
-  "required": ["schemaVersion", "engineVersion", "id", "templateId", "title", "topic", "locale", "difficulty", "seed", "fingerprint", "params", "prompt", "answer", "hints", "explanation", "visual", "source"],
+  "required": ["schemaVersion", "engineVersion", "id", "templateId", "title", "topic", "locale", "difficulty", "seed", "fingerprint", "params", "prompt", "answer", "intent", "hints", "steps", "commonMistakes", "explanation", "visual", "source"],
   "properties": {
     "schemaVersion": {"const": 1},
     "engineVersion": {"type": "string"},
@@ -16,10 +16,14 @@
     "fingerprint": {"type": "string", "pattern": "^[0-9a-f]{16}$"},
     "params": {"type": "object"},
     "prompt": {"type": "string", "minLength": 1},
-    "hints": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "intent": {"type": "string", "minLength": 1},
+    "hints": {"type": "array", "minItems": 3, "items": {"type": "string"}},
+    "steps": {"type": "array", "minItems": 3, "items": {"type": "string"}},
+    "commonMistakes": {"type": "array", "minItems": 1, "items": {"type": "string"}},
     "explanation": {"type": "string", "minLength": 1},
     "visual": {"type": ["object", "null"]},
     "source": {"type": "object", "required": ["implementation", "license", "reference"]},
+    "curriculum": {"type": "object", "required": ["version", "grade", "unitId"], "properties": {"version": {"type": "string"}, "grade": {"type": "integer", "minimum": 1, "maximum": 6}, "unitId": {"type": "string"}}, "additionalProperties": false},
     "answer": {
       "oneOf": [
         {"type": "object", "required": ["type", "value"], "properties": {"type": {"const": "number"}, "value": {"type": "object", "required": ["n", "d"], "properties": {"n": {"type": "string", "pattern": "^-?[0-9]+$"}, "d": {"type": "string", "pattern": "^[1-9][0-9]*$"}}, "additionalProperties": false}, "requireSimplified": {"type": "boolean"}, "requirePercent": {"type": "boolean"}, "unit": {"type": "string"}, "display": {"type": "string"}}},

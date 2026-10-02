@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-01T10:16:21.5771911Z",
+  "processQuerySucceeded": true,
+  "portQuerySucceeded": true,
+  "portsChecked": [
+    8768,
+    8784,
+    8791,
+    51123,
+    52377,
+    56332,
+    56944,
+    57385,
+    57642,
+    61172
+  ],
+  "matchingTestProcesses": [],
+  "remainingListeners": [],
+  "passed": true
+}

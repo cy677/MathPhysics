@@ -1,5 +1,6 @@
 // Original MathPhysics tasks. Mapping values are suggested teaching grades, not verified 2026 textbook units.
-export const QUESTIONS = [
+import {guideFixedQuestion} from './bank-guides.mjs';
+const ORIGINAL_QUESTIONS = [
   {"id":"pm-01","grade":1,"title":"给种子找空位","goal":"missing-part","prompt":"育苗盘有10个位置，6个位置已经放了种子。还要放几粒，才能每个位置都有1粒？","answer":4,"calc":["sub",10,6],"unit":"粒","view":["balance",6,1,10,0,10,1],"hint":"把已经有的6粒和你补上的种子合在一起。","solution":"10−6=4。补上4粒后，6+4正好是10。","reflect":"如果已经放了7粒，空位会增加还是减少？","mapping":{"pep":1,"sujiao":1,"singapore":1}},
   {"id":"pm-02","grade":1,"title":"队伍中间的小熊","goal":"ordinal-inclusive-count","prompt":"小熊前面有4位伙伴，后面有3位伙伴。算上小熊，这一队共有几位？","answer":8,"calc":["add",4,1,3],"unit":"位","view":["row",[4,1,3],["前面","小熊","后面"],0,12,1],"hint":"不要把站在中间的小熊漏掉。","solution":"4+1+3=8。前后人数都不包含小熊，所以还要加1。","reflect":"小熊换到队伍最前面，总人数会改变吗？","mapping":{"pep":1,"sujiao":1,"singapore":1}},
   {"id":"pm-03","grade":1,"title":"捆起来再数","goal":"base-ten-composition","prompt":"桌上有4捆小棒，每捆10根，旁边还有7根。把它们全部拆开，共有多少根？","answer":47,"calc":["add",["mul",4,10],7],"unit":"根","view":["digits",[40,7],["4个十","7个一"],0,70,1],"hint":"一捆是10根，不是1根。","solution":"4个十是40，40+7=47。打捆只改变摆法，没有改变根数。","reflect":"把一捆拆开后，会变成几个十和几个一？","mapping":{"pep":1,"sujiao":1,"singapore":1}},
@@ -49,3 +50,4 @@ export const QUESTIONS = [
   {"id":"pm-47","grade":6,"title":"人数不同不能直接平均","goal":"weighted-mean","prompt":"甲组2人平均每人读8本书，乙组3人平均每人读13本书。这5人平均每人读几本？","answer":11,"calc":["div",["add",["mul",2,8],["mul",3,13]],5],"unit":"本","view":["chart",[16,39],["甲组总本数","乙组总本数"],0,20,1],"hint":"先恢复两组总本数，再除以总人数。","solution":"2×8+3×13=55本，55÷5=11本。两组人数不同，不能把8和13直接取平均。","reflect":"如果两组人数一样，直接平均两组平均数还会错吗？","mapping":{"pep":6,"sujiao":6,"singapore":6}},
   {"id":"pm-48","grade":6,"title":"统计图中没写出的部分","goal":"pie-chart-complement","prompt":"200位同学每人只选一项活动。阅读占35%，游戏占25%，其余选择自然观察。选择自然观察的有多少人？","answer":80,"calc":["mul",200,["sub",1,0.35,0.25]],"unit":"人","view":["pie",[35,25,40],["阅读","游戏","自然观察"],0,200,1],"hint":"每个人只选一项，所以所有比例合起来是100%。","solution":"自然观察占100%−35%−25%=40%，200×40%=80人。","reflect":"如果允许一人选择多项，还能直接用100%减另外两项吗？","mapping":{"pep":6,"sujiao":6,"singapore":6}}
 ];
+export const QUESTIONS=ORIGINAL_QUESTIONS.map(guideFixedQuestion);

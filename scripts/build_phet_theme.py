@@ -45,6 +45,15 @@ def build(sim):
         new='data:image/png;base64,'+base64.b64encode((ASSETS/'sprites'/replacement).read_bytes()).decode()
         patch(old,new,1,'image')
 
+    if sim in ('area-builder','fractions-intro','fraction-matcher'):
+        # These old SceneryStyle modules append an inline style in HEAD, then
+        # take the last sheet in the document. A theme LINK later in BODY can
+        # be last instead, and file:// correctly forbids CSSOM writes to it.
+        # Bind rules to the style element they actually created; no model or
+        # browser security settings change. The exact edit is reversible.
+        patch('var n=document.styleSheets[document.styleSheets.length-1]',
+              'var n=i.sheet',1,'view-layout')
+
     if sim=='forces-and-motion-basics':
         # Locate the byte-identical upstream character images, independent of minifier variable names.
         for asset in sorted((ROOT/'vendor/sources/forces-and-motion-basics/images/pushPullFigures').glob('*.png'),key=lambda path:path.name):

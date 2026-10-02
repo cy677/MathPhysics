@@ -1,0 +1,512 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "id": "area-builder",
+      "protocol": "http",
+      "initial": {
+        "probe": {
+          "delayedFinish": 0,
+          "prematureReady": false
+        },
+        "finished": true,
+        "topLayer": true,
+        "barrier": true,
+        "ownStylesheet": true,
+        "inlineOwner": true,
+        "ruleCount": 0,
+        "writeProbe": true,
+        "restoredRuleCount": 0,
+        "questionWatcher": true
+      },
+      "screens": [
+        {
+          "index": 0,
+          "actualNativeViewVisible": true,
+          "guideFollowsActiveScreen": true,
+          "viewport": {
+            "science": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 489.53125,
+              "top": 0,
+              "right": 390,
+              "bottom": 489.53125,
+              "left": 0
+            },
+            "guide": {
+              "x": 0,
+              "y": 489.53125,
+              "width": 390,
+              "height": 354.46875,
+              "top": 489.53125,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "display": {
+              "width": 390,
+              "height": 490
+            }
+          }
+        },
+        {
+          "index": 1,
+          "actualNativeViewVisible": true,
+          "guideFollowsActiveScreen": true,
+          "viewport": {
+            "science": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 489.53125,
+              "top": 0,
+              "right": 390,
+              "bottom": 489.53125,
+              "left": 0
+            },
+            "guide": {
+              "x": 0,
+              "y": 489.53125,
+              "width": 390,
+              "height": 354.46875,
+              "top": 489.53125,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "display": {
+              "width": 390,
+              "height": 490
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fractions-intro",
+      "protocol": "http",
+      "initial": {
+        "probe": {
+          "delayedFinish": 1,
+          "prematureReady": false,
+          "observedPreFinish": true
+        },
+        "finished": true,
+        "topLayer": true,
+        "barrier": true,
+        "ownStylesheet": true,
+        "inlineOwner": true,
+        "ruleCount": 0,
+        "writeProbe": true,
+        "restoredRuleCount": 0,
+        "questionWatcher": true
+      },
+      "screens": [
+        {
+          "index": 0,
+          "actualNativeViewVisible": true,
+          "guideFollowsActiveScreen": true,
+          "viewport": {
+            "science": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 489.53125,
+              "top": 0,
+              "right": 390,
+              "bottom": 489.53125,
+              "left": 0
+            },
+            "guide": {
+              "x": 0,
+              "y": 489.53125,
+              "width": 390,
+              "height": 354.46875,
+              "top": 489.53125,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "display": {
+              "width": 390,
+              "height": 490
+            }
+          }
+        },
+        {
+          "index": 1,
+          "actualNativeViewVisible": true,
+          "guideFollowsActiveScreen": true,
+          "viewport": {
+            "science": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 489.53125,
+              "top": 0,
+              "right": 390,
+              "bottom": 489.53125,
+              "left": 0
+            },
+            "guide": {
+              "x": 0,
+              "y": 489.53125,
+              "width": 390,
+              "height": 354.46875,
+              "top": 489.53125,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "display": {
+              "width": 390,
+              "height": 490
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fraction-matcher",
+      "protocol": "http",
+      "initial": {
+        "probe": {
+          "delayedFinish": 1,
+          "prematureReady": false,
+          "observedPreFinish": true
+        },
+        "finished": true,
+        "topLayer": true,
+        "barrier": true,
+        "ownStylesheet": true,
+        "inlineOwner": true,
+        "ruleCount": 2,
+        "writeProbe": true,
+        "restoredRuleCount": 2,
+        "questionWatcher": true
+      },
+      "screens": [
+        {
+          "index": 0,
+          "actualNativeViewVisible": true,
+          "guideFollowsActiveScreen": true,
+          "viewport": {
+            "science": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 489.53125,
+              "top": 0,
+              "right": 390,
+              "bottom": 489.53125,
+              "left": 0
+            },
+            "guide": {
+              "x": 0,
+              "y": 489.53125,
+              "width": 390,
+              "height": 354.46875,
+              "top": 489.53125,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "display": {
+              "width": 390,
+              "height": 490
+            }
+          }
+        },
+        {
+          "index": 1,
+          "actualNativeViewVisible": true,
+          "guideFollowsActiveScreen": true,
+          "viewport": {
+            "science": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 489.53125,
+              "top": 0,
+              "right": 390,
+              "bottom": 489.53125,
+              "left": 0
+            },
+            "guide": {
+              "x": 0,
+              "y": 489.53125,
+              "width": 390,
+              "height": 354.46875,
+              "top": 489.53125,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "display": {
+              "width": 390,
+              "height": 490
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "area-builder",
+      "protocol": "file",
+      "initial": {
+        "probe": {
+          "delayedFinish": 0,
+          "prematureReady": false
+        },
+        "finished": true,
+        "topLayer": true,
+        "barrier": true,
+        "ownStylesheet": true,
+        "inlineOwner": true,
+        "ruleCount": 0,
+        "writeProbe": true,
+        "restoredRuleCount": 0,
+        "questionWatcher": true
+      },
+      "screens": [
+        {
+          "index": 0,
+          "actualNativeViewVisible": true,
+          "guideFollowsActiveScreen": true,
+          "viewport": {
+            "science": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 489.53125,
+              "top": 0,
+              "right": 390,
+              "bottom": 489.53125,
+              "left": 0
+            },
+            "guide": {
+              "x": 0,
+              "y": 489.53125,
+              "width": 390,
+              "height": 354.46875,
+              "top": 489.53125,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "display": {
+              "width": 390,
+              "height": 490
+            }
+          }
+        },
+        {
+          "index": 1,
+          "actualNativeViewVisible": true,
+          "guideFollowsActiveScreen": true,
+          "viewport": {
+            "science": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 489.53125,
+              "top": 0,
+              "right": 390,
+              "bottom": 489.53125,
+              "left": 0
+            },
+            "guide": {
+              "x": 0,
+              "y": 489.53125,
+              "width": 390,
+              "height": 354.46875,
+              "top": 489.53125,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "display": {
+              "width": 390,
+              "height": 490
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fractions-intro",
+      "protocol": "file",
+      "initial": {
+        "probe": {
+          "delayedFinish": 1,
+          "prematureReady": false,
+          "observedPreFinish": true
+        },
+        "finished": true,
+        "topLayer": true,
+        "barrier": true,
+        "ownStylesheet": true,
+        "inlineOwner": true,
+        "ruleCount": 0,
+        "writeProbe": true,
+        "restoredRuleCount": 0,
+        "questionWatcher": true
+      },
+      "screens": [
+        {
+          "index": 0,
+          "actualNativeViewVisible": true,
+          "guideFollowsActiveScreen": true,
+          "viewport": {
+            "science": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 489.53125,
+              "top": 0,
+              "right": 390,
+              "bottom": 489.53125,
+              "left": 0
+            },
+            "guide": {
+              "x": 0,
+              "y": 489.53125,
+              "width": 390,
+              "height": 354.46875,
+              "top": 489.53125,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "display": {
+              "width": 390,
+              "height": 490
+            }
+          }
+        },
+        {
+          "index": 1,
+          "actualNativeViewVisible": true,
+          "guideFollowsActiveScreen": true,
+          "viewport": {
+            "science": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 489.53125,
+              "top": 0,
+              "right": 390,
+              "bottom": 489.53125,
+              "left": 0
+            },
+            "guide": {
+              "x": 0,
+              "y": 489.53125,
+              "width": 390,
+              "height": 354.46875,
+              "top": 489.53125,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "display": {
+              "width": 390,
+              "height": 490
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fraction-matcher",
+      "protocol": "file",
+      "initial": {
+        "probe": {
+          "delayedFinish": 1,
+          "prematureReady": false,
+          "observedPreFinish": true
+        },
+        "finished": true,
+        "topLayer": true,
+        "barrier": true,
+        "ownStylesheet": true,
+        "inlineOwner": true,
+        "ruleCount": 2,
+        "writeProbe": true,
+        "restoredRuleCount": 2,
+        "questionWatcher": true
+      },
+      "screens": [
+        {
+          "index": 0,
+          "actualNativeViewVisible": true,
+          "guideFollowsActiveScreen": true,
+          "viewport": {
+            "science": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 489.53125,
+              "top": 0,
+              "right": 390,
+              "bottom": 489.53125,
+              "left": 0
+            },
+            "guide": {
+              "x": 0,
+              "y": 489.53125,
+              "width": 390,
+              "height": 354.46875,
+              "top": 489.53125,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "display": {
+              "width": 390,
+              "height": 490
+            }
+          }
+        },
+        {
+          "index": 1,
+          "actualNativeViewVisible": true,
+          "guideFollowsActiveScreen": true,
+          "viewport": {
+            "science": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 489.53125,
+              "top": 0,
+              "right": 390,
+              "bottom": 489.53125,
+              "left": 0
+            },
+            "guide": {
+              "x": 0,
+              "y": 489.53125,
+              "width": 390,
+              "height": 354.46875,
+              "top": 489.53125,
+              "right": 390,
+              "bottom": 844,
+              "left": 0
+            },
+            "display": {
+              "width": 390,
+              "height": 490
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "missing": [],
+  "base": "http://127.0.0.1:56332/MathPhysics/",
+  "browserClosed": true,
+  "serverClosed": true
+}
