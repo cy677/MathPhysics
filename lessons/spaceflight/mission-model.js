@@ -14,18 +14,18 @@ function createMissionModel(C){
  const missionTypes=['us-crew','us-sat','cn-crew','cn-sat'];
  function config(input={}){
   const mission=missionTypes.includes(input.mission)?input.mission:'us-crew';
-  const reusable=mission.startsWith('us-'),crew=mission.endsWith('crew');
+  const reusable=mission!=='cn-crew',crew=mission.endsWith('crew'),net=mission==='cn-sat';
   const requested=['rtls','sea','none'].includes(input.recovery)?input.recovery:'sea';
-  return {mission,reusable,crew,rocket:reusable?'f9':crew?'cz2f':'cz3a',
+  return {mission,reusable,crew,rocket:net?'cz10b':mission==='cn-crew'?'cz2f':'f9',recoveryKind:net?'net':'legs',captureHeightM:net?20:0,
    thrustPct:clamp(input.thrustPct??100,45,130),payloadKg:clamp(input.payloadKg??20,5,100),
    turnAltitudeKm:clamp(input.turnAltitudeKm??1.5,.5,12),
-   recovery:reusable?requested:'none',reservePct:clamp(input.reservePct??22,0,28),
+   recovery:reusable?(net&&requested==='rtls'?'sea':requested):'none',reservePct:clamp(input.reservePct??22,0,28),
    atmospherePct:clamp(input.atmospherePct??100,0,120),qLimitKPa:clamp(input.qLimitKPa??35,10,60),
    mecoTargetMps:clamp(input.mecoTargetMps??2200,800,3600),targetPerigeeKm:clamp(input.targetPerigeeKm??180,120,400),
    fairingAltitudeKm:clamp(input.fairingAltitudeKm??100,80,180),towerAltitudeKm:15,
    recoveryTargetOffsetKm:clamp(input.recoveryTargetOffsetKm??0,-30,30),
    dt:clamp(input.dt??.25,.05,.5),maxDurationSec:clamp(input.maxDurationSec??2400,300,7200),
-   warning:!reusable&&requested!=='none'?'此构型没有一级回收，已使用不回收模式。':'',
+   warning:net&&requested==='rtls'?'长十乙仅提供海上网系教学示例，已改为海上模式。':!reusable&&requested!=='none'?'此构型没有一级回收，已使用不回收模式。':'',
    boundary:'状态阈值与控制增益均为教学代理；不计算真实热流或完整姿态动力学。'};
  }
  function atmosphere(h,cfg){return 1.225*(cfg.atmospherePct/100)*Math.exp(-Math.max(0,h)/8500);}
@@ -54,7 +54,7 @@ function createMissionModel(C){
   const acceleration=(position,velocity)=>C.add(C.add(C.gravity(position),drag(position,velocity,bodyMass,area,cfg)),C.scale(direction,thrust/bodyMass));
   return C.integrateRK4(body.r,body.v,dt,acceleration);
  }
- function source(code,state){return code==='maxq'?'dynamicPressure':code==='boostback'?'boostback':/entry|landing|touchdown|recovery/.test(code)?'teachingRecovery':state.mission?.startsWith('cn-')?'szSequence':code==='fairing'?'fairingProxy':'falconGuide';}
+ function source(code,state){if(state.mission==='cn-sat')return /entry|landing|touchdown|recovery|hooks|capture/.test(code)?'cz10bRecovery':'cz10b';return code==='maxq'?'dynamicPressure':code==='boostback'?'boostback':/entry|landing|touchdown|recovery/.test(code)?'teachingRecovery':state.mission?.startsWith('cn-')?'szSequence':code==='fairing'?'fairingProxy':'falconGuide';}
  function emit(events,code,label,state,o,condition,observations={},branch='ascent'){
   const event={id:branch+'/'+code+'/'+events.length,code,label,branch,timeSec:state.time,condition,
    observations:{height:{value:o.altitude,unit:'m'},speed:{value:o.airspeed,unit:'m/s'},verticalSpeed:{value:o.vertical,unit:'m/s'},q:{value:o.q,unit:'Pa'},...observations},source:source(code,state),teachingProxy:code!=='maxq',
@@ -63,7 +63,7 @@ function createMissionModel(C){
  }
  function orbitValid(o){return o.orbit.specificEnergy<0&&o.orbit.perigeeM>=120000;}
  function initial(cfg){
-  const three=cfg.rocket==='cz3a',side=cfg.rocket==='cz2f';
+  const three=false,side=cfg.rocket==='cz2f';
   return {mission:cfg.mission,time:0,r:[R,0,0],v:[0,C.EARTH_RATE*R,0],angle:0,stage:0,phase:'first',
    fuel:three?[850,130,120]:[side?670:850,245],dry:three?[100,25,20]:[side?60:100,35],sideFuel:side?180:0,sideDry:side?40:0,
    flags:{liftoff:false,turn:false,meco:false,separated:false,fairing:!cfg.crew||side,tower:side,boosterSep:!side,payloadSep:false,noseOpen:false},
@@ -83,7 +83,7 @@ function createMissionModel(C){
   const fuel=state.fuel[0];
   if(cfg.reusable){
    const booster={mission:cfg.mission,time:state.time,r:state.r.slice(),v:state.v.slice(),angle:state.angle,angleRate:0,
-    dry:state.dry[0],fuel,phase:cfg.recovery==='none'?'discard':'orient',engineOn:false,thrust:0,legs:false,
+    dry:state.dry[0],fuel,phase:cfg.recovery==='none'?'discard':'orient',engineOn:false,thrust:0,legs:false,hooks:false,
     boostDone:cfg.recovery!=='rtls',entryDone:false,landingStarted:false,ended:false,success:false,reason:'',targetX:0,stoppingDistance:0};
    booster.targetX=(cfg.recovery==='rtls'?0:ballisticTarget(booster,state.time,cfg))+cfg.recoveryTargetOffsetKm*1000;
    state.recovery=booster;
@@ -174,18 +174,18 @@ function createMissionModel(C){
   if(o.vertical<0&&o.altitude<=b.stoppingDistance*1.25+250&&b.boostDone&&b.fuel>0){
    if(!b.landingStarted){
     if(b.phase==='entry-burn'){b.entryDone=true;emit(events,'entry-end','再入减速转入着陆控制',b,o,'实际高度进入停止距离包络；切换控制目标',{},'booster');}
-    b.landingStarted=true;b.phase='landing';emit(events,'landing-burn','着陆点火',b,o,'下降高度进入按速度、质量与可用推力估算的停止距离',{stoppingDistance:{value:b.stoppingDistance,unit:'m'}},'booster');
+    b.landingStarted=true;b.phase='landing';emit(events,'landing-burn',cfg.recoveryKind==='net'?'捕获前减速点火':'着陆点火',b,o,'下降高度进入按速度、质量与可用推力估算的停止距离',{stoppingDistance:{value:b.stoppingDistance,unit:'m'}},'booster');
    }
   }
   if(b.landingStarted){
-   const targetVertical=-clamp(o.altitude*.12+1.4,1.4,75);
+   const targetVertical=-clamp(Math.max(0,o.altitude-cfg.captureHeightM)*.12+1.4,1.4,75);
    const radialRequest=Math.max(0,o.g-(C.dot(b.v,o.tangent)**2)/o.r+1.6*(targetVertical-o.vertical));
    const remaining=Math.max(2,Math.max(0,o.altitude)/Math.max(1,-targetVertical));
    const desiredHorizontal=clamp(error/remaining,-150,150);
    const horizontalRequest=clamp((desiredHorizontal-o.horizontal)*.8,-20,20);
    targetAngle=Math.atan2(horizontalRequest,radialRequest);
    request=Math.min(maxThrust,m*Math.hypot(radialRequest,horizontalRequest));
-   if(o.altitude<1000&&!b.legs){b.legs=true;emit(events,'legs','着陆腿展开',b,o,'进入低空教学包络，着陆阶段已开始',{},'booster');}
+   if(o.altitude<1000&&!(cfg.recoveryKind==='net'?b.hooks:b.legs)){if(cfg.recoveryKind==='net'){b.hooks=true;emit(events,'hooks','挂索机构准备捕获',b,o,'低空教学包络：进入捕获准备；不是实际展开时刻',{},'booster');}else{b.legs=true;emit(events,'legs','着陆腿展开',b,o,'进入低空教学包络，着陆阶段已开始',{},'booster');}}
   }
   const angleChange=clamp(normalizeAngle(targetAngle-b.angle),-dt*.8,dt*.8);b.angle+=angleChange;b.angleRate=angleChange/dt;
   if(request>0&&Math.abs(normalizeAngle(b.angle-targetAngle))<.3&&b.fuel>0){b.thrust=Math.min(request,b.fuel*280*G0/dt);b.engineOn=b.thrust>.01;b.fuel=Math.max(0,b.fuel-b.thrust/(280*G0)*dt);}
@@ -194,22 +194,22 @@ function createMissionModel(C){
  function advanceRecovery(b,cfg,events,dt){
   if(!b||b.ended)return;
   const o=observe(b,b.time,cfg);recoveryControl(b,cfg,events,o,dt);
-  const m=b.dry+b.fuel,next=integrate(b,dt,b.thrust,b.angle,m,.14,cfg);
-  if(C.length(next.r)<=R){
-   let lo=0,hi=dt;for(let i=0;i<20;i++){const mid=(lo+hi)/2;if(C.length(integrate(b,mid,b.thrust,b.angle,m,.14,cfg).r)>R)lo=mid;else hi=mid;}
+  const m=b.dry+b.fuel,next=integrate(b,dt,b.thrust,b.angle,m,.14,cfg),contactRadius=R+(cfg.recovery==='none'?0:cfg.captureHeightM);
+  if(C.length(next.r)<=contactRadius){
+   let lo=0,hi=dt;for(let i=0;i<20;i++){const mid=(lo+hi)/2;if(C.length(integrate(b,mid,b.thrust,b.angle,m,.14,cfg).r)>contactRadius)lo=mid;else hi=mid;}
    const fraction=(lo+hi)/2,contact=integrate(b,fraction,b.thrust,b.angle,m,.14,cfg);b.r=contact.r;b.v=contact.v;b.time+=fraction;
    const touch=observe(b,b.time,cfg),error=touch.longitude*R-b.targetX;
-   b.ended=true;b.engineOn=false;b.thrust=0;b.success=cfg.recovery!=='none'&&Math.abs(error)<1600&&Math.abs(touch.vertical)<6&&Math.abs(touch.horizontal)<8&&Math.abs(normalizeAngle(b.angle))<.2&&Math.abs(b.angleRate)<.15&&b.legs&&b.fuel>0;
-   b.reason=cfg.recovery==='none'?'discarded':b.success?'landed':b.fuel<=0?'fuel-empty':Math.abs(error)>=1600?'missed-target':'hard-contact';
-   b.touchdown={verticalMps:touch.vertical,horizontalMps:touch.horizontal,errorM:error,angleDeg:b.angle*180/Math.PI,angleRateRadSec:b.angleRate,legs:b.legs,fuelKg:b.fuel};
-   emit(events,'touchdown',b.success?'一级教学软着陆成功':cfg.recovery==='none'?'一级落回（不回收）':'一级回收失败',b,touch,'接触地面后检查目标误差、速度、姿态代理、支腿及余油；高度到零不等于成功',{targetError:{value:error,unit:'m'},verticalSpeed:{value:touch.vertical,unit:'m/s'},horizontalSpeed:{value:touch.horizontal,unit:'m/s'},angle:{value:b.angle*180/Math.PI,unit:'deg'}},'booster');
+   b.ended=true;b.engineOn=false;b.thrust=0;b.success=cfg.recovery!=='none'&&Math.abs(error)<1600&&Math.abs(touch.vertical)<6&&Math.abs(touch.horizontal)<8&&Math.abs(normalizeAngle(b.angle))<.2&&Math.abs(b.angleRate)<.15&&(cfg.recoveryKind==='net'?b.hooks:b.legs)&&b.fuel>0;
+   b.reason=cfg.recovery==='none'?'discarded':b.success?(cfg.recoveryKind==='net'?'captured':'landed'):b.fuel<=0?'fuel-empty':Math.abs(error)>=1600?'missed-target':'hard-contact';
+   b.touchdown={verticalMps:touch.vertical,horizontalMps:touch.horizontal,errorM:error,angleDeg:b.angle*180/Math.PI,angleRateRadSec:b.angleRate,legs:b.legs,hooks:b.hooks,captureHeightM:cfg.captureHeightM,fuelKg:b.fuel};
+   emit(events,cfg.recoveryKind==='net'&&cfg.recovery!=='none'?'net-capture':'touchdown',b.success?(cfg.recoveryKind==='net'?'一级教学网系捕获成功':'一级教学软着陆成功'):cfg.recovery==='none'?'一级落回（不回收）':'一级回收失败',b,touch,cfg.recoveryKind==='net'?'在教学捕获平面检查误差、速度、姿态、挂索与余油；到达高度不等于捕获成功':'接触地面后检查目标误差、速度、姿态代理、支腿及余油；高度到零不等于成功',{targetError:{value:error,unit:'m'},verticalSpeed:{value:touch.vertical,unit:'m/s'},horizontalSpeed:{value:touch.horizontal,unit:'m/s'},angle:{value:b.angle*180/Math.PI,unit:'deg'}},'booster');
   }else{b.r=next.r;b.v=next.v;b.time+=dt;}
  }
  function recoverySample(b,cfg){
   if(!b)return null;const o=observe(b,b.time,cfg);
   return {tSec:b.time,posEci:C.asObject(b.r),velEci:C.asObject(b.v),altitudeM:Math.max(0,o.altitude),velocityMps:C.length(b.v),airspeedMps:o.airspeed,verticalMps:o.vertical,horizontalMps:o.horizontal,
    dynamicPressurePa:o.q,massKg:b.dry+b.fuel,fuelKg:b.fuel,engineOn:b.engineOn,thrustRatio:b.engineOn?b.thrust/(8000*cfg.thrustPct/100):0,
-   angleDeg:b.angle*180/Math.PI,angleRateRadSec:b.angleRate,phase:b.phase,legs:b.legs,ended:b.ended,success:b.success,reason:b.reason,targetX:b.targetX,
+   angleDeg:b.angle*180/Math.PI,angleRateRadSec:b.angleRate,phase:b.phase,legs:b.legs,hooks:!!b.hooks,recoveryKind:cfg.recoveryKind,captureHeightM:cfg.captureHeightM,ended:b.ended,success:b.success,reason:b.reason,targetX:b.targetX,
    downrangeM:o.longitude*R,stoppingDistanceM:b.stoppingDistance,touchdown:b.touchdown||null};
  }
  function pack(state,cfg,thrust){

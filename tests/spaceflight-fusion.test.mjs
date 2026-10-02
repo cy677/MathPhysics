@@ -33,9 +33,9 @@ test('running peak and event log never reveal future observations during replay'
 test('crew Dragon has no satellite fairing and opens nose only after ship separation',()=>{
  assert.ok(!event(normal,'fairing'));assert.ok(normal.samples.every(s=>!s.fairingAttached));assert.ok(event(normal,'nose-open').timeSec>event(normal,'craft-separation').timeSec);const sat=simulate({mission:'us-sat'});assert.ok(event(sat,'fairing').timeSec>event(sat,'separation').timeSec);assert.ok(event(sat,'deployment').timeSec>event(sat,'upper-cutoff').timeSec);assert.ok(!event(sat,'nose-open'));
 });
-test('Shenzhou normal ordering and CZ3A three stages retain type applicability',()=>{
+test('Shenzhou normal ordering and CZ10B two stages retain type applicability',()=>{
  const cn=simulate({mission:'cn-crew',recovery:'rtls',fairingAltitudeKm:80}),codes=['tower','booster-sep','separation','fairing','craft-separation'];for(let i=1;i<codes.length;i++)assert.ok(event(cn,codes[i]).timeSec>=event(cn,codes[i-1]).timeSec);assert.equal(cn.config.recovery,'none');assert.equal(cn.boosterSamples.length,0);assert.ok(!cn.events.some(e=>e.branch==='booster'));assert.ok(event(cn,'fairing').observations.height.value>=80000);
- const sat=simulate({mission:'cn-sat'});assert.ok(event(sat,'second-cutoff').timeSec<event(sat,'third-separation').timeSec);assert.equal(Math.max(...sat.samples.map(s=>s.stageIndex)),2);assert.ok(!event(sat,'tower')&&!event(sat,'booster-sep'));
+ const sat=simulate({mission:'cn-sat'});assert.ok(!event(sat,'third-separation'));assert.equal(Math.max(...sat.samples.map(s=>s.stageIndex)),1);assert.equal(sat.config.rocket,'cz10b');assert.equal(sat.stats.recoveryResult,'captured');assert.ok(!event(sat,'tower')&&!event(sat,'booster-sep'));
 });
 test('lower editable thresholds cannot bypass configuration and prerequisite guards',()=>{
  const r=simulate({mission:'cn-crew',fairingAltitudeKm:1,targetPerigeeKm:1,mecoTargetMps:1});assert.equal(r.config.fairingAltitudeKm,80);assert.equal(r.config.targetPerigeeKm,120);assert.equal(r.config.mecoTargetMps,800);const fairing=event(r,'fairing');if(fairing)assert.ok(fairing.timeSec>event(r,'separation').timeSec&&fairing.timeSec>=event(r,'tower').timeSec);assert.ok(!r.events.some(e=>e.code==='boostback'));

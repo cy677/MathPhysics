@@ -1,0 +1,286 @@
+TAP version 13
+# Subtest: pinned MIT originals and full copyright are preserved; no large runtime dependencies
+ok 1 - pinned MIT originals and full copyright are preserved; no large runtime dependencies
+  ---
+  duration_ms: 3.454395
+  type: 'test'
+  ...
+# Subtest: four nominal mission types reach teaching orbit with finite state and correct architecture
+ok 2 - four nominal mission types reach teaching orbit with finite state and correct architecture
+  ---
+  duration_ms: 2173.314634
+  type: 'test'
+  ...
+# Subtest: MECO, separation and ignition are state events with continuous velocity
+ok 3 - MECO, separation and ignition are state events with continuous velocity
+  ---
+  duration_ms: 1289.027581
+  type: 'test'
+  ...
+# Subtest: thrust, payload, turn threshold and reserve genuinely change event state or timing
+ok 4 - thrust, payload, turn threshold and reserve genuinely change event state or timing
+  ---
+  duration_ms: 359.567456
+  type: 'test'
+  ...
+# Subtest: MaxQ is observed from air-relative speed; zero atmosphere has no fictitious peak
+ok 5 - MaxQ is observed from air-relative speed; zero atmosphere has no fictitious peak
+  ---
+  duration_ms: 703.836322
+  type: 'test'
+  ...
+# Subtest: running peak and event log never reveal future observations during replay
+ok 6 - running peak and event log never reveal future observations during replay
+  ---
+  duration_ms: 0.331491
+  type: 'test'
+  ...
+# Subtest: crew Dragon has no satellite fairing and opens nose only after ship separation
+ok 7 - crew Dragon has no satellite fairing and opens nose only after ship separation
+  ---
+  duration_ms: 3.522019
+  type: 'test'
+  ...
+# Subtest: Shenzhou normal ordering and CZ10B two stages retain type applicability
+ok 8 - Shenzhou normal ordering and CZ10B two stages retain type applicability
+  ---
+  duration_ms: 219.288657
+  type: 'test'
+  ...
+# Subtest: lower editable thresholds cannot bypass configuration and prerequisite guards
+ok 9 - lower editable thresholds cannot bypass configuration and prerequisite guards
+  ---
+  duration_ms: 122.020253
+  type: 'test'
+  ...
+# Subtest: sea, RTLS and none use independent booster physics and applicable burns
+ok 10 - sea, RTLS and none use independent booster physics and applicable burns
+  ---
+  duration_ms: 651.362016
+  type: 'test'
+  ...
+# Subtest: no ground snap masks hard contact, fuel exhaustion or a missed target
+ok 11 - no ground snap masks hard contact, fuel exhaustion or a missed target
+  ---
+  duration_ms: 1020.306048
+  type: 'test'
+  ...
+# Subtest: more recovery reserve may recover booster while payload fails; height alone is insufficient
+ok 12 - more recovery reserve may recover booster while payload fails; height alone is insufficient
+  ---
+  duration_ms: 32.919531
+  type: 'test'
+  ...
+# Subtest: manual cutoff preserves state and continues unpowered motion
+ok 13 - manual cutoff preserves state and continues unpowered motion
+  ---
+  duration_ms: 89.925618
+  type: 'test'
+  ...
+# Subtest: cutting the upper stage does not cut or teleport the separate recovery branch
+ok 14 - cutting the upper stage does not cut or teleport the separate recovery branch
+  ---
+  duration_ms: 67.571429
+  type: 'test'
+  ...
+# Subtest: unpowered upper coast approximately conserves energy and angular momentum
+ok 15 - unpowered upper coast approximately conserves energy and angular momentum
+  ---
+  duration_ms: 0.495388
+  type: 'test'
+  ...
+# Subtest: parameter cache normalizes complete configurations and playback never rebuilds
+ok 16 - parameter cache normalizes complete configurations and playback never rebuilds
+  ---
+  duration_ms: 600.777801
+  type: 'test'
+  ...
+# Subtest: orbit experiment preserves atmospheric, circular, elliptical and escape distinctions
+ok 17 - orbit experiment preserves atmospheric, circular, elliptical and escape distinctions
+  ---
+  duration_ms: 31.101095
+  type: 'test'
+  ...
+# Subtest: every event names prerequisite, measured units and a resolvable source boundary
+ok 18 - every event names prerequisite, measured units and a resolvable source boundary
+  ---
+  duration_ms: 0.380542
+  type: 'test'
+  ...
+# Subtest: all original route, scene, lab, system and quiz teaching data survive the merge
+ok 19 - all original route, scene, lab, system and quiz teaching data survive the merge # SKIP
+  ---
+  duration_ms: 0.957372
+  type: 'test'
+  ...
+# Subtest: new launch experiment uses the same four-part teaching contract and state-based reading
+ok 20 - new launch experiment uses the same four-part teaching contract and state-based reading
+  ---
+  duration_ms: 859.708246
+  type: 'test'
+  ...
+# Subtest: all teaching readings remain finite or explicitly explain nonperiodic/vacuum conditions
+ok 21 - all teaching readings remain finite or explicitly explain nonperiodic/vacuum conditions
+  ---
+  duration_ms: 5502.177277
+  type: 'test'
+  ...
+# Subtest: HTML retains teaching, question help and separate phase/mission reset while offline dependencies include both
+ok 22 - HTML retains teaching, question help and separate phase/mission reset while offline dependencies include both
+  ---
+  duration_ms: 2.250497
+  type: 'test'
+  ...
+# Subtest: current main navigation and settings stay byte-identical; catalog changes remain aerospace-scoped
+ok 23 - current main navigation and settings stay byte-identical; catalog changes remain aerospace-scoped # SKIP
+  ---
+  duration_ms: 0.194214
+  type: 'test'
+  ...
+# Subtest: parallel deorbit label correction survives the clean three-way drawing merge
+ok 24 - parallel deorbit label correction survives the clean three-way drawing merge
+  ---
+  duration_ms: 0.301495
+  type: 'test'
+  ...
+# Subtest: inertial speed and air-relative speed are distinct and labelled in the launch view
+ok 25 - inertial speed and air-relative speed are distinct and labelled in the launch view
+  ---
+  duration_ms: 336.197675
+  type: 'test'
+  ...
+# Subtest: recovery telemetry selects the independent booster at arbitrary times and never substitutes the main line
+ok 26 - recovery telemetry selects the independent booster at arbitrary times and never substitutes the main line
+  ---
+  duration_ms: 340.879339
+  type: 'test'
+  ...
+# Subtest: v2 changes observational output only; audited v1 trajectories and event histories stay identical
+ok 27 - v2 changes observational output only; audited v1 trajectories and event histories stay identical # SKIP
+  ---
+  duration_ms: 0.327233
+  type: 'test'
+  ...
+# Subtest: native SVG is the only lesson drawing surface; no bitmap shim
+ok 28 - native SVG is the only lesson drawing surface; no bitmap shim
+  ---
+  duration_ms: 2.783349
+  type: 'test'
+  ...
+# Subtest: four routes, nine labs and seven atlases retain teaching and valid sources
+ok 29 - four routes, nine labs and seven atlases retain teaching and valid sources
+  ---
+  duration_ms: 19.784946
+  type: 'test'
+  ...
+# Subtest: CZ10B recovery has seven distinct instructional stages and correct hardware
+ok 30 - CZ10B recovery has seven distinct instructional stages and correct hardware
+  ---
+  duration_ms: 0.298359
+  type: 'test'
+  ...
+# Subtest: CZ10B has two physical stages and independent upper/booster trajectories
+ok 31 - CZ10B has two physical stages and independent upper/booster trajectories
+  ---
+  duration_ms: 2.929311
+  type: 'test'
+  ...
+# Subtest: failed/no-recovery cases cannot be drawn as successful physics capture
+ok 32 - failed/no-recovery cases cannot be drawn as successful physics capture
+  ---
+  duration_ms: 2346.599074
+  type: 'test'
+  ...
+# Subtest: CZ10B RTLS is not falsely represented as an operational option
+ok 33 - CZ10B RTLS is not falsely represented as an operational option
+  ---
+  duration_ms: 0.650391
+  type: 'test'
+  ...
+# Subtest: Falcon legs and Shenzhou nonreusable type remain unchanged
+ok 34 - Falcon legs and Shenzhou nonreusable type remain unchanged
+  ---
+  duration_ms: 990.225068
+  type: 'test'
+  ...
+# Subtest: all generated model events have resolvable, type-appropriate references
+ok 35 - all generated model events have resolvable, type-appropriate references
+  ---
+  duration_ms: 0.494126
+  type: 'test'
+  ...
+# Subtest: SVG exporter is built into both the module and standalone bundler
+ok 36 - SVG exporter is built into both the module and standalone bundler
+  ---
+  duration_ms: 1.118275
+  type: 'test'
+  ...
+# Subtest: four complete routes, 63 explicit stages, nine labs, seven original vehicle diagrams
+ok 37 - four complete routes, 63 explicit stages, nine labs, seven original vehicle diagrams
+  ---
+  duration_ms: 20.520092
+  type: 'test'
+  ...
+# Subtest: launch vehicles, stations and representative return sequences are not conflated
+ok 38 - launch vehicles, stations and representative return sequences are not conflated
+  ---
+  duration_ms: 0.358542
+  type: 'test'
+  ...
+# Subtest: every experimental slider endpoint produces finite bounded values
+ok 39 - every experimental slider endpoint produces finite bounded values
+  ---
+  duration_ms: 0.529361
+  type: 'test'
+  ...
+# Subtest: circular orbit at 400 km has plausible speed, period and gravity
+ok 40 - circular orbit at 400 km has plausible speed, period and gravity
+  ---
+  duration_ms: 0.337012
+  type: 'test'
+  ...
+# Subtest: RK4 preserves circular orbit radius and uses a labelled atmosphere boundary
+ok 41 - RK4 preserves circular orbit radius and uses a labelled atmosphere boundary
+  ---
+  duration_ms: 118.390354
+  type: 'test'
+  ...
+# Subtest: thrust, staged mass, solar incidence and energy invariants
+ok 42 - thrust, staged mass, solar incidence and energy invariants
+  ---
+  duration_ms: 0.513472
+  type: 'test'
+  ...
+# Subtest: vacuum never reports an air-drag terminal speed; larger area lowers it
+ok 43 - vacuum never reports an air-drag terminal speed; larger area lowers it
+  ---
+  duration_ms: 0.236073
+  type: 'test'
+  ...
+# Subtest: docking requires alignment, slow relative speed and controlled attitude together
+ok 44 - docking requires alignment, slow relative speed and controlled attitude together
+  ---
+  duration_ms: 0.275006
+  type: 'test'
+  ...
+# Subtest: host retains third-party catalog and separate original entries
+ok 45 - host retains third-party catalog and separate original entries
+  ---
+  duration_ms: 4.400744
+  type: 'test'
+  ...
+# Subtest: single-file builder has no external runtime scripts or styles
+ok 46 - single-file builder has no external runtime scripts or styles
+  ---
+  duration_ms: 71.783908
+  type: 'test'
+  ...
+1..46
+# tests 46
+# suites 0
+# pass 43
+# fail 0
+# cancelled 0
+# skipped 3
+# todo 0
+# duration_ms 8336.193653
