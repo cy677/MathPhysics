@@ -1,0 +1,39 @@
+name: Spaceflight SVG verification
+on:
+  push:
+    branches: ['feature/spaceflight-svg-cz10b-20261002']
+    paths: ['lessons/spaceflight/**', 'tests/spaceflight*', '.github/workflows/spaceflight-svg.yml']
+  pull_request:
+    paths: ['lessons/spaceflight/**', 'tests/spaceflight*', '.github/workflows/spaceflight-svg.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: spaceflight-svg-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Archive reproducible source for the module
+        run: |
+          mkdir -p /tmp/spaceflight-evidence
+          tar -czf /tmp/spaceflight-evidence/source.tar.gz lessons/spaceflight tests src package.json package-lock.json config .github/workflows/spaceflight-svg.yml
+          git rev-parse HEAD > /tmp/spaceflight-evidence/commit.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: spaceflight-source
+          path: /tmp/spaceflight-evidence/
+          retention-days: 7
+      - name: Validate JavaScript syntax
+        run: for f in lessons/spaceflight/*.js; do node --check "$f"; done
+      - name: Run SVG regression tests when available
+        run: |
+          if [ -f tests/spaceflight-svg.test.mjs ]; then
+            node --test tests/spaceflight-svg.test.mjs
+          fi
