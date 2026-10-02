@@ -1,0 +1,18 @@
+{
+  "renderer": "native SVG",
+  "routes": 4,
+  "labs": 9,
+  "atlases": 7,
+  "net_recovery_steps": 7,
+  "vector_files": 102,
+  "render_cases": 288,
+  "browser_errors": [],
+  "external_http_requests": 0,
+  "viewports": [
+    1440,
+    1194,
+    390
+  ],
+  "docking": "passed",
+  "physics": "passed"
+}
