@@ -2,38 +2,103 @@ name: Spaceflight SVG verification
 on:
   push:
     branches: ['feature/spaceflight-svg-cz10b-20261002']
-    paths: ['lessons/spaceflight/**', 'tests/spaceflight*', '.github/workflows/spaceflight-svg.yml']
-  pull_request:
-    paths: ['lessons/spaceflight/**', 'tests/spaceflight*', '.github/workflows/spaceflight-svg.yml']
+    paths: ['lessons/spaceflight/**', 'tests/spaceflight*', 'scripts/.spaceflight-edits/**', '.github/workflows/spaceflight-svg.yml']
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 concurrency:
   group: spaceflight-svg-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   verify:
+    if: github.ref == 'refs/heads/feature/spaceflight-svg-cz10b-20261002'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Archive reproducible source for the module
-        run: |
-          mkdir -p /tmp/spaceflight-evidence
-          tar -czf /tmp/spaceflight-evidence/source.tar.gz lessons/spaceflight tests src package.json package-lock.json config .github/workflows/spaceflight-svg.yml
-          git rev-parse HEAD > /tmp/spaceflight-evidence/commit.txt
-      - uses: actions/upload-artifact@v4
+      - uses: actions/setup-python@v5
         with:
-          name: spaceflight-source
-          path: /tmp/spaceflight-evidence/
-          retention-days: 7
-      - name: Validate JavaScript syntax
-        run: for f in lessons/spaceflight/*.js; do node --check "$f"; done
-      - name: Run SVG regression tests when available
+          python-version: '3.12'
+      - name: Apply source edits only after checking all input and output hashes
         run: |
-          if [ -f tests/spaceflight-svg.test.mjs ]; then
-            node --test tests/spaceflight-svg.test.mjs
-          fi
+          python - <<'PY'
+          import pathlib, json, hashlib
+          root=pathlib.Path.cwd()
+          allowed={
+            'lessons/spaceflight/app.js','lessons/spaceflight/data.js','lessons/spaceflight/draw.js',
+            'lessons/spaceflight/index.html','lessons/spaceflight/mission-model.js',
+            'lessons/spaceflight/styles.css','lessons/spaceflight/teaching.js','lessons/spaceflight/svg-pen.js',
+            'scripts/build_spaceflight_standalone.py','tests/spaceflight.test.mjs',
+            'tests/spaceflight-fusion.test.mjs','tests/spaceflight-svg.test.mjs',
+            'tests/spaceflight-svg-browser.py','docs/spaceflight-svg-review.md'
+          }
+          revisions={}
+          for file in sorted((root/'scripts/.spaceflight-edits').glob('*.json')):
+            for entry in json.loads(file.read_text(encoding='utf-8')):
+              assert entry['path'] in allowed, entry['path']
+              revisions[entry['path']]=entry
+          assert set(revisions)==allowed, sorted(allowed-set(revisions))
+          pending={}
+          for name,entry in revisions.items():
+            path=root/name
+            if entry['base'] is None:
+              assert not path.exists(), 'New path already exists: '+name
+              original=''
+            else:
+              raw=path.read_bytes()
+              actual=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
+              assert actual==entry['base'], 'Base conflict: '+name
+              original=raw.decode('utf-8')
+            if 'content' in entry:
+              result=entry['content']
+            else:
+              result=original
+              for edit in reversed(entry['edits']):
+                assert 0<=edit['start']<=edit['end']<=len(original)
+                result=result[:edit['start']]+edit['text']+result[edit['end']:]
+            digest=hashlib.sha256(result.encode('utf-8')).hexdigest()
+            assert digest==entry['sha256'], f'Output hash mismatch {name}: {digest} != {entry["sha256"]}'
+            pending[name]=result
+            print('verified',name,digest)
+          for name,result in pending.items():
+            path=root/name;path.parent.mkdir(parents=True,exist_ok=True)
+            path.write_text(result,encoding='utf-8')
+          print('All 14 source files verified and applied.')
+          PY
+      - name: JavaScript syntax and standalone bundle
+        run: |
+          for f in lessons/spaceflight/*.js; do node --check "$f"; done
+          python scripts/build_spaceflight_standalone.py
+      - name: Unit and model regression tests
+        run: |
+          mkdir -p output/spaceflight-svg
+          node --test tests/spaceflight.test.mjs tests/spaceflight-fusion.test.mjs tests/spaceflight-integration.test.mjs tests/spaceflight-svg.test.mjs 2>&1 | tee output/spaceflight-svg/unit-tests.txt
+      - name: Install browser verification dependency
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Verify UI and export all 102 vector illustrations
+        run: python tests/spaceflight-svg-browser.py
+      - name: Commit verified module and SVG gallery to this feature branch only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm -r scripts/.spaceflight-edits
+          git add lessons/spaceflight scripts/build_spaceflight_standalone.py tests/spaceflight.test.mjs tests/spaceflight-fusion.test.mjs tests/spaceflight-svg.test.mjs tests/spaceflight-svg-browser.py docs/spaceflight-svg-review.md
+          git add -f output/spaceflight-svg/report.json output/spaceflight-svg/unit-tests.txt
+          git commit -m 'feat(spaceflight): redraw all scenes as SVG and add CZ-10B seven-step net recovery'
+          git push origin HEAD:feature/spaceflight-svg-cz10b-20261002
+      - name: Package verified module and standalone classroom
+        run: |
+          mkdir -p output/spaceflight-svg
+          tar -czf output/spaceflight-svg/module.tar.gz lessons/spaceflight src/theme.css src/theme.js src/progress.js docs/spaceflight-svg-review.md scripts/build_spaceflight_standalone.py tests/spaceflight-svg.test.mjs tests/spaceflight-svg-browser.py dist/MathPhysics-Spaceflight.html
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: spaceflight-svg-evidence
+          path: output/spaceflight-svg/
+          if-no-files-found: warn
+          retention-days: 14
