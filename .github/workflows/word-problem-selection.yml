@@ -1,0 +1,79 @@
+name: Word-problem selection
+on:
+  push:
+    branches: [feature/curated-word-problems-20261005]
+    paths:
+      - '.github/workflows/word-problem-selection.yml'
+      - 'question-banks/**'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Capture complete source snapshots and repository text
+        run: |
+          python - <<'PY'
+          import pathlib, urllib.request, json, hashlib, datetime, subprocess, shutil, time
+          root = pathlib.Path('selection-artifact')
+          root.mkdir(exist_ok=True)
+          sources = [
+            ('asdiv', 'chaochun/nlu-asdiv-dataset', 'master', ['dataset/ASDiv.xml', 'README.md']),
+            ('svamp', 'arkilpatel/SVAMP', 'main', ['SVAMP.json', 'README.md', 'LICENSE']),
+            ('gsm8k', 'openai/grade-school-math', 'master', ['grade_school_math/data/train.jsonl', 'grade_school_math/data/test.jsonl', 'README.md', 'LICENSE']),
+          ]
+          def get(url):
+              for attempt in range(4):
+                  try:
+                      req = urllib.request.Request(url, headers={'User-Agent': 'MathPhysics-question-bank-audit'})
+                      with urllib.request.urlopen(req, timeout=60) as r:
+                          return r.read()
+                  except Exception:
+                      if attempt == 3: raise
+                      time.sleep(2 ** attempt)
+          manifest = {'captured_at': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'sources': []}
+          for bank, repo, ref, paths in sources:
+              info = json.loads(get('https://api.github.com/repos/' + repo + '/commits/' + ref))
+              sha = info['sha']
+              entry = {'bank': bank, 'repository': repo, 'commit': sha, 'files': []}
+              for path in paths:
+                  url = 'https://raw.githubusercontent.com/' + repo + '/' + sha + '/' + path
+                  body = get(url)
+                  dest = root / 'sources' / bank / path
+                  dest.parent.mkdir(parents=True, exist_ok=True)
+                  dest.write_bytes(body)
+                  entry['files'].append({'path': path, 'url': url, 'sha256': hashlib.sha256(body).hexdigest(), 'bytes': len(body)})
+              manifest['sources'].append(entry)
+          (root / 'source_manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
+          files = subprocess.check_output(['git', 'ls-files', '-z']).decode().split('\0')
+          selected = []
+          for name in files:
+              if not name: continue
+              p = pathlib.Path(name)
+              if p.parts[0] in ('vendor', 'output', 'node_modules', 'third_party'): continue
+              if p.suffix not in ('.json', '.jsonl', '.js', '.mjs', '.py', '.md', '.html', '.css', '.yaml', '.yml') and name not in ('LICENSE', '.gitignore'): continue
+              if not p.is_file() or p.stat().st_size > 5000000: continue
+              dest = root / 'repo' / p
+              dest.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(p, dest)
+              selected.append(name)
+          (root / 'repo_manifest.json').write_text(json.dumps({'commit': subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode().strip(), 'paths': selected}, ensure_ascii=False, indent=2), encoding='utf-8')
+          print(json.dumps(manifest, ensure_ascii=False))
+          print('Repository text files:', len(selected))
+          PY
+      - name: Run full-corpus selection when implementation is present
+        run: |
+          if [ -f question-banks/selection/build.py ]; then
+            python question-banks/selection/build.py --source-root selection-artifact/sources --source-manifest selection-artifact/source_manifest.json --output selection-artifact/results
+            python -m unittest discover -s question-banks/selection/tests -v
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: word-problem-selection
+          path: selection-artifact/
+          retention-days: 7
+          if-no-files-found: error
