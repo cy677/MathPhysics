@@ -1,0 +1,1526 @@
+{
+  "schema_version": "1.0",
+  "source": "SVAMP/SVAMP.json pinned by question-banks/SOURCE_LOCK.json",
+  "review_method": "assistant_reviewed_case",
+  "coverage_note": "按题干与所问目标核对列出的具体案例；未列出不表示已获人工审定或保证正确。所有分类仍由规则推定。",
+  "policy_note": "reject表示原记录不能直接进入当前教学精选，保留源ID和原始内容追溯；没有擅改上游答案。hold为未决歧义，adapt为需改编情境。",
+  "cases": {
+    "chal-9": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "配方需要15杯盐，生活情境不宜直接用于儿童数学练习，建议换用合理材料。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-14": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "Ron为13英尺、Dean更高4英尺，人物身高与游泳情境应重新设定。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-19": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "捡到22个瓶盖后总数却只有17个，未说明丢弃，隐含初始数量为负。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-26": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "捡到65张包装纸后总数却只有9张，干扰条件隐含负初始数量。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-30": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "Dan有3元及曾花4元买两块糖的叙述时点不明；若3元是购物前余额则资金不足，若是当前余额则可成立，需明确。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-35": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "题干已给下午收到3封邮件，问题仍问下午；标答1及公式实际计算晚上邮件数。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case",
+      "expected_answer": 3
+    },
+    "chal-36": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "题干先有4元、买8元糖，再收到5元；按所列顺序会先透支，需明确资金与事件时点。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-37": {
+      "flags": [
+        "Q01",
+        "Q03"
+      ],
+      "reason": "只给昨天703人与当天246人的游客数，问题却问25天的总数；标式只把两天相加。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-40": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "系列共有8本书和5部电影，却称读过其中19部电影、看过其中16本书，且阅读与观看对象错置。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-42": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "捡到50个瓶盖后当前总数只有21个，干扰条件隐含负初始数量。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-46": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "Zachary做3次仰卧起坐，David比他少87次，隐含负84次。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-50": {
+      "flags": [
+        "Q01",
+        "Q03"
+      ],
+      "reason": "仅给两类卡片原数量及赠出后合计415张，无法确定当前两类差值；公式额外使用题干没有的149。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-55": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有12位顾客，离开一些后反而剩14位；虽只问之后新增10人的结果，先前条件仍矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-56": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有90个番茄，昨日摘154个、今日摘50个，两次采摘超过总量。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-59": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "花瓶原有9朵玫瑰，剪来更多玫瑰放入后却只剩3朵。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-66": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "手机原有13个应用，删除部分后却变为17个；虽问文件，应用条件仍矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-78": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "Allan带到公园5个气球，到园后另买3个；问题问带到公园的数量，标答8计算当前持有量。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case",
+      "expected_answer": 5
+    },
+    "chal-81": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "36名乘客与68人下车、一些人上车同时出现；需明确上下车次序或分段过程，不能直接把超出初始人数的下车量当正常干扰量。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-89": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有12块饼干，吃掉16块并送出21块，总消耗超过库存。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-94": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有17块饼干，吃掉14块并送出13块，总消耗27块超过库存。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-113": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有16朵玫瑰，增加玫瑰后只剩13朵；虽问兰花，玫瑰条件仍矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-122": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "题干为葡萄干饼干，问题却改称葡萄干蛋糕，需要统一对象名词。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-130": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "配方需6杯糖却已加60杯，题目未解释超量情境，需调整无关条件。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-134": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "系列有10本不同的书及11部不同电影，却称读过其中13本、看过其中12部。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-136": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有77个土豆却摘掉172个；标答将负的土豆余量与175个番茄合并后得到正数，不能消除矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-154": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "父子共摘4磅草莓，儿子部分却为19磅，隐含父亲部分为负15磅。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-160": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "58位学生平均分在87间教室，每间学生人数相同会成为非整数；虽只问校车数，干扰条件不合理。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-161": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "2颗珠子做32条项链，问题问每条需要几颗；标式32除2颠倒总量与份数，且原情境不能制作整颗珠子的项链。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-163": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有25块咸饼干，却吃掉28块；所问差值为正不能消除负库存。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-175": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "Steven有5个桃且比Jill多8个，隐含Jill有负3个桃。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-177": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "Steven有12个桃且比Jill多67个，隐含Jill有负55个；虽问Jake，背景数量仍矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-188": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "Fred洗车前有114元、之后21元，但题干未交代支出或收入的时点；需澄清金额下降的原因。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-191": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "制作43个蛋糕和114个酥饼，却分别售出78和154个，超过各自库存。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-204": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有45个鸟家庭，飞走86个，剩余家庭会为负数。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-210": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有6块饼干，却送出30块并吃掉23块。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-214": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "花瓶原有12朵玫瑰，添加更多玫瑰后反而只有10朵。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-216": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "配方需5杯面粉却已加10杯，虽问糖，面粉干扰量应改编或交代。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-218": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "每层架摆10个柜子与8个人偶，物件尺度关系不适合直接采用，宜换成可同层摆放的小物件。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-231": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "捡到30个瓶盖后总数只有7个，隐含初始数量为负。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-258": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "配方需9杯面粉却已加12杯，需调整无关配料条件或解释超量。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-263": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "只有90块积木，却用89块搭房、63块搭塔，未说明拆除复用。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-270": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有246张棒球卡及214张Ace卡，赠出部分卡后却分别剩404和495张。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-281": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "慢跑减重数据为两周共202千克并剩9千克，宜替换为货物重量变化情境。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-287": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有589支蜡笔，赠出571支并丢失161支，总减少量超过库存。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-290": {
+      "flags": [
+        "Q01",
+        "Q03"
+      ],
+      "reason": "只给当天557人与前一天188人的数据，问题却问57天总数；标式仅合计两天。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-294": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "每天分别学习英语6小时、汉语3小时和西班牙语58小时，合计67小时超过一天。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-303": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "Steven有8个桃，Jake比他少17个，隐含负9个；虽只问苹果，桃子条件矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-304": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "Steven有4个桃，Jake比他少12个、Jill比他少11个，两者数量均为负。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-305": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "Fred洗车前有86元、之后9元，题干未交代其他资金变化；需明确收入和余额的口径。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-307": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "系列只有10本书和6部电影，却称读过其中14部电影、看过其中19本书，且动词对象错置。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-329": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "仅制作13个蛋糕，却先售出其中91个，之后购买154个不能解释先前超库存出售。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-333": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "2章读了664天，问题问每天读几章；公式664除2计算的是每章所需天数。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-334": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "花瓶先有2朵玫瑰，叙述丢4朵后插新花；需明确实际先后，当前文字易产生负中间库存。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-342": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "Dan有3元却曾支付共4元买糖，金额对应时点不明，需说明3元是购物前还是购物后余额。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-349": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "父子起初共22磅草莓，儿子仍有36磅；途中新增30磅属于父亲，不能解释儿子原始部分大于整体。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-351": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有3棵树，台风中却死去13棵，隐含负的存活数量。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-356": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "每层可放10个人偶、房间可放8个人偶，却用8乘10求层架数量，单位关系和所问目标均不符。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-359": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有38个鸟家庭，却分别有47和94个飞往两地，总迁出超过总量。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-360": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "Steven有16个桃，Jake少9个所以有7个，又称Jake比Jill多18个，隐含Jill有负11个。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-364": {
+      "flags": [
+        "Q01",
+        "Q03"
+      ],
+      "reason": "原有16条金鱼及71条鲶鱼，现仅说共剩2条，未说明剩余鱼种，无法求金鱼消失数。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-370": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "由公式推得初有14元，先花17元后收10元、现有7元；按所列顺序先透支，需调整事件时点或情境。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-375": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "只有37块积木，用33块搭塔并用13块搭房，两处合计46块。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-393": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "捡到82张包装纸后总数却只有61张；虽问瓶盖，包装纸条件仍矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-398": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "只赢得13张票，却用8张换玩具、18张换衣服，总消耗26张。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-403": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "套圈游戏30天收入420元，又写与另一游戏合计22元，合计对象和时段没有交代，需明确。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-405": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有6块咸饼干，却吃掉23块；所问两种食用数量之差为正不能消除矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-414": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有4颗弹珠，丢16颗并捡8颗；即便调整事件顺序，总剩余量仍为负4颗。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-417": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有71本书，卖出一些再买38本后却有116本，隐含卖出负7本。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-431": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "配方需5杯糖却已放62杯，应重设无关条件的数值。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-433": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "系列有8本不同的书和10部不同电影，却称读过其中19本、看过其中61部。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-463": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "花瓶先有15朵玫瑰，叙述丢33朵并插入新花；需明确顺序，不能忽视中间库存问题。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-470": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "Zachary做15次，David多39次，John再少9次，所以John比Zachary多30次；问题却问Zachary比John多多少，标答方向相反。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-484": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有110支蜡笔，却赠出90支并丢失412支。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-494": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有51本书，卖出部分后却剩82本；虽问笔，书本条件仍矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-497": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "捡到71个瓶盖和24张包装纸后，当前总数却只有28和16，均隐含负初始数量。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-499": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "先有5名乘客，却有63人下车并有其他人上车；需明确上下车过程或阶段，防止数量与时点混淆。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-505": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有20块糖，却先后吃掉34和18块，消耗52块超过库存。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-506": {
+      "flags": [
+        "Q01",
+        "Q03"
+      ],
+      "reason": "问题比较当天与此前245天的游客数，但仅提供此前两天数据，公式也只合计两天。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-507": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "卖出部分书和笔后，笔的数量从55支增加到59支；干扰条件存在矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-513": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "David做38次俯卧撑且比Zachary多56次，隐含Zachary做了负18次。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-514": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "捡到62张包装纸后总数仅43张，未说明丢弃，隐含初始数量为负。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-518": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "114千克的人因两周慢跑分别减重50和60千克，最后仅4千克，情境应重新设定。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-537": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "原有49个鸟家庭，叙述59个飞走及24个新来；按叙述顺序出现负中间库存，但新来与飞走的先后未明确。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-538": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "Jake有19减12等于7个桃，又比Jill多72个，隐含Jill有负65个。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-565": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "系列共有16本不同的书，却称已读过其中19本，部分超过整体。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-566": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "问题问饼干袋数，题干已给14袋；标答2实际是每袋饼干数。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case",
+      "expected_answer": 14
+    },
+    "chal-584": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "Dan有5元且曾买3元巧克力与7元糖，金额时点未明确；若5元是购物前余额则不足，需澄清。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-585": {
+      "flags": [
+        "Q02",
+        "Q07"
+      ],
+      "reason": "原重92千克，两周分别减56和99千克，最终体重为负；虽只问第一周，后续条件仍矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-596": {
+      "flags": [
+        "Q03",
+        "Q06"
+      ],
+      "reason": "题干每天收获76袋、丢弃64袋、每袋50个，问收获橙子数；标答600计算的是丢弃后保留数量，需明确收获与留存口径。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-608": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "制作48个酥饼却卖出81个，干扰条件存在库存矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-629": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "制作14个蛋糕却卖出97个，未说明其他来源。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-631": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有8块甜饼干和6块咸饼干，却分别吃掉20和34块。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-634": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "Steven有9个桃，Jake比他少13个，隐含负4个；虽问苹果，桃子条件仍矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-639": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "题干提供收到的邮件与寄出的信件，问题却问寄出的邮件；标答相加的是信件数。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-641": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "Dan有2元且曾花6元买糖，余额的购物前后时点不明，需明确条件。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-663": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "Ed原先比Doug多12颗，丢20颗，又给出Ed有17颗；若17是初始数量则丢失超库存，若是当前数量则标答5不符合原比较时点。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-666": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "Dan有4元且曾消费7加6元，所持金额的时点不明，需澄清是否为购物前余额。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-669": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "制作54个蛋糕却卖出68个，未说明其他来源。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-676": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "15章读了660天，问题问每天读几章；标答660除15等于44计算的是每章所需天数。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-677": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "青蛙跳19减4等于15英寸，老鼠比青蛙少44英寸，隐含负29英寸。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-678": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有18个鸟家庭，却称38个飞往非洲、80个飞往亚洲。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-680": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "题意及公式均为4减2加3，结果应为5，但Answer字段为1。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case",
+      "expected_answer": 5
+    },
+    "chal-690": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "仅有58块积木，却分别使用27块和53块搭建两件物体，合计80块；未说明拆除复用。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-693": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "捡到39个瓶盖后总数仅16个，干扰条件隐含负初始库存。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-696": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有3个文件，删除一些后变为24个，干扰条件矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-697": {
+      "flags": [
+        "Q02",
+        "Q03"
+      ],
+      "reason": "题干先说分成每组11个的组，又说每组2个；标答却将11解释为组数。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-718": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "已给第二章68页，问题仍问第二章，标答13实际为第一章页数。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case",
+      "expected_answer": 68
+    },
+    "chal-720": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "制作52个酥饼和84个蛋糕，却分别卖出94和102个。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-730": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "已给第一章10页，问题仍问第一章，标答13实际为第二章页数。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case",
+      "expected_answer": 10
+    },
+    "chal-731": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "初有21本书，先卖出再买42本，最后15本，隐含先卖48本，超过当时库存。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-736": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有41个鸟家庭，却迁出35加62共97个。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-737": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有65支蜡笔，却赠出213支并丢失16支。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-745": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有15个应用，删除一些后变为21个。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-747": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "配方需6杯面粉却已放12杯，另含9杯盐；需重设烘焙情境和用量。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-752": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "原有7颗弹珠，叙述丢8颗并捡10颗；按所列顺序出现负库存，但先后未明确。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-753": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有38张Ace卡，赠出部分卡后反而剩376张Ace卡。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-764": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有267支蜡笔，丢失231支并赠出308支，总减少539支超过库存。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-765": {
+      "flags": [
+        "Q01",
+        "Q06"
+      ],
+      "reason": "仅给洞穴深919英尺及还需行走1307英尺，未交代起点与距离参照，标答直接相加缺乏明确支持。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-766": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "干扰条件称63个橙子分为95组；若指完整物品组成的非空组则不可能，需澄清分组含义。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-771": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "蛋糕配方含14杯面粉却需要40杯盐，材料比例情境应调整。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-774": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "问题末尾多出数字3，存在破损或编辑残留，应明确所问对象。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-777": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "干扰条件称87个橙子分为93组；若各组非空且橙子完整，则组数超过物品数。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-778": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "干扰条件称192根香蕉分为345组；若各组非空且香蕉完整，则组数超过物品数。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-790": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有8个鸟家庭，却迁出42加31共73个。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-791": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "Zachary做58次仰卧起坐，David比他少62次，隐含负4次；干扰条件矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-797": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "系列仅17部不同电影，却称看过其中21部；问题还将看电影误写为read。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-800": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "Dan有2元且曾消费6加3元，余额时点不明；若为购物前余额则资金不足。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-801": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有3位顾客，离开一些后反而剩4位，隐含离开负1位。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-805": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "制作19个蛋糕却卖出70个，干扰条件矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-811": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "配方总共只需6杯面粉，却根据剩余需求写出还需13加8等于21杯面粉。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-826": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "系列仅有4本不同的书，却称已读过其中19本。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-834": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "系列仅有10部不同电影，却称已看过其中56部。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-841": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "Dan有4元且曾消费7加2元，余额时点不明；若为购物前余额则资金不足。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-845": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "花瓶原有21朵玫瑰，叙述丢掉34朵后补入新花；按所列顺序库存不足，需明确先后。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-850": {
+      "flags": [
+        "Q03",
+        "Q06"
+      ],
+      "reason": "Jake带来6个气球，到公园后另买3个；问题问带到公园的数量，标答9却计算当前持有量。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case",
+      "expected_answer": 6
+    },
+    "chal-861": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "制作7个蛋糕却卖出15个，干扰条件矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-864": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "只购买13瓶汽水，却描述每天喝87瓶；未说明补购或不足一天的饮用时段，干扰条件需澄清。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-878": {
+      "flags": [
+        "Q06"
+      ],
+      "reason": "送出31减23等于8块饼干并称均分给5人；若要求整块均分则不能整除，需明确是否允许切分。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-890": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "Ron身高13英尺、Dean再高9英尺，人物身高情境应改编。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-897": {
+      "flags": [
+        "Q03"
+      ],
+      "reason": "28包口香糖加14包糖，每包6粒，总数应为252；公式却除以6，标答为7。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case",
+      "expected_answer": 252
+    },
+    "chal-898": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "系列有11本书和17部电影，却称读过其中13本、看过其中63部。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-904": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "捡到58个瓶盖及25张包装纸后，总数却分别只有12和11，均隐含负初始数量。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-907": {
+      "flags": [
+        "Q03",
+        "Q06"
+      ],
+      "reason": "今日数据写作14件衬衫，公式却当作14分钟；按题干字面应为6乘12加14等于86，而非156。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case",
+      "expected_answer": 86
+    },
+    "chal-908": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有9块甜饼干却吃掉36块；虽问咸饼干，甜饼干条件仍矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-912": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "制作157个蛋糕却卖出158个，未说明其他来源。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-917": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "制作11个蛋糕却卖出140个，干扰条件矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-926": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "原有18张Ace卡，赠出部分卡后却剩55张Ace卡。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-927": {
+      "flags": [
+        "Q06"
+      ],
+      "reason": "送出24减17等于7块饼干并称均分给3人；若要求整块均分则不能整除，需明确是否允许切分。",
+      "disposition": "hold",
+      "confirmation": "suspected",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-928": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "蚱蜢跳21英寸且比青蛙远25英寸，隐含青蛙跳负4英寸；老鼠再少16英寸，也为负。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-930": {
+      "flags": [
+        "Q01",
+        "Q03"
+      ],
+      "reason": "问题问过去89天游客总数，题干只给当天及此前两天，标答仅合计这三天。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-933": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "初有2本书，先卖出再买150本，最后58本，隐含先卖94本，超过当时库存。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-940": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "花瓶原有3朵兰花，加入一些兰花后反而只有2朵，干扰条件矛盾。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-943": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "系列仅14部不同电影，却称已看过其中40部。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-944": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "仅有86块积木，却使用79块搭塔、82块搭房，总数161块；未说明拆除复用。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-951": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "青蛙跳19加39等于58英寸，老鼠比青蛙少94英寸，隐含负36英寸。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-953": {
+      "flags": [
+        "Q01",
+        "Q03"
+      ],
+      "reason": "过去327天共406人，今天132人，无法据此求昨天人数；标答直接相减隐含错误的两天口径。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-963": {
+      "flags": [
+        "Q01",
+        "Q03"
+      ],
+      "reason": "过去85天共829人，昨天45人，无法据此求当天人数；标答直接相减隐含错误的两天口径。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-968": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "蛋糕配方含10杯面粉却需要80杯盐，材料比例情境应调整。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-991": {
+      "flags": [
+        "Q07"
+      ],
+      "reason": "Ron身高15英尺、Dean身高9英尺，宜调整单位或人物设定。",
+      "disposition": "adapt",
+      "confirmation": "adaptation",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-996": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "每个花床只种12粒种子，却称每床有58粒种子长成花，成功数量超过投入数量。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-997": {
+      "flags": [
+        "Q02"
+      ],
+      "reason": "笼内总共3条蛇，却称82条蛇躲起来；虽只问鳄鱼，蛇的部分数量仍超过整体。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-998": {
+      "flags": [
+        "Q02",
+        "Q06"
+      ],
+      "reason": "每床只种15粒种子，却称60粒种子长成花；此外55粒按每床15粒无法分成整数个完整花床。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    },
+    "chal-1000": {
+      "flags": [
+        "Q01",
+        "Q02"
+      ],
+      "reason": "题干称蚱蜢比蚱蜢自己跳得远2英寸，比较对象写错，且没有提供青蛙的有效数量关系。",
+      "disposition": "reject",
+      "confirmation": "confirmed",
+      "review_method": "assistant_reviewed_case"
+    }
+  }
+}

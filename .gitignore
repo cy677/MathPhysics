@@ -8,3 +8,5 @@ __pycache__/
 **/before-source/
 output/playwright/playground-challenges/before/
 *.log
+.selection-sources/
+.selection-output/

@@ -1,0 +1,618 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-05",
+  "reviewer": "assistant",
+  "scope": "有针对性的逐题例外核验；未覆盖的记录不等于语义正确、人工审核或已批准发布。原答案不被静默修改。",
+  "records": {
+    "test-0089": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "题设合计88000，解析第一式误写80000，后续使用正确88000并得8000；应统一所有总数。"
+    },
+    "test-0335": {
+      "flags": [
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "题面先列Nick、Richard、Jason、DJ，后给枪数时却用RJ替代Jason。若RJ是Jason的笔误则均分6把，但需先统一人物名称。"
+    },
+    "test-0381": {
+      "flags": [
+        "insufficient_conditions"
+      ],
+      "disposition_hint": "hold",
+      "reason": "借款五个月、利率10%未交代10%是年利率还是整个借款期的费用；原803按五个月整体10%处理，需明确期限与计息基数。",
+      "level": "extension"
+    },
+    "test-0411": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "原解把半价单价与两磅总价连写为3/2=1.50+3.00=4.50，等号链不成立。应分开写半价为1.50、总价为1.50+3.00=4.50；最终余款3正确。"
+    },
+    "test-0502": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "祖孙共用3/4团毛线，应364×3/4=273码，原文字却写364/4=273，漏掉分子3；算术注记和最终273正确。"
+    },
+    "test-0932": {
+      "flags": [
+        "ambiguous_wording",
+        "solution_typo"
+      ],
+      "disposition_hint": "hold",
+      "reason": "题设总年龄对象含Jean，后续关系换成John，未说明同一人；原式另把x+10写成x+1，再按x+10求解。须统一人物和式子后才能使用50。"
+    },
+    "test-1025": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "总收入320、付帮工20，应320−20=300，原末解写32−20=300；标准答案300正确，需补回被漏掉的0。"
+    },
+    "test-1153": {
+      "flags": [
+        "insufficient_conditions"
+      ],
+      "disposition_hint": "hold",
+      "reason": "两张彩票中奖率20%与60%只给边际概率；未说明开奖或中奖事件独立，不能直接相乘推出同时中奖12%。且three times more likely与three times as likely应明确。",
+      "level": "extension"
+    },
+    "train-0011": {
+      "flags": [
+        "context_adaptation_required"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "数学为 S+2S+4S=847 的和倍反求；两条算术注记不能据此列为直接巩固。原题以怪物吞食847人为情境，儿童版本应改写为普通运载或收集情境。",
+      "category": "G03",
+      "subcategory": "多对象和倍反求",
+      "level": "I1",
+      "reasoning_tags": [
+        "逆向求量或方程关系"
+      ]
+    },
+    "train-0030": {
+      "flags": [],
+      "disposition_hint": "keep",
+      "reason": "房租金额保持不变，原收入的40%等于增加600后收入的25%；属于百分比基数变化的反求。原解无算术注记但有多行代数整理，不能当作0步巩固题。",
+      "category": "G09",
+      "subcategory": "不变量与百分比基数变化",
+      "level": "I2"
+    },
+    "train-0064": {
+      "flags": [
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "题面只说目标30次，未明确每日目标；原解对周一、周二各计算30次的欠额，并在周三30次基础上补齐，得到59。发布前应明确每天目标30次及周三补齐前两日欠额；保留为待改写候选，不直接认定原题必然错误或擅自改变标准答案。",
+      "category": "G01",
+      "subcategory": "每日目标与前期欠额累计",
+      "level": "C2"
+    },
+    "train-0110": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "题设 Keely 与 Kendall 各吃 Alyssa 的2倍；解说却把 Kendall 写为3A，又把 A+2A+3A 合为5A。题面应对应 A+2A+2A=100，最终答案20正确，需重写解析。"
+    },
+    "train-0143": {
+      "flags": [
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "hold",
+      "reason": "重叠的5%没有明确分母是原始细菌总数还是已杀死细菌集合；解说又把原总量的20个百分点写为剩余细菌的20%。应明确共同基数再使用30%的答案。"
+    },
+    "train-0168": {
+      "flags": [
+        "incorrect_solution"
+      ],
+      "disposition_hint": "hold",
+      "reason": "新片时长120×1.6=192分钟，每分钟成本50×2=100，总成本应192×100=19200。原无注记末行和标准答案写1920，差一个数量级。",
+      "source_answer": "1920",
+      "suggested_answer": "19200"
+    },
+    "train-0169": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "题设6个牛角包各3美元，原解说写6×2.5=18，内嵌算术注记却为正确的6×3=18；解析应统一为单价3，最终答案54不变。"
+    },
+    "train-0199": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "还需跑3英里、速度6英里/小时，应3÷6=0.5小时。原解文字写6÷3=0.5；最终答案30分钟正确，解析除法方向应修正。"
+    },
+    "train-0225": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "第二卷轴计算4080+4080/2的中间等式把4080写成4000，原后续注记与最终20655正确；应把4000修正为4080。"
+    },
+    "train-0338": {
+      "flags": [
+        "insufficient_conditions"
+      ],
+      "disposition_hint": "hold",
+      "reason": "26人喝酒、22人喝汽水、17人两者都喝，只能确定至少喝一种的人数31；题面未说明全体来宾均喝这两种饮料之一，不能据此确定聚会总人数。"
+    },
+    "train-0503": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "贴纸费用这条冗余解析写3/1=1，应为3/3=1；毛绒玩具最终6美元正确，但不应保留错误的旁支算式。"
+    },
+    "train-0516": {
+      "flags": [
+        "insufficient_conditions",
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "hold",
+      "reason": "每降3度风险增加5%未给32度时的基础风险，也未区分相对增加5%与增加5个百分点；不能直接把8次增量当作40%的总打滑概率。随后严重事故概率亦不能唯一确定。",
+      "level": "extension"
+    },
+    "train-0619": {
+      "flags": [
+        "insufficient_conditions",
+        "incorrect_solution"
+      ],
+      "disposition_hint": "hold",
+      "reason": "携疟疾40%与携寨卡20%的蚊子可能重叠，题面未给重叠情况。原解还把仅针对疟疾的50%风险下降作用于两种疾病；即使另补两类不重叠，按疫苗仅防疟疾计算也是20%，不是15%。不能直接修成唯一新答案。",
+      "level": "extension"
+    },
+    "train-0676": {
+      "flags": [
+        "insufficient_conditions",
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "hold",
+      "reason": "两诉讼分别胜诉的边际概率不足以推出同时胜诉或同时败诉概率，题面未说明独立；原解直接相乘。此外 more likely 的相对增幅与概率百分点差应区分。",
+      "level": "extension"
+    },
+    "train-0692": {
+      "flags": [
+        "insufficient_conditions",
+        "solution_typo"
+      ],
+      "disposition_hint": "hold",
+      "reason": "抵纽约为周二00:00，只说同一天转乘，没有给第二班出发时刻或零候机条件；到开普敦10:00的时间差不能直接视为飞行10小时。原解另把10 a.m.误写为10 p.m.。"
+    },
+    "train-1111": {
+      "flags": [
+        "unit_mismatch",
+        "insufficient_conditions"
+      ],
+      "disposition_hint": "hold",
+      "reason": "题设30kg、每kg给5ml、分3份，可得每份50ml；题问却是milligrams。未给密度或浓度，体积不能换算成质量，原答案50也没有解决单位矛盾。"
+    },
+    "train-1701": {
+      "flags": [
+        "insufficient_conditions"
+      ],
+      "disposition_hint": "hold",
+      "reason": "贷款利率15%未交代适用期限、单利/复利或一次性费用；原解按全部借款一次增加15%处理，需要先补明贷款计息规则。",
+      "level": "extension"
+    },
+    "train-1829": {
+      "flags": [
+        "insufficient_conditions",
+        "incorrect_solution"
+      ],
+      "disposition_hint": "hold",
+      "reason": "每月追加100、年利率10%，原解把当年12个月新增本金都按整年计息。追加时点与计息规则未说明，不能由题面唯一推出3982；解析使用了未给出的收益约定。",
+      "level": "extension"
+    },
+    "train-1843": {
+      "flags": [
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "题面把50辆卡车与40辆小汽车分开，问题却问随机选一辆car为white truck的概率；原解析实际从90辆vehicles中抽取。应把问题的car改为vehicle，再保留其舍入答案17%。",
+      "level": "extension"
+    },
+    "train-1871": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "题设A角60度，原解一行却写A为40度，随后180−60使用正确60；B角80度的最终答案正确，但需统一A角文字。三角形角关系另按首版范围暂存。"
+    },
+    "train-2134": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "总价827、价差127，列式2X−127=827后应两边加127得到954；原解析写成减去137，最终答案477正确但变形说明错误。"
+    },
+    "train-2242": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "题面摩托车30mph、郊狼15mph；原解析把摩托车说成20mph，又未解释归一化而直接用2x=(x+1)。最终1小时正确，需按30t=15(t+1)重写统一单位的解析。"
+    },
+    "train-2288": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "题设总数312，解析两次写成315，随后才回到6p+30=312；最终47正确，所有总量应统一为312。"
+    },
+    "train-2434": {
+      "flags": [
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "hold",
+      "reason": "100英尺先对半，再把其中一半对半，全部剩余绳段为50、25、25。题面随后说任取一条剩余绳段再五等分，没有限定为25英尺那两段之一，答案可以是10或5；原解自行限定取25英尺段。",
+      "category": "G04",
+      "subcategory": "多次分割与条件指代",
+      "level": "I1"
+    },
+    "train-2473": {
+      "flags": [
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "hold",
+      "reason": "若问这一周是否有一天火腿与蛋糕同日，独立随机安排下概率是3/5=60%；原答案12%对应预先指定某一天同时出现二者。题面未指定某一天，事件定义与原计算不一致，需先改写所求事件。",
+      "level": "extension"
+    },
+    "train-2656": {
+      "flags": [
+        "ambiguous_fraction_division_notation",
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "原解含非法的15 * / 3/5，应15÷(3/5)=25；又写25 / 1/3 =75，应25÷(1/3)=75。意图是从剩余部分反求整体再求2/3，最终50枚钉子可保留，但解析分数除法需要重写。"
+    },
+    "train-2779": {
+      "flags": [
+        "ambiguous_fraction_division_notation"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "原解平排式 3/ 1/4 = 12 在通常左结合除法语法下不成立；上下文意图是除以一个分数，发布解析应明确写成 3÷(1/4)=12 或规范分式。题目意图与最终答案可保留。"
+    },
+    "train-2827": {
+      "flags": [
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "hold",
+      "reason": "题问loan including the down payment把贷款额与首付款混在一起；原46000是总支出/总价，分期贷款本金本身为36000。应明确求总价还是实际借款额。",
+      "level": "extension"
+    },
+    "train-2938": {
+      "flags": [
+        "incorrect_solution"
+      ],
+      "disposition_hint": "hold",
+      "reason": "每15学生配2监护，8监护对应60学生，原解偷换为每15学生1监护而算120。应男生36盒、女生24×2=48盒，共84，原标准答案168错误。",
+      "source_answer": "168",
+      "suggested_answer": "84",
+      "category": "G10",
+      "category_components": [
+        "G05",
+        "G09"
+      ],
+      "subcategory": "比例分配与百分数分组",
+      "level": "I2",
+      "remove_flags": [
+        "out_of_primary_scope"
+      ]
+    },
+    "train-3003": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "每盘80个饼干、3盘，原解文字式写8×3=240，算术注记却为80×3=240；应补回80中的0，最终答案14不变。"
+    },
+    "train-3119": {
+      "flags": [
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "hold",
+      "reason": "题设利息为that month's payment的5%，未说明是本金分期额还是包含利息的总付款；原525按500本金另收5%处理。应明确计费基数，且属于贷款拓展内容。",
+      "level": "extension"
+    },
+    "train-3234": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "第三步加比例的解说把0.84写成“. 84”，会被数值解析误读为84；应统一为0.8+0.84+0.82=2.46。平均各袋百分比82%的最终答案可保留，并明确为各袋比例的等权平均。"
+    },
+    "train-3314": {
+      "flags": [
+        "ambiguous_fraction_division_notation"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "原解平排式 28 / 1/5 = 28 * 5 在通常左结合除法语法下不成立；上下文意图是除以一个分数，发布解析应明确写成 28÷(1/5)=28×5 或规范分式。题目意图与最终答案可保留。"
+    },
+    "train-3335": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "山羊收入3000、绵羊收入4200，最后解说写4200+3000=8600，但标准答案7200正确；应修正文中总和。"
+    },
+    "train-3410": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "10罐、每罐0.5美元，原解写10×0.5=10，句首和标准答案均为5；应把文字式的结果改为5。"
+    },
+    "train-3443": {
+      "flags": [
+        "ambiguous_fraction_division_notation"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "原解平排式 2/ 1/5 = 10 在通常左结合除法语法下不成立；上下文意图是除以一个分数，发布解析应明确写成 2÷(1/5)=10 或规范分式。题目意图与最终答案可保留。"
+    },
+    "train-3765": {
+      "flags": [
+        "incorrect_solution"
+      ],
+      "disposition_hint": "hold",
+      "reason": "题面两根阻力带各5磅，加一个10磅哑铃；原解擅自改成一对10磅哑铃。按题面给定外加重量应2×5+10=20，原答案30依赖未给出的第二个哑铃。",
+      "source_answer": "30",
+      "suggested_answer": "20"
+    },
+    "train-3833": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "题设死亡红花45、黄花61，原解一句写成25和31，但总和176用了正确45+61+30+40；最终36束正确，文字数字应统一。"
+    },
+    "train-4101": {
+      "flags": [
+        "incorrect_solution"
+      ],
+      "disposition_hint": "hold",
+      "reason": "按起终点之间的路径顺序，4个内部检查点从第1英里到第25英里，相距24英里，中间只有3个相邻间隔，等距时应24÷3=8。原解将24除以检查点数4，得到6，混淆点数与间隔数。",
+      "source_answer": "6",
+      "suggested_answer": "8",
+      "category": "G05",
+      "subcategory": "点数、间隔数与等距分配",
+      "level": "I1"
+    },
+    "train-4135": {
+      "flags": [
+        "out_of_primary_scope"
+      ],
+      "disposition_hint": "hold",
+      "reason": "需要由直角边3和4求斜边5，使用勾股定理及平方根；虽五条算术注记且算术正确，超出首版矩形/正方形小学文字题范围。",
+      "category": "G08",
+      "subcategory": "勾股定理与三角形周长",
+      "level": "extension"
+    },
+    "train-4146": {
+      "flags": [
+        "ambiguous_fraction_division_notation"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "原解平排式 2000 / 2/3 = 3000 在通常左结合除法语法下不成立；上下文意图是除以一个分数，发布解析应明确写成 2000÷(2/3)=3000 或规范分式。题目意图与最终答案可保留。"
+    },
+    "train-4594": {
+      "flags": [
+        "incorrect_solution",
+        "ambiguous_fraction_division_notation"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "原解把闰年误写为365−1=364天，正确应366天、隔日洗发183次。每瓶可洗14÷(1/4)=56次，仍需4瓶，属于最终答案碰巧不受影响的知识与解析错误；原14/1/4的平排式也需加括号。"
+    },
+    "train-4692": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "修台面用时为粉刷的3倍、粉刷8小时；原文字式写2×8=24，应3×8=24。最终费用570正确。"
+    },
+    "train-4974": {
+      "flags": [
+        "solution_typo",
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "鲑鱼比200磅鳟鱼多50%，原解写200×0.55=100，应200×0.5=100；此外金枪鱼twice as much应明确比较基数为鲑鱼，才能稳定得到1100。"
+    },
+    "train-5196": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "5个汉堡切成半个的份量，应5÷(1/2)=10份或5×2=10；原解析写5×1/2=10，运算符错误，最终剩余1份可保留。"
+    },
+    "train-5242": {
+      "flags": [
+        "ambiguous_fraction_division_notation"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "原解平排式 50/ 1/2 = 100 在通常左结合除法语法下不成立；上下文意图是除以一个分数，发布解析应明确写成 50÷(1/2)=100 或规范分式。题目意图与最终答案可保留。"
+    },
+    "train-5693": {
+      "flags": [
+        "ambiguous_fraction_division_notation"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "原解平排式 60 / 3/4 = 80 在通常左结合除法语法下不成立；上下文意图是除以一个分数，发布解析应明确写成 60÷(3/4)=80 或规范分式。题目意图与最终答案可保留。"
+    },
+    "train-5782": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "采购包含1.50美元法棍，原文字式写7+9+1+2=19.50，应把1改成1.5；最终四周78正确。"
+    },
+    "train-5816": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "原解计算每1个百分点金额时写7500/75%=100，按通常百分数语法应为10000。意图是7500÷75=100对应每1%，再乘100；需重写百分数单位和等式，最终10000可保留。"
+    },
+    "train-5975": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "由8d−3=45应两边加3得8d=48；原解析写加4，最终d=6正确，变形说明需修正。"
+    },
+    "train-6050": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "樱桃折扣原式写10/100%×5=0.50，多了百分号，按数值语法10÷100%=10。应写(10/100)×5=0.50，最终总价540不变。"
+    },
+    "train-6158": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "末行原解析写70+40=100，标准答案110正确；文字算式与结果应统一为110。"
+    },
+    "train-6164": {
+      "flags": [
+        "incorrect_solution"
+      ],
+      "disposition_hint": "hold",
+      "reason": "题面把平面三角形内角和设为250度，与180度的几何约束冲突；两给定角为60和120，合计已为180，亦不能组成另有正角的三角形。原70只是按矛盾前提做减法，不能作为有效三角形题答案。",
+      "category": "G08",
+      "subcategory": "三角形角关系与矛盾条件",
+      "level": "extension"
+    },
+    "train-6257": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "由1148次赛季纪录估计十年应1148×10=11480；原文字误写1248×10=11480。最终27正确，数值基数需统一。"
+    },
+    "train-6366": {
+      "flags": [
+        "incorrect_solution"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "第一列车200英里、50mph，应4小时；原解偷换40mph并得5小时。正确平均(4+3)/2=3.5，按题设取最近整数仍为4；最终答案碰巧相同，原解释必须重写。"
+    },
+    "train-6540": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "题设第四和第五供应商均分剩余，问题却重复写fourth and fourth；原解析算第四与第五各325000正确，题问需要改正对象。"
+    },
+    "train-6591": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "原解文字说从第1–2周减第3–4周，实际等式却正确为96−70，属于减数/被减数叙述反向；应写用第3–4周总时长减第1–2周，最终26小时正确。"
+    },
+    "train-6620": {
+      "flags": [
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "hold",
+      "reason": "400头牛每车20需20次去程；完成最后一次送达时通常只经历19次回程，共39小时。原40按最后仍返回原处计算，题面未说明最后是否回程，应明确终点后再判分。"
+    },
+    "train-6714": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "3磅蓝莓、每包8盎司，应3÷(8/16)=6包，原解写3×(8/16)=6；应改除法或3×16÷8，最终费用18正确。"
+    },
+    "train-6761": {
+      "flags": [
+        "solution_typo",
+        "ambiguous_wording"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "末解写4+4+6=18，正确和为14且标准答案也是14；Luke相对his sisters的倍数基数还应明确为每位姐妹，避免被理解为姐妹合计。"
+    },
+    "train-6813": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "做52条手环、送8条，应52−8=44；原文字写50−8=44而算术注记正确。应统一为52，最终8条正确。"
+    },
+    "train-6843": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "已占座位原解写500/2/5=200，按平排左结合除法结果为50；应500×(2/5)=200。破损座位应同样写500×(1/10)=50，避免靠连除巧合得50的误导式；在已占座位与坏座位不重叠的通常约定下答案250。"
+    },
+    "train-6959": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "由a+5a−6=150应两边加6，原解文字写加2但结果变成156；最终a=26正确，变形说明需修正。"
+    },
+    "train-7179": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "1152/1536应为0.75，原解析写成0.5，下一步却使用正确0.75；应修正每平方英寸单价，最终差额1不变。"
+    },
+    "train-7271": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "13200秒换算分钟，原文字写13,2000/60=220，多了一个0；注记13200/60=220和最终220正确。"
+    },
+    "train-7275": {
+      "flags": [
+        "insufficient_conditions"
+      ],
+      "disposition_hint": "hold",
+      "reason": "仅给会Excel的20%和只做白班的70%，不能推出会Excel与愿做夜班的交集；两特征未说明独立。原解直接20%×30%=6%，条件不足。",
+      "level": "extension"
+    },
+    "train-7357": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "应扣除禁配的组合数为3种奶酪×1种指定肉×1种指定蔬菜=3；原解析写1 cheese+1 meat+1 vegetable=3，把乘法计数写成加法，最终57虽正确但原理错误。"
+    },
+    "train-7412": {
+      "flags": [
+        "solution_typo"
+      ],
+      "disposition_hint": "adapt",
+      "reason": "原解析先求每1%的高度1.2英寸，随后写1.2×100%=120英寸；此处需乘100个百分点，数值式应1.2×100=120。应把每1%的量和百分数乘法区别写清，最终10英尺正确。"
+    },
+    "train-7445": {
+      "flags": [
+        "incorrect_solution"
+      ],
+      "disposition_hint": "hold",
+      "reason": "每隔一天演出、持续两周，应7场，每场5+5+10=20分钟，总140。原解忽略隔日条件算14场，又写14×20=140，标准答案却280；需重写推导和答案。",
+      "source_answer": "280",
+      "suggested_answer": "140",
+      "category": "G07",
+      "subcategory": "周期频次与累计时长",
+      "level": "I1",
+      "reasoning_tags": [
+        "隔日频次与边界"
+      ]
+    }
+  }
+}

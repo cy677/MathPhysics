@@ -1,0 +1,20 @@
+{
+  "schema_version": 2,
+  "audit_date": "2026-10-05",
+  "baseline_commit": "84fa590952c829b959177b0d93d9ce9b1031436a",
+  "source_counts": {"asdiv": 2305, "svamp": 1000, "gsm8k": 8792},
+  "representative_limit_per_cell": 3,
+  "maximum_questions_per_story_family": 5,
+  "maximum_same_story_and_learning_target": 1,
+  "gsm8k_representative_splits": ["train"],
+  "publish_allowed": false,
+  "notes": [
+    "覆盖单元由教学类别、子类、默认层级、数值域和推理标签组成，不把相同算式直接判为重复。",
+    "每个覆盖单元最多推荐三个故事家族，同一家族同一学习目标最多一道；每个故事家族合计最多五道。",
+    "同一学习目标按文本推定的semantic_variant_id与numeric_domain共同区分；覆盖单元的三家族上限不等于每单元最多三道题。",
+    "上限属于本项目的选题组织规则，不是数据集的官方标准，也不是独立母题数量的证明。",
+    "全部源记录保留；未进入代表清单的合格候选作为备用，不因超过配额判为错题。",
+    "GSM8K test 保留原始划分并进入来源测试集备用区；代表清单先使用 train。",
+    "本次交付为复核和分类台账；所有候选仍需中文化与发布审核。"
+  ]
+}

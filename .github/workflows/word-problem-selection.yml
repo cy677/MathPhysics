@@ -9,6 +9,9 @@ on:
       - 'question-banks/SOURCE_LOCK.json'
 permissions:
   contents: write
+concurrency:
+  group: word-problem-selection-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,34 +20,21 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - name: Fetch locked upstream datasets
         run: |
-          python - <<'PY'
-          import json,pathlib,urllib.request
-          lock=json.load(open('question-banks/SOURCE_LOCK.json',encoding='utf8'))
-          paths={
-            'asdiv':['dataset/ASDiv.xml'],
-            'svamp':['SVAMP.json'],
-            'gsm8k':['grade_school_math/data/train.jsonl','grade_school_math/data/test.jsonl']
-          }
-          root=pathlib.Path('.selection-sources')
-          for s in lock['sources']:
-            for p in paths[s['bank']]:
-              url=f"https://raw.githubusercontent.com/{s['repository']}/{s['commit']}/{p}"
-              dest=root/s['bank']/p;dest.parent.mkdir(parents=True,exist_ok=True)
-              req=urllib.request.Request(url,headers={'User-Agent':'MathPhysics-question-bank-selection'})
-              dest.write_bytes(urllib.request.urlopen(req,timeout=60).read())
-          PY
+          python question-banks/selection/fetch_sources.py --source-root .selection-sources
       - name: Build all selections and verify
         run: |
           rm -rf question-banks/curated
           python question-banks/selection/build.py --source-root .selection-sources --output question-banks/curated
-          python -m unittest question-banks/selection/test_selection.py -v
+          python -m unittest discover -s question-banks/selection -p 'test*.py' -v
+          python question-banks/selection/validate_audit.py --source-root .selection-sources
+          python question-banks/selection/build.py --source-root .selection-sources --output question-banks/curated --check
       - name: Commit generated selection ledger
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add question-banks/curated
           if ! git diff --cached --quiet; then
-            git commit -m "data(question-banks): commit full ASDiv SVAMP GSM8K selection"
+            git commit -m "data(question-banks): regenerate audited classifications and representatives"
             git push
           fi
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

@@ -1,0 +1,808 @@
+{
+  "nluds-0016": {
+    "assistant_reviewed": true,
+    "reason": "题面问拿走部分之前的橘子数，应按初始量未知分类；虽用加法，属于逆向数量关系。",
+    "flags": [],
+    "disposition_hint": "keep",
+    "issue_severity": "confirmed",
+    "category": "A02",
+    "subcategory": "已知变化与结果反求初始量",
+    "level": "I1",
+    "reasoning_tags": [
+      "initial_unknown"
+    ]
+  },
+  "nluds-0030": {
+    "assistant_reviewed": true,
+    "reason": "两人的钱分别为32与19美分，选择Mrs. Hilt正确；应保留对象选择答案并补充硬币面值。",
+    "flags": [],
+    "disposition_hint": "adapt",
+    "issue_severity": "confirmed",
+    "category": "A16",
+    "subcategory": "两方案货币总额比较",
+    "level": "I1",
+    "answer_type": "object_choice"
+  },
+  "nluds-0076": {
+    "assistant_reviewed": true,
+    "reason": "拥有4个再得到5个共9个，少于所需10个；源答案Yes与题意和源不等式相矛盾。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-0171": {
+    "assistant_reviewed": true,
+    "reason": "两枚一角币共20美分，3枚一分币共3美分，二者不相等；源答案Yes错误。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-0762": {
+    "assistant_reviewed": true,
+    "reason": "题面同时出现装满的箱子与容纳全部粉笔两种目标；193个装满与194个箱子足够应区分。",
+    "flags": [
+      "Q06"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "confirmed"
+  },
+  "nluds-0778": {
+    "assistant_reviewed": true,
+    "reason": "86名学生、每车9座，应至少10辆；源类别Floor-Division及答案9会使5名学生无座。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed",
+    "category": "A13",
+    "subcategory": "进一保证全部容纳",
+    "reasoning_tags": [
+      "ceiling_decision"
+    ]
+  },
+  "nluds-0867": {
+    "assistant_reviewed": true,
+    "reason": "公倍数40表示每种物品的最小件数；按每包20、10、8件应为2、4、5包，源答案40 bags混淆件数与包数，且题面未明确最小。",
+    "flags": [
+      "Q01",
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-0869": {
+    "assistant_reviewed": true,
+    "reason": "题目要求每类各买多少包，正确对应为杯子2包、盘子1包；源答案3包只给总包数。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed",
+    "answer_type": "multiple_values"
+  },
+  "nluds-0874": {
+    "assistant_reviewed": true,
+    "reason": "满月周期被设为固定30天，中文改编应明确这是题目采用的简化假设，或换成严格周期事件。",
+    "flags": [
+      "Q07"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "confirmed"
+  },
+  "nluds-0886": {
+    "assistant_reviewed": true,
+    "reason": "只给每天分别读18、26页而未给读了几天，问题却问总共多读多少页；8页只能对应一天的差额。",
+    "flags": [
+      "Q01"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-0906": {
+    "assistant_reviewed": true,
+    "reason": "源算式26/(8−3)后取商虽偶然得到5天，却未表达最后一次到顶不再下滑；适用通式应按最后一次攀升单独处理，不能沿用去尾母题。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed",
+    "category": "A09",
+    "subcategory": "周期过程与最后一步边界",
+    "level": "I2",
+    "reasoning_tags": [
+      "terminal_step_exception"
+    ]
+  },
+  "nluds-0912": {
+    "assistant_reviewed": true,
+    "reason": "题面只说两人的钱足够买26美元物品，未说恰好足够；源方程直接令总额等于26，缺少等号条件。",
+    "flags": [
+      "Q01"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-0984": {
+    "assistant_reviewed": true,
+    "reason": "三人年龄总和减去两人的已知年龄，所求是部分量，题面没有初始状态与时间变化。",
+    "flags": [],
+    "disposition_hint": "keep",
+    "issue_severity": "confirmed",
+    "category": "A01",
+    "subcategory": "已知总量求部分量",
+    "level": "C2",
+    "knowledge_tags": [
+      "age"
+    ]
+  },
+  "nluds-0990": {
+    "assistant_reviewed": true,
+    "reason": "先由薯片数量求少8个的热狗数，再求多12杯的饮料数，是两次加法比较；不是求时序变化量。",
+    "flags": [],
+    "disposition_hint": "keep",
+    "issue_severity": "confirmed",
+    "category": "A06",
+    "subcategory": "串联两个加法比较关系",
+    "level": "I1"
+  },
+  "nluds-1079": {
+    "assistant_reviewed": true,
+    "reason": "给定数列14、23、32、41、50每次增加9，第六项应59；源答案50重复了第五项。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1111": {
+    "assistant_reviewed": true,
+    "reason": "题面使用菲律宾与日本的真实地名及跨日时差，真实时区方向需外部官方资料核准；在核准前应改为明确约定时差的虚构地点或暂存。",
+    "flags": [
+      "Q04",
+      "Q07"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "suspected"
+  },
+  "nluds-1198": {
+    "assistant_reviewed": true,
+    "reason": "等量分配20件男款与8件女款时，原表述可能被理解成每桌男款件数等于女款件数；应明确每一款在不同桌之间相同。",
+    "flags": [
+      "Q06"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "suspected"
+  },
+  "nluds-1208": {
+    "assistant_reviewed": true,
+    "reason": "题面追求每盘鸡肉件数最多，源答案16却是相同配方下盘数最多；优化目标与GCD的所求量相反。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1209": {
+    "assistant_reviewed": true,
+    "reason": "只说90与72英寸木料切成等长小段，未规定长度最大且不余料；18只是众多可能长度之一。",
+    "flags": [
+      "Q01"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1214": {
+    "assistant_reviewed": true,
+    "reason": "要求每盒饼干尽可能多，却用GCD给6盒，这是盒数最多的目标；每盒最多与盒数最多相反。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1305": {
+    "assistant_reviewed": true,
+    "reason": "按所列连续奇数年龄，前两人年龄和等于第三人5年前年龄会导出负年龄；源公式把减5放到等式另一侧，给出的7、9、11不满足题意。",
+    "flags": [
+      "Q02",
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1307": {
+    "assistant_reviewed": true,
+    "reason": "Scott比Allen大10岁；Scott五年后为Allen现在的2倍，得到Allen15、Scott25；源公式改成Allen五年后的年龄，答案5、15错误。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1316": {
+    "assistant_reviewed": true,
+    "reason": "从32减去未知数后得到倒置数字23，应为32−x=23、x=9；源式x−32=23及答案55方向错误。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1333": {
+    "assistant_reviewed": true,
+    "reason": "分母比分子大3且二者和7，分子2、分母5，分数应2/5；源答案为倒置的5/2。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1342": {
+    "assistant_reviewed": true,
+    "reason": "只给六边形周长42，未给正六边形或六边等长条件，不能推出每边7。",
+    "flags": [
+      "Q01"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1343": {
+    "assistant_reviewed": true,
+    "reason": "等腰三角形的一个角为54°，未说明是顶角还是底角；底角可能54°或63°，答案不唯一。",
+    "flags": [
+      "Q01"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1350": {
+    "assistant_reviewed": true,
+    "reason": "题面给矩形长76、宽42，拼接边长42的等边三角形，外周长应2×76+3×42=278；源式把76与42错当矩形和三角形周长，答案90不符。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1408": {
+    "assistant_reviewed": true,
+    "reason": "题意对应x−5=3(y−5)、x+10=2(y+10)，答案50和20满足题意；源公式分别错写x+5和x−5，需隔离错误解析。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1410": {
+    "assistant_reviewed": true,
+    "reason": "按题面会得到父亲12岁、儿子4岁，虽然代数可解，人物年龄关系不适宜直接作为小学生活情境，应更换关系与数据。",
+    "flags": [
+      "Q07"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1411": {
+    "assistant_reviewed": true,
+    "reason": "五年后两名子女年龄之和增加10而非5，父亲年龄应45；源方程只给子女总和加5并得到15。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1413": {
+    "assistant_reviewed": true,
+    "reason": "十五年后5名子女年龄和增加75，父亲也增加15；应有x+75=2(x+15)，父亲45岁，源答案75漏算父亲变老。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1414": {
+    "assistant_reviewed": true,
+    "reason": "十年前的年龄条件未在源方程中体现，且问题要求三人年龄却只答21；按题意父亲46、两个儿子15与17。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1418": {
+    "assistant_reviewed": true,
+    "reason": "Anna与Ben只被说明相差3岁，未说明谁年长；结合另外两个人的倍数关系，两组年龄19/16与21/24都可满足。",
+    "flags": [
+      "Q01"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1427": {
+    "assistant_reviewed": true,
+    "reason": "问题按水流速度、静水船速的顺序提问，而源答案8、3对应静水船速8、水流3；多项答案必须显式标注对象，不能按原顺序配对。",
+    "flags": [
+      "Q06"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "confirmed",
+    "answer_type": "multiple_values"
+  },
+  "nluds-1436": {
+    "assistant_reviewed": true,
+    "reason": "问题要求下坡、上坡时长，分别为10、5小时；源答案5、10顺序相反，源变量还把时长错标成距离。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1440": {
+    "assistant_reviewed": true,
+    "reason": "两次购买分别涉及不同数量的两类物品，源解为一般二元线性方程组；本轮未确认符合小学范围的算术化解法，独立拓展复核。",
+    "flags": [
+      "Q05"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed",
+    "category": "EXT",
+    "subcategory": "一般联立未知单价",
+    "level": "extension"
+  },
+  "nluds-1458": {
+    "assistant_reviewed": true,
+    "reason": "题面第三角比第一角小40°，应得第一角55°、第二角110°、第三角15°；源式改成比第二角小40°，答案44/88/48不满足题意。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1479": {
+    "assistant_reviewed": true,
+    "reason": "源变量定义x为Aaron、y为Beth，题意应x=7y，源公式反写7x=y；未标对象的76、532也需重建对应关系。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1482": {
+    "assistant_reviewed": true,
+    "reason": "2 times longer可能被理解为长两倍或是两倍长；改编需明确较长段等于较短段的2倍。",
+    "flags": [
+      "Q06"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "suspected"
+  },
+  "nluds-1491": {
+    "assistant_reviewed": true,
+    "reason": "围栏应比较周长：Molly40米、Ted42米，Ted答案正确；源公式却比较96与90平方米的面积，不能用作解题依据。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed",
+    "category": "A16",
+    "subcategory": "两方案周长比较",
+    "level": "I1"
+  },
+  "nluds-1508": {
+    "assistant_reviewed": true,
+    "reason": "用饼的面积比推数量隐含所有煎饼厚度相同且原料无损耗；改编时需明示相同厚度这一几何模型条件。",
+    "flags": [
+      "Q06"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "suspected"
+  },
+  "nluds-1521": {
+    "assistant_reviewed": true,
+    "reason": "题面直径4英寸，半径应2英寸；源答案把单位误标为厘米。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1542": {
+    "assistant_reviewed": true,
+    "reason": "153品脱液体平均分到5个杯子可连续分配，每杯30.6品脱；题面没有只取整品脱的要求，源去尾答案30错误。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed",
+    "category": "A04",
+    "subcategory": "连续量平均分求每份量",
+    "level": "C2",
+    "knowledge_tags": [
+      "decimal"
+    ]
+  },
+  "nluds-1643": {
+    "assistant_reviewed": true,
+    "reason": "题面长宽以英里为单位，面积应56平方英里；源答案单位误写平方米。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-2027": {
+    "assistant_reviewed": true,
+    "reason": "两人的轨道每块8与18英寸，最短等长为72英寸，应分别用9块与4块；源答案72块把长度当块数，题面也应明确最短或最少。",
+    "flags": [
+      "Q01",
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed",
+    "answer_type": "multiple_values"
+  },
+  "nluds-2028": {
+    "assistant_reviewed": true,
+    "reason": "题面奖品为100美元钞票和音乐会票，问句却突然改为优惠券和音乐会票，应统一奖品指代。",
+    "flags": [
+      "Q06"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "confirmed"
+  },
+  "nluds-2038": {
+    "assistant_reviewed": true,
+    "reason": "杯6个/包、盘8个/包，最小共同件数24；问题问盘子包数，应24÷8=3包，源答案24包错误。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-2061": {
+    "assistant_reviewed": true,
+    "reason": "原文给18包铅笔、14包钢笔，却没有说明每包件数；源解把包数当成每包件数计算LCM126，条件不足。",
+    "flags": [
+      "Q01",
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-2078": {
+    "assistant_reviewed": true,
+    "reason": "问题问每名学生最多分到多少饼干和披萨，却用GCD得20并标为slices；20是最多可分组数，和问题所求不一致。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-2083": {
+    "assistant_reviewed": true,
+    "reason": "只给两车同一时刻出发，没有明确同一位置与同一方向；再次并排的时刻依赖这些条件，不能直接确认LCM168为唯一答案。",
+    "flags": [
+      "Q01",
+      "Q06"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-2085": {
+    "assistant_reviewed": true,
+    "reason": "16×24英寸棋盘的最大正方形瓷砖边长为8英寸，源答案8 tiles把长度与片数混淆，实际铺满需6片。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-2092": {
+    "assistant_reviewed": true,
+    "reason": "题面只问能做多少花束而未说花束配比相同并且数量最多，GCD得到4需要补充这些约束。",
+    "flags": [
+      "Q01"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-2265": {
+    "assistant_reviewed": true,
+    "reason": "问按每箱12盒装箱并报额外散盒，45盒应3箱余9盒；源答案4箱对应另一种全部用箱容纳的问法。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed",
+    "answer_type": "quotient_remainder"
+  },
+  "nluds-2269": {
+    "assistant_reviewed": true,
+    "reason": "问每箱6盒并报额外散盒，9盒应1箱余3盒；源答案2箱没有回答散盒数量。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed",
+    "answer_type": "quotient_remainder"
+  },
+  "nluds-2267": {
+    "assistant_reviewed": true,
+    "reason": "分给朋友后本人吃掉余下9颗，问句each person可能包含本人；应明确问每位朋友所得，避免把不同分配量当成人人相等。",
+    "flags": [
+      "Q06"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "suspected"
+  },
+  "nluds-2270": {
+    "assistant_reviewed": true,
+    "reason": "分给朋友后本人吃掉余下2颗，问句each person可能包含本人；应明确问每位朋友所得，避免把不同分配量当成人人相等。",
+    "flags": [
+      "Q06"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "suspected"
+  },
+  "nluds-2275": {
+    "assistant_reviewed": true,
+    "reason": "分给朋友后本人吃掉余下1颗，问句each person可能包含本人；应明确问每位朋友所得，避免把不同分配量当成人人相等。",
+    "flags": [
+      "Q06"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "suspected"
+  },
+  "nluds-1556": {
+    "assistant_reviewed": true,
+    "reason": "题文每天生产361支蜡笔，每盒4支，完整盒数90虽正确，但源公式误写360/4=90 r0；应保留余1，且源Common-Division标签应归去尾决策。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed",
+    "category": "A13",
+    "subcategory": "去尾求完整份数",
+    "level": "I1",
+    "reasoning_tags": [
+      "floor_decision"
+    ]
+  },
+  "nluds-1160": {
+    "assistant_reviewed": true,
+    "reason": "从6:00到7:20为80分钟，即4/3小时；源答案1.33小时使用近似小数但题面没有给定精度，需明确可接受分数与小数容差。",
+    "flags": [
+      "Q06"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1398": {
+    "assistant_reviewed": true,
+    "reason": "十年前25岁求现在年龄只是一次正向加法；源Algebra-1标签不应使其自动进入提高或拓展。",
+    "flags": [],
+    "disposition_hint": "keep",
+    "issue_severity": "confirmed",
+    "category": "A02",
+    "subcategory": "已知初始量与变化求最终量",
+    "level": "C1",
+    "knowledge_tags": [
+      "age"
+    ],
+    "reasoning_tags": [
+      "final_unknown"
+    ]
+  },
+  "nluds-1397": {
+    "assistant_reviewed": true,
+    "reason": "吃掉5根后还剩7根，反求最初购买数量，适用初始量未知的加法逆推，无需按代数标签另设难题。",
+    "flags": [],
+    "disposition_hint": "keep",
+    "issue_severity": "confirmed",
+    "category": "A02",
+    "subcategory": "已知变化与结果反求初始量",
+    "level": "I1",
+    "reasoning_tags": [
+      "initial_unknown"
+    ]
+  },
+  "nluds-0881": {
+    "assistant_reviewed": true,
+    "reason": "19、23、34、38的总和减去剩余的76即可求移走的38，核心是总量与缺失部分，不需要数位或额外先修。",
+    "flags": [],
+    "disposition_hint": "keep",
+    "issue_severity": "confirmed",
+    "category": "A01",
+    "subcategory": "已知总量求部分量",
+    "level": "C2"
+  },
+  "nluds-1507": {
+    "assistant_reviewed": true,
+    "reason": "按面积收费共250美元，按每片0.60美元收费共240美元，差10美元；源公式和答案把美元误标为美分。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1143": {
+    "assistant_reviewed": true,
+    "reason": "题面直接给动物园15人与水族馆22人，答案22:15正确，但源公式引入无来源的26−4=22，疑为相邻题解析混入。",
+    "flags": [
+      "Q03"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-0947": {
+    "assistant_reviewed": true,
+    "reason": "从获胜/失败的数量或比推全部对局数，隐含没有平局；题面未排除平局，所求总数或失败数不唯一，需补充该条件。",
+    "flags": [
+      "Q01"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1659": {
+    "assistant_reviewed": true,
+    "reason": "从获胜/失败的数量或比推全部对局数，隐含没有平局；题面未排除平局，所求总数或失败数不唯一，需补充该条件。",
+    "flags": [
+      "Q01"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1677": {
+    "assistant_reviewed": true,
+    "reason": "从获胜/失败的数量或比推全部对局数，隐含没有平局；题面未排除平局，所求总数或失败数不唯一，需补充该条件。",
+    "flags": [
+      "Q01"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1686": {
+    "assistant_reviewed": true,
+    "reason": "从获胜/失败的数量或比推全部对局数，隐含没有平局；题面未排除平局，所求总数或失败数不唯一，需补充该条件。",
+    "flags": [
+      "Q01"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1663": {
+    "assistant_reviewed": true,
+    "reason": "原文只说Victor获胜场数的比为9:5，未明确比的另一项；应补成Victor与朋友各自获胜场数之比。",
+    "flags": [
+      "Q06"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "confirmed"
+  },
+  "nluds-1120": {
+    "assistant_reviewed": true,
+    "reason": "由影长比例反推树高需要同一时刻、同样日照及适当的地面/直立条件；题面未明示，中文改编应补齐相似关系的情境假设。",
+    "flags": [
+      "Q04",
+      "Q06"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "suspected"
+  },
+  "nluds-0875": {
+    "assistant_reviewed": true,
+    "reason": "魔法盒每天把硬币枚数翻倍，核心是连续倍增，并不使用硬币面值；按星期推定四次倍增还需明确首次翻倍发生时点。连续倍增属原方案条件性规律专题。",
+    "flags": [
+      "Q06",
+      "Q05"
+    ],
+    "disposition_hint": "hold",
+    "issue_severity": "suspected",
+    "category": "EXT",
+    "subcategory": "连续倍增与周期边界",
+    "level": "extension",
+    "knowledge_tags": [
+      "number_pattern"
+    ],
+    "reasoning_tags": [
+      "repeated_doubling"
+    ]
+  },
+  "nluds-0155": {
+    "assistant_reviewed": true,
+    "reason": "求17美分付款的最少硬币数需要给定可用面值，题面未列面值；不能把隐含10/5/1的贪心解直接当成唯一规则。",
+    "flags": [
+      "Q04"
+    ],
+    "disposition_hint": "adapt",
+    "issue_severity": "confirmed",
+    "category": "A08",
+    "subcategory": "货币面值换算与最少枚数",
+    "level": "I2",
+    "reasoning_tags": [
+      "discrete_optimization"
+    ]
+  },
+  "nluds-0654": {
+    "assistant_reviewed": true,
+    "reason": "两人各吃1个松饼和2杯水果、所有单价均2美元，可先数6份再乘2；源解重复列4个乘式不代表复杂推理。",
+    "flags": [],
+    "disposition_hint": "keep",
+    "issue_severity": "confirmed",
+    "category": "A07",
+    "subcategory": "同单价物品先合并数量求总价",
+    "level": "C2",
+    "reasoning_tags": [
+      "combine_equal_price_items"
+    ]
+  },
+  "nluds-1434": {
+    "assistant_reviewed": true,
+    "reason": "需要区分半价基本票价与全额预订费，再根据两组总价反推，属于两个计费构成之间的关系。",
+    "flags": [],
+    "disposition_hint": "keep",
+    "issue_severity": "confirmed",
+    "category": "A07",
+    "subcategory": "基本票价与固定费用综合",
+    "level": "I2",
+    "reasoning_tags": [
+      "separate_fixed_and_variable_cost"
+    ]
+  },
+  "nluds-1034": {
+    "assistant_reviewed": true,
+    "reason": "first half of the game只是上半场这个时间标签，36分与17分直接求差，不涉及把得分取二分之一。",
+    "flags": [],
+    "disposition_hint": "keep",
+    "issue_severity": "confirmed",
+    "category": "A03",
+    "subcategory": "求相差量或比较量",
+    "level": "C1",
+    "reasoning_tags": [
+      "additive_comparison"
+    ]
+  },
+  "nluds-1032": {
+    "assistant_reviewed": true,
+    "reason": "购物前70美元、购物后剩16美元，问题问支出，属于已知初始量与最终量反求变化量，不是把已知商品价格相加。",
+    "flags": [],
+    "disposition_hint": "keep",
+    "issue_severity": "confirmed",
+    "category": "A07",
+    "subcategory": "由购物前金额与余额反求支出",
+    "level": "I1",
+    "reasoning_tags": [
+      "change_unknown"
+    ]
+  },
+  "nluds-0183": {
+    "assistant_reviewed": true,
+    "reason": "已知12:30开始并经过20分钟，直接求12:50结束且不跨整点，属于正向时刻计算；反求开始时刻才另设逆推层。",
+    "flags": [],
+    "disposition_hint": "keep",
+    "issue_severity": "confirmed",
+    "category": "A09",
+    "subcategory": "由开始时刻求结束时刻",
+    "level": "C1",
+    "reasoning_tags": [
+      "forward_time"
+    ]
+  },
+  "nluds-0084": {
+    "assistant_reviewed": true,
+    "reason": "已知头发长18个单位并直接变为2倍，使用一次18×2即可；属于正向倍增基础题。",
+    "flags": [],
+    "disposition_hint": "keep",
+    "issue_severity": "confirmed",
+    "category": "A05",
+    "subcategory": "倍数已知求比较量或基准量",
+    "level": "C1",
+    "reasoning_tags": [
+      "direct_multiplicative_quantity"
+    ]
+  }
+}
