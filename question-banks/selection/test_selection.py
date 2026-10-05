@@ -1,6 +1,8 @@
 """Regression tests for source integrity, reviewed defects and selection rules."""
 import copy
 import json
+import os
+import subprocess
 from collections import Counter
 from fractions import Fraction
 from pathlib import Path
@@ -182,6 +184,24 @@ class LedgerTests(unittest.TestCase):
 
 
 class AlgorithmSafetyTests(unittest.TestCase):
+    def test_quality_evidence_is_stable_across_hash_seeds(self):
+        body = (
+            "in the crazy silly school series there are 8 different books and 5 different movies. "
+            "he read 19 of the movies and watched 16 of the books."
+        )
+        program = (
+            "import json\nfrom svamp_review import _quality_rules\n"
+            f"print(json.dumps(_quality_rules({body!r}, 'how many books?', '8', 8), ensure_ascii=False))\n"
+        )
+        outputs = [subprocess.check_output(
+            [sys.executable, "-c", program], cwd=HERE,
+            env={**os.environ, "PYTHONHASHSEED": seed}, text=True,
+        ) for seed in ["0", "1"]]
+        self.assertEqual(outputs[0], outputs[1])
+        notes = [finding[2] for finding in json.loads(outputs[0])]
+        self.assertTrue(any("8" in note and "books" in note for note in notes))
+        self.assertTrue(any("5" in note and "movies" in note for note in notes))
+
     def test_bounded_arithmetic_and_rejected_code(self):
         self.assertEqual(safe_arithmetic("(3/4 + 1/4) * 12"), Fraction(12))
         self.assertEqual(safe_arithmetic("12.5% * 80"), Fraction(10))

@@ -218,7 +218,7 @@ def _quality_rules(body, question, equation, answer):
     if "crazy silly school" in body:
         available = {item: int(num) for num, item in re.findall(r"(\d+) different (books|movies)", body)}
         consumed = {item: int(num) for num, item in re.findall(r"(\d+) of the (books|movies)", body)}
-        for item in available.keys() & consumed.keys():
+        for item in sorted(available.keys() & consumed.keys()):
             if consumed[item] > available[item]:
                 suspected(f"系列共有 {available[item]} 部/本 {item}，却称已读/看其中 {consumed[item]} 部/本。")
         if re.search(r"read \d+ of the movies|watched \d+ of the books", body):
