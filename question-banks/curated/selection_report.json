@@ -1,0 +1,162 @@
+{
+  "asdiv": {
+    "total": 2305,
+    "decision": {
+      "selected": 2305
+    },
+    "tier": {
+      "reinforce": 1522,
+      "advanced": 783
+    },
+    "types": {
+      "Addition": 351,
+      "Subtraction": 453,
+      "Comparison": 57,
+      "Sum": 95,
+      "TVQ-Final": 80,
+      "Multiplication": 260,
+      "Common-Division": 224,
+      "Number-Operation": 2,
+      "Sequential-Operation": 37,
+      "TVQ-Change": 20,
+      "Surplus": 70,
+      "Floor-Division": 52,
+      "Ceil-Division": 32,
+      "Geometry": 88,
+      "UnitTrans": 4,
+      "TVQ-Initial": 19,
+      "Difference": 59,
+      "Ratio": 94,
+      "LCM": 65,
+      "GCD": 73,
+      "Set-Operation": 15,
+      "Algebra-1": 71,
+      "Number-Pattern": 1,
+      "Algebra-2": 83
+    },
+    "tags": {
+      "fraction": 117,
+      "money": 512,
+      "rate-time": 117,
+      "ratio-multiplicative": 188,
+      "geometry-measure": 122,
+      "percent": 13,
+      "average": 17
+    }
+  },
+  "svamp": {
+    "total": 1000,
+    "decision": {
+      "selected": 999,
+      "review": 1
+    },
+    "tier": {
+      "reinforce": 999,
+      "review": 1
+    },
+    "types": {
+      "Subtraction": 531,
+      "Addition": 195,
+      "Multiplication": 108,
+      "Common-Division": 166
+    },
+    "tags": {
+      "percent": 3,
+      "money": 181,
+      "rate-time": 25,
+      "fraction": 4,
+      "geometry-measure": 7
+    }
+  },
+  "asdiv_svamp_selected": {
+    "total": 3304,
+    "decision": {
+      "selected": 3304
+    },
+    "tier": {
+      "reinforce": 2521,
+      "advanced": 783
+    },
+    "types": {
+      "Addition": 546,
+      "Subtraction": 983,
+      "Comparison": 57,
+      "Sum": 95,
+      "TVQ-Final": 80,
+      "Multiplication": 368,
+      "Common-Division": 390,
+      "Number-Operation": 2,
+      "Sequential-Operation": 37,
+      "TVQ-Change": 20,
+      "Surplus": 70,
+      "Floor-Division": 52,
+      "Ceil-Division": 32,
+      "Geometry": 88,
+      "UnitTrans": 4,
+      "TVQ-Initial": 19,
+      "Difference": 59,
+      "Ratio": 94,
+      "LCM": 65,
+      "GCD": 73,
+      "Set-Operation": 15,
+      "Algebra-1": 71,
+      "Number-Pattern": 1,
+      "Algebra-2": 83
+    },
+    "tags": {
+      "fraction": 121,
+      "money": 693,
+      "rate-time": 142,
+      "ratio-multiplicative": 188,
+      "geometry-measure": 129,
+      "percent": 16,
+      "average": 17
+    }
+  },
+  "gsm8k": {
+    "total": 8792,
+    "decision": {
+      "selected": 8252,
+      "review": 540
+    },
+    "tier": {
+      "reinforce": 3114,
+      "advanced": 5138,
+      "review": 540
+    },
+    "types": {
+      "multi-step-word-problem": 8792
+    },
+    "tags": {
+      "money": 3302,
+      "fraction": 2074,
+      "rate-time": 1478,
+      "ratio-multiplicative": 1602,
+      "percent": 1223,
+      "average": 332,
+      "geometry-measure": 207
+    }
+  },
+  "gsm8k_selected": {
+    "total": 8252,
+    "decision": {
+      "selected": 8252
+    },
+    "tier": {
+      "reinforce": 3114,
+      "advanced": 5138
+    },
+    "types": {
+      "multi-step-word-problem": 8252
+    },
+    "tags": {
+      "money": 3040,
+      "fraction": 1869,
+      "rate-time": 1381,
+      "ratio-multiplicative": 1466,
+      "percent": 1098,
+      "average": 300,
+      "geometry-measure": 187
+    }
+  }
+}
