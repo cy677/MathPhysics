@@ -1,162 +1,522 @@
 {
-  "asdiv": {
-    "total": 2305,
-    "decision": {
-      "selected": 2305
+  "schema_version": 2,
+  "audit_date": "2026-10-05",
+  "baseline_commit": "84fa590952c829b959177b0d93d9ce9b1031436a",
+  "source_verification": [
+    {
+      "bank": "asdiv",
+      "path": "dataset/ASDiv.xml",
+      "sha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+      "bytes": 947401,
+      "verified": true
     },
-    "tier": {
-      "reinforce": 1522,
-      "advanced": 783
+    {
+      "bank": "svamp",
+      "path": "SVAMP.json",
+      "sha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+      "bytes": 339970,
+      "verified": true
     },
-    "types": {
-      "Addition": 351,
-      "Subtraction": 453,
-      "Comparison": 57,
-      "Sum": 95,
-      "TVQ-Final": 80,
-      "Multiplication": 260,
-      "Common-Division": 224,
-      "Number-Operation": 2,
-      "Sequential-Operation": 37,
-      "TVQ-Change": 20,
-      "Surplus": 70,
-      "Floor-Division": 52,
-      "Ceil-Division": 32,
-      "Geometry": 88,
-      "UnitTrans": 4,
-      "TVQ-Initial": 19,
-      "Difference": 59,
-      "Ratio": 94,
-      "LCM": 65,
-      "GCD": 73,
-      "Set-Operation": 15,
-      "Algebra-1": 71,
-      "Number-Pattern": 1,
-      "Algebra-2": 83
+    {
+      "bank": "gsm8k",
+      "path": "grade_school_math/data/train.jsonl",
+      "sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+      "bytes": 4166206,
+      "verified": true
     },
-    "tags": {
-      "fraction": 117,
-      "money": 512,
-      "rate-time": 117,
-      "ratio-multiplicative": 188,
-      "geometry-measure": 122,
-      "percent": 13,
-      "average": 17
+    {
+      "bank": "gsm8k",
+      "path": "grade_school_math/data/test.jsonl",
+      "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+      "bytes": 749738,
+      "verified": true
+    }
+  ],
+  "population": 12097,
+  "policy": {
+    "schema_version": 2,
+    "audit_date": "2026-10-05",
+    "baseline_commit": "84fa590952c829b959177b0d93d9ce9b1031436a",
+    "source_counts": {
+      "asdiv": 2305,
+      "svamp": 1000,
+      "gsm8k": 8792
+    },
+    "representative_limit_per_cell": 3,
+    "maximum_questions_per_story_family": 5,
+    "maximum_same_story_and_learning_target": 1,
+    "gsm8k_representative_splits": [
+      "train"
+    ],
+    "publish_allowed": false,
+    "notes": [
+      "覆盖单元由教学类别、子类、默认层级、数值域和推理标签组成，不把相同算式直接判为重复。",
+      "每个覆盖单元最多推荐三个故事家族，同一家族同一学习目标最多一道；每个故事家族合计最多五道。",
+      "同一学习目标按文本推定的semantic_variant_id与numeric_domain共同区分；覆盖单元的三家族上限不等于每单元最多三道题。",
+      "上限属于本项目的选题组织规则，不是数据集的官方标准，也不是独立母题数量的证明。",
+      "全部源记录保留；未进入代表清单的合格候选作为备用，不因超过配额判为错题。",
+      "GSM8K test 保留原始划分并进入来源测试集备用区；代表清单先使用 train。",
+      "本次交付为复核和分类台账；所有候选仍需中文化与发布审核。"
+    ]
+  },
+  "banks": {
+    "asdiv": {
+      "total": 2305,
+      "decision": {
+        "adapt": 249,
+        "hold": 186,
+        "keep": 1869,
+        "reject": 1
+      },
+      "selection_role": {
+        "duplicate": 1,
+        "held": 186,
+        "representative": 424,
+        "reserve": 1694
+      },
+      "level": {
+        "C1": 865,
+        "C2": 440,
+        "I1": 739,
+        "I2": 113,
+        "extension": 148
+      },
+      "category": {
+        "A01": 446,
+        "A02": 337,
+        "A03": 129,
+        "A04": 325,
+        "A05": 31,
+        "A06": 94,
+        "A07": 174,
+        "A08": 25,
+        "A09": 17,
+        "A10": 23,
+        "A11": 104,
+        "A12": 13,
+        "A13": 153,
+        "A14": 74,
+        "A15": 156,
+        "A16": 56,
+        "EXT": 148
+      },
+      "recommended": 424,
+      "recommended_by_level": {
+        "C1": 44,
+        "C2": 132,
+        "I1": 195,
+        "I2": 53
+      },
+      "recommended_by_decision": {
+        "adapt": 40,
+        "keep": 384
+      },
+      "quality_flags": {
+        "Q01": 15,
+        "Q02": 1,
+        "Q03": 35,
+        "Q04": 14,
+        "Q05": 148,
+        "Q06": 50,
+        "Q07": 225
+      },
+      "diagnostic_flags": {},
+      "review_status": {
+        "content_reviewed_by_assistant": 78,
+        "rule_screened": 2227
+      },
+      "source_type": {
+        "Addition": 351,
+        "Algebra-1": 71,
+        "Algebra-2": 83,
+        "Ceil-Division": 32,
+        "Common-Division": 224,
+        "Comparison": 57,
+        "Difference": 59,
+        "Floor-Division": 52,
+        "GCD": 73,
+        "Geometry": 88,
+        "LCM": 65,
+        "Multiplication": 260,
+        "Number-Operation": 2,
+        "Number-Pattern": 1,
+        "Ratio": 94,
+        "Sequential-Operation": 37,
+        "Set-Operation": 15,
+        "Subtraction": 453,
+        "Sum": 95,
+        "Surplus": 70,
+        "TVQ-Change": 20,
+        "TVQ-Final": 80,
+        "TVQ-Initial": 19,
+        "UnitTrans": 4
+      },
+      "story_families": 2188,
+      "coverage_cells": 238,
+      "recommended_story_families": 422,
+      "publishable": 0
+    },
+    "svamp": {
+      "total": 1000,
+      "decision": {
+        "adapt": 77,
+        "hold": 28,
+        "keep": 776,
+        "reject": 119
+      },
+      "selection_role": {
+        "contrast_candidate": 149,
+        "held": 28,
+        "rejected": 119,
+        "representative": 44,
+        "reserve": 660
+      },
+      "level": {
+        "C1": 265,
+        "C2": 128,
+        "I1": 501,
+        "I2": 106
+      },
+      "category": {
+        "V00": 344,
+        "V01": 109,
+        "V02": 232,
+        "V03": 51,
+        "V05": 161,
+        "V07": 103
+      },
+      "recommended": 193,
+      "recommended_by_level": {
+        "C1": 40,
+        "C2": 11,
+        "I1": 120,
+        "I2": 22
+      },
+      "recommended_by_decision": {
+        "adapt": 14,
+        "keep": 179
+      },
+      "quality_flags": {
+        "Q01": 10,
+        "Q02": 120,
+        "Q03": 25,
+        "Q06": 32,
+        "Q07": 87
+      },
+      "diagnostic_flags": {},
+      "review_status": {
+        "assistant_reviewed_case": 163,
+        "rule_screened": 837
+      },
+      "source_type": {
+        "Addition": 195,
+        "Common-Division": 166,
+        "Multiplication": 108,
+        "Subtraction": 531
+      },
+      "story_families": 468,
+      "coverage_cells": 62,
+      "recommended_story_families": 116,
+      "publishable": 0
+    },
+    "gsm8k": {
+      "total": 8792,
+      "decision": {
+        "adapt": 1231,
+        "hold": 381,
+        "keep": 7180
+      },
+      "selection_role": {
+        "held": 381,
+        "representative": 781,
+        "reserve": 6368,
+        "source_test_reserve": 1262
+      },
+      "level": {
+        "C2": 6290,
+        "I1": 1582,
+        "I2": 555,
+        "extension": 365
+      },
+      "category": {
+        "G01": 577,
+        "G02": 1058,
+        "G03": 1507,
+        "G04": 1543,
+        "G05": 1016,
+        "G06": 150,
+        "G07": 1591,
+        "G08": 76,
+        "G09": 1144,
+        "G10": 99,
+        "REVIEW": 31
+      },
+      "recommended": 781,
+      "recommended_by_level": {
+        "C2": 291,
+        "I1": 301,
+        "I2": 189
+      },
+      "recommended_by_decision": {
+        "adapt": 85,
+        "keep": 696
+      },
+      "quality_flags": {
+        "Q01": 11,
+        "Q03": 57,
+        "Q05": 365,
+        "Q06": 23,
+        "Q07": 1262
+      },
+      "diagnostic_flags": {
+        "ambiguous_fraction_division_notation": 8,
+        "ambiguous_wording": 14,
+        "context_adaptation_required": 31,
+        "incorrect_solution": 10,
+        "insufficient_conditions": 11,
+        "needs_taxonomy_review": 31,
+        "out_of_primary_scope": 365,
+        "solution_arithmetic_review": 34,
+        "solution_typo": 41,
+        "unit_mismatch": 1
+      },
+      "review_status": {
+        "automated_rule_inference": 8715,
+        "content_reviewed_by_assistant": 77
+      },
+      "source_type": {
+        "multi-step-word-problem": 8792
+      },
+      "story_families": 8749,
+      "coverage_cells": 472,
+      "recommended_story_families": 778,
+      "publishable": 0
+    },
+    "foundation": {
+      "total": 3305,
+      "decision": {
+        "adapt": 326,
+        "hold": 214,
+        "keep": 2645,
+        "reject": 120
+      },
+      "selection_role": {
+        "contrast_candidate": 149,
+        "duplicate": 1,
+        "held": 214,
+        "rejected": 119,
+        "representative": 468,
+        "reserve": 2354
+      },
+      "level": {
+        "C1": 1130,
+        "C2": 568,
+        "I1": 1240,
+        "I2": 219,
+        "extension": 148
+      },
+      "category": {
+        "A01": 446,
+        "A02": 337,
+        "A03": 129,
+        "A04": 325,
+        "A05": 31,
+        "A06": 94,
+        "A07": 174,
+        "A08": 25,
+        "A09": 17,
+        "A10": 23,
+        "A11": 104,
+        "A12": 13,
+        "A13": 153,
+        "A14": 74,
+        "A15": 156,
+        "A16": 56,
+        "EXT": 148,
+        "V00": 344,
+        "V01": 109,
+        "V02": 232,
+        "V03": 51,
+        "V05": 161,
+        "V07": 103
+      },
+      "recommended": 617,
+      "recommended_by_level": {
+        "C1": 84,
+        "C2": 143,
+        "I1": 315,
+        "I2": 75
+      },
+      "recommended_by_decision": {
+        "adapt": 54,
+        "keep": 563
+      },
+      "quality_flags": {
+        "Q01": 25,
+        "Q02": 121,
+        "Q03": 60,
+        "Q04": 14,
+        "Q05": 148,
+        "Q06": 82,
+        "Q07": 312
+      },
+      "diagnostic_flags": {},
+      "review_status": {
+        "assistant_reviewed_case": 163,
+        "content_reviewed_by_assistant": 78,
+        "rule_screened": 3064
+      },
+      "source_type": {
+        "Addition": 546,
+        "Algebra-1": 71,
+        "Algebra-2": 83,
+        "Ceil-Division": 32,
+        "Common-Division": 390,
+        "Comparison": 57,
+        "Difference": 59,
+        "Floor-Division": 52,
+        "GCD": 73,
+        "Geometry": 88,
+        "LCM": 65,
+        "Multiplication": 368,
+        "Number-Operation": 2,
+        "Number-Pattern": 1,
+        "Ratio": 94,
+        "Sequential-Operation": 37,
+        "Set-Operation": 15,
+        "Subtraction": 984,
+        "Sum": 95,
+        "Surplus": 70,
+        "TVQ-Change": 20,
+        "TVQ-Final": 80,
+        "TVQ-Initial": 19,
+        "UnitTrans": 4
+      },
+      "story_families": 2601,
+      "coverage_cells": 300,
+      "recommended_story_families": 538,
+      "publishable": 0
     }
   },
-  "svamp": {
-    "total": 1000,
-    "decision": {
-      "selected": 999,
-      "review": 1
+  "deduplication": {
+    "method_version": "text-family-v2",
+    "record_count": 12097,
+    "assessment_family_count": 11332,
+    "non_singleton_family_count": 367,
+    "singleton_count": 10965,
+    "families_by_bank": {
+      "asdiv": {
+        "record_count": 2305,
+        "family_count": 2188,
+        "non_singleton_family_count": 108,
+        "members_in_non_singleton_families": 225,
+        "largest_family_size": 4
+      },
+      "gsm8k": {
+        "record_count": 8792,
+        "family_count": 8749,
+        "non_singleton_family_count": 39,
+        "members_in_non_singleton_families": 82,
+        "largest_family_size": 6
+      },
+      "svamp": {
+        "record_count": 1000,
+        "family_count": 468,
+        "non_singleton_family_count": 202,
+        "members_in_non_singleton_families": 734,
+        "largest_family_size": 20
+      }
     },
-    "tier": {
-      "reinforce": 999,
-      "review": 1
+    "family_size_distribution": {
+      "1": 10965,
+      "2": 235,
+      "3": 62,
+      "4": 24,
+      "5": 8,
+      "6": 11,
+      "7": 8,
+      "8": 7,
+      "9": 2,
+      "10": 1,
+      "11": 2,
+      "14": 4,
+      "15": 1,
+      "20": 1,
+      "21": 1
     },
-    "types": {
-      "Subtraction": 531,
-      "Addition": 195,
-      "Multiplication": 108,
-      "Common-Division": 166
+    "duplicate_group_count": 18,
+    "redundant_copies_by_type": {
+      "exact": 1,
+      "name_numeric_variant": 10,
+      "numeric_variant": 7
     },
-    "tags": {
-      "percent": 3,
-      "money": 181,
-      "rate-time": 25,
-      "fraction": 4,
-      "geometry-measure": 7
-    }
+    "redundant_copies_by_bank": {
+      "asdiv": {
+        "exact": 1,
+        "name_numeric_variant": 5,
+        "numeric_variant": 6
+      },
+      "gsm8k": {
+        "name_numeric_variant": 4,
+        "numeric_variant": 1
+      },
+      "svamp": {
+        "name_numeric_variant": 1
+      }
+    },
+    "cross_bank_family_count": 73,
+    "asdiv_svamp_family_count": 55,
+    "cross_pool_family_count": 18,
+    "gsm8k_train_test_family_count": 3,
+    "cross_pool_family_ids": [
+      "assessment-1205334e1f686137",
+      "assessment-2120b8d95a554270",
+      "assessment-26fe2cb35e52c77e",
+      "assessment-aba2cbb55304d96a",
+      "assessment-96e15c561622c4a3",
+      "assessment-07fee749ccae3c77",
+      "assessment-1d3641ac23d9053c",
+      "assessment-ceba46ccdfd85bb4",
+      "assessment-5d69534f10b878ff",
+      "assessment-1c4a98170d7e94c1",
+      "assessment-8fe1072c274c4158",
+      "assessment-cdf5371e165c0ac4",
+      "assessment-8fe82af53de37dae",
+      "assessment-e187995b15c79d31",
+      "assessment-2817b342b4f5cd20",
+      "assessment-b89fdd05848bab44",
+      "assessment-c3447a658c4cae4a",
+      "assessment-cc0a2697252d8919"
+    ],
+    "gsm8k_train_test_family_ids": [
+      "assessment-cdf5371e165c0ac4",
+      "assessment-49366ac44a3e2187",
+      "assessment-0f03544746113fb7"
+    ],
+    "exact_text_answer_conflicts": [],
+    "candidate_search": {
+      "max_posting_length": 128,
+      "rarest_shingles_per_body": 10,
+      "max_candidates_per_body": 48,
+      "candidate_pairs": 7879,
+      "anchor_comparisons": 7145,
+      "body_atom_count": 11615,
+      "clustering_order": "bank-asdiv-svamp-gsm8k_then_train-test_then_numeric-source-id",
+      "preference_affects_clustering": false
+    },
+    "limitations": [
+      "Families are inferred from lexical evidence; unverified source lineage remains unknown.",
+      "Bounded lexical search favours precision and can miss extensively rewritten paraphrases.",
+      "Semantic variants are retained; matching operators or categories alone are never duplicate evidence.",
+      "GSM8K has separate duplicate groups; shared assessment families only disclose overlap."
+    ]
   },
-  "asdiv_svamp_selected": {
-    "total": 3304,
-    "decision": {
-      "selected": 3304
-    },
-    "tier": {
-      "reinforce": 2521,
-      "advanced": 783
-    },
-    "types": {
-      "Addition": 546,
-      "Subtraction": 983,
-      "Comparison": 57,
-      "Sum": 95,
-      "TVQ-Final": 80,
-      "Multiplication": 368,
-      "Common-Division": 390,
-      "Number-Operation": 2,
-      "Sequential-Operation": 37,
-      "TVQ-Change": 20,
-      "Surplus": 70,
-      "Floor-Division": 52,
-      "Ceil-Division": 32,
-      "Geometry": 88,
-      "UnitTrans": 4,
-      "TVQ-Initial": 19,
-      "Difference": 59,
-      "Ratio": 94,
-      "LCM": 65,
-      "GCD": 73,
-      "Set-Operation": 15,
-      "Algebra-1": 71,
-      "Number-Pattern": 1,
-      "Algebra-2": 83
-    },
-    "tags": {
-      "fraction": 121,
-      "money": 693,
-      "rate-time": 142,
-      "ratio-multiplicative": 188,
-      "geometry-measure": 129,
-      "percent": 16,
-      "average": 17
-    }
-  },
-  "gsm8k": {
-    "total": 8792,
-    "decision": {
-      "selected": 8252,
-      "review": 540
-    },
-    "tier": {
-      "reinforce": 3114,
-      "advanced": 5138,
-      "review": 540
-    },
-    "types": {
-      "multi-step-word-problem": 8792
-    },
-    "tags": {
-      "money": 3302,
-      "fraction": 2074,
-      "rate-time": 1478,
-      "ratio-multiplicative": 1602,
-      "percent": 1223,
-      "average": 332,
-      "geometry-measure": 207
-    }
-  },
-  "gsm8k_selected": {
-    "total": 8252,
-    "decision": {
-      "selected": 8252
-    },
-    "tier": {
-      "reinforce": 3114,
-      "advanced": 5138
-    },
-    "types": {
-      "multi-step-word-problem": 8252
-    },
-    "tags": {
-      "money": 3040,
-      "fraction": 1869,
-      "rate-time": 1381,
-      "ratio-multiplicative": 1466,
-      "percent": 1098,
-      "average": 300,
-      "geometry-measure": 187
-    }
-  }
+  "limits": [
+    "全量规则筛查与自动分类已执行；未声称全库经人工或教师逐题审核。",
+    "明确复核案例与自动疑点分开记录；不把二者合并为原库错题率。",
+    "文本推定故事家族不等于有证据的题源血缘，也不等于全部语义近重复。",
+    "覆盖单元是组织练习的分层，不是独立数学母题数。",
+    "原始英文、中文改编、逐题讲解和儿童端发布不在本次分类台账内。",
+    "原来源test不是项目独立考核集；将来划分练习和考核须按assessment_group_id隔离。"
+  ]
 }
