@@ -1,0 +1,3114 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "foundation-A06",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0089",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-5e1966111e9b1c87",
+      "assessmentGroup": "assessment-5e1966111e9b1c87",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "海阿姨为2只狗买情人节礼物，每只狗买5块心形饼干和1套小狗鞋。按1块饼干算1件、1套鞋算1件，她一共买多少件物品？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "12",
+          "d": "1"
+        },
+        "unit": "件"
+      },
+      "intent": "明确按套计数后，求每份物品数和总份数。",
+      "hints": [
+        "每只狗需要5件饼干加1件套装。"
+      ],
+      "steps": [
+        "每只狗有5＋1＝6（件）物品。",
+        "2只狗共需6×2＝12（件）。"
+      ],
+      "commonMistakes": [
+        "将每套鞋里的单只鞋分别计数，与题目按套计1件的规则不一致。"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "几个相同量相加",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "明确鞋按“1套算1件”计数，保留源式每狗5块饼干＋1套鞋，避免把单只鞋数混入物品数。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0089",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b30af3fc3aa464cb9f80f326f094c7212fb33cb96801ea81f1906cbbb9b1a54a",
+        "recordSha256": "29929ff4afab75bcb7156a252648d7b86d8eb282421e0ff35ef4742816d3c4df",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0089",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a5a2720572d86ea0913abd5983c3ab1d527883352eac3aa03d85852f263dd161",
+        "sourceDraftSha256": "a5a2720572d86ea0913abd5983c3ab1d527883352eac3aa03d85852f263dd161",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "889d4dcc15c441cf5fb76b23277a6890be247b2d838a09363ba279df5f0b8124"
+      },
+      "contentSha256": "889d4dcc15c441cf5fb76b23277a6890be247b2d838a09363ba279df5f0b8124"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0495",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-654acabdcacd6ad6",
+      "assessmentGroup": "assessment-654acabdcacd6ad6",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "她为孤儿院的孩子烤了53个柠檬纸杯蛋糕，留下2个在家，其余全部装盒送出，每盒3个。一共送出了多少盒？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "17",
+          "d": "1"
+        },
+        "unit": "盒"
+      },
+      "intent": "先求送出数量，再按每盒数量求盒数。",
+      "hints": [
+        "先把留下的2个扣除。"
+      ],
+      "steps": [
+        "送出蛋糕53－2＝51（个）。",
+        "每盒3个，共51÷3＝17（盒）。"
+      ],
+      "commonMistakes": [
+        "直接将53除以3",
+        "把2个留在家当成2盒。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0495",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "261a67e10fd87fce93a0ffed125aaa31aff0abcf8e466f8837e2e16e5cfc356a",
+        "recordSha256": "f04bdccbec1c5975a78e87a4e6ca60dca63b682ac80fc4da6f682f8b9babee17",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0495",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0337bc4f7385a07d94936628e066ce2d67986e40101b084ab4d7bfcdea1a6a36",
+        "sourceDraftSha256": "0337bc4f7385a07d94936628e066ce2d67986e40101b084ab4d7bfcdea1a6a36",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f49a7b1c2393d068f9acb2eca7d1f131cfbd359724dabbfb82dc3a692e9537e5"
+      },
+      "contentSha256": "f49a7b1c2393d068f9acb2eca7d1f131cfbd359724dabbfb82dc3a692e9537e5"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0638",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-177c954f932229f8",
+      "assessmentGroup": "assessment-177c954f932229f8",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "老师看到过山车每5分钟接待一批学生，每批7人，各批学生不同。15分钟内一共有多少名学生乘坐？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "21",
+          "d": "1"
+        },
+        "unit": "名"
+      },
+      "intent": "先求时间内的批次，再按每批人数求总人数。",
+      "hints": [
+        "15分钟包含几个5分钟？"
+      ],
+      "steps": [
+        "批次数是15÷5＝3（批）。",
+        "共接待3×7＝21（名）学生。"
+      ],
+      "commonMistakes": [
+        "把15分钟当成15批",
+        "计入时间起点额外的一批。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "明确15分钟完成3个不重叠批次且学生不重复，避免发车起点与重复乘坐歧义，保留7×（15÷5）。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0638",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "43fdbe238f6e4bd522e1abc8f50d9a54bbac7d4adcede133a3b0100156779989",
+        "recordSha256": "3d3db384e711d2d72a9b92f94ec7806a819b78ef587870cfc8bcda338ef65301",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0638",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "00fd539f02eaac3c1809705872577d937b7e19953c1a64039dbddee7810ac35e",
+        "sourceDraftSha256": "00fd539f02eaac3c1809705872577d937b7e19953c1a64039dbddee7810ac35e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "1c063cba6a5fa5551dca91cd0e3a34f48bfdecd344d73c8a024205e17c72f4a9"
+      },
+      "contentSha256": "1c063cba6a5fa5551dca91cd0e3a34f48bfdecd344d73c8a024205e17c72f4a9"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0832",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "和差分配或多对象关系",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-63f4bfe62ebf38db",
+      "assessmentGroup": "assessment-63f4bfe62ebf38db",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "2袋相同的家庭装薯片共重800克，5袋这样的薯片和4瓶相同的果汁试饮小样共重2千克200克。一袋薯片比一瓶果汁试饮小样重多少克？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "350",
+          "d": "1"
+        },
+        "unit": "克"
+      },
+      "intent": "统一质量单位，分别求单件质量，再求差额。",
+      "hints": [
+        "先把2千克200克换成克，再扣除5袋薯片的质量。"
+      ],
+      "steps": [
+        "一袋薯片重800÷2＝400（克），2千克200克＝2200克。",
+        "4瓶果汁试饮小样共重2200－5×400＝200（克），每瓶小样200÷4＝50（克）。",
+        "一袋薯片比一瓶果汁试饮小样重400－50＝350（克）。"
+      ],
+      "commonMistakes": [
+        "没有换算千克与克",
+        "将2200克直接除以4，未扣除薯片。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "千克与克的换算"
+      ],
+      "adaptation": [
+        "补明同类物品单件质量相同，保留原质量数据。",
+        "将400克薯片明确为家庭装、50克瓶装果汁明确为试饮小样，使食品包装尺度与计算所得质量相符。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0832",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "8f7a8da713f8162fdab7f70f24bd4a79ca415a649631869d3dd89065a5cd8d6e",
+        "recordSha256": "74c5937918b0e49db431ec474776fec6da0f70b9f9ac1db5b5e75eafd4c507d0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0832",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "4a849de182dbec6a4ccd2e623d059bdfdbd7e6e349a5cb57c8aa2273ee1557ca",
+        "sourceDraftSha256": "2396aa2e8f36e5abc44050844500e44ec88402a4407dd3b81f2dbb2512ec0246",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b6b662e96620b47e6bd2180ae47de424155f49f937c438d8d7d0344666b4d366"
+      },
+      "contentSha256": "b6b662e96620b47e6bd2180ae47de424155f49f937c438d8d7d0344666b4d366"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0833",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "和差分配或多对象关系",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-38ec1de692bf0ef9",
+      "assessmentGroup": "assessment-38ec1de692bf0ef9",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "5颗相同的钻石共重100克，4颗这样的钻石和2块相同的玉石共重140克。一块玉石比一颗钻石重多少克？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "10",
+          "d": "1"
+        },
+        "unit": "克"
+      },
+      "intent": "分别求两类单件重量，再比较。",
+      "hints": [
+        "先求一颗钻石重量，再扣除4颗钻石。"
+      ],
+      "steps": [
+        "一颗钻石重100÷5＝20（克）。",
+        "2块玉石重140－4×20＝60（克），每块重60÷2＝30（克）。",
+        "玉石比钻石重30－20＝10（克）。"
+      ],
+      "commonMistakes": [
+        "把140克直接除以2",
+        "回答玉石重量30克而不是差额。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "补明同类钻石和玉石的单件质量相同，保留原题数据与重量差目标。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0833",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b7e85279debdb6e6e2b1e2dc4ba266e4f22d7319fb9f2480d649f7fd6bbd90d4",
+        "recordSha256": "435159aa72e2221815a4018bcef3d0e8769a21c1b5601226ce93370a84d4b85a",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0833",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b22b3c5d59d91d9e9625289fd335b34181a12d9ff6b95071783bd5fa1feaf8d0",
+        "sourceDraftSha256": "b22b3c5d59d91d9e9625289fd335b34181a12d9ff6b95071783bd5fa1feaf8d0",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c6a018db7257ec65820486620a3b6a9b751b8f0d0e0308da053fd78f5a831ce4"
+      },
+      "contentSha256": "c6a018db7257ec65820486620a3b6a9b751b8f0d0e0308da053fd78f5a831ce4"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0836",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "和差分配或多对象关系",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-45b5b4fa599835ee",
+      "assessmentGroup": "assessment-45b5b4fa599835ee",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "5只体重相同的狐狸共重25千克，3只这样的狐狸和5只体重相同的狗共重65千克。一只狗比一只狐狸重多少千克？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "千克"
+      },
+      "intent": "根据合计重量求两类单体重量，再求差。",
+      "hints": [
+        "先从25千克求一只狐狸的重量。"
+      ],
+      "steps": [
+        "一只狐狸重25÷5＝5（千克）。",
+        "5只狗重65－3×5＝50（千克），每只狗重50÷5＝10（千克）。",
+        "一只狗比一只狐狸重10－5＝5（千克）。"
+      ],
+      "commonMistakes": [
+        "将65千克按8只动物平均分",
+        "回答狗的体重而不是重量差。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "明确同类动物体重相同，补足原题用相同单体重量计算的条件。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0836",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ff57bfd1ace2ab95f4cfd340e0e50d8e43b1785df5c346ec3cfd008739712406",
+        "recordSha256": "207c024f438e44c0dc15f61fedd686c73665189dc0ef5f5b013b3abd26005199",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0836",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "32698ebba6f643bd826c48d66884526848bf759a3799491d98dcce9602b5dae9",
+        "sourceDraftSha256": "32698ebba6f643bd826c48d66884526848bf759a3799491d98dcce9602b5dae9",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "52b4eeba99d2ca534abb09ad0206768afa69d43440448a06a679d0df17dbf4e7"
+      },
+      "contentSha256": "52b4eeba99d2ca534abb09ad0206768afa69d43440448a06a679d0df17dbf4e7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0885",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "和差分配或多对象关系",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-a1f7766305896c1b",
+      "assessmentGroup": "assessment-a1f7766305896c1b",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小玛有15本书，小露有18本。小艾和小露的书合起来比小玛多9本。小艾有多少本书？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6",
+          "d": "1"
+        },
+        "unit": "本"
+      },
+      "intent": "由比较关系求两人合计，再减去已知一人的量。",
+      "hints": [
+        "小艾和小露合计是小玛的15本再加9本。"
+      ],
+      "steps": [
+        "两人合计15＋9＝24（本）。",
+        "小艾有24－18＝6（本）。"
+      ],
+      "commonMistakes": [
+        "把多9本只用于小艾个人",
+        "用18＋9。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0885",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "1579eae498e1d9eebb7aec697e0a7a98fcf1061690d27317effe50bb802e978c",
+        "recordSha256": "371e7f017e1e1cfccfbddf9cf96029a022a149790426ba81018514e786454cb1",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0885",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7e6a7faafbfb230f750c08a8f4b2a74ab8390389989f9c6c4f2e93005f9ec82c",
+        "sourceDraftSha256": "7e6a7faafbfb230f750c08a8f4b2a74ab8390389989f9c6c4f2e93005f9ec82c",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "1080586b072dd314c492782761350b25e5557ce185408569e6cb2e5ee1697606"
+      },
+      "contentSha256": "1080586b072dd314c492782761350b25e5557ce185408569e6cb2e5ee1697606"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0892",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "和差分配或多对象关系",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-4065cb56207f447e",
+      "assessmentGroup": "assessment-4065cb56207f447e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小安的存钱罐里有5美分硬币和10美分硬币共28枚。5美分硬币比10美分硬币少8枚。10美分硬币有多少枚？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "18",
+          "d": "1"
+        },
+        "unit": "枚"
+      },
+      "intent": "由总枚数和枚数差求较多的一类数量。",
+      "hints": [
+        "给较少的一类补8枚，两类数量就一样多。"
+      ],
+      "steps": [
+        "28＋8＝36（枚），相当于两份10美分硬币的数量。",
+        "36÷2＝18（枚）。",
+        "检查5美分硬币10枚，18＋10＝28，18－10＝8。"
+      ],
+      "commonMistakes": [
+        "按硬币面值计算金额",
+        "把28枚直接平均分忽略相差8枚。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "钱币单位"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0892",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "09d6bd6a0aab400f1915f907d09a5764ed5ca1ac386d18128674d76fc8ab7039",
+        "recordSha256": "3ec535fd9732bea9cd1abcabdf68ff1f1589b80f0c671c11c9748380ec97da70",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0892",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "ff5765db9421fe6542f6b61c935c6c68965fafa05014b0be1a258485e64c93d2",
+        "sourceDraftSha256": "ff5765db9421fe6542f6b61c935c6c68965fafa05014b0be1a258485e64c93d2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "0f3ebe37bede7b554567f52be9877eb9e7d9df5dd555cb237ef496e7cab9b4e0"
+      },
+      "contentSha256": "0f3ebe37bede7b554567f52be9877eb9e7d9df5dd555cb237ef496e7cab9b4e0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0898",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "和差分配或多对象关系",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-046d430c629d65b9",
+      "assessmentGroup": "assessment-046d430c629d65b9",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小苏周一读了书的前15页，周二比周一多读16页，读完后还剩18页。这本书一共有多少页？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "64",
+          "d": "1"
+        },
+        "unit": "页"
+      },
+      "intent": "求第二天阅读量，再把已读与未读合并。",
+      "hints": [
+        "周二的16页是比周一多出的页数。"
+      ],
+      "steps": [
+        "周二读15＋16＝31（页）。",
+        "全书共有15＋31＋18＝64（页）。"
+      ],
+      "commonMistakes": [
+        "把周二读的页数当成16页",
+        "漏掉未读的18页。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0898",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "45c98cc6d4549e7717671293d1d0b97efef1f430cb57347fca8c909a0c8ef22d",
+        "recordSha256": "9de621591eb8ffdbec8157b41cf0082c83db60f418e781864e935ad678066b8b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0898",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "3e7a37001709e9a19df78b7d4adbe2fe239a8c14f00fdba5b7b5ed5130e5eac1",
+        "sourceDraftSha256": "3e7a37001709e9a19df78b7d4adbe2fe239a8c14f00fdba5b7b5ed5130e5eac1",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8d07affbe23ac0cc1f9f8d792bdce385fc69d58ff07daaa397440d4daac3fc44"
+      },
+      "contentSha256": "8d07affbe23ac0cc1f9f8d792bdce385fc69d58ff07daaa397440d4daac3fc44"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0907",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "未知量的简单逆推",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-281864d24988f777",
+      "assessmentGroup": "assessment-281864d24988f777",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "丽丽、皮皮和小斯是三只企鹅，总体重45千克。丽丽和皮皮一样重，皮皮和小斯合起来重34千克。小斯重多少千克？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "23",
+          "d": "1"
+        },
+        "unit": "千克"
+      },
+      "intent": "由总量求一只重量，再利用相等关系求另一只。",
+      "hints": [
+        "总重量减去皮皮和小斯的合计，可求丽丽",
+        "丽丽与皮皮一样重。"
+      ],
+      "steps": [
+        "丽丽重45－34＝11（千克），所以皮皮也重11千克。",
+        "小斯重34－11＝23（千克）。",
+        "检查11＋11＋23＝45。"
+      ],
+      "commonMistakes": [
+        "把34千克直接平均分给皮皮和小斯，题目只说丽丽和皮皮一样重。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "原90磅总重、68磅两只合计重设为公制教学情境的45千克与34千克，属于教学尺度改编而非精确换算",
+        "重新核算34－（45－34）＝23千克。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0907",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e1bbbe18cda56308886828a51222d71324316ca43e89be3dec63fb66e05a7c9c",
+        "recordSha256": "0a83fc13db0a854ba09b627225d3c616c0a301eae303625ed4ab17d590540654",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0907",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2d4d84d5ba4966866d290e9bf427a92df2d39398a208d5b63650fb7753412480",
+        "sourceDraftSha256": "2d4d84d5ba4966866d290e9bf427a92df2d39398a208d5b63650fb7753412480",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "56ad2aa3c3a9dd4407d807369bb4301d0d5eb3b3bb26e0bb8d785e6e19c43b04"
+      },
+      "contentSha256": "56ad2aa3c3a9dd4407d807369bb4301d0d5eb3b3bb26e0bb8d785e6e19c43b04"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0990",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "串联两个加法比较关系",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-a3a3e36f357c3ef8",
+      "assessmentGroup": "assessment-a3a3e36f357c3ef8",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小贾负责卖点心，卖了27袋薯片，热狗比薯片少卖8个，饮料比热狗多卖12杯。他卖了多少杯饮料？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "31",
+          "d": "1"
+        },
+        "unit": "杯"
+      },
+      "intent": "沿两个数量比较关系求最后一类数量。",
+      "hints": [
+        "饮料数量以热狗数量为比较基准。"
+      ],
+      "steps": [
+        "热狗卖了27－8＝19（个）。",
+        "饮料卖了19＋12＝31（杯）。"
+      ],
+      "commonMistakes": [
+        "用薯片27袋直接加12",
+        "将少8算成加8。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0990",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "99f28ee4d240fe4a9b5adca2a57302f3ff70506ecc9b0eb0b60a4c0359b734c8",
+        "recordSha256": "55f582b7fb255c2aab0b3214adab4e59ab8f151590925dc8888c25a776c50ae5",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0990",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a349d2993876104c98b40f7cdb5a128f40e986ad1583ab52fa3e4fdd0a3007fe",
+        "sourceDraftSha256": "a349d2993876104c98b40f7cdb5a128f40e986ad1583ab52fa3e4fdd0a3007fe",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "cfb11964a809b09f9d2e3b930a15b1421a89a9e6801bfce3b0a3cc0b531b2d07"
+      },
+      "contentSha256": "cfb11964a809b09f9d2e3b930a15b1421a89a9e6801bfce3b0a3cc0b531b2d07"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1109",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "两份收入的和差分配",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-c41aa29e34ed7410",
+      "assessmentGroup": "assessment-c41aa29e34ed7410",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小米的爸爸做两份工作，每周两份收入合计3875元。第一份每周收入比第二份多375元。第一份工作每周收入多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2125",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "由两项收入总和与差额求较大的一项。",
+      "hints": [
+        "把合计收入加上差额，得到两份第一项收入。"
+      ],
+      "steps": [
+        "3875＋375＝4250（元）。",
+        "第一份每周收入4250÷2＝2125（元）。",
+        "检查第二份1750元，2125＋1750＝3875，2125－1750＝375。"
+      ],
+      "commonMistakes": [
+        "把3875元直接平均分，忽略差额",
+        "把375元当成第一份收入。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "钱币单位"
+      ],
+      "adaptation": [
+        "美元改为人民币元，统一两份工作的收入与差额都以每周计，保留3875和375，重新核算第一份2125元。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1109",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "cb61b6f637f4b563f2418d4af421bc3e0899756b07284e141e4472c7621cd9fc",
+        "recordSha256": "be22400bc8cdfe2db9defc915ba268172fe41b7ce4d1b5df3babe8200695ebd5",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://mtapreviewer.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1109",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0d4bf156d3f9c929e5b6505c80c7ba9652c1c1fa94a60de5ff47780b8e5d888c",
+        "sourceDraftSha256": "0d4bf156d3f9c929e5b6505c80c7ba9652c1c1fa94a60de5ff47780b8e5d888c",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8d7efbfda43ff93bff3f30303ab793c50548440204d1c4e89310f87fcae38f03"
+      },
+      "localCategoryOverride": {
+        "category": "A06",
+        "reason": "两项周收入的和差分配，未给商品单价或数量。",
+        "subcategory": "两份收入的和差分配"
+      },
+      "contentSha256": "8d7efbfda43ff93bff3f30303ab793c50548440204d1c4e89310f87fcae38f03"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1296",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "和差分配或多对象关系",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-01555c2121ad61ac",
+      "assessmentGroup": "assessment-01555c2121ad61ac",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小安比小杰大5岁，两人年龄合计29岁。小安和小杰各几岁？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "小安年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "17",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "小杰年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "12",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          }
+        ]
+      },
+      "intent": "由年龄总和与年龄差求两个年龄。",
+      "hints": [
+        "先从总和减去多出的5岁，两人的年龄就成为相同的两份。"
+      ],
+      "steps": [
+        "小杰年龄是（29－5）÷2＝12（岁）。",
+        "小安年龄是12＋5＝17（岁）。",
+        "检查17＋12＝29，17－12＝5。"
+      ],
+      "commonMistakes": [
+        "直接将29平均分",
+        "把较大与较小年龄对应反了。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1296",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "d11de6f416a19621a7182a97748f3459585e4ad26144db35142161aff48efbdb",
+        "recordSha256": "6557106716f582c2555ed550c48e289a0971a763d480dedc622aaca19f1d4e46",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathocean.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1296",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "27ada4dc484432aa8c3a7f880a04df2e3d65752e8f97d5be6108b0d13d1aea8f",
+        "sourceDraftSha256": "27ada4dc484432aa8c3a7f880a04df2e3d65752e8f97d5be6108b0d13d1aea8f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6e0e2806274936f386717ba2aec598fbc545ad337f7d600333e48dc76acd5266"
+      },
+      "contentSha256": "6e0e2806274936f386717ba2aec598fbc545ad337f7d600333e48dc76acd5266"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1298",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "和差分配或多对象关系",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-61fc013b361cd9c0",
+      "assessmentGroup": "assessment-61fc013b361cd9c0",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小乔比小克大8岁，小福比小克小2岁，三人年龄合计60岁。小乔、小克和小福各几岁？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "小乔年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "26",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "小克年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "18",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-3",
+            "label": "小福年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "16",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          }
+        ]
+      },
+      "intent": "以中间年龄作基准，把总和调整成三份相同年龄。",
+      "hints": [
+        "三人合计比3份小克年龄多8－2＝6岁。"
+      ],
+      "steps": [
+        "3份小克年龄为60－8＋2＝54（岁）。",
+        "小克54÷3＝18岁，小乔18＋8＝26岁，小福18－2＝16岁。",
+        "检查26＋18＋16＝60。"
+      ],
+      "commonMistakes": [
+        "从总和同时减8和2，弄错小福较小的方向",
+        "遗漏一个人的答案。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1298",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e6cfb95843fb4f2119b4b15c0b2e9c8811b6fd070edaf67b18f9d20351aaddbf",
+        "recordSha256": "b93b5c04b5344c27c0d5ce80ed776304190e0f838e8ad8dc6d285516043ec869",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathocean.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1298",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0346ccfb84f888769e8d724f490baf94577d4c62c199d43e359446babb22a4b3",
+        "sourceDraftSha256": "0346ccfb84f888769e8d724f490baf94577d4c62c199d43e359446babb22a4b3",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "aec74aa7719c8360d3f34ceda332a6a87528ba8ef6caf6f4c72eeef746fd3555"
+      },
+      "contentSha256": "aec74aa7719c8360d3f34ceda332a6a87528ba8ef6caf6f4c72eeef746fd3555"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1303",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "未知量的简单逆推",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-755ca42606560a1b",
+      "assessmentGroup": "assessment-755ca42606560a1b",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小尼和哥哥小凯出生在相邻两年的同一个月同一天，所以哥哥比小尼大1岁。两人现在年龄合计11岁。兄弟俩各几岁？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "小尼年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "5",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "哥哥小凯年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "6",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          }
+        ]
+      },
+      "intent": "由总和及相差1岁的关系求两个年龄。",
+      "hints": [
+        "减掉哥哥多出的1岁，就得到两份弟弟年龄。"
+      ],
+      "steps": [
+        "小尼年龄是（11－1）÷2＝5（岁）。",
+        "哥哥小凯年龄是5＋1＝6（岁）。",
+        "检查5＋6＝11。"
+      ],
+      "commonMistakes": [
+        "把相邻年份理解成同岁",
+        "只给出弟弟年龄。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1303",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "8861181b7f2f759f27d073df58dee41a1ec71f1906c9f8a6f13f5cf77f470325",
+        "recordSha256": "303ae0afdd045270bb13637e364369dc9d772e42e12f750055bace13a0b2513f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathocean.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1303",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "cd9e1dfcb7bd51271a774a428b25225a566aadebbda7813e441970c8e25cdb6c",
+        "sourceDraftSha256": "cd9e1dfcb7bd51271a774a428b25225a566aadebbda7813e441970c8e25cdb6c",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "3538fe0046b7d24c6573b203326e8dd3d98143120a34539289d9447951c4b7c4"
+      },
+      "contentSha256": "3538fe0046b7d24c6573b203326e8dd3d98143120a34539289d9447951c4b7c4"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1306",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "和差分配或多对象关系",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-120ffae4ad11845f",
+      "assessmentGroup": "assessment-120ffae4ad11845f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小托和小泰的年龄合计等于妈妈的年龄。妈妈42岁，小托比小泰小2岁。小托和小泰各几岁？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "小托年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "20",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "小泰年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "22",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          }
+        ]
+      },
+      "intent": "由年龄和及年龄差分配两人的年龄。",
+      "hints": [
+        "减去多出的2岁，就得到两份小托年龄。"
+      ],
+      "steps": [
+        "小托年龄是（42－2）÷2＝20（岁）。",
+        "小泰年龄是20＋2＝22（岁）。",
+        "检查20＋22＝42。"
+      ],
+      "commonMistakes": [
+        "将妈妈42岁再加入两人年龄和",
+        "把小托算成较大者。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1306",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "9a5e885574d8db78bf98ed8fe80316ea227cd2c6b203836cd18bb9ff0c41a213",
+        "recordSha256": "9732a4f01b4a0d00bd36e99bab56c6add74d6a2bdc829319aef88ab92c4c226d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathocean.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1306",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "5a644b6776dabf8829e0831cc918dac0e2726680c82d14915a8264c0ddddcdb3",
+        "sourceDraftSha256": "5a644b6776dabf8829e0831cc918dac0e2726680c82d14915a8264c0ddddcdb3",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "cfb43a1e249d530caf10d7fdfef7ef6d18c9d365ef5c46c5be3584501ea278e2"
+      },
+      "contentSha256": "cfb43a1e249d530caf10d7fdfef7ef6d18c9d365ef5c46c5be3584501ea278e2"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1384",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "未知量的简单逆推",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-f2021a8bca9b9449",
+      "assessmentGroup": "assessment-f2021a8bca9b9449",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "星期一，396名学生去动物园，乘坐7辆容量相同的大客车，7辆车都坐满，另外4名学生坐小汽车。每辆大客车坐多少名学生？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "56",
+          "d": "1"
+        },
+        "unit": "名"
+      },
+      "intent": "先求大客车总人数，再平均分给相同车辆。",
+      "hints": [
+        "坐小汽车的4人要先扣除。"
+      ],
+      "steps": [
+        "大客车上共有396－4＝392（名）学生。",
+        "每车392÷7＝56（名）。"
+      ],
+      "commonMistakes": [
+        "把全部396人都除以7",
+        "将4名小汽车乘客分配给每辆客车。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "补明7辆大客车容量相同且满载，以对应源式7份相同人数加4人等于396。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1384",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "313c74fa19d90e4ff43fdd0880cb4299effc9f5389858cd1326cca09e5304862",
+        "recordSha256": "75223117f454097e67060c2c34f17fe014373826709393f25d20a062fda4e8e5",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.math-aids.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1384",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "86d13600716f43a1d3d75d224c8f1cb7656987acdedcd3bc71a93878885a1a08",
+        "sourceDraftSha256": "86d13600716f43a1d3d75d224c8f1cb7656987acdedcd3bc71a93878885a1a08",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "613313bbc8ffd3443ae56e23b63171b30e05b441dc0eb21541d890eab187d985"
+      },
+      "contentSha256": "613313bbc8ffd3443ae56e23b63171b30e05b441dc0eb21541d890eab187d985"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1402",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "未知量的简单逆推",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-70424b914f4b4727",
+      "assessmentGroup": "assessment-70424b914f4b4727",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "两个男孩共有480颗弹珠。小六把自己的弹珠每6颗堆成一堆，小九每9颗堆成一堆，共堆了72堆，两人的弹珠都全部用完。两人各有多少颗？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "每堆6颗的小六",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "336",
+                "d": "1"
+              },
+              "unit": "颗"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "每堆9颗的小九",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "144",
+                "d": "1"
+              },
+              "unit": "颗"
+            }
+          }
+        ]
+      },
+      "intent": "以全部按较小每堆量计算，求增加量对应的另一类堆数。",
+      "hints": [
+        "若72堆都按6颗，实际总数多出的部分来自每堆9颗的堆。"
+      ],
+      "steps": [
+        "先按每堆6颗算，共72×6＝432（颗）。",
+        "实际多480－432＝48（颗），每个9颗堆比6颗堆多3颗，所以9颗堆有48÷3＝16堆。",
+        "小九有16×9＝144颗，小六有（72－16）×6＝336颗。",
+        "检查336＋144＝480，56＋16＝72堆。"
+      ],
+      "commonMistakes": [
+        "把72堆平均分给两人",
+        "只回答堆数，没有回答弹珠颗数。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1402",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "39f54422d495a0b103b8b66f1077bde8fe63121989b11161476c033d9906cd00",
+        "recordSha256": "5a10fea494692cd31b477a614684fa234e5fd25d44e94b23643c31a82c7c3b20",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1402",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "67deee3afa6fc03d827f99c9c8e969107b2074006f29f18a5a9d6b3b286b4f76",
+        "sourceDraftSha256": "67deee3afa6fc03d827f99c9c8e969107b2074006f29f18a5a9d6b3b286b4f76",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ea1611a33a5d13f354d460856d328e407a8b24caa87f56402b338ff84cfcb5e6"
+      },
+      "contentSha256": "ea1611a33a5d13f354d460856d328e407a8b24caa87f56402b338ff84cfcb5e6"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1417",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "未知量的简单逆推",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-4182b194b9c18bfc",
+      "assessmentGroup": "assessment-4182b194b9c18bfc",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "爸爸和儿子现在年龄合计55岁。等到儿子的年龄达到爸爸现在的年龄时，两人的年龄合计将是93岁。爸爸和儿子现在各几岁？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "爸爸现在年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "37",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "儿子现在年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "18",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          }
+        ]
+      },
+      "intent": "先由年龄和的增长求经过年数，再把它作为现在的年龄差。",
+      "hints": [
+        "每过1年，父子年龄合计增加2岁。儿子达到爸爸现在年龄所需年数，就是现在年龄差。"
+      ],
+      "steps": [
+        "合计增加93－55＝38（岁），经过38÷2＝19（年）。",
+        "现在爸爸比儿子大19岁。",
+        "爸爸年龄是（55＋19）÷2＝37岁，儿子是55－37＝18岁。",
+        "检查19年后爸爸56岁、儿子37岁，合计93岁。"
+      ],
+      "commonMistakes": [
+        "把38岁直接当成经过38年",
+        "让爸爸年龄停留在现在而不随时间增加。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "年龄差不变"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1417",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "1ac6702d959f16d371af4dc9fdc55ace1fa73c4a327ef0132516b424366845fe",
+        "recordSha256": "5f87ea167c7d065dc68a1082658ccded811f73076a40f604d114a452e773e98b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1417",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a2aa32fa70be8090b74b126f88f6d8e975105f0d45d4b5aa4f174a4c3e682a18",
+        "sourceDraftSha256": "a2aa32fa70be8090b74b126f88f6d8e975105f0d45d4b5aa4f174a4c3e682a18",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e8f3b8496be4a53114369bb574753e4fd2d2735170c5508447c331b1ec97f7af"
+      },
+      "contentSha256": "e8f3b8496be4a53114369bb574753e4fd2d2735170c5508447c331b1ec97f7af"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2186",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-182236dbde3a4a71",
+      "assessmentGroup": "assessment-182236dbde3a4a71",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小凡把手机里的23张照片和相机里的7张照片上传到社交网站，全部平均放进5个相册。每个相册有多少张照片？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6",
+          "d": "1"
+        },
+        "unit": "张"
+      },
+      "intent": "先合并两种来源的照片，再平均分。",
+      "hints": [
+        "手机照片和相机照片都要计入总数。"
+      ],
+      "steps": [
+        "共上传23＋7＝30（张）。",
+        "每册有30÷5＝6（张）。"
+      ],
+      "commonMistakes": [
+        "只将23张手机照片除以5",
+        "将每册数与相册个数混淆。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "把平台名称泛化为社交网站，保留上传来源、数量和平均分相册的关系。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2186",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "2ec1e13775eb7e68e46a6b3fba3761861079964c6e0a8228f6b18d9ade02a952",
+        "recordSha256": "7525bb638ed8877d38b8da361959223628db1459c170d1baaf76dce0b7a1ee8f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2186",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "659873c8b1b7588d27e85fc3da55ad8d37b4f2545be615a32ec21fa96f26967d",
+        "sourceDraftSha256": "659873c8b1b7588d27e85fc3da55ad8d37b4f2545be615a32ec21fa96f26967d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8f54d3804ef658790ef9631ec7895cd523f3b1daaaf67a130db10ee71f3cb781"
+      },
+      "contentSha256": "8f54d3804ef658790ef9631ec7895cd523f3b1daaaf67a130db10ee71f3cb781"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2193",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-809d7755ced46a82",
+      "assessmentGroup": "assessment-809d7755ced46a82",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "9个朋友去餐馆，厨师已有2只烤好的鸡翅，又为他们烤了25只。所有鸡翅平均分给这9人，每人分到几只？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "3",
+          "d": "1"
+        },
+        "unit": "只"
+      },
+      "intent": "合并原有与新增数量，再按人数平均分。",
+      "hints": [
+        "先算一共可以分多少只鸡翅。"
+      ],
+      "steps": [
+        "共有2＋25＝27（只）。",
+        "每人27÷9＝3（只）。"
+      ],
+      "commonMistakes": [
+        "只把新烤的25只拿来平均分。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2193",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "853da94d6988f51fabcf7c8cd49297649a7099cd018a54659b1a4c12a54febad",
+        "recordSha256": "7057ce69ea4eda6fcfc8a162a19bf917c9872b5b2feaad1d83c9d89cc981eaed",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2193",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "d7843187ce7d910a1971065092e5dd613e8541f5471378c0f118b2136b2c0961",
+        "sourceDraftSha256": "d7843187ce7d910a1971065092e5dd613e8541f5471378c0f118b2136b2c0961",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "5df8fa3c9d5eb2adec1faad6d2a32ce374105264c1160455a9d851f88f90961b"
+      },
+      "contentSha256": "5df8fa3c9d5eb2adec1faad6d2a32ce374105264c1160455a9d851f88f90961b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2196",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-03c2e029c471ee6c",
+      "assessmentGroup": "assessment-03c2e029c471ee6c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小戴把棒球卡放进收藏册，每页放8张。他有3张新卡和13张旧卡，一共需要几页？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "页"
+      },
+      "intent": "合并两部分卡片，再求页数。",
+      "hints": [
+        "新旧卡片都占收藏册的位置。"
+      ],
+      "steps": [
+        "共有3＋13＝16（张）卡片。",
+        "需要16÷8＝2（页）。"
+      ],
+      "commonMistakes": [
+        "把8当成页数",
+        "漏计3张新卡。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2196",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "fc3e82376d796765fee3d92a96a19963f14dee65e6c9a16ba426278ccaefad4c",
+        "recordSha256": "947046012dd2bc1a8b68b2367373045ae10c8baeed488f7e0b0ace672c11cfa0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2196",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e7ed977c43d69c6aab6d0ca1c8fa9c69f07daac0c11e42301ae060074a9d1ef6",
+        "sourceDraftSha256": "e7ed977c43d69c6aab6d0ca1c8fa9c69f07daac0c11e42301ae060074a9d1ef6",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f2f293a352294df369adb3178bbbc4ad01b71268320c8109df7518ecf654ba7d"
+      },
+      "contentSha256": "f2f293a352294df369adb3178bbbc4ad01b71268320c8109df7518ecf654ba7d"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2198",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-4074c26376a6f92c",
+      "assessmentGroup": "assessment-4074c26376a6f92c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "公司野餐时，3名经理和3名员工决定玩排球。他们把6人平均分成3队，每队有多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "合计两类人员，再平均分组。",
+      "hints": [
+        "经理和员工都参加，先算总人数。"
+      ],
+      "steps": [
+        "共有3＋3＝6（人）。",
+        "每队6÷3＝2（人）。"
+      ],
+      "commonMistakes": [
+        "只把3名员工分组",
+        "把每队人数当成总人数。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "补明三队平均分，保留源式（3＋3）÷3所需条件。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2198",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "6a6bbfbc31db0388752bd00b32db121a3b6e171e82d67286a19ae9c88b6496fa",
+        "recordSha256": "ba18bb05824c9c7ea41d2a40c5160d9097bc0403ba5f54699b64a88fbe955887",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2198",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a54350b2e0e639e1772a255a3549e2c33fb96cd46d5ce524da5ae8d2eef5a1b1",
+        "sourceDraftSha256": "a54350b2e0e639e1772a255a3549e2c33fb96cd46d5ce524da5ae8d2eef5a1b1",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9105a14186d7d7bdb140666e134bb8c9817eefcae119e004ac4cf96e05a5722c"
+      },
+      "contentSha256": "9105a14186d7d7bdb140666e134bb8c9817eefcae119e004ac4cf96e05a5722c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2200",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-3b65203b3d316889",
+      "assessmentGroup": "assessment-3b65203b3d316889",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小美的作业有36道数学题和28道拼写题。她每小时能完成8道题，完成全部作业需要多少小时？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "8",
+          "d": "1"
+        },
+        "unit": "小时"
+      },
+      "intent": "合计任务总量，再按每小时完成量求时间。",
+      "hints": [
+        "两类题都按每小时8道的速度完成。"
+      ],
+      "steps": [
+        "共有36＋28＝64（道）题。",
+        "需要64÷8＝8（小时）。"
+      ],
+      "commonMistakes": [
+        "将数学题和拼写题相乘",
+        "把8道每小时当成总用时。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2200",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "3e79a8ade74a9b19878a2f107d8aa7fa30b02c878083dd01d85e5c08b9d2ce82",
+        "recordSha256": "d6d8fec3d31575c398622e0f310af5d01c8e80d173942d540c0a6707c67b4a21",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2200",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "648cb738c1c3a436866f72ce95b85583ec16127af06b440c023328358439822f",
+        "sourceDraftSha256": "648cb738c1c3a436866f72ce95b85583ec16127af06b440c023328358439822f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d0a89ae93072937fc607aec88b2a7a4d267e5c11703deb1ef632f07e951c8cda"
+      },
+      "contentSha256": "d0a89ae93072937fc607aec88b2a7a4d267e5c11703deb1ef632f07e951c8cda"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2201",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-34de054109090965",
+      "assessmentGroup": "assessment-34de054109090965",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小格的班级去动物园，有33名学生和9名成人参加，每辆小客车可坐7人。最少需要几辆小客车？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6",
+          "d": "1"
+        },
+        "unit": "辆"
+      },
+      "intent": "合计乘客数，再求车辆数。",
+      "hints": [
+        "学生和成人都需要座位。"
+      ],
+      "steps": [
+        "共33＋9＝42（人）。",
+        "42÷7＝6（辆），正好坐满6辆车。"
+      ],
+      "commonMistakes": [
+        "只计算学生人数",
+        "漏掉成人所需座位。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2201",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "f465303edd8768e72d333cbc4c35c9c834fc0fea728260a764e26bf7d8412476",
+        "recordSha256": "705d8fac2a78b8d8a0d575ef2366ebfdcf6136a3d591b0d7ad8a56983fd75695",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2201",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c10bc4df15ea8c8b2fc2a1f830b873efdf9ae54828f3e3a922bf0ad013f3bd71",
+        "sourceDraftSha256": "c10bc4df15ea8c8b2fc2a1f830b873efdf9ae54828f3e3a922bf0ad013f3bd71",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "549ad258fd0f5844f510441ef0c73f236e25eee50dcd03d573602eb56f3006c2"
+      },
+      "contentSha256": "549ad258fd0f5844f510441ef0c73f236e25eee50dcd03d573602eb56f3006c2"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2209",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-eb2469ac9a4edb77",
+      "assessmentGroup": "assessment-eb2469ac9a4edb77",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小亚参加知识问答，上半场答对5题，下半场答对5题，每答对1题得5分。他最终得多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "50",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "合计答对题数，再按每题得分计算总分。",
+      "hints": [
+        "两场共答对几题，每一题都得5分。"
+      ],
+      "steps": [
+        "共答对5＋5＝10（题）。",
+        "得分是10×5＝50（分）。"
+      ],
+      "commonMistakes": [
+        "将题目里的三个5全部相加",
+        "只计算一场得分。"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "几个相同量相加",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2209",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "21936aad1bbace9f82f3f8f6fdaab76eddfcdbabbd139f3710a3167de5b9cf8a",
+        "recordSha256": "76eb377aa5ff49cbd1c44b120c27baf5cf857b1a78639b69b8a17d73a992c54f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2209",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2224b320f86a127cc150b901f5f58f12cfe6e7ef1b754353fe8d1101f7ba831f",
+        "sourceDraftSha256": "2224b320f86a127cc150b901f5f58f12cfe6e7ef1b754353fe8d1101f7ba831f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2222b451a5179bb4e8688780ad46ea010c98909efd133be8cb544c42a7fb5bb8"
+      },
+      "contentSha256": "2222b451a5179bb4e8688780ad46ea010c98909efd133be8cb544c42a7fb5bb8"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2216",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-02655c6a197f97bd",
+      "assessmentGroup": "assessment-02655c6a197f97bd",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小格整理书柜，每层都恰好放4本书。探案书放了5层，图画书放了3层，书柜只放这两类书。她共有多少本书？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "32",
+          "d": "1"
+        },
+        "unit": "本"
+      },
+      "intent": "合计层数，再按每层相同数量求总量。",
+      "hints": [
+        "先算两类书一共占几层。"
+      ],
+      "steps": [
+        "共有5＋3＝8（层）。",
+        "书共有8×4＝32（本）。"
+      ],
+      "commonMistakes": [
+        "把5层探案书和3层图画书相乘",
+        "只算一类书。"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "几个相同量相加",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "明确只有题中两类书，保留源式按5＋3层合计的范围。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2216",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "8d5bbbc44d4ecc2cd1fd6787e51e89a11bdef2ac4c9d569bb1056e6630965c82",
+        "recordSha256": "293cecc7718634cde52e4e189b50ef4d89459f267da616b966d9168e24e2189f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2216",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "8ac67efa331335566ae84ec379ce12077c4735c5716ea1b4241cda3ef2d6e745",
+        "sourceDraftSha256": "8ac67efa331335566ae84ec379ce12077c4735c5716ea1b4241cda3ef2d6e745",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2e559ab115a3027b58d2035d15344d8ceaaa6d8c484c2c0cd7d9fa44332db302"
+      },
+      "contentSha256": "2e559ab115a3027b58d2035d15344d8ceaaa6d8c484c2c0cd7d9fa44332db302"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2222",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-5186d123c76f822f",
+      "assessmentGroup": "assessment-5186d123c76f822f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小戴在杂货店帮顾客装袋，每小时收入6元。周一工作6小时，周二工作2小时。这两天共收入多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "48",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "合计工作时间，再用每小时收入求总收入。",
+      "hints": [
+        "两天的工作小时数可以相加。"
+      ],
+      "steps": [
+        "共工作6＋2＝8（小时）。",
+        "收入8×6＝48（元）。"
+      ],
+      "commonMistakes": [
+        "把6元当成周一总收入",
+        "将两个6混淆为同一个数量。"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "几个相同量相加",
+        "整数加减法",
+        "分步列式",
+        "钱币单位"
+      ],
+      "adaptation": [
+        "美元报酬改为人民币元，保持每小时6及两天6、2小时，重新核算（6＋2）×6＝48元。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2222",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "666b2aa9ab4021c0a85a9fdff8ea39ed043d1bf004ae5935eb8354cb86a24107",
+        "recordSha256": "fa57db94c35f9c357d1d4c14a0a5f0988ef5e8629903fb3ac4a9f8fbc97b036b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2222",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "142e1769aef3ee5c7b5600a6e7d410b8147118b6a9541331bc515a0c00e58372",
+        "sourceDraftSha256": "142e1769aef3ee5c7b5600a6e7d410b8147118b6a9541331bc515a0c00e58372",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d7c147ee48e7ea33c80173c89fae5ec65501c4d42cd28f51f9ce720ad661e212"
+      },
+      "contentSha256": "d7c147ee48e7ea33c80173c89fae5ec65501c4d42cd28f51f9ce720ad661e212"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2223",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-26b9dcd3a077dd74",
+      "assessmentGroup": "assessment-26b9dcd3a077dd74",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "商店原有87本涂色书，促销卖出33本。剩下的书全部放上书架，每层放6本。一共用了几层书架？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "9",
+          "d": "1"
+        },
+        "unit": "层"
+      },
+      "intent": "先求剩余量，再按每组量求组数。",
+      "hints": [
+        "售出的书不再上架。"
+      ],
+      "steps": [
+        "剩下87－33＝54（本）。",
+        "需要54÷6＝9（层）书架。"
+      ],
+      "commonMistakes": [
+        "把87本全部除以6",
+        "将每层6本当成6层。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2223",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "3e35323ff722f6dc07b2f3651e5be014ca5d5ef1641f1e8cf28e15a43795be90",
+        "recordSha256": "50d9597fa96ff579340ed255e6496781c921cf95841246936b08b43d89629295",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2223",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "49f7ddc40479c83db24c230c7935c172887e9543ba2666a3b76e6c47e1b4749e",
+        "sourceDraftSha256": "49f7ddc40479c83db24c230c7935c172887e9543ba2666a3b76e6c47e1b4749e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "972a3bf357c5e4b0857c11355274e2cba0aaeff5b570f5f95a2b321bf6c61d94"
+      },
+      "contentSha256": "972a3bf357c5e4b0857c11355274e2cba0aaeff5b570f5f95a2b321bf6c61d94"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2226",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-5ae73c9854eb465f",
+      "assessmentGroup": "assessment-5ae73c9854eb465f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小汤有36件衣服要洗，先用一批洗了18件，剩下的平均分成两小批。每小批有多少件？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "9",
+          "d": "1"
+        },
+        "unit": "件"
+      },
+      "intent": "先求剩余任务量，再平均分。",
+      "hints": [
+        "只把剩余衣服分成两批。"
+      ],
+      "steps": [
+        "剩余36－18＝18（件）。",
+        "每小批18÷2＝9（件）。"
+      ],
+      "commonMistakes": [
+        "把36件直接分成2批，漏掉先洗的一批。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2226",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "72c3d4d2a314dd5c819dc5274dc250cd1b0bb9e690590894c153216dd36f8790",
+        "recordSha256": "9d342f266375ff78bf35e839f0d7caf5853ef3c6424ccfded73fae99c977640d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2226",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b3eff498f4b0e8d1ed4a5b424502f94a0119551658ddbd8ce5b3dc022cbb5b4b",
+        "sourceDraftSha256": "b3eff498f4b0e8d1ed4a5b424502f94a0119551658ddbd8ce5b3dc022cbb5b4b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "460bcdae1018357cf4f5c33cb2c0fb750377943bf15dbe1ce7ae723ad2be8beb"
+      },
+      "contentSha256": "460bcdae1018357cf4f5c33cb2c0fb750377943bf15dbe1ce7ae723ad2be8beb"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2227",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-11681b9037e1c907",
+      "assessmentGroup": "assessment-11681b9037e1c907",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小南电脑里有43个文件，删除31个后，把剩下的全部放进文件夹，每个文件夹放6个文件。需要几个文件夹？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "先求保留的文件数，再按每组量求份数。",
+      "hints": [
+        "删除的文件不再占用这些文件夹。"
+      ],
+      "steps": [
+        "剩下43－31＝12（个）文件。",
+        "需要12÷6＝2（个）文件夹。"
+      ],
+      "commonMistakes": [
+        "直接用43÷6",
+        "把31看成剩余文件数。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2227",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "3b7da3e5942bd314bce755d8d4fbb99a32b9a5e962654d854a293a8a4d76e5cb",
+        "recordSha256": "0c48c7f5098dc380909681d3c54fc2963f81500f27e86a9cfb99b8961243dcae",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2227",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "71a40cff09cc09ad28400691761323d529693a3e55a25e038719e217281757bb",
+        "sourceDraftSha256": "71a40cff09cc09ad28400691761323d529693a3e55a25e038719e217281757bb",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ccd95197a3514ce144011eeda33ad3f14ff688d2594e9f5bcb2292992251520a"
+      },
+      "contentSha256": "ccd95197a3514ce144011eeda33ad3f14ff688d2594e9f5bcb2292992251520a"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2230",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-5c3b9562a6c98beb",
+      "assessmentGroup": "assessment-5c3b9562a6c98beb",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小菲为朋友的婚礼摘了88朵花，准备每束用5朵。婚礼前有48朵枯萎了，不能使用。剩下的花能做几束？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "8",
+          "d": "1"
+        },
+        "unit": "束"
+      },
+      "intent": "先扣除不可用部分，再求完整组数。",
+      "hints": [
+        "枯萎的花要从总数中减去。"
+      ],
+      "steps": [
+        "可用的有88－48＝40（朵）。",
+        "可做40÷5＝8（束）。"
+      ],
+      "commonMistakes": [
+        "把48朵枯花当成可以做花束的数量。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2230",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "21e1806b08924e9af6ba336471c69797b1938cfa73634137ecfc9e6cb984520b",
+        "recordSha256": "aad03b87143703d040cdb49e233003394c5c0d637af9d1f9ca8711f5d92acd92",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2230",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "cbab5fd3c01eed14e22b1917c935d6786e48bed7c4812941a834925f3807af55",
+        "sourceDraftSha256": "cbab5fd3c01eed14e22b1917c935d6786e48bed7c4812941a834925f3807af55",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "cef7b459ee42a8ae5ffa07850c8889a8c6d258cb802d60ee2794de9ed6569c48"
+      },
+      "contentSha256": "cef7b459ee42a8ae5ffa07850c8889a8c6d258cb802d60ee2794de9ed6569c48"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2236",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-19847e385d8a6e45",
+      "assessmentGroup": "assessment-19847e385d8a6e45",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小佩把35张照片上传到社交网站，其中14张放进一个相册，其余照片平均放进另外3个相册。后面这3个相册各有多少张照片？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "7",
+          "d": "1"
+        },
+        "unit": "张"
+      },
+      "intent": "先求剩余量，再平均分给另几组。",
+      "hints": [
+        "只把35减14得到的照片分进后面3个相册。"
+      ],
+      "steps": [
+        "剩下35－14＝21（张）。",
+        "每个相册21÷3＝7（张）。"
+      ],
+      "commonMistakes": [
+        "把全部35张按3个相册分",
+        "把前面相册也算进3个里面。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "原文只说分进3个相册，未明说等量，按源式（35－14）÷3新增“平均”前提，使每册张数可确定",
+        "平台名泛化为社交网站。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2236",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "762ad183aad8b2937897cf1abc2be6567c9dcb610f3ae357976b1fb4c4bbbd12",
+        "recordSha256": "4e3ebac8b524766fcc95993628fba7178a8e3386d47cabae28e2818d45567bbb",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2236",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2fad7cd58ec894d460b50719fb0c799da5a7f059586ad1ce6366cb099c30ce8b",
+        "sourceDraftSha256": "2fad7cd58ec894d460b50719fb0c799da5a7f059586ad1ce6366cb099c30ce8b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "517049407326c613b021948d4f7cf50df77447c8b0be3c14f62643208afdd800"
+      },
+      "contentSha256": "517049407326c613b021948d4f7cf50df77447c8b0be3c14f62643208afdd800"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2244",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-3a871acfa7de1f82",
+      "assessmentGroup": "assessment-3a871acfa7de1f82",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一位油漆工要粉刷10个房间，每个房间花8小时。他已经粉刷好8个。完成剩下的还需要多少小时？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "16",
+          "d": "1"
+        },
+        "unit": "小时"
+      },
+      "intent": "先求未完成房间数，再求剩余时间。",
+      "hints": [
+        "题中两个8，一个是每间用时，一个是已完成间数。"
+      ],
+      "steps": [
+        "剩下10－8＝2（个）房间。",
+        "还需2×8＝16（小时）。"
+      ],
+      "commonMistakes": [
+        "用10×8回答全部任务用时",
+        "混淆两个8代表的量。"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "几个相同量相加",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2244",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "567d3b7092fb63efc639b095db6ac2254f99ff155367fb7e61b02db5af8eaddc",
+        "recordSha256": "74a952b1591b441079eda781da5581f87681f68eeacf0977be9ac6d28a9dc2f6",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2244",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0664351924bec28ea94d0dfcad50da0f0543592fc39ae2af83d9cf90f492afce",
+        "sourceDraftSha256": "0664351924bec28ea94d0dfcad50da0f0543592fc39ae2af83d9cf90f492afce",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "63de4335697616a4b6fffb4091244813968a331fc061c3c85dd93ba5886e19c8"
+      },
+      "contentSha256": "63de4335697616a4b6fffb4091244813968a331fc061c3c85dd93ba5886e19c8"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2246",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-532a9ee6003c9a78",
+      "assessmentGroup": "assessment-532a9ee6003c9a78",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小雯每回收1袋易拉罐可得5分。她有11袋，其中2袋没有回收。她得了多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "45",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "先求实际回收份数，再按每份得分求总分。",
+      "hints": [
+        "未回收的2袋不能得分。"
+      ],
+      "steps": [
+        "回收了11－2＝9（袋）。",
+        "得分9×5＝45（分）。"
+      ],
+      "commonMistakes": [
+        "把全部11袋都计算得分。"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "几个相同量相加",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2246",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "9ba56dc9875c1b70f12f4bbb015790335beaf2c0d51c490cd6978cf9c6bd661b",
+        "recordSha256": "62a03070346b6197f90481d2ea3ff36b718646fd9d613a6d9f25ea5ff6296421",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2246",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e0cc4da29df46ac49defb3884e1c403963a1db0c5b04141dfeec056191cc2c32",
+        "sourceDraftSha256": "e0cc4da29df46ac49defb3884e1c403963a1db0c5b04141dfeec056191cc2c32",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f883140c570191551bcb5fe6e29ff9b98b846a87a25c1d24a16bae41f5a80485"
+      },
+      "contentSha256": "f883140c570191551bcb5fe6e29ff9b98b846a87a25c1d24a16bae41f5a80485"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2250",
+      "collection": "foundation",
+      "category": "A06",
+      "subcategory": "先求每份或份数再运算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-46ca47fcd8814e8f",
+      "assessmentGroup": "assessment-46ca47fcd8814e8f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "厨师要逐个烹饪12个土豆，已煮好6个，每个土豆需6分钟，按顺序一次只煮1个。煮完剩下的还需要多少分钟？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "36",
+          "d": "1"
+        },
+        "unit": "分钟"
+      },
+      "intent": "先求剩余个数，再按串行单件用时求总时间。",
+      "hints": [
+        "每次只煮一个，剩余各个土豆的用时要相加。"
+      ],
+      "steps": [
+        "剩下12－6＝6（个）土豆。",
+        "还需6×6＝36（分钟）。"
+      ],
+      "commonMistakes": [
+        "把土豆同时烹饪只算6分钟",
+        "计算全部12个的时间。"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "几个相同量相加",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "源式将单个烹饪时间相加，原题未排除同时烹饪，新增“按顺序一次只煮1个”的前提，36分钟为该改编前提下的答案。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2250",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "f74563929fd74912f41e165ebf572aad9c57ab534a16a77ba0888150010fc15e",
+        "recordSha256": "25776bf8d2ef71a9798d61a4a7cbc8809fa70acd8c632433b835749bc8154e92",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2250",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "74c23313f860e812c04a00c3721d1d022c67e198f0512b27bfe86ca7413d59e8",
+        "sourceDraftSha256": "74c23313f860e812c04a00c3721d1d022c67e198f0512b27bfe86ca7413d59e8",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "73bb5ee1f55767ab8976921c7376cc6c8af5dcfbe2d1c3fc5cc3bb91936dc568"
+      },
+      "contentSha256": "73bb5ee1f55767ab8976921c7376cc6c8af5dcfbe2d1c3fc5cc3bb91936dc568"
+    }
+  ]
+}

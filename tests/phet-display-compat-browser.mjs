@@ -24,13 +24,13 @@ try{
     const initial=await page.evaluate(()=>{const sim=phet.joist.sim||phet.sim,css=phet.scenery.SceneryStyle,ruleCount=css.stylesheet.cssRules.length;css.addRule('[data-mp-css-probe] { outline: 0; }');const writeProbe=css.stylesheet.cssRules[0].selectorText==='[data-mp-css-probe]';css.stylesheet.deleteRule(0);return {probe:__mpCompatProbe,finished:typeof sim.boundRunAnimationLoop==='function',topLayer:!!sim.topLayer,barrier:!!sim.barrierRectangle,ownStylesheet:css.stylesheet===css.styleElement.sheet,inlineOwner:css.stylesheet.ownerNode===css.styleElement,ruleCount,writeProbe,restoredRuleCount:css.stylesheet.cssRules.length,questionWatcher:typeof __mpQuestionLearning?.snapshot==='function'};});
     assert.equal(initial.probe.prematureReady,false);assert.equal(initial.finished,true);assert.equal(initial.topLayer,true);assert.equal(initial.barrier,true);assert.equal(initial.ownStylesheet,true);assert.equal(initial.inlineOwner,true);assert.equal(initial.writeProbe,true);assert.equal(initial.restoredRuleCount,initial.ruleCount);assert.equal(initial.questionWatcher,true);
     if(id!=='area-builder'){assert.ok(initial.probe.delayedFinish>0);assert.equal(initial.probe.observedPreFinish,true);}
-    await page.locator('.mp-learning-panel > summary').click();
+    assert.equal(await page.locator('dialog[open]').count(),0);
     const screens=[];
     for(const index of [0,1]){
       await page.evaluate(index=>{const sim=phet.joist.sim||phet.sim,screens=sim.simScreens||sim.screens;if(sim.screenProperty)sim.screenProperty.value=screens[index];else if(sim.selectedScreenProperty)sim.selectedScreenProperty.value=screens[index];else{sim.screenIndexProperty.value=index;sim.showHomeScreenProperty.value=false;}},index);
       await page.waitForFunction(index=>{const sim=phet.joist.sim||phet.sim,screens=sim.simScreens||sim.screens;return __mpLearning.screen===index&&screens[index].view.visible!==false&&screens[index].activeProperty?.value!==false;},index);
       await page.setViewportSize({width:390,height:844});await page.waitForFunction(()=>{const v=__mpScienceViewport();return Math.abs(v.science.width-v.display.width)<1.1&&Math.abs(v.science.height-v.display.height)<1.1;});
-      const viewport=await page.evaluate(()=>__mpScienceViewport());assert.ok(viewport.science.bottom<=viewport.guide.top+1);screens.push({index,actualNativeViewVisible:true,guideFollowsActiveScreen:true,viewport});await page.setViewportSize({width:1440,height:1000});
+      const viewport=await page.evaluate(()=>__mpScienceViewport());assert.equal(viewport.helpOpen,false);assert.ok(viewport.science.width>=390);screens.push({index,actualNativeViewVisible:true,guideFollowsActiveScreen:true,viewport});await page.setViewportSize({width:1440,height:1000});
     }
     report.cases.push({id,protocol,initial,screens});console.log('PASS display compatibility',protocol,id);
   }

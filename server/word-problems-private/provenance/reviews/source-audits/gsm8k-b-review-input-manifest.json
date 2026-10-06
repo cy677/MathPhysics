@@ -1,0 +1,47 @@
+{
+  "reviewedDate": "2026-10-06",
+  "reviewKind": "independent assistant semantic-content audit; no human teaching approval",
+  "humanApproved": false,
+  "canonicalHashMethod": "SHA-256 of UTF-8 json.dumps(object, ensure_ascii=False, sort_keys=True, separators=(',', ':')); no trailing newline",
+  "draftInputPath": "C:\\Users\\cheng\\Documents\\Codex\\2026-10-05\\task\\content-work\\results\\gsm8k-b.jsonl",
+  "draftRawFileSha256": "0598e3dc45b01233ef3bd9e883d7a8657d7e77b902d3e6cd9d6ea425c7f5e353",
+  "draftCanonicalArraySha256": "c6882044cface08432df0b6f23fa58719c3454ce7cc5053625cb09beb9a4275b",
+  "draftCanonicalJsonlSha256": "37b5000e55d4720955606e955c5ba44d5d3e436b572a6a27d1202310b1362618",
+  "sourceInputPath": "C:\\Users\\cheng\\Documents\\Codex\\2026-10-05\\task\\content-work\\gsm8k-b.json",
+  "sourceRawFileSha256": "62c37f2a0f31901e99ab043273c8690bfcaefe8c7ff5abc6cac430443471a634",
+  "sourceCanonicalArraySha256": "312547126ca404a738910df42af72b879a48dae6c761207631775a56ff72abad",
+  "joinedInputPath": "C:\\Users\\cheng\\Documents\\Codex\\2026-10-05\\task\\content-work\\joined-representatives.jsonl",
+  "joinedRawFileSha256": "22e565e9559130c3ab3de7e4c072132285e49e39e5bb9f0de9db6ade60114b49",
+  "manualNotesSha256": "2aba0d2d0d289e7004e57ddcad19c69338526a2d1a77594be568d9a0bf09b73d",
+  "reviewJsonlSha256": "b3000e0b1ea925a135b84305cdd585b9c73da1be9b42a5785554214cbc37a618",
+  "counts": {
+    "assistant-confirmed": 252,
+    "quarantine": 5,
+    "needs-correction": 3
+  },
+  "coverageAndSupplementaryChecks": {
+    "draftRows": 260,
+    "manualAuditRows": 260,
+    "uniqueDraftIds": 260,
+    "uniqueAuditIds": 260,
+    "missingAuditIds": [],
+    "extraAuditIds": [],
+    "sourceJoinedContentMatches": 260,
+    "manuallyDerivedTypedAnswerMatches": 255,
+    "sourceHumanApprovedFlagsNotFalse": [],
+    "scope": "Hashes, ID coverage, source cross-reference, and exact comparison of independently authored answers only. No automated semantic or human teaching approval is inferred."
+  },
+  "needsCorrectionIds": [
+    "gsm8k:train-3389",
+    "gsm8k:train-6002",
+    "gsm8k:train-3451"
+  ],
+  "quarantineIds": [
+    "gsm8k:train-6304",
+    "gsm8k:train-6539",
+    "gsm8k:train-5980",
+    "gsm8k:train-4060",
+    "gsm8k:train-5472"
+  ],
+  "unreviewedIds": []
+}

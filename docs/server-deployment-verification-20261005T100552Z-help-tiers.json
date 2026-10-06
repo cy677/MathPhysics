@@ -1,0 +1,146 @@
+{
+  "releaseId": "20261005T100552Z-help-tiers",
+  "completedAtUTC": "2026-10-05T10:17:11.156138+00:00",
+  "url": "https://124.70.198.189/mathphysics/",
+  "sourceCommit": "e5764f08a21a389101bc6a4fdbf2952effa1abfe",
+  "sourceIncludesWorkingTreeChanges": true,
+  "archive": "dist/MathPhysics-server-20261005T100552Z-help-tiers.tar.gz",
+  "archiveSHA256": "da3fdeac0a42987cf6811fda2d325e80aa0b81890be30142b78b9f21ff2df8c5",
+  "archiveBytes": 140491585,
+  "verifiedFiles": 2797,
+  "activityCount": 78,
+  "serverRebuildMatchesLocal": true,
+  "publicFullManifestMatchesLocal": true,
+  "localTests": {
+    "tests": 629,
+    "pass": 625,
+    "fail": 0,
+    "skipped": 4
+  },
+  "serverTests": {
+    "tests": 629,
+    "pass": 626,
+    "fail": 0,
+    "skipped": 3
+  },
+  "serverVerification": {
+    "releaseId": "20261005T100552Z-help-tiers",
+    "verifiedFiles": 2797,
+    "activityCount": 78,
+    "entryChecks": 33,
+    "servedResourceHashesMatch": 344,
+    "javascriptModuleMimeChecks": 16,
+    "publicReferenceChecks": 4,
+    "cacheRefreshReturns200": true,
+    "privatePathsHidden": true,
+    "sudokuPWAScopeConfined": true,
+    "meowServiceUnchanged": true,
+    "meowFilesUnchanged": true,
+    "meowHomeUnchanged": true,
+    "meowServiceConfigUnchanged": true,
+    "nginxOtherFilesUnchanged": true,
+    "databaseTables": 12,
+    "dataPreserved": true,
+    "databaseUnchanged": true,
+    "databaseChangedTables": [],
+    "backupIntegrity": "ok",
+    "backup": "/srv/mathphysics/backups/20261005T100552Z-help-tiers",
+    "passed": true,
+    "databaseFinalUnchanged": true,
+    "finalDatabaseChangedTables": []
+  },
+  "activation": {
+    "releaseId": "20261005T100552Z-help-tiers",
+    "current": "/srv/mathphysics/releases/20261005T100552Z-help-tiers",
+    "nginxSnippetUpdated": false,
+    "meowServiceUnchanged": true
+  },
+  "databaseFinal": {
+    "databaseTables": 12,
+    "changedTables": [],
+    "databaseUnchanged": true,
+    "snapshotIntegrity": "ok",
+    "checkedAtUTC": "2026-10-05T10:12:54.284697+00:00"
+  },
+  "finalState": {
+    "releaseId": "20261005T100552Z-help-tiers",
+    "current": "/srv/mathphysics/releases/20261005T100552Z-help-tiers",
+    "releaseDirectoriesRetained": [
+      "20260930T061500Z",
+      "20261001T005739Z-965c72c",
+      "20261001T113119Z-965c72c",
+      "20261002T071617Z-e5764f0",
+      "20261003T105809Z-e5764f0",
+      "20261005T094051Z-help-tiers",
+      "20261005T100552Z-help-tiers"
+    ],
+    "backup": "/srv/mathphysics/backups/20261005T100552Z-help-tiers",
+    "backupDirectoryMode": "0700",
+    "meowService": {
+      "MainPID": "3283709",
+      "ExecMainStartTimestamp": "Wed 2026-09-30 20:04:20 CST",
+      "ActiveState": "active",
+      "FragmentPath": "/etc/systemd/system/meow-pet.service",
+      "ActiveEnterTimestamp": "Wed 2026-09-30 20:04:20 CST"
+    },
+    "incomingFiles": [],
+    "userDatabasePreserved": true,
+    "databaseFinalUnchanged": true
+  },
+  "browser": {
+    "releaseId": "20261005T100552Z-help-tiers",
+    "passed": true,
+    "checks": [
+      "Loaded exact records captured through the old public release into a fresh isolated browser on the same origin",
+      "Version switched on the same HTTPS origin; previous records, preferences and unrelated browser data remain intact",
+      "Old worksheet IDs, questions, correct answers and completion restore exactly; new hint modal fully closes",
+      "Original Minesweeper board and engine restore exactly",
+      "Original Sudoku numbers, notes, givens and undo history restore exactly",
+      "Old spaceflight saved data and nonempty notebook survive the update",
+      "2048 board, score and move history restore exactly",
+      "All 49 knowledge units × 3 tiers generate through the public website with new module MIME settings",
+      "Current PhET level has merged guidance and hints; full viewport and compact navigation work online",
+      "Public mobile layout and closable knowledge help work"
+    ],
+    "errors": [],
+    "missing": [],
+    "scope": "Fresh isolated test browser on the public origin; actual user browser data is not accessed.",
+    "beforeRelease": {
+      "releaseId": "20261003T105809Z-e5764f0",
+      "builtAtUTC": "2026-10-03T11:11:27.222550+00:00",
+      "version": "0.4.0",
+      "sourceCommit": "e5764f08a21a389101bc6a4fdbf2952effa1abfe",
+      "sourceIncludesWorkingTreeChanges": true,
+      "activityCount": 78
+    },
+    "files": 2797,
+    "activityCount": 78,
+    "spaceflight": {
+      "savedNotebookPreserved": true,
+      "completedCheckpointFixturePresent": false,
+      "fixtureScope": "The pre-update fixture saved a nonempty notebook; its route selection came from the URL and had no completed mission checkpoint."
+    },
+    "combinations": 147,
+    "browserClosed": true
+  },
+  "backup": "/srv/mathphysics/backups/20261005T100552Z-help-tiers",
+  "deploymentPhases": {
+    "initialReleaseId": "20261005T094051Z-help-tiers",
+    "originalBaseReleaseId": "20261003T105809Z-e5764f0",
+    "initialChangedFiles": 112,
+    "removedProgramFiles": [
+      "lessons/primary-math/models.mjs",
+      "lessons/sudoku/assets/index-DWghnaA2.js"
+    ],
+    "followupChangedFiles": 3,
+    "followupReason": "Keep the hint button available during all four spatial games; regression checks pass."
+  },
+  "storagePolicy": {
+    "browserOriginUnchanged": true,
+    "browserKeysPreserved": true,
+    "clearSiteDataNotSent": true,
+    "userDatabasesNeverReplaced": true,
+    "actualUserBrowserDataNotAccessed": true,
+    "databaseBackupsRemainPrivateOnServer": true
+  }
+}

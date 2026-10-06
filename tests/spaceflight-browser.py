@@ -11,7 +11,7 @@ import json, os, traceback
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
 HTML=(ROOT/'dist/MathPhysics-Spaceflight.html').read_text(encoding='utf-8')
-OUT=ROOT/'docs/spaceflight-screenshots';OUT.mkdir(exist_ok=True)
+OUT=Path(os.environ.get('SPACEFLIGHT_TEST_OUTPUT',ROOT/'docs/spaceflight-screenshots'));OUT.mkdir(parents=True,exist_ok=True)
 report={'suite':'Chromium exact-standalone-HTML in-memory acceptance','results':[],
  'limitations':['The managed browser blocks file:// and localhost navigation. This test uses page.set_content with the exact bundled HTML bytes, not a real file:// or HTTP launch.','Viewport emulation is not a physical iPad Safari test.','Illustrations and numerical tests are not flight telemetry, a formally verified vehicle simulation, or pedagogical outcome validation.','Previous upstream assets are hash-checked by unit tests; their full browser suite is not repeated here.']}
 def check(name,extra=None):report['results'].append({'id':name,'passed':True,**(extra or {})})
@@ -21,7 +21,7 @@ def open_tab(page,tab):page.locator('[data-tab="'+tab+'"]').click()
 try:
  with sync_playwright() as p:
   opts={'headless':True,'args':['--no-sandbox']}
-  exe=os.environ.get('CHROMIUM_BIN','/usr/bin/chromium')
+  exe=os.environ.get('CHROMIUM_EXECUTABLE',os.environ.get('CHROMIUM_BIN','/usr/bin/chromium'))
   if Path(exe).exists():opts['executable_path']=exe
   browser=p.chromium.launch(**opts)
   context=browser.new_context(viewport={'width':1512,'height':1150},device_scale_factor=1)
@@ -31,7 +31,7 @@ try:
   page=context.new_page();page.set_default_timeout(5000);errors=[]
   page.on('pageerror',lambda e:errors.append(str(e)))
   page.set_content(HTML,wait_until='load');page.wait_for_function('window.__mpReady===true')
-  assert page.evaluate('SpaceClassroom.counts.stages')==62
+  assert page.evaluate('SpaceClassroom.counts.stages')==63
   assert not external
   check('standalone-bundle-render',{'mode':'in-memory','runtimeRequests':0})
   missions=page.evaluate('Object.values(SpaceData.missions).map(m=>({id:m.id,steps:m.steps.map(s=>s.id),branch:!!m.branch}))')
@@ -100,8 +100,8 @@ try:
   page.clock.run_for(600)
   assert page.locator('#notes').input_value().startswith('先预测')
   check('notebook-input-and-graceful-storage-fallback')
-  page.locator('#sources-open').click();assert page.locator('.source-item').count()==24
-  page.locator('#sources-close').click();check('24-source-notices')
+  page.locator('#sources-open').click();assert page.locator('.source-item').count()==page.evaluate('Object.keys(SpaceData.sources).length')
+  page.locator('#sources-close').click();check('all-source-notices')
   for width in [1512,1024,390]:
    page.set_viewport_size({'width':width,'height':950})
    page.locator('[data-mission="cn-crew"]').click();page.locator('[data-item="2"]').click();slider(page,'scrub',500)
@@ -118,6 +118,6 @@ except Exception as e:
  report['results'].append({'id':'suite','passed':False,'error':str(e),'trace':traceback.format_exc()})
 finally:
  report['total']=len(report['results']);report['passed']=all(x['passed'] for x in report['results'])
- (ROOT/'docs/spaceflight-browser-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+ (OUT/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
  print(json.dumps({'total':report['total'],'passed':report['passed'],'failures':[x for x in report['results'] if not x['passed']]},ensure_ascii=False))
 if not report['passed']:raise SystemExit(1)

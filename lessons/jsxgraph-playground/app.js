@@ -1,5 +1,6 @@
 import {add, determinant, transform, reflect, rotate, triangleArea, triangleAngles, near} from './math.js';
 import {PLAYGROUND_TARGETS,PLAYGROUND_GUIDES,playgroundQuestion} from './teaching.js';
+await window.MathPhysicsSync?.ready;
 const $ = id => document.getElementById(id);
 const saves=window.MathPhysicsProgress.create('jsxgraph-playground',['triangle','mirror','rotate','scale','vectors','linear'].flatMap(id=>Array.from({length:6},(_,i)=>id+'/'+i)),$('save-status'));
 const colors=['#c87d47','#568ba6','#6f9567'];
@@ -241,9 +242,11 @@ document.querySelectorAll('[data-move]').forEach(b=>b.onclick=()=>{const p=point
 $('back-home').onclick=e=>{if(parent!==window){e.preventDefault();parent.postMessage({type:'mp-close'},location.origin);}};
 window.__playground={get board(){return board;},get points(){return points;},get mode(){return mode;},get readings(){return readings;},get triangleMode(){return triangleMode;},get targetMarker(){return targetMarker;},get question(){return questionSupport();},create,check};
 let resizeFrame;
-const checkpoint=saves.resume(),requested=new URLSearchParams(location.search).get('mode'),savedMode=checkpoint?.levelId.split('/')[0];
+const checkpoint=window.MathPhysicsSync?.getSnapshot('jsxgraph-playground')||saves.resume(),requested=new URLSearchParams(location.search).get('mode'),savedMode=checkpoint?.levelId.split('/')[0];
 if(checkpoint&&(!requested||requested===savedMode)&&['free','equal-height'].includes(checkpoint.triangleMode))triangleMode=checkpoint.triangleMode;
 try{create(requested||savedMode||'triangle',checkpoint);}catch(e){$('intro').textContent='画板暂时没有打开，请重新加载页面。';console.error(e);}
+if(Number.isInteger(checkpoint?.selectedPoint)&&checkpoint.selectedPoint>=0&&checkpoint.selectedPoint<points.length)selectPoint(checkpoint.selectedPoint);
+window.MathPhysicsSync?.register('jsxgraph-playground',()=>({schemaVersion:1,levelId:mode+'/'+goal%challengeSets[mode].length,mode,triangleMode,value,points:points.map(xy),selectedPoint}),window);
 window.render_game_to_text=()=>JSON.stringify({mode,goal:goal%challengeSets[mode].length,triangleMode,value,points:points.map(xy),readings,save:saves.snapshot()});
 function resizeBoard(){cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{if(!board)return;const w=$('board').clientWidth,h=$('board').clientHeight;if(w<1||h<1)return;board.resizeContainer(w,h,true);positionVectorLabels(w);board.setBoundingBox(viewBounds(w,h),false);});}
 if(typeof ResizeObserver!=='undefined')new ResizeObserver(resizeBoard).observe($('board'));else window.addEventListener('resize',resizeBoard);

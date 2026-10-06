@@ -2,6 +2,7 @@
 import {LESSONS,GROUPS,SOURCES} from './catalog.js';
 import {normalize,fmt,question,extensionQuestion,checkAnswer,calculation} from './math.js';
 import {draw} from './draw.js';
+await window.MathPhysicsSync?.ready;
 const el=id=>document.getElementById(id);
 const saveStatus=document.createElement('p');saveStatus.id='save-status';saveStatus.className='mp-save-status';saveStatus.setAttribute('role','status');el('feedback').before(saveStatus);
 const saves=window.MathPhysicsProgress.create('geometry-proofs',LESSONS.flatMap(l=>[l.id+'/0',l.id+'/1']),saveStatus);
@@ -78,10 +79,13 @@ el('previous').onclick=()=>navigate(-1);el('next').onclick=()=>navigate(1);
 window.addEventListener('pagehide',stop);document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
 if(innerWidth<=1000)el('directory').open=false;
 if(window.parent===window&&location.protocol==='file:')el('back-home').hidden=true;
-const checkpoint=saves.resume(),requested=new URLSearchParams(location.search).get('lesson'),savedLesson=checkpoint?.levelId.split('/')[0];
+const savedSnapshot=window.MathPhysicsSync?.getSnapshot('geometry-proofs');
+const checkpoint=savedSnapshot&&typeof savedSnapshot.lessonId==='string'&&[0,1].includes(savedSnapshot.variant)?{levelId:savedSnapshot.lessonId+'/'+savedSnapshot.variant,values:savedSnapshot.values}:saves.resume(),requested=new URLSearchParams(location.search).get('lesson'),savedLesson=checkpoint?.levelId.split('/')[0];
 if(savedLesson&&(!requested||requested===savedLesson))remembered.set(savedLesson,checkpoint.values);
 select(requested||savedLesson,false);
 if(current.id===savedLesson){questionVariant=Number(checkpoint.levelId.split('/')[1]);el('new-question').textContent=questionVariant?'回到基础问法':'换一种问法';render();}
+if(savedSnapshot&&current.id===savedSnapshot.lessonId){setProgress(Number.isFinite(savedSnapshot.progress)?savedSnapshot.progress:0);if(typeof savedSnapshot.answer==='string')el('answer').value=savedSnapshot.answer.slice(0,100);}
+window.MathPhysicsSync?.register('geometry-proofs',()=>({schemaVersion:1,lessonId:current?.id||null,variant:questionVariant,values:{...values},progress,answer:el('answer').value}),window);
 window.render_game_to_text=()=>JSON.stringify({lesson:current?.id,variant:questionVariant,values,progress,save:saves.snapshot()});
 window.__geometryLearning={get question(){return questionVariant?extensionQuestion(current,values):question(current,values);},get teaching(){return current.teaching;}};
 

@@ -67,8 +67,11 @@ try:
       assert '视觉改编' in page.locator('#attribution').inner_text()
       page.wait_for_function('document.querySelector("#player-tip .mp-learning-panel")?.dataset.guideId.startsWith("phet-forces-and-motion-basics")')
       assert page.locator('#player-tip [data-guide-field]').count()==4
-      assert page.locator('#player-tip [data-learning-step]').count()==3
-      assert page.locator('#player-tip [data-learning-step="0"]').get_attribute('aria-current')=='step'
+      assert page.locator('#player-tip [data-learning-step]').count()==0
+      assert not page.locator('#player-tip').is_visible()
+      page.locator('#player-help').click()
+      assert page.locator('#player-tip [data-guide-field="observe"]').is_visible()
+      page.get_by_role('button',name='关闭提示',exact=True).click()
       assert not page.locator('#player-tip [data-guide-field="why"]').is_visible()
       page.frame_locator('iframe').locator('#splash-container').wait_for(state='detached')
       page.screenshot(path=str(OUT/'host-phet-merged.png'))

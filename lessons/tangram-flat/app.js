@@ -6,6 +6,7 @@ import * as T from '../../vendor/tangram/js/tangram.js';
 import {Vector} from '../../vendor/tangram/js/vecmath.js';
 import {SNAPSHOT} from './snapshot.js';
 import {TANGRAM_GUIDES,tangramQuestion} from './teaching.js';
+await window.MathPhysicsSync?.ready;
 const $=id=>document.getElementById(id),svg=$('puzzle');
 const saveStatus=document.createElement('p');saveStatus.id='save-status';saveStatus.className='mp-save-status';saveStatus.setAttribute('role','status');$('feedback').before(saveStatus);
 const saves=window.MathPhysicsProgress.create('tangram-flat',['square','creative'].flatMap(id=>['free','two','none'].map(d=>id+'/'+d)),saveStatus);
@@ -79,9 +80,11 @@ $('back-home').onclick=e=>{if(parent!==window){e.preventDefault();parent.postMes
 window.__tangramFlat={get actual(){return actual;},get target(){return target;},get slots(){return slots;},get goal(){return goal;},get question(){return currentQuestion();},trySnap,finish,build};
 $('challenge-mode').onchange=()=>{learningHints=0;$('question-solution').open=false;updateChallenge();$('feedback').textContent='';learning();saves.show(goal+'/'+$('challenge-mode').value);};
 $('next-hint').onclick=()=>{learningHints=Math.min(3,learningHints+1);learning();};
-const checkpoint=saves.resume();
-if(checkpoint){[goal,$('challenge-mode').value]=checkpoint.levelId.split('/');}
+const checkpoint=window.MathPhysicsSync?.getSnapshot('tangram-flat')||saves.resume();
+if(typeof checkpoint?.levelId==='string'){const[g,d]=checkpoint.levelId.split('/');if(['square','creative'].includes(g))goal=g;if(['free','two','none'].includes(d))$('challenge-mode').value=d;}
 build();updateChallenge();
 if(Array.isArray(checkpoint?.pieces)&&checkpoint.pieces.length===7&&checkpoint.pieces.every(t=>[t?.x,t?.y,t?.rotation].every(n=>Number.isFinite(n)&&Math.abs(n)<1000))){checkpoint.pieces.forEach((t,i)=>actual.tans[i].transform(new Vector(t.x,t.y),t.rotation));hints=Number.isInteger(checkpoint.hints)&&checkpoint.hints>=0&&checkpoint.hints<=7?checkpoint.hints:0;actual.tans.forEach((_,i)=>trySnap(i));render();}
+if(Number.isInteger(checkpoint?.selected)&&checkpoint.selected>=0&&checkpoint.selected<7){selected=checkpoint.selected;render();}
+window.MathPhysicsSync?.register('tangram-flat',()=>({schemaVersion:1,levelId:goal+'/'+$('challenge-mode').value,goal,difficulty:$('challenge-mode').value,hints,selected,pieces:actual.tans.map((t,i)=>({id:'p'+(i+1),x:t.position.x,y:t.position.y,rotation:t.rotation}))}),window);
 window.render_game_to_text=()=>JSON.stringify({goal,difficulty:$('challenge-mode').value,placed:slots.size,hints,save:saves.snapshot()});
 window.__mpReady=true;if(parent!==window)parent.postMessage({type:'mp-ready'},location.origin);

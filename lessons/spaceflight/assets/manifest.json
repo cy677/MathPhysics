@@ -1,0 +1,814 @@
+[
+  {
+    "id": "us-crew-prepare",
+    "title": "猎鹰9号 · 载人龙 · ISS · 出发前的检查",
+    "group": "任务步骤",
+    "file": "us-crew-prepare.svg",
+    "sha256": "66a4f92941e51fc3467d63b9a1ff3e7ebcb193c0ff83d65a5c832c0a00383745"
+  },
+  {
+    "id": "us-crew-launch",
+    "title": "猎鹰9号 · 载人龙 · ISS · 点火，离开发射台",
+    "group": "任务步骤",
+    "file": "us-crew-launch.svg",
+    "sha256": "3e2975d15b603d2f357f07722a55eab3d53f3ef43debc73f8e2c2568f634a3e3"
+  },
+  {
+    "id": "us-crew-turn",
+    "title": "猎鹰9号 · 载人龙 · ISS · 逐渐转弯，积累水平速度",
+    "group": "任务步骤",
+    "file": "us-crew-turn.svg",
+    "sha256": "3ee0f9401cb873a69e3370953b532b28c5bf8866151c5d1f8b138007f593b448"
+  },
+  {
+    "id": "us-crew-maxq",
+    "title": "猎鹰9号 · 载人龙 · ISS · 穿过气动载荷较大区段",
+    "group": "任务步骤",
+    "file": "us-crew-maxq.svg",
+    "sha256": "ee786816e6c153430e6a508bbf92e9afed465ccc63ce910336771764e975c822"
+  },
+  {
+    "id": "us-crew-fstage",
+    "title": "猎鹰9号 · 载人龙 · ISS · 一、二级分开",
+    "group": "任务步骤",
+    "file": "us-crew-fstage.svg",
+    "sha256": "87db000cb141dc77e017c2106a6bc0cd43509d47cc6a04a392fea24db9b7aded"
+  },
+  {
+    "id": "us-crew-upper",
+    "title": "猎鹰9号 · 载人龙 · ISS · 持续加速、关机并进入轨道",
+    "group": "任务步骤",
+    "file": "us-crew-upper.svg",
+    "sha256": "e85e4287d6492ae11afcc7bf47a7d1965d6a32547102a4bbd46b51459894428b"
+  },
+  {
+    "id": "us-crew-craftSep",
+    "title": "猎鹰9号 · 载人龙 · ISS · 船箭分离",
+    "group": "任务步骤",
+    "file": "us-crew-craftSep.svg",
+    "sha256": "3f5530cd3ab95f234e54fae343f96f54448a5ba686e7d4a1fb7fa39440a5e79d"
+  },
+  {
+    "id": "us-crew-activation",
+    "title": "猎鹰9号 · 载人龙 · ISS · 飞船独立飞行",
+    "group": "任务步骤",
+    "file": "us-crew-activation.svg",
+    "sha256": "cbb1120cbc5d8e86e6b3aa9d330b77b1f1b984af37a074f48b36bff6f0ca44dd"
+  },
+  {
+    "id": "us-crew-phase",
+    "title": "猎鹰9号 · 载人龙 · ISS · 变轨与交会",
+    "group": "任务步骤",
+    "file": "us-crew-phase.svg",
+    "sha256": "0fda5ec053719d758a6e1dcb34986acd7820e88dac423df57ea33396b74942bf"
+  },
+  {
+    "id": "us-crew-approach",
+    "title": "猎鹰9号 · 载人龙 · ISS · 近距离接近",
+    "group": "任务步骤",
+    "file": "us-crew-approach.svg",
+    "sha256": "cabc0d6b714d8cc7af3049d866d64fb1b8b7b0ca9449c0bb955377e6d9b7cb88"
+  },
+  {
+    "id": "us-crew-dock",
+    "title": "猎鹰9号 · 载人龙 · ISS · 捕获、锁紧、检查后开舱",
+    "group": "任务步骤",
+    "file": "us-crew-dock.svg",
+    "sha256": "8e51c6f44ccd2b007a9d8923093646d4613c0eb0c7674e3f6780adc17ae181c1"
+  },
+  {
+    "id": "us-crew-stay",
+    "title": "猎鹰9号 · 载人龙 · ISS · 空间站里的工作与生活",
+    "group": "任务步骤",
+    "file": "us-crew-stay.svg",
+    "sha256": "39f68e83dab6847fbd176a16218ee949496e631741760c930842dfc51d1f5687"
+  },
+  {
+    "id": "us-crew-undock",
+    "title": "猎鹰9号 · 载人龙 · ISS · 告别空间站，撤离",
+    "group": "任务步骤",
+    "file": "us-crew-undock.svg",
+    "sha256": "ad3406357138fdf562020d4fa20bc36d75e0ef622ae1e3b29f19d09adc43582f"
+  },
+  {
+    "id": "us-crew-deorbit",
+    "title": "猎鹰9号 · 载人龙 · ISS · 离轨点火",
+    "group": "任务步骤",
+    "file": "us-crew-deorbit.svg",
+    "sha256": "d7e2a5ed57b2fdb050660b8eb20ce6bb8fb3d89b4ba053d5b8eb060841f75a92"
+  },
+  {
+    "id": "us-crew-trunk",
+    "title": "猎鹰9号 · 载人龙 · ISS · 龙飞船尾舱分离",
+    "group": "任务步骤",
+    "file": "us-crew-trunk.svg",
+    "sha256": "c625e8139c7b606811f6152b4d9139e3f0559d259b3a7f717803318331b08f45"
+  },
+  {
+    "id": "us-crew-entry",
+    "title": "猎鹰9号 · 载人龙 · ISS · 再入：减速与防热",
+    "group": "任务步骤",
+    "file": "us-crew-entry.svg",
+    "sha256": "259711451b41dae72f831223a3955d55e4300bd7227b7c7b3f2692b40f494b8c"
+  },
+  {
+    "id": "us-crew-chute",
+    "title": "猎鹰9号 · 载人龙 · ISS · 降落伞接力减速",
+    "group": "任务步骤",
+    "file": "us-crew-chute.svg",
+    "sha256": "9e13781db849a7a93f4829f2c2ea00c83cf32dfb773cea4f95fd8559055006ff"
+  },
+  {
+    "id": "us-crew-splash",
+    "title": "猎鹰9号 · 载人龙 · ISS · 海上溅落与回收",
+    "group": "任务步骤",
+    "file": "us-crew-splash.svg",
+    "sha256": "2502311decc92da4dd444e99f1e442f1aec140de7dc8f60bc71c98606bc59887"
+  },
+  {
+    "id": "us-crew-finish",
+    "title": "猎鹰9号 · 载人龙 · ISS · 乘员出舱，任务交接",
+    "group": "任务步骤",
+    "file": "us-crew-finish.svg",
+    "sha256": "b5edd40c0583ca375f19e559a674abbaf4dce5edb4670e96bbb3468c09487749"
+  },
+  {
+    "id": "us-crew-recovery-separate",
+    "title": "分离，二级继续推进",
+    "group": "猎鹰9回收",
+    "file": "us-crew-recovery-separate.svg",
+    "sha256": "12b06ad9aed1b07cc5053db0ef0140ec14949eaf07993ad8ba9206b0d0dff8b4"
+  },
+  {
+    "id": "us-crew-recovery-flip",
+    "title": "冷气喷射，一级掉头",
+    "group": "猎鹰9回收",
+    "file": "us-crew-recovery-flip.svg",
+    "sha256": "e5339b960c153814b78293be9f994132710406f05c8989b4ff6c5f72bc969fa4"
+  },
+  {
+    "id": "us-crew-recovery-coast",
+    "title": "越过最高点，转入下降",
+    "group": "猎鹰9回收",
+    "file": "us-crew-recovery-coast.svg",
+    "sha256": "b2fdb1445f09452336f75b3f78491dfd0b2d4a45c25a19f0029a54d3b2a9af80"
+  },
+  {
+    "id": "us-crew-recovery-entryBurn",
+    "title": "再入点火，再次关机",
+    "group": "猎鹰9回收",
+    "file": "us-crew-recovery-entryBurn.svg",
+    "sha256": "ea9b25265caadc3e40b9c6dd9ae70b5dcca7ba3c07bdba5e1a41ad57a8699826"
+  },
+  {
+    "id": "us-crew-recovery-aero",
+    "title": "关机下降，栅格翼引导",
+    "group": "猎鹰9回收",
+    "file": "us-crew-recovery-aero.svg",
+    "sha256": "6628e2c7c794d2ac1e2c1766e05a3ebbf0d95486974675d57b1d1c8ff6ded982"
+  },
+  {
+    "id": "us-crew-recovery-landingBurn",
+    "title": "着陆点火，末段减速",
+    "group": "猎鹰9回收",
+    "file": "us-crew-recovery-landingBurn.svg",
+    "sha256": "c06d1f94a13beda8723daa1709a340b8e0cf19839ea69147a65e3329c180fd92"
+  },
+  {
+    "id": "us-crew-recovery-legs",
+    "title": "展开支腿，缓慢接近",
+    "group": "猎鹰9回收",
+    "file": "us-crew-recovery-legs.svg",
+    "sha256": "5f3871ae2300d793a05c7bb299b3377eb2492def2692dc8a4d8e2961694798f4"
+  },
+  {
+    "id": "us-crew-recovery-touchdown",
+    "title": "接触平台，发动机关机",
+    "group": "猎鹰9回收",
+    "file": "us-crew-recovery-touchdown.svg",
+    "sha256": "62dff547a5d225d05f6d824715a943bfa1147307163a5f845d453119bfbeec28"
+  },
+  {
+    "id": "us-sat-prepare",
+    "title": "猎鹰9号 · 卫星入轨 · 出发前的检查",
+    "group": "任务步骤",
+    "file": "us-sat-prepare.svg",
+    "sha256": "893cb5ea05cd2b8e9a3ca142113bd6a94d47b6ef310b83c661e038e765318670"
+  },
+  {
+    "id": "us-sat-launch",
+    "title": "猎鹰9号 · 卫星入轨 · 点火，离开发射台",
+    "group": "任务步骤",
+    "file": "us-sat-launch.svg",
+    "sha256": "906346e990d91f892f5014327d6a4be754efe7c5db81c46ba312a137bbc58e86"
+  },
+  {
+    "id": "us-sat-turn",
+    "title": "猎鹰9号 · 卫星入轨 · 逐渐转弯，积累水平速度",
+    "group": "任务步骤",
+    "file": "us-sat-turn.svg",
+    "sha256": "22268fcb153c32c0085c3780bbe6501f34baea9f8cd91e780340845bff4713b1"
+  },
+  {
+    "id": "us-sat-maxq",
+    "title": "猎鹰9号 · 卫星入轨 · 穿过气动载荷较大区段",
+    "group": "任务步骤",
+    "file": "us-sat-maxq.svg",
+    "sha256": "fe4504648194ef7b15feefa1ab682b734229b0c362c2cf4784295800f4460cf8"
+  },
+  {
+    "id": "us-sat-fstage",
+    "title": "猎鹰9号 · 卫星入轨 · 一、二级分开",
+    "group": "任务步骤",
+    "file": "us-sat-fstage.svg",
+    "sha256": "3b850895cf73480b9e75c6e679d7f360682f8bd3262e85c57f4c3bcbcea366eb"
+  },
+  {
+    "id": "us-sat-fairing",
+    "title": "猎鹰9号 · 卫星入轨 · 保护罩分离",
+    "group": "任务步骤",
+    "file": "us-sat-fairing.svg",
+    "sha256": "74bbc7dc0205dce97486d2cf7d2f41cdd98cc5f025aa057cbd07b56d112c2dfa"
+  },
+  {
+    "id": "us-sat-upper",
+    "title": "猎鹰9号 · 卫星入轨 · 持续加速、关机并进入轨道",
+    "group": "任务步骤",
+    "file": "us-sat-upper.svg",
+    "sha256": "1e51be440783449feefd03e860cfe524f18d485223d70a08a5e416ac78962208"
+  },
+  {
+    "id": "us-sat-deploy",
+    "title": "猎鹰9号 · 卫星入轨 · 卫星与火箭分离",
+    "group": "任务步骤",
+    "file": "us-sat-deploy.svg",
+    "sha256": "a07fc21d7a5b48636a097f70122556d57c49f2201e6785172c6dead71b470f48"
+  },
+  {
+    "id": "us-sat-commission",
+    "title": "猎鹰9号 · 卫星入轨 · 展开、调姿与在轨测试",
+    "group": "任务步骤",
+    "file": "us-sat-commission.svg",
+    "sha256": "878230a507ea9b791fdd0efc7865da5a5a5f8e872eee068ec1cb0d42ed005ce7"
+  },
+  {
+    "id": "us-sat-service",
+    "title": "猎鹰9号 · 卫星入轨 · 在轨服务与寿命结束",
+    "group": "任务步骤",
+    "file": "us-sat-service.svg",
+    "sha256": "e54e6899bd636d7e8e6055781379a22f81bbc2ad6aa4d58eb6d2cdc828be17dc"
+  },
+  {
+    "id": "us-sat-recovery-separate",
+    "title": "分离，二级继续推进",
+    "group": "猎鹰9回收",
+    "file": "us-sat-recovery-separate.svg",
+    "sha256": "9df1b2e1049e06cd8c5bdc85d1e2ed510cb43b584bcc9b194d9236853de49342"
+  },
+  {
+    "id": "us-sat-recovery-flip",
+    "title": "冷气喷射，一级掉头",
+    "group": "猎鹰9回收",
+    "file": "us-sat-recovery-flip.svg",
+    "sha256": "86d674edaa1bc8932b26d5cfa0f4788648d35037f4185804192eb50fab5a3831"
+  },
+  {
+    "id": "us-sat-recovery-coast",
+    "title": "越过最高点，转入下降",
+    "group": "猎鹰9回收",
+    "file": "us-sat-recovery-coast.svg",
+    "sha256": "13bac0ea967b29b45cc603cb0228c98981b5ce2aaf3f3f0f6761f46bbfc318a0"
+  },
+  {
+    "id": "us-sat-recovery-entryBurn",
+    "title": "再入点火，再次关机",
+    "group": "猎鹰9回收",
+    "file": "us-sat-recovery-entryBurn.svg",
+    "sha256": "0d13d25e280d0a6a3be1e6c805d6491053d53df2394281bdaf9c416f2529e632"
+  },
+  {
+    "id": "us-sat-recovery-aero",
+    "title": "关机下降，栅格翼引导",
+    "group": "猎鹰9回收",
+    "file": "us-sat-recovery-aero.svg",
+    "sha256": "5b34c3d72d6f6d755a3f76a838219fe7bbe35b4a3991d9b60ec5610c1deee23e"
+  },
+  {
+    "id": "us-sat-recovery-landingBurn",
+    "title": "着陆点火，末段减速",
+    "group": "猎鹰9回收",
+    "file": "us-sat-recovery-landingBurn.svg",
+    "sha256": "6b3af20cc58bfa8579280cf382cd497f254fc1b6ca44efcf917e7ccbf4f33351"
+  },
+  {
+    "id": "us-sat-recovery-legs",
+    "title": "展开支腿，缓慢接近",
+    "group": "猎鹰9回收",
+    "file": "us-sat-recovery-legs.svg",
+    "sha256": "54970d4d35df47236731154029aa5aabd6a6da6cbc783e68ea20c7958f3549a6"
+  },
+  {
+    "id": "us-sat-recovery-touchdown",
+    "title": "接触平台，发动机关机",
+    "group": "猎鹰9回收",
+    "file": "us-sat-recovery-touchdown.svg",
+    "sha256": "70760f9ea765b23c5189c98d1e9f0a7bd792841045d3f589a41cc671b9ac6299"
+  },
+  {
+    "id": "cn-crew-prepare",
+    "title": "长征二号F · 神舟 · 天宫 · 出发前的检查",
+    "group": "任务步骤",
+    "file": "cn-crew-prepare.svg",
+    "sha256": "cea3b9a17e05f71e4f6494dd992aa9d9093775fdef2e5ff1a26304445edcdd28"
+  },
+  {
+    "id": "cn-crew-launch",
+    "title": "长征二号F · 神舟 · 天宫 · 点火，离开发射台",
+    "group": "任务步骤",
+    "file": "cn-crew-launch.svg",
+    "sha256": "a1bb390b4ac6161119cc44c373647689074a06d26bd395704e43ec4b2e07cee0"
+  },
+  {
+    "id": "cn-crew-turn",
+    "title": "长征二号F · 神舟 · 天宫 · 逐渐转弯，积累水平速度",
+    "group": "任务步骤",
+    "file": "cn-crew-turn.svg",
+    "sha256": "0a5b0f93dd52977a1699666fcb4a47bcc1b8822a96348d507d428e03ccd8d08d"
+  },
+  {
+    "id": "cn-crew-tower",
+    "title": "长征二号F · 神舟 · 天宫 · 逃逸塔正常抛离",
+    "group": "任务步骤",
+    "file": "cn-crew-tower.svg",
+    "sha256": "099fb779f57e7c0db60554486fe9009dc50c6e507df6f7764909d9c1165730d5"
+  },
+  {
+    "id": "cn-crew-boosters",
+    "title": "长征二号F · 神舟 · 天宫 · 四枚助推器分离",
+    "group": "任务步骤",
+    "file": "cn-crew-boosters.svg",
+    "sha256": "eaafd51883121c92b42d3e149e1afdda20c93be5fbeaa08217ff3aa860094a90"
+  },
+  {
+    "id": "cn-crew-cstage",
+    "title": "长征二号F · 神舟 · 天宫 · 芯一级分离，二级接力",
+    "group": "任务步骤",
+    "file": "cn-crew-cstage.svg",
+    "sha256": "4dcb397c112202704800894bee691b088d14d6586045d406dcf0aebdf81869df"
+  },
+  {
+    "id": "cn-crew-fairing",
+    "title": "长征二号F · 神舟 · 天宫 · 保护罩分离",
+    "group": "任务步骤",
+    "file": "cn-crew-fairing.svg",
+    "sha256": "c1f6171934cd31ad5c328c63d822e20e6f40ef9cb39141e5d80dfc0e614835a1"
+  },
+  {
+    "id": "cn-crew-upper",
+    "title": "长征二号F · 神舟 · 天宫 · 持续加速、关机并进入轨道",
+    "group": "任务步骤",
+    "file": "cn-crew-upper.svg",
+    "sha256": "2d5b1a33f9cb8210c335ca8f4e6bdfaefd8d28f710a19fc99568535361b3361f"
+  },
+  {
+    "id": "cn-crew-craftSep",
+    "title": "长征二号F · 神舟 · 天宫 · 船箭分离",
+    "group": "任务步骤",
+    "file": "cn-crew-craftSep.svg",
+    "sha256": "c36f6250d7e8e4160824f7d020dd78256bb9d257292e85bedad8cef80ca8f00c"
+  },
+  {
+    "id": "cn-crew-activation",
+    "title": "长征二号F · 神舟 · 天宫 · 飞船独立飞行",
+    "group": "任务步骤",
+    "file": "cn-crew-activation.svg",
+    "sha256": "762a6d0ea216ef71985ca304a468048168dd39e31874991d94e89e1fa5e36e30"
+  },
+  {
+    "id": "cn-crew-phase",
+    "title": "长征二号F · 神舟 · 天宫 · 变轨与交会",
+    "group": "任务步骤",
+    "file": "cn-crew-phase.svg",
+    "sha256": "cb3160a62bd9e9282b087607ddf0f0eaeb9720a5e4888ccebbad3216e2eaf796"
+  },
+  {
+    "id": "cn-crew-approach",
+    "title": "长征二号F · 神舟 · 天宫 · 近距离接近",
+    "group": "任务步骤",
+    "file": "cn-crew-approach.svg",
+    "sha256": "d3f5e909aee3d33f54b93c71fc6cdceec1cb66bc1f697b4cf387aeb0aeaf0621"
+  },
+  {
+    "id": "cn-crew-dock",
+    "title": "长征二号F · 神舟 · 天宫 · 捕获、锁紧、检查后开舱",
+    "group": "任务步骤",
+    "file": "cn-crew-dock.svg",
+    "sha256": "ac2822d3eb5a0db00455d1475cd9f2efc47ef4172fc79a57e701ff2b20e74ddf"
+  },
+  {
+    "id": "cn-crew-stay",
+    "title": "长征二号F · 神舟 · 天宫 · 空间站里的工作与生活",
+    "group": "任务步骤",
+    "file": "cn-crew-stay.svg",
+    "sha256": "9db64ff04739b3e66bb5252dacb742d7711a570c4f74ae49e99d34d991cb9ec1"
+  },
+  {
+    "id": "cn-crew-undock",
+    "title": "长征二号F · 神舟 · 天宫 · 告别空间站，撤离",
+    "group": "任务步骤",
+    "file": "cn-crew-undock.svg",
+    "sha256": "2f96cefe29952dba5cc66ad645fbbffa0a75da9e34894450ec5ef93f3759ba3b"
+  },
+  {
+    "id": "cn-crew-orbitalSep",
+    "title": "长征二号F · 神舟 · 天宫 · 神舟轨道舱分离",
+    "group": "任务步骤",
+    "file": "cn-crew-orbitalSep.svg",
+    "sha256": "c7d8c43cd952fbef47523948b74a846127b36d18250568ffef0d3c1b769dad5f"
+  },
+  {
+    "id": "cn-crew-deorbit",
+    "title": "长征二号F · 神舟 · 天宫 · 离轨点火",
+    "group": "任务步骤",
+    "file": "cn-crew-deorbit.svg",
+    "sha256": "934436dab9394f13489814b469f46f2dfaa94c532c5b038e75573c2afb02f694"
+  },
+  {
+    "id": "cn-crew-serviceSep",
+    "title": "长征二号F · 神舟 · 天宫 · 推进舱分离",
+    "group": "任务步骤",
+    "file": "cn-crew-serviceSep.svg",
+    "sha256": "3a2385d140fdbef03dccad8f7f6fd5d7dde5b7dd4a627dc267b17e97a72fe8c3"
+  },
+  {
+    "id": "cn-crew-entry",
+    "title": "长征二号F · 神舟 · 天宫 · 再入：减速与防热",
+    "group": "任务步骤",
+    "file": "cn-crew-entry.svg",
+    "sha256": "dfffc5074c218e066fabb31a671a9c74ddec79c42c3e0e80c41523fcc896f492"
+  },
+  {
+    "id": "cn-crew-chute",
+    "title": "长征二号F · 神舟 · 天宫 · 降落伞接力减速",
+    "group": "任务步骤",
+    "file": "cn-crew-chute.svg",
+    "sha256": "22263b382672d5c9f751dc17543ca8727466a0b5bba902e9d2088b6a81f93c9e"
+  },
+  {
+    "id": "cn-crew-land",
+    "title": "长征二号F · 神舟 · 天宫 · 陆地缓冲着陆与搜救",
+    "group": "任务步骤",
+    "file": "cn-crew-land.svg",
+    "sha256": "174b30be98705031e0113fd7ba75bd48cfc691b0a38ecdf4bc448afd9f80bd97"
+  },
+  {
+    "id": "cn-crew-finish",
+    "title": "长征二号F · 神舟 · 天宫 · 乘员出舱，任务交接",
+    "group": "任务步骤",
+    "file": "cn-crew-finish.svg",
+    "sha256": "af01cf61db7ff6288d456e27eca64285353e182f84b76ced78de1a809105f23e"
+  },
+  {
+    "id": "cn-sat-prepare",
+    "title": "长征十号乙 · 卫星入轨与一级回收 · 出发前的检查",
+    "group": "任务步骤",
+    "file": "cn-sat-prepare.svg",
+    "sha256": "8fc591d72083ea631e47e05111b8afbe3b3f8ef51e107170db5ab011206b7610"
+  },
+  {
+    "id": "cn-sat-launch",
+    "title": "长征十号乙 · 卫星入轨与一级回收 · 点火，离开发射台",
+    "group": "任务步骤",
+    "file": "cn-sat-launch.svg",
+    "sha256": "8f6a35d0c69dde051825aa0d0898c9a3bf32d6e6a40925672658ba0193dd8055"
+  },
+  {
+    "id": "cn-sat-turn",
+    "title": "长征十号乙 · 卫星入轨与一级回收 · 逐渐转弯，积累水平速度",
+    "group": "任务步骤",
+    "file": "cn-sat-turn.svg",
+    "sha256": "b4e0614fb53098d7e6a6c28a704806a3f74a64be2dad51ebe1c1c4a97a260f4d"
+  },
+  {
+    "id": "cn-sat-maxq",
+    "title": "长征十号乙 · 卫星入轨与一级回收 · 穿过气动载荷较大区段",
+    "group": "任务步骤",
+    "file": "cn-sat-maxq.svg",
+    "sha256": "454b55da3e1861277a1e10d532783c6f7a55598cd770c650fc57856641938e7e"
+  },
+  {
+    "id": "cn-sat-cstage",
+    "title": "长征十号乙 · 卫星入轨与一级回收 · 芯一级分离，二级接力",
+    "group": "任务步骤",
+    "file": "cn-sat-cstage.svg",
+    "sha256": "4272386c94bc46bbba71cc25594d62752ff31047351118391a64e42942009d61"
+  },
+  {
+    "id": "cn-sat-fairing",
+    "title": "长征十号乙 · 卫星入轨与一级回收 · 保护罩分离",
+    "group": "任务步骤",
+    "file": "cn-sat-fairing.svg",
+    "sha256": "2c56e262515d42600e36d601a885002e4553f07800d828a2a674eb06cd71574e"
+  },
+  {
+    "id": "cn-sat-upper",
+    "title": "长征十号乙 · 卫星入轨与一级回收 · 持续加速、关机并进入轨道",
+    "group": "任务步骤",
+    "file": "cn-sat-upper.svg",
+    "sha256": "91f991970e03e0d52d50a9b0af31ac3a1234f192f2dac5d596b33700905f4538"
+  },
+  {
+    "id": "cn-sat-coast",
+    "title": "长征十号乙 · 卫星入轨与一级回收 · 二级关机后继续滑行",
+    "group": "任务步骤",
+    "file": "cn-sat-coast.svg",
+    "sha256": "2ef45cfa6e8296a8a0cdae92c26ea43a554aa722e4b6873d5012c85ece73535d"
+  },
+  {
+    "id": "cn-sat-deploy",
+    "title": "长征十号乙 · 卫星入轨与一级回收 · 卫星与火箭分离",
+    "group": "任务步骤",
+    "file": "cn-sat-deploy.svg",
+    "sha256": "e114513ac3fe7e84061de854721a7467d73915e629a4a878584f2b42c9c4ba61"
+  },
+  {
+    "id": "cn-sat-commission",
+    "title": "长征十号乙 · 卫星入轨与一级回收 · 展开、调姿与在轨测试",
+    "group": "任务步骤",
+    "file": "cn-sat-commission.svg",
+    "sha256": "bca7ca962a26de40fd351783c3af6298669c76f8d1b61197077de31b459d12f4"
+  },
+  {
+    "id": "cn-sat-service",
+    "title": "长征十号乙 · 卫星入轨与一级回收 · 在轨服务与寿命结束",
+    "group": "任务步骤",
+    "file": "cn-sat-service.svg",
+    "sha256": "41c49a31f11e699022f83ec2ec320a75d9962f24e21bfa6716e1570f461bb479"
+  },
+  {
+    "id": "cn-sat-transfer",
+    "title": "长征十号乙 · 卫星入轨与一级回收 · 拓展：卫星怎样改变轨道？",
+    "group": "任务步骤",
+    "file": "cn-sat-transfer.svg",
+    "sha256": "276783413df0a0b3d4f71d2cb23966c5f49d1e7e8313199adfbe100cbed625d7"
+  },
+  {
+    "id": "cn-sat-recovery-separate",
+    "title": "分离：两条路线",
+    "group": "长十乙回收",
+    "file": "cn-sat-recovery-separate.svg",
+    "sha256": "faddd945983bce26939f62ac3cfe0b55a47a09e1790a4fa500fe6a1026ff05d4"
+  },
+  {
+    "id": "cn-sat-recovery-orient",
+    "title": "调整返回姿态",
+    "group": "长十乙回收",
+    "file": "cn-sat-recovery-orient.svg",
+    "sha256": "a0a20d90bfde816c763e5a8f9b27c49b037708e6c452604469c1fec01394db4d"
+  },
+  {
+    "id": "cn-sat-recovery-descend",
+    "title": "下降与气动作用",
+    "group": "长十乙回收",
+    "file": "cn-sat-recovery-descend.svg",
+    "sha256": "16567433cef76037e2b0e881ccb71bfe5e0a1d0331715e1c213b42dbc250262f"
+  },
+  {
+    "id": "cn-sat-recovery-brake",
+    "title": "点火减小下降速度",
+    "group": "长十乙回收",
+    "file": "cn-sat-recovery-brake.svg",
+    "sha256": "2b15f88db2c15309bbec0444ddb3b9eecab4ed050163d91b1b5168572e51560d"
+  },
+  {
+    "id": "cn-sat-recovery-align",
+    "title": "对准网系捕获区",
+    "group": "长十乙回收",
+    "file": "cn-sat-recovery-align.svg",
+    "sha256": "520c3cf7f4d75ef0f5604ab50e95d999243c102487ff7f0638b4fcc20d1080a1"
+  },
+  {
+    "id": "cn-sat-recovery-capture",
+    "title": "挂索与网系捕获",
+    "group": "长十乙回收",
+    "file": "cn-sat-recovery-capture.svg",
+    "sha256": "a66b1b36ba2cc3e6b5bfa9aa8058019b31e009219da24cb374267ecad548b9c6"
+  },
+  {
+    "id": "cn-sat-recovery-secure",
+    "title": "承托与回收检查",
+    "group": "长十乙回收",
+    "file": "cn-sat-recovery-secure.svg",
+    "sha256": "c929d409660212def313bb1fa788e0613e517fa3d27127480fca54313392237e"
+  },
+  {
+    "id": "atlas-f9-0",
+    "title": "猎鹰9号 · 一级",
+    "group": "飞行器图解",
+    "file": "atlas-f9-0.svg",
+    "sha256": "29752693748f9bb7752b50dc01535f43d783007b9b2164b657b9badea5c802fa"
+  },
+  {
+    "id": "atlas-f9-1",
+    "title": "猎鹰9号 · 二级",
+    "group": "飞行器图解",
+    "file": "atlas-f9-1.svg",
+    "sha256": "bfb22777e062d39d4f688611d3ebb847be8e40dfbb471838d527f797fb12be4b"
+  },
+  {
+    "id": "atlas-f9-2",
+    "title": "猎鹰9号 · 任务顶部",
+    "group": "飞行器图解",
+    "file": "atlas-f9-2.svg",
+    "sha256": "8dbc0aec1b9e8c622edfed3c844c378cee27f1eafcaf1d4125dcbaca3cd58fa1"
+  },
+  {
+    "id": "atlas-dragon-0",
+    "title": "载人龙 Crew Dragon · 乘员舱",
+    "group": "飞行器图解",
+    "file": "atlas-dragon-0.svg",
+    "sha256": "c7cb6e233b1d811405f7d3028c411ab06767bd79fa73995fb48393560025b90b"
+  },
+  {
+    "id": "atlas-dragon-1",
+    "title": "载人龙 Crew Dragon · 鼻锥",
+    "group": "飞行器图解",
+    "file": "atlas-dragon-1.svg",
+    "sha256": "41a17f6b5e8b86998fef5d7fe666588e7570c310d9c9f6f94f4b6fed3925923c"
+  },
+  {
+    "id": "atlas-dragon-2",
+    "title": "载人龙 Crew Dragon · 尾舱",
+    "group": "飞行器图解",
+    "file": "atlas-dragon-2.svg",
+    "sha256": "0674f28b70edbc2a7cf7abf1713657e0ed301849a229caa2ba6ad5babb190951"
+  },
+  {
+    "id": "atlas-iss-0",
+    "title": "国际空间站 ISS · 实验与生活舱",
+    "group": "飞行器图解",
+    "file": "atlas-iss-0.svg",
+    "sha256": "d033a49c0c184a1275419400f606d08c53e80a4bf29ab78de4c65257ccdaaf02"
+  },
+  {
+    "id": "atlas-iss-1",
+    "title": "国际空间站 ISS · 桁架与太阳翼",
+    "group": "飞行器图解",
+    "file": "atlas-iss-1.svg",
+    "sha256": "eb44b1cce3123c673bf44532e50b87c3ab776ae6a0737cecfbc6910106e18aeb"
+  },
+  {
+    "id": "atlas-iss-2",
+    "title": "国际空间站 ISS · 对接口与机械臂",
+    "group": "飞行器图解",
+    "file": "atlas-iss-2.svg",
+    "sha256": "564876da5305af38121036270b6235c1c46e9e673d2620165396f181a76ca28e"
+  },
+  {
+    "id": "atlas-cz2f-0",
+    "title": "长征二号F · 逃逸塔",
+    "group": "飞行器图解",
+    "file": "atlas-cz2f-0.svg",
+    "sha256": "33b727786d297e81d92ea37011b3a635c8b4e7a44c9ca2b9ee900c053abbb939"
+  },
+  {
+    "id": "atlas-cz2f-1",
+    "title": "长征二号F · 四枚助推器",
+    "group": "飞行器图解",
+    "file": "atlas-cz2f-1.svg",
+    "sha256": "6221642799c09673d8293d615a67969fa65911fe960df62c049e0152d6865f36"
+  },
+  {
+    "id": "atlas-cz2f-2",
+    "title": "长征二号F · 两级芯级",
+    "group": "飞行器图解",
+    "file": "atlas-cz2f-2.svg",
+    "sha256": "c6bef7cb73ad7a8878a85b5e11b438c6248ceb0aca58151ecf89f0aaaba94958"
+  },
+  {
+    "id": "atlas-shenzhou-0",
+    "title": "神舟载人飞船 · 轨道舱",
+    "group": "飞行器图解",
+    "file": "atlas-shenzhou-0.svg",
+    "sha256": "3af884610733fd3c7c6b6aa66d59f18cd809aad3060deee1fe546b67752e2009"
+  },
+  {
+    "id": "atlas-shenzhou-1",
+    "title": "神舟载人飞船 · 返回舱",
+    "group": "飞行器图解",
+    "file": "atlas-shenzhou-1.svg",
+    "sha256": "e950c12368d825a855d248324e1ef36ccb4d1a5b13da5d91d146e102eb5a84b8"
+  },
+  {
+    "id": "atlas-shenzhou-2",
+    "title": "神舟载人飞船 · 推进舱",
+    "group": "飞行器图解",
+    "file": "atlas-shenzhou-2.svg",
+    "sha256": "e487d99480fe874832faa655301b0df4a4ebb4eb3ceeca69cfeeaddaf9cd3be7"
+  },
+  {
+    "id": "atlas-tiangong-0",
+    "title": "天宫空间站 · 天和核心舱",
+    "group": "飞行器图解",
+    "file": "atlas-tiangong-0.svg",
+    "sha256": "eff8405a601e206a49fb3333043f2733efa355917aadccd7bf86d7e6bec25b18"
+  },
+  {
+    "id": "atlas-tiangong-1",
+    "title": "天宫空间站 · 问天 / 梦天",
+    "group": "飞行器图解",
+    "file": "atlas-tiangong-1.svg",
+    "sha256": "256374b7176636b36bc2c3527dd23ea21e00485b08b6958c5c431f1448fa8943"
+  },
+  {
+    "id": "atlas-tiangong-2",
+    "title": "天宫空间站 · 长征五号B",
+    "group": "飞行器图解",
+    "file": "atlas-tiangong-2.svg",
+    "sha256": "9d0941cda42106cf0249dc07897acfe35157a6e24812714d967e76accb0e388c"
+  },
+  {
+    "id": "atlas-cz10b-0",
+    "title": "长征十号乙 CZ-10B · 可回收一级",
+    "group": "飞行器图解",
+    "file": "atlas-cz10b-0.svg",
+    "sha256": "92a8b3a988d3d726aa17ee499209e77c621517cc3e122bb7cea0055f0552a623"
+  },
+  {
+    "id": "atlas-cz10b-1",
+    "title": "长征十号乙 CZ-10B · 二级",
+    "group": "飞行器图解",
+    "file": "atlas-cz10b-1.svg",
+    "sha256": "b6662431b7654c28345df7bc5fadefb84514e83041e653ea5e66b7bc089f9a63"
+  },
+  {
+    "id": "atlas-cz10b-2",
+    "title": "长征十号乙 CZ-10B · 整流罩与挂索机构",
+    "group": "飞行器图解",
+    "file": "atlas-cz10b-2.svg",
+    "sha256": "43707f5eaabfe6e6900d199fda13cf44a2771ac138f81fec7c92fb18f2d402be"
+  },
+  {
+    "id": "lab-thrust",
+    "title": "推力够不够？",
+    "group": "原理实验",
+    "file": "lab-thrust.svg",
+    "sha256": "47c025d6b9579ddb07131ffe8766dd7d307ffda6e2fb08cc2540a9b7bd5c3a21"
+  },
+  {
+    "id": "lab-staging",
+    "title": "为什么要分级？",
+    "group": "原理实验",
+    "file": "lab-staging.svg",
+    "sha256": "a4fc306362cebf356ae6cdf175f926ede237f7ad4ada66503fad06632d7f10bd"
+  },
+  {
+    "id": "lab-orbit",
+    "title": "怎样才算入轨？",
+    "group": "原理实验",
+    "file": "lab-orbit.svg",
+    "sha256": "7451234f0e6b39c15a34cc75e61453a5d3c4c7c8075da7fce620e50eb1529d08"
+  },
+  {
+    "id": "lab-dock",
+    "title": "慢慢靠拢的对接",
+    "group": "原理实验",
+    "file": "lab-dock.svg",
+    "sha256": "0e912c55aa7d167ca06f0a0f8fb9933f73041d63018660a805a90d4c977cce11"
+  },
+  {
+    "id": "lab-power",
+    "title": "太阳翼转向哪里？",
+    "group": "原理实验",
+    "file": "lab-power.svg",
+    "sha256": "b8d2586822eb1e547a73e8edab8cf92a3005e171df7a210dab7dadc819ca8127"
+  },
+  {
+    "id": "lab-freefall",
+    "title": "为什么会漂浮？",
+    "group": "原理实验",
+    "file": "lab-freefall.svg",
+    "sha256": "6762c38298df757bacdc52c97ee91e9468ce97184d507645a558617c861487d1"
+  },
+  {
+    "id": "lab-entry",
+    "title": "速度变成了什么？",
+    "group": "原理实验",
+    "file": "lab-entry.svg",
+    "sha256": "669edc1125b7c752c397603e430115aaddbc049b1fb83b07f0cdc3a867311c83"
+  },
+  {
+    "id": "lab-chute",
+    "title": "降落伞怎样减速？",
+    "group": "原理实验",
+    "file": "lab-chute.svg",
+    "sha256": "c5391e1f7be931a8645d14bc33e6090ffcf84416bd17960a7d2fddcd42e406f8"
+  },
+  {
+    "id": "lab-launch",
+    "title": "发射、入轨与一级回收",
+    "group": "原理实验",
+    "file": "lab-launch.svg",
+    "sha256": "fcbf7873f690b7f1a27c4e282539f4a857867006496fbc87a6afc9a14f0b044d"
+  }
+]

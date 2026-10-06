@@ -1,0 +1,1588 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "gsm8k-G08",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0254",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-4205ac9a13197696",
+      "assessmentGroup": "assessment-4205ac9a13197696",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "一块长方形地的长是宽的3倍，四周围栏总长640米。其中一条短边的围栏要全部更换。需要换多少米围栏？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "80",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "用长宽3比1和周长求短边。",
+      "hints": [
+        "两条短边各1份，两条长边各3份，共8份。"
+      ],
+      "steps": [
+        "周长占2×1+2×3=8份。",
+        "短边640÷8=80米，要更换80米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形周长"
+      ],
+      "adaptation": [
+        "英尺按同数值重设为米，非精确换算；明确只更换一条短边，重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0254",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "ed84327c36ae3037e16996f9d316b48130f4a472c81eb38f75a19ffac0c2af2c",
+        "recordSha256": "2476153d5dd76753b64336384389dab5f6d13129fceb8ba5d07e1f847a29105f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0254",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "21c51fbe5e5949c025a138d44f7c04174400f80447c35d28d5bc47f1565c928b",
+        "sourceDraftSha256": "21c51fbe5e5949c025a138d44f7c04174400f80447c35d28d5bc47f1565c928b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "edd4b4a9105e22de1585924e7623b112e08fa161a3ecd92a53107af4013298f7"
+      },
+      "contentSha256": "edd4b4a9105e22de1585924e7623b112e08fa161a3ecd92a53107af4013298f7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0347",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-abc1347ac4437471",
+      "assessmentGroup": "assessment-abc1347ac4437471",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小露要粉刷4面墙。其中2面各宽3米、高2米，第3面宽5米、高2米，第4面宽4米、高2米。所有墙面都要刷满，不扣门窗。每罐漆可刷2平方米，需要多少罐？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "15",
+          "d": "1"
+        },
+        "unit": "罐"
+      },
+      "intent": "合计四面墙面积，再除每罐覆盖面积。",
+      "hints": [
+        "2面3米宽的墙要算两次。"
+      ],
+      "steps": [
+        "总面积2×3×2+5×2+4×2=12+10+8=30平方米。",
+        "需30÷2=15罐。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形面积"
+      ],
+      "adaptation": [
+        "姓名本土化；修正原解把面积写成米的单位错误，明确无门窗扣除，重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0347",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "6fa67bf0487777393e8ce33d2dd900444ca5512902a8eed65cc120c83b107598",
+        "recordSha256": "93f1165afdfb69a423f0e61ce3192c7407f29e095e2203fd52913bd0a9354608",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0347",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "cc9852900211034cb7573b079d92966e1159b088d6dd8700d98de8f86008f941",
+        "sourceDraftSha256": "cc9852900211034cb7573b079d92966e1159b088d6dd8700d98de8f86008f941",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6e4477dc9a1171d9671f913a90d6590de7fe512152e551d8fd1f2ab5f1964f62"
+      },
+      "contentSha256": "6e4477dc9a1171d9671f913a90d6590de7fe512152e551d8fd1f2ab5f1964f62"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0394",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2605e6794d6f12a7",
+      "assessmentGroup": "assessment-2605e6794d6f12a7",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小周做了一个长方形沙坑，周长30米，长是宽的2倍。沙坑的宽是多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "按长宽关系把周长分为6份。",
+      "hints": [
+        "两条宽占2份，两条长占4份。"
+      ],
+      "steps": [
+        "周长共1+1+2+2=6份。",
+        "宽为30÷6=5米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形周长"
+      ],
+      "adaptation": [
+        "姓名本土化；英尺按同数值重设米，非精确换算，重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0394",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "7c6ffb53a148ff4930a1db4e961ea2033557f4274d3ed6f3347fe9d791db3aa1",
+        "recordSha256": "1abd56b30ddbe723aecd587850345269e9c11a54faea222f2cff044f298987d8",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0394",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c25a307b3d7a7bb1dfd225c667ad6560f0f1cf31ab4f8e1426734c36ab1e0627",
+        "sourceDraftSha256": "c25a307b3d7a7bb1dfd225c667ad6560f0f1cf31ab4f8e1426734c36ab1e0627",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "52cdf9f5ed9222c47c03a3a353a3d7e6bfd206e2c38ed715784056158c605adf"
+      },
+      "contentSha256": "52cdf9f5ed9222c47c03a3a353a3d7e6bfd206e2c38ed715784056158c605adf"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0664",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-b5b722daa1fc8bfb",
+      "assessmentGroup": "assessment-b5b722daa1fc8bfb",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "公园的长方形花坛宽4米，长比宽的2倍少1米。要给花坛四周全部围上围栏，不留开口，需要多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "22",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "先求长，再求四周周长。",
+      "hints": [
+        "花坛长为7米。"
+      ],
+      "steps": [
+        "长4×2−1=7米。",
+        "围栏需(7+4)×2=22米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形周长"
+      ],
+      "adaptation": [
+        "简化叙述并明确四周全围，重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0664",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "0bea8dc5943a7705f5e1d9ac82ee3389cbfba6269557e59f9341f7f4ff685480",
+        "recordSha256": "58a0bf5035cc713dd4fcc1d18fe63d31a4e398baa539fc01f7ca5620c51ac0af",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0664",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f377fe1dbe0415dbd9587b2f6f2db72c7f5532b28cd9d7442252ce51097e3480",
+        "sourceDraftSha256": "f377fe1dbe0415dbd9587b2f6f2db72c7f5532b28cd9d7442252ce51097e3480",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c711c8d995d98d35d0a2582ccdae3771e9d963923dc312ea20a3ccd0f11c9eaf"
+      },
+      "contentSha256": "c711c8d995d98d35d0a2582ccdae3771e9d963923dc312ea20a3ccd0f11c9eaf"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0753",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-06b0060c093bdda3",
+      "assessmentGroup": "assessment-06b0060c093bdda3",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个长方形的长是宽的4倍，面积100平方米。这个长方形的长是多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "20",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "根据面积和长宽关系求边长。",
+      "hints": [
+        "宽乘宽等于100÷4，想一想哪个正数乘自己等于25。"
+      ],
+      "steps": [
+        "把长方形分成4个边长等于宽的正方形，每个面积100÷4=25平方米。",
+        "因为5×5=25，宽为5米，长为4×5=20米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "平方数",
+        "长方形面积"
+      ],
+      "adaptation": [
+        "改为中文叙述；原解中途误写面积80，按题面100重新分块计算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0753",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "fb59629b4a98b2e5a85853c71f40b2602be1b2fe73f3ecde64b20a8e5a089a94",
+        "recordSha256": "1c19e27b9fa1c1b24d152bba0f4e16796f50878c989db0403d0461e236eea3c2",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0753",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2ff2ba08db6f0286f373d75282eebbbf5a05de0ea72dc89db2c50ebf316f6cea",
+        "sourceDraftSha256": "2ff2ba08db6f0286f373d75282eebbbf5a05de0ea72dc89db2c50ebf316f6cea",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "4314aa3cf529cee16689a24e3824df2c8935f697a62e337ca40f0dd61e16ba12"
+      },
+      "contentSha256": "4314aa3cf529cee16689a24e3824df2c8935f697a62e337ca40f0dd61e16ba12"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1024",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-43f8b94440562e9a",
+      "assessmentGroup": "assessment-43f8b94440562e9a",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小库做4面砖墙，每面长20块砖、高5块砖、厚2块砖。各面的砖分别计算，没有共用的砖，也不留空隙。共需要多少块砖？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "800",
+          "d": "1"
+        },
+        "unit": "块"
+      },
+      "intent": "用三维排布求每面砖数，再乘4。",
+      "hints": [
+        "每面要算长、高、厚三个方向。"
+      ],
+      "steps": [
+        "每面20×5×2=200块。",
+        "4面共200×4=800块。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算"
+      ],
+      "adaptation": [
+        "姓名本土化；明确四面不共用转角砖，消除围墙交接处重复计数歧义，重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1024",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "e32475b3d0b87639819fc4514fd358e2ed2cae3716890c0b2fb06b3fbee2eda9",
+        "recordSha256": "190ab29e7309af08c162bac832908fed6f82df6df5e2f42e4fa279202f37d280",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1024",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "66d2c3842d44fdd722c29b51e0335018679693282ea9f7d9d91eaa6075d02f1e",
+        "sourceDraftSha256": "66d2c3842d44fdd722c29b51e0335018679693282ea9f7d9d91eaa6075d02f1e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "35569ff0428caba0d3de1004b2fa5de6218f3ba9c65b3c2e1e8082e75223844f"
+      },
+      "contentSha256": "35569ff0428caba0d3de1004b2fa5de6218f3ba9c65b3c2e1e8082e75223844f"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1166",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2f449119f156c622",
+      "assessmentGroup": "assessment-2f449119f156c622",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小杰给3个屋顶铺瓦。每个屋顶有2个斜面，每个斜面本身是长20米、宽40米的长方形。每平方米需8片瓦，不计重叠或损耗。全部屋顶共需多少片瓦？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "38400",
+          "d": "1"
+        },
+        "unit": "片"
+      },
+      "intent": "先求六个斜面总面积，再乘每平方米瓦数。",
+      "hints": [
+        "20米和40米是斜面本身的尺寸。"
+      ],
+      "steps": [
+        "每面20×40=800平方米，3个屋顶共3×2×800=4800平方米。",
+        "需4800×8=38400片。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形面积"
+      ],
+      "adaptation": [
+        "姓名本土化；英尺按相同数值重设米，每平方英尺8片同步重设每平方米8片，非精确换算；重算所有面积和瓦量。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1166",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "c2ff4aa13706df493ecd946fefb65034e7ceb82eb26bb1c81fcceed40dd6c2d8",
+        "recordSha256": "0a94510476b1b366c95ebb37aa76752078342041bc2380719e72ea8a60b1739f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1166",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "bd47e59f9f8e72e15378caa7f14bbef39c66eaaab08f4be50b41c25f2d52bb6d",
+        "sourceDraftSha256": "bd47e59f9f8e72e15378caa7f14bbef39c66eaaab08f4be50b41c25f2d52bb6d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "7779d28537a7decd849511259611d55001dc390b5f138b4a26f6595f81346dd6"
+      },
+      "contentSha256": "7779d28537a7decd849511259611d55001dc390b5f138b4a26f6595f81346dd6"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1657",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-79a1de7bde077d44",
+      "assessmentGroup": "assessment-79a1de7bde077d44",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小禾要沿25米长的围栏种一排树。每棵成熟时可覆盖50厘米宽，相邻树的覆盖范围刚好相接，不重叠也无空隙。1米=100厘米，每棵8元，覆盖全长需要花多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "400",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "统一长度单位，求树数再乘单价。",
+      "hints": [
+        "先把25米换成2500厘米。"
+      ],
+      "steps": [
+        "围栏25×100=2500厘米，需2500÷50=50棵。",
+        "费用50×8=400元。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长度单位换算"
+      ],
+      "adaptation": [
+        "姓名本土化，美元改元；原25码围栏、1.5英尺覆盖宽重设为25米、50厘米的教学尺度，不是精确英制换算。保留长度单位转换、覆盖数量、费用目标，明确相邻覆盖相接并独立重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1657",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "a77adf4a7bb97d62ae1cfdeabc43903b7b7813718e02b24147fd785f461a3af0",
+        "recordSha256": "292679833648de83fb18a72e1b47ee999de2fbe335dbae0183ca0f514234ca1b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1657",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "995b42c78b205cf0b8f8be29628b692bd6484ab915cd1c9aa116eaa1637b53c2",
+        "sourceDraftSha256": "995b42c78b205cf0b8f8be29628b692bd6484ab915cd1c9aa116eaa1637b53c2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "3a05f26ef8a13a3de07cc18dfcc7edece1dc85c6ce07fcc424705099725d1774"
+      },
+      "contentSha256": "3a05f26ef8a13a3de07cc18dfcc7edece1dc85c6ce07fcc424705099725d1774"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2062",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-09badb84b6399e86",
+      "assessmentGroup": "assessment-09badb84b6399e86",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "教练让队员沿足球场边界跑6圈。足球场是长100米、宽50米的长方形。每名队员跑多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "1800",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "长方形周长乘圈数。",
+      "hints": [
+        "一圈等于两条长加两条宽。"
+      ],
+      "steps": [
+        "一圈(100+50)×2=300米。",
+        "6圈300×6=1800米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形周长"
+      ],
+      "adaptation": [
+        "改为中文叙述，明确沿边界一圈并重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2062",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "2a639f835580bb7a56d577c7b221774b981f3b1fb67a10745a8194224acb9c53",
+        "recordSha256": "01a3c3feda3a42fe769c57cb84a501d319dae33d0be8769fc48ceaf75f4274b1",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2062",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "95ec070a54b03c9df58b6bd6f7c67d13fdfec39ec8740524f484fa803d654de0",
+        "sourceDraftSha256": "95ec070a54b03c9df58b6bd6f7c67d13fdfec39ec8740524f484fa803d654de0",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "75bc0a974c827fc27b8af9887e02eebac726afd49b141743ec77047a038eb934"
+      },
+      "contentSha256": "75bc0a974c827fc27b8af9887e02eebac726afd49b141743ec77047a038eb934"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2372",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-38d4f9c3946d00f2",
+      "assessmentGroup": "assessment-38d4f9c3946d00f2",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小唐可骑车的范围是一个长方形街区区域：从家向北最多2个街区，向南最多2个街区，向东最多3个街区，向西最多2个街区。各街区为同样大的正方形。朋友可骑车区域面积为80个街区面积。朋友区域面积是小唐区域的多少倍？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "倍"
+      },
+      "intent": "先求小唐允许区域长宽与面积，再求倍数。",
+      "hints": [
+        "这些方向表示区域边界，不是实际骑行路线。"
+      ],
+      "steps": [
+        "小唐区域南北4个街区、东西5个街区，面积4×5=20个街区面积。",
+        "朋友区域是80÷20=4倍。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形面积"
+      ],
+      "adaptation": [
+        "姓名本土化；明确四方向为长方形边界范围，修正“几倍更大”的比较措辞为“是几倍”，重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2372",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "451b874a5b3532343165d5c3a3b335621ed7fb6e3d626c20e1239e1ec8f5d4f0",
+        "recordSha256": "d69dfa6b54401f35b397e9a06ea0311f845de83f13b4997961f4fa1a54b5ab68",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2372",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f831c52c584380605a1e949766eccdd6d77d0f397a05911a0d0774e60cc7b12b",
+        "sourceDraftSha256": "f831c52c584380605a1e949766eccdd6d77d0f397a05911a0d0774e60cc7b12b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c6d812128fa0863667485319e6e7706ad1bb93547889299892b95f3acc1acfcc"
+      },
+      "contentSha256": "c6d812128fa0863667485319e6e7706ad1bb93547889299892b95f3acc1acfcc"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2618",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-3cc354902b31adfb",
+      "assessmentGroup": "assessment-3cc354902b31adfb",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小马设计一套长16米、宽10米的长方形公寓，室内分成6个房间，不计墙厚和公共过道。5个房间面积相同，客厅面积是其中一个房间的3倍。客厅有多少平方米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "60",
+          "d": "1"
+        },
+        "unit": "平方米"
+      },
+      "intent": "把总面积按5个普通房间加3份客厅分为8份。",
+      "hints": [
+        "客厅只是1个房间，但面积占3份。"
+      ],
+      "steps": [
+        "总面积16×10=160平方米，合计5+3=8份。",
+        "每份160÷8=20平方米，客厅20×3=60平方米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形面积"
+      ],
+      "adaptation": [
+        "姓名本土化；英尺重设米非精确换算；明确6房含5普通房、不计墙厚过道，修原解房间数叙述混乱并重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2618",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "fe4f3c99168e085b96e3bc034aca42d0e78e027fa8c3da09db507cd3bfdb1b24",
+        "recordSha256": "b4b90bbe57ed4efb722e9963ccb3051bf9881492b6dac7df3f4c481d0ad22395",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2618",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "4254694cf8aa71595c2564a7cc6d4971d0b4d0646fbdf9844940dcc29320121d",
+        "sourceDraftSha256": "4254694cf8aa71595c2564a7cc6d4971d0b4d0646fbdf9844940dcc29320121d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f5996307422c0a01efab48b12e6b5ca29bf946b4ef64965949d86e32eb1a10be"
+      },
+      "contentSha256": "f5996307422c0a01efab48b12e6b5ca29bf946b4ef64965949d86e32eb1a10be"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3534",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-6a8e1df6faf912f3",
+      "assessmentGroup": "assessment-6a8e1df6faf912f3",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "正方形甲面积25平方厘米，正方形乙面积81平方厘米。两个正方形的边长相差多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "根据平方数求边长后求差。",
+      "hints": [
+        "哪两个正数分别乘自己得到25和81？"
+      ],
+      "steps": [
+        "5×5=25，所以甲边长5厘米；9×9=81，所以乙边长9厘米。",
+        "相差9−5=4厘米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "平方数",
+        "正方形面积"
+      ],
+      "adaptation": [
+        "补全原题未给的面积与长度单位，按平方厘米与厘米计算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3534",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "018be1aeb1c4886db43b22ca2d96b99a91e6fbd10962aca24e912b7f896c2369",
+        "recordSha256": "6a74e271688b63f8b2811322fc5a3629055d08cdabd6bea1689790a88acf68c2",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3534",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "550c0dffeba77d23e1eaf654f4e042ff77641c1dbcfd5b33d145458b9d17b138",
+        "sourceDraftSha256": "550c0dffeba77d23e1eaf654f4e042ff77641c1dbcfd5b33d145458b9d17b138",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b17df4147d690bd688a3904e2d909e07213814303b439173e897cf5f7853d7bf"
+      },
+      "contentSha256": "b17df4147d690bd688a3904e2d909e07213814303b439173e897cf5f7853d7bf"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-4000",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-96e84a036263ae66",
+      "assessmentGroup": "assessment-96e84a036263ae66",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小陶有两块长方形布，第一块宽4厘米、长5厘米，第二块宽3厘米、长6厘米。第一块面积比第二块多多少平方厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "平方厘米"
+      },
+      "intent": "分别求两块面积再求差。",
+      "hints": [
+        "面积用长乘宽。"
+      ],
+      "steps": [
+        "第一块4×5=20平方厘米，第二块3×6=18平方厘米。",
+        "相差20−18=2平方厘米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形面积"
+      ],
+      "adaptation": [
+        "姓名本土化；英寸按相同数值重设厘米，非精确换算，重算面积差。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-4000",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "fc1dc71086e9726688e93bc7b8fab4fabce2c6d153e3187242a81f268a00d0ee",
+        "recordSha256": "712cf1b0a32fb4f88c03dcbeb702811ea7ac24e77f6295e4bb05dfa4fca77f61",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-4000",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "d127d7e8aecee123b9dd9bc8e4f1a88358ce04ada13db74977baf667a816560d",
+        "sourceDraftSha256": "d127d7e8aecee123b9dd9bc8e4f1a88358ce04ada13db74977baf667a816560d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "5733c5e7d90e41c1fc904a70649cbc612e46815dc068a1ab161ff613e10ee8e9"
+      },
+      "contentSha256": "5733c5e7d90e41c1fc904a70649cbc612e46815dc068a1ab161ff613e10ee8e9"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-4369",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-fe431dd2a6e41902",
+      "assessmentGroup": "assessment-fe431dd2a6e41902",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小乔有250米长的带子，要沿宽20米、长60米的长方形场地边缘围一圈。不计接头重叠，围完还剩多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "90",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "带子总长减去场地周长。",
+      "hints": [
+        "围一圈是周长，不是面积。"
+      ],
+      "steps": [
+        "周长(20+60)×2=160米。",
+        "还剩250−160=90米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形周长"
+      ],
+      "adaptation": [
+        "姓名本土化；英尺按同数值重设米，非精确换算，明确无接头重叠并重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-4369",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "0cb8c7b4a8e6237f863eb5c81823a2dcb4e1ca81ff7b50c71708f80d74ccb123",
+        "recordSha256": "8aaeff10f3adabacf84c1f29805f6148b7431676b7ecc2efec4babcf844bf524",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-4369",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "854cb9857191799b73b903715f63de7015861088e3dac14504706bc2db8cae93",
+        "sourceDraftSha256": "854cb9857191799b73b903715f63de7015861088e3dac14504706bc2db8cae93",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "567956102fb2d247e07e02b2ebb831e1c12ade21bb1f7275e957b2accf13b24b"
+      },
+      "contentSha256": "567956102fb2d247e07e02b2ebb831e1c12ade21bb1f7275e957b2accf13b24b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-4986",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-e2f3d99d7de2c4e2",
+      "assessmentGroup": "assessment-e2f3d99d7de2c4e2",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个大长方形长40米、宽20米。小长方形的长和宽分别是大长方形相应边长的一半。小长方形的面积是多少平方米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "200",
+          "d": "1"
+        },
+        "unit": "平方米"
+      },
+      "intent": "长和宽分别减半后求面积。",
+      "hints": [
+        "两条边都减半，面积不是只减半。"
+      ],
+      "steps": [
+        "小长方形长40÷2=20米，宽20÷2=10米。",
+        "面积20×10=200平方米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形面积"
+      ],
+      "adaptation": [
+        "改为中文叙述，明确长宽分别一半并重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-4986",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "65053c707be545f1a424267029134790fb5612ec717cf618f24be743fb054a24",
+        "recordSha256": "3e35481e6e65a8727232687702384bf9830b73fa2431819773484c481265d0b8",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-4986",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "69f9192d22efeedfaeaddead7ffebc12edfd77ac43784224eede102c6e5c0e1b",
+        "sourceDraftSha256": "69f9192d22efeedfaeaddead7ffebc12edfd77ac43784224eede102c6e5c0e1b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "40c7788bf185f6c85b78731507a76016a9209e7bcaf35c35344b110eda75f0a4"
+      },
+      "contentSha256": "40c7788bf185f6c85b78731507a76016a9209e7bcaf35c35344b110eda75f0a4"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5172",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-a825e92e4b735b45",
+      "assessmentGroup": "assessment-a825e92e4b735b45",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小艾制作2个同样的长方体种植箱，箱内长8分米、宽4分米、高1分米，要用土填满。每袋土4立方分米。不计压实或损耗，需要多少袋土？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "16",
+          "d": "1"
+        },
+        "unit": "袋"
+      },
+      "intent": "求两箱总容积，再除每袋体积。",
+      "hints": [
+        "先求一个箱内的容积。"
+      ],
+      "steps": [
+        "一个箱8×4×1=32立方分米，两个共64立方分米。",
+        "需64÷4=16袋。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方体体积"
+      ],
+      "adaptation": [
+        "姓名本土化；英尺按同数值重设为分米，非精确换算；明确内尺寸和无压实损耗，重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5172",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "3c66a825fa47961a08a66fd8802dac8caea03c5c159b1751c6944d524a33597a",
+        "recordSha256": "6cb6869c308d83cdf5e7c7aecca8bbfe6a04d3600589fe86b9427933e38642bd",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5172",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "41657d507869ece66aded8123577aa1b9c24f57de0339071de65c49e29478683",
+        "sourceDraftSha256": "41657d507869ece66aded8123577aa1b9c24f57de0339071de65c49e29478683",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "65c1ade43c713d3bf23edd15d881964fa8b373eec5376bdc05ccdf829e2d5965"
+      },
+      "contentSha256": "65c1ade43c713d3bf23edd15d881964fa8b373eec5376bdc05ccdf829e2d5965"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5431",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-0561f03a21a0eb79",
+      "assessmentGroup": "assessment-0561f03a21a0eb79",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小海做数学题，一个圆的面积是100平方厘米。另一题中，正方形周长以厘米为单位时，其数值恰好也是100。这个正方形的边长是多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "25",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "由正方形周长求边长。",
+      "hints": [
+        "这里只比较两个数值，面积和周长的单位不同。"
+      ],
+      "steps": [
+        "正方形周长为100厘米，有4条等长边。",
+        "边长100÷4=25厘米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "正方形周长"
+      ],
+      "adaptation": [
+        "原题直接称面积等于周长，量纲不同；修为以指定单位记录的数值同为100，明确周长100厘米并重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5431",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "62c82e91e6fc4e4212f211dfdd54739bca53c03f4b8f4ca2d9669ccb1c72fb93",
+        "recordSha256": "026352c5b4897a2f0770ca954d46c018a2d33dda0e36a5af980edf51b7fb0676",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5431",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "48cdbef44a6e4776e61ce16a1a09691930c39080b36aa6c182c87f19d6732909",
+        "sourceDraftSha256": "48cdbef44a6e4776e61ce16a1a09691930c39080b36aa6c182c87f19d6732909",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8d9555c58de9d72ccee0f71dc984ac058e3342e9dc11b179860d924c41ce719c"
+      },
+      "contentSha256": "8d9555c58de9d72ccee0f71dc984ac058e3342e9dc11b179860d924c41ce719c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5797",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-eb6e3b8312978923",
+      "assessmentGroup": "assessment-eb6e3b8312978923",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小鲍的长方形菜园长220米、宽120米。全园一半作耕地，剩余部分的三分之一设藤架，其余全部作种植床。种植床面积是多少平方米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "8800",
+          "d": "1"
+        },
+        "unit": "平方米"
+      },
+      "intent": "求剩余一半中的三分之二面积。",
+      "hints": [
+        "藤架占的是剩余部分三分之一。"
+      ],
+      "steps": [
+        "总面积220×120=26400平方米，除耕地后剩13200平方米。",
+        "种植床占剩余的三分之二，13200×2÷3=8800平方米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "分数",
+        "长方形面积"
+      ],
+      "adaptation": [
+        "姓名本土化；英尺重设为米非精确换算，明确分数基准并重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5797",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "4e93dc7aac4434baa6d37f2ba292dc6f041ecfb75bdbb6c4e5d9a6d4563fb23e",
+        "recordSha256": "7506f7272d4f233efd9b5038c06b68823ef64a07b1da294b85d4a52d37f21967",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5797",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2d09efeb3389595653373b0eec0003c67ddca589dca371029c57648bbaf88538",
+        "sourceDraftSha256": "2d09efeb3389595653373b0eec0003c67ddca589dca371029c57648bbaf88538",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "05fc34807ac18d6585176eceb6ff256d77dd9045c59df23874fc880f86e9b44d"
+      },
+      "contentSha256": "05fc34807ac18d6585176eceb6ff256d77dd9045c59df23874fc880f86e9b44d"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6275",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-3ab7cc221e59adbf",
+      "assessmentGroup": "assessment-3ab7cc221e59adbf",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小吉要给长200米、宽50米的长方形院子铺草皮。院中有一条宽3米、长50米的小路，以及4块花坛：2块各长25米、宽4米，另2块分别为10米×12米和7米×8米。小路与花坛都在院内且互不重叠，不铺草皮。其余需要多少平方米草皮？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "9474",
+          "d": "1"
+        },
+        "unit": "平方米"
+      },
+      "intent": "从院子总面积减去小路和四块花坛面积。",
+      "hints": [
+        "两块25米×4米的花坛要算两次。"
+      ],
+      "steps": [
+        "院子面积10000平方米；小路150平方米，花坛共200+120+56=376平方米。",
+        "需10000−150−376=9474平方米草皮。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形面积"
+      ],
+      "adaptation": [
+        "姓名本土化；英尺按同数值重设米，非精确换算；补明范围和无重叠，重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6275",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "a67dca71ea32403557622446fbe6b4f267d939a94e6b8096a829c98c86ad7d39",
+        "recordSha256": "817fda12912f7845a48aa7c4c28cd756b7f4836001ea1d9186fa0ea2e68017b2",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6275",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "63b805655a835629a5f86041aa531ff16bf67d0cff046d7df8a98eec34f9675f",
+        "sourceDraftSha256": "63b805655a835629a5f86041aa531ff16bf67d0cff046d7df8a98eec34f9675f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8cfeef2d565d710b3fc1a3457eef7e6e063aa80aabab52c95d898987d402ae73"
+      },
+      "contentSha256": "8cfeef2d565d710b3fc1a3457eef7e6e063aa80aabab52c95d898987d402ae73"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6924",
+      "collection": "gsm8k",
+      "category": "G08",
+      "subcategory": "矩形、正方形或几何量应用",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-d6a86ce718212f6d",
+      "assessmentGroup": "assessment-d6a86ce718212f6d",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小艾做4块长方形种植床，其中2块各长3米、宽3米，另外2块各长4米、宽3米。总种植面积是多少平方米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "42",
+          "d": "1"
+        },
+        "unit": "平方米"
+      },
+      "intent": "分别求两组面积，再相加。",
+      "hints": [
+        "每一种尺寸都有2块。"
+      ],
+      "steps": [
+        "小床共2×3×3=18平方米，大床共2×4×3=24平方米。",
+        "总面积18+24=42平方米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "四则运算",
+        "长方形面积"
+      ],
+      "adaptation": [
+        "姓名本土化；英尺按同数值重设米，非精确换算，重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6924",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "c858a01cb9393f744e7b131005c0f14e5ac7cfdd961e6e715b1d4d249773a976",
+        "recordSha256": "c3ee00e1a4b4ec8eb0c8536b5afe10bba89cf831072dff38eab01275ad1fa0f8",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6924",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "074d1f1573188d9eb3f25b0d01358e60111d5eb5fc61431c3364f11c0ba80d44",
+        "sourceDraftSha256": "074d1f1573188d9eb3f25b0d01358e60111d5eb5fc61431c3364f11c0ba80d44",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "0c0a8973f4b5ebcb1b88370b9899158ee0b72755897849f03505f061f0237985"
+      },
+      "contentSha256": "0c0a8973f4b5ebcb1b88370b9899158ee0b72755897849f03505f061f0237985"
+    }
+  ]
+}

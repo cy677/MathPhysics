@@ -1,15 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {QUESTIONS} from '../lessons/primary-math/bank.mjs';
-import {calculate,checkAnswer,parseAnswer,bounds,normalizedPrompt} from '../lessons/primary-math/math.mjs';
+import {calculate,checkAnswer,parseAnswer,normalizedPrompt} from '../lessons/primary-math/math.mjs';
 for(const q of QUESTIONS) test(`${q.id}: ${q.title}`,()=>{
  assert.ok(Math.abs(calculate(q.calc)-q.answer)<1e-8, 'Independently evaluate arithmetic tree');
  assert.equal(checkAnswer(q,String(q.answer)),'correct');
  assert.equal(checkAnswer(q,String(q.answer+1)),'incorrect');
  assert.equal(checkAnswer(q,''),'invalid');
- const {min,max,step}=bounds(q);assert.ok([min,max,step].every(Number.isFinite)&&min<max&&step>0);
- assert.ok(q.answer>=min&&q.answer<=max);
- assert.ok(Math.abs((q.answer-min)/step-Math.round((q.answer-min)/step))<1e-6,'Correct answer reachable on slider');
+ assert.equal(q.view,undefined,'Removed interactive model metadata');
+ assert.equal(q.modelGuide,undefined,'Help concerns the actual practice question');
  for(const k of ['prompt','goal','hint','solution','reflect'])assert.ok(q[k].length>5);
  for(const v of Object.values(q.mapping))assert.ok(v==='拓展'||Number.isInteger(v)&&v>=1&&v<=6);
 });
@@ -39,7 +38,7 @@ test('Integration: existing local activities are retained while grade metadata m
  const {readFile}=await import('node:fs/promises');
  const data=JSON.parse(await readFile(new URL('../config/local-activities.json',import.meta.url),'utf8'));
  const expected=['geometry-proofs','spaceflight','jsxgraph-playground','tangram-flat','jsx-triangle','jsx-mirror','jsx-rotation','jsx-scale','jsx-vectors','jsx-linear'];
- assert.equal(data.activities.length,13);assert.equal(data.activities[0].id,'physics-demos');const retained=data.activities.slice(1);assert.deepEqual(retained.slice(0,10).map(a=>a.id),expected);assert.equal(retained[10].id,'primary-math');assert.equal(retained[10].lessonCount,48);
+ assert.equal(data.activities.length,19);assert.equal(data.activities[0].id,'physics-demos');const retained=data.activities.slice(1);assert.deepEqual(retained.slice(0,10).map(a=>a.id),expected);assert.equal(retained[10].id,'primary-math');assert.equal(retained[10].lessonCount,48);assert.deepEqual(data.activities.slice(13,15).map(a=>a.id),['minesweeper','sudoku']);
  for(const a of retained.slice(0,10)){assert.ok(a.entry&&a.source&&a.license);assert.ok(a.grades.length>0);}
 });
 test('Integration: strict entry whitelist',async()=>{

@@ -749,280 +749,390 @@
     {
       "id": "matter-airFriction",
       "path": "output/playwright/learning-coverage/matter-airFriction-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-friction",
       "path": "output/playwright/learning-coverage/matter-friction-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-staticFriction",
       "path": "output/playwright/learning-coverage/matter-staticFriction-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-restitution",
       "path": "output/playwright/learning-coverage/matter-restitution-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-gravity",
       "path": "output/playwright/learning-coverage/matter-gravity-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-timescale",
       "path": "output/playwright/learning-coverage/matter-timescale-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-bridge",
       "path": "output/playwright/learning-coverage/matter-bridge-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-car",
       "path": "output/playwright/learning-coverage/matter-car-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-catapult",
       "path": "output/playwright/learning-coverage/matter-catapult-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-slingshot",
       "path": "output/playwright/learning-coverage/matter-slingshot-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-newtonsCradle",
       "path": "output/playwright/learning-coverage/matter-newtonsCradle-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-doublePendulum",
       "path": "output/playwright/learning-coverage/matter-doublePendulum-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-wreckingBall",
       "path": "output/playwright/learning-coverage/matter-wreckingBall-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-gyro",
       "path": "output/playwright/learning-coverage/matter-gyro-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-mixed",
       "path": "output/playwright/learning-coverage/matter-mixed-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-stack",
       "path": "output/playwright/learning-coverage/matter-stack-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-circleStack",
       "path": "output/playwright/learning-coverage/matter-circleStack-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-compound",
       "path": "output/playwright/learning-coverage/matter-compound-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-compoundStack",
       "path": "output/playwright/learning-coverage/matter-compoundStack-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-pyramid",
       "path": "output/playwright/learning-coverage/matter-pyramid-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-avalanche",
       "path": "output/playwright/learning-coverage/matter-avalanche-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-ballPool",
       "path": "output/playwright/learning-coverage/matter-ballPool-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-rounded",
       "path": "output/playwright/learning-coverage/matter-rounded-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-concave",
       "path": "output/playwright/learning-coverage/matter-concave-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-svg",
       "path": "output/playwright/learning-coverage/matter-svg-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-terrain",
       "path": "output/playwright/learning-coverage/matter-terrain-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-cloth",
       "path": "output/playwright/learning-coverage/matter-cloth-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-softBody",
       "path": "output/playwright/learning-coverage/matter-softBody-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-ragdoll",
       "path": "output/playwright/learning-coverage/matter-ragdoll-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-chains",
       "path": "output/playwright/learning-coverage/matter-chains-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-constraints",
       "path": "output/playwright/learning-coverage/matter-constraints-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-collisionFiltering",
       "path": "output/playwright/learning-coverage/matter-collisionFiltering-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-compositeManipulation",
       "path": "output/playwright/learning-coverage/matter-compositeManipulation-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-events",
       "path": "output/playwright/learning-coverage/matter-events-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-manipulation",
       "path": "output/playwright/learning-coverage/matter-manipulation-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-raycasting",
       "path": "output/playwright/learning-coverage/matter-raycasting-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-remove",
       "path": "output/playwright/learning-coverage/matter-remove-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-renderResize",
       "path": "output/playwright/learning-coverage/matter-renderResize-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-sensors",
       "path": "output/playwright/learning-coverage/matter-sensors-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-sleeping",
       "path": "output/playwright/learning-coverage/matter-sleeping-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-sprites",
       "path": "output/playwright/learning-coverage/matter-sprites-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-stats",
       "path": "output/playwright/learning-coverage/matter-stats-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-stress",
       "path": "output/playwright/learning-coverage/matter-stress-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-stress2",
       "path": "output/playwright/learning-coverage/matter-stress2-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-stress3",
       "path": "output/playwright/learning-coverage/matter-stress3-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-stress4",
       "path": "output/playwright/learning-coverage/matter-stress4-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-substep",
       "path": "output/playwright/learning-coverage/matter-substep-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-views",
       "path": "output/playwright/learning-coverage/matter-views-desktop.png",
-      "viewport": "desktop"
+      "viewport": "desktop",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-airFriction",
       "path": "output/playwright/learning-coverage/matter-airFriction-mobile.png",
-      "viewport": "mobile"
+      "viewport": "mobile",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-bridge",
       "path": "output/playwright/learning-coverage/matter-bridge-mobile.png",
-      "viewport": "mobile"
+      "viewport": "mobile",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-slingshot",
       "path": "output/playwright/learning-coverage/matter-slingshot-mobile.png",
-      "viewport": "mobile"
+      "viewport": "mobile",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-cloth",
       "path": "output/playwright/learning-coverage/matter-cloth-mobile.png",
-      "viewport": "mobile"
+      "viewport": "mobile",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-collisionFiltering",
       "path": "output/playwright/learning-coverage/matter-collisionFiltering-mobile.png",
-      "viewport": "mobile"
+      "viewport": "mobile",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-substep",
       "path": "output/playwright/learning-coverage/matter-substep-mobile.png",
-      "viewport": "mobile"
+      "viewport": "mobile",
+      "phase": "none",
+      "capture": "full-page"
     },
     {
       "id": "matter-views",
       "path": "output/playwright/learning-coverage/matter-views-mobile.png",
-      "viewport": "mobile"
+      "viewport": "mobile",
+      "phase": "none",
+      "capture": "full-page"
     }
   ],
-  "base": "http://127.0.0.1:63003/MathPhysics/",
+  "base": "http://127.0.0.1:49754/MathPhysics/",
   "browserClosed": true,
   "serverClosed": true
 }

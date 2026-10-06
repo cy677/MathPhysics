@@ -3,6 +3,7 @@ import path from 'node:path';
 import http from 'node:http';
 import net from 'node:net';
 import assert from 'node:assert/strict';
+import {capturePhetQuestion} from './phet-question-capture.mjs';
 import {pathToFileURL} from 'node:url';
 import {createHash} from 'node:crypto';
 const root=path.resolve(import.meta.dirname,'..'),folder=path.join(root,'output/playwright/learning-coverage/phet-molecule');
@@ -18,31 +19,19 @@ const server=http.createServer(async(req,res)=>{try{const file=path.resolve(root
 let browser,page,port;
 const snapshot=()=>page.evaluate(()=>window.__mpQuestionPanel.snapshot());
 async function shot(name){
- const originalViewport=page.viewportSize(),before=await snapshot(),panel=page.locator('.mp-question-learning-panel'),rail=page.locator('#mp-learning-rail'),file=name+'.png';
- // Reveal real question UI, enlarge its actual scroll viewport, then restore it.
- // The teaching/scientific source and pixels are never rewritten for capture.
+ const before=await snapshot(),wasOpen=await page.locator('dialog[open]').count(),file=name+'.png';
+ if(!wasOpen)await page.locator('#mp-phet-help').click();
  try{
   for(let i=before.hintsRevealed;i<before.question.hints.length;i++)await page.locator('[data-question-next-hint]').click();
   if(!(await snapshot()).solutionOpen)await page.locator('[data-question-solution] summary').click();
-  const ratio=await rail.evaluate(e=>e.clientHeight/innerHeight);let height=originalViewport.height;
-  for(let attempt=0;attempt<3;attempt++){
-   const dimensions=await rail.evaluate(e=>({scrollHeight:e.scrollHeight,clientHeight:e.clientHeight}));
-   if(dimensions.scrollHeight>dimensions.clientHeight+1){height=Math.max(height,Math.ceil((dimensions.scrollHeight+60)/ratio));await page.setViewportSize({...originalViewport,height});}
-   await rail.evaluate(e=>e.scrollTop=0);await page.evaluate(async()=>{await document.fonts.ready;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));});
-   if(await rail.evaluate(e=>e.scrollHeight<=e.clientHeight+1))break;
-  }
-  const proof=await page.evaluate(()=>{const panel=document.querySelector('.mp-question-learning-panel'),rail=document.querySelector('#mp-learning-rail'),q=window.__mpQuestionPanel.snapshot().question,toJSON=e=>e.getBoundingClientRect().toJSON();return {viewport:{width:innerWidth,height:innerHeight},panel:toJSON(panel),rail:{...toJSON(rail),scrollHeight:rail.scrollHeight,clientHeight:rail.clientHeight,scrollTop:rail.scrollTop},fields:['intent','hints','steps','commonMistakes'].map(key=>{const e=panel.querySelector('[data-question-field="'+key+'"]'),children=[...e.querySelectorAll('li')];return {key,bounds:toJSON(e),textLength:e.innerText.length,itemCount:children.length,expectedItems:key==='intent'?0:q[key].length,items:children.map(toJSON)};}),questionId:q.id,progress:{collected:q.params.collected,remaining:q.params.remaining,boxes:q.params.boxes.map(b=>({cid:b.reference.cid,quantity:b.quantity,capacity:b.capacity}))}};});
-  assert.ok(proof.panel.y>=0&&proof.panel.y+proof.panel.height<=height+1,'whole question panel fits real viewport');
-  assert.ok(proof.rail.scrollHeight<=proof.rail.clientHeight+1,'question rail clips capture');
-  for(const field of proof.fields){assert.ok(field.textLength>0&&field.bounds.height>0,field.key+' text is missing');assert.equal(field.itemCount,field.expectedItems,field.key+' incomplete');for(const bounds of [field.bounds,...field.items])assert.ok(bounds.y>=proof.panel.y&&bounds.y+bounds.height<=Math.min(proof.panel.y+proof.panel.height,proof.rail.y+proof.rail.height,height)+1,field.key+' item clipped');}
-  await panel.screenshot({path:path.join(folder,file)});const png=await fs.readFile(path.join(folder,file));proof.image={width:png.readUInt32BE(16),height:png.readUInt32BE(20)};assert.ok(proof.image.height>=Math.floor(proof.fields.at(-1).bounds.bottom-proof.panel.y),'PNG does not include common mistakes');
-  proof.path='output/playwright/learning-coverage/phet-molecule/'+file;proof.checks={allFourFieldsPresent:true,allHintsExpanded:true,allSolutionStepsPresent:true,allCommonMistakesPresent:true,wholePanelInViewport:true,railNotClipping:true};(report.wholePanelCaptures??=[]).push(proof);report.screenshots.push(proof.path);
+  const proof=await capturePhetQuestion(page,path.join(folder,file));proof.path='output/playwright/learning-coverage/phet-molecule/'+file;
+  (report.wholePanelCaptures??=[]).push(proof);report.screenshots.push(proof.path);
  }finally{
-  await page.setViewportSize(originalViewport);
   await page.evaluate(q=>{window.__mpQuestionPanel.update(null);window.__mpQuestionPanel.update(q);},before.question);
   for(let i=0;i<before.hintsRevealed;i++)await page.locator('[data-question-next-hint]').click();
   if(before.solutionOpen)await page.locator('[data-question-solution] summary').click();
-  await rail.evaluate(e=>e.scrollTop=0);const restored=await snapshot();assert.equal(restored.id,before.id);assert.equal(restored.hintsRevealed,before.hintsRevealed);assert.equal(restored.solutionOpen,before.solutionOpen);
+  if(!wasOpen)await page.keyboard.press('Escape');
+  const restored=await snapshot();assert.equal(restored.id,before.id);assert.equal(restored.hintsRevealed,before.hintsRevealed);assert.equal(restored.solutionOpen,before.solutionOpen);
  }
 }
 async function nativeCollectionNodes(targetPage){return targetPage.evaluate(()=>{const sim=phet.joist.sim||phet.sim,s=sim.screenProperty?.value||sim.selectedScreenProperty.value,c=s.model.currentCollectionProperty.value,view=s.view||s._view,seen=new Set(),nodes=[];const visit=n=>{if(!n||seen.has(n))return;seen.add(n);if(n.box&&c.collectionBoxes.includes(n.box)&&n.blackBox&&n.moleculeLayer)nodes.push(n);for(const child of n.children||[])visit(child);};visit(view);return nodes.map(n=>{const b=n.blackBox.globalBounds;return {cid:n.box.moleculeType.cid,quantity:n.box.quantityProperty.value,capacity:n.box.capacity,fill:n.blackBox.fill.toString(),moleculeNodes:n.moleculeNodes.length,bounds:{x:b.minX,y:b.minY,width:b.width,height:b.height}};});});}
@@ -94,10 +83,10 @@ try{
   for(const screen of [0,1]){
    await select(screen);const label=transport+'-'+(screen===0?'single':'multiple'),initial=await snapshot();assert.ok(initial.question&&initial.question.params.boxes.length===(screen===0?5:4));assert.equal(await page.locator('.mp-question-learning-panel').count(),1);assert.equal(initial.hintsRevealed,0);
    if(transport==='http'&&screen===0){const themedEmpty=await nativeCollectionNodes(page);assert.deepEqual(themedEmpty.map(b=>({cid:b.cid,quantity:b.quantity,moleculeNodes:b.moleculeNodes})),nativeEmpty.map(b=>({cid:b.cid,quantity:b.quantity,moleculeNodes:b.moleculeNodes})));report.emptySlotComparison.themed=themedEmpty;report.emptySlotComparison.matchesNativeEmptySemantics=true;await page.screenshot({path:path.join(folder,'themed-empty-slots-comparison.png')});report.emptySlotComparison.screenshots.push('output/playwright/learning-coverage/phet-molecule/themed-empty-slots-comparison.png');}
-   await page.locator('[data-question-next-hint]').click();await page.locator('[data-question-solution] summary').click();assert.equal((await snapshot()).solutionOpen,true);assert.ok((await snapshot()).hintsRevealed===1);
+   if(!await page.locator('dialog[open]').count())await page.locator('#mp-phet-help').click();await page.locator('[data-question-next-hint]').click();await page.locator('[data-question-solution] summary').click();assert.equal((await snapshot()).solutionOpen,true);assert.ok((await snapshot()).hintsRevealed===1);
    const purity=await readerPure();assert.ok(purity.noScientificMutation&&purity.noRNG);
    if(transport==='http'){
-    const setup=await pointerCollectOxygen(),progress=await snapshot();assert.equal(progress.id,initial.id);assert.equal(progress.hintsRevealed,1);assert.equal(progress.solutionOpen,true);assert.equal(progress.question.params.collected,1);assert.equal(progress.question.params.boxes[setup.boxIndex].quantity,1);assert.notEqual(progress.fingerprint,initial.fingerprint);
+    await page.keyboard.press('Escape');const setup=await pointerCollectOxygen(),progress=await snapshot();assert.equal(progress.id,initial.id);assert.equal(progress.hintsRevealed,1);assert.equal(progress.solutionOpen,true);assert.equal(progress.question.params.collected,1);assert.equal(progress.question.params.boxes[setup.boxIndex].quantity,1);assert.notEqual(progress.fingerprint,initial.fingerprint);
     await page.waitForTimeout(180);const pixels=await thumbnailPixels();assert.ok(pixels.length&&pixels.every(p=>p.nonBlackPixels>10&&p.coloredPixels>10),'collected molecule thumbnail is blank/black');(report.collectedThumbnailPixels??=[]).push({screen,...pixels[0]});
     await shot(label+'-desktop-question');await page.screenshot({path:path.join(folder,label+'-desktop-viewport.png')});report.screenshots.push('output/playwright/learning-coverage/phet-molecule/'+label+'-desktop-viewport.png');
     await page.setViewportSize({width:390,height:844});await shot(label+'-390-question');assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:path.join(folder,label+'-390-viewport.png')});report.screenshots.push('output/playwright/learning-coverage/phet-molecule/'+label+'-390-viewport.png');await page.setViewportSize({width:1440,height:1000});

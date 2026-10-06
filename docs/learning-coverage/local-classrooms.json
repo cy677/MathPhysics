@@ -1,6 +1,6 @@
 {
   "suite": "Local classroom teaching: real Chromium HTTP and offline file navigation",
-  "generatedAt": "2026-10-01T07:36:50.150Z",
+  "generatedAt": "2026-10-05T06:54:41.849Z",
   "demonstrations": [
     {
       "id": "jsx/triangle",
@@ -1892,38 +1892,6 @@
       ]
     },
     {
-      "id": "space/stage/us-sat/upper",
-      "status": "passed",
-      "checks": {
-        "http": {
-          "status": "passed",
-          "items": [
-            "stage selection",
-            "four-part stage guide",
-            "junior intuition and senior principle",
-            "scrub",
-            "play/pause",
-            "reset"
-          ]
-        },
-        "file": {
-          "status": "passed",
-          "items": [
-            "stage selection",
-            "four-part stage guide",
-            "junior intuition and senior principle",
-            "scrub",
-            "play/pause",
-            "reset"
-          ]
-        }
-      },
-      "screenshots": [
-        "output/playwright/learning-coverage/local/space-stage-us-sat-upper-scene.png",
-        "output/playwright/learning-coverage/local/space-stage-us-sat-upper-teaching.png"
-      ]
-    },
-    {
       "id": "space/stage/us-sat/fairing",
       "status": "passed",
       "checks": {
@@ -1953,6 +1921,38 @@
       "screenshots": [
         "output/playwright/learning-coverage/local/space-stage-us-sat-fairing-scene.png",
         "output/playwright/learning-coverage/local/space-stage-us-sat-fairing-teaching.png"
+      ]
+    },
+    {
+      "id": "space/stage/us-sat/upper",
+      "status": "passed",
+      "checks": {
+        "http": {
+          "status": "passed",
+          "items": [
+            "stage selection",
+            "four-part stage guide",
+            "junior intuition and senior principle",
+            "scrub",
+            "play/pause",
+            "reset"
+          ]
+        },
+        "file": {
+          "status": "passed",
+          "items": [
+            "stage selection",
+            "four-part stage guide",
+            "junior intuition and senior principle",
+            "scrub",
+            "play/pause",
+            "reset"
+          ]
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/local/space-stage-us-sat-upper-scene.png",
+        "output/playwright/learning-coverage/local/space-stage-us-sat-upper-teaching.png"
       ]
     },
     {
@@ -2938,6 +2938,38 @@
       ]
     },
     {
+      "id": "space/stage/cn-sat/maxq",
+      "status": "passed",
+      "checks": {
+        "http": {
+          "status": "passed",
+          "items": [
+            "stage selection",
+            "four-part stage guide",
+            "junior intuition and senior principle",
+            "scrub",
+            "play/pause",
+            "reset"
+          ]
+        },
+        "file": {
+          "status": "passed",
+          "items": [
+            "stage selection",
+            "four-part stage guide",
+            "junior intuition and senior principle",
+            "scrub",
+            "play/pause",
+            "reset"
+          ]
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/local/space-stage-cn-sat-maxq-scene.png",
+        "output/playwright/learning-coverage/local/space-stage-cn-sat-maxq-teaching.png"
+      ]
+    },
+    {
       "id": "space/stage/cn-sat/cstage",
       "status": "passed",
       "checks": {
@@ -3002,7 +3034,7 @@
       ]
     },
     {
-      "id": "space/stage/cn-sat/third",
+      "id": "space/stage/cn-sat/upper",
       "status": "passed",
       "checks": {
         "http": {
@@ -3029,8 +3061,8 @@
         }
       },
       "screenshots": [
-        "output/playwright/learning-coverage/local/space-stage-cn-sat-third-scene.png",
-        "output/playwright/learning-coverage/local/space-stage-cn-sat-third-teaching.png"
+        "output/playwright/learning-coverage/local/space-stage-cn-sat-upper-scene.png",
+        "output/playwright/learning-coverage/local/space-stage-cn-sat-upper-teaching.png"
       ]
     },
     {
@@ -3063,38 +3095,6 @@
       "screenshots": [
         "output/playwright/learning-coverage/local/space-stage-cn-sat-coast-scene.png",
         "output/playwright/learning-coverage/local/space-stage-cn-sat-coast-teaching.png"
-      ]
-    },
-    {
-      "id": "space/stage/cn-sat/transfer",
-      "status": "passed",
-      "checks": {
-        "http": {
-          "status": "passed",
-          "items": [
-            "stage selection",
-            "four-part stage guide",
-            "junior intuition and senior principle",
-            "scrub",
-            "play/pause",
-            "reset"
-          ]
-        },
-        "file": {
-          "status": "passed",
-          "items": [
-            "stage selection",
-            "four-part stage guide",
-            "junior intuition and senior principle",
-            "scrub",
-            "play/pause",
-            "reset"
-          ]
-        }
-      },
-      "screenshots": [
-        "output/playwright/learning-coverage/local/space-stage-cn-sat-transfer-scene.png",
-        "output/playwright/learning-coverage/local/space-stage-cn-sat-transfer-teaching.png"
       ]
     },
     {
@@ -3192,6 +3192,66 @@
         "output/playwright/learning-coverage/local/space-stage-cn-sat-service-scene.png",
         "output/playwright/learning-coverage/local/space-stage-cn-sat-service-teaching.png",
         "output/playwright/learning-coverage/local/space-stage-cn-sat-service-question.png"
+      ]
+    },
+    {
+      "id": "space/stage/cn-sat/transfer",
+      "status": "passed",
+      "checks": {
+        "http": {
+          "status": "passed",
+          "items": [
+            "stage selection",
+            "four-part stage guide",
+            "junior intuition and senior principle",
+            "scrub",
+            "play/pause",
+            "reset"
+          ]
+        },
+        "file": {
+          "status": "passed",
+          "items": [
+            "stage selection",
+            "four-part stage guide",
+            "junior intuition and senior principle",
+            "scrub",
+            "play/pause",
+            "reset"
+          ]
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/local/space-stage-cn-sat-transfer-scene.png",
+        "output/playwright/learning-coverage/local/space-stage-cn-sat-transfer-teaching.png"
+      ]
+    },
+    {
+      "id": "space/stage/cn-sat/recovery",
+      "status": "passed",
+      "checks": {
+        "http": {
+          "status": "passed",
+          "items": [
+            "parallel branch selection",
+            "specific four-part guide",
+            "scrub and reset",
+            "return to preserved main route"
+          ]
+        },
+        "file": {
+          "status": "passed",
+          "items": [
+            "parallel branch selection",
+            "specific four-part guide",
+            "scrub and reset",
+            "return to preserved main route"
+          ]
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/local/space-stage-cn-sat-recovery-scene.png",
+        "output/playwright/learning-coverage/local/space-stage-cn-sat-recovery-teaching.png"
       ]
     },
     {
@@ -3429,6 +3489,34 @@
       ]
     },
     {
+      "id": "space/lab/launch",
+      "status": "passed",
+      "checks": {
+        "http": {
+          "status": "passed",
+          "items": [
+            "specific four-part guide",
+            "every slider endpoint",
+            "live calculation from current values",
+            "reset"
+          ]
+        },
+        "file": {
+          "status": "passed",
+          "items": [
+            "specific four-part guide",
+            "every slider endpoint",
+            "live calculation from current values",
+            "reset"
+          ]
+        }
+      },
+      "screenshots": [
+        "output/playwright/learning-coverage/local/space-lab-launch-scene.png",
+        "output/playwright/learning-coverage/local/space-lab-launch-teaching.png"
+      ]
+    },
+    {
       "id": "space/system/f9",
       "status": "passed",
       "checks": {
@@ -3585,7 +3673,7 @@
       ]
     },
     {
-      "id": "space/system/cz3a",
+      "id": "space/system/cz10b",
       "status": "passed",
       "checks": {
         "http": {
@@ -3606,8 +3694,8 @@
         }
       },
       "screenshots": [
-        "output/playwright/learning-coverage/local/space-system-cz3a-scene.png",
-        "output/playwright/learning-coverage/local/space-system-cz3a-teaching.png"
+        "output/playwright/learning-coverage/local/space-system-cz10b-scene.png",
+        "output/playwright/learning-coverage/local/space-system-cz10b-teaching.png"
       ]
     },
     {
@@ -6767,12 +6855,8 @@
     "portReleased": true
   },
   "visualReview": {
-    "status": "passed",
-    "reviewerModel": "gpt-6-luna",
-    "reasoningEffort": "max",
-    "report": "docs/learning-coverage/visual-local.json",
-    "uniqueScreenshotPathsReviewed": 298,
-    "reason": "All referenced screenshots were visually reviewed; label and Tangram capture findings were resolved by re-review."
+    "status": "pending",
+    "reason": "Screenshots are functional evidence; final visual acceptance is delegated separately."
   },
   "resolvedDevelopmentFindings": [
     {
@@ -6793,434 +6877,11 @@
     "Screenshots are captured at readable element resolution; pedagogical effectiveness is not measured."
   ],
   "counts": {
-    "demonstrations": 117,
+    "demonstrations": 120,
     "questions": 106,
-    "demonstrationsPassed": 117,
+    "demonstrationsPassed": 120,
     "questionsPassed": 106,
     "spaceQuizzes": 16
   },
-  "passed": true,
-  "rereviews": [
-    {
-      "id": "vector-and-deorbit-labels",
-      "generatedAt": "2026-10-01T07:51:28.496Z",
-      "status": "passed",
-      "visualStatus": "passed",
-      "results": [
-        {
-          "id": "jsx/vectors/http/1512",
-          "status": "passed",
-          "checks": [
-            "full labels do not intersect initially or after solving",
-            "coordinates and target unchanged",
-            "direction controls solve existing target",
-            "live question, 3 hints and full process",
-            "four guide sections",
-            "reset"
-          ],
-          "initialLabels": [
-            {
-              "name": "橙色箭头",
-              "x": 565.4375,
-              "y": 698.84375,
-              "width": 56,
-              "height": 22.390625
-            },
-            {
-              "name": "蓝色箭头",
-              "x": 488.328125,
-              "y": 661.734375,
-              "width": 56,
-              "height": 22.390625
-            }
-          ],
-          "targetLabels": [
-            {
-              "name": "橙色箭头",
-              "x": 565.4375,
-              "y": 698.84375,
-              "width": 56,
-              "height": 22.390625
-            },
-            {
-              "name": "蓝色箭头",
-              "x": 565.4375,
-              "y": 661.734375,
-              "width": 56,
-              "height": 22.390625
-            }
-          ]
-        },
-        {
-          "id": "jsx/vectors/http/390",
-          "status": "passed",
-          "checks": [
-            "full labels do not intersect initially or after solving",
-            "coordinates and target unchanged",
-            "direction controls solve existing target",
-            "live question, 3 hints and full process",
-            "four guide sections",
-            "reset"
-          ],
-          "initialLabels": [
-            {
-              "name": "橙色箭头",
-              "x": 190.109375,
-              "y": 582.875,
-              "width": 56,
-              "height": 22.390625
-            },
-            {
-              "name": "蓝色箭头",
-              "x": 152.328125,
-              "y": 482.71875,
-              "width": 56,
-              "height": 22.390625
-            }
-          ],
-          "targetLabels": [
-            {
-              "name": "橙色箭头",
-              "x": 190.109375,
-              "y": -289.125,
-              "width": 56,
-              "height": 22.390625
-            },
-            {
-              "name": "蓝色箭头",
-              "x": 190.109375,
-              "y": -389.28125,
-              "width": 56,
-              "height": 22.390625
-            }
-          ]
-        },
-        {
-          "id": "jsx/vectors/file/1512",
-          "status": "passed",
-          "checks": [
-            "full labels do not intersect initially or after solving",
-            "coordinates and target unchanged",
-            "direction controls solve existing target",
-            "live question, 3 hints and full process",
-            "four guide sections",
-            "reset"
-          ],
-          "initialLabels": [
-            {
-              "name": "橙色箭头",
-              "x": 565.4375,
-              "y": 698.84375,
-              "width": 56,
-              "height": 22.390625
-            },
-            {
-              "name": "蓝色箭头",
-              "x": 488.328125,
-              "y": 661.734375,
-              "width": 56,
-              "height": 22.390625
-            }
-          ],
-          "targetLabels": [
-            {
-              "name": "橙色箭头",
-              "x": 565.4375,
-              "y": 698.84375,
-              "width": 56,
-              "height": 22.390625
-            },
-            {
-              "name": "蓝色箭头",
-              "x": 565.4375,
-              "y": 661.734375,
-              "width": 56,
-              "height": 22.390625
-            }
-          ]
-        },
-        {
-          "id": "jsx/vectors/file/390",
-          "status": "passed",
-          "checks": [
-            "full labels do not intersect initially or after solving",
-            "coordinates and target unchanged",
-            "direction controls solve existing target",
-            "live question, 3 hints and full process",
-            "four guide sections",
-            "reset"
-          ],
-          "initialLabels": [
-            {
-              "name": "橙色箭头",
-              "x": 190.109375,
-              "y": 582.875,
-              "width": 56,
-              "height": 22.390625
-            },
-            {
-              "name": "蓝色箭头",
-              "x": 152.328125,
-              "y": 482.71875,
-              "width": 56,
-              "height": 22.390625
-            }
-          ],
-          "targetLabels": [
-            {
-              "name": "橙色箭头",
-              "x": 190.109375,
-              "y": -289.125,
-              "width": 56,
-              "height": 22.390625
-            },
-            {
-              "name": "蓝色箭头",
-              "x": 190.109375,
-              "y": -389.28125,
-              "width": 56,
-              "height": 22.390625
-            }
-          ]
-        },
-        {
-          "id": "space/stage/us-crew/deorbit/http",
-          "status": "passed",
-          "checks": [
-            "force annotation lies 30 canvas units above its line",
-            "force arrow remains left; velocity remains right",
-            "guide and reset preserved"
-          ],
-          "drawing": {
-            "label": [
-              "fillText",
-              "制动推力",
-              627,
-              95
-            ],
-            "forceStart": [
-              "moveTo",
-              684,
-              125
-            ],
-            "forceEnd": [
-              "lineTo",
-              570,
-              125
-            ],
-            "velocityStart": [
-              "moveTo",
-              763,
-              258
-            ],
-            "velocityEnd": [
-              "lineTo",
-              875,
-              258
-            ]
-          }
-        },
-        {
-          "id": "space/stage/cn-crew/deorbit/http",
-          "status": "passed",
-          "checks": [
-            "force annotation lies 30 canvas units above its line",
-            "force arrow remains left; velocity remains right",
-            "guide and reset preserved"
-          ],
-          "drawing": {
-            "label": [
-              "fillText",
-              "制动推力",
-              627,
-              95
-            ],
-            "forceStart": [
-              "moveTo",
-              684,
-              125
-            ],
-            "forceEnd": [
-              "lineTo",
-              570,
-              125
-            ],
-            "velocityStart": [
-              "moveTo",
-              763,
-              258
-            ],
-            "velocityEnd": [
-              "lineTo",
-              875,
-              258
-            ]
-          }
-        },
-        {
-          "id": "space/stage/us-crew/deorbit/file",
-          "status": "passed",
-          "checks": [
-            "force annotation lies 30 canvas units above its line",
-            "force arrow remains left; velocity remains right",
-            "guide and reset preserved"
-          ],
-          "drawing": {
-            "label": [
-              "fillText",
-              "制动推力",
-              627,
-              95
-            ],
-            "forceStart": [
-              "moveTo",
-              684,
-              125
-            ],
-            "forceEnd": [
-              "lineTo",
-              570,
-              125
-            ],
-            "velocityStart": [
-              "moveTo",
-              763,
-              258
-            ],
-            "velocityEnd": [
-              "lineTo",
-              875,
-              258
-            ]
-          }
-        },
-        {
-          "id": "space/stage/cn-crew/deorbit/file",
-          "status": "passed",
-          "checks": [
-            "force annotation lies 30 canvas units above its line",
-            "force arrow remains left; velocity remains right",
-            "guide and reset preserved"
-          ],
-          "drawing": {
-            "label": [
-              "fillText",
-              "制动推力",
-              627,
-              95
-            ],
-            "forceStart": [
-              "moveTo",
-              684,
-              125
-            ],
-            "forceEnd": [
-              "lineTo",
-              570,
-              125
-            ],
-            "velocityStart": [
-              "moveTo",
-              763,
-              258
-            ],
-            "velocityEnd": [
-              "lineTo",
-              875,
-              258
-            ]
-          }
-        }
-      ],
-      "screenshots": [
-        "output/playwright/learning-coverage/local/jsx-vectors-1512-initial-scene.png",
-        "output/playwright/learning-coverage/local/jsx-vectors-scene.png",
-        "output/playwright/learning-coverage/local/jsx-vectors-question.png",
-        "output/playwright/learning-coverage/local/mobile-jsx-vectors-viewport.png",
-        "output/playwright/learning-coverage/local/jsx-vectors-390-initial-scene.png",
-        "output/playwright/learning-coverage/local/mobile-jsx-vectors-target-scene.png",
-        "output/playwright/learning-coverage/local/mobile-jsx-vectors-question.png",
-        "output/playwright/learning-coverage/local/mobile-jsx-vectors-teaching.png",
-        "output/playwright/learning-coverage/local/mobile-jsx-vectors-target-viewport.png",
-        "output/playwright/learning-coverage/local/space-stage-us-crew-deorbit-scene.png",
-        "output/playwright/learning-coverage/local/space-stage-cn-crew-deorbit-scene.png"
-      ],
-      "errors": [],
-      "cleanup": {
-        "browserClosed": true,
-        "serverStopped": true,
-        "portReleased": true
-      },
-      "scope": "Only JSX vectors labels and the two crew deorbit scenes were retested; the prior 117/106 complete suite remains recorded."
-    }
-  ],
-  "screenshotRereviews": [
-    {
-      "suite": "Tangram screenshot framing rereview",
-      "generatedAt": "2026-10-01T08:09:19.345Z",
-      "finding": "A tall panel was clipped by its scrolling aside during element screenshots.",
-      "resolution": "Expand the actual viewport until the whole aside fits, capture the question panel, and restore the original viewport.",
-      "captures": [
-        {
-          "id": "tangram/square",
-          "questionId": "square/none",
-          "screenshot": "output/playwright/learning-coverage/local/tangram-square-question.png",
-          "viewport": {
-            "width": 1512,
-            "height": 2909
-          },
-          "panel": {
-            "x": 1162,
-            "y": 684.671875,
-            "width": 307,
-            "height": 1610.03125
-          },
-          "checks": {
-            "wholePanelInViewport": true,
-            "asideNotClipping": true
-          },
-          "teachingFields": [
-            "intent",
-            "hints",
-            "steps",
-            "commonMistakes"
-          ],
-          "passed": true
-        },
-        {
-          "id": "tangram/creative",
-          "questionId": "creative/none",
-          "screenshot": "output/playwright/learning-coverage/local/tangram-creative-question.png",
-          "viewport": {
-            "width": 1512,
-            "height": 2957
-          },
-          "panel": {
-            "x": 1162,
-            "y": 684.671875,
-            "width": 307,
-            "height": 1634.078125
-          },
-          "checks": {
-            "wholePanelInViewport": true,
-            "asideNotClipping": true
-          },
-          "teachingFields": [
-            "intent",
-            "hints",
-            "steps",
-            "commonMistakes"
-          ],
-          "passed": true
-        }
-      ],
-      "pageErrors": [],
-      "passed": true,
-      "visualStatus": "passed",
-      "port": 56289,
-      "serverClosed": true,
-      "portReleased": true,
-      "report": "output/playwright/learning-coverage/local/tangram-framing-rereview.json"
-    }
-  ]
+  "passed": true
 }

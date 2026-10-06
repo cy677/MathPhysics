@@ -12,7 +12,7 @@ export const STRANDS = Object.freeze({number:'数与代数 · Number and Algebra
 export const LEVELS = Object.freeze([
   {id:1,title:'基础',description:'认识概念，用图和实物完成直接练习。'},
   {id:2,title:'巩固',description:'联系不同表示，熟练计算和解决生活问题。'},
-  {id:3,title:'拔高',description:'增加逆向思考和条件联系，解释并检验方法。'}
+  {id:3,title:'提高',description:'增加逆向思考和条件联系，解释并检验方法。'}
 ]);
 export const GRADES = Object.freeze([
   {grade:1,title:'一年级 · Primary 1',intro:'从数小棒、排队和买东西出发，认识100以内的数，把实物、图画和算式联系起来。',prerequisite:'会配对、分类、数物体，能描述简单规律。',targets:['读写和比较100以内的数，理解加减和平均分。','用位值和数量关系解释计算，读懂长度、时间与图表。','在本年级范围内倒推未知量，解释规律和选择理由。']},

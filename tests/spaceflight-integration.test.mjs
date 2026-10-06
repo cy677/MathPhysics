@@ -26,8 +26,15 @@ test('current main navigation and settings stay byte-identical; catalog changes 
  const a=JSON.parse(fs.readFileSync(path.join(baseline,'config/presentation.json'))),b=JSON.parse(fs.readFileSync(path.join(root,'config/presentation.json')));b.activities.spaceflight.hidden=a.activities.spaceflight.hidden;assert.deepEqual(b,a);
  const before=JSON.parse(fs.readFileSync(path.join(baseline,'config/local-activities.json'))),after=JSON.parse(fs.readFileSync(path.join(root,'config/local-activities.json')));const originalEntry=before.activities.find(a=>a.id==='spaceflight'),joinedEntry=after.activities.find(a=>a.id==='spaceflight');assert.equal(joinedEntry.labCount,9);for(const key of ['labCount','content','playHint'])joinedEntry[key]=originalEntry[key];assert.deepEqual(after,before);
 });
-test('parallel deorbit label correction survives the clean three-way drawing merge',()=>{
- const draw=fs.readFileSync(path.join(root,'lessons/spaceflight/draw.js'),'utf8');assert.ok(draw.includes("text('制动推力',627,95"));assert.ok(draw.includes('arrow(684,125,-114,0'));assert.ok(draw.includes('arrow(763,258,112,0'));assert.ok(draw.includes('function launchModel('));
+test('deorbit view keeps a separate braking label and opposing velocity/thrust arrows',()=>{
+ const draw=fs.readFileSync(path.join(root,'lessons/spaceflight/draw.js'),'utf8');
+ const scene=draw.split("}else if(sc==='deorbit'){")[1].split('}else')[0];
+ assert.match(scene,/text\('制动推力'/);
+ const arrows=[...scene.matchAll(/arrow\([\d.-]+,[\d.-]+,([\d.-]+),([\d.-]+),C\.(teal|gold)\)/g)];
+ const velocity=arrows.find(a=>a[3]==='teal'),thrust=arrows.find(a=>a[3]==='gold');
+ assert.ok(velocity&&thrust,'velocity and braking thrust are both visible');
+ assert.ok(Number(velocity[1])*Number(thrust[1])+Number(velocity[2])*Number(thrust[2])<0,'braking thrust opposes the velocity');
+ assert.ok(draw.includes('function launchModel('));
 });
 test('inertial speed and air-relative speed are distinct and labelled in the launch view',()=>{
  const result=merged.MissionModel.simulate(),t=result.events.find(e=>e.code==='liftoff').timeSec,s=merged.SpaceFlight.sampleAt(result,t);assert.ok(s.velocityMps>460&&s.airspeedMps<10);assert.ok(s.velocityMps-s.airspeedMps>450);

@@ -10,6 +10,12 @@
     "forces-and-motion-basics",
     "energy-skate-park-basics",
     "vector-addition",
+    "minesweeper",
+    "sudoku",
+    "spatial-soma",
+    "spatial-rush",
+    "spatial-merge",
+    "spatial-escape",
     "fractions-intro",
     "fraction-matcher",
     "balancing-act",
@@ -386,6 +392,16 @@
       "description": "已合并至数与生活，旧地址继续进入统一课堂。",
       "playHint": "选择知识点、题型和难度，生成练习后填写答案。遇到困难先打开提示，再看看解题过程。",
       "hidden": true
+    },
+    "minesweeper": {
+      "title": "扫雷",
+      "description": "读懂周围的数字，插旗找雷，逐步打开安全的花园。",
+      "playHint": "选择翻开或插旗，再轻点一格。数字周围旗数相符时，再点数字可以连开。高级玩法里可以分析概率、导入或编辑棋盘。"
+    },
+    "sudoku": {
+      "title": "数独",
+      "description": "在行、列和九宫里安排1—9，用候选笔记一步步找到唯一答案。",
+      "playHint": "先选一格，再点1—9数字盘。填写或笔记模式随时切换；可以擦除、撤销、重做或查看提示，进度会自动保存。"
     }
   }
 }

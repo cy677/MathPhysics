@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+tests/_shot.mjs
+*.log
+# Secrets — never commit
+.env
+.env.*

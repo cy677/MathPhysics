@@ -1,0 +1,4962 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "gsm8k-G01",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0064",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "每日目标与前期欠额累计",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-22d85591e2e21b41",
+      "assessmentGroup": "assessment-22d85591e2e21b41",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小珊计划周一、周二、周三每天做30次仰卧起坐。周一做12次，周二做19次。周三除了当天30次，还要补足前两天欠下的次数，至少做几次？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "59",
+          "d": "1"
+        },
+        "unit": "次"
+      },
+      "intent": "求三日总目标再扣已完成量",
+      "hints": [
+        "三天总目标是3个30次"
+      ],
+      "steps": [
+        "三天目标30×3=90次",
+        "前两天做12+19=31次，周三需90−31=59次"
+      ],
+      "commonMistakes": [
+        "只补前两天，漏掉周三当天目标"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "整数加减"
+      ],
+      "adaptation": [
+        "原文每日目标范围不够明确，写明三天各30次，所求为含当天目标的次数"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0064",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "651b30f0b3acd207cc696f2f183499f284f8e0de17eb66f68979fa0955365f32",
+        "recordSha256": "4e3cb14efa63a945cdb952110f53aba4232554160360a9ec706b998dceb6703b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0064",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "66c29785f4de418106de4063ed2e3f268866702eb19ecb4b249afb3ba2ee7855",
+        "sourceDraftSha256": "66c29785f4de418106de4063ed2e3f268866702eb19ecb4b249afb3ba2ee7855",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ad532d561e044a82d6da14895feb1eb2dfcef58c8cfaf14cc7ff05bdede623ac"
+      },
+      "contentSha256": "ad532d561e044a82d6da14895feb1eb2dfcef58c8cfaf14cc7ff05bdede623ac"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0243",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-205368a2e6721c1a",
+      "assessmentGroup": "assessment-205368a2e6721c1a",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "安安烤了3打燕麦葡萄干饼干、2打糖饼干和4打巧克力饼干。1打是12块。她分别送出2打、1.5打和2.5打这三种饼干。她共留下多少块饼干？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "36",
+          "d": "1"
+        },
+        "unit": "块"
+      },
+      "intent": "先分别求剩余，再合计并换算打与块",
+      "hints": [
+        "先求每种饼干剩下几打",
+        "1打等于12块"
+      ],
+      "steps": [
+        "燕麦饼干剩3−2=1打，糖饼干剩2−1.5=0.5打，巧克力饼干剩4−2.5=1.5打",
+        "共剩1+0.5+1.5=3打，即3×12=36块"
+      ],
+      "commonMistakes": [
+        "把3打误当作3块"
+      ],
+      "prerequisites": [
+        "小数加减",
+        "整数乘法",
+        "打与个数换算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0243",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "723368571ebce2d297f6a10a34aadfc80ee6f377734d0a07d1bf5e55aa0a5f66",
+        "recordSha256": "d2012c762491f48d756683100ef1f6542ad5cf0cf23404eed004327b39b42977",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0243",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7ee4aa24399653c1fd52c27e49f034cd829a77a8687670cea41e4180b0ffae40",
+        "sourceDraftSha256": "7ee4aa24399653c1fd52c27e49f034cd829a77a8687670cea41e4180b0ffae40",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "63e93c7ce55a6aed8cb91928c7d577d9618e6e5160925caeeb699edecf34334b"
+      },
+      "contentSha256": "63e93c7ce55a6aed8cb91928c7d577d9618e6e5160925caeeb699edecf34334b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0357",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "单价、数量、总价",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-afaeeb8d0eb9512e",
+      "assessmentGroup": "assessment-afaeeb8d0eb9512e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "知识竞赛有5轮，每轮5题。每答对一题得2分，某一轮全对另奖4分。小詹全场仅错1题，其余全对，共得多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "64",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "基础分与全对轮奖励分别计算",
+      "hints": [
+        "错1题只影响其中1轮奖励"
+      ],
+      "steps": [
+        "答对5×5−1=24题，基础分24×2=48分",
+        "全对5−1=4轮，奖励4×4=16分",
+        "总分48+16=64分"
+      ],
+      "commonMistakes": [
+        "只算基础分，或仍算5轮奖励"
+      ],
+      "prerequisites": [
+        "整数四则运算"
+      ],
+      "adaptation": [
+        "原最终标注66与原推理64矛盾，独立按24题与4轮奖励重算，答案修订为64"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0357",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "0b56e30f9a019e5d5600630909b73945f0770db61f41ded7cfad2e8dce05868f",
+        "recordSha256": "4c450f79d78ad614f50a73a65eb53f84b4040af1e29e5e3b25867f268d01c542",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0357",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "fefe7fe334f4ffe6fcf10a174599ba1fb9b5be1b19eb9fdb12e4df22b1ee6208",
+        "sourceDraftSha256": "fefe7fe334f4ffe6fcf10a174599ba1fb9b5be1b19eb9fdb12e4df22b1ee6208",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "3c4cea7fc12a1a0ce126512f3c249b84b265aeaf35761564297d8a3263eb7beb"
+      },
+      "localCategoryOverride": {
+        "category": "G01",
+        "reason": "此题按答对题数和轮次奖励计分，没有金额或买卖关系，应归数量变化与合计。"
+      },
+      "contentSha256": "3c4cea7fc12a1a0ce126512f3c249b84b265aeaf35761564297d8a3263eb7beb"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0409",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-fc13297946bbccaa",
+      "assessmentGroup": "assessment-fc13297946bbccaa",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "电梯最大载重300千克。先进入3位成人，平均体重70千克，再进入2名儿童，平均体重32千克。不超载时，下一位乘客最多可以重多少千克？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "26",
+          "d": "1"
+        },
+        "unit": "千克"
+      },
+      "intent": "用平均数求总质量，再求载重余额",
+      "hints": [
+        "平均体重乘人数得到这一组总质量"
+      ],
+      "steps": [
+        "成人共70×3=210千克，儿童共32×2=64千克",
+        "余下载重300−210−64=26千克"
+      ],
+      "commonMistakes": [
+        "用平均体重直接相加而不乘人数"
+      ],
+      "prerequisites": [
+        "平均数",
+        "整数乘法",
+        "整数减法"
+      ],
+      "adaptation": [
+        "英制数值600、140、64磅重设为公制300、70、32千克，保留人数及载重余额关系，不是精确单位换算",
+        "独立重算余额26千克"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0409",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "35aa27ffdf93b4e47650ab7058cb9e968d0055046d7d238c26ebe97f82d0ad53",
+        "recordSha256": "8edfa678745eb0b264bbf6f548932c491893f93a72b60de7bdbdf62eac8f7609",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0409",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b1133a62999983409f258fb0df23555883876382bf7c3bad24aa3702089bb732",
+        "sourceDraftSha256": "b1133a62999983409f258fb0df23555883876382bf7c3bad24aa3702089bb732",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c95d258bac981b39c1936a219de604f223e2dd31d8a26e0f95e7b564c31345eb"
+      },
+      "contentSha256": "c95d258bac981b39c1936a219de604f223e2dd31d8a26e0f95e7b564c31345eb"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0638",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-0691c9e19e42bf78",
+      "assessmentGroup": "assessment-0691c9e19e42bf78",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小杰现在24岁，弟弟小陶现在的年龄是小杰的一半。6年后，小陶多少岁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "18",
+          "d": "1"
+        },
+        "unit": "岁"
+      },
+      "intent": "先求现在年龄，再加经过的年数",
+      "hints": [
+        "一半就是除以2"
+      ],
+      "steps": [
+        "小陶现在24÷2=12岁",
+        "6年后是12+6=18岁"
+      ],
+      "commonMistakes": [
+        "把6年后哥哥年龄的一半当作弟弟年龄"
+      ],
+      "prerequisites": [
+        "整数除法",
+        "年龄随时间增加"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0638",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "1f7ad98c1dbc3b8075a5320e7eb518230e859b532336e558ea9efdced9d05c54",
+        "recordSha256": "2f9c58c2d09e52922d45acf5f4676f87673be65302c24123e29fc636a673e93a",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0638",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "21784b1665f9b05104d5404fa35d01300ec020573a7d6bf8a790ae1a7dc67e49",
+        "sourceDraftSha256": "21784b1665f9b05104d5404fa35d01300ec020573a7d6bf8a790ae1a7dc67e49",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e58858c410292994f8ba03672947fc29ec757d6bc3f561f432ec521315953eba"
+      },
+      "contentSha256": "e58858c410292994f8ba03672947fc29ec757d6bc3f561f432ec521315953eba"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0648",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-5ce5c936cb9979c2",
+      "assessmentGroup": "assessment-5ce5c936cb9979c2",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小昆生日时带了40个纸杯蛋糕到学校。他给甲班18名学生、乙班16名学生各1个，还给这两个班的老师、校医和校长各1个。这些人互不重复。他还剩多少个蛋糕？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "合计分出数量后求剩余",
+      "hints": [
+        "老师、校医和校长共有几人？"
+      ],
+      "steps": [
+        "学生共拿到18+16=34个，4名成人共拿到4个",
+        "剩40−34−4=2个"
+      ],
+      "commonMistakes": [
+        "漏算成人或把两位老师算成一位"
+      ],
+      "prerequisites": [
+        "整数加减"
+      ],
+      "adaptation": [
+        "明确两班学生和4名成人互不重复，避免重复计数"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0648",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "cd1cb0d4bc5eea36f661f7864a4cc681be6171607a793fcba3019cf84a1ae919",
+        "recordSha256": "6ef2957133147e5e673fab30eba24d5cb4f023483cd8d81adfb7f1524f133ed6",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0648",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "659f915ae7e94e370397bf4802329336aeb04600460f3b4d00d2499490536953",
+        "sourceDraftSha256": "659f915ae7e94e370397bf4802329336aeb04600460f3b4d00d2499490536953",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "727e6a1ab4fccf6820bd8fb00450c5f4400c94566f598ef2dfbb9a805ede67ab"
+      },
+      "contentSha256": "727e6a1ab4fccf6820bd8fb00450c5f4400c94566f598ef2dfbb9a805ede67ab"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0675",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "等量分组与单位量",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-8aff09d1c6626445",
+      "assessmentGroup": "assessment-8aff09d1c6626445",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "停车楼有4层，每层100个车位。第一层有58个空位，第二层比第一层多2个空位，第三层比第二层多5个空位，第四层有31个空位。整栋停车楼已经停了车的车位有多少个？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "186",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "合计空位并由总容量求占用量",
+      "hints": [
+        "先算第二、三层的空位数。"
+      ],
+      "steps": [
+        "第二层空位58＋2＝60个，第三层空位60＋5＝65个。",
+        "总车位4×100＝400个，空位合计58＋60＋65＋31＝214个。",
+        "已占用400－214＝186个。"
+      ],
+      "commonMistakes": [
+        "把空位214个直接当作已经停车的数量。"
+      ],
+      "prerequisites": [
+        "单位量与总量",
+        "差量关系",
+        "整体与部分"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0675",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "1cb9e9469dff0d9bcb0dfc3b23ecaf091538a5d26f55531e84c92de85e44ea41",
+        "recordSha256": "3a5ef6ec5e1dba6b8ef40d03ca3f0badfc382e5b587cbfdff6b0d44b0ceabd3d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0675",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "876f001e17404315722df5b238fa454da8c1a9db9c040654945819ff78656c8e",
+        "sourceDraftSha256": "876f001e17404315722df5b238fa454da8c1a9db9c040654945819ff78656c8e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "da335c49cf58e48c3616d0110edd37fb39ce614507b5ee963c4bd425893e77de"
+      },
+      "localCategoryOverride": {
+        "category": "G01",
+        "reason": "核心为各层空位合计再由总容量求占用量，属于总量与剩余，无比例分配所求。"
+      },
+      "contentSha256": "da335c49cf58e48c3616d0110edd37fb39ce614507b5ee963c4bd425893e77de"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0697",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-04a98d6b0fa2d55e",
+      "assessmentGroup": "assessment-04a98d6b0fa2d55e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小卡的推车上原有79个苹果。小布拿走一些，后来又有26个从车上掉落。最后只剩8个。小布拿走了多少个？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "45",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "逆推未知减少量",
+      "hints": [
+        "原有量等于两次拿走或掉落的量加剩余量"
+      ],
+      "steps": [
+        "除掉落的26个和剩下8个外，其余是小布拿走的",
+        "79−26−8=45个"
+      ],
+      "commonMistakes": [
+        "把掉落的苹果也计入小布拿走的数量"
+      ],
+      "prerequisites": [
+        "整数减法",
+        "逆向推理"
+      ],
+      "adaptation": [
+        "79个苹果放书包作午餐改为推车运输，保持全部数量关系",
+        "原解中53写成52的中间笔误不沿用"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0697",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "3610ffe076e62a3d6ebafba06680b73eae0d0207e169eec410391a57690629a9",
+        "recordSha256": "abcf18b5d4673e38230a20915013d5d98c7156489d619643c340c993c288f2af",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0697",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e20872a833ff8af23c7893752481744ea69180104acbb77fa3bd5ac496c66a12",
+        "sourceDraftSha256": "e20872a833ff8af23c7893752481744ea69180104acbb77fa3bd5ac496c66a12",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f64ff3c8972d683ce81e43958d5cf52c75154b9a09cf97af34c589a0ad1c819f"
+      },
+      "contentSha256": "f64ff3c8972d683ce81e43958d5cf52c75154b9a09cf97af34c589a0ad1c819f"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0754",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-5ff39bc69f68d6f0",
+      "assessmentGroup": "assessment-5ff39bc69f68d6f0",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "商店上午卖出29袋土豆，下午卖出17袋，每袋重7千克。这一天共卖出多少千克土豆？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "322",
+          "d": "1"
+        },
+        "unit": "千克"
+      },
+      "intent": "先合计袋数，再求总质量",
+      "hints": [
+        "先把两次卖出的袋数相加"
+      ],
+      "steps": [
+        "共卖29+17=46袋",
+        "每袋7千克，总质量46×7=322千克"
+      ],
+      "commonMistakes": [
+        "只计算其中半天的质量"
+      ],
+      "prerequisites": [
+        "整数加法",
+        "整数乘法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0754",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "373835445437afbbfe4618794981fc4c1d0af47672c2c1de39472938ebe0eed2",
+        "recordSha256": "7d2fe1538f8bb20e7927ba78ecaafbe9ca42e7549823a1c0527bf699af502f42",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0754",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "908384aaed92512632c10a07cc93d26939af33c674bc0b7e36f3bc75df476949",
+        "sourceDraftSha256": "908384aaed92512632c10a07cc93d26939af33c674bc0b7e36f3bc75df476949",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "cb0f01beeabc3a86a2906405f717572c7024278bc0b1d186d698bbfead637b9e"
+      },
+      "contentSha256": "cb0f01beeabc3a86a2906405f717572c7024278bc0b1d186d698bbfead637b9e"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0767",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-3955a653eae93ced",
+      "assessmentGroup": "assessment-3955a653eae93ced",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小梅给30位顾客送餐，每人1份。有7人需要纯素餐，8人需要犹太洁食餐（按特定宗教要求制作的餐食），其中3人同时有这两种要求。有多少份餐两种要求都没有？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "18",
+          "d": "1"
+        },
+        "unit": "份"
+      },
+      "intent": "避免重复计数后求补集",
+      "hints": [
+        "同时有两种要求的3人被加了几次？"
+      ],
+      "steps": [
+        "7+8=15人次，其中3人被重复计算",
+        "至少有一种要求的顾客是15−3=12人，两种要求都没有的是30−12=18人，需要18份餐"
+      ],
+      "commonMistakes": [
+        "直接用30−7−8，忘记加回重复的3人"
+      ],
+      "prerequisites": [
+        "整数加减",
+        "重叠计数"
+      ],
+      "adaptation": [
+        "明确每位顾客1份餐，解释犹太洁食含义"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0767",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "2698c55371e8b4c68444fc72f14ba919a8c1f137668bf5b5e30e454736c23900",
+        "recordSha256": "e7b2c7a8eb9f4560e174f58fc46e5738853da6a965f01acce32852ab8b283bdf",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0767",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "07235599968bfe4db7e279b2120a9743e2975aefe4b331c544ac6e4e85d58129",
+        "sourceDraftSha256": "07235599968bfe4db7e279b2120a9743e2975aefe4b331c544ac6e4e85d58129",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "482a4769c548063c5fd8a064dd122b21fa132375e95b1784899f1db5c4c075c1"
+      },
+      "contentSha256": "482a4769c548063c5fd8a064dd122b21fa132375e95b1784899f1db5c4c075c1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0840",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "单价、数量、总价",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-71f7047a05f5b6e9",
+      "assessmentGroup": "assessment-71f7047a05f5b6e9",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "早餐活动有小龄儿童53人、大龄儿童35人、成人75人、老人37人。预计每人分别吃0.5份、1份、2份、1.5份蛋饼，另备25份。每份蛋饼用2个鸡蛋，一共要准备几个鸡蛋？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "584",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "按人数计算各组需求并加备用量",
+      "hints": [
+        "备用25份也需要鸡蛋"
+      ],
+      "steps": [
+        "各组需53×0.5+35+75×2+37×1.5=267份",
+        "加备用共267+25=292份，用292×2=584个鸡蛋"
+      ],
+      "commonMistakes": [
+        "忘记备用量或把半份直接舍去"
+      ],
+      "prerequisites": [
+        "小数乘法",
+        "整数加法",
+        "整数乘法"
+      ],
+      "adaptation": [
+        "明确按预计份数备料，小数份可合并制作"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0840",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "f11d625b4fb6ee74bf0be5ea35816636e47f8dcb872bbcd74541cca5facbcfdc",
+        "recordSha256": "95e1dc57daec752c404f83a4d5627afa04ef21db911b85c8c747446626ed2c6d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0840",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "72811beee7f0501d1d5ce07c572f694be5478d146052e160c83a944be3fe23bf",
+        "sourceDraftSha256": "72811beee7f0501d1d5ce07c572f694be5478d146052e160c83a944be3fe23bf",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e32d891e94054a177a2d738dd3b9b6750ce76cccb372ec4349e5d267cd51b56c"
+      },
+      "localCategoryOverride": {
+        "category": "G01",
+        "reason": "此题由分组餐食份数计算鸡蛋需求，票价没有参与计算，应归数量合计。"
+      },
+      "contentSha256": "e32d891e94054a177a2d738dd3b9b6750ce76cccb372ec4349e5d267cd51b56c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1063",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "等量分组与单位量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2e8e94cec96f1853",
+      "assessmentGroup": "assessment-2e8e94cec96f1853",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小露做了一些三明治。她自己吃1个，给弟弟2个；第一位表亲吃2个，另外两位表亲各吃1个，最后剩3个。她起初做了多少个三明治？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "10",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "由全部消耗和余量反求总量",
+      "hints": [
+        "把各人拿走的三明治和最后剩余都加回去。"
+      ],
+      "steps": [
+        "吃掉和送出的总数为1＋2＋2＋2×1＝7个。",
+        "起初做7＋3＝10个。"
+      ],
+      "commonMistakes": [
+        "忘记最后剩下的3个。"
+      ],
+      "prerequisites": [
+        "分类合计",
+        "整体与部分"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1063",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "56285824c6a80fccbe7fab7749b4889848d14a27101be9cdfb87f0d3e4fa7ddf",
+        "recordSha256": "9f0fdf4fc4c30b4b2f4846f1a947afc4496e03b846e6ead06a045422a62d4612",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1063",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c727c20b13ced0d86dabc851262711f472cfc8d566de3daf582a7b21c598b72a",
+        "sourceDraftSha256": "c727c20b13ced0d86dabc851262711f472cfc8d566de3daf582a7b21c598b72a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "0c9e454e5591ba5277dd91d437d2474a189a1c39a0db9ee4a09d2d30b48ac9ce"
+      },
+      "localCategoryOverride": {
+        "category": "G01",
+        "reason": "核心是已用数量加余量反求原总数，没有比例分配。"
+      },
+      "contentSha256": "0c9e454e5591ba5277dd91d437d2474a189a1c39a0db9ee4a09d2d30b48ac9ce"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1107",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-7860771eee89621d",
+      "assessmentGroup": "assessment-7860771eee89621d",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "两位朋友的年龄相差2岁，年龄和是74岁。年长的朋友多少岁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "38",
+          "d": "1"
+        },
+        "unit": "岁"
+      },
+      "intent": "用和差求较大数",
+      "hints": [
+        "让年轻者增加2岁，两人就同岁"
+      ],
+      "steps": [
+        "把年轻者补上2岁，总和变成74+2=76岁",
+        "年长者年龄是76÷2=38岁"
+      ],
+      "commonMistakes": [
+        "用(74−2)÷2回答年长者，实际得到年轻者年龄"
+      ],
+      "prerequisites": [
+        "整数加法",
+        "整数除法",
+        "和差问题"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1107",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "16aac5f52ce789ba32d5633e6c29e95eb719e47df3f692d0957c7a7ba534088c",
+        "recordSha256": "64314d766281bb3aa6b311df3599d155d609f7a4fe257c1400d826a6126b4c9f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1107",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c8a316ebc03a389150035df6db4d7e47bffc65bf4dcc1072dce50e31d7d8dc78",
+        "sourceDraftSha256": "c8a316ebc03a389150035df6db4d7e47bffc65bf4dcc1072dce50e31d7d8dc78",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "fbb227f2c91a8489e68ac59334a3db83114aaee2cb9021088de4abac11a339e0"
+      },
+      "contentSha256": "fbb227f2c91a8489e68ac59334a3db83114aaee2cb9021088de4abac11a339e0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1127",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-5fded651b871ec72",
+      "assessmentGroup": "assessment-5fded651b871ec72",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小麦搭积木桥，总共要用150块积木。他计划恰好使用40块A型积木，B型积木的块数是A型的一半，其余用其他类型。其他类型要用多少块？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "90",
+          "d": "1"
+        },
+        "unit": "块"
+      },
+      "intent": "从总数中扣除两个已知部分",
+      "hints": [
+        "先求B型的块数"
+      ],
+      "steps": [
+        "B型用40÷2=20块",
+        "A、B两型共用40+20=60块，其他类型用150−60=90块"
+      ],
+      "commonMistakes": [
+        "把一半误解为总数150的一半"
+      ],
+      "prerequisites": [
+        "整数除法",
+        "整数加减"
+      ],
+      "adaptation": [
+        "原题说A型“至少40块”却求唯一剩余数，条件不足",
+        "改为计划恰好40块，保持原解所用关系并重新计算"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1127",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "7976cf8b747949f5ba47eca3885927cbaae4b884c083d350efca372a7eec3cf2",
+        "recordSha256": "b4c293e7aeec8c96a0c0b9d23154836290ac3fca8c66c31b3a4319a253752186",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1127",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9d049262523b2f98c633fc6c49fae5599a293bf8f8c7a497b738eb97c2994131",
+        "sourceDraftSha256": "9d049262523b2f98c633fc6c49fae5599a293bf8f8c7a497b738eb97c2994131",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d92de869ea8db53575dcca0151fe2105ea07ff130f11cbec4d755335a685c664"
+      },
+      "contentSha256": "d92de869ea8db53575dcca0151fe2105ea07ff130f11cbec4d755335a685c664"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1503",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-84ccf996751a7d8c",
+      "assessmentGroup": "assessment-84ccf996751a7d8c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小丹带了2.5打纸杯蛋糕到二年级班上，1打是12个。全班有27名学生（包括小丹）、1名老师和1名助教。当天3名学生请病假，其余人都到场。小丹给在场每人1个，包括自己，还剩多少个？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "由班级总人数求实际到场人数，再求剩余",
+      "hints": [
+        "别漏掉两名成人",
+        "小丹已包含在27名学生中"
+      ],
+      "steps": [
+        "蛋糕有2.5×12=30个",
+        "到场人数是27−3+1+1=26人，剩30−26=4个"
+      ],
+      "commonMistakes": [
+        "重复增加小丹或把老师排除在领取者外"
+      ],
+      "prerequisites": [
+        "小数乘法",
+        "整数加减",
+        "打与个数换算"
+      ],
+      "adaptation": [
+        "明确老师和助教到场、在场人人含小丹都领取1个"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1503",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "17704a29a86049844378da2014d9ddecaa39404bc45e125722a9feece8f549a2",
+        "recordSha256": "701271e5f857b10d57ac1ac1eaded7eb56c93a1c0d27e9b25a8b9fb7caf50804",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1503",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "467591cbd0a322d39997e38bde25ca75817f06c929c61011a07373204223cc29",
+        "sourceDraftSha256": "467591cbd0a322d39997e38bde25ca75817f06c929c61011a07373204223cc29",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "7e802b9da77d75b0f3066f5f8f288e2d4edcda616e39b90c6794380f3d348513"
+      },
+      "contentSha256": "7e802b9da77d75b0f3066f5f8f288e2d4edcda616e39b90c6794380f3d348513"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1611",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-5ed8801e29f188c3",
+      "assessmentGroup": "assessment-5ed8801e29f188c3",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小米做量水实验，上午量出1.5升水，下午量出的水是上午的3倍。上午和下午共量出多少升水？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6",
+          "d": "1"
+        },
+        "unit": "升"
+      },
+      "intent": "求倍数部分后合计",
+      "hints": [
+        "下午水量是1.5升的3倍"
+      ],
+      "steps": [
+        "下午量出1.5×3=4.5升",
+        "两次共量出1.5+4.5=6升"
+      ],
+      "commonMistakes": [
+        "只回答下午水量4.5升"
+      ],
+      "prerequisites": [
+        "小数乘法",
+        "小数加法"
+      ],
+      "adaptation": [
+        "把一天饮用6升水改为量水实验，保留1.5升、3倍和总量关系"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1611",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "6bc6a080c155371f61eeefd4cd6c38f45792eeac400aafceb0571c8b5292e100",
+        "recordSha256": "6c3c3beb69404407f09dd053d99e6e0372d33e325ae9c38f929e89e5873f2bb1",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1611",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "425ce99de09b27477bf302c0deb344c6cc7e106491bdb600cfe42c2f8a8038cb",
+        "sourceDraftSha256": "425ce99de09b27477bf302c0deb344c6cc7e106491bdb600cfe42c2f8a8038cb",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "729bb2e15a34f018194eed48b4406b09fc3e8efc89b374a916dddbab4110317b"
+      },
+      "contentSha256": "729bb2e15a34f018194eed48b4406b09fc3e8efc89b374a916dddbab4110317b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1681",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-03b3495b4554ed14",
+      "assessmentGroup": "assessment-03b3495b4554ed14",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "碗里原有349颗糖。小丽拿走108颗，小松又拿走153颗。碗里还剩多少颗糖？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "88",
+          "d": "1"
+        },
+        "unit": "颗"
+      },
+      "intent": "连续减少后求剩余",
+      "hints": [
+        "可以先求两人一共拿走多少颗"
+      ],
+      "steps": [
+        "两人共拿走108+153=261颗",
+        "碗里剩349−261=88颗"
+      ],
+      "commonMistakes": [
+        "只减去一个人的糖"
+      ],
+      "prerequisites": [
+        "整数加减"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1681",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "37e49841c54721b2e4e4a3363845c90151a698aff44da3cef6ee9dcd6cb6bb08",
+        "recordSha256": "0dda32b437d668ef4647b07660d3b798006dbe2d9a4d27a3a5ea0c7a94dbf74b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1681",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "34277e36fc55730e281ae757df6c95c7ed8d2f6eab164891b6f50f2434374601",
+        "sourceDraftSha256": "34277e36fc55730e281ae757df6c95c7ed8d2f6eab164891b6f50f2434374601",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9c90866b8801620c28cc701b1bbd7f0fb22895b3723a08b4deeb1b2f83680b49"
+      },
+      "contentSha256": "9c90866b8801620c28cc701b1bbd7f0fb22895b3723a08b4deeb1b2f83680b49"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1790",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-1e4bc874ae3cf295",
+      "assessmentGroup": "assessment-1e4bc874ae3cf295",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小帕原有75张卡片，小罗原有88张。第一次小帕拿出2张，换来小罗的10张；第二次小罗拿出另8张，换来小帕的另15张。这两次交换中，两人共交出了多少张卡片？每张只计一次。",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "35",
+          "d": "1"
+        },
+        "unit": "张"
+      },
+      "intent": "合计两次交换双方交出的卡片",
+      "hints": [
+        "每次交换都要算双方交出的数量"
+      ],
+      "steps": [
+        "小帕共交出2+15=17张，小罗共交出10+8=18张",
+        "合计17+18=35张"
+      ],
+      "commonMistakes": [
+        "把原有卡片数也加进去，或只算收到的一方"
+      ],
+      "prerequisites": [
+        "整数加法",
+        "识别无关条件"
+      ],
+      "adaptation": [
+        "明确统计双方交出总张数和不重复的卡片，消除“交换了多少”含义不明"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1790",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "fcab23c0bf50e5728c6c1b8500e60a15eca2d1945a55714e3cc298c012238f26",
+        "recordSha256": "67a1cc5121f6daf709d70de1e44da0fc2a85b44e62cc5e7180af8892e6390432",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1790",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "fa43df174943dea67d9640243367e1c9dc7f84d1ad49b5b8cc58b9c1b24a6668",
+        "sourceDraftSha256": "fa43df174943dea67d9640243367e1c9dc7f84d1ad49b5b8cc58b9c1b24a6668",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2949da0e8799a0921d7f22e460da8f92145e269ac365cc1a1d7f5b4655aa8703"
+      },
+      "contentSha256": "2949da0e8799a0921d7f22e460da8f92145e269ac365cc1a1d7f5b4655aa8703"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1877",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-11d260238372f6d5",
+      "assessmentGroup": "assessment-11d260238372f6d5",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小卡给新店开放日准备礼物袋。确定有50人来，他另外按可能来的40人做准备，希望计划中的每人都有1袋。他已经做10袋精装礼物和20袋普通礼物。按这个计划还要做多少袋？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "60",
+          "d": "1"
+        },
+        "unit": "袋"
+      },
+      "intent": "按计划总人数求用品缺口",
+      "hints": [
+        "所求按预计50＋40人计算。"
+      ],
+      "steps": [
+        "计划人数为50＋40＝90人，已备10＋20＝30袋。",
+        "还需90－30＝60袋。"
+      ],
+      "commonMistakes": [
+        "把普通礼物袋的average误认为需要求数学平均数。"
+      ],
+      "prerequisites": [
+        "分类合计",
+        "用品缺口"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "原题希望额外40人到场，中文明确以50＋40计划人数备货，不声称实际到场数确定；average gift bags译为普通礼物袋。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1877",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "2509cd7581457f576f6c38ca445051da39dca3fa0de6a41c9f7a626ba2d119a6",
+        "recordSha256": "5efa7267f21500376b6c1ca64b02b8d692ace7984b4926be23856e75ef94ca7e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1877",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c0f36fec2ccbd3f7ed6b5a429eec91d3e33bf4ad90b5958ccacfeb73b85c4f76",
+        "sourceDraftSha256": "c0f36fec2ccbd3f7ed6b5a429eec91d3e33bf4ad90b5958ccacfeb73b85c4f76",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "011bead2b74ed6453f62e040e29a190340a6a44ff1eb6b36184b82dc60f000b0"
+      },
+      "localCategoryOverride": {
+        "category": "G01",
+        "reason": "average仅指普通礼物袋，题目实为计划总人数减已备袋数的剩余量，未涉及平均数。"
+      },
+      "contentSha256": "011bead2b74ed6453f62e040e29a190340a6a44ff1eb6b36184b82dc60f000b0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2150",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-4d009a497c3bcd95",
+      "assessmentGroup": "assessment-4d009a497c3bcd95",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小欧有8位朋友，其中一半是女孩，其余都是男孩。这些男孩都和小欧一起演小话剧。和小欧一起演话剧的男孩朋友有几人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "求总数的一半",
+      "hints": [
+        "女孩和其余男孩各占一半"
+      ],
+      "steps": [
+        "女孩有8÷2=4人",
+        "男孩有8−4=4人，所以有4位男孩朋友参加"
+      ],
+      "commonMistakes": [
+        "把小欧本人也算入男孩朋友数"
+      ],
+      "prerequisites": [
+        "整数除法",
+        "整数减法"
+      ],
+      "adaptation": [
+        "明确其余朋友都是男孩，所求仅为男孩朋友数"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2150",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "6a53b82c71a9d86b36c03ffe872ad6322af9d957bb303ed09ffdf1f42f181e7c",
+        "recordSha256": "6b590c131585f7ea33c9e32b348a83caf820e211cace9d54863229b51c1c93d0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2150",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "fe3b780d8c83c4dfda98618570e9bb5638d638674f9f68953763bc5bcef28f2f",
+        "sourceDraftSha256": "fe3b780d8c83c4dfda98618570e9bb5638d638674f9f68953763bc5bcef28f2f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2982acb3a5bc5ffedbe109d3c55e84bf41fc5a79c5bbc428e14c8319b8cd8f73"
+      },
+      "contentSha256": "2982acb3a5bc5ffedbe109d3c55e84bf41fc5a79c5bbc428e14c8319b8cd8f73"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2285",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-04fed941417a6178",
+      "assessmentGroup": "assessment-04fed941417a6178",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "三家舞蹈教室共有376名学生。第一家有110名，第二家有135名。第三家有多少名学生？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "131",
+          "d": "1"
+        },
+        "unit": "名"
+      },
+      "intent": "由总数减去已知部分",
+      "hints": [
+        "先合计前两家的人数"
+      ],
+      "steps": [
+        "前两家共110+135=245名",
+        "第三家有376−245=131名"
+      ],
+      "commonMistakes": [
+        "只减去一家的人数"
+      ],
+      "prerequisites": [
+        "整数加减"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2285",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "598030dc0d9a8fd45467e6e31962c80d3ebda9a4d1efc8b509f7716c772352e4",
+        "recordSha256": "0a9e5ab38d5cf11fee4dbee433d9cb98496f89a6aa7c438756066225833dca67",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2285",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2a4108573d2e38f60c9b5133edf6c19fca82ba9102cc2d96215f7e89747e5db1",
+        "sourceDraftSha256": "2a4108573d2e38f60c9b5133edf6c19fca82ba9102cc2d96215f7e89747e5db1",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "668a116b7961975d5b3c6bbccd73d64fdc301d9ce7599b43dd9f35489cfe2627"
+      },
+      "contentSha256": "668a116b7961975d5b3c6bbccd73d64fdc301d9ce7599b43dd9f35489cfe2627"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2341",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-60a780748b13f5fd",
+      "assessmentGroup": "assessment-60a780748b13f5fd",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小贾推着一车书在图书馆上架。他在历史区放好12本，在小说区放好19本，在儿童区放好8本，又把儿童区4本放错位置的书放回车上，准备移到别处。此时车上还有16本。他最初推了多少本书？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "51",
+          "d": "1"
+        },
+        "unit": "本"
+      },
+      "intent": "逆推起始数量，区分取出与加入",
+      "hints": [
+        "4本书是后来加入车上的"
+      ],
+      "steps": [
+        "车上净减少12+19+8−4=35本",
+        "最后剩16本，所以最初有16+35=51本"
+      ],
+      "commonMistakes": [
+        "把后来加入的4本也当作上架而减去"
+      ],
+      "prerequisites": [
+        "整数加减",
+        "逆向推理"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2341",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "edc96f1848c72a7785f2bffaf4468d9b8e1721e4fbb2dd4b5081613792c1d85c",
+        "recordSha256": "67e6a9241595798a367e427d0ea17ee983948e63df349a306d40ce0e2929a243",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2341",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "4bd687bd17c024c4a31e08589ab4102c4d724a8365b569edfdf3855d7c0398de",
+        "sourceDraftSha256": "4bd687bd17c024c4a31e08589ab4102c4d724a8365b569edfdf3855d7c0398de",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b4ce5dbae8006a79c6d44381e55916eb69381e2838e3d0cf08d480ca525e2cf2"
+      },
+      "contentSha256": "b4ce5dbae8006a79c6d44381e55916eb69381e2838e3d0cf08d480ca525e2cf2"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2387",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-d808e03080652714",
+      "assessmentGroup": "assessment-d808e03080652714",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "动物收容所原有的猫数是12只的一半，后来新收留12只。两天后3只被领养，次日一只猫生了5只小猫，另有1只走失的猫被主人接走。现在共有几只猫？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "19",
+          "d": "1"
+        },
+        "unit": "只"
+      },
+      "intent": "依次计入增加与减少",
+      "hints": [
+        "新生小猫也要计入"
+      ],
+      "steps": [
+        "原有12÷2=6只",
+        "现在有6+12−3+5−1=19只"
+      ],
+      "commonMistakes": [
+        "忘记原有猫或把出生小猫算成减少"
+      ],
+      "prerequisites": [
+        "整数四则运算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2387",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "a550b1cd5586d6a8f06035e2cb571f02ad37b675261dfe8fe1064693214e7fe9",
+        "recordSha256": "a3a6cde6f2f5dcc344c304c990c8464403729e73ade0167e34e21f64dfc35932",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2387",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f5e7329c264b0db4a396f8a4623975c0676a75bbb6614fc78570d62f5b88cdc0",
+        "sourceDraftSha256": "f5e7329c264b0db4a396f8a4623975c0676a75bbb6614fc78570d62f5b88cdc0",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "59ee3d980dbc13ed71bf04e8e4e7f3e43547e53eb215fdad3d6a71c53acddfb7"
+      },
+      "contentSha256": "59ee3d980dbc13ed71bf04e8e4e7f3e43547e53eb215fdad3d6a71c53acddfb7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2454",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-90bfc4a195564174",
+      "assessmentGroup": "assessment-90bfc4a195564174",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小陶手机里原有63张照片，先删除7张，再拍15张猫的照片，接着拍了一组朋友合照，又从合照中删3张。最后共有84张照片。他这次共拍了几张朋友合照（包括后来删掉的）？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "16",
+          "d": "1"
+        },
+        "unit": "张"
+      },
+      "intent": "逆推未知增加量",
+      "hints": [
+        "删掉的3张也属于本次拍摄数量"
+      ],
+      "steps": [
+        "拍合照前有63−7+15=71张",
+        "拍摄后再删3张得到84张，拍摄数84+3−71=16张"
+      ],
+      "commonMistakes": [
+        "回答保留下来的13张，遗漏删除的3张"
+      ],
+      "prerequisites": [
+        "整数加减",
+        "逆向推理"
+      ],
+      "adaptation": [
+        "明确所求含后来删除的合照"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2454",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "337828d871f9c746b42e939557058ebf62572c2c044a5eb35016f60eef8a6844",
+        "recordSha256": "dbd02d2bcb3d8fb9160a5708715d89387643ac33caad542d10f839d40d545eef",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2454",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0024887e2cc03d8dd2929ba99a8cfead23b710ea28865fc45a28ab76d1f5845c",
+        "sourceDraftSha256": "0024887e2cc03d8dd2929ba99a8cfead23b710ea28865fc45a28ab76d1f5845c",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6af024ef525081b1398ef07e68f7a1a7c1614d8fc5d9258ec145231c3a2a275a"
+      },
+      "contentSha256": "6af024ef525081b1398ef07e68f7a1a7c1614d8fc5d9258ec145231c3a2a275a"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2457",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-64a109b267711546",
+      "assessmentGroup": "assessment-64a109b267711546",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "5盒麦片里一共有437颗葡萄干。前两盒分别有72颗、74颗，另外3盒每盒数量相同。另外3盒每盒有几颗？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "97",
+          "d": "1"
+        },
+        "unit": "颗"
+      },
+      "intent": "扣除已知部分后平均分",
+      "hints": [
+        "先求剩余3盒的总数"
+      ],
+      "steps": [
+        "另外3盒共437−72−74=291颗",
+        "每盒291÷3=97颗"
+      ],
+      "commonMistakes": [
+        "把437直接除以5，忽略各盒不等量"
+      ],
+      "prerequisites": [
+        "整数减法",
+        "整数除法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2457",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "8fe15e051d4164a2b6bcc053e16f51ea47c24ba3987f8ce961cb79dc622cc64f",
+        "recordSha256": "cd1cdb0fcc275e6e81d3c14376b525378a2f8ccba209cffbc8bbcee206a6bbb0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2457",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "5b472f8a42b96defd064e9c12a846cca7a9b95e62867aef1a9a0f7ab143881bc",
+        "sourceDraftSha256": "5b472f8a42b96defd064e9c12a846cca7a9b95e62867aef1a9a0f7ab143881bc",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "404bb314f557ec03e4770c1712714291acfb3be5b8da8761de94d601cd187d0c"
+      },
+      "contentSha256": "404bb314f557ec03e4770c1712714291acfb3be5b8da8761de94d601cd187d0c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2505",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-11bb3bda02eb3362",
+      "assessmentGroup": "assessment-11bb3bda02eb3362",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小艾早晨的盒子里有一些湿巾。当天她用了20片，又补进10片，没有其他取放。晚上盒里剩60片。早晨原有多少片？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "70",
+          "d": "1"
+        },
+        "unit": "片"
+      },
+      "intent": "逆推净变化",
+      "hints": [
+        "用了20片又补10片，净减少多少？"
+      ],
+      "steps": [
+        "当天净减少20−10=10片",
+        "早晨原有60+10=70片"
+      ],
+      "commonMistakes": [
+        "逆推时把补入的10片又加一次"
+      ],
+      "prerequisites": [
+        "整数加减",
+        "逆向推理"
+      ],
+      "adaptation": [
+        "明确只发生一次使用20片与补入10片，避免原文“throughout”被读成重复循环"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2505",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "0b553e6779dd69f4fe4fa5739c348721a5f20e27fb98e2cff232cfe754a4b979",
+        "recordSha256": "7db2834a9bfd52a1b14d6f6f72ef0e92eb768323ab98fd2308d6d35b58546bcc",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2505",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2600a76a09bc55af7cb46bfed50cc29861aa841fa0233bd721d7e709cf3c5fae",
+        "sourceDraftSha256": "2600a76a09bc55af7cb46bfed50cc29861aa841fa0233bd721d7e709cf3c5fae",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9984610bfdf597b65ff7d0d3a9d6b50733250180cd9d51092a89d9e88ffaa44b"
+      },
+      "contentSha256": "9984610bfdf597b65ff7d0d3a9d6b50733250180cd9d51092a89d9e88ffaa44b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2552",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-40601f11b083acba",
+      "assessmentGroup": "assessment-40601f11b083acba",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小杜赛前离学校赛季得分纪录还差17分，旧纪录是257分。最后一场后他比旧纪录高5分。这场他进5个罚球（每个1分）、4个两分球和一些三分球。平时每场进2个三分球，这场比平时多进几个？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "1",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "先求本场得分，再分解各类得分",
+      "hints": [
+        "追平需17分，超出纪录另需5分"
+      ],
+      "steps": [
+        "本场得17+5=22分，罚球和两分球得5×1+4×2=13分",
+        "三分球得22−13=9分，进9÷3=3个，比平时多3−2=1个"
+      ],
+      "commonMistakes": [
+        "把9分当作9个三分球"
+      ],
+      "prerequisites": [
+        "整数四则运算",
+        "分与球数区别"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2552",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "e9fd0304dade8770e590c12d246f82109d6ed5560cfc64c68a61721b7c88ea6c",
+        "recordSha256": "7885a8874051021dbfa632eed7967bffef8abf2a3de1cb3df1c9ba73e395e195",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2552",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2fb69ed0860b64a731b3ac0ddd4f2495fa1bba7be64bce2dff78b2571329e3a0",
+        "sourceDraftSha256": "2fb69ed0860b64a731b3ac0ddd4f2495fa1bba7be64bce2dff78b2571329e3a0",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "757027ff92615a8060e041513cca7221bea6538070f95ed2128207910e67b505"
+      },
+      "contentSha256": "757027ff92615a8060e041513cca7221bea6538070f95ed2128207910e67b505"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2802",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-000e47916a1082e3",
+      "assessmentGroup": "assessment-000e47916a1082e3",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小博在动物园数动物的腿，目标是1100条。他已看到12只黑猩猩（每只2条腿）、8只狮子（每只4条腿）和5只蜥蜴（每只4条腿）。接着只看每只8条腿的蜘蛛，还要看多少只才能恰好达到目标？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "128",
+          "d": "1"
+        },
+        "unit": "只"
+      },
+      "intent": "先合计已数腿数，再按每只腿数换算",
+      "hints": [
+        "黑猩猩的双臂不算腿"
+      ],
+      "steps": [
+        "已数12×2+8×4+5×4=24+32+20=76条腿",
+        "还差1100−76=1024条，要看1024÷8=128只蜘蛛"
+      ],
+      "commonMistakes": [
+        "将黑猩猩的手臂也当成腿"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "整数加减",
+        "整数除法"
+      ],
+      "adaptation": [
+        "原解误将黑猩猩计为4条腿，改为明确2条腿，独立重算答案由125修订为128"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2802",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "00c55eb388212f64ec3abb5bfb0c22756001229f3eca3f278894ab3a45493acb",
+        "recordSha256": "42e4088843cd3893b9af8aa8f99c0f72e96f8a2a7222761e53ddb1cc4f07a68c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2802",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "42a9411a6c92356390bf4fe85672fc52b5994241ad70181a1369f28cb3ae5759",
+        "sourceDraftSha256": "42a9411a6c92356390bf4fe85672fc52b5994241ad70181a1369f28cb3ae5759",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b7bc7f373a7e13d8affca486497dc5bb1510692cf115277668222f6e35dc2be7"
+      },
+      "contentSha256": "b7bc7f373a7e13d8affca486497dc5bb1510692cf115277668222f6e35dc2be7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2955",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-ff40c9f16abc9743",
+      "assessmentGroup": "assessment-ff40c9f16abc9743",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "停车场有1000个车位，分3区。第1区有320个，第2区比第3区多200个。第2区有几个车位？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "440",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "用剩余总数和差求较大部分",
+      "hints": [
+        "先扣去第1区"
+      ],
+      "steps": [
+        "第2、3区共1000−320=680个",
+        "把第3区补200个与第2区同多，则第2区有(680+200)÷2=440个"
+      ],
+      "commonMistakes": [
+        "把680直接平分，忽略200个差"
+      ],
+      "prerequisites": [
+        "整数加减",
+        "整数除法",
+        "和差问题"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2955",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "c3c534411cb5f4851a0fd36a11690639d7666d7e8c95fb51dee8726268434ac1",
+        "recordSha256": "ffce38f286c65123f1bc26d670ecdd68c5112dd19fa43b87878d4c6d79cc21ce",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2955",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9a99f92c9f5eac672bbabb30c76fde67f15264146f6f395ba2c95275f440247f",
+        "sourceDraftSha256": "9a99f92c9f5eac672bbabb30c76fde67f15264146f6f395ba2c95275f440247f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "bb480c1559d5134500ad6c226c331374a9ec16969b59f78a4f130288b2b67fdb"
+      },
+      "contentSha256": "bb480c1559d5134500ad6c226c331374a9ec16969b59f78a4f130288b2b67fdb"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3097",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-249740d4b05bb778",
+      "assessmentGroup": "assessment-249740d4b05bb778",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "加温实验中，水温每经过2小时升高1.5摄氏度。凌晨3时水温为50摄氏度，按这个规律继续加温，到上午11时水温是多少摄氏度？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "56",
+          "d": "1"
+        },
+        "unit": "摄氏度"
+      },
+      "intent": "计算经过几个等长时间段，再求累计变化",
+      "hints": [
+        "3时到11时经过8小时"
+      ],
+      "steps": [
+        "共有(11−3)÷2=4个2小时，水温共升高4×1.5=6摄氏度",
+        "11时水温为50+6=56摄氏度"
+      ],
+      "commonMistakes": [
+        "把8小时当作8次升温"
+      ],
+      "prerequisites": [
+        "时间差",
+        "整数除法",
+        "小数乘法"
+      ],
+      "adaptation": [
+        "原文温标未说明，为满足本期公制要求，将室外气温改为摄氏温标的加温水实验，保留原50与每2小时升1.5的数值关系并重算56摄氏度",
+        "属于情境和教学数值重设，不是华氏到摄氏的精确换算"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3097",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "bbf6985e74f60849351f6e6f7534b83d28a02f247500a95c188132a87a91cb48",
+        "recordSha256": "b93ef9fdca7b6e985f2db05023ccb8bdf0b35f40b9e00323ad80e5a82cf96967",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3097",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2f55d92df71b110d0219c83ff7440db56db6d68915f0d76a06f59942e72f89aa",
+        "sourceDraftSha256": "2f55d92df71b110d0219c83ff7440db56db6d68915f0d76a06f59942e72f89aa",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "4ae27520e514df9cb916177a02d5614303481190bda3b3fa67235311087b3a91"
+      },
+      "contentSha256": "4ae27520e514df9cb916177a02d5614303481190bda3b3fa67235311087b3a91"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3099",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-6cc49502fa42d332",
+      "assessmentGroup": "assessment-6cc49502fa42d332",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "三兄弟的年龄是三个连续整数，年龄和是96岁。最小的弟弟多少岁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "31",
+          "d": "1"
+        },
+        "unit": "岁"
+      },
+      "intent": "用中间数求连续整数",
+      "hints": [
+        "三个数平均数就是中间数"
+      ],
+      "steps": [
+        "中间哥哥是96÷3=32岁",
+        "弟弟比他小1岁，所以32−1=31岁"
+      ],
+      "commonMistakes": [
+        "把平均年龄32岁当成弟弟年龄"
+      ],
+      "prerequisites": [
+        "整数除法",
+        "连续整数"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3099",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "57af25bd12d83266043f9c3d88dae1b5c81f42ae4303a537113cbd8ae26c438a",
+        "recordSha256": "85fc36b162bd8b6ad6fad12142b679d5a09ebcf66bfca95452770470e16e3da9",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3099",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9b904ecbb338a664d12f1ee939bf209c004b010665f4fd1c93e834d267a514fd",
+        "sourceDraftSha256": "9b904ecbb338a664d12f1ee939bf209c004b010665f4fd1c93e834d267a514fd",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "21c6f46459674e988bf6ec7c709668b25cd099ba042394ea943568ea28c64b8e"
+      },
+      "contentSha256": "21c6f46459674e988bf6ec7c709668b25cd099ba042394ea943568ea28c64b8e"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3133",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-65948abe8c1aa7e5",
+      "assessmentGroup": "assessment-65948abe8c1aa7e5",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "三座山记录的降雪深度分别是：甲山1.5米、乙山3.5米、丙山126厘米。把乙山和丙山的记录数值相加，比甲山记录多多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "326",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "统一长度单位后比较数值",
+      "hints": [
+        "1米等于100厘米"
+      ],
+      "steps": [
+        "甲山1.5×100=150厘米，乙山3.5×100=350厘米",
+        "乙、丙相加为350+126=476厘米，比甲山多476−150=326厘米"
+      ],
+      "commonMistakes": [
+        "把米和厘米直接相加"
+      ],
+      "prerequisites": [
+        "米与厘米换算",
+        "小数乘法",
+        "整数加减"
+      ],
+      "adaptation": [
+        "明确比较降雪深度记录的数值之和，避免将不同地点雪深误作一个实际总雪深"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3133",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "e986067b08c85c8262ede332c52ab67c0ed4ef6870190cf687053dbabb0328d0",
+        "recordSha256": "3947eae4e83def1e060567188254d5c0c9a0420b2fd5be152b15bb2e21cbb33e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3133",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0afb037edc8e0dce72fea6a0634294dc5f6ef75806340b8215bae4d7148e98a6",
+        "sourceDraftSha256": "0afb037edc8e0dce72fea6a0634294dc5f6ef75806340b8215bae4d7148e98a6",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "20ae3144c8b1fd2d33284f0734124414e05f6bdb5c3c1817edb4505b448a9b95"
+      },
+      "contentSha256": "20ae3144c8b1fd2d33284f0734124414e05f6bdb5c3c1817edb4505b448a9b95"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3236",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-02bcbd7134733f1c",
+      "assessmentGroup": "assessment-02bcbd7134733f1c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小杰借了一本93页的小说。周六读了30页，周日外出回来后又读了20页。这本书还剩多少页没读？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "43",
+          "d": "1"
+        },
+        "unit": "页"
+      },
+      "intent": "从总页数减去累计已读页数",
+      "hints": [
+        "先求两天读了多少页"
+      ],
+      "steps": [
+        "两天共读30+20=50页",
+        "未读93−50=43页"
+      ],
+      "commonMistakes": [
+        "把20页当作截至周日的累计页数"
+      ],
+      "prerequisites": [
+        "整数加减"
+      ],
+      "adaptation": [
+        "把去教堂简化为外出，保持读书条件"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3236",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "0c40a2d5102601bf0d8350f44cf30356ee2c087a9813ed890ea3adad096cc6ca",
+        "recordSha256": "de6fb5eb5d10be9cd1218c68d0cd3808a950014a8ff2b7f6bef4b980e446de5c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3236",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "d7ae815d140285b0a941ca015bf0cd358121636d21e759108ce203fdf69d85e1",
+        "sourceDraftSha256": "d7ae815d140285b0a941ca015bf0cd358121636d21e759108ce203fdf69d85e1",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "4aa9a75cf3e15ae48e35c805f2a9b9ab1858b0d972362b31420031fcafcf160c"
+      },
+      "contentSha256": "4aa9a75cf3e15ae48e35c805f2a9b9ab1858b0d972362b31420031fcafcf160c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3296",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-0072d6e7a551f374",
+      "assessmentGroup": "assessment-0072d6e7a551f374",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小凯和小唐带着6个孩子，小汤和小伊带着4个孩子，一起住海边小屋。他们每人都有2条腿，泳池里没有其他人。此刻泳池中这群人共有16条腿，每位入池者的两条腿都在池里。有几人没入池？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "由腿数求入池人数，再求补集",
+      "hints": [
+        "先算两家总人数"
+      ],
+      "steps": [
+        "总人数2+6+2+4=14人",
+        "池中有16÷2=8人，没入池14−8=6人"
+      ],
+      "commonMistakes": [
+        "把16条腿看作16个人"
+      ],
+      "prerequisites": [
+        "整数加减",
+        "整数除法"
+      ],
+      "adaptation": [
+        "补足每人两条腿均入池及无其他人的计数假设"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3296",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "eb71d0bd13fc417304c253477cb05e76ef26b2ca7b05f02597b3b5b437d7879e",
+        "recordSha256": "5a142c7173ea6ab9f65648fb76b75eed47e1bea517e84c1206e13ed291a2ad7e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3296",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "1b811d3d255d886727b2e24de4356a98f41587cb1d5ed5832e70ec711590e988",
+        "sourceDraftSha256": "1b811d3d255d886727b2e24de4356a98f41587cb1d5ed5832e70ec711590e988",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "3d190cb4b9961a0bbb64735597e8a27644e359063933d9de0a330b18e1ec8a27"
+      },
+      "contentSha256": "3d190cb4b9961a0bbb64735597e8a27644e359063933d9de0a330b18e1ec8a27"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3855",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-0420fe9e207d5d42",
+      "assessmentGroup": "assessment-0420fe9e207d5d42",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小莎的妹妹原有4本小笔记本，后来又买了6本，再丢了2本。她现在有多少本？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "8",
+          "d": "1"
+        },
+        "unit": "本"
+      },
+      "intent": "按先增加后减少求现有数量",
+      "hints": [
+        "先求买完后有几本"
+      ],
+      "steps": [
+        "买完后有4+6=10本",
+        "丢掉2本后剩10−2=8本"
+      ],
+      "commonMistakes": [
+        "把丢失数量加到总数上"
+      ],
+      "prerequisites": [
+        "整数加减"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3855",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "f6fbb99b29e150b9a5f178dba59955f4e111c42926d09ef5d6dd3f7c953d7c84",
+        "recordSha256": "14ac7c6d8a4e8741069b2681c9b3503644a57b42e6a07ad0b4c05234b98ed28a",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3855",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "acd8b5b82b00c21a2a5a2fbe40d1f4784242b0d9db95673ec0453b253a0657ae",
+        "sourceDraftSha256": "acd8b5b82b00c21a2a5a2fbe40d1f4784242b0d9db95673ec0453b253a0657ae",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b53ea1449b644dc09c1d440f6a95835c75cba500d9bfcaae99ffb95200b5da9b"
+      },
+      "contentSha256": "b53ea1449b644dc09c1d440f6a95835c75cba500d9bfcaae99ffb95200b5da9b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3864",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-2ffe7fe5a35bc477",
+      "assessmentGroup": "assessment-2ffe7fe5a35bc477",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "给一只狗做护理要2.5小时，给一只猫做护理要0.5小时。一位护理员依次为5只狗和3只猫护理，中间不休息，共需要多少分钟？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "840",
+          "d": "1"
+        },
+        "unit": "分钟"
+      },
+      "intent": "分别求总用时后换算成分钟",
+      "hints": [
+        "1小时等于60分钟"
+      ],
+      "steps": [
+        "狗的护理用时2.5×5=12.5小时，猫的护理用时0.5×3=1.5小时",
+        "共12.5+1.5=14小时，即14×60=840分钟"
+      ],
+      "commonMistakes": [
+        "把小时数直接作为分钟数，或默认同时护理"
+      ],
+      "prerequisites": [
+        "小数乘法",
+        "小数加法",
+        "小时与分钟换算"
+      ],
+      "adaptation": [
+        "明确依次护理且无休息，排除并行工作时间歧义"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3864",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "bb701b4d36c350d58fcea565258585acfddacd02f78ca3d1c23cdc9f9d72cb8e",
+        "recordSha256": "374e174ac990c6cf76910dce87c949b6d255ffd8cce45e9361873e4161b6fefe",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3864",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "61cc3f424340427cbee3d6e22502e6f33978d424a0728496c5aa77398f8527b4",
+        "sourceDraftSha256": "61cc3f424340427cbee3d6e22502e6f33978d424a0728496c5aa77398f8527b4",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e3cd0b40e48977d4894b17a7d559bc9913bb821a7cce3e1b2c5ee19814324644"
+      },
+      "contentSha256": "e3cd0b40e48977d4894b17a7d559bc9913bb821a7cce3e1b2c5ee19814324644"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3902",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2413063dcebbdabd",
+      "assessmentGroup": "assessment-2413063dcebbdabd",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "老师要小史收集60颗水果种子。按本题给定数量，每个苹果有6颗种子，每个梨有2颗，每颗葡萄有3颗。小史取出4个苹果、3个梨和9颗葡萄的所有种子，还差几颗？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "3",
+          "d": "1"
+        },
+        "unit": "颗"
+      },
+      "intent": "合计各类种子后求差额",
+      "hints": [
+        "每类水果数量乘每个的种子数"
+      ],
+      "steps": [
+        "种子共有4×6+3×2+9×3=24+6+27=57颗",
+        "还差60−57=3颗"
+      ],
+      "commonMistakes": [
+        "把60理解为60种水果种子，或只相加水果个数"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "整数加减"
+      ],
+      "adaptation": [
+        "原文“different”与平均种子数不能保证唯一实际答案",
+        "改为60颗并明确每个的给定种子数，保留计算关系"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3902",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "96cc884a6f3ffd78b06fb8ac2aab2658c8943062d6a147a1317fce61d8196b30",
+        "recordSha256": "10820a66737256a122dd757a78f5154fd2314c1b05210dd083ea178332b25c54",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3902",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "18bdccb757ef592f132e89ea2c723b6bf717a5e14842a9095a11651a42a2bce9",
+        "sourceDraftSha256": "18bdccb757ef592f132e89ea2c723b6bf717a5e14842a9095a11651a42a2bce9",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b13b5e9097e740f54b7f86a96ccdd69b1d0594e964b83a0ca0229faac86d79e8"
+      },
+      "contentSha256": "b13b5e9097e740f54b7f86a96ccdd69b1d0594e964b83a0ca0229faac86d79e8"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3947",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-65f0cef0f95e3798",
+      "assessmentGroup": "assessment-65f0cef0f95e3798",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "妈妈烤了2打布朗尼蛋糕，1打是12块。爸爸吃了8块，女儿吃了4块。次日妈妈又烤2打，加在剩余蛋糕里，此前没有其他人取走。现在共有几块？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "36",
+          "d": "1"
+        },
+        "unit": "块"
+      },
+      "intent": "先求剩余，再加入新一批",
+      "hints": [
+        "两批各有24块"
+      ],
+      "steps": [
+        "第一批有2×12=24块，剩24−8−4=12块",
+        "加入第二批24块，共12+24=36块"
+      ],
+      "commonMistakes": [
+        "忘记第二批，或把2打误当2块"
+      ],
+      "prerequisites": [
+        "打与个数换算",
+        "整数加减"
+      ],
+      "adaptation": [
+        "明确期间无其他取用"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3947",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "178d06b4f439cb1854b739c407a1d58e5dd5a04c837433f9754b08fd07dfad13",
+        "recordSha256": "17b16e83f085ebc43eecb0dcab44c2e6e6e2b8accf55dbdf4ef0f86cade7c312",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3947",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "344799e1476a4cc471495a1e36cb27162e9f1d76363204b80ef4f69e4c562dc2",
+        "sourceDraftSha256": "344799e1476a4cc471495a1e36cb27162e9f1d76363204b80ef4f69e4c562dc2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "4293cd0e361a1e99cb677b682b8d6f53e4e6aa0c49fdca6cd4a9d377451cad0e"
+      },
+      "contentSha256": "4293cd0e361a1e99cb677b682b8d6f53e4e6aa0c49fdca6cd4a9d377451cad0e"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3967",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-3e27d142f8e48e66",
+      "assessmentGroup": "assessment-3e27d142f8e48e66",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一套服装系列共13件，每件都使用丝绸、羊绒或两者混合的面料。其中10件使用丝绸，使用羊绒的件数是这个数的一半。多少件同时使用丝绸和羊绒？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "件"
+      },
+      "intent": "由分类计数求重叠数量",
+      "hints": [
+        "把两种面料件数相加时，混合面料会重复计算"
+      ],
+      "steps": [
+        "使用羊绒的有10÷2=5件",
+        "10+5=15件次，比实际13件多2件，所以混合面料有15−13=2件"
+      ],
+      "commonMistakes": [
+        "把丝绸和羊绒两组看成互不重复"
+      ],
+      "prerequisites": [
+        "整数除法",
+        "整数加减",
+        "重叠计数"
+      ],
+      "adaptation": [
+        "明确每件至少属于丝绸或羊绒一类，补足求交集条件"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3967",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "b99b81694c2d1df80a77eb1c839fcc9e93b95e5f073193a577cc1af9ba24aea1",
+        "recordSha256": "f99f29c8651ae1d94375bc133f0a48aaf758acbab2196092ea7ff8c47378ab29",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3967",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "1c6f27725a60c4ce242889e533953deca7af3b9b7fd5928d148438ccd3daac16",
+        "sourceDraftSha256": "1c6f27725a60c4ce242889e533953deca7af3b9b7fd5928d148438ccd3daac16",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "77281c829aed144f78761f867e394717f8f46f9e3e76d96e18835ab4b5b76d04"
+      },
+      "contentSha256": "77281c829aed144f78761f867e394717f8f46f9e3e76d96e18835ab4b5b76d04"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-4238",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "时间、速率与工作量",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-41144fabb22c31b6",
+      "assessmentGroup": "assessment-41144fabb22c31b6",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小西参加分4段的赛跑，总路程74.5千米。第1段15.5千米，第2段和第3段各21.5千米。第4段长多少千米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "16",
+          "d": "1"
+        },
+        "unit": "千米"
+      },
+      "intent": "从总路程扣除各已知段",
+      "hints": [
+        "第2和第3段要计两次21.5。"
+      ],
+      "steps": [
+        "前三段共15.5＋21.5×2＝58.5千米。",
+        "第4段长74.5－58.5＝16千米。"
+      ],
+      "commonMistakes": [
+        "只减一次21.5千米。"
+      ],
+      "prerequisites": [
+        "小数加乘",
+        "整体与部分"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-4238",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "f5eb6e7ad890474e3921731f7d1f8724a7f53159a89c6cf4b1702bcc4009a1e0",
+        "recordSha256": "48cf70637d358de9c245e9063a2a741d67168e686248e1c444a7939da8e69c53",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-4238",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "96cb3cbe3380bc033a6ecd5527444a3908bc2b9559449db6b8b997b547c43733",
+        "sourceDraftSha256": "96cb3cbe3380bc033a6ecd5527444a3908bc2b9559449db6b8b997b547c43733",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e5b555383fa65b5f440974e2dc18f46985b28bab8275afe0fa9b590fad0f0a6c"
+      },
+      "localCategoryOverride": {
+        "category": "G01",
+        "reason": "只需由总路程扣除三个已知部分，不涉及时间或速率，属于总量与剩余。"
+      },
+      "contentSha256": "e5b555383fa65b5f440974e2dc18f46985b28bab8275afe0fa9b590fad0f0a6c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-4333",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-7d5d15f7a750b0ad",
+      "assessmentGroup": "assessment-7d5d15f7a750b0ad",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小比和小琴清理车库，都把废弃物送去处理点。小琴比小比多跑6趟，两人共跑40趟。小琴跑了几趟？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "23",
+          "d": "1"
+        },
+        "unit": "趟"
+      },
+      "intent": "根据和差求较大数量",
+      "hints": [
+        "将小比补6趟后，两人趟数相同"
+      ],
+      "steps": [
+        "补上6趟后总数40+6=46趟",
+        "小琴跑46÷2=23趟"
+      ],
+      "commonMistakes": [
+        "用(40−6)÷2得到小比的17趟"
+      ],
+      "prerequisites": [
+        "整数加法",
+        "整数除法",
+        "和差问题"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-4333",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "fd8239a96aa8c55bbfd6deb4f34ff0c205fa0d111f24b0dfb3e022db52cbb7d5",
+        "recordSha256": "d9386e482a904fb002302c2923b0a5e21fbb7ccb6fc17ad1023092f6bf199f26",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-4333",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2fbeef01a09310f363fa3c39037228a9cf23c9fa6395cf6cb0691cc431686635",
+        "sourceDraftSha256": "2fbeef01a09310f363fa3c39037228a9cf23c9fa6395cf6cb0691cc431686635",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d975fa4eda7d5461770434aa263f8bcb7454ae433801a22e85f43256bdf759ea"
+      },
+      "contentSha256": "d975fa4eda7d5461770434aa263f8bcb7454ae433801a22e85f43256bdf759ea"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-4525",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-57b6a4fcdcb5eac5",
+      "assessmentGroup": "assessment-57b6a4fcdcb5eac5",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小约有60个橙子，先吃了10个。小卡拿走剩下橙子的一半，后来又还给小约5个。小约现在有多少个橙子？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "30",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "确定“一半”的基准并按先后计算",
+      "hints": [
+        "被拿走的是吃完后剩余量的一半"
+      ],
+      "steps": [
+        "吃完剩60−10=50个",
+        "小卡拿走50÷2=25个，小约留下25个",
+        "还回5个后小约有25+5=30个"
+      ],
+      "commonMistakes": [
+        "把拿走的一半算成60的一半"
+      ],
+      "prerequisites": [
+        "整数加减",
+        "整数除法"
+      ],
+      "adaptation": [
+        "把偷走情境改为拿走，明确一半以吃完后剩余量为基准"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-4525",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "4ff9c0a86ab3f831b06d64328fe01883bd4dcb5cab10afd1dfe76dc0ea0b25f1",
+        "recordSha256": "d3ac22e68da13fd43329c8ba6b3d50f63b6660ab70989e2bbf94bf1fad28a6db",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-4525",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "173bb370331667b9e6e941c9d5784bdce5f8c5e91330a79776d47e9a9b7f03a0",
+        "sourceDraftSha256": "173bb370331667b9e6e941c9d5784bdce5f8c5e91330a79776d47e9a9b7f03a0",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f27963b61bb30dfc499db047d74ce71704772a5a947c865d35aff4cc2aff1f95"
+      },
+      "contentSha256": "f27963b61bb30dfc499db047d74ce71704772a5a947c865d35aff4cc2aff1f95"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-4937",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-01b07ce677195c12",
+      "assessmentGroup": "assessment-01b07ce677195c12",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小涵有3升、5升、6升的空水桶各一个。她先装满5升桶，再尽量倒进3升桶，剩下的水全倒进6升桶。不溢出的情况下，6升桶还能装多少升水？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "升"
+      },
+      "intent": "先求转移余量，再求空余容量",
+      "hints": [
+        "3升桶装满后，5升桶还剩多少水？"
+      ],
+      "steps": [
+        "5升桶倒满3升桶后剩5−3=2升",
+        "这2升进入6升桶，空余容量为6−2=4升"
+      ],
+      "commonMistakes": [
+        "把6升桶误认为已装入5升水"
+      ],
+      "prerequisites": [
+        "整数减法",
+        "容量与剩余量"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-4937",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "a3b1176ec6419824fae3c296fcfc40c633c202828feef2b816c6cd4640517379",
+        "recordSha256": "607e16a7787e15f3975392f685dd32f2207e4fa4073da0a5ea322c1b2c5ff64c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-4937",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "cdbcbb2fa619132ce1448cfc8bf57c1512a635a690724ceef4a0fc14491757d8",
+        "sourceDraftSha256": "cdbcbb2fa619132ce1448cfc8bf57c1512a635a690724ceef4a0fc14491757d8",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f295329bb3e975aca77e7dc7ce5e0fbbe5417d538cfbc42cbb759eb98c710dbf"
+      },
+      "contentSha256": "f295329bb3e975aca77e7dc7ce5e0fbbe5417d538cfbc42cbb759eb98c710dbf"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5069",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-069c38a492f6c025",
+      "assessmentGroup": "assessment-069c38a492f6c025",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小艾买了一条切片面包。表弟两次各吃3片。她用剩余面包做夹心烤吐司，每份要2片，做成10份后还剩1片。面包原来有多少片？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "27",
+          "d": "1"
+        },
+        "unit": "片"
+      },
+      "intent": "合计已用与剩余量",
+      "hints": [
+        "两次各3片一共6片"
+      ],
+      "steps": [
+        "表弟吃3×2=6片，吐司用10×2=20片",
+        "原有6+20+1=27片"
+      ],
+      "commonMistakes": [
+        "把两次各3片误解成总共3片"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "整数加法"
+      ],
+      "adaptation": [
+        "将每份用两片的“toast”具体化为夹心烤吐司，明确两次各吃3片"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5069",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "48d8767bb294dac7c9c5ed1a1977b685d6ede8bbb408f0ad941311a60c0fb10c",
+        "recordSha256": "43defd4aa2cf203546ba6869924a539249b1aa09547380b88765d40307e9539f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5069",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "72a84d8564e408a22850d4793786ddfe73384ecc54f69cf3e8470efc0d2e97f3",
+        "sourceDraftSha256": "72a84d8564e408a22850d4793786ddfe73384ecc54f69cf3e8470efc0d2e97f3",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f04a96e2117a0cddbcd6470c01c15293119159e3c7c49bb8fbc73ff7e4290531"
+      },
+      "contentSha256": "f04a96e2117a0cddbcd6470c01c15293119159e3c7c49bb8fbc73ff7e4290531"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5112",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-386c1927be162128",
+      "assessmentGroup": "assessment-386c1927be162128",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "三兄妹相邻两人的年龄各差5岁，最大的现在20岁。10年后三人的年龄和是多少岁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "75",
+          "d": "1"
+        },
+        "unit": "岁"
+      },
+      "intent": "先求当前年龄和，再每人增加相同年数",
+      "hints": [
+        "三个人都各长大10岁"
+      ],
+      "steps": [
+        "现在年龄分别20、15、10岁，合计45岁",
+        "10年后总共增加3×10=30岁，年龄和45+30=75岁"
+      ],
+      "commonMistakes": [
+        "总年龄只加10岁"
+      ],
+      "prerequisites": [
+        "整数加减",
+        "整数乘法"
+      ],
+      "adaptation": [
+        "明确5岁差针对按年龄排序的相邻两人"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5112",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "131b58fc2892a9b9e4162bc4976d65dcfe43c2f367a4874b51a93e7996412901",
+        "recordSha256": "623c32cecb2db2ba9a84a37d2e741b4bd05408d3133e5965ac6d6a1d5698bcfc",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5112",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "aaf49ae00edded5abf822679c26b548bb4883728d4984d184244afd9b246aef6",
+        "sourceDraftSha256": "aaf49ae00edded5abf822679c26b548bb4883728d4984d184244afd9b246aef6",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ff823d0092a8e84b74fe7982bb6fb537c801cdd3f1e857852b6ad193b558dacf"
+      },
+      "contentSha256": "ff823d0092a8e84b74fe7982bb6fb537c801cdd3f1e857852b6ad193b558dacf"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5257",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2ab54d2f33dffa49",
+      "assessmentGroup": "assessment-2ab54d2f33dffa49",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小艾想折1000只纸鹤，自己先折了目标数量的一半。朋友又帮她折了当时剩余数量的五分之一。她还要折多少只？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "400",
+          "d": "1"
+        },
+        "unit": "只"
+      },
+      "intent": "依次确定分数的整体",
+      "hints": [
+        "朋友折的是剩余500只的五分之一"
+      ],
+      "steps": [
+        "自己折1000÷2=500只，还剩500只",
+        "朋友折500÷5=100只，最后还差500−100=400只"
+      ],
+      "commonMistakes": [
+        "把朋友的五分之一按1000只计算"
+      ],
+      "prerequisites": [
+        "分数意义",
+        "整数除法",
+        "整数减法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5257",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "759300884984f0527d708d3342f7b5121ca10dfda6f4eea701ab44b045116e8d",
+        "recordSha256": "babc69b1d54ec6e502de77751d5a84387f06bd4dd328a65931d8f2562c70cfbe",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5257",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "dbc9a06a85d5f99d3cb39cc01fd35820d0eb31448a62dea5050360adbed68cbe",
+        "sourceDraftSha256": "dbc9a06a85d5f99d3cb39cc01fd35820d0eb31448a62dea5050360adbed68cbe",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6909c0778879bf9f9ad33b4894cf20b083175746663b9943e1d1be01db983043"
+      },
+      "contentSha256": "6909c0778879bf9f9ad33b4894cf20b083175746663b9943e1d1be01db983043"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5528",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-d1e4bbf0a2ff8fb0",
+      "assessmentGroup": "assessment-d1e4bbf0a2ff8fb0",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个载物吊篮从第8层平台下降4米时，经过小戴所在的平台；之后又下降这4米的3倍，到达地面。第1层离地高度与相邻两层平台的高度差相同，所有平台等距。小戴在第几层？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6",
+          "d": "1"
+        },
+        "unit": "层"
+      },
+      "intent": "由总高度求层高，再求位置",
+      "hints": [
+        "地面到第8层也有8个相同高度间隔"
+      ],
+      "steps": [
+        "第8层高4+4×3=16米，每层间隔16÷8=2米",
+        "小戴所在高度16−4=12米，对应12÷2=6层"
+      ],
+      "commonMistakes": [
+        "把第8层到地面误算成7个间隔"
+      ],
+      "prerequisites": [
+        "整数四则运算",
+        "等距位置"
+      ],
+      "adaptation": [
+        "坠落事故改为载物吊篮下降，明确第1层与地面的间距以消除平台编号歧义"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5528",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "863034b85ad87e0cbb1ab4daf3fc7e1d8d3c31f0878fe1a0b1b752b7496eca7f",
+        "recordSha256": "2a0b7a90b780ea15fb0ccdd59aa4cdcd3d06a971f11431f3ce49801d46500540",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5528",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "d8e511381035b8a65c8106e82387648e1744c7b3f7427bda6606cd17173867f7",
+        "sourceDraftSha256": "d8e511381035b8a65c8106e82387648e1744c7b3f7427bda6606cd17173867f7",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d99efae373b0eb15deb22aa11315b3290bc62e47ef86940ba41b576a3e7d293b"
+      },
+      "contentSha256": "d99efae373b0eb15deb22aa11315b3290bc62e47ef86940ba41b576a3e7d293b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5758",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-8e650dc4aee62bbe",
+      "assessmentGroup": "assessment-8e650dc4aee62bbe",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一座供热站按恒定速度消耗燃料，21小时消耗7升。90小时消耗多少升？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "30",
+          "d": "1"
+        },
+        "unit": "升"
+      },
+      "intent": "利用恒定消耗率求用量",
+      "hints": [
+        "先算消耗1升需要几小时"
+      ],
+      "steps": [
+        "21÷7=3小时消耗1升",
+        "90小时消耗90÷3=30升"
+      ],
+      "commonMistakes": [
+        "把21÷7当作每小时耗油量"
+      ],
+      "prerequisites": [
+        "整数除法",
+        "恒定速率"
+      ],
+      "adaptation": [
+        "明确消耗速度恒定"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5758",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "cfb6c50bfa43aa5013420cbfe0eb5c8b138afa751fa269e18e7e805139b555cd",
+        "recordSha256": "392230812980e061954323b95606def476ed2fc50fbd4cdefdbde3665ade5ef4",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5758",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b6cfaf8478e38ce71407a47c7c3f501d1e61c5f38c008b1fbcead7382a54a45b",
+        "sourceDraftSha256": "b6cfaf8478e38ce71407a47c7c3f501d1e61c5f38c008b1fbcead7382a54a45b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e706dda75ca385649adf749d2abe54b9f9de5a73ce4306dd57246cdafb28fbaf"
+      },
+      "contentSha256": "e706dda75ca385649adf749d2abe54b9f9de5a73ce4306dd57246cdafb28fbaf"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5760",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-1714f1e333b27e15",
+      "assessmentGroup": "assessment-1714f1e333b27e15",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小乔的英文姓名中，名有8个字母，姓有10个字母。他妹妹的英文姓名中，名有5个字母，姓也有10个字母。两人的姓名一共有多少个字母？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "33",
+          "d": "1"
+        },
+        "unit": "个字母"
+      },
+      "intent": "分别合计每人姓名长度后求总量",
+      "hints": [
+        "姓和名都要算，空格不算字母"
+      ],
+      "steps": [
+        "小乔姓名有8+10=18个字母，妹妹有5+10=15个字母",
+        "共18+15=33个字母"
+      ],
+      "commonMistakes": [
+        "只统计名，漏掉两人的姓"
+      ],
+      "prerequisites": [
+        "整数加法"
+      ],
+      "adaptation": [
+        "保留英文姓名的字母计数情境，避免本土人名汉字与字母混淆"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5760",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "92f94c495e8aad88f6411a89c1dc709ab4c5b80ef84726737a81d67f9a9a36e6",
+        "recordSha256": "97c0b1f3d9b5c3d2e136ff32790a76dcf3e7a91a2695db673d30e4334e68bb82",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5760",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e5bc0cfe7c66acae435413db4ce768ca3925ba60bb2eab70f8338754296bf910",
+        "sourceDraftSha256": "e5bc0cfe7c66acae435413db4ce768ca3925ba60bb2eab70f8338754296bf910",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "fa9bd096d9a59e3a659f551464de534998e1ebbde0fa6e6a6e0d7d883ff3c591"
+      },
+      "contentSha256": "fa9bd096d9a59e3a659f551464de534998e1ebbde0fa6e6a6e0d7d883ff3c591"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6578",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "单价、数量、总价",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-1b0d609e3c4fe44e",
+      "assessmentGroup": "assessment-1b0d609e3c4fe44e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小吉需要至少50分才能升班。他3次测验每次得20分，后来扣5分。之后最多还能扣几分，仍达到升班要求？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "求当前得分与最低要求的差",
+      "hints": [
+        "至少50分包括刚好50分"
+      ],
+      "steps": [
+        "当前3×20−5=55分",
+        "最多还能扣55−50=5分"
+      ],
+      "commonMistakes": [
+        "把“至少”误读为必须大于50分，只允许扣4分"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "整数减法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6578",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "081fe1d7d42b3d511a3385e6f5e15e7239eb4bdd03b3482cebf5a67030841fdb",
+        "recordSha256": "3ebd07327186645bc02fd338d52be5751db94c4c789825b175635c1e2a564cd8",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6578",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9d981a8fc5df9dd6a848fdeb1d065dba0edd5836eb27a71befb95f57d9a8d104",
+        "sourceDraftSha256": "9d981a8fc5df9dd6a848fdeb1d065dba0edd5836eb27a71befb95f57d9a8d104",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "09d6607da0d8f8c70521d5bf112931d9f6d4654d0d8ac5d1886694e5d889f06c"
+      },
+      "localCategoryOverride": {
+        "category": "G01",
+        "reason": "此题比较累计积分与合格门槛，没有金额或买卖关系，应归数量变化与剩余。"
+      },
+      "contentSha256": "09d6607da0d8f8c70521d5bf112931d9f6d4654d0d8ac5d1886694e5d889f06c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6608",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-7b998d929fa999bc",
+      "assessmentGroup": "assessment-7b998d929fa999bc",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小卡给狗剪指甲，每只脚剪4枚，共剪164枚。其中3只狗各有3条腿，其余每只4条腿；每条腿对应1只脚，所有脚都剪了。共护理了几只狗？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "11",
+          "d": "1"
+        },
+        "unit": "只"
+      },
+      "intent": "先换算脚数，再求四腿狗数量",
+      "hints": [
+        "先扣除3只三腿狗的脚"
+      ],
+      "steps": [
+        "共有164÷4=41只脚",
+        "三腿狗有3×3=9只脚，四腿狗有(41−9)÷4=8只",
+        "共8+3=11只狗"
+      ],
+      "commonMistakes": [
+        "把41只脚当成41只狗"
+      ],
+      "prerequisites": [
+        "整数乘除",
+        "整数加减"
+      ],
+      "adaptation": [
+        "明确每脚4枚、其余狗4条腿及全部脚均护理"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6608",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "da25d5d0c12173aee97513a592a05c159ef5db0d14f01bb7ac0624b9f01adc76",
+        "recordSha256": "ef0e6996ed1251b728f629fb82a83b0be462441534a573302e505d8a06b44f19",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6608",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "36d13db52b2ccd6bc7afd82ee528afb5f3f5def598e5c1d30685592933debd47",
+        "sourceDraftSha256": "36d13db52b2ccd6bc7afd82ee528afb5f3f5def598e5c1d30685592933debd47",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "5ec1a94b9cc7e3389e00c9109f803ddd1ced6dcdca4b9dcf230d6d4426a857c7"
+      },
+      "contentSha256": "5ec1a94b9cc7e3389e00c9109f803ddd1ced6dcdca4b9dcf230d6d4426a857c7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6652",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-41effea1d15871fb",
+      "assessmentGroup": "assessment-41effea1d15871fb",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "碗里有285颗糖，每颗只有一种颜色，其中49颗是红色，59颗是绿色。有多少颗既不是红色也不是绿色？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "177",
+          "d": "1"
+        },
+        "unit": "颗"
+      },
+      "intent": "从总数中扣除两类互不重叠的数量",
+      "hints": [
+        "红色和绿色糖可以直接相加"
+      ],
+      "steps": [
+        "红色和绿色共有49+59=108颗",
+        "其他颜色共有285−108=177颗"
+      ],
+      "commonMistakes": [
+        "把两种颜色数量相减而非相加"
+      ],
+      "prerequisites": [
+        "整数加减"
+      ],
+      "adaptation": [
+        "明确每颗只有一种颜色，避免双色糖产生重叠"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6652",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "2136ba0cdc698d0fc4c32f84c92761a1734d07c91943d22c37227190a82d3a4c",
+        "recordSha256": "0f892a47afc87ba4f9bce1c2e5335bbeba6c18d026c8d16d54fb78d71c40fa3c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6652",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "3fa948a3ca68a387aa4aebbc36688be1d68890d44251ca48787d0cbf08da913a",
+        "sourceDraftSha256": "3fa948a3ca68a387aa4aebbc36688be1d68890d44251ca48787d0cbf08da913a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "34c452e1244f2e2735e2b2d8f6339e56441506ac17a0b94b8a00d88ef253e302"
+      },
+      "contentSha256": "34c452e1244f2e2735e2b2d8f6339e56441506ac17a0b94b8a00d88ef253e302"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6900",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-4bd0a1b6c21c25c4",
+      "assessmentGroup": "assessment-4bd0a1b6c21c25c4",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小艾10岁。把她与小莉的年龄先相加，再把两人的年龄相乘，所得两个数相加等于131。小莉几岁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "11",
+          "d": "1"
+        },
+        "unit": "岁"
+      },
+      "intent": "分配律与逆推未知数",
+      "hints": [
+        "小莉年龄在年龄和中出现1次，在乘积中出现10倍"
+      ],
+      "steps": [
+        "去掉小艾的10岁后，余数131−10=121等于小莉年龄的11倍",
+        "小莉年龄121÷11=11岁"
+      ],
+      "commonMistakes": [
+        "把131直接除以10，漏掉年龄和中的小莉年龄"
+      ],
+      "prerequisites": [
+        "整数加减",
+        "分配律",
+        "逆向推理"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6900",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "e335aa318ae65e0cf1ce9087642169f0e6dfec2ca0163479575dd53353f1f186",
+        "recordSha256": "2205a762df666dce791b1d60082155bbb7f77885a703e524c979f9a7e0c3adfc",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6900",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a1f994151a761f7b9ba8a9606fb8f545ca3df48a49b713c20b98f289a111ecf6",
+        "sourceDraftSha256": "a1f994151a761f7b9ba8a9606fb8f545ca3df48a49b713c20b98f289a111ecf6",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b9f5ce2feab7a11788fdcb7cf464ad99c36a3445e380c5aa2876189a3192a368"
+      },
+      "contentSha256": "b9f5ce2feab7a11788fdcb7cf464ad99c36a3445e380c5aa2876189a3192a368"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-7020",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-5c342ec5ee96c005",
+      "assessmentGroup": "assessment-5c342ec5ee96c005",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "锯木厂的一台机器修好前，每天加工10棵树。修好后，每天增加的加工量等于原来的1.5倍。这台机器现在每天加工多少棵树？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "25",
+          "d": "1"
+        },
+        "unit": "棵"
+      },
+      "intent": "区分增加量与增加后的总量",
+      "hints": [
+        "先算增加了多少，再加回原有量"
+      ],
+      "steps": [
+        "增加的加工量是10×1.5=15棵",
+        "现在每天加工10+15=25棵"
+      ],
+      "commonMistakes": [
+        "把增加1.5倍误当成增加后是1.5倍"
+      ],
+      "prerequisites": [
+        "小数乘法",
+        "整数加法"
+      ],
+      "adaptation": [
+        "原文“one and a half increase”有歧义",
+        "依据原解明确增加量为原来的1.5倍，重新核算为25棵"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-7020",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "e7949055643675e33f9d35416b3cc9c0a9a4a3646c7be94cf9c5bdfe03329d4f",
+        "recordSha256": "ee627495234c5f69f9dedbbf7a14a372d9b7b3408451611e9dba3902127f24e4",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-7020",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0f48e3217140ca3f6b37e00940aba0f81b0f7ca7450376f85a3d7275c81989ec",
+        "sourceDraftSha256": "0f48e3217140ca3f6b37e00940aba0f81b0f7ca7450376f85a3d7275c81989ec",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "af79095d3d49fad5dd5e7cac0ec4ba56f6938e1e1438d3cfa439982f20700eb0"
+      },
+      "contentSha256": "af79095d3d49fad5dd5e7cac0ec4ba56f6938e1e1438d3cfa439982f20700eb0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-7250",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-03c9e37d941a32ae",
+      "assessmentGroup": "assessment-03c9e37d941a32ae",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小文写一篇最多1000字的作文。周六写了450字，周日又写了650字。他超过字数上限多少字？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "100",
+          "d": "1"
+        },
+        "unit": "字"
+      },
+      "intent": "求累计字数，再与上限比较",
+      "hints": [
+        "先算两天一共写了多少字"
+      ],
+      "steps": [
+        "一共写450+650=1100字",
+        "超出1100−1000=100字"
+      ],
+      "commonMistakes": [
+        "只拿周日的650字与上限比较"
+      ],
+      "prerequisites": [
+        "整数加减"
+      ],
+      "adaptation": [
+        "英文单词数情境改为中文作文字数，保留计数及上限关系"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-7250",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "aafbeab6c638b20aec42daab0094f7a144d445a5a25d4d76e4ba5ff09b70b038",
+        "recordSha256": "15648fe8c97e16e21a26874b35608882f08c3d043673d16b74d75ba8e46cabde",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-7250",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0f111f1a7df448c74d196b7f89803fcbc03d80253161831acb4a1516e6b5a6fe",
+        "sourceDraftSha256": "0f111f1a7df448c74d196b7f89803fcbc03d80253161831acb4a1516e6b5a6fe",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9b0dc08bc3582e88fbdbb71a423ffddac193f9dfd50f5b1e9723e2f213ca90a7"
+      },
+      "contentSha256": "9b0dc08bc3582e88fbdbb71a423ffddac193f9dfd50f5b1e9723e2f213ca90a7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-7262",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-168bea313aee4947",
+      "assessmentGroup": "assessment-168bea313aee4947",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "福叔家的供暖油箱装满时有3000升燃油。2005年11月1日油箱是满的，2006年1月1日剩180升，他立即补满油箱。5月1日停止供暖时剩1238升。这期间没有其他加油或漏油，共用掉多少升燃油？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4582",
+          "d": "1"
+        },
+        "unit": "升"
+      },
+      "intent": "分别计算两段消耗，再合计",
+      "hints": [
+        "补满后第二段又从3000升开始"
+      ],
+      "steps": [
+        "第一段用掉3000−180=2820升",
+        "第二段用掉3000−1238=1762升",
+        "共用2820+1762=4582升"
+      ],
+      "commonMistakes": [
+        "用3000−1238当作整个期间的消耗，漏掉补油前一段"
+      ],
+      "prerequisites": [
+        "整数加减",
+        "阶段总量"
+      ],
+      "adaptation": [
+        "明确除1月1日补满外无其他加油及漏油，保证燃油变化都来自消耗"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-7262",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "47277218c1e10e9bef5395f4b249f1e1e9569986929c46733b28202adbe85338",
+        "recordSha256": "3d2eae1d6f0fa8fe47c77798649aab9df5d1de4337fc02d28a51f36f250cd1de",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-7262",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "46c1cc0bd84337e562c93b51ce3c7690914855d149ff9585541a7ad0e45a0c59",
+        "sourceDraftSha256": "46c1cc0bd84337e562c93b51ce3c7690914855d149ff9585541a7ad0e45a0c59",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c133952f990c5b0da869c512ee09dd60557827dfca99661b5f3ff15f3a9367fb"
+      },
+      "contentSha256": "c133952f990c5b0da869c512ee09dd60557827dfca99661b5f3ff15f3a9367fb"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-7329",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "等量分组与单位量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-1077b653343bac15",
+      "assessmentGroup": "assessment-1077b653343bac15",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "两个班各10名学生一起去动物园，还有5名家长和2名老师陪同。活动后10名学生和其中2名家长先离开，老师与其他人留下。动物园里这支队伍还剩多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "15",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "合计不同人群再扣除离开者",
+      "hints": [
+        "家长和老师都要加入最初队伍人数。"
+      ],
+      "steps": [
+        "最初共有10×2＋5＋2＝27人。",
+        "离开10＋2＝12人。",
+        "剩下27－12＝15人。"
+      ],
+      "commonMistakes": [
+        "只统计剩下的学生，漏掉家长和老师。"
+      ],
+      "prerequisites": [
+        "分类合计",
+        "净变化"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "移除源年级限定，明确陪同人员与学生不重叠、2名离开家长属于5名家长。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-7329",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "7cec7daeb8d4cc4f76912c6b6995377be685e2627b4a772b175a4a9d889266e0",
+        "recordSha256": "2cf767a55ff67af2e1f73a979bc0c312fe9a19568e4ce5281f647eec5864b980",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-7329",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a90a2615ed0aab4614c78a578d18bad042ab9cc5cd1e1af10b2768e88f5cd6b6",
+        "sourceDraftSha256": "a90a2615ed0aab4614c78a578d18bad042ab9cc5cd1e1af10b2768e88f5cd6b6",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f2ed5e9b54c64850c1ce57c5e5362d152cb4c4b8fe20a4e1b687aa9abd11bc5a"
+      },
+      "localCategoryOverride": {
+        "category": "G01",
+        "reason": "核心为学生、家长、老师人数合计再扣离开人数的多阶段剩余量。"
+      },
+      "contentSha256": "f2ed5e9b54c64850c1ce57c5e5362d152cb4c4b8fe20a4e1b687aa9abd11bc5a"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-7345",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-cd88f794afd1f05e",
+      "assessmentGroup": "assessment-cd88f794afd1f05e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "啦啦队19人，要订2号、6号、12号队服，每人一件。4人穿2号，穿12号的人数是穿6号的一半。穿6号的有几人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "10",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "按1比2分配剩余总数",
+      "hints": [
+        "去掉2号后，将剩余人数分成3份"
+      ],
+      "steps": [
+        "6号和12号共19−4=15人",
+        "12号占1份、6号占2份，每份15÷3=5人，所以6号5×2=10人"
+      ],
+      "commonMistakes": [
+        "把15人平均分为两组"
+      ],
+      "prerequisites": [
+        "整数减法",
+        "按倍数分配"
+      ],
+      "adaptation": [
+        "明确只有三种号码，每人只需一件"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-7345",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "d6542a23d4ce9c630f4cacc3adb20b66a2f184011fb904560407b8432483b93f",
+        "recordSha256": "c23c96ba99277a5de6df62292c8e7bcacc7f874709c86c5c125294f463be5646",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-7345",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2c3426bd6ebef287b181ba6afc8610db14e541b67c0f555d0603d33ca3edfc52",
+        "sourceDraftSha256": "2c3426bd6ebef287b181ba6afc8610db14e541b67c0f555d0603d33ca3edfc52",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ca9e42d4b7fa269e1295f1b930961f6bf2a06ad49cd2b925f1fb057413491f71"
+      },
+      "contentSha256": "ca9e42d4b7fa269e1295f1b930961f6bf2a06ad49cd2b925f1fb057413491f71"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-7353",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-13b79fee4109e902",
+      "assessmentGroup": "assessment-13b79fee4109e902",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "班里24名学生分成三组：一半在默读，三分之一在玩桌游，其余在补作业。补作业的有几人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "求剩余部分",
+      "hints": [
+        "两种分数都以全班24人为整体"
+      ],
+      "steps": [
+        "默读24÷2=12人，桌游24÷3=8人",
+        "补作业24−12−8=4人"
+      ],
+      "commonMistakes": [
+        "把三分之一理解成剩余人数的三分之一"
+      ],
+      "prerequisites": [
+        "整数除法",
+        "整数减法"
+      ],
+      "adaptation": [
+        "明确活动分组互不重叠"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-7353",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "d08bae0336f5f722242a3418cc35ad52f28a6ba8ace1ab9011bfe013e82e41a1",
+        "recordSha256": "1ec93d45c2c90079dcc2e7d02aa0d2218f21d56871913185987d2c83ba111c12",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-7353",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "52f326770fb239ebcdadb7d7e3956c20bcc327e08b627450d5083ee6b0f420d7",
+        "sourceDraftSha256": "52f326770fb239ebcdadb7d7e3956c20bcc327e08b627450d5083ee6b0f420d7",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "4d95b24176f04d626c1a3274b477238e96c456585b18c3794011f7283032cd23"
+      },
+      "contentSha256": "4d95b24176f04d626c1a3274b477238e96c456585b18c3794011f7283032cd23"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-7370",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-0066c9b745a6b8af",
+      "assessmentGroup": "assessment-0066c9b745a6b8af",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小威周二吃4根胡萝卜，周三吃6根。他希望周二到周四一共吃15根，周四还要吃几根？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "根"
+      },
+      "intent": "由总目标求剩余量",
+      "hints": [
+        "先合计前两天"
+      ],
+      "steps": [
+        "前两天吃4+6=10根",
+        "周四要吃15−10=5根"
+      ],
+      "commonMistakes": [
+        "漏算周二的数量"
+      ],
+      "prerequisites": [
+        "整数加减"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-7370",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "7f8f9603a3467f20eeeb9010faa730319dde4104bf3f5abebd3b5a3126d27b0a",
+        "recordSha256": "848a8147126d43ec2335499fd72fabbe4b35d451f122bc23313f2a8171b68093",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-7370",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "aee0699048371ed3a6339abf5efa383e69293ffb0ef6dcc78f0da31f46deffcc",
+        "sourceDraftSha256": "aee0699048371ed3a6339abf5efa383e69293ffb0ef6dcc78f0da31f46deffcc",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "5825315fb8f5dc03459153ba9a7fa3b47a3e87cc1e99b142900ae65858c7fefd"
+      },
+      "contentSha256": "5825315fb8f5dc03459153ba9a7fa3b47a3e87cc1e99b142900ae65858c7fefd"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-7446",
+      "collection": "gsm8k",
+      "category": "G01",
+      "subcategory": "多阶段合并、变化与剩余",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-11370ebd38f4b0cd",
+      "assessmentGroup": "assessment-11370ebd38f4b0cd",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "公交车上原有50位乘客。第一站下15人、无人上车；第二站下8人、上2人；第三站下4人、上3人。第三站结束后有多少位乘客？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "28",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "逐站计算净变化",
+      "hints": [
+        "下车减，上车加"
+      ],
+      "steps": [
+        "第一站后50−15=35人",
+        "第二站后35−8+2=29人",
+        "第三站后29−4+3=28人"
+      ],
+      "commonMistakes": [
+        "把上车人数也减去"
+      ],
+      "prerequisites": [
+        "整数加减"
+      ],
+      "adaptation": [
+        "明确人数仅指乘客，第一站无人上车"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-7446",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "ac8cecd9212bf3a2493513478c5e84563294c460d98869c7ed44f689679792bb",
+        "recordSha256": "d8894de0679002e715c630527394a085b493cabe38d3276e9f499542a6585293",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-7446",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "57655cddb66cf6dfd4bd1880cf2f551f11086f7291c5c9b4712087075fc53ab9",
+        "sourceDraftSha256": "57655cddb66cf6dfd4bd1880cf2f551f11086f7291c5c9b4712087075fc53ab9",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2579821a1713c12f89e693eda10fb617a435629065d46330999864fd8cce4238"
+      },
+      "contentSha256": "2579821a1713c12f89e693eda10fb617a435629065d46330999864fd8cce4238"
+    }
+  ]
+}

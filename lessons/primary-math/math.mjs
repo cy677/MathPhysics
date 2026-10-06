@@ -34,7 +34,6 @@ export function checkAnswer(q,text) {
   const n=parseAnswer(text);
   return n===null?'invalid':Math.abs(n-q.answer)<=1e-8?'correct':'incorrect';
 }
-export function bounds(q) {const [min,max,step]=q.view.slice(-3);return {min,max,step};}
 export function format(n) {return Number.isInteger(n)?String(n):String(Number(n.toFixed(6)));}
 export function fraction(n) {
   for(let d=1;d<=120;d++){const a=Math.round(n*d);if(Math.abs(n-a/d)<1e-9)return d===1?String(a):`${a}/${d}`;}

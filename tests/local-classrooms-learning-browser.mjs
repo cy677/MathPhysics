@@ -29,17 +29,17 @@ const slider=async(page,selector,value)=>{await page.locator(selector).evaluate(
 const ready=page=>page.waitForFunction(()=>window.__mpReady===true);
 const overflow=page=>page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,overflow:document.documentElement.scrollWidth>innerWidth+1}));
 async function guide(page,scope='.learning-guide'){
- const panel=page.locator(scope);assert.ok(await panel.isVisible());for(const id of ['learn-observe','learn-actions','learn-why','learn-life'])assert.ok((await page.locator('#'+id).innerText()).trim().length>10,id);
- for(const label of ['观察什么','怎么操作','为什么这样','生活中的例子'])assert.ok((await panel.innerText()).includes(label),label);
+ await page.locator('#classroom-help').click();const panel=page.locator(scope);assert.ok(await panel.isVisible());for(const id of ['learn-observe','learn-actions','learn-why','learn-life'])assert.ok((await page.locator('#'+id).innerText()).trim().length>10,id);
+ for(const label of ['观察什么','怎么操作','为什么这样','生活中的例子'])assert.ok((await panel.innerText()).includes(label),label);await page.keyboard.press('Escape');
 }
 async function help(page,{button='#next-hint',list='#question-hints',solution='#question-solution',steps='#question-steps',mistakes='#question-mistakes'}={}){
- assert.equal(await page.locator(list+' li').count(),0);
+ await page.locator(button==='#quiz-next-hint'?'#quiz-help':'#classroom-help').click();assert.equal(await page.locator(list+' li').count(),0);
  for(let i=1;i<=3;i++){await page.locator(button).click();assert.equal(await page.locator(list+' li').count(),i);}
- assert.equal(await page.locator(button).isDisabled(),true);await page.locator(solution+' summary').click();assert.ok(await page.locator(solution).evaluate(e=>e.open));assert.ok(await page.locator(steps+' li').count()>=2);assert.ok(await page.locator(mistakes+' li').count()>=2);
+ assert.equal(await page.locator(button).isDisabled(),true);await page.locator(solution+' summary').click();assert.ok(await page.locator(solution).evaluate(e=>e.open));assert.ok(await page.locator(steps+' li').count()>=2);assert.ok(await page.locator(mistakes+' li').count()>=2);await page.keyboard.press('Escape');
 }
 async function shot(page,id,selectors){
  const row=maps.demonstrations.get(id);const stem=id.replaceAll('/','-');
- for(const [name,selector] of selectors){const file=stem+'-'+name+'.png';if(id.startsWith('tangram/')&&name==='question')await captureTangramQuestion(page,path.join(out,file));else await page.locator(selector).screenshot({path:path.join(out,file)});row.screenshots.push('output/playwright/learning-coverage/local/'+file);}
+ for(const [name,selector] of selectors){const file=stem+'-'+name+'.png';if(name==='scene')await page.locator(selector).screenshot({path:path.join(out,file)});else{await page.locator('#classroom-help').click();await page.locator('dialog.mp-help-dialog[open]').screenshot({path:path.join(out,file)});await page.keyboard.press('Escape');}row.screenshots.push('output/playwright/learning-coverage/local/'+file);}
 }
 async function goto(page,delivery,lesson,file){await page.goto(delivery==='http'?base+'lessons/'+lesson+'/index.html':pathToFileURL(path.join(root,'dist/'+file)).href);await ready(page);}
 async function points(page){return page.evaluate(()=>__playground.points.map(p=>[p.X(),p.Y()]));}
@@ -55,9 +55,9 @@ async function jsx(page,delivery){
   if(mode==='triangle')record('demonstrations','jsx/triangle/free',delivery,['free vertex mode','four specific teaching sections','movement and reset']);
   for(let i=0;i<6;i++){
    const q=await page.evaluate(()=>__playground.question);assert.equal(q.id,mode+'/'+i);for(const key of ['intent','hints','steps','commonMistakes'])assert.ok(q[key]);await help(page);
-   const before=await page.locator('#question-steps').innerText();if(mode==='rotate'||mode==='scale'||mode==='mirror')await slider(page,'#parameter',mode==='rotate'?15:mode==='scale'?1.75:Number(await page.locator('#parameter').inputValue())===1?-1:1);
+   const before=await page.locator('#question-steps').textContent();if(mode==='rotate'||mode==='scale'||mode==='mirror')await slider(page,'#parameter',mode==='rotate'?15:mode==='scale'?1.75:Number(await page.locator('#parameter').inputValue())===1?-1:1);
    else{await page.locator('#point-choice').selectOption(String((await points(page)).length-1));await page.locator('[data-move="right"]').click();}
-   assert.notEqual(await page.locator('#question-steps').innerText(),before,mode+'/'+i+' live solution');
+   assert.notEqual(await page.locator('#question-steps').textContent(),before,mode+'/'+i+' live solution');
    const t=PLAYGROUND_TARGETS[mode][i];
    if(mode==='triangle')await setPoints(page,[[0,0],[4,0],[1,t/2]]);
    if(mode==='mirror'){const axis=await page.locator('#parameter').inputValue();const p=await points(page);p[0]=[2*Number(axis)-t[0],t[1]];await setPoints(page,p);}
@@ -73,14 +73,14 @@ async function jsx(page,delivery){
  }
  await page.locator('[data-mode="triangle"]').click();await page.locator('[data-triangle="equal-height"]').click();await guide(page);assert.equal(await page.locator('[data-move="up"]').isDisabled(),true);
  const x=(await points(page))[2][0];await page.locator('[data-move="right"]').click();assert.equal((await points(page))[2][0],x+.25);assert.equal((await points(page))[2][1],3);
- for(let i=0;i<6;i++){await help(page);const text=await page.locator('#question-steps').innerText();await slider(page,'#parameter',PLAYGROUND_TARGETS.triangle[i]/2);assert.ok((await page.locator('#question-steps').innerText()).includes(String(PLAYGROUND_TARGETS.triangle[i]/2)));await page.locator('#check').click();assert.equal(await page.locator('#feedback').getAttribute('class'),'success');maps.questions.get('jsx/triangle/'+i).checks[delivery].items.push('equal-height variant checked');if(i===0&&delivery==='http')await shot(page,'jsx/triangle/equal-height',[['scene','.board-card'],['teaching','.learning-guide'],['question','.challenge']]);if(i<5)await page.locator('#new-goal').click();}
+ for(let i=0;i<6;i++){await help(page);const text=await page.locator('#question-steps').textContent();await slider(page,'#parameter',PLAYGROUND_TARGETS.triangle[i]/2);assert.ok((await page.locator('#question-steps').textContent()).includes(String(PLAYGROUND_TARGETS.triangle[i]/2)));await page.locator('#check').click();assert.equal(await page.locator('#feedback').getAttribute('class'),'success');maps.questions.get('jsx/triangle/'+i).checks[delivery].items.push('equal-height variant checked');if(i===0&&delivery==='http')await shot(page,'jsx/triangle/equal-height',[['scene','.board-card'],['teaching','.learning-guide'],['question','.challenge']]);if(i<5)await page.locator('#new-goal').click();}
  await page.locator('#reset').click();assert.equal(await page.locator('#parameter').inputValue(),'3');record('demonstrations','jsx/triangle/equal-height',delivery,['constrained horizontal movement','vertical movement disabled','all 6 targets checked with height slider','live solution','reset']);
 }
 
 async function geometry(page,delivery){
  await goto(page,delivery,'geometric-proofs','MathPhysics-Geometry-Proofs.html');
- for(const lesson of LESSONS){await page.locator('[data-lesson="'+lesson.id+'"]').click();await guide(page);if(!await page.locator('#teacher-notes').evaluate(e=>e.open))await page.locator('#teacher-notes summary').click();assert.ok((await page.locator('#why').innerText()).length>10);
-  for(const stage of [0,1,2]){await page.locator('[data-step="'+stage+'"]').click();assert.ok((await page.locator('#explanation').innerText()).length>5);}
+ for(const lesson of LESSONS){await page.locator('[data-lesson="'+lesson.id+'"]').click();await guide(page);await page.locator('#classroom-help').click();if(!await page.locator('#teacher-notes').evaluate(e=>e.open))await page.locator('#teacher-notes summary').click();assert.ok((await page.locator('#why').textContent()).length>10);await page.keyboard.press('Escape');
+  for(const stage of [0,1,2]){await page.locator('#classroom-help').click();await page.locator('[data-step="'+stage+'"]').click();assert.ok((await page.locator('#explanation').innerText()).length>5);await page.keyboard.press('Escape');}
   await page.locator('#play').click();await page.waitForTimeout(75);await page.locator('#play').click();const paused=await page.locator('#timeline').inputValue();await page.waitForTimeout(50);assert.equal(await page.locator('#timeline').inputValue(),paused);await page.locator('#restart').click();assert.equal(await page.locator('#timeline').inputValue(),'0');
   for(let variant=0;variant<2;variant++){
    if(variant)await page.locator('#new-question').click();await help(page);const before=await page.locator('#question-steps').textContent();
@@ -106,7 +106,7 @@ async function spaceflight(page,delivery){
   for(let index=0;index<mission.steps.length;index++){
    const step=mission.steps[index],id='space/stage/'+mission.id+'/'+step.id;await page.locator('[data-item="'+index+'"]').click();await guide(page);assert.equal((await page.evaluate(()=>SpaceClassroom.snapshot())).step,step.id);
    await slider(page,'#scrub',650);assert.equal((await page.evaluate(()=>SpaceClassroom.snapshot())).p,.65);await page.locator('#play').click();await page.waitForTimeout(40);await page.locator('#play').click();const paused=(await page.evaluate(()=>SpaceClassroom.snapshot())).p;await page.waitForTimeout(45);assert.equal((await page.evaluate(()=>SpaceClassroom.snapshot())).p,paused);await page.locator('#journey-reset').click();assert.equal((await page.evaluate(()=>SpaceClassroom.snapshot())).p,0);
-   await page.locator('#level').selectOption('junior');assert.equal(await page.locator('#why-box').isHidden(),true);await guide(page);await page.locator('#level').selectOption('senior');assert.equal(await page.locator('#why-box').isVisible(),true);
+   await page.locator('#level').selectOption('junior');assert.equal(await page.locator('#why-box').isHidden(),true);await guide(page);await page.locator('#level').selectOption('senior');await page.locator('#classroom-help').click();assert.equal(await page.locator('#why-box').isVisible(),true);await page.keyboard.press('Escape');
    if(step.quiz){await help(page,{button:'#quiz-next-hint',list:'#quiz-hints',solution:'#quiz-solution',steps:'#quiz-steps',mistakes:'#quiz-mistakes'});await page.locator('[data-answer="'+((step.quiz[2]+1)%step.quiz[1].length)+'"]').click();assert.match(await page.locator('#quiz-feedback').innerText(),/再想一想/);await page.locator('[data-answer="'+step.quiz[2]+'"]').click();assert.match(await page.locator('#quiz-feedback').innerText(),/答对了/);record('questions','space/'+mission.id+'/'+step.id,delivery,['route/stage-specific intent','3 progressive hints','full steps and misconceptions','wrong/correct answer feedback']);}
    record('demonstrations',id,delivery,['stage selection','four-part stage guide','junior intuition and senior principle','scrub','play/pause','reset']);if(delivery==='http'){await shot(page,id,[['scene','.center'],['teaching','.learning-guide']]);if(step.quiz)await shot(page,id,[['question','#quiz']]);}
   }
@@ -128,7 +128,7 @@ async function tangram(page,delivery){
   await page.locator('[data-goal="'+goal+'"]').click();await guide(page);await page.locator('#show-hint').check();assert.ok(await page.locator('#puzzle text').count()>=16);await page.locator('#show-hint').uncheck();
   for(const difficulty of ['free','two','none']){
    await page.locator('#reset').click();await page.locator('#challenge-mode').selectOption(difficulty);await help(page);const q=await page.evaluate(()=>__tangramFlat.question);assert.equal(q.id,goal+'/'+difficulty);
-   const before=await page.locator('#question-steps').innerText();await page.locator('[data-select="0"]').click();await page.locator('#turn-left').click();assert.notEqual(await page.locator('#question-steps').innerText(),before,'rotation changes current placement steps');await page.locator('#turn-right').click();
+   const before=await page.locator('#question-steps').textContent();await page.locator('[data-select="0"]').click();await page.locator('#turn-left').click();assert.notEqual(await page.locator('#question-steps').textContent(),before,'rotation changes current placement steps');await page.locator('#turn-right').click();
    const initial=await page.evaluate(()=>__tangramFlat.actual.tans[0].position.x);await page.locator('[data-move="right"]').click();assert.ok(Math.abs((await page.evaluate(()=>__tangramFlat.actual.tans[0].position.x))-initial-.025)<1e-7);await page.locator('[data-move="left"]').click();
    // Follow each displayed plan using actual pointer dragging and the documented 15° controls.
    for(let n=0;n<7;n++){
@@ -152,7 +152,7 @@ async function mobile(page){
   ['space-dock',base+'lessons/spaceflight/index.html#tab=labs&lab=dock',async()=>{}],
   ['space-journey',base+'lessons/spaceflight/index.html#mission=cn-crew&tab=journey&step=orbitalSep',async()=>{}],
   ['tangram-creative',base+'lessons/tangram-flat/index.html',async()=>page.locator('[data-goal="creative"]').click()]
- ]){await page.goto(url);await ready(page);await action();await guide(page);const result=await overflow(page);assert.equal(result.overflow,false,name);await page.evaluate(()=>scrollTo(0,0));const file='mobile-'+name+'-viewport.png';await page.screenshot({path:path.join(out,file),fullPage:false});const teaching='mobile-'+name+'-teaching.png';await page.locator('.learning-guide').screenshot({path:path.join(out,teaching)});const target=page.locator(name.startsWith('space')?'#journey-reset, #dock-reset':name.startsWith('geometry')?'#restart':'#reset').filter({visible:true}).first();assert.ok(await target.isVisible());await target.click();report.responsive.push({id:name,status:'passed',viewport:{width:390,height:844},checks:['no horizontal overflow','guide readable and present','reset click'],screenshots:['output/playwright/learning-coverage/local/'+file,'output/playwright/learning-coverage/local/'+teaching]});}
+ ]){await page.goto(url);await ready(page);await action();await guide(page);const result=await overflow(page);assert.equal(result.overflow,false,name);await page.evaluate(()=>scrollTo(0,0));const file='mobile-'+name+'-viewport.png';await page.screenshot({path:path.join(out,file),fullPage:false});const teaching='mobile-'+name+'-teaching.png';await page.locator('#classroom-help').click();await page.locator('.learning-guide').screenshot({path:path.join(out,teaching)});await page.keyboard.press('Escape');const target=page.locator(name.startsWith('space')?'#journey-reset, #dock-reset':name.startsWith('geometry')?'#restart':'#reset').filter({visible:true}).first();assert.ok(await target.isVisible());await target.click();report.responsive.push({id:name,status:'passed',viewport:{width:390,height:844},checks:['no horizontal overflow','guide readable and present','reset click'],screenshots:['output/playwright/learning-coverage/local/'+file,'output/playwright/learning-coverage/local/'+teaching]});}
 }
 
 let browser,server,base,port;

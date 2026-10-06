@@ -18,7 +18,7 @@ try{
  server=http.createServer(async(req,res)=>{try{let name=decodeURIComponent(new URL(req.url,'http://127.0.0.1').pathname);if(!name.startsWith('/MathPhysics/')){res.writeHead(404).end();return;}name=name.slice('/MathPhysics/'.length);if(!name||name.endsWith('/'))name+='index.html';const target=path.resolve(root,name);if(!target.startsWith(root+path.sep)){res.writeHead(403).end();return;}let bytes;try{bytes=await fs.readFile(target);}catch{bytes=await fs.readFile(path.resolve(fallback,name));}res.writeHead(200,{'Content-Type':`${mime[path.extname(name)]||'application/octet-stream'};charset=utf-8`}).end(bytes);}catch{res.writeHead(404).end();}});
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  const base=`http://127.0.0.1:${server.address().port}/MathPhysics/`;
- browser=await chromium.launch({headless:true});
+ browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_EXECUTABLE?{executablePath:process.env.CHROMIUM_EXECUTABLE}:{})});
  const session=await browser.newContext({viewport:{width:1280,height:1000}});
  await session.addInitScript(()=>{window.__longTasks=[];try{new PerformanceObserver(list=>window.__longTasks.push(...list.getEntries().map(e=>({start:e.startTime,duration:e.duration})))).observe({type:'longtask',buffered:true});}catch{}});
  await session.route('**/*',route=>{const url=route.request().url();if(/^(http|https):/.test(url)&&!url.startsWith(base)){remote.push(url);return route.abort();}return route.continue();});
@@ -30,7 +30,9 @@ try{
  assert.equal((await snapshot()).tab,'journey');assert.equal(await page.locator('[data-mission]').count(),4);
  const routes=await page.evaluate(()=>Object.values(SpaceData.missions).map(m=>({id:m.id,steps:m.steps.map(s=>s.id),branch:!!m.branch})));
  for(const route of routes){await page.locator(`[data-mission="${route.id}"]`).click();for(let i=0;i<route.steps.length;i++){await page.locator(`[data-item="${i}"]`).click();await setSlider('scrub',600);assert.equal((await snapshot()).step,route.steps[i]);assert.ok(await page.locator('#observe-text').innerText());}if(route.branch){await page.locator('#recovery').click();assert.ok((await snapshot()).branch);await page.locator('#return-journey').click();assert.equal((await snapshot()).branch,false);}}
- record('四条路线全部62节点、两条回收支线与讲解可操作');
+ record('四条路线全部63节点、三条回收支线与讲解可操作');
+ await page.locator('#diagram-mode').selectOption('physics');
+ await page.locator('#step-mode').check();
  await page.locator('#mission-reset').click();await page.waitForFunction(()=>!SpaceClassroom.snapshot().flight?.busy);assert.equal((await snapshot()).index,0);assert.equal((await snapshot()).p,0);assert.ok(await page.locator('#play').isDisabled());
  for(const check of await page.locator('[data-preflight]').all())await check.check();await page.locator('#play').click();await page.evaluate(()=>advanceTime(8000));assert.equal((await snapshot()).playing,false);assert.ok((await snapshot()).flight.sample.tSec>0);assert.equal((await snapshot()).index,0);
  await page.locator('#next').click();assert.equal((await snapshot()).index,1);assert.equal((await snapshot()).p,0);record('任务检查、重置与状态事件暂停：旅程发射段使用新模型');

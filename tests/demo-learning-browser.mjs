@@ -32,7 +32,7 @@ try{
   page.on('pageerror',error=>{report.errors.push({url:page.url(),message:error.message,stack:error.stack,phase:report.phase});console.error('PAGEERROR',report.phase,error.message);});page.on('response',response=>{if(response.status()>=400&&!response.url().endsWith('/favicon.ico'))report.missing.push(response.url());});
   if(!process.argv.includes('--phet-only'))for(const id of MATTER_CATEGORIES.flatMap(category=>category.examples)){
     report.current=id;await open(id);const initial=await signature(),start=await snapshot();assert.equal(start.paused,true,id+' initial pause');assert.equal(start.elapsed,0,id+' starts at t=0');
-    assert.equal(await page.locator('[data-guide-field]').count(),4);assert.equal(await page.locator('[data-guide-step]').count(),3);
+    assert.equal(await page.locator('[data-guide-field]').count(),4);assert.equal(await page.locator('[data-guide-step]').count(),0);
     assert.equal(await page.locator('[data-guide-field="why"]').isVisible(),false,id+' prediction reveals explanation');
     await page.waitForTimeout(90);assert.equal((await snapshot()).elapsed,0,id+' paused simulation advances');
     const digests=[];
@@ -42,7 +42,7 @@ try{
     await page.locator('#limited-step').click();const finite=await snapshot();assert.ok(finite.elapsed>one.elapsed,id+' finite step');await page.waitForTimeout(90);assert.equal((await snapshot()).elapsed,finite.elapsed,id+' finite steps keep running');
     await page.locator('#pause').click();await page.waitForTimeout(150);await page.locator('#pause').click();const stopped=await snapshot();assert.ok(stopped.elapsed>finite.elapsed,id+' resume');await page.waitForTimeout(90);assert.equal((await snapshot()).elapsed,stopped.elapsed,id+' real pause');
     // Enough finite time for a collision, release or support change to be visible.
-    for(let index=0;index<3;index++)await page.locator('#limited-step').click();await page.locator('[data-guide-step="2"]').click();assert.equal(await page.locator('[data-guide-field="why"]').isVisible(),true);await noOverflow();await shot('matter-'+id);
+    for(let index=0;index<3;index++)await page.locator('#limited-step').click();await page.locator('#classroom-help').click();assert.equal(await page.locator('[data-guide-field="why"]').isVisible(),true);await noOverflow();await shot('matter-'+id);await page.keyboard.press('Escape');
     await page.locator('#reset').click();await ready(id);assert.equal((await snapshot()).elapsed,0,id+' reset time');assert.equal((await snapshot()).paused,true,id+' reset pause');assert.equal(await signature(),initial,id+' reset did not reproduce scene');
     report.matter.push({id:'matter-'+id,control:MATTER_GUIDES[id].control.id,initialPaused:true,realPause:true,singleStep:true,finiteSteps:true,actionChanges:digests,resetReproducible:true,bodyCount:start.bodies,screenshot:'output/playwright/learning-coverage/matter-'+id+'-desktop.png'});
     console.log('PASS learning',id);
@@ -50,7 +50,7 @@ try{
   if(!process.argv.includes('--phet-only')){
     await open('airFriction');await page.evaluate(()=>__mpTeaching.advance(30));const fall=await page.evaluate(()=>Matter.Composite.allBodies(__mpContext.engine.world).filter(b=>!b.isStatic).map(b=>b.position.y));assert.ok(fall[0]>fall[1]&&fall[1]>fall[2]);report.pedagogicalChecks.push({id:'matter-airFriction',check:'at equal simulated time, original drag order gives decreasing fall distance',values:fall});
     await open('sensors');await page.evaluate(()=>__mpTeaching.advance(75));const sensor=await page.evaluate(()=>({ball:Matter.Composite.allBodies(__mpContext.engine.world).find(b=>!b.isStatic).position.y,starts:__mpTeaching.snapshot().collisionCounts.start}));assert.ok(sensor.ball>350&&sensor.starts>0);await page.locator('#reset').click();await ready('sensors');await page.locator('#experiment-option').selectOption('0');await page.locator('#experiment-action').click();await page.evaluate(()=>__mpTeaching.advance(75));const solid=await page.evaluate(()=>Matter.Composite.allBodies(__mpContext.engine.world).find(b=>!b.isStatic).position.y);assert.ok(solid<300);report.pedagogicalChecks.push({id:'matter-sensors',check:'sensor registers passage while solid variant blocks',sensor,solid});
-    for(const id of ['airFriction','bridge','slingshot','cloth','collisionFiltering','substep','views']){await page.setViewportSize({width:390,height:844});await open(id);await page.locator('#experiment-action').click();for(let step=0;step<3;step++)await page.locator('#limited-step').click();await page.locator('[data-guide-step="2"]').click();await noOverflow();await shot('matter-'+id,true);}
+    for(const id of ['airFriction','bridge','slingshot','cloth','collisionFiltering','substep','views']){await page.setViewportSize({width:390,height:844});await open(id);await page.locator('#experiment-action').click();for(let step=0;step<3;step++)await page.locator('#limited-step').click();await page.locator('#classroom-help').click();await noOverflow();await shot('matter-'+id,true);await page.keyboard.press('Escape');}
   }
   if(!process.argv.includes('--matter-only')){
     await page.setViewportSize({width:1440,height:1000});
@@ -58,34 +58,34 @@ try{
       report.current=id;report.phase=id+'/standalone';await page.goto(base+'src/phet/generated/'+id+'.html?locale=zh_CN&webgl=false&allowLinks=false');
       await page.waitForFunction(()=>document.documentElement.dataset.learningGuide==='ready',null,{timeout:65000});
       const counts=await page.evaluate(()=>{const sim=window.phet.joist.sim||window.phet.sim;return (sim.simScreens||sim.screens).length;});assert.equal(counts,guide.screens.length,id+' screen coverage');
-      await page.locator('.mp-learning-panel > summary').click();assert.equal(await page.locator('[data-guide-field="why"]').isVisible(),false);
+      await page.locator('#mp-phet-help').click();assert.equal(await page.locator('[data-guide-field="why"]').isVisible(),false);
       for(let index=0;index<guide.screens.length;index++){
         await page.evaluate(index=>{const sim=window.phet.joist.sim||window.phet.sim,screens=sim.simScreens||sim.screens;if(sim.screenProperty)sim.screenProperty.value=screens[index];else if(sim.selectedScreenProperty)sim.selectedScreenProperty.value=screens[index];else{sim.screenIndexProperty.value=index;sim.showHomeScreenProperty.value=false;}},index);
         await page.waitForFunction(id=>window.__mpLearning?.snapshot().guideId===id,guide.screens[index].id);
-        assert.equal(await page.locator('[data-guide-field]').count(),4);await page.locator('[data-learning-step="2"]').click();assert.equal(await page.locator('[data-guide-field="why"]').isVisible(),true);await noOverflow();
+        assert.equal(await page.locator('[data-guide-field]').count(),4);await page.locator('.mp-learning-fields > details > summary').click();assert.equal(await page.locator('[data-guide-field="why"]').isVisible(),true);await noOverflow();
         await shot(guide.screens[index].id.replaceAll('/','-'));
       }
       const item={id:guide.id,entry:id,screens:guide.screens.map(screen=>screen.id),standaloneGuide:true,currentScreenUpdates:true};report.phet.push(item);console.log('PASS learning PhET',id);
       // The same panel is visible in the classroom host; the inner panel stays
       // hidden there so scientific controls are not covered by duplicate text.
       report.phase=id+'/host';await page.goto(base+'#activity/'+id);await page.waitForFunction(()=>document.querySelector('iframe')?.contentWindow.document.documentElement?.dataset.learningGuide==='ready'&&document.getElementById('loading')?.hidden,null,{timeout:65000});
-      const hostPanel=page.locator('#player-tip .mp-learning-panel');assert.ok(await hostPanel.isVisible());assert.equal(await hostPanel.locator('[data-guide-field]').count(),4);
+      await page.locator('#player-help').click();const hostPanel=page.locator('#player-tip .mp-learning-panel');assert.ok(await hostPanel.isVisible());assert.equal(await hostPanel.locator('[data-guide-field]').count(),4);
       const frame=page.frames().find(frame=>frame.url().includes('/generated/'+id+'.html'));
       await frame.evaluate(index=>{const sim=window.phet.joist.sim||window.phet.sim,screens=sim.simScreens||sim.screens;if(sim.screenProperty)sim.screenProperty.value=screens[index];else if(sim.selectedScreenProperty)sim.selectedScreenProperty.value=screens[index];else{sim.screenIndexProperty.value=index;sim.showHomeScreenProperty.value=false;}},guide.screens.length-1);
       await page.waitForFunction(id=>document.querySelector('#player-tip .mp-learning-panel')?.dataset.guideId===id,guide.screens.at(-1).id);
-      await hostPanel.locator('[data-learning-step="2"]').focus();await page.keyboard.press('Enter');assert.equal(await hostPanel.locator('[data-guide-field="why"]').isVisible(),true);await noOverflow();await shot(guide.id+'-host');item.hostGuide=true;item.keyboardGuide=true;
+      await hostPanel.locator('.mp-learning-fields > details > summary').focus();await page.keyboard.press('Enter');assert.equal(await hostPanel.locator('[data-guide-field="why"]').isVisible(),true);await noOverflow();await shot(guide.id+'-host');item.hostGuide=true;item.keyboardGuide=true;await page.keyboard.press('Escape');
       if(['area-builder','forces-and-motion-basics','states-of-matter-basics'].includes(id)){report.phase=id+'/mobile';await page.setViewportSize({width:390,height:844});await noOverflow();await shot(guide.id+'-host',true);report.phase=id+'/restore-desktop';await page.setViewportSize({width:1440,height:1000});}
     }
     await page.locator('#player-back').click();assert.equal(await page.locator('#player-tip .mp-learning-panel').count(),0);
     await page.locator('[data-launch="forces-and-motion-basics"]').click();
     await page.waitForFunction(()=>document.querySelector('iframe')?.contentWindow.document.documentElement?.dataset.learningGuide==='ready'&&document.getElementById('loading')?.hidden,null,{timeout:65000});
     assert.equal(await page.locator('#player-tip .mp-learning-panel').count(),1);assert.ok((await page.locator('#player-tip .mp-learning-panel').getAttribute('data-guide-id')).startsWith('phet-forces-and-motion-basics'));
-    await page.locator('#player-tip [data-learning-step="2"]').click();assert.equal(await page.locator('#player-tip [data-learning-step="2"]').getAttribute('aria-current'),'step');
+    await page.locator('#player-help').click();await page.locator('#player-tip .mp-learning-fields > details > summary').click();await page.keyboard.press('Escape');
     await page.locator('#player-reset').click();await page.waitForFunction(()=>document.querySelector('iframe')?.contentWindow.document.documentElement?.dataset.learningGuide==='ready'&&document.getElementById('loading')?.hidden,null,{timeout:65000});
-    assert.equal(await page.locator('#player-tip .mp-learning-panel').count(),1);assert.equal(await page.locator('#player-tip [data-learning-step="0"]').getAttribute('aria-current'),'step');assert.equal(await page.locator('#player-tip [data-guide-field="why"]').isVisible(),false);
+    assert.equal(await page.locator('#player-tip .mp-learning-panel').count(),1);assert.equal(await page.locator('#player-tip [data-learning-step]').count(),0);assert.equal(await page.locator('#player-tip [data-guide-field="why"]').isVisible(),false);
     report.hostLifecycle={returned:true,switchedWithoutNavigation:true,resetWithoutNavigation:true,singlePanel:true};
     report.current='tangram-legacy';await page.goto(base+'src/adapters/tangram.html');await page.waitForFunction(()=>window.__mpTangramControls&&window.__mpLearning,null,{timeout:30000});
-    await page.locator('.mp-learning-panel > summary').click();await page.locator('[data-learning-step="2"]').click();assert.equal(await page.locator('[data-guide-field]').count(),4);
+    await page.locator('#tangram-help').click();await page.locator('.mp-learning-fields > details > summary').click();assert.equal(await page.locator('[data-guide-field]').count(),4);await page.keyboard.press('Escape');
     const original=await page.evaluate(()=>__mpTangramControls.snapshot());await page.locator('[data-piece-move="right"]').click();const moved=await page.evaluate(()=>__mpTangramControls.snapshot());assert.ok(moved.some((piece,index)=>piece.x!==original[index].x||piece.y!==original[index].y),'legacy keyboard controls did not move a piece');
     await page.locator('#piece-turn-left').click();await noOverflow();await shot('tangram-legacy');await page.setViewportSize({width:390,height:844});await noOverflow();await shot('tangram-legacy',true);report.legacyTangram={fourPartGuide:true,keyboardMovement:true,screenshots:['output/playwright/learning-coverage/tangram-legacy-desktop.png','output/playwright/learning-coverage/tangram-legacy-mobile.png']};
   }

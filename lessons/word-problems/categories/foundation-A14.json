@@ -1,0 +1,2018 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "foundation-A14",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1405",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由周长面积反求边长",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-a49a3f2a1a840301",
+      "assessmentGroup": "assessment-a49a3f2a1a840301",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个长方形的长比宽的2倍少8米，周长为56米。长和宽分别是多少米？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "长",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "16",
+                "d": "1"
+              },
+              "unit": "米"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "宽",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "12",
+                "d": "1"
+              },
+              "unit": "米"
+            }
+          }
+        ]
+      },
+      "intent": "利用半周长和倍数差关系求长与宽。",
+      "hints": [
+        "周长的一半就是长加宽。"
+      ],
+      "steps": [
+        "长＋宽＝56÷2＝28（米）。",
+        "把少的8米补上，就有3份宽：28＋8＝36（米）。",
+        "宽为36÷3＝12（米），长为12×2－8＝16（米）。"
+      ],
+      "commonMistakes": [
+        "把56米直接当作长加宽。",
+        "把“少8米”写成多8米。"
+      ],
+      "prerequisites": [
+        "长方形周长",
+        "倍数关系"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1405",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "fb56f5d8984aef2cdd23b3f377b535988a8b6e28f544370d93db913c9b298d34",
+        "recordSha256": "385918b593c92618703be3bdaef3e97ea26957cc9f785b37fd27b8553f24ea26",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1405",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "331416dc0bbcb2ac96f7b075b45fc0067cddba293bc95ea66afa877ee4cb503c",
+        "sourceDraftSha256": "331416dc0bbcb2ac96f7b075b45fc0067cddba293bc95ea66afa877ee4cb503c",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c65c7b32a5cee38b8337343a68367d4a4fd902eb612f4451deecd24c6238c353"
+      },
+      "contentSha256": "c65c7b32a5cee38b8337343a68367d4a4fd902eb612f4451deecd24c6238c353"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1474",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由周长面积反求边长",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-aa7e8a4127e6d1d6",
+      "assessmentGroup": "assessment-aa7e8a4127e6d1d6",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个长方形的周长为150厘米，长比宽多15厘米。长和宽分别是多少厘米？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "长",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "45",
+                "d": "1"
+              },
+              "unit": "厘米"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "宽",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "30",
+                "d": "1"
+              },
+              "unit": "厘米"
+            }
+          }
+        ]
+      },
+      "intent": "用半周长与长宽差求两条边。",
+      "hints": [
+        "先求长与宽的和。"
+      ],
+      "steps": [
+        "长＋宽＝150÷2＝75（厘米）。",
+        "去掉长多出的15厘米，两份宽共有75－15＝60（厘米）。",
+        "宽为60÷2＝30（厘米），长为30＋15＝45（厘米）。"
+      ],
+      "commonMistakes": [
+        "直接把150减15后除以2。"
+      ],
+      "prerequisites": [
+        "长方形周长",
+        "和差问题"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1474",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "f5a7faa22989fddd59ca61f4a5db714be09a08ac5b931d01bca3d8bc89f995db",
+        "recordSha256": "b6cde0c8bc3c791411420f6235f24f2e77f0bf9d0917888691aed5cc4dba7853",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.wallace.ccfaculty.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1474",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "cff34128ec5d0cbee2c1646c7cdf6d137d9721a19811a38066880ba0938f35bb",
+        "sourceDraftSha256": "cff34128ec5d0cbee2c1646c7cdf6d137d9721a19811a38066880ba0938f35bb",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "31be40074410505580c744e393befc43fec48d36534b29c08fd1db4ec7ecacd1"
+      },
+      "contentSha256": "31be40074410505580c744e393befc43fec48d36534b29c08fd1db4ec7ecacd1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1475",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由周长面积反求边长",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-830450f47a150a86",
+      "assessmentGroup": "assessment-830450f47a150a86",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "某学院的长方形篮球场周长为96米，长比宽多14米。这个场地的长和宽分别是多少米？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "长",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "31",
+                "d": "1"
+              },
+              "unit": "米"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "宽",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "17",
+                "d": "1"
+              },
+              "unit": "米"
+            }
+          }
+        ]
+      },
+      "intent": "根据周长与长宽差求场地尺寸。",
+      "hints": [
+        "长加宽等于周长的一半。"
+      ],
+      "steps": [
+        "长＋宽＝96÷2＝48（米）。",
+        "宽为（48－14）÷2＝17（米）。",
+        "长为17＋14＝31（米）。",
+        "验算2×（31＋17）＝96（米）。"
+      ],
+      "commonMistakes": [
+        "把长与宽的数值写反。",
+        "把周长当成长与宽之和。"
+      ],
+      "prerequisites": [
+        "长方形周长",
+        "和差问题"
+      ],
+      "adaptation": [
+        "按长比宽多14米，明确答案标签为长31米、宽17米，避免源答案17与31的未标注顺序造成颠倒。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1475",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "f0ee06e6b696dbe636c365ab97a25cf4bce6f4086891b059a5f73225c5755bb8",
+        "recordSha256": "191efd6731cffa19bcb9becc53f36abdf103cb606039693480b7fdc254bc1a3b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.wallace.ccfaculty.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1475",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0729230a20a093d6095aa476aae3e608cc39e93a26e718855d2190387ea9eb8e",
+        "sourceDraftSha256": "0729230a20a093d6095aa476aae3e608cc39e93a26e718855d2190387ea9eb8e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "1e80950b8a40315277ceb0fb633c49474d3922b6699dbfc8a900494d98b1a8f7"
+      },
+      "contentSha256": "1e80950b8a40315277ceb0fb633c49474d3922b6699dbfc8a900494d98b1a8f7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1492",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由边长或周长求面积",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-ffef47800620e4b1",
+      "assessmentGroup": "assessment-ffef47800620e4b1",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "一张正方形照片的面积为25平方厘米。小安把它放大，使每条边都变成原来的2倍。放大后的面积是多少平方厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "100",
+          "d": "1"
+        },
+        "unit": "平方厘米"
+      },
+      "intent": "理解两条边都扩大2倍时面积扩大4倍。",
+      "hints": [
+        "正方形面积由边长乘边长得到。"
+      ],
+      "steps": [
+        "原边长为5厘米，因为5×5＝25。",
+        "放大后边长为5×2＝10（厘米）。",
+        "新面积为10×10＝100（平方厘米）。"
+      ],
+      "commonMistakes": [
+        "只把面积乘2，忽略两条边都放大。"
+      ],
+      "prerequisites": [
+        "正方形面积",
+        "面积与边长变化"
+      ],
+      "adaptation": [
+        "原25平方英寸重设为25平方厘米照片；这是公制情境重设而非精确换算，重新由5厘米边长放大到10厘米并求100平方厘米。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1492",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b6452fec064d4c635d970fa19de4037b546cf97fac7394f4f052b308d64c3f86",
+        "recordSha256": "2bb91cb886c4566ee80ac2ea0699ab4c7179151c4f96598ada4fdbd17bc0612b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1492",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "aeb0bbdc524b52d48e0d4fa77be909ce1bab017f3ae73e1d076b9304bfc0284c",
+        "sourceDraftSha256": "aeb0bbdc524b52d48e0d4fa77be909ce1bab017f3ae73e1d076b9304bfc0284c",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "a8a3c0667adc68b6a8072ebcb495a39ed6636d94e0adb57d5e45936d6e6af0e4"
+      },
+      "contentSha256": "a8a3c0667adc68b6a8072ebcb495a39ed6636d94e0adb57d5e45936d6e6af0e4"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1493",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "铺排分割与长度面积关联",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-19933254068dc4f0",
+      "assessmentGroup": "assessment-19933254068dc4f0",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小布要剪长方形卡片，每张长6厘米、宽4厘米。她有一张边长2.4分米的正方形卡纸，剪卡片时不计切口损耗。最多能剪出多少张完整卡片？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "24",
+          "d": "1"
+        },
+        "unit": "张"
+      },
+      "intent": "用面积给上限，并说明上限可以通过铺排达到。",
+      "hints": [
+        "先把2.4分米换成厘米，再看两边可各排几张。"
+      ],
+      "steps": [
+        "2.4分米＝24厘米，卡纸面积为24×24＝576（平方厘米）。",
+        "每张卡片面积为6×4＝24（平方厘米），面积上限为576÷24＝24（张）。",
+        "沿一边排24÷6＝4张，另一边排24÷4＝6张，共4×6＝24张，恰好达到上限。"
+      ],
+      "commonMistakes": [
+        "只按面积相除，不检查能否实际铺排。",
+        "把分米与厘米混用。"
+      ],
+      "prerequisites": [
+        "长度单位换算",
+        "长方形面积",
+        "铺排"
+      ],
+      "adaptation": [
+        "原2英寸×3英寸卡片和1英尺正方形纸，按比例重设为4厘米×6厘米卡片和2.4分米（24厘米）正方形纸；不是精确英制换算，重新核算且构造4×6铺排。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1493",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "47a0e1bbb95bd6597ab22f6f8f7336a61c9427efe2b6adb3c9545c236309c38b",
+        "recordSha256": "eda197617611a359ddc939af02df339bb1a3d8649c2b5e4baf2df74977a72425",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1493",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e7e07a52b1762879b4d58e2ba0f9f4cee4a214439f74dab29781c91c4bf331f8",
+        "sourceDraftSha256": "e7e07a52b1762879b4d58e2ba0f9f4cee4a214439f74dab29781c91c4bf331f8",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "5d120a4b3e4c7bc64ed56a5192dce85ecf7c5f210c045c1cdd6ff3623a4fbcd3"
+      },
+      "contentSha256": "5d120a4b3e4c7bc64ed56a5192dce85ecf7c5f210c045c1cdd6ff3623a4fbcd3"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1496",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "面积中的部分与整体",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-b3bd7c1e6654c9f6",
+      "assessmentGroup": "assessment-b3bd7c1e6654c9f6",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小艾的房间是长3米、宽5米的长方形。她用40块边长25厘米的正方形地砖铺其中一部分，地砖互不重叠且不留缝。铺砖面积占房间面积的几分之几？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "1",
+          "d": "6"
+        },
+        "unit": ""
+      },
+      "intent": "把铺砖面积与房间总面积写成分数。",
+      "hints": [
+        "要比较的是面积，先把单位统一。"
+      ],
+      "steps": [
+        "房间面积为300×500＝150000（平方厘米）。",
+        "每块地砖面积为25×25＝625（平方厘米），40块共40×625＝25000（平方厘米）。",
+        "所占分数为25000/150000＝1/6。"
+      ],
+      "commonMistakes": [
+        "用地砖块数40直接除以房间平方米数15。",
+        "把1/6当成剩余未铺砖的部分。"
+      ],
+      "prerequisites": [
+        "长方形面积",
+        "正方形面积",
+        "长度单位换算",
+        "分数意义"
+      ],
+      "adaptation": [
+        "原12英尺×20英尺房间、每片1平方英尺地砖，按相同比例重设为3米×5米房间、25厘米见方地砖；不是精确换算，重新计算25000/150000＝1/6。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1496",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "647a8b8b0d129c1a5e3172f08163c4621b5938a2ab3eb5b29b8e81ba288f871d",
+        "recordSha256": "8264b554650ecd2f640f2e91b4c462098fe820a54fcc0560f929809947dab9a7",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1496",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "02263916a8cbe5f1ac5c607a74d9cc4dc2299093f3946ce966354e83bfe8aacf",
+        "sourceDraftSha256": "02263916a8cbe5f1ac5c607a74d9cc4dc2299093f3946ce966354e83bfe8aacf",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "1654ecc99d2a02dda1051b3a3cce3b40c54f64f6b9fa41d1cc94a6038de87f69"
+      },
+      "contentSha256": "1654ecc99d2a02dda1051b3a3cce3b40c54f64f6b9fa41d1cc94a6038de87f69"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1497",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "面积、用量与费用综合",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-80bd61ee8a0f0d10",
+      "assessmentGroup": "assessment-80bd61ee8a0f0d10",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "《数学杂志》每页长24厘米、宽18厘米，广告按每平方厘米2元收费。小杰要购买半页面积的广告，需付多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "432",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "求半页面积，再按单位面积收费。",
+      "hints": [
+        "半页是整页面积的一半。"
+      ],
+      "steps": [
+        "整页面积为24×18＝432（平方厘米）。",
+        "半页面积为432÷2＝216（平方厘米）。",
+        "广告费用为216×2＝432（元）。"
+      ],
+      "commonMistakes": [
+        "把半页当成半个边长后两边都减半。",
+        "忘记乘每平方厘米的费用。"
+      ],
+      "prerequisites": [
+        "长方形面积",
+        "一半",
+        "单价、数量和总价"
+      ],
+      "adaptation": [
+        "美元改为人民币元；原9英寸×12英寸页面和每平方英寸8美元，重设为18厘米×24厘米页面、每平方厘米2元；保留半页面积收费关系，属于公制情境重设而非精确换算，重新计算216×2。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1497",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "7cd5dc396a6fab6e7d8cc7f401cad9619116b49fe7e45bf64ca5f434867c29ef",
+        "recordSha256": "6f96dee39cb1f44c7507128c5990b10c4389bd25a8d59d148a231931144fb8bd",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1497",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9ade5a2dd0967a17caf4f866d8c700059d268511eeb46572f4b6f263f5cce5e2",
+        "sourceDraftSha256": "9ade5a2dd0967a17caf4f866d8c700059d268511eeb46572f4b6f263f5cce5e2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "a59cf225a4b911f12f464c78193c2474ea7b66c7158c39def857750bf933d2c9"
+      },
+      "contentSha256": "a59cf225a4b911f12f464c78193c2474ea7b66c7158c39def857750bf933d2c9"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1498",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由边长或周长求面积",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-bcf3e31ae03d5227",
+      "assessmentGroup": "assessment-bcf3e31ae03d5227",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "一个长方形花园的周长为36米，其中一条边长10米。花园的面积是多少平方米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "80",
+          "d": "1"
+        },
+        "unit": "平方米"
+      },
+      "intent": "先由周长求另一边，再求面积。",
+      "hints": [
+        "长方形两条邻边之和是周长的一半。"
+      ],
+      "steps": [
+        "两条邻边之和为36÷2＝18（米）。",
+        "另一条边长18－10＝8（米）。",
+        "面积为10×8＝80（平方米）。"
+      ],
+      "commonMistakes": [
+        "把36－10当成另一边。"
+      ],
+      "prerequisites": [
+        "长方形周长",
+        "长方形面积"
+      ],
+      "adaptation": [
+        "原36英尺周长、10英尺边长重设为36米、10米的公制花园；不是精确换算，按新条件反求8米并重算面积80平方米。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1498",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "a98e0c479b2c1b10cb5a8c7a6f196adab1ffb2704f41cf679bad18007d7a8c15",
+        "recordSha256": "549eacb959ede6910e26f098456b2898958fc59ae9de922de9426bfd92424377",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1498",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "13ef175214ac059a73d9aaa9be8eb1bd981e8e87a9ef81f3aefe967c4e966ec9",
+        "sourceDraftSha256": "13ef175214ac059a73d9aaa9be8eb1bd981e8e87a9ef81f3aefe967c4e966ec9",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9b25ad085406e7c3f3690638a4fdf80dbbb18a17ffb3d09b4194dec544c559f0"
+      },
+      "contentSha256": "9b25ad085406e7c3f3690638a4fdf80dbbb18a17ffb3d09b4194dec544c559f0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1499",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "铺排分割与长度面积关联",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-40e2b7284eac862a",
+      "assessmentGroup": "assessment-40e2b7284eac862a",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "贾阿姨的长方形浴室地面长5米、宽3米，要用边长25厘米的正方形地砖铺满。地砖不留缝，不计损耗。需要多少块地砖？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "240",
+          "d": "1"
+        },
+        "unit": "块"
+      },
+      "intent": "统一长度单位，按两边排列数量求地砖总数。",
+      "hints": [
+        "每个方向的长度都能被地砖边长整除。"
+      ],
+      "steps": [
+        "5米＝500厘米，3米＝300厘米。",
+        "长边可排500÷25＝20（块），宽边可排300÷25＝12（块）。",
+        "共需20×12＝240（块）。"
+      ],
+      "commonMistakes": [
+        "直接用米数除以厘米数。",
+        "把每边块数相加，忘记按行列相乘。"
+      ],
+      "prerequisites": [
+        "长度单位换算",
+        "正方形铺排"
+      ],
+      "adaptation": [
+        "原6英尺×10英尺地面与6英寸砖，按相同比例重设为3米×5米地面、25厘米砖；属于公制情境重设而非精确换算，按12×20重新核算。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1499",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "d7dd681b37812c49761d93cef25b616822e672191922b2369f633e46eef62dbd",
+        "recordSha256": "bff06666ec3ec7dee251cdcaa323e823f7d1e689f6f504c7dc5796cf94dbf6e2",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1499",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c39d39bc001381034abce9f393011a0391e6c62f9fd27eeb491aa774b1064a51",
+        "sourceDraftSha256": "c39d39bc001381034abce9f393011a0391e6c62f9fd27eeb491aa774b1064a51",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f9fbace0b8cd6dcd5a4505e0d526614a401a68c88ce2939046b88ea7419e5f8b"
+      },
+      "contentSha256": "f9fbace0b8cd6dcd5a4505e0d526614a401a68c88ce2939046b88ea7419e5f8b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1501",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由边长或面积求周长",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-ed7ff18133029618",
+      "assessmentGroup": "assessment-ed7ff18133029618",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个长方形的面积为360平方厘米，长为20厘米。它的周长是多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "76",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "先由面积求宽，再求周长。",
+      "hints": [
+        "需要先知道两条邻边的长度。"
+      ],
+      "steps": [
+        "宽为360÷20＝18（厘米）。",
+        "周长为（20＋18）×2＝76（厘米）。"
+      ],
+      "commonMistakes": [
+        "把面积360直接加到长20上。",
+        "只答宽18厘米。"
+      ],
+      "prerequisites": [
+        "长方形面积",
+        "长方形周长"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1501",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "21e5d72d93a573365fd25bdb58504e0a588832a438a1bb27851d996215849e7a",
+        "recordSha256": "18690dfb3503ce03c0ae1a53f7ea64f02fae38f629a29794da815ee849a0bf3c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1501",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b344724171c09d61b1e4ff02788f6b44547a903b93135312539578616cfe6d71",
+        "sourceDraftSha256": "b344724171c09d61b1e4ff02788f6b44547a903b93135312539578616cfe6d71",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "aa91173a3bad697d1ad5c7a91519385f38d12639208a53dc23ec566a348dfdb4"
+      },
+      "contentSha256": "aa91173a3bad697d1ad5c7a91519385f38d12639208a53dc23ec566a348dfdb4"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1502",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "组合或逆向周长面积",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-31218d9043d0533c",
+      "assessmentGroup": "assessment-31218d9043d0533c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个正方形花园的周长为48米，园内有面积20平方米的池塘。花园里除池塘以外的面积是多少平方米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "124",
+          "d": "1"
+        },
+        "unit": "平方米"
+      },
+      "intent": "从周长求总面积，再扣除池塘面积。",
+      "hints": [
+        "先求正方形边长。"
+      ],
+      "steps": [
+        "边长为48÷4＝12（米）。",
+        "花园面积为12×12＝144（平方米）。",
+        "除池塘外的面积为144－20＝124（平方米）。"
+      ],
+      "commonMistakes": [
+        "直接用周长48减去面积20。"
+      ],
+      "prerequisites": [
+        "正方形周长",
+        "正方形面积",
+        "部分与整体"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1502",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ce344ad23b98f2220443f57993ca97fa3f36a4b3eb18ec8be5b157842771522c",
+        "recordSha256": "73863bfe8d2b53a01e8bde3041fefbdb019c487b0f09eba07af0f336bce01395",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1502",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "79607185a1a7be45e51fc29b4744ad2a5b9fa3bc9e3f8a4f073d200d683d9893",
+        "sourceDraftSha256": "79607185a1a7be45e51fc29b4744ad2a5b9fa3bc9e3f8a4f073d200d683d9893",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "5f0ab59e7a5e71fa367bc9a037e01c930254fd32bf048f2d62184ccc5bca7c65"
+      },
+      "contentSha256": "5f0ab59e7a5e71fa367bc9a037e01c930254fd32bf048f2d62184ccc5bca7c65"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1503",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "组合或逆向周长面积",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-e058add54e10cc2c",
+      "assessmentGroup": "assessment-e058add54e10cc2c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "一个长方形客厅长6米、宽5米。地毯铺在中央，地毯四周都留出1米宽的空地。空地的面积是多少平方米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "18",
+          "d": "1"
+        },
+        "unit": "平方米"
+      },
+      "intent": "求外长方形面积减去内长方形面积。",
+      "hints": [
+        "地毯的长、宽都需要减去两边的空地宽。"
+      ],
+      "steps": [
+        "客厅面积为6×5＝30（平方米）。",
+        "地毯长6－2×1＝4（米），宽5－2×1＝3（米）。",
+        "地毯面积为4×3＝12（平方米）。",
+        "四周空地面积为30－12＝18（平方米）。"
+      ],
+      "commonMistakes": [
+        "每个方向只减去1米。",
+        "把空地宽1米直接乘客厅周长，忽略四角重复。"
+      ],
+      "prerequisites": [
+        "长方形面积",
+        "组合图形面积"
+      ],
+      "adaptation": [
+        "原12英尺×10英尺客厅、四周2英尺边带按相同数值缩放重设为6米×5米、1米边带；保留形状和比例，属于公制情境重设而非精确换算，重算空地18平方米。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1503",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "aa61939d708cb1116db493df0258877b08c671c6f231b248e095742395bd45cb",
+        "recordSha256": "8a89de88e5e53d7207ea42c64f1f86010098ef167e9162f72350b4d56c606181",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1503",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "446cee745bcd3a8c4c222ea703f2278ec5dc48c4140861fb0c9ce2f22133d5c0",
+        "sourceDraftSha256": "446cee745bcd3a8c4c222ea703f2278ec5dc48c4140861fb0c9ce2f22133d5c0",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "abd41e3ef2fafae4c015126f501b7e87ac120980d326f2bae4754e88f2c0a5bc"
+      },
+      "contentSha256": "abd41e3ef2fafae4c015126f501b7e87ac120980d326f2bae4754e88f2c0a5bc"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1504",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "组合或逆向周长面积",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-eab3f4e664de1c64",
+      "assessmentGroup": "assessment-eab3f4e664de1c64",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个正方形的边长为15厘米。一个长方形的长为18厘米，它的周长与这个正方形相同。长方形的面积是多少平方厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "216",
+          "d": "1"
+        },
+        "unit": "平方厘米"
+      },
+      "intent": "由相同周长求长方形宽，再求面积。",
+      "hints": [
+        "正方形周长也是长方形周长。"
+      ],
+      "steps": [
+        "共同周长为15×4＝60（厘米）。",
+        "长方形长与宽的和为60÷2＝30（厘米）。",
+        "宽为30－18＝12（厘米）。",
+        "面积为18×12＝216（平方厘米）。"
+      ],
+      "commonMistakes": [
+        "以为周长相等就面积相等。",
+        "只求出宽12厘米。"
+      ],
+      "prerequisites": [
+        "正方形周长",
+        "长方形周长",
+        "长方形面积"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1504",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "30d1c8877402c89cec97c48cd00eb27d502dc31d963bb507c5c77f8a35082113",
+        "recordSha256": "d1e9855c699dbb9a08481a2c8c78574caf257cd6771a4cd65f1708048d4111e0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1504",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e0dd77157a7a19c9935787f20c1ed1f22b51eb43f9e0805b7e44aa9d3666464a",
+        "sourceDraftSha256": "e0dd77157a7a19c9935787f20c1ed1f22b51eb43f9e0805b7e44aa9d3666464a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9142b0f2648b1c020dffeba53a645ef766f8a35df0b15c8d764f02d11e04506f"
+      },
+      "contentSha256": "9142b0f2648b1c020dffeba53a645ef766f8a35df0b15c8d764f02d11e04506f"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1510",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "组合或逆向周长面积",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-6b98ed675851a4c8",
+      "assessmentGroup": "assessment-6b98ed675851a4c8",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小尼有一张正方形纸，周长为32厘米。他的狗洛奇撕掉了纸张面积的1/4。剩余纸张的面积是多少平方厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "48",
+          "d": "1"
+        },
+        "unit": "平方厘米"
+      },
+      "intent": "先求原面积，再求剩余分数部分。",
+      "hints": [
+        "1/4说的是原纸面积的1/4。"
+      ],
+      "steps": [
+        "原边长为32÷4＝8（厘米）。",
+        "原面积为8×8＝64（平方厘米）。",
+        "剩余面积为64×（1－1/4）＝48（平方厘米）。"
+      ],
+      "commonMistakes": [
+        "先用周长乘3/4，并把结果当成面积。"
+      ],
+      "prerequisites": [
+        "正方形周长",
+        "正方形面积",
+        "分数意义"
+      ],
+      "adaptation": [
+        "明确撕掉的是面积的1/4，避免误解为边长或周长的1/4。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1510",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "911767e4186b1f6cfbeb9ba8d4aa34a998700df0973fe367383471580b64495b",
+        "recordSha256": "cab9210bd6b0887acd6bdb70e2388399ce457e0a28553ae337a7178f64d8d4ac",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1510",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "287dc8fbcfac4fbae58bcca9dc4d4795dce0e32eee36d316aa7fb7778cd2c8d3",
+        "sourceDraftSha256": "287dc8fbcfac4fbae58bcca9dc4d4795dce0e32eee36d316aa7fb7778cd2c8d3",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b90e840d5bf06b4663806ddcba3340cda6c20532daa3e574916fba64afb69be1"
+      },
+      "contentSha256": "b90e840d5bf06b4663806ddcba3340cda6c20532daa3e574916fba64afb69be1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1511",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "铺排分割与长度面积关联",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-4620d311e9864bb8",
+      "assessmentGroup": "assessment-4620d311e9864bb8",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一根铁丝全部剪成小段，每段都围成边长2厘米的正方形，正方形总面积为92平方厘米。不计剪切和连接损耗，铁丝没有剩余。原来的铁丝长多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "184",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "由总面积求正方形数，再合计所用周长。",
+      "hints": [
+        "每个小正方形占4平方厘米，需要8厘米铁丝。"
+      ],
+      "steps": [
+        "每个面积为2×2＝4（平方厘米），共有92÷4＝23（个）。",
+        "每个正方形需要2×4＝8（厘米）铁丝。",
+        "原铁丝长23×8＝184（厘米）。"
+      ],
+      "commonMistakes": [
+        "把总面积92直接当成铁丝长度。",
+        "只计算一个正方形的周长。"
+      ],
+      "prerequisites": [
+        "正方形面积",
+        "正方形周长",
+        "两步运算"
+      ],
+      "adaptation": [
+        "明确全部使用、无剩余且忽略连接和切口损耗，使所求原铁丝长度唯一。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1511",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "7b0672c44dcc5a19fa3bd71556955788ef93fe849263c4288a110aebf43a912b",
+        "recordSha256": "0dabc6431a3ef3aa4cfbf8da2e46fa7ef28c6f4de14328c3a8cd55b3131177d7",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1511",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "38456cc840a3899f524739032f112a5d540af6bc04e93a9b90409c852b6a7447",
+        "sourceDraftSha256": "38456cc840a3899f524739032f112a5d540af6bc04e93a9b90409c852b6a7447",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "592907b8146b0e23a070f7904ab6f65178c6777eafdd9ccafedd8fd5db37199b"
+      },
+      "contentSha256": "592907b8146b0e23a070f7904ab6f65178c6777eafdd9ccafedd8fd5db37199b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1526",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由边长或面积求周长",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-c349a487f601df7d",
+      "assessmentGroup": "assessment-c349a487f601df7d",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "报纸上的一块广告区域是正方形，每条边长8厘米。广告区域的周长是多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "32",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "把正方形的四条边相加。",
+      "hints": [
+        "正方形4条边一样长。"
+      ],
+      "steps": [
+        "周长为8×4＝32（厘米）。"
+      ],
+      "commonMistakes": [
+        "用8×8求成面积。"
+      ],
+      "prerequisites": [
+        "正方形周长"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1526",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "8d9dc10f95cbabdb18d225f4dd413aab6efff786c8b6209f3c7e6fcaa61869d2",
+        "recordSha256": "df78dfb248d5e10c766224bfa45923144e047498032c3f8d95dcdf49a33b9893",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1526",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "886ce6c194620a69e6e6298d171925c636d1009cad34bfb46b980a4e92fa57f1",
+        "sourceDraftSha256": "886ce6c194620a69e6e6298d171925c636d1009cad34bfb46b980a4e92fa57f1",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8cfd8b0c2a6207bb94c82f023284399196d3edf9025a87d26904e224ce88061a"
+      },
+      "contentSha256": "8cfd8b0c2a6207bb94c82f023284399196d3edf9025a87d26904e224ce88061a"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1528",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由边长或面积求周长",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-4c75b542464b207a",
+      "assessmentGroup": "assessment-4c75b542464b207a",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一块长方形金属片宽16厘米、长19厘米。它的周长是多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "70",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "计算长方形四边之和。",
+      "hints": [
+        "长和宽各有两条。"
+      ],
+      "steps": [
+        "周长为（16＋19）×2＝70（厘米）。"
+      ],
+      "commonMistakes": [
+        "只算长加宽35厘米。",
+        "用长乘宽求成面积。"
+      ],
+      "prerequisites": [
+        "长方形周长"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1528",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "009bac27ac5fe36be94e9a6fd6bd49187cb665254a7e5d1a399d4cdeaaebf6cd",
+        "recordSha256": "5eecc7a00752ee1ee9655c7179638cf55a92d224ae2fda182abe15c635cb9c9a",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1528",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "01b43862b91a2c7e96a8627ab1ee07f9c5a2d8bbf68335b47fa8dfe1ab35504a",
+        "sourceDraftSha256": "01b43862b91a2c7e96a8627ab1ee07f9c5a2d8bbf68335b47fa8dfe1ab35504a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "157c6c25fd294f104e975db58192e45b5e2fe901c3098c2b44a4e3afb8cab8bc"
+      },
+      "contentSha256": "157c6c25fd294f104e975db58192e45b5e2fe901c3098c2b44a4e3afb8cab8bc"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1529",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由周长面积反求边长",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-89e7606d38783851",
+      "assessmentGroup": "assessment-89e7606d38783851",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一块正方形玻璃的面积是64平方厘米。它每条边长多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "8",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "由正方形面积求边长。",
+      "hints": [
+        "找一个数，使它乘自己等于64。"
+      ],
+      "steps": [
+        "正方形面积＝边长×边长。",
+        "因为8×8＝64，所以每条边长8厘米。"
+      ],
+      "commonMistakes": [
+        "把64除以4，把面积误当成周长。"
+      ],
+      "prerequisites": [
+        "正方形面积",
+        "乘法口诀"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1529",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "3c3f6deda24bb6d6ae6f4cefc488974975a66849498ae46c89aaa0f90226db68",
+        "recordSha256": "dabb7dd632b41e66bef1d2fbd74ce4fc4c6d92cd6b22786655991adefb9be0f0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1529",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "11b71b48f44a206fdb6105977cb2e2def8a506681d05a1061dd98bb608ab6e17",
+        "sourceDraftSha256": "11b71b48f44a206fdb6105977cb2e2def8a506681d05a1061dd98bb608ab6e17",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "529d4762e033e36650da2121defa542b0e8428019d58dff807937c8ed1c98228"
+      },
+      "contentSha256": "529d4762e033e36650da2121defa542b0e8428019d58dff807937c8ed1c98228"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1532",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由边长或面积求周长",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-9ce75b80ff52c9ad",
+      "assessmentGroup": "assessment-9ce75b80ff52c9ad",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一块正方形金属板每条边长7米。它的周长是多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "28",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "根据正方形边长求周长。",
+      "hints": [
+        "周长共有4条边。"
+      ],
+      "steps": [
+        "周长为7×4＝28（米）。"
+      ],
+      "commonMistakes": [
+        "用7×7求成面积。"
+      ],
+      "prerequisites": [
+        "正方形周长"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1532",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "3db4fefa371c057fe35e8fe8b92df7c8bbdcef8a9846affcbecb12cc8a8ea94f",
+        "recordSha256": "71b7c50a29c14bf2350c9e7e21d40151863410775d676895d6b22d401febeef2",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1532",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "5e7b76b5a1b589ed582ca774b07e6c96ec251e19716b46d9b9b5dee466f84b1e",
+        "sourceDraftSha256": "5e7b76b5a1b589ed582ca774b07e6c96ec251e19716b46d9b9b5dee466f84b1e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ce7cd85299375591ea95d48d827c77e37b1ad8c138387c8660f9e63e472809d1"
+      },
+      "contentSha256": "ce7cd85299375591ea95d48d827c77e37b1ad8c138387c8660f9e63e472809d1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1618",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由周长面积反求边长",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-225941099ebeadd9",
+      "assessmentGroup": "assessment-225941099ebeadd9",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小菲给朋友剪了一块长方形布，宽3厘米，面积24平方厘米。这块布长多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "8",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "用长方形面积和宽求长。",
+      "hints": [
+        "面积＝长×宽。"
+      ],
+      "steps": [
+        "长＝面积÷宽＝24÷3＝8（厘米）。"
+      ],
+      "commonMistakes": [
+        "把24乘3。",
+        "把面积答成边长。"
+      ],
+      "prerequisites": [
+        "长方形面积",
+        "除法"
+      ],
+      "adaptation": [
+        "补明布片为长方形，与源算式24÷3的几何假设一致。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1618",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "605c050abaeaae63f848f19bd417a7c556a74d1fd844ba086d199fbf523a429c",
+        "recordSha256": "974fc0a4d68497d8f9851c09b4cacbef336c49d2b45520a7403b5cf428de35c6",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1618",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b012e166a814dea7a9b4348e1d2b7543f48453306ffcd4b5d9a8877e2df7c35a",
+        "sourceDraftSha256": "b012e166a814dea7a9b4348e1d2b7543f48453306ffcd4b5d9a8877e2df7c35a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "1747d50e418416ae85e15a58c16369fcb5d1ded2e68fd53bf1e84cf5c61a6330"
+      },
+      "contentSha256": "1747d50e418416ae85e15a58c16369fcb5d1ded2e68fd53bf1e84cf5c61a6330"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1624",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由边长或周长求面积",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-6a5e56c8a9c33b05",
+      "assessmentGroup": "assessment-6a5e56c8a9c33b05",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "操场上的新沙坑是长方形，相邻两边分别长4米和2米。沙坑的面积是多少平方米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "8",
+          "d": "1"
+        },
+        "unit": "平方米"
+      },
+      "intent": "根据长方形两条邻边求面积。",
+      "hints": [
+        "把两条邻边的长度相乘。"
+      ],
+      "steps": [
+        "面积为4×2＝8（平方米）。"
+      ],
+      "commonMistakes": [
+        "求成2×（4＋2）＝12米的周长。"
+      ],
+      "prerequisites": [
+        "长方形面积"
+      ],
+      "adaptation": [
+        "明确沙坑为长方形；相邻两边表述保留原题宽4米、长2米的数值，避免长宽名称与大小关系冲突。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1624",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "45795fad7d599aa04bbfb04c7198c014a479e084732b120edcbe6d6562460075",
+        "recordSha256": "535b4c04fd2f92749122cad9b604bf3a1280d6c2f96a71c301599137ec713175",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1624",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "81a34b661f1eeeaf26681e51e3c5814990e40d1823889d1eeb0517b3e9a15592",
+        "sourceDraftSha256": "81a34b661f1eeeaf26681e51e3c5814990e40d1823889d1eeb0517b3e9a15592",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e61336cca381e9611bda5f97846f07e5e87eb5f32e60de41f4929fff9f026462"
+      },
+      "contentSha256": "e61336cca381e9611bda5f97846f07e5e87eb5f32e60de41f4929fff9f026462"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1628",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由边长或周长求面积",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-041b8a64d3255bd8",
+      "assessmentGroup": "assessment-041b8a64d3255bd8",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小杰家后面的树林近似为长方形，相邻两边分别长6千米和3千米。树林的面积是多少平方千米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "18",
+          "d": "1"
+        },
+        "unit": "平方千米"
+      },
+      "intent": "求长方形区域面积。",
+      "hints": [
+        "面积单位是平方千米。"
+      ],
+      "steps": [
+        "面积为6×3＝18（平方千米）。"
+      ],
+      "commonMistakes": [
+        "把两条边相加。",
+        "用千米而不是平方千米作面积单位。"
+      ],
+      "prerequisites": [
+        "长方形面积"
+      ],
+      "adaptation": [
+        "原6英里和3英里重设为6千米和3千米的公制树林情境，明确长方形近似；这是情境重设而非精确英里换算，按6×3重新核算。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1628",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e3a6a1020d412084ca1772a4bcfcd2c03ecf91e2d8a3d57c651ca4ed91d01f00",
+        "recordSha256": "634e4dc69a3979a4d69bb65a711978ce41e6e23e2a9fd38a48b5165b2bd0f969",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1628",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "10ac690f4f0d2d44e962f3e67f0be26af24b7923413f17a11ca04b9d0b43caac",
+        "sourceDraftSha256": "10ac690f4f0d2d44e962f3e67f0be26af24b7923413f17a11ca04b9d0b43caac",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "4874854e3bd5bf8eb5771c8a38de22f955b31a699424132364b0e2bd96a57990"
+      },
+      "contentSha256": "4874854e3bd5bf8eb5771c8a38de22f955b31a699424132364b0e2bd96a57990"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1640",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由边长或周长求面积",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-671d10831b63aa58",
+      "assessmentGroup": "assessment-671d10831b63aa58",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "电子游戏地图中的一块长方形场地，相邻两边分别为10米和2米。这块场地的面积是多少平方米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "20",
+          "d": "1"
+        },
+        "unit": "平方米"
+      },
+      "intent": "求地图所表示的长方形场地面积。",
+      "hints": [
+        "相邻两边相乘得到面积。"
+      ],
+      "steps": [
+        "面积为10×2＝20（平方米）。"
+      ],
+      "commonMistakes": [
+        "把场地周长24米当成面积。"
+      ],
+      "prerequisites": [
+        "长方形面积"
+      ],
+      "adaptation": [
+        "明确地图所表示的区域为长方形，并用相邻两边保留原题10米和2米的数值。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1640",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "6affebb9533b7464e20e2774564f26da7dbc833866f78777cee46559a69b6846",
+        "recordSha256": "b6f35d32102654402e66884b164b7b629d832c1713bc75a440a42a4a107cd30b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1640",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "dd68de1b580971f193d3c4a42a79ec09f474f0671177e84a16a38c71b1a862be",
+        "sourceDraftSha256": "dd68de1b580971f193d3c4a42a79ec09f474f0671177e84a16a38c71b1a862be",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "3cc6861514f7a40c556e1109716fde94563202acf523607d46bcb71ee5d120c0"
+      },
+      "contentSha256": "3cc6861514f7a40c556e1109716fde94563202acf523607d46bcb71ee5d120c0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1642",
+      "collection": "foundation",
+      "category": "A14",
+      "subcategory": "由周长面积反求边长",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-0be624dab659ae7d",
+      "assessmentGroup": "assessment-0be624dab659ae7d",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个长方形游泳池宽3米，水面面积30平方米。泳池长多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "10",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "由长方形面积反求边长。",
+      "hints": [
+        "用水面面积除以宽。"
+      ],
+      "steps": [
+        "长为30÷3＝10（米）。"
+      ],
+      "commonMistakes": [
+        "把平方米直接当作米。"
+      ],
+      "prerequisites": [
+        "长方形面积",
+        "除法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1642",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "9371dac528246fbb5843983c0c4767b9759ea44b31408b8e76606cdd30d90bcc",
+        "recordSha256": "c8373285f8f89b14cbd69a3884624c550edf4a8c2c764431d0c5f77c8be2df72",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1642",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b7922e3cce1d36e9a03e528224ab40738d86e948383af5f13b9ddaa40d6aa690",
+        "sourceDraftSha256": "b7922e3cce1d36e9a03e528224ab40738d86e948383af5f13b9ddaa40d6aa690",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "fa9de59711e72469907e92c1c70d1bc6f3c858af5edd35a192bc74ad7564baee"
+      },
+      "contentSha256": "fa9de59711e72469907e92c1c70d1bc6f3c858af5edd35a192bc74ad7564baee"
+    }
+  ]
+}

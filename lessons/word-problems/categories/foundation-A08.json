@@ -1,0 +1,1311 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "foundation-A08",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0031",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "货币面值换算",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-c4ac670a50fe63a5",
+      "assessmentGroup": "assessment-c4ac670a50fe63a5",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "希阿姨有2枚1分硬币、2枚1角硬币和2枚5分硬币。小雅有4枚1分硬币、1枚5分硬币和1枚1角硬币。希阿姨比小雅多多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "13",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "分别算出两人的金额后比较。",
+      "hints": [
+        "先统一用分表示每种硬币的面值。"
+      ],
+      "steps": [
+        "希阿姨有2×1＋2×10＋2×5＝32（分）。",
+        "小雅有4×1＋1×5＋1×10＝19（分）。",
+        "希阿姨多32－19＝13（分）。"
+      ],
+      "commonMistakes": [
+        "比较两人的硬币总枚数，忽略面值不同。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "元角分换算",
+        "加法比较"
+      ],
+      "adaptation": [
+        "把1、5、10美分硬币改为人民币1分、5分、1角硬币，并重算32－19。",
+        "原问句仅写“多多少”；根据题干金额大小及原算式补全比较主体为希阿姨比小雅。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0031",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "2cfc7ebf90e60d797ce6564e5ce50e120630e5acf89dbe4816372740d29bc4bb",
+        "recordSha256": "54a36d40dffd0d553e98269e823d8e532bf5ba7fd682bf4a4f94c8e48c05a3d1",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0031",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "45cb9c16ef65ea02d8c23ce7c5717f4ec303f7d3e2d9bada4fc088e48e425e3a",
+        "sourceDraftSha256": "45cb9c16ef65ea02d8c23ce7c5717f4ec303f7d3e2d9bada4fc088e48e425e3a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "125640ef09ca401590573178f2989f4a4d2e4358c341cb771910680ab386d5aa"
+      },
+      "contentSha256": "125640ef09ca401590573178f2989f4a4d2e4358c341cb771910680ab386d5aa"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0032",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "货币面值换算",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-02eb168e4549627c",
+      "assessmentGroup": "assessment-02eb168e4549627c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "希阿姨捡到1枚5角硬币、1枚1角硬币和2枚5分硬币。她一共捡到多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "70",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "把不同面值的钱统一成分再合计。",
+      "hints": [
+        "5角＝50分，1角＝10分。"
+      ],
+      "steps": [
+        "两枚5分硬币共值2×5＝10（分）。",
+        "一共值50＋10＋10＝70（分）。"
+      ],
+      "commonMistakes": [
+        "把5角写成5分。",
+        "忘记5分硬币有2枚。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "元角分换算",
+        "加法"
+      ],
+      "adaptation": [
+        "原25美分硬币改为5角，10美分改为1角，5美分改为5分；按50＋10＋2×5核算，答案由45改为70分。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0032",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e5aa5d375a156bb20b7d34c69b487f0d6e942ae889c3cd2c70b95701bf0abd6b",
+        "recordSha256": "4e35c30cd4bb4da328b52bbd9c7a0b303293b7ec5893103b8d3138a0a31b3e31",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0032",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c881bc63e95b71078cbf6c0acc9e10f40091ffbffbd8e9bc98735182dafceb19",
+        "sourceDraftSha256": "c881bc63e95b71078cbf6c0acc9e10f40091ffbffbd8e9bc98735182dafceb19",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "5746d3d8eeccc6a844b72321fa28a3ed0d73070a88be0ffffee15de141690b21"
+      },
+      "contentSha256": "5746d3d8eeccc6a844b72321fa28a3ed0d73070a88be0ffffee15de141690b21"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0080",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "货币面值换算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-baa89ec0047ddef4",
+      "assessmentGroup": "assessment-baa89ec0047ddef4",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小查在上学路上捡到6枚1分硬币，家里原来还有3枚5分硬币。现在这些硬币一共值多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "21",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "分别求两种硬币的金额，再相加。",
+      "hints": [
+        "硬币的枚数要乘对应面值。"
+      ],
+      "steps": [
+        "1分硬币共值6×1＝6（分）。",
+        "5分硬币共值3×5＝15（分）。",
+        "一共值6＋15＝21（分）。"
+      ],
+      "commonMistakes": [
+        "把硬币枚数6＋3＝9当作钱数。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "乘加运算"
+      ],
+      "adaptation": [
+        "把1美分、5美分硬币改为人民币1分、5分硬币；面值在题中给明，按新情境核算。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0080",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "c3bba4e9889391e1907d4bce2ada10dc26463614ea9ce61561610cf7110363a6",
+        "recordSha256": "1ee8c579268ab8249a7de1db9a8784cef6e2b1598edcefdf48dfd3a6b250b0f3",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0080",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a4b190cc1b49c97f2b6a19b9253aff4cf1b743be5f58fbad33595f68a6b66fac",
+        "sourceDraftSha256": "a4b190cc1b49c97f2b6a19b9253aff4cf1b743be5f58fbad33595f68a6b66fac",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c81710da893cd2d3bbfab836aae683a9fa17e50b1c4531b21c1211749795a75f"
+      },
+      "contentSha256": "c81710da893cd2d3bbfab836aae683a9fa17e50b1c4531b21c1211749795a75f"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0150",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "时间单位换算",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-777aca95ebdf1099",
+      "assessmentGroup": "assessment-777aca95ebdf1099",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "希阿姨星期六上午铲雪用了1小时30分钟，下午又铲雪45分钟。她一共铲雪多少分钟？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "135",
+          "d": "1"
+        },
+        "unit": "分钟"
+      },
+      "intent": "把小时与分钟统一后合计时长。",
+      "hints": [
+        "1小时＝60分钟。"
+      ],
+      "steps": [
+        "上午用了60＋30＝90（分钟）。",
+        "一共用了90＋45＝135（分钟）。"
+      ],
+      "commonMistakes": [
+        "把1小时当成100分钟。",
+        "把1小时30分钟写成1.30分钟。"
+      ],
+      "prerequisites": [
+        "时间单位换算",
+        "加法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0150",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "d1c4506a72aa7350d2f1111de3e060421b41fa364e828838a9ac1dea78a1d7a3",
+        "recordSha256": "4b75ae91ed80f5c732d948a882d3bbb6d4af8d73c6a6d06341b65a3a53fbf00e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0150",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "742c58d55c13e3580aee7a68bf9bb3de327bcf996517f6a3a3c2ddf68104c27b",
+        "sourceDraftSha256": "742c58d55c13e3580aee7a68bf9bb3de327bcf996517f6a3a3c2ddf68104c27b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "4c5a43123fd68be0a5cb9cb880a189854795a6675be2602e3325376d66a3ec4b"
+      },
+      "contentSha256": "4c5a43123fd68be0a5cb9cb880a189854795a6675be2602e3325376d66a3ec4b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0192",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "货币面值换算",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-04cf55c647dfa73e",
+      "assessmentGroup": "assessment-04cf55c647dfa73e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小罗有7枚5角硬币、3枚1角硬币、5枚5分硬币和12枚1分硬币。他一共有多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "417",
+          "d": "100"
+        },
+        "unit": "元"
+      },
+      "intent": "分别计算四种硬币的钱数并换算为元。",
+      "hints": [
+        "先用分统一所有面值。"
+      ],
+      "steps": [
+        "四种硬币分别值350分、30分、25分和12分。",
+        "合计350＋30＋25＋12＝417（分）。",
+        "417分＝4.17元。"
+      ],
+      "commonMistakes": [
+        "把硬币枚数直接相加当作钱数。",
+        "合计后忘记从分换成元。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "元角分换算",
+        "乘加运算"
+      ],
+      "adaptation": [
+        "原25、10、5、1美分硬币改为5角、1角、5分、1分；按新面值核算，总额由2.42改为4.17元。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0192",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "995f5eca6486f516402a658b7a31701a2a0614080a197e5fd223bf858abea3b1",
+        "recordSha256": "bce0c43632822cd6690b7643cf1ca3dff4faf850bd139fa8d1b61cea502a5f0e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0192",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "bc103f91e0637f0c439f640e398e73591704719dc3f75ac75faceb29e2e9b92a",
+        "sourceDraftSha256": "bc103f91e0637f0c439f640e398e73591704719dc3f75ac75faceb29e2e9b92a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "88ee32fd1b5eeceba331b7ac8008b2e41f0372e6df612d05a3bcaf0dcb1ca383"
+      },
+      "contentSha256": "88ee32fd1b5eeceba331b7ac8008b2e41f0372e6df612d05a3bcaf0dcb1ca383"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0401",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "货币面值换算",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-48c3e29621301f52",
+      "assessmentGroup": "assessment-48c3e29621301f52",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小米数储蓄罐里的硬币，发现有20枚5分硬币。这些5分硬币一共值多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "100",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "用硬币枚数乘每枚面值。",
+      "hints": [
+        "每枚5分，20枚就是20个5分。"
+      ],
+      "steps": [
+        "一共值20×5＝100（分）。"
+      ],
+      "commonMistakes": [
+        "把20枚当作20分。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "乘法"
+      ],
+      "adaptation": [
+        "把美国5美分硬币改为人民币5分硬币，并显式说明面值；按20×5重新核算。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0401",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "19a3249aaa5c338b2fafdaba5068483de66c7756ba5eb713d155434081e5cd42",
+        "recordSha256": "585b6a5588648abef59fed64195208935eeda3a1a32f6f904c591cbeb71424a0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0401",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2b912c6cfe0ba32aecb189ae166bf97d3c58c2117cba67d30b18a16594149467",
+        "sourceDraftSha256": "2b912c6cfe0ba32aecb189ae166bf97d3c58c2117cba67d30b18a16594149467",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "a7f7ad615c0d9e7ddd7225a4afca4e16dfd0c44a9328629d7a2b447470a6c172"
+      },
+      "contentSha256": "a7f7ad615c0d9e7ddd7225a4afca4e16dfd0c44a9328629d7a2b447470a6c172"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0637",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "货币面值换算",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-7f9fa562f5855c7a",
+      "assessmentGroup": "assessment-7f9fa562f5855c7a",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "希阿姨买一本1.30元的笔记本，全用5分硬币恰好付清。她用了多少枚5分硬币？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "26",
+          "d": "1"
+        },
+        "unit": "枚"
+      },
+      "intent": "把元换成分，再根据面值求硬币枚数。",
+      "hints": [
+        "先把1.30元换成130分。"
+      ],
+      "steps": [
+        "1.30元＝130分。",
+        "需要130÷5＝26（枚）5分硬币。"
+      ],
+      "commonMistakes": [
+        "用1.30直接除以5。",
+        "把1.30元换成13分。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "元和分的换算",
+        "除法"
+      ],
+      "adaptation": [
+        "把美国5美分硬币改为人民币5分硬币，商品价格重设为1.30元；按130÷5重新核算。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0637",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b323107f301eb6b1afecdfb55b398b99eeb31d9f951dd89a130f78b3a9102be6",
+        "recordSha256": "f30db8ed9cc1ef5a6e1e92b852be880ff9a8eaadf84741c4be3ed8c8b8d4f16e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0637",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "eb4ff5ec937caab29234a8a192ad76e6da498baa1601d14db62726dbc62ae779",
+        "sourceDraftSha256": "eb4ff5ec937caab29234a8a192ad76e6da498baa1601d14db62726dbc62ae779",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ad340940d582c655b86b00e9a13dcf83c002d27fe9672fdf0121b8e335911a0a"
+      },
+      "contentSha256": "ad340940d582c655b86b00e9a13dcf83c002d27fe9672fdf0121b8e335911a0a"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0685",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "时间单位换算",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-5fc1bb2ec2a263ea",
+      "assessmentGroup": "assessment-5fc1bb2ec2a263ea",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "希阿姨还要等整整11天，才能买新鞋。11天相当于多少分钟？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "15840",
+          "d": "1"
+        },
+        "unit": "分钟"
+      },
+      "intent": "把天换成小时，再换成分钟。",
+      "hints": [
+        "1天＝24小时，1小时＝60分钟。"
+      ],
+      "steps": [
+        "11天有11×24＝264（小时）。",
+        "264小时有264×60＝15840（分钟）。"
+      ],
+      "commonMistakes": [
+        "把1天当成12小时。",
+        "只换成小时，没有继续换成分钟。"
+      ],
+      "prerequisites": [
+        "时间单位换算",
+        "乘法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0685",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "562ff6468e739fd87258697c86b84d757e2c5faa3755af3b4e12acc210bd792e",
+        "recordSha256": "7850d943a910eb6ec52177f1aac6132910786fe344bd9515643b8e08bb4775d8",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0685",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "926779f862078b1a7026b00556d1a2b3c2349c3fea60cf401f766bf329a0ec02",
+        "sourceDraftSha256": "926779f862078b1a7026b00556d1a2b3c2349c3fea60cf401f766bf329a0ec02",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "77878fb9b0fb936b845a626b22b58898f1cf4b5da4c14c1eed11e658cdec7fdd"
+      },
+      "contentSha256": "77878fb9b0fb936b845a626b22b58898f1cf4b5da4c14c1eed11e658cdec7fdd"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1088",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "货币面值换算",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-35efce95944908a9",
+      "assessmentGroup": "assessment-35efce95944908a9",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小林有一些1角硬币和5角硬币，两种硬币的枚数相同，总共12元。1角硬币有多少枚？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "20",
+          "d": "1"
+        },
+        "unit": "枚"
+      },
+      "intent": "把两种各一枚组成一组，再由总额求组数。",
+      "hints": [
+        "每组有1枚1角和1枚5角，值6角。"
+      ],
+      "steps": [
+        "12元＝120角。",
+        "每组值1＋5＝6（角）。",
+        "共有120÷6＝20（组），因此1角硬币有20枚。"
+      ],
+      "commonMistakes": [
+        "把每组的两枚硬币都算成所求的1角硬币。",
+        "用总额只除以1角。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "元和角的换算",
+        "等量分组"
+      ],
+      "adaptation": [
+        "把原5美分与25美分硬币重设为人民币1角与5角，保留两种枚数相同和面值5倍关系；12元÷0.6元重新求得20枚。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1088",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b934d0a6a1100acec1795aba2dbc396ef27afbe9bdf187b290a5f7326255077c",
+        "recordSha256": "d44db997c84f6687cb9ab1bd3b2970db20371c3f96aabf4211d90695a5a05082",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1088",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "4509999ddc0e9492452490a9e6604ab0054798755db48b87335b43be8fb31020",
+        "sourceDraftSha256": "4509999ddc0e9492452490a9e6604ab0054798755db48b87335b43be8fb31020",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "42d69db1c964aecbd9223d9e965c9ed88a3c7ea49a2e883593cdceeb3c514a42"
+      },
+      "contentSha256": "42d69db1c964aecbd9223d9e965c9ed88a3c7ea49a2e883593cdceeb3c514a42"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1098",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "常用单位换算与数量关系",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-4936ee5ead746acb",
+      "assessmentGroup": "assessment-4936ee5ead746acb",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一只蜜蜂先飞了840厘米，落在花上采花粉，又飞了330厘米回到蜂巢。它一共飞了多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "117",
+          "d": "10"
+        },
+        "unit": "米"
+      },
+      "intent": "先合计路程，再把厘米换成米。",
+      "hints": [
+        "1米＝100厘米。"
+      ],
+      "steps": [
+        "共飞了840＋330＝1170（厘米）。",
+        "1170÷100＝11.7（米）。"
+      ],
+      "commonMistakes": [
+        "把厘米换成米时乘100。",
+        "用两段路程相减。"
+      ],
+      "prerequisites": [
+        "长度单位换算",
+        "小数"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1098",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "98d6d957cc64273f1986f9729177d9362f46c278068c8332673953f4c2c16ab9",
+        "recordSha256": "db4660f5aa45805b5e83fc1c0a70b2c82c51f1ff84b0d3246e27c76e6e1ffd85",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1098",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "ef7e84bc8a41a1b5bb708f92e6351bf9d9a65014c9bb0bb00d97c2df4186eb61",
+        "sourceDraftSha256": "ef7e84bc8a41a1b5bb708f92e6351bf9d9a65014c9bb0bb00d97c2df4186eb61",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "a79bfdb119e1e3ba4627bf92160a533f721d34ee69fb8b0c987975f3a2330cf8"
+      },
+      "contentSha256": "a79bfdb119e1e3ba4627bf92160a533f721d34ee69fb8b0c987975f3a2330cf8"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1151",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "常用单位换算与数量关系",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-63c166cfde84791c",
+      "assessmentGroup": "assessment-63c166cfde84791c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小科做了4500克糖果，留下1千克以后吃，其余平均装进7个碗里招待朋友。每碗装多少克糖果？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "500",
+          "d": "1"
+        },
+        "unit": "克"
+      },
+      "intent": "统一质量单位，求剩余糖果平均每份的质量。",
+      "hints": [
+        "先把1千克换成克。"
+      ],
+      "steps": [
+        "1千克＝1000克。",
+        "要分装的糖果有4500－1000＝3500（克）。",
+        "每碗装3500÷7＝500（克）。"
+      ],
+      "commonMistakes": [
+        "直接用4500÷7，漏掉留下的糖果。",
+        "把1千克当成1克。"
+      ],
+      "prerequisites": [
+        "质量单位换算",
+        "平均分"
+      ],
+      "adaptation": [
+        "补明留下1千克后剩余3500克平均分入7个碗；平均条件是本地补义，按此条件每碗500克，不声称任意分装也有相同碗重。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1151",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "a9633afd1aa8a5245351a9f2065b37a2c14a238fed41b2a391764d37caf63cc4",
+        "recordSha256": "2f2687b06f0ac2be708063cb85d0e45c0454c3c9fa52af65434845a61c59fc17",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1151",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "36362e99a75d86ea3d973c92ec355584ea1c5a8bf776a112df17859f654f33f3",
+        "sourceDraftSha256": "1c2225c417b88b2f4ac6d655d0057767a76ad1fe9ed09a48fc7f42348ecdbd8d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6baef99673b62d75c82992cf637c63123ec51feae2c9f3d83e480113a647c26f"
+      },
+      "contentSha256": "6baef99673b62d75c82992cf637c63123ec51feae2c9f3d83e480113a647c26f"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1153",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "常用单位换算与数量关系",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-3d63de351a9172ca",
+      "assessmentGroup": "assessment-3d63de351a9172ca",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "凯教练带了32升水到足球场，平均装进8个保温桶。每个桶装多少毫升水？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4000",
+          "d": "1"
+        },
+        "unit": "毫升"
+      },
+      "intent": "平均分容量后换算成毫升。",
+      "hints": [
+        "1升＝1000毫升。"
+      ],
+      "steps": [
+        "每个桶装32÷8＝4（升）。",
+        "4升＝4×1000＝4000（毫升）。"
+      ],
+      "commonMistakes": [
+        "把4升答成4毫升。",
+        "用32乘8。"
+      ],
+      "prerequisites": [
+        "容量单位换算",
+        "平均分"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1153",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "a8dd5d4aec323bff034c05021408f7207858c434123fe5af9eff486fb9e51111",
+        "recordSha256": "273d6ce685737dacbb27f180604717861000fa087d554f9f304945e6c78ab114",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1153",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2d69208375ef123695d9d6e078ad139d708b9f3b533fcf2e0398390830465854",
+        "sourceDraftSha256": "2d69208375ef123695d9d6e078ad139d708b9f3b533fcf2e0398390830465854",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "211293ac8ba609f48895f39358103d548f1acef9fbef08549ceaad16d3f7d016"
+      },
+      "contentSha256": "211293ac8ba609f48895f39358103d548f1acef9fbef08549ceaad16d3f7d016"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1155",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "常用单位换算与数量关系",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-15d18a1d2cf3b69d",
+      "assessmentGroup": "assessment-15d18a1d2cf3b69d",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小丹家到图书馆的路程是14.2千米。公交车带他走了11.15千米，剩下的路程要步行。他还要步行多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "3050",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "先求剩余路程，再换算为米。",
+      "hints": [
+        "总路程减去乘公交车的路程，就是步行路程。"
+      ],
+      "steps": [
+        "还需步行14.20－11.15＝3.05（千米）。",
+        "3.05千米＝3.05×1000＝3050（米）。"
+      ],
+      "commonMistakes": [
+        "把两段路程相加。",
+        "把千米换成米时除以1000。"
+      ],
+      "prerequisites": [
+        "小数减法",
+        "长度单位换算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1155",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ceabf6db2dd654aa2bc276c86570d1993ac35645756cea542eddbe5ddb760fd9",
+        "recordSha256": "7921faa71b08eeb18713fa438930c26ca84f95d96d09d5c094cdfaf1f4a7a8b0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1155",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "88b59d1c9b116594a87c1515bf165a2efbe397425024650b4b8cc2c2a986700f",
+        "sourceDraftSha256": "88b59d1c9b116594a87c1515bf165a2efbe397425024650b4b8cc2c2a986700f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "7510287b106dc4e1837b3275feb066e7c28d56cfaf2a99ca652de57e9a0363d7"
+      },
+      "contentSha256": "7510287b106dc4e1837b3275feb066e7c28d56cfaf2a99ca652de57e9a0363d7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1157",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "常用单位换算与数量关系",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-098cdfa2ad736e2c",
+      "assessmentGroup": "assessment-098cdfa2ad736e2c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一位木工有一块长5.28米的木板，从一端截去9厘米。剩下的木板长多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "519",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "统一长度单位后求剩余长度。",
+      "hints": [
+        "先把5.28米换成厘米。"
+      ],
+      "steps": [
+        "5.28米＝528厘米。",
+        "剩下528－9＝519（厘米）。"
+      ],
+      "commonMistakes": [
+        "直接用5.28减9，单位没有统一。"
+      ],
+      "prerequisites": [
+        "长度单位换算",
+        "减法"
+      ],
+      "adaptation": [
+        "按小学长度问题忽略锯缝损耗，保留原题截去9厘米的理想化条件。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1157",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "9e22db1a1ad7127ab711155660752bfa660ca34b291716b6086f153eaf5df77a",
+        "recordSha256": "3539dcdd153bb4e753b7eac40d4b19663d4e292e2966e536b37138ebebfc9172",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1157",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9b9e1eb0f57af4589a5aaddcf14341123b25d8fc6d983b22d8b9974d77ec6790",
+        "sourceDraftSha256": "9b9e1eb0f57af4589a5aaddcf14341123b25d8fc6d983b22d8b9974d77ec6790",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c2e35d0ebf814ed409996f7a6e04f18c4809041cebe124874114835d3ee0e829"
+      },
+      "contentSha256": "c2e35d0ebf814ed409996f7a6e04f18c4809041cebe124874114835d3ee0e829"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1159",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "常用单位换算与数量关系",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-1ca2d70a5d7b3d24",
+      "assessmentGroup": "assessment-1ca2d70a5d7b3d24",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小诺为全家远足准备了12千克混合果仁，远足时全家吃掉8600克。还剩多少克混合果仁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "3400",
+          "d": "1"
+        },
+        "unit": "克"
+      },
+      "intent": "换算为同一质量单位后求剩余量。",
+      "hints": [
+        "1千克＝1000克。"
+      ],
+      "steps": [
+        "12千克＝12000克。",
+        "还剩12000－8600＝3400（克）。"
+      ],
+      "commonMistakes": [
+        "直接计算12－8600。"
+      ],
+      "prerequisites": [
+        "质量单位换算",
+        "减法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1159",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "8840499ba1d131a5a83c2195a3a8dc9b0fc6ef5148f62c11590e196dacefb2d4",
+        "recordSha256": "f362172178f717c2c03229ff6eb7ce03b3acfc2e70c2b4a795af5847d0453004",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1159",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0e9f7c7109c068b642791c158b040c4cb02f992cec012c752fe6fd8e1ae18e6d",
+        "sourceDraftSha256": "0e9f7c7109c068b642791c158b040c4cb02f992cec012c752fe6fd8e1ae18e6d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "1622b2a1c9f9394a54593a93968665298d3e7cfe101e2b89754ee7043ebc106a"
+      },
+      "contentSha256": "1622b2a1c9f9394a54593a93968665298d3e7cfe101e2b89754ee7043ebc106a"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1716",
+      "collection": "foundation",
+      "category": "A08",
+      "subcategory": "货币面值换算",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-4012036f595fd0bf",
+      "assessmentGroup": "assessment-4012036f595fd0bf",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "你有1张10元纸币、1枚5角硬币和1枚5分硬币。一共有多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "211",
+          "d": "20"
+        },
+        "unit": "元"
+      },
+      "intent": "把纸币与不同面值的硬币统一为元后相加。",
+      "hints": [
+        "5角＝0.50元，5分＝0.05元。"
+      ],
+      "steps": [
+        "一共10.00＋0.50＋0.05＝10.55（元）。"
+      ],
+      "commonMistakes": [
+        "把5分写成0.5元。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "元角分换算",
+        "小数加法"
+      ],
+      "adaptation": [
+        "10美元纸币改为10元纸币，25美分和5美分硬币改为5角和5分；重新计算得到10.55元。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1716",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "2117739948bc5e57027d05a3d56a8a2fedd410564d6c9f941f542d9e194653b9",
+        "recordSha256": "174bef98c40b513dd82b229191b428a75f89699e65d9eb430fc9093ed30c48fa",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1716",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9eab90fe5073256ca04746380a4963b6466f352eb3171a99c2c3c8f501d837c8",
+        "sourceDraftSha256": "9eab90fe5073256ca04746380a4963b6466f352eb3171a99c2c3c8f501d837c8",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "fd70e7fd95f7a1b785d614ccd2cb74dcb93dbae949c72c0268d7d866887ffade"
+      },
+      "contentSha256": "fd70e7fd95f7a1b785d614ccd2cb74dcb93dbae949c72c0268d7d866887ffade"
+    }
+  ]
+}

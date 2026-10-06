@@ -6,9 +6,10 @@
 
 | 范围 | 项数 | 逐项记录 |
 | --- | ---: | --- |
-| 原创生活题及可调整模型 | 48 | [questions.json](questions.json) |
+| 固定生活应用题 | 48 | [questions.json](questions.json) |
 | 兼容生成题型 | 48 | [questions.json](questions.json) |
 | 课程新增生成题型 | 29 | [questions.json](questions.json) |
+| 两个指定来源补充的生成题型 | 9 | [来源与去重清单](../../vendor/question-sources/manifest.json) |
 | 课程知识点与学习层次 | 49 × 3 | [questions.json](questions.json) |
 | Matter.js 场景 | 48 | [matter-phet.json](matter-phet.json) |
 | PhET 模拟与内部页面 | 10 模拟、28 页面 | [matter-phet.json](matter-phet.json) |
@@ -19,24 +20,36 @@
 | JSXGraph 主模式及三角形子模式 | 6 主模式、2 子模式 | [local-classrooms.json](local-classrooms.json) |
 | JSXGraph 小挑战 | 36 | [local-classrooms.json](local-classrooms.json) |
 | 几何证明及问法 | 24 演示、48 问法 | [local-classrooms.json](local-classrooms.json) |
-| 航天任务 | 4 路线、62 主阶段、2 回收支线 | [local-classrooms.json](local-classrooms.json) |
-| 航天实验与结构图 | 8 实验、7 系统 | [local-classrooms.json](local-classrooms.json) |
+| 航天任务 | 4 路线、63 主阶段、3 回收支线 | [local-classrooms.json](local-classrooms.json) |
+| 航天实验与结构图 | 9 实验、7 系统 | [local-classrooms.json](local-classrooms.json) |
 | 航天路线中的问答 | 16 个路线实例 | [local-classrooms.json](local-classrooms.json) |
 | 平面七巧板 | 2 轮廓、6 挑战 | [local-classrooms.json](local-classrooms.json) |
 
 ## 验收要求
 
-题目逐项检查题意、至少三个递进提示、分步解题过程和常见错误。参数题的讲解使用当前实际数值；变换参数后，题干、答案和讲解同步。题库原有参数、答案、种子、ID、去重和配方保持兼容，学生版导出不得含解答字段。
+题目逐项检查题意、递进提示、分步解题过程和常见错误。提示在可关闭弹窗中逐次展开。参数题的讲解使用当前实际数值；变换参数后，题干、答案和讲解同步。旧配方的参数、答案、种子、ID与去重保持兼容，学生版导出不得含解答字段。
 
 PhET 内置数理题和分子收集题卡只读取当前原生目标、图形、数值与收集进度；不调用随机出题器或改写科学模型。46 个数理关卡配置全部验收，生成题另用实际原生样本和有限候选池核验；26 种分子与 103 种目标参数的范围是参考结构和容量，未穷举随机组合、位置与操作序列。拔河比赛是开放实验，其胜负结果不作为预设问答题计数。
 
-演示逐项检查观察目标、真实操作、直观解释、生活例子和可展开的原理。Matter.js 每个场景单独设计预测、操作、解释任务，并验证初始暂停、继续、有限步进、专用操作和重置。场景的引导以对应上游代码的真实行为为依据。
+演示逐项检查当前引导问题、真实操作、直观解释、生活例子和可展开的原理。实验引导与提示默认关闭，打开直接展示问题。Matter.js 验证初始暂停、继续、有限步进、专用操作和重置。场景的引导以对应上游代码的真实行为为依据。
 
 CI 使用当前统一入口，旧入口继续跳转；本地与 CI 使用同一浏览器测试。实际注入失败，检查测试命令、兼容入口和汇总脚本返回非零退出码。流水线记录日志时保留测试退出状态。
 
 桌面和小屏截图由 `gpt-6-luna`、`max` 完成视觉评审；应用编码由 `gpt-6.1-sol`、`max` 完成。检查内容包括文字与图形可读性、控件可达性、遮挡、横向溢出和展开讲解后的布局。Chromium 的触控模拟只代表本次浏览器验证。
 
 ## 本次验收状态
+
+2026-10-05：提示改为按需弹窗，实验引导与题目提示合并，预测分页移除；全屏覆盖主体并缩减导航。49个知识点的三层题目全部改为直接题、应用题和逆向或多条件题。动手理解与模型代码、练习名称及常驻说明已移除。
+
+| 检查 | 当前结果与证据 |
+| --- | --- |
+| 全套 Node 单元与集成测试 | 625通过、0失败、4项按环境跳过。[日志](../../output/all-tests-dialog.log) |
+| 分层题目与题库加载 | 49知识点×3层实际页面通过；86种生成模板、48道固定题全部加载，9种补充题型与32份同类复用覆盖全部41份下载定义。[页面报告](../../output/playwright/numbers-life-sg/report.json)、[逐题报告](../../output/playwright/learning-coverage/questions/report.json)、[来源清单](../../vendor/question-sources/manifest.json) |
+| 提示与全屏 | 10个PhET模拟的28页面、9个其他课堂、移动端触控及主体全屏关闭操作通过。[报告](../../output/playwright/help-dialogs/report.json) |
+| 原有演示与操作 | 48个Matter场景，120个本地演示上下文与106个题目通过；分子真实拖拽与收集、布局与离线兼容通过。[演示](matter-phet.json)、[本地课堂](local-classrooms.json)、[分子题](phet-molecule-questions.json)、[布局](../../output/playwright/learning-coverage/demo-layout-browser-report.json) |
+| 整体访问与错误传播 | 80项站点与活动入口通过；注入失败仍返回非零状态，浏览器与临时服务释放。[访问报告](../test-report.json)、[错误传播](../../output/playwright/numbers-life-failure/propagation.json) |
+
+以下保留2026-10-01的历史验收记录；当前结果以上表和对应报告为准。
 
 2026-10-01：上述范围的实现、逐项功能检查与独立视觉复核已完成。原始发现与修复证据保留在各清单及视觉报告中。以下结果来自当前 Windows 工作区，执行的是 CI 使用的命令；未触发远端 GitHub Actions。
 

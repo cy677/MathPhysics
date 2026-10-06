@@ -45,7 +45,10 @@
    const ref=box.reference,label=`第${box.index}框${ref.name}（${ref.formula}）`;
    steps.push(`${label}：每个分子有${countText(ref.counts)}，合计${ref.atomCount}个原子。目标${box.capacity}个，全部需要${countText(ref.counts,box.capacity)}；已收集${box.quantity}个，还差${box.remaining}个。`);
    steps.push(`这一个分子的原子编号：${ref.atoms.map(a=>a.symbol+a.index).join('、')}。连接${ref.bondCount}对原子：${structureText(ref)}。先接中心或主链原子，再按这些相邻关系接上其余原子。编号相同种类的原子可以互换，连接的种类与关系要一致。`);
-   if(ref.bonds.some(b=>b.order>1))steps.push(`高年级看参考分子的键级：${ref.bonds.filter(b=>b.order>1).map(b=>ref.atoms[b.a-1].symbol+b.a+'与'+ref.atoms[b.b-1].symbol+b.b+'之间为'+(b.order===2?'双键':'三键')).join('；')}。这表示同一对原子间的键，不是增加原子数。这里的简化2D拼接只操作原子相邻关系，不能手动编辑单双或三键；原版收集判断比较元素与连接拓扑，不单独判断键级。`);
+   if(ref.bonds.some(b=>b.order>1))steps.push(`高年级看参考结构中的一种键级表示：${ref.bonds.filter(b=>b.order>1).map(b=>ref.atoms[b.a-1].symbol+b.a+'与'+ref.atoms[b.b-1].symbol+b.b+'之间画作'+(b.order===2?'双键':'三键')).join('；')}。这表示同一对原子间的键，不是增加原子数，也不是完整的电子结构描述。这里的简化2D拼接只操作原子相邻关系，不能手动编辑单双或三键；原版收集判断比较元素与连接拓扑，不单独判断键级。`);
+   if(ref.cid===24823)steps.push('臭氧O₃存在共振，真实分子的两个O—O键等效。一单一双只是参考结构的一种表示，不是固定一边单键、一边双键，也不是在两张图之间来回切换。本模拟的3D图也做了简化，不能据此判断两段真实键长不同。');
+   if(ref.cid===948)steps.push('N₂O存在共振，参考图采用一种主要的路易斯结构表示，不能由一张整数键级图完整解释成键；N—N与N—O是不同的键，不能据“共振”就说它们等效。');
+   if(ref.cid===1119)steps.push('SO₂的真实成键涉及电子离域，可用共振结构帮助理解。参考图的整数键级是一种简化表示，不能用一张图完整概括真实成键。');
    steps.push(box.remaining?`按上述数量与相邻关系搭一个${ref.name}，确认名称后放入第${box.index}框；再重复至${box.capacity}/${box.capacity}。从当前进度起要再用${countText(ref.counts,box.remaining)}，不能只把原子堆在一起。`:`这框已满${box.quantity}/${box.capacity}，不用继续投放。清空该框后，所需数量会重新变为${box.capacity}个。`);
   }
   steps.push(`完成检查：${boxes.length}个框分别达到目标份数，共${total}个分子。原版按原子种类与连接结构接收分子，并在所有框满时显示完成；本题说明只读取这个结果。`);

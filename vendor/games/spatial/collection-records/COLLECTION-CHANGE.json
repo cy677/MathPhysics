@@ -1,0 +1,37 @@
+{
+  "completed_at_utc": "2026-10-03T05:52:29.978324+00:00",
+  "root": "C:\\Users\\cheng\\Desktop\\SpatialGames-sources",
+  "current_projects": [
+    "soma",
+    "rush",
+    "2048",
+    "escape-run"
+  ],
+  "current_source_file_count": 284,
+  "source_bytes": 13519722,
+  "soma_unchanged_including_git": true,
+  "soma_total_preserved_files": 123,
+  "recycled_old_sources": [
+    {
+      "Source": "C:\\Users\\cheng\\Desktop\\SpatialGames-sources\\TangramGenerator",
+      "RecycledPath": "C:\\$Recycle.Bin\\S-1-5-21-1579773083-1387226182-843909065-1001\\$R829FW9",
+      "PreDeleteFlags": 642,
+      "PostDeleteHResult": 2555912,
+      "Aborted": false,
+      "verified_file_count_including_git": 57,
+      "all_file_sha256_unchanged": true
+    },
+    {
+      "Source": "C:\\Users\\cheng\\Desktop\\SpatialGames-sources\\sugarizer-reflection",
+      "RecycledPath": "C:\\$Recycle.Bin\\S-1-5-21-1579773083-1387226182-843909065-1001\\$RL0NP15",
+      "PreDeleteFlags": 642,
+      "PostDeleteHResult": 2555912,
+      "Aborted": false,
+      "verified_file_count_including_git": 132,
+      "all_file_sha256_unchanged": true
+    }
+  ],
+  "historical_records": "C:\\Users\\cheng\\Desktop\\SpatialGames-sources\\history\\20261003T055229Z-before-rush-2048-escape-run",
+  "preserved_report_sha256": "37f20a3477b93ebfdbd0b928902a6eeb25f64c994cc76007f7b3c8cd24d6f945",
+  "no_upstream_execution_dependency_install_integration_or_git_push": true
+}

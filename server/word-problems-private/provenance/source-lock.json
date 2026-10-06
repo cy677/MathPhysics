@@ -1,0 +1,42 @@
+{
+  "captured_at": "2026-10-05T07:12:50.976941+00:00",
+  "sources": [
+    {
+      "bank": "asdiv",
+      "repository": "chaochun/nlu-asdiv-dataset",
+      "commit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+      "files": [
+        {
+          "path": "dataset/ASDiv.xml",
+          "sha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929"
+        }
+      ]
+    },
+    {
+      "bank": "svamp",
+      "repository": "arkilpatel/SVAMP",
+      "commit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+      "files": [
+        {
+          "path": "SVAMP.json",
+          "sha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e"
+        }
+      ]
+    },
+    {
+      "bank": "gsm8k",
+      "repository": "openai/grade-school-math",
+      "commit": "3101c7d5072418e28b9008a6636bde82a006892c",
+      "files": [
+        {
+          "path": "grade_school_math/data/train.jsonl",
+          "sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465"
+        },
+        {
+          "path": "grade_school_math/data/test.jsonl",
+          "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14"
+        }
+      ]
+    }
+  ]
+}

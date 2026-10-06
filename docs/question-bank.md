@@ -8,7 +8,7 @@
 
 兼容旧配方的生成器有 **48 种题型、9 类知识点、3 档数值难度**；统一课堂另增29种课程模板，合计77种唯一生成模板。旧48种按类别为：整数与运算8种，数感与规律6种，分数9种，小数5种，百分数与比例3种，测量与时间5种，面积与体积5种，统计与可能性3种，生活应用4种。每批可请求1—500题；某个题型的参数空间较小，无法生成足够的不重复题目时会明确报错。
 
-这里的融合是知识点组织与统一生成接口的融合：参考 MathsMentales 的基础技能分类，补充 MathALÉA 方向的进阶主题。**没有批量导入这两个项目的题目或执行其代码；这 48 个生成器不是对上游完整题库的移植。** 未进行与所有其他分支题目的语义去重。当前批内去重按中文题干、答案类型和单位完成；跨批复习允许出现相同题目。
+新版练习使用 `practiceVersion:2`，加载原77种生成模板、48道固定应用题和9种补充题型，共134个注册入口。补充仅参考 MathsMentales、MathALÉA 的小学题型；41份下载定义全部有加载映射，同类型复用。原始审查文件与许可证保存在 `vendor/question-sources/`，课堂使用本项目独立编写的中文生成器。来源、固定提交、哈希和去重结果见 [清单](../vendor/question-sources/manifest.json)，可运行 `node scripts/audit_practice_sources.mjs`重新核对。新版批内去重同时比较题干、答案和图示，旧配方仍使用原去重算法。
 
 ## 使用
 
@@ -16,7 +16,7 @@
 
 首页只有一个“数与生活”入口，支持年级与搜索筛选。历史开放配置不限制入口，原有探索记录继续保留。练习使用独立存储键，不覆盖其他课堂进度。
 
-在页面选择年级、知识点、学习层次、题型、数量和练习名称后生成练习。练习名称作为复现种子；“生活拓展”保留旧版自由练习设置。每题都有题意、至少3个递进提示、分步解题过程和常见错误；一次点击只新增一步提示。首次独立答对、已经答对、查看答案分别统计，重复提交不会加分。先提示再答对、订正答对、看过答案后答对均不算首次独立答对。首次独立答对后再复习解析，不会抹掉这次成绩。
+在页面选择年级、知识点、基础／巩固／提高、题型和数量。复现种子内部保存，不再显示练习名称。每题的提示与解题过程在可关闭弹窗中，一次点击新增一步提示。基础检查直接概念与计算，巩固使用应用题，提高改变所求关系或增加条件；固定题仅在巩固层加载。旧成绩记录和配方兼容保留。
 
 ## 生成接口
 
@@ -62,7 +62,8 @@ const templates = listTemplates({topic: 'fractions'});
 - `engine.mjs`：统一接口、白名单筛选、批内去重、配方与导出。
 - `session.mjs`：计分与本地记录；键名 `mathphysics.question-bank.v1`，不覆盖 `mathphysics.state.v1`。
 - `app.mjs`：挂载到统一课堂的练习界面；`index.html` 是旧入口重定向。
-- `../primary-math/`：49个知识点、29种新增课程模板、48个原生模型挑战，以及统一页面。
+- `practice-catalog.mjs`、`practice-generators.mjs`：新版完整注册表、分层问法和9种补充题型。
+- `../primary-math/`：49个知识点、29种课程模板、48道固定应用题及统一页面；动手模型代码已删除。
 
 本地记录仅保留当前一组练习及作答，不同步设备，也不上传服务器。生成新练习或导入新配方会替换当前题库练习记录，不影响主站或其他活动数据。配方导出恢复题目，不恢复历史分数。存储禁用或写满时给出提示，仍能练习。
 
@@ -85,7 +86,7 @@ MathsMentales 官方说明与活动索引：
 
 已核对的主题参考入口为乘法表 `6ND6`、分数约分 `6NB5`、分数加法 `5NC7`、找零 `6NF1`、常见图形面积 `6MC1`。这些 ID 标明主题参考范围，不表示同一组生成参数或直接翻译；同类扩展会在 `source.reference.note` 中说明。MathsMentales 网站说明其项目为 Apache-2.0。
 
-MathALÉA 当前开发入口为 https://forge.apps.education.fr/coopmaths/mathalea 。本版只参考进阶主题组织，**未导入其 AGPL 程序、原题文本、图像或判分器**，也不声称当前代码可以执行原始 MathALÉA 题目。
+MathALÉA 当前开发入口为 https://forge.apps.education.fr/coopmaths/mathalea 。已从固定 GitHub 快照保存20份小学题型定义供审查，原文件保留 AGPL-3.0 许可。课堂的中文题目、生成器和判题独立编写，不执行或移植这些上游程序；审查文件、来源映射及哈希见 `vendor/question-sources/manifest.json`。
 
 本次新增的中文生成器、页面、图示、提示与测试均按本仓库 MIT 许可发布。没有引入 Khan 的 NC-SA 旧题内容。将来要直接翻译或移植上游材料，需逐项保存源文件、固定版本、许可证及修改记录，不能只改 `source` 标签后发布。
 
@@ -109,4 +110,4 @@ npm run test:questions:learning:browser
 
 本地与 CI 都运行 `tests/numbers-life-browser.mjs`：检查49知识点×3层次、旧入口跳转、实际作答、计分、导入导出和离线版；Python旧测试入口仅转发该脚本并保留退出码。`test:questions:failure` 实际注入 Node 与真实浏览器断言失败，检查退出码1、浏览器关闭及 HTTP 端口释放；Linux CI另验 `tee` 管道在 `pipefail` 下保留失败状态。
 
-`test:questions:learning:browser` 对77模板、48生活挑战和49知识点逐项操作并保存可读局部截图，报告为 `output/playwright/learning-coverage/questions/report.json`。主功能报告为 `output/playwright/numbers-life-sg/report.json`，失败传播证据为 `output/playwright/numbers-life-failure/propagation.json`。浏览器路径优先尊重 `PLAYWRIGHT_BROWSERS_PATH`；无外传配置时只在本地缓存存在时使用 `.test-deps/browsers`，否则采用 Playwright 默认缓存。可用 `CHROMIUM_EXECUTABLE` 指定已有浏览器。两个 CI 工作流使用明确的 Bash 与失败退出规则，任一断言失败均使任务失败。Chromium 的窄屏与触控模拟不等于真实 iPad/Safari 验收。
+`test:questions:learning:browser` 对86种生成模板、48道固定应用题和49个知识点逐项操作并保存可读局部截图，报告为 `output/playwright/learning-coverage/questions/report.json`。`test:practice`检查新版三层题目与全部134个入口。主功能报告为 `output/playwright/numbers-life-sg/report.json`，失败传播证据为 `output/playwright/numbers-life-failure/propagation.json`。浏览器路径优先尊重 `PLAYWRIGHT_BROWSERS_PATH`；无外传配置时只在本地缓存存在时使用 `.test-deps/browsers`，否则采用 Playwright 默认缓存。可用 `CHROMIUM_EXECUTABLE` 指定已有浏览器。两个 CI 工作流使用明确的 Bash 与失败退出规则，任一断言失败均使任务失败。Chromium 的窄屏与触控模拟不等于真实 iPad/Safari 验收。

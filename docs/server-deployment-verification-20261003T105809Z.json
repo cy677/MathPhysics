@@ -1,0 +1,261 @@
+{
+  "releaseId": "20261003T105809Z-e5764f0",
+  "completedAtUTC": "2026-10-03T11:35:17.670949+00:00",
+  "url": "https://124.70.198.189/mathphysics/",
+  "sourceCommit": "e5764f08a21a389101bc6a4fdbf2952effa1abfe",
+  "sourceIncludesWorkingTreeChanges": true,
+  "archive": "dist/MathPhysics-server-20261003T105809Z-e5764f0.tar.gz",
+  "archiveSHA256": "83a866054e4c74df47ce3ce64d2a68fbb22aa895042bb2d2d5928f665f3662a8",
+  "archiveBytes": 140430499,
+  "verifiedFiles": 2748,
+  "activityCount": 78,
+  "serverRebuildMatchesLocal": true,
+  "publicFullManifestMatchesLocal": true,
+  "upload": {
+    "baseReleaseId": "20261002T071617Z-e5764f0",
+    "changedOrAddedFiles": 524,
+    "independentlyCopiedUnchangedFiles": 2224,
+    "removedSourceFiles": [],
+    "method": "verified-previous-source-copy-plus-delta"
+  },
+  "localTests": {
+    "tests": 577,
+    "pass": 573,
+    "fail": 0,
+    "skipped": 4
+  },
+  "serverTests": {
+    "tests": 577,
+    "pass": 574,
+    "fail": 0,
+    "skipped": 3
+  },
+  "nodeVersion": "v24.14.0",
+  "serverVerification": {
+    "releaseId": "20261003T105809Z-e5764f0",
+    "verifiedFiles": 2748,
+    "activityCount": 78,
+    "entryChecks": 33,
+    "servedResourceHashesMatch": 343,
+    "javascriptModuleMimeChecks": 15,
+    "publicReferenceChecks": 4,
+    "cacheRefreshReturns200": true,
+    "privatePathsHidden": true,
+    "sudokuPWAScopeConfined": true,
+    "meowServiceUnchanged": true,
+    "meowFilesUnchanged": true,
+    "meowHomeUnchanged": true,
+    "meowServiceConfigUnchanged": true,
+    "nginxOtherFilesUnchanged": true,
+    "databaseTables": 12,
+    "dataPreserved": true,
+    "databaseUnchanged": true,
+    "databaseChangedTables": [],
+    "backupIntegrity": "ok",
+    "backup": "/srv/mathphysics/backups/20261003T105809Z-e5764f0",
+    "passed": true,
+    "databaseFinalUnchanged": true,
+    "finalDatabaseChangedTables": []
+  },
+  "activation": {
+    "releaseId": "20261003T105809Z-e5764f0",
+    "current": "/srv/mathphysics/releases/20261003T105809Z-e5764f0",
+    "nginxSnippetUpdated": false,
+    "meowServiceUnchanged": true
+  },
+  "packagingFix": {
+    "script": "scripts/build_server.py",
+    "retainedPinnedSpatialSourceFiles": 284,
+    "previouslyExcludedSpatialFontFilesNowIncluded": 13,
+    "otherVendorFontExclusionsPreserved": true
+  },
+  "browser": {
+    "scope": "Independent Chrome profile on the public HTTPS origin; actual user browser data was not accessed.",
+    "passed": true,
+    "pageErrors": [],
+    "failedResources": [],
+    "checks": [
+      "New 78-activity release is live; old course records, preferences and unrelated storage are intact",
+      "Old solved worksheet restores identical answers and migrates to the new visible completion progress",
+      "Pre-update Minesweeper board and engine restore exactly",
+      "Pre-update Sudoku puzzle, entries, notes and undo history restore exactly",
+      "Pre-update spaceflight record and checkpoint restore; notebook autosave survives reload",
+      "Homepage logic island shows six games and the four new covers",
+      "All four games launch from the host, show the full 126 levels/roads and accept host restart",
+      "Rush can be solved through real controls; old 900 points and advanced unlock remain without duplicate awards",
+      "2048 actual moves restore the exact board, score and replay history",
+      "Native Three.js Soma includes 46 original puzzle targets; rotation and movement restore exact piece poses",
+      "Runner preserves paused random questions, refreshes random seeds for new challenges, completes eight gates and retains best score",
+      "All four new games fit a 390px viewport; levels also fit tablet and desktop",
+      "New games and restart preserve unrelated old course and notebook records",
+      "Three redesigned PhET workbenches expose nine screens; real scientific models follow navigation and boundary notes are visible",
+      "Workbench overview, screen cards and mobile/desktop layouts work",
+      "Four routes play continuously to their final stage; start/middle/end SVG keyframes are distinct and reversible",
+      "Falcon has eight distinct recovery phases; CZ10B has seven distinct net-capture phases",
+      "SVG export downloaded; mobile viewer fits on opening and supports zoom, original size and Escape",
+      "Public SVG gallery contains all 116 downloadable illustrations"
+    ],
+    "preUpdateRelease": "20261002T071617Z-e5764f0",
+    "oldWorksheetAndAnswersRestored": true,
+    "oldMinesweeperBoardAndEngineRestored": true,
+    "oldSudokuCellsNotesAndHistoryRestored": true,
+    "oldCoursePreferencesAndCompletionPreserved": true,
+    "oldSpaceflightRecordAndCheckpointRestored": true,
+    "notebookValidation": {
+      "preUpdateSavedNote": "",
+      "seedLimitation": "The old-version fixture navigated before the 350ms autosave delay, so its saved note was empty.",
+      "saveAndReloadPassed": true
+    },
+    "newGamesDoNotModifyOtherCourseStorage": true,
+    "spatialLevels": {
+      "soma": 52,
+      "rush": 44,
+      "merge": 6,
+      "escape": 24
+    },
+    "legacyRushPoints": 900,
+    "legacyAdvancedTierRetained": true,
+    "phetScreens": [
+      {
+        "id": "vector-addition",
+        "index": 0,
+        "modelMatches": true
+      },
+      {
+        "id": "vector-addition",
+        "index": 1,
+        "modelMatches": true
+      },
+      {
+        "id": "vector-addition",
+        "index": 2,
+        "modelMatches": true
+      },
+      {
+        "id": "vector-addition",
+        "index": 3,
+        "modelMatches": true
+      },
+      {
+        "id": "states-of-matter-basics",
+        "index": 0,
+        "modelMatches": true
+      },
+      {
+        "id": "states-of-matter-basics",
+        "index": 1,
+        "modelMatches": true
+      },
+      {
+        "id": "build-a-molecule",
+        "index": 0,
+        "modelMatches": true
+      },
+      {
+        "id": "build-a-molecule",
+        "index": 1,
+        "modelMatches": true
+      },
+      {
+        "id": "build-a-molecule",
+        "index": 2,
+        "modelMatches": true
+      }
+    ],
+    "continuousSpaceflightRoutes": [
+      {
+        "id": "us-crew",
+        "stages": 19,
+        "durationSeconds": 229,
+        "continuousPlaybackPassed": true,
+        "keyframesReversible": true
+      },
+      {
+        "id": "us-sat",
+        "stages": 10,
+        "durationSeconds": 151,
+        "continuousPlaybackPassed": true,
+        "keyframesReversible": true
+      },
+      {
+        "id": "cn-crew",
+        "stages": 22,
+        "durationSeconds": 255,
+        "continuousPlaybackPassed": true,
+        "keyframesReversible": true
+      },
+      {
+        "id": "cn-sat",
+        "stages": 12,
+        "durationSeconds": 178,
+        "continuousPlaybackPassed": true,
+        "keyframesReversible": true
+      }
+    ],
+    "svgGalleryFiles": 116,
+    "mobileDiagramZoom": {
+      "initial": "50%",
+      "zoomed": "75%",
+      "reset": "100%",
+      "zoomFromOriginal": "125%"
+    },
+    "screenshots": [
+      "C:/Users/cheng/Desktop/MathPhysics/output/playwright/deployment-20261003T105809Z-e5764f0/spatial-soma-390.png",
+      "C:/Users/cheng/Desktop/MathPhysics/output/playwright/deployment-20261003T105809Z-e5764f0/spatial-escape-390.png",
+      "C:/Users/cheng/Desktop/MathPhysics/output/playwright/deployment-20261003T105809Z-e5764f0/spatial-soma-levels-1440.png",
+      "C:/Users/cheng/Desktop/MathPhysics/output/playwright/deployment-20261003T105809Z-e5764f0/phet-vector-workbench-1440.png",
+      "C:/Users/cheng/Desktop/MathPhysics/output/playwright/deployment-20261003T105809Z-e5764f0/phet-molecule-workbench-390.png",
+      "C:/Users/cheng/Desktop/MathPhysics/output/playwright/deployment-20261003T105809Z-e5764f0/spaceflight-net-recovery-1440.png",
+      "C:/Users/cheng/Desktop/MathPhysics/output/playwright/deployment-20261003T105809Z-e5764f0/spaceflight-enlarged-390.png"
+    ],
+    "serviceWorkerScopes": [
+      "https://124.70.198.189/mathphysics/lessons/sudoku/"
+    ],
+    "viewports": [
+      390,
+      820,
+      1440
+    ],
+    "cleanup": {
+      "browserClosed": true,
+      "remainingProcesses": [],
+      "remainingListeningPorts": [],
+      "originalProcessCount": 10
+    },
+    "harnessCorrections": [
+      "PhET uses native SVG as well as canvas; the real selected screen and display size were checked.",
+      "The latest mobile diagram viewer starts at a fitted 50% zoom; increment, original size and Escape were verified in a continuation."
+    ]
+  },
+  "dataPreserved": true,
+  "databaseFinalUnchanged": true,
+  "databaseTables": 12,
+  "meowServiceUnchanged": true,
+  "finalServerState": {
+    "releaseId": "20261003T105809Z-e5764f0",
+    "current": "/srv/mathphysics/releases/20261003T105809Z-e5764f0",
+    "releaseDirectoriesRetained": [
+      "20260930T061500Z",
+      "20261001T005739Z-965c72c",
+      "20261001T113119Z-965c72c",
+      "20261002T071617Z-e5764f0",
+      "20261003T105809Z-e5764f0"
+    ],
+    "backup": "/srv/mathphysics/backups/20261003T105809Z-e5764f0",
+    "backupDirectoryMode": "0700",
+    "meowService": {
+      "MainPID": "3283709",
+      "ExecMainStartTimestamp": "Wed 2026-09-30 20:04:20 CST",
+      "ActiveState": "active",
+      "FragmentPath": "/etc/systemd/system/meow-pet.service",
+      "ActiveEnterTimestamp": "Wed 2026-09-30 20:04:20 CST"
+    },
+    "incomingFiles": [],
+    "userDatabasePreserved": true,
+    "databaseFinalUnchanged": true
+  },
+  "serverEvidenceArchive": "output/deployment/20261003T105809Z-e5764f0/server-evidence.tar.gz",
+  "serverEvidenceSHA256": "4bed5c5922c0379a21f5ceef89228cb9fff8ad15f9b7b6d0e77c31b3ef7f532e",
+  "evidenceContainsUserDatabase": false,
+  "passed": true
+}

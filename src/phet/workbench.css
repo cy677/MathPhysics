@@ -1,0 +1,85 @@
+/* Science Island's shared presentation system, scoped to these three workbenches. */
+.mp-workbench-page { --wb-top:48px; --wb-bottom:0px; --wb-rail:0px; --wb-guide:0px; }
+.mp-workbench-page.mp-phet-layout { --wb-rail:0px; }
+.mp-workbench-page #mp-workbench-stage,
+.mp-workbench-page.mp-phet-layout #mp-science-viewport { position:fixed; inset:var(--wb-top) var(--wb-rail) calc(var(--wb-bottom) + var(--wb-guide)) 0; overflow:hidden; }
+.mp-workbench-page #mp-workbench-stage > #sim { position:absolute!important; inset:0!important; max-width:100%; max-height:100%; }
+.wb-canvas { position:relative; width:100%; height:100%; }
+.wb-canvas > #sim { position:absolute!important; inset:0!important; max-width:100%; max-height:100%; }
+.wb-viewtools { display:none; }
+#mp-workbench { position:fixed; inset:0 var(--wb-rail) var(--wb-guide) 0; z-index:5; pointer-events:none; color:var(--mp-ink); font:14px/1.6 var(--mp-font); }
+#mp-workbench, #mp-workbench * { box-sizing:border-box; }
+#mp-workbench [hidden] { display:none!important; }
+#mp-workbench button { font:inherit; cursor:pointer; touch-action:manipulation; }
+#mp-workbench button:focus-visible { outline:3px solid var(--mp-focus); outline-offset:3px; }
+.wb-bar { height:var(--wb-bar,var(--wb-top)); display:flex; align-items:center; gap:14px; padding:8px 18px; background:var(--mp-surface); border-bottom:1px solid var(--mp-line); pointer-events:auto; }
+.wb-overview { flex:none; min-height:42px; padding:7px 12px; color:var(--mp-primary); background:var(--mp-leaf); border:1px solid transparent; border-radius:10px; font-weight:650!important; }
+.wb-tabs { display:flex; gap:5px; min-width:0; overflow-x:auto; padding:3px; scrollbar-width:thin; }
+.wb-tabs button { display:flex; gap:8px; align-items:center; flex:none; min-height:42px; padding:8px 13px; border:1px solid transparent; background:transparent; color:var(--mp-muted); border-radius:10px; }
+.wb-tabs button span { font-size:11px; opacity:.8; font-variant-numeric:tabular-nums; }
+.wb-tabs button[aria-pressed=true] { color:var(--mp-surface); background:var(--mp-primary); }
+.wb-tabs button:hover:not([aria-pressed=true]) { background:var(--mp-leaf); color:var(--mp-primary); }
+.wb-home { position:absolute; inset:var(--wb-top) 0 0; overflow:auto; overscroll-behavior:contain; padding:clamp(20px,3vw,42px); background:var(--mp-page); pointer-events:auto; }
+.wb-intro { display:grid; grid-template-columns:minmax(0,1fr) 29%; align-items:center; gap:20px; max-width:1050px; margin:0 auto 26px; }
+.wb-kicker { font-size:12px; letter-spacing:.1em; color:var(--mp-primary); font-weight:650; margin:0 0 12px; }
+.wb-copy h1 { max-width:650px; font-size:clamp(24px,2.65vw,36px); line-height:1.45; letter-spacing:-.03em; margin:0 0 12px; font-weight:780; }
+.wb-description { max-width:540px; margin:0; font-size:15px; line-height:1.85; color:var(--mp-muted); }
+.wb-note { margin:18px 0 0; padding-left:12px; border-left:3px solid var(--mp-gold); color:var(--mp-warm-ink); font-size:12px; }
+.wb-art { display:block; width:100%; max-height:190px; object-fit:contain; border-radius:18px; }
+.wb-section-heading { display:flex; justify-content:space-between; gap:12px; align-items:baseline; max-width:1050px; margin:0 auto 12px; }
+.wb-section-heading h2 { font-size:16px; margin:0; font-weight:650; }
+.wb-section-heading > span { color:var(--mp-muted); font-size:12px; }
+.wb-cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; max-width:1050px; margin:auto; }
+.wb-card { text-align:left; display:flex; flex-direction:column; padding:18px 20px; border:1px solid var(--mp-line); border-radius:16px; background:var(--mp-surface); color:var(--mp-ink); transition:border-color .16s,box-shadow .16s,transform .16s; }
+.wb-card:hover { border-color:#8ca794; box-shadow:var(--mp-shadow); transform:translateY(-2px); }
+.wb-card-top { display:flex; gap:10px; align-items:center; margin-bottom:12px; }
+.wb-number { font-size:12px; font-weight:650; color:var(--mp-primary); font-variant-numeric:tabular-nums; }
+.wb-level { font-size:11px; padding:2px 8px; background:var(--mp-leaf); color:var(--mp-primary); border-radius:6px; }
+.wb-card strong { font-size:17px; font-weight:700; line-height:1.5; margin-bottom:6px; }
+.wb-card-description { color:var(--mp-muted); font-size:13px; line-height:1.7; flex:1; }
+.wb-card-action { margin-top:15px; padding-top:11px; border-top:1px solid var(--mp-line); color:var(--mp-primary); font-size:12px; font-weight:650; }
+.wb-home-footer { margin:23px 0 0; text-align:center; color:var(--mp-muted); font-size:12px; }
+.wb-hint { height:var(--wb-bottom); position:absolute; bottom:0; left:0; right:0; display:flex; gap:12px; align-items:center; padding:8px 18px; border-top:1px solid var(--mp-line); background:var(--mp-surface); }
+.wb-hint strong { flex:none; font-size:11px; color:var(--mp-primary); padding:3px 8px; background:var(--mp-leaf); border-radius:6px; }
+.wb-hint p { margin:0; font-size:12px; color:var(--mp-muted); line-height:1.55; }
+[data-workbench="build-a-molecule"] .wb-cards { grid-template-columns:repeat(3,minmax(0,1fr)); }
+[data-workbench="vector-addition"] .wb-cards { grid-template-columns:repeat(4,minmax(0,1fr)); }
+[data-workbench="states-of-matter-basics"] .wb-art,[data-workbench="build-a-molecule"] .wb-art { background:var(--mp-leaf); }
+@media(max-height:640px) and (min-width:701px) {
+  .wb-home { padding:20px 26px; }.wb-intro { margin-bottom:20px; }.wb-art { max-height:140px; }.wb-copy h1 { font-size:27px; }.wb-note { margin-top:10px; }
+  .wb-card { padding:13px 17px; }.wb-card-top { margin-bottom:7px; }.wb-card-action { margin-top:10px; padding-top:7px; }.wb-home-footer { margin-top:14px; }
+}
+@media(max-width:700px) {
+  .mp-workbench-page { --wb-top:48px; --wb-bottom:0px; }
+  .mp-workbench-page[data-workbench-active="true"] { --wb-top:108px; --wb-bar:60px; }
+  #mp-workbench[data-home="false"] .wb-viewtools { display:flex; align-items:center; gap:6px; height:48px; padding:4px 8px; background:var(--mp-surface); border-bottom:1px solid var(--mp-line); pointer-events:auto; }
+  .wb-viewtools button { min-height:38px; padding:5px 10px; font-size:12px!important; color:var(--mp-primary); background:var(--mp-surface); border:1px solid var(--mp-line); border-radius:8px; }
+  .wb-viewtools button[aria-pressed="true"] { background:var(--mp-leaf); border-color:#8ea38a; }
+  .wb-viewtools [data-pan] { margin-left:auto; }
+  .mp-workbench-page.wb-magnified #mp-workbench-stage,.mp-workbench-page.wb-magnified #mp-science-viewport { overflow:auto; overscroll-behavior:contain; }
+  .mp-workbench-page.wb-magnified .wb-canvas { min-width:760px; min-height:520px; }
+  .mp-workbench-page.mp-phet-layout { --wb-rail:0px; --wb-guide:0px; }
+  .wb-bar { gap:5px; padding:6px 8px; }.wb-tabs { gap:2px; }.wb-tabs button { padding:8px 11px; font-size:12px!important; }.wb-tabs button span { display:none; }.wb-overview { padding:7px 10px; font-size:12px!important; }
+  .wb-home { padding:22px 18px; }.wb-intro { grid-template-columns:1fr; gap:14px; margin-bottom:22px; }.wb-copy h1 { font-size:27px; text-wrap:balance; }.wb-description { font-size:14px; }.wb-art { display:none; }.wb-kicker { margin-bottom:10px; }.wb-note { margin-top:14px; }
+  .wb-cards,[data-workbench="build-a-molecule"] .wb-cards,[data-workbench="vector-addition"] .wb-cards { grid-template-columns:1fr; gap:10px; }.wb-card { padding:16px 18px; }.wb-card-top { margin-bottom:8px; }.wb-card-action { margin-top:10px; padding-top:8px; }
+  .wb-section-heading > span { font-size:11px; }.wb-hint { gap:8px; padding:8px 10px; }.wb-hint p { font-size:11px; }
+}
+@media(min-width:560px) and (max-width:700px) {
+  .wb-home { padding:16px 20px; }
+  .wb-intro { margin-bottom:16px; }
+  .wb-kicker { margin-bottom:8px; }
+  .wb-copy h1 { font-size:26px; line-height:1.4; margin-bottom:8px; }
+  .wb-description { line-height:1.7; }
+  .wb-note { margin-top:10px; }
+  .wb-cards,[data-workbench="build-a-molecule"] .wb-cards,[data-workbench="vector-addition"] .wb-cards { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .wb-card { padding:13px 16px; }
+  .wb-card-top { margin-bottom:6px; }
+  .wb-card-action { margin-top:9px; padding-top:7px; }
+  .wb-home-footer { margin-top:14px; }
+}
+@media(prefers-reduced-motion:reduce) { .wb-card { transition:none; }.wb-card:hover { transform:none; } }
+.mp-workbench-page.mp-compact { --wb-top:36px; }
+.mp-workbench-page.mp-compact .wb-bar { height:36px; padding:2px 8px; }
+.mp-workbench-page.mp-compact .wb-bar button { min-height:28px; padding:2px 8px; font-size:12px; }
+.mp-workbench-page.mp-compact[data-workbench-active="true"] { --wb-top:36px; }
+@media(max-width:700px){.mp-workbench-page.mp-compact[data-workbench-active="true"] { --wb-top:84px; --wb-bar:36px; }}

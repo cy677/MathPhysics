@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
-const sources=['lessons/primary-math/bank.mjs','lessons/primary-math/bank-guides.mjs','lessons/primary-math/curriculum.mjs','lessons/primary-math/curriculum-generators.mjs','lessons/primary-math/unit-guides.mjs','lessons/primary-math/app.mjs','lessons/primary-math/index.html','lessons/primary-math/style.css','lessons/primary-math/practice.css','lessons/primary-math/models.mjs','lessons/question-bank/generators.mjs','lessons/question-bank/teaching.mjs','lessons/question-bank/engine.mjs','lessons/question-bank/app.mjs'];
+const sources=['lessons/primary-math/bank.mjs','lessons/primary-math/bank-guides.mjs','lessons/primary-math/curriculum.mjs','lessons/primary-math/curriculum-generators.mjs','lessons/primary-math/unit-guides.mjs','lessons/primary-math/app.mjs','lessons/primary-math/index.html','lessons/primary-math/style.css','lessons/primary-math/practice.css','lessons/question-bank/practice-generators.mjs','lessons/question-bank/practice-catalog.mjs','lessons/question-bank/generators.mjs','lessons/question-bank/teaching.mjs','lessons/question-bank/engine.mjs','lessons/question-bank/app.mjs'];
 export function questionSourceHashes(){return Object.fromEntries(sources.map(file=>[file,createHash('sha256').update(fs.readFileSync(new URL('../'+file,import.meta.url))).digest('hex')]));}
 export function attachQuestionBrowserEvidence(manifest,browser){
  const current=JSON.stringify(manifest.sourceHashes)===JSON.stringify(browser.sourceHashes);

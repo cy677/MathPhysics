@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "inputRepresentatives": 1398,
+  "draftCount": 1398,
+  "counts": {
+    "representatives": 1398,
+    "available": 1391,
+    "studentPractice": 1391,
+    "contentReviewed": 1391,
+    "reservedAssessment": 0,
+    "humanApproved": 0,
+    "quarantined": 7,
+    "pending": 0,
+    "byCollection": {
+      "foundation": {
+        "representatives": 617,
+        "available": 617,
+        "contentReviewed": 617,
+        "studentPractice": 617,
+        "reservedAssessment": 0,
+        "quarantined": 0,
+        "pending": 0
+      },
+      "gsm8k": {
+        "representatives": 781,
+        "available": 774,
+        "contentReviewed": 774,
+        "studentPractice": 774,
+        "reservedAssessment": 0,
+        "quarantined": 7,
+        "pending": 0
+      }
+    }
+  },
+  "answerTypes": {
+    "number": 1320,
+    "choice": 16,
+    "time": 9,
+    "ratio": 11,
+    "tuple": 35
+  },
+  "categories": [
+    {
+      "key": "foundation-A01",
+      "reviewed": 40,
+      "practice": 40,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A02",
+      "reviewed": 33,
+      "practice": 33,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A03",
+      "reviewed": 25,
+      "practice": 25,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A04",
+      "reviewed": 20,
+      "practice": 20,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A05",
+      "reviewed": 21,
+      "practice": 21,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A06",
+      "reviewed": 36,
+      "practice": 36,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A07",
+      "reviewed": 75,
+      "practice": 75,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A08",
+      "reviewed": 16,
+      "practice": 16,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A09",
+      "reviewed": 12,
+      "practice": 12,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A10",
+      "reviewed": 18,
+      "practice": 18,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A11",
+      "reviewed": 36,
+      "practice": 36,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A12",
+      "reviewed": 4,
+      "practice": 4,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A13",
+      "reviewed": 19,
+      "practice": 19,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A14",
+      "reviewed": 24,
+      "practice": 24,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A15",
+      "reviewed": 23,
+      "practice": 23,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-A16",
+      "reviewed": 22,
+      "practice": 22,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-V00",
+      "reviewed": 44,
+      "practice": 44,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-V01",
+      "reviewed": 39,
+      "practice": 39,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-V02",
+      "reviewed": 48,
+      "practice": 48,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-V03",
+      "reviewed": 15,
+      "practice": 15,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-V05",
+      "reviewed": 28,
+      "practice": 28,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "foundation-V07",
+      "reviewed": 19,
+      "practice": 19,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "gsm8k-G01",
+      "reviewed": 61,
+      "practice": 61,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "gsm8k-G02",
+      "reviewed": 119,
+      "practice": 119,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "gsm8k-G03",
+      "reviewed": 80,
+      "practice": 80,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "gsm8k-G04",
+      "reviewed": 126,
+      "practice": 126,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "gsm8k-G05",
+      "reviewed": 74,
+      "practice": 74,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "gsm8k-G06",
+      "reviewed": 32,
+      "practice": 32,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "gsm8k-G07",
+      "reviewed": 131,
+      "practice": 131,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "gsm8k-G08",
+      "reviewed": 20,
+      "practice": 20,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "gsm8k-G09",
+      "reviewed": 88,
+      "practice": 88,
+      "reservedAssessment": 0
+    },
+    {
+      "key": "gsm8k-G10",
+      "reviewed": 43,
+      "practice": 43,
+      "reservedAssessment": 0
+    }
+  ],
+  "quarantined": [
+    {
+      "id": "gsm8k:train-1777",
+      "reasons": [
+        "最后所需104%超过100%；原题未说明额外加分或超百分制。",
+        "不能将原解94直接当答案；若保持人数与目标须标不可达到，需另行设计题面/typed答案后才可审。",
+        "30人平均至少75%，前29人平均74%，最后一人需30×75−29×74=2250−2146=104%。原解将这一步错误算成94。题面没有额外加分或允许超过100%的说明，普通百分制无法达到目标；若不改目标或人数，不能提供可达标分数，因此隔离。"
+      ]
+    },
+    {
+      "id": "gsm8k:train-4060",
+      "reasons": [
+        "原所求实际训练时长，上限不能替换为恰好；缺每天实际训练时间，答案不唯一，当前隔离合理。",
+        "原题只给第1周每日训练上限2小时、第2周上限3小时，没有说明每天都达到上限。两周实际总时长可小于35小时，例如每天1小时则14小时；35只是最大可能总量。所求是实际训练总时长，不能擅改上限为每天恰好训练时长，故无法唯一确定。"
+      ]
+    },
+    {
+      "id": "gsm8k:train-4474",
+      "reasons": [
+        "TD共同3本是否包含三者共同1本未清楚说明。",
+        "TB和DB交集未给出；即使明确TD交集仍不能推出唯一并集。",
+        "原题没有说明三组读书清单的全部交集；两人共同3本是否包含三人共同1本也不明确。原解在已经去重两人共同书后又减2，可能重复扣除，47不能唯一推出。隔离以等待重新指定全部交集。"
+      ]
+    },
+    {
+      "id": "gsm8k:train-5472",
+      "reasons": [
+        "题干未给哈妮时长或两人同步，不能因速率比较假定都10分钟；原110依未给假设，当前隔离合理。",
+        "戴安娜40次、每分钟4次可推出她训练10分钟；哈妮每分钟多3次，只能推出其速率7次/分钟，题干没有给她持续多久，也未说两人同时开始和结束。若哈妮练5分钟，两人合计75次；若练10分钟则110次。原解直接假设相同10分钟，缺少依据，无法唯一确定总次数。"
+      ]
+    },
+    {
+      "id": "gsm8k:train-5980",
+      "reasons": [
+        "全校平均应按人数加权，人数及学校范围未给，至少两组合法权重得不同结果；源93不能唯一确认，当前隔离合理。",
+        "原题给6、7、8年级平均分93、95、91，但未给各年级人数，也未说明人数相同或学校仅含这三个年级。全校平均应按各年级人数加权，例如三年级人数相等平均93，人数分别为1、2、1倍则平均93.5。不能仅平均三个年级均分，原答案93缺少条件，无法唯一确定。"
+      ]
+    },
+    {
+      "id": "gsm8k:train-6304",
+      "reasons": [
+        "至少三分之一不等于恰好三分之一；B=21时红38、B=22时红37均满足。红色确切数量不唯一，不能确认源答案38；当前无教学正文的隔离合理。",
+        "原题只说深蓝色弹珠至少占63颗的三分之一，未给出确切数量。设深蓝色数量B，B可为21至59的任一整数，绿色4颗，则红色为59－B，可为0至38颗；无法唯一确定红色数量。原解擅将至少改为恰好，未提供足够题干依据。"
+      ]
+    },
+    {
+      "id": "gsm8k:train-6539",
+      "reasons": [
+        "桥位置、各段端点与立柱相位均未明确；长度除间距不能直接确定柱数量。源解286需要另加边界约定，当前隔离合理，不能确认唯一数值答案。",
+        "原题仅给900英尺道路、42英尺桥、每6英尺一根柱及道路两侧，未说明桥位、分段起止与端点是否立柱。858÷6＝143是长度所含间隔数，不必等于柱数；桥将围栏分为两段，若每段起止都立柱且长度均为6的倍数，每侧会有143＋2＝145根，与原解143根不同。缺少布柱边界和间距相位条件，不能唯一确定总柱数，不能仅沿用286。"
+      ]
+    }
+  ],
+  "limitations": [
+    "All 1398 representatives carry an independent assistant content review or explicit quarantine; no human approval is claimed.",
+    "All 1391 reviewed questions are public for practice and can reuse existing mathematical targets for assessment; no fixed practice/assessment partition is imposed. Complete source drafts and review records remain private provenance.",
+    "SVAMP source MIT and its underlying ASDiv lineage remain distinct; lineage is unknown where not verified; foundation local noncommercial teaching boundary is preserved.",
+    "Practice and demonstration award zero. Formal assessment reuses existing canonical mathematical objectives with their original counts, tiers and best-result caps; source and family are provenance metadata and do not impose sampling or reward gates."
+  ]
+}

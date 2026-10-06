@@ -1,0 +1,22 @@
+[Unit]
+Description=MathPhysics learning and sync service
+After=network.target
+
+[Service]
+Type=simple
+User=mathphysics
+Group=mathphysics
+WorkingDirectory=/srv/mathphysics/current
+ExecStart=/srv/mathphysics/tools/node /srv/mathphysics/current/server/cli.mjs serve --root /srv/mathphysics/current --db /srv/mathphysics/runtime/mathphysics.sqlite3 --host 127.0.0.1 --port 8317 --production --public-origin https://124.70.198.189
+Restart=on-failure
+RestartSec=2
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/srv/mathphysics/runtime
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,2668 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "gsm8k-G06",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0193",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-18177bf591573ec8",
+      "assessmentGroup": "assessment-18177bf591573ec8",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一家电子产品店今天卖100部手机，平均每部1000元；20台平板电脑，平均每台900元；80台电视盒，平均每台200元。全部售出产品平均每件售价是多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "670",
+          "d": "1"
+        },
+        "unit": "元/件"
+      },
+      "intent": "按产品数量加权平均售价",
+      "hints": [
+        "不能把三类平均售价直接除以3。"
+      ],
+      "steps": [
+        "销售总额为100×1000＋20×900＋80×200＝134000元。",
+        "售出总件数100＋20＋80＝200件。",
+        "每件平均售价134000÷200＝670元。"
+      ],
+      "commonMistakes": [
+        "用（1000＋900＋200）÷3忽略三类销量差别。"
+      ],
+      "prerequisites": [
+        "单位价格",
+        "加权平均"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "去掉品牌与国外门店名，美元改为人民币元；明确cost为售出售价，不是采购成本。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0193",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "de27808f1dc8ac56a7443288b805f1eec01d59d300ad72c1f8120494378d93d7",
+        "recordSha256": "fbc7ea90f92ce10c537e1c5c0605aafef00293994a7ac98e3711f3c4ec05f51c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0193",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a1ac11c19db2517bb17b30481c4a502b8b50f1919e84618838588261a090d235",
+        "sourceDraftSha256": "a1ac11c19db2517bb17b30481c4a502b8b50f1919e84618838588261a090d235",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "fa78575a882d68a73b72e884556db716e294b6a4d7490f18128c41ccc6f5a8e0"
+      },
+      "contentSha256": "fa78575a882d68a73b72e884556db716e294b6a4d7490f18128c41ccc6f5a8e0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0202",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-1102e3a8033029fb",
+      "assessmentGroup": "assessment-1102e3a8033029fb",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小阿前2周每天吃1个苹果；接着3周吃的苹果总数与前2周总数相同；最后2周每天吃3个苹果。7周平均每周吃多少个苹果？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "10",
+          "d": "1"
+        },
+        "unit": "个/周"
+      },
+      "intent": "按各阶段总量求全期平均",
+      "hints": [
+        "中间3周给的是阶段合计。"
+      ],
+      "steps": [
+        "前2周吃2×7×1＝14个，中间3周也共14个。",
+        "最后2周吃2×7×3＝42个。",
+        "7周共14＋14＋42＝70个，平均每周70÷7＝10个。"
+      ],
+      "commonMistakes": [
+        "把中间3周算成每周14个。"
+      ],
+      "prerequisites": [
+        "周天换算",
+        "阶段合计",
+        "平均数"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "明确中间3周总数14，不是每周14。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0202",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "ad80f2c69788929d8967394b27b3c9071ec173d452e49af4e795b2f0db197b3f",
+        "recordSha256": "5c1cb6cc0a790dc7bb5156b17013cc1f42dc04ade4fab03af2ca46f5f48374d7",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0202",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "fabdfe8831cb44384e686d378de178ac8cb79a89e37d10d99ae19525b913feb8",
+        "sourceDraftSha256": "fabdfe8831cb44384e686d378de178ac8cb79a89e37d10d99ae19525b913feb8",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9d33562c50e44efcab7b1d96d8f5b0d30dc142aa02bf53a31c69575dfa92021e"
+      },
+      "contentSha256": "9d33562c50e44efcab7b1d96d8f5b0d30dc142aa02bf53a31c69575dfa92021e"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0269",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-1d2c84913fac21ad",
+      "assessmentGroup": "assessment-1d2c84913fac21ad",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小卓买了3束康乃馨，第一束9朵，第二束14朵，第三束13朵。平均每束有多少朵？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "12",
+          "d": "1"
+        },
+        "unit": "朵/束"
+      },
+      "intent": "求三组数量的算术平均",
+      "hints": [
+        "先求全部花朵数，再除以3束。"
+      ],
+      "steps": [
+        "一共9＋14＋13＝36朵。",
+        "每束平均36÷3＝12朵。"
+      ],
+      "commonMistakes": [
+        "只取最大与最小数量求平均。"
+      ],
+      "prerequisites": [
+        "算术平均"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0269",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "ff546af99ea5c6d5da8461f698823a0692d78d43ebcd17976aa747a7ea88c68c",
+        "recordSha256": "dddd5fdd045c7a0477588efe5f03788aaae43a8c165b8557b551c92527d8baf5",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0269",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7a940407ac1736c3b6a5d9eb400654b832031711c946405accff74daf83bb9be",
+        "sourceDraftSha256": "7a940407ac1736c3b6a5d9eb400654b832031711c946405accff74daf83bb9be",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "00a5fc0703a3fa40abf266774d0dc7e7188869dd5185352d7907b20d7f11b1e1"
+      },
+      "contentSha256": "00a5fc0703a3fa40abf266774d0dc7e7188869dd5185352d7907b20d7f11b1e1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-0373",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-849770da717a29d1",
+      "assessmentGroup": "assessment-849770da717a29d1",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小腾跑10千米比赛，前半程用20分钟，后半程用30分钟。全程平均每千米用多少分钟？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "分钟/千米"
+      },
+      "intent": "由总时间与总路程求平均配速",
+      "hints": [
+        "平均配速是总时间除以总千米数。"
+      ],
+      "steps": [
+        "全程用20＋30＝50分钟。",
+        "平均配速50÷10＝5分钟/千米。"
+      ],
+      "commonMistakes": [
+        "用20与30平均后直接称作每千米时间。"
+      ],
+      "prerequisites": [
+        "平均配速",
+        "时间合计"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "将10K明译为10千米。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-0373",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "9fcfca5a2234980e9b3672986df34d4f64e7eb1bf5636337af02e0e5e90388ea",
+        "recordSha256": "021dad4290c0fd7cfb4f917ec33c6a8186c8dcca03bba5ed3c8827a4502e9f02",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-0373",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "fda2fd2fb0d3a31996fba4185d42a788c37cceab4eed3182f78e084ce8d53235",
+        "sourceDraftSha256": "fda2fd2fb0d3a31996fba4185d42a788c37cceab4eed3182f78e084ce8d53235",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "85c1a87fa505a096c41caee6597f763070b79f6790155392c1e45eae4a0d9ec8"
+      },
+      "contentSha256": "85c1a87fa505a096c41caee6597f763070b79f6790155392c1e45eae4a0d9ec8"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1190",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-4bba27ebd65df10e",
+      "assessmentGroup": "assessment-4bba27ebd65df10e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小兰在15场篮球比赛共得345分，平均每场投进4次罚球，每次1分，投进5个两分球，每个2分。其他得分都来自每个3分的三分球。她平均每场投进多少个三分球？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "3",
+          "d": "1"
+        },
+        "unit": "个/场"
+      },
+      "intent": "由平均得分扣除已知得分类型反求数量",
+      "hints": [
+        "三分球得分除以3才是球数。"
+      ],
+      "steps": [
+        "每场平均得345÷15＝23分。",
+        "罚球和两分球平均每场得4×1＋5×2＝14分。",
+        "三分球每场平均得23－14＝9分，平均投进9÷3＝3个。"
+      ],
+      "commonMistakes": [
+        "把9分直接当作9个三分球。"
+      ],
+      "prerequisites": [
+        "平均数",
+        "单位得分",
+        "分类余量"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "明确原题free throws和baskets表示投进次数，其余得分仅为三分球。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1190",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "696739b994d4561bd704ee2d76eb91af774864a06841c040762dc3584e7088db",
+        "recordSha256": "4c3cdfb9cde5b19f4c151319e543d17611e2b2d321257248f1d41930ce13dfc5",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1190",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0ebc81eed7c03f9a3e08132f379f401cedf640877db8e3d04c35e9738a9f6e15",
+        "sourceDraftSha256": "0ebc81eed7c03f9a3e08132f379f401cedf640877db8e3d04c35e9738a9f6e15",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "a8610d70a65ed97b4821a4d336b39b2ee0a2b6b1e8223265ff0cbab91c009478"
+      },
+      "contentSha256": "a8610d70a65ed97b4821a4d336b39b2ee0a2b6b1e8223265ff0cbab91c009478"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1226",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-3a75fbd34e510aac",
+      "assessmentGroup": "assessment-3a75fbd34e510aac",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小米的球队本赛季共20场，已打15场，他这15场平均每场得26分。要让整个赛季平均每场30分，余下比赛平均每场需得多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "42",
+          "d": "1"
+        },
+        "unit": "分/场"
+      },
+      "intent": "由全季目标平均数求剩余阶段平均",
+      "hints": [
+        "先求目标总分，再扣已得总分。"
+      ],
+      "steps": [
+        "目标总分20×30＝600分，已得15×26＝390分。",
+        "余下20－15＝5场需要600－390＝210分。",
+        "余下平均每场210÷5＝42分。"
+      ],
+      "commonMistakes": [
+        "将30与26的差4分当作剩余每场目标。"
+      ],
+      "prerequisites": [
+        "平均数反求",
+        "阶段总量"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "真实球员姓名改为小米，保留赛季数据为练习情境。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1226",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "5496451e504b132ac0f6273a613c9ebd25da549a1e6b1a0b44427815b95f0875",
+        "recordSha256": "d4beae44291c4b70bcd44ef9010fbbf0d307e4de2c4b73c0c03266e563d8dfb6",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1226",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "56cdda20275e6ce936efc5747db8513dc69f8488b089aaaea3c44fcb12239ea5",
+        "sourceDraftSha256": "56cdda20275e6ce936efc5747db8513dc69f8488b089aaaea3c44fcb12239ea5",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8963b63eadeeabb8ae54de327f2dd6bbfcac6440f58eef928848b557e9a1857f"
+      },
+      "contentSha256": "8963b63eadeeabb8ae54de327f2dd6bbfcac6440f58eef928848b557e9a1857f"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1637",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-884c5a4839a5e546",
+      "assessmentGroup": "assessment-884c5a4839a5e546",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小凯每天上7节课，各课时可不同，总上课时间7.5小时，时间里不含课间和其他活动。历史和化学两节共1.5小时，其余课平均每节多少分钟？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "72",
+          "d": "1"
+        },
+        "unit": "分钟/节"
+      },
+      "intent": "从总时间扣除已知课时再求平均",
+      "hints": [
+        "剩余课数是7－2＝5节。"
+      ],
+      "steps": [
+        "其余课时为7.5－1.5＝6小时，即360分钟。",
+        "其余有5节课，平均360÷5＝72分钟/节。"
+      ],
+      "commonMistakes": [
+        "将剩余360分钟仍除以7节。"
+      ],
+      "prerequisites": [
+        "小时分钟换算",
+        "平均数反求"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "原题in school可能包含课间，明确7.5小时只为7节课的上课总时长。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1637",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "b8dcd7df76bac188ae1077c0704da28b9042fd8faf6ade5cf57bb9c2fcbe574e",
+        "recordSha256": "cc491463182e70cfaa6f5fdeb3ed8e2e09d5c3e36b613fb9b96c492c32bcee27",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1637",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "719956baec333d0a83f527093cfb318e783e8c74698ee18b0c0d316916e11c69",
+        "sourceDraftSha256": "719956baec333d0a83f527093cfb318e783e8c74698ee18b0c0d316916e11c69",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ae114827c2fcdf882a7cdd130dcff5b8b6e21698233f4f8ff5c634d25bb277b4"
+      },
+      "contentSha256": "ae114827c2fcdf882a7cdd130dcff5b8b6e21698233f4f8ff5c634d25bb277b4"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-1723",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-75c1ccc9a9036eee",
+      "assessmentGroup": "assessment-75c1ccc9a9036eee",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "在赛车行程模型中，赛道全长6千米。前3千米速度150千米/小时，接着2千米比前段快50千米/小时，最后1千米速度是前段的2倍。各段匀速且没有停顿。全程平均速度是多少千米/小时？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "180",
+          "d": "1"
+        },
+        "unit": "千米/小时"
+      },
+      "intent": "由总路程除以各段时间和求平均速度",
+      "hints": [
+        "三段路程不同，不能直接平均三段速度。"
+      ],
+      "steps": [
+        "三段速度分别为150、200、300千米/小时。",
+        "三段用时分别3/150＝1/50小时、2/200＝1/100小时、1/300小时；合计6/300＋3/300＋1/300＝1/30小时。",
+        "全程平均速度为6÷（1/30）＝180千米/小时。"
+      ],
+      "commonMistakes": [
+        "直接将150、200、300相加再除以3。"
+      ],
+      "prerequisites": [
+        "分数四则",
+        "速度时间路程",
+        "平均速度"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "明确分段匀速无停顿，用行程模型表达赛车数据。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-1723",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "9458d38fdd34227299914cd032dc6206fe3ee8774a11dfed47f79e0cdfe8e80e",
+        "recordSha256": "a07bd768370f1ad4602ca186addc0fdbc44fdd5dd056cece98dcf18682117602",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-1723",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "643ef08f61e3e0b32deffe437c18633b471e7c5ff1907c1e8516e91071826dff",
+        "sourceDraftSha256": "643ef08f61e3e0b32deffe437c18633b471e7c5ff1907c1e8516e91071826dff",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8105c26cc3af254533d7067317fa2f3fa8df859ad4fd4520130d56cac0ed0d10"
+      },
+      "contentSha256": "8105c26cc3af254533d7067317fa2f3fa8df859ad4fd4520130d56cac0ed0d10"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2136",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-204b345453e41b30",
+      "assessmentGroup": "assessment-204b345453e41b30",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小简有4只动物玩偶，前两只各重12千克，第三只14.7千克，第四只9.3千克。4只玩偶的平均重量是多少千克？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "12",
+          "d": "1"
+        },
+        "unit": "千克"
+      },
+      "intent": "合计不同重量求平均",
+      "hints": [
+        "前两只12千克都要计入。"
+      ],
+      "steps": [
+        "总重量12＋12＋14.7＋9.3＝48千克。",
+        "平均重量48÷4＝12千克。"
+      ],
+      "commonMistakes": [
+        "只计一次12千克。"
+      ],
+      "prerequisites": [
+        "小数加法",
+        "算术平均"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "磅改为同数字千克，猫改为动物玩偶以适应重设重量，是情境数值重设而非精确换算；重算平均12千克。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2136",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "58311470c82a8f3d6fa7dc2dc9a791f4bb87077617396df12c7d7670ab5b76a8",
+        "recordSha256": "ba22521305503cc2e274680ec9dd7af67eeb64bed413de414736fced56dc53b8",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2136",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f78d3c4bd62dfa53a8ec30c3b125967126e490a41019ffb25d56e9c9fa138ec4",
+        "sourceDraftSha256": "f78d3c4bd62dfa53a8ec30c3b125967126e490a41019ffb25d56e9c9fa138ec4",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ea7cf994de69c139fc4b3f3bf890fbb3e5fcffa3e80e47dcaae9fe1a95469fb7"
+      },
+      "contentSha256": "ea7cf994de69c139fc4b3f3bf890fbb3e5fcffa3e80e47dcaae9fe1a95469fb7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2323",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-13514f57a8db6fb8",
+      "assessmentGroup": "assessment-13514f57a8db6fb8",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小阿在一个16场的美式橄榄球赛季中完成89次传球达阵，保持校纪录。小瑞前14场平均每场6次。要严格超过89次纪录，最后2场平均每场最少需要完成多少次？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "3",
+          "d": "1"
+        },
+        "unit": "次/场"
+      },
+      "intent": "处理超过纪录的整数下限后求平均",
+      "hints": [
+        "达阵次数为整数，超过89至少要90。"
+      ],
+      "steps": [
+        "前14场共14×6＝84次。",
+        "破纪录至少需90次，还需90－84＝6次。",
+        "最后2场平均每场至少6÷2＝3次。"
+      ],
+      "commonMistakes": [
+        "只达到89次就当成破纪录。"
+      ],
+      "prerequisites": [
+        "整数下限",
+        "平均数反求"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "明确所求为传球达阵次数、严格超过且求最低平均；保留美式橄榄球而不误写为足球。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2323",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "b7bbb7cb1b31fd447e713932e93462873ffbd7f766e76769be59f18dbca6db40",
+        "recordSha256": "6ad203cdd046ac8be7f8cb9d837ad12232ea9f6e0625297bd09107f76ee8e303",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2323",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "d869fc3f32b35ae9deecb46351843642e45dff2c2bc9979754e9720f43e65907",
+        "sourceDraftSha256": "d869fc3f32b35ae9deecb46351843642e45dff2c2bc9979754e9720f43e65907",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "41ec88d34cd0da660c3b471d0554ee972d5704c2000dd9cb2ecec1f0ebeed850"
+      },
+      "contentSha256": "41ec88d34cd0da660c3b471d0554ee972d5704c2000dd9cb2ecec1f0ebeed850"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-2693",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-04ebb78218d1809f",
+      "assessmentGroup": "assessment-04ebb78218d1809f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小然前4次测验分别得90、98、92、94分。希望5次测验的算术平均分正好为94分，第5次应得多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "96",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "由目标平均数反求缺失项",
+      "hints": [
+        "先求5次目标总分。"
+      ],
+      "steps": [
+        "目标总分94×5＝470分。",
+        "前4次合计90＋98＋92＋94＝374分。",
+        "第5次应得470－374＝96分。"
+      ],
+      "commonMistakes": [
+        "对前4次平均分与94作差，却忘记反求5次总分。"
+      ],
+      "prerequisites": [
+        "平均数反求",
+        "数据合计"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "明确5次等权算术平均、目标正好94分。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-2693",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "ff87f4629176ec520a10889c0a6421358eecaaacc4206b76d437d2e28c22bb21",
+        "recordSha256": "f4fbec92f7e51ade13b7ee76a6b7bcf1a1f904a41cb6d8985bab7941e49a8f7a",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-2693",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "96c2b9794089ac48e4f8e6aba0f1efc82b62ab003698fe8ad2e0f9962663708e",
+        "sourceDraftSha256": "96c2b9794089ac48e4f8e6aba0f1efc82b62ab003698fe8ad2e0f9962663708e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8eeb1fb017e168af2ee7233c37e55d0effc0fd45ea269d4afaed0843c1ff43e3"
+      },
+      "contentSha256": "8eeb1fb017e168af2ee7233c37e55d0effc0fd45ea269d4afaed0843c1ff43e3"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3043",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-382a47d4907002fb",
+      "assessmentGroup": "assessment-382a47d4907002fb",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小安从甲城经乙城到丙城，两段路分别为420千米和273千米。他希望全程在11小时内完成，途中不停车。至少需要达到多少千米/小时的全程平均速度？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "63",
+          "d": "1"
+        },
+        "unit": "千米/小时"
+      },
+      "intent": "由总路程与时间上限求最低平均速度",
+      "hints": [
+        "先合计两段路程。"
+      ],
+      "steps": [
+        "总路程420＋273＝693千米。",
+        "最低平均速度为693÷11＝63千米/小时。"
+      ],
+      "commonMistakes": [
+        "分别求两段速度后直接平均。"
+      ],
+      "prerequisites": [
+        "平均速度",
+        "路程合计"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "英里改为同数字千米，国外路线改甲乙丙城，是情境数值重设而非精确换算；明确无停车并重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3043",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "3a0aa330c78bfd1c9295b54d3e49c9642202412c2f8e39a79e1dd82589ff34d3",
+        "recordSha256": "c28f2ca5a6f617edbb3c64a3350513e8a1ddeef9085d644d8f4e5c87a2547b97",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3043",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2eecebcf0ef523137b560ae41232ffbc4a6d9bacafb1dd5cc0da90b6ac8d8885",
+        "sourceDraftSha256": "2eecebcf0ef523137b560ae41232ffbc4a6d9bacafb1dd5cc0da90b6ac8d8885",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8d306822795d96f89fade87025fa9eb6111414dab70bd821c72f1dfb45e07ef8"
+      },
+      "contentSha256": "8d306822795d96f89fade87025fa9eb6111414dab70bd821c72f1dfb45e07ef8"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3138",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-331a04757792b91b",
+      "assessmentGroup": "assessment-331a04757792b91b",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "全班10人参加同一次考试，5人各得92分，4人各得80分。希望全班算术平均分至少85分，最后1人最低要得多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "70",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "由平均下限求单个缺失值",
+      "hints": [
+        "先求全班达到85平均所需总分。"
+      ],
+      "steps": [
+        "总分至少85×10＝850分。",
+        "已有9人合计5×92＋4×80＝460＋320＝780分。",
+        "最后1人至少850－780＝70分。"
+      ],
+      "commonMistakes": [
+        "认为最后1人也必须考85分。"
+      ],
+      "prerequisites": [
+        "平均数反求",
+        "下限条件"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "明确等权算术平均和最低要求。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3138",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "4791280510ca4d0b3268b23e48d08680aa70ebedd09d98299087e61d0f4cbdc3",
+        "recordSha256": "8dc7e11f00f6ad6f9b7e62fddd173e49ddd7ef2bd24d244df4bd8457604ebd55",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3138",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "79f792e6c7438de47785ae72c6f1cc4cdfca8f207c9fead165f926e6d591f1e6",
+        "sourceDraftSha256": "79f792e6c7438de47785ae72c6f1cc4cdfca8f207c9fead165f926e6d591f1e6",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "4319d6225f62ea32afcc62607396097bdb6fb92bc418121c47945d82a8ed688e"
+      },
+      "contentSha256": "4319d6225f62ea32afcc62607396097bdb6fb92bc418121c47945d82a8ed688e"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3294",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-d63b8edbcb6c7842",
+      "assessmentGroup": "assessment-d63b8edbcb6c7842",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小卡的课程成绩由4次满分100分的考试等权平均。前3次得80、75、90分，希望最后平均至少85分。第4次最低需要多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "95",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "由平均下限反求最低缺失分数",
+      "hints": [
+        "把至少85分换成总分至少340分。"
+      ],
+      "steps": [
+        "4次总分至少85×4＝340分。",
+        "前3次合计80＋75＋90＝245分。",
+        "第4次至少340－245＝95分。"
+      ],
+      "commonMistakes": [
+        "只要求最后一次得85分。"
+      ],
+      "prerequisites": [
+        "平均数反求",
+        "下限条件"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "明确等权平均与至少85的最低分目标，并核验95未超过满分100。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3294",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "b8485db29a7baa627308a257dee1bd2cc89d7e7e8fbef0d40a431bf3906e0c24",
+        "recordSha256": "540c3e05cbeb81184fafaca0e31727974036a18429ffbf9efb5e7ac480f8bd06",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3294",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "ec42dd6dc5f3a205318d83042dfbaa5f5f949f8fea647e0f513a09a302eecc45",
+        "sourceDraftSha256": "ec42dd6dc5f3a205318d83042dfbaa5f5f949f8fea647e0f513a09a302eecc45",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "7abe48f7beacc93e90cf4afe164517d9a9f4543e84f88490eab9e1e1f02b1b21"
+      },
+      "contentSha256": "7abe48f7beacc93e90cf4afe164517d9a9f4543e84f88490eab9e1e1f02b1b21"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3509",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-604b789c8f15cf43",
+      "assessmentGroup": "assessment-604b789c8f15cf43",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "麦老师早晨沿一条路线开车上班，1小时到达，平均速度30千米/小时。晚上沿同一条路线返回，用1.5小时。返程平均速度是多少千米/小时？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "20",
+          "d": "1"
+        },
+        "unit": "千米/小时"
+      },
+      "intent": "利用往返路程相同求不同速度",
+      "hints": [
+        "同一路线使两次路程相同。"
+      ],
+      "steps": [
+        "路线长30×1＝30千米。",
+        "返程平均速度30÷1.5＝20千米/小时。"
+      ],
+      "commonMistakes": [
+        "因交通描述类似而认为返程速度也30。"
+      ],
+      "prerequisites": [
+        "速度时间路程",
+        "小数除法"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "英里/小时改为同数字千米/小时，是情境数值重设而非精确换算；补明往返同路线，删去不参与计算的交通类似描述。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3509",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "182baecf54e0fe0280fbdc974876ea787c1121b8c72d64d19da954f0f2a52308",
+        "recordSha256": "a929b5af5f056628951a3c14daec93765f71ad9d2dfb2d14bb9e50185e251d46",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3509",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "23cc6eb38d6c5dd04c4e587a1129c686db5d0c17b47a1d948129e49c126f6f13",
+        "sourceDraftSha256": "23cc6eb38d6c5dd04c4e587a1129c686db5d0c17b47a1d948129e49c126f6f13",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2ca317945a81c66611f0d294fdef7cfb6c06d408207000ef87318f7269be69c7"
+      },
+      "contentSha256": "2ca317945a81c66611f0d294fdef7cfb6c06d408207000ef87318f7269be69c7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-3922",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "等量分组与单位量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-73771fca07e7a8fa",
+      "assessmentGroup": "assessment-73771fca07e7a8fa",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小黛观察四棵树。它们的高度分别设为50米、40米、60米、34米，枝条数分别为200、180、180、153。先计算每棵树每米高度的枝条数，再把这4个结果作等权算术平均，平均是多少枝/米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "枝/米"
+      },
+      "intent": "区分各树比率的等权平均与总体比率",
+      "hints": [
+        "每棵树先算枝条数除以高度，每棵占同样权重。"
+      ],
+      "steps": [
+        "四个比率分别为200÷50＝4、180÷40＝4.5、180÷60＝3、153÷34＝4.5枝/米。",
+        "等权平均为（4＋4.5＋3＋4.5）÷4＝4枝/米。"
+      ],
+      "commonMistakes": [
+        "将总枝条除以总高度当作本题指定的四树等权平均。"
+      ],
+      "prerequisites": [
+        "单位量",
+        "小数加法",
+        "算术平均"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "英尺改为同数字米的树高模型，是情境数值重设而非精确换算；去掉攀爬情节；明确等权平均每棵比率，避免与总枝713÷总高184的总体比率混淆。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-3922",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "216471593fd61ed3448927ce2b4dcd528eba4102fa665f03dc5b2d06e2a52eb0",
+        "recordSha256": "2ada1a173dc1ef0bf70c5b777c6b37686f0b136db3694acc9ba921ee4756a9aa",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-3922",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7077f744b7e8e01da5b86e67c17c3d36b40cb1f67487e8002f54af6b4dfb6017",
+        "sourceDraftSha256": "7077f744b7e8e01da5b86e67c17c3d36b40cb1f67487e8002f54af6b4dfb6017",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6af3d4178da69a3cba136253def54a74121d0ef000667169e83a1e7b4143b760"
+      },
+      "localCategoryOverride": {
+        "category": "G06",
+        "reason": "核心所求是四个单位比率的等权算术平均，归入平均数与缺失数据更贴合任务。"
+      },
+      "contentSha256": "6af3d4178da69a3cba136253def54a74121d0ef000667169e83a1e7b4143b760"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-4187",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-3bc7a3c52b07b774",
+      "assessmentGroup": "assessment-3bc7a3c52b07b774",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小乔在一个虚拟游戏里每个道具盒花5元，一共花40元。按游戏设定，每盒里面道具的平均估值是3.5元。购买全部盒子的支出比道具总估值平均多多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "12",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "用每盒平均差额求多盒平均总差额",
+      "hints": [
+        "求的是8盒合计差额。"
+      ],
+      "steps": [
+        "买了40÷5＝8盒。",
+        "每盒平均差额5－3.5＝1.5元。",
+        "8盒合计平均差额8×1.5＝12元。"
+      ],
+      "commonMistakes": [
+        "只回答每盒差1.5元。"
+      ],
+      "prerequisites": [
+        "平均单位值",
+        "单位价格",
+        "费用差额"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "美元改人民币元；以虚拟游戏给定估值描述随机盒子，明确所求为支出减平均估值，不把估值当作实际可出售收入。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-4187",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "5b11ff97371975cdc19c3db1f6ad4299b4948d7c72c613856e713269518999b0",
+        "recordSha256": "cb6b94671bef51a87ab23f4c4e0bf1e84ca61cc143dc293652e43b27f39d4008",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-4187",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b7c2131165ca5f0430e6bde11b2a4259f10d7af0f4b41de49e01a059979c49cb",
+        "sourceDraftSha256": "b7c2131165ca5f0430e6bde11b2a4259f10d7af0f4b41de49e01a059979c49cb",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "01a1f5aa53b3e6b566f830cc322c4dc1c692b385f77c28ce36dc9cd9f40fe750"
+      },
+      "contentSha256": "01a1f5aa53b3e6b566f830cc322c4dc1c692b385f77c28ce36dc9cd9f40fe750"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-4683",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-1e01649ba9d5e98f",
+      "assessmentGroup": "assessment-1e01649ba9d5e98f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一家餐厅有18条评价，其中6条5星、7条4星、4条3星、1条2星。每条评价权重相同，平均评分是多少星？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "星"
+      },
+      "intent": "按评价条数加权平均评分",
+      "hints": [
+        "每种星数都要乘对应的评价条数。"
+      ],
+      "steps": [
+        "总星数为6×5＋7×4＋4×3＋1×2＝30＋28＋12＋2＝72。",
+        "平均评分72÷18＝4星。"
+      ],
+      "commonMistakes": [
+        "只对5、4、3、2四个星数求平均。"
+      ],
+      "prerequisites": [
+        "加权平均"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "餐厅名称本土化省略，补明每条评价同权重。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-4683",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "76229865c12f956bec17c4f489167db6c35dabdf3205f3b2e4e436671f668457",
+        "recordSha256": "3e24f417c48205b137c450bba33897fd4dd10f4e67b90d1a1f131c4860ad5298",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-4683",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "62dc6e132c230d36a705a6c1fde22de03f49322c220335077c70f946d5cf5f4e",
+        "sourceDraftSha256": "62dc6e132c230d36a705a6c1fde22de03f49322c220335077c70f946d5cf5f4e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ba1beae37872c7fe14bb1d0a9e023b48e8e61c7b075e27a1343ea1dde41429cd"
+      },
+      "contentSha256": "ba1beae37872c7fe14bb1d0a9e023b48e8e61c7b075e27a1343ea1dde41429cd"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5584",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-9624824d26fac9dc",
+      "assessmentGroup": "assessment-9624824d26fac9dc",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "曲棍球联赛规定，胜1场得2分，平1场得1分，负1场得0分。进入季后赛的3队中，第一队12胜4平，第二队13胜1平，小艾队8胜10平。3队平均积分是多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "27",
+          "d": "1"
+        },
+        "unit": "分/队"
+      },
+      "intent": "按比赛结果求各队积分再平均",
+      "hints": [
+        "负场不影响给定积分。"
+      ],
+      "steps": [
+        "三队积分分别12×2＋4＝28分、13×2＋1＝27分、8×2＋10＝26分。",
+        "平均积分为（28＋27＋26）÷3＝27分/队。"
+      ],
+      "commonMistakes": [
+        "把胜场和平场都按2分计算。"
+      ],
+      "prerequisites": [
+        "单位积分",
+        "算术平均"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "把计分规则明确为本练习联赛规则，不外推到其他真实联赛。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5584",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "7b70d1c439328037d46a48b7636e467050e7a53d18f5720a99c6b6c1f882ee0a",
+        "recordSha256": "224af4ea737c369303469ca5ab5e980807ebad45ddf81f1e9712d2893a430fbc",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5584",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "fb0c8e0d0e8fc0610e60af15a029b1af3de306489cf8c288e990e9b59d05217a",
+        "sourceDraftSha256": "fb0c8e0d0e8fc0610e60af15a029b1af3de306489cf8c288e990e9b59d05217a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c6b4fe42eac574fd39cc6061f3acecb1fa1653223739e3e84e5a1a1a126d885e"
+      },
+      "contentSha256": "c6b4fe42eac574fd39cc6061f3acecb1fa1653223739e3e84e5a1a1a126d885e"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5725",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-95be8fa5dbd0c8d8",
+      "assessmentGroup": "assessment-95be8fa5dbd0c8d8",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小森在一个行程模型中离目的地120千米。前30分钟以60千米/小时行驶，希望总用时正好1小时30分钟，且中途不停车。余下路程的平均速度需是多少千米/小时？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "90",
+          "d": "1"
+        },
+        "unit": "千米/小时"
+      },
+      "intent": "由总时间目标反求后段速度",
+      "hints": [
+        "前30分钟是0.5小时。"
+      ],
+      "steps": [
+        "前段行驶60×0.5＝30千米，还剩120－30＝90千米。",
+        "剩余时间为1.5－0.5＝1小时。",
+        "后段平均速度需90÷1＝90千米/小时。"
+      ],
+      "commonMistakes": [
+        "以120千米除以剩余1小时，漏扣已行驶路程。"
+      ],
+      "prerequisites": [
+        "速度时间路程",
+        "小时分钟换算"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "英里与英里/小时同步改为同数字千米与千米/小时，属于行程模型数值重设而非精确换算；重算后段速度。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5725",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "e082220670ae8d5cb05727e14bade474ee642df3329c21570a83803b7c8a91df",
+        "recordSha256": "7761354b4a8e680325eee89d928fb94e48f86fbc6984beb3b2325e150d57252c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5725",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f3bcec4799bce73de3f10b8398146e9347f945af23d7b7d16ce3e27fb8b8c9f3",
+        "sourceDraftSha256": "f3bcec4799bce73de3f10b8398146e9347f945af23d7b7d16ce3e27fb8b8c9f3",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "dc024b9b6052a516dd86cf358fc44222f153f3236b93b21642ead1b5a6db3ce6"
+      },
+      "contentSha256": "dc024b9b6052a516dd86cf358fc44222f153f3236b93b21642ead1b5a6db3ce6"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5752",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-99ac590aae1167d2",
+      "assessmentGroup": "assessment-99ac590aae1167d2",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小珂每周固定得到20元零用钱，每完成1项额外家务另得1.5元。她连续10周都这样领取，期间没有花钱，最初也没有存款，最后共有425元。平均每周完成多少项额外家务？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "15",
+          "d": "1"
+        },
+        "unit": "项/周"
+      },
+      "intent": "从总收入反求额外工作量的平均",
+      "hints": [
+        "先扣除10周固定零用钱。"
+      ],
+      "steps": [
+        "固定零用钱共20×10＝200元，家务收入425－200＝225元。",
+        "额外家务共225÷1.5＝150项。",
+        "平均每周150÷10＝15项。"
+      ],
+      "commonMistakes": [
+        "把1.5元当作每周固定额外收入。"
+      ],
+      "prerequisites": [
+        "平均数",
+        "单位报酬",
+        "收入反推"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "美元金额改人民币元；原题把1.5写作每周额外收入无法支持所问家务项数，按题目明确询问的意图修订为每项家务1.5元，并补明无初始存款和支出。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5752",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "25f39d9d206a089f72f101a903b57c55abfea9464b8e786c5f444a94837510cf",
+        "recordSha256": "54d765be0ea8346330fa51eade30b6d64776d008466d39a92455af9f06db8ff1",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5752",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "8a629422ba3e7efad84b5ce3e25e72cdec81bd3b8688ad86a3522697a5c4cd31",
+        "sourceDraftSha256": "8a629422ba3e7efad84b5ce3e25e72cdec81bd3b8688ad86a3522697a5c4cd31",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f7965585ade93a89c88c678bc7506ec2f0e1ab0ffbc431831111e817388d214f"
+      },
+      "contentSha256": "f7965585ade93a89c88c678bc7506ec2f0e1ab0ffbc431831111e817388d214f"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-5958",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "等量分组与单位量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-2e1d0bb0eac5beab",
+      "assessmentGroup": "assessment-2e1d0bb0eac5beab",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小肯观鸟，周一观察5个地点，平均每点记录7只鸟；周二观察5个地点，平均每点记录5只；周三观察10个地点，平均每点记录8只。按每次观察地点的记录计数，不去重鸟的个体或物种。三天平均每个观察地点记录多少只？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "7",
+          "d": "1"
+        },
+        "unit": "只/地点"
+      },
+      "intent": "按地点数加权求平均",
+      "hints": [
+        "三天地点数不同，不能直接平均7、5、8。"
+      ],
+      "steps": [
+        "三天记录总数为5×7＋5×5＋10×8＝35＋25＋80＝140只。",
+        "地点观察次数为5＋5＋10＝20次。",
+        "每地点平均140÷20＝7只。"
+      ],
+      "commonMistakes": [
+        "用（7＋5＋8）÷3忽略不同地点数。"
+      ],
+      "prerequisites": [
+        "加权平均",
+        "单位量与总量"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "原题混用different species与鸟个体计数，明确为各地点观察到的鸟数记录，并以地点观察次数为分母，不做物种去重。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-5958",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "1760b3a4750ad92f541011a3aadb265ae274873bf8c4426c7fa3890fc12b5fb9",
+        "recordSha256": "f192ed9b801a37efd4eb5ca375144a98b45f14f1e8ff0ef5a46207c628b34021",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-5958",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "eaa2f53b17eac7f868f838d6b730dd8285663bc36be4c20393852399e272d5a8",
+        "sourceDraftSha256": "eaa2f53b17eac7f868f838d6b730dd8285663bc36be4c20393852399e272d5a8",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ebf2fa3af6fe000b49499efa813d6a950ce1ace72d4b089ec0876c11fb4bf0c4"
+      },
+      "localCategoryOverride": {
+        "category": "G06",
+        "reason": "核心为不同地点数下的加权平均，需要按观察地点次数合计后求平均，归入平均数。"
+      },
+      "contentSha256": "ebf2fa3af6fe000b49499efa813d6a950ce1ace72d4b089ec0876c11fb4bf0c4"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6002",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-c51ee5f0c6660905",
+      "assessmentGroup": "assessment-c51ee5f0c6660905",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小贝连续7天每天测量一次温水样本，温度计显示摄氏度。周日至周六读数依次为39.1、38.2、38.7、39.3、39.8、39.0、38.9摄氏度。这7次读数的算术平均是多少摄氏度？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "39",
+          "d": "1"
+        },
+        "unit": "摄氏度"
+      },
+      "intent": "用小数合计求七次平均",
+      "hints": [
+        "先把7次摄氏温度读数相加，再除以7。"
+      ],
+      "steps": [
+        "7次读数合计39.1＋38.2＋38.7＋39.3＋39.8＋39.0＋38.9＝273。",
+        "平均温度为273÷7＝39摄氏度。"
+      ],
+      "commonMistakes": [
+        "将7次读数合计273直接当作平均温度，或少计一次读数。"
+      ],
+      "prerequisites": [
+        "小数加法",
+        "算术平均"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留七次读数等权平均关系并独立重算。",
+        "原99左右体温读数重设为温水实验的摄氏39.1、38.2、38.7、39.3、39.8、39.0、38.9，是教学情境数值重设而非精确华氏换算；总读数273，平均39摄氏度，不涉及健康判断。",
+        "原解第一处合计692有误；原数据实际合计693，此次公制温水数据另行重算，不沿用原体温答案99。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6002",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "3bdf53c127dfecf9e4927af4b487b93cc81a739f176db24baab2256ecbfab586",
+        "recordSha256": "1ffb74dceb4452f07d574e1524886b2f36ce315a0844a7ec28fa8a29babdecec",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6002",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7f9dd0999614a854c501113d043e5b7a0d6e125a41634186f313b2b226ee65d1",
+        "sourceDraftSha256": "980e12ccf7e7721c41af97d0ee017284f58434182c1f57a32896ed47b71e593e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "48400f2460047904b333340a4fcab0797ba6b2fa00fc571fd8521005a4e8fff1"
+      },
+      "contentSha256": "48400f2460047904b333340a4fcab0797ba6b2fa00fc571fd8521005a4e8fff1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6054",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-47002e2630f23531",
+      "assessmentGroup": "assessment-47002e2630f23531",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小荣的棒球队9名队员全年合计得270分。其中5人全年得分的平均数是50分。其余队员全年平均每人得多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "分/人"
+      },
+      "intent": "由一组平均数反求另一组平均数",
+      "hints": [
+        "5人的平均50分只说明合计250分。"
+      ],
+      "steps": [
+        "前5人合计5×50＝250分。",
+        "其余9－5＝4人共得270－250＝20分。",
+        "其余平均每人20÷4＝5分。"
+      ],
+      "commonMistakes": [
+        "用270除以4，漏扣前5人的250分。"
+      ],
+      "prerequisites": [
+        "分组平均",
+        "平均数反求"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "明确所问为全年累计得分按人平均。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6054",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "b8875f8874aaf2cdc81de7c75031f34b89fa2fcff0bab7c8cb44b56ce3c5ca82",
+        "recordSha256": "27808ba7bd092de077c00fab7f73409e0c30ded4133d8490f4a18dbce9e39354",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6054",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "340bbb75549eff7845458aa84efc3c37a0e35e7d2e957d741c0e7e4610fd1b3f",
+        "sourceDraftSha256": "340bbb75549eff7845458aa84efc3c37a0e35e7d2e957d741c0e7e4610fd1b3f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9bf1404e1f2736930eb41bb553ce02e294aeaabb58c6650038439de8cca52ed2"
+      },
+      "contentSha256": "9bf1404e1f2736930eb41bb553ce02e294aeaabb58c6650038439de8cca52ed2"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6157",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-0702c99be7443569",
+      "assessmentGroup": "assessment-0702c99be7443569",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一辆车前3小时以60千米/小时行驶。要使接着再行驶2小时后的全程平均速度为70千米/小时，这后2小时的平均速度应是多少千米/小时？全程不停车。",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "85",
+          "d": "1"
+        },
+        "unit": "千米/小时"
+      },
+      "intent": "按时间加权平均速度反求后段",
+      "hints": [
+        "全程5小时，平均速度要按总路程计算。"
+      ],
+      "steps": [
+        "目标全程路程为70×（3＋2）＝350千米。",
+        "前3小时行驶60×3＝180千米，后段需行350－180＝170千米。",
+        "后段平均速度170÷2＝85千米/小时。"
+      ],
+      "commonMistakes": [
+        "把两段速度60与未知值直接等权平均为70。"
+      ],
+      "prerequisites": [
+        "平均速度",
+        "速度时间路程"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "英里/小时改为同数字千米/小时，是情境数值重设而非精确换算；明确全程无停车并重算。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6157",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "2438e11812ea339b5557b79c87f25a87430d6fb1822bdc9192829c66f96c2718",
+        "recordSha256": "f7b88433288a4c52b3033ba47d14991b32cf4b8a026ddcfc69aa0ab89b949e47",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6157",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9e40d8ae24e6e5f125f1ea2d40b2de27c55c1534b8a872f4f187491f8057ec4f",
+        "sourceDraftSha256": "9e40d8ae24e6e5f125f1ea2d40b2de27c55c1534b8a872f4f187491f8057ec4f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "db358d20ca7626f9266298de45bc9aca83669b052a3494119046a8c06f8d0867"
+      },
+      "contentSha256": "db358d20ca7626f9266298de45bc9aca83669b052a3494119046a8c06f8d0867"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6176",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-0284cacb1f12d35f",
+      "assessmentGroup": "assessment-0284cacb1f12d35f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小莉在4场曲棍球训练赛里累计进104球，小克在这同样4场里累计比她少24球。以每人的4场累计进球数为一个数据，这两人的平均累计进球数是多少球？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "92",
+          "d": "1"
+        },
+        "unit": "球/人"
+      },
+      "intent": "区分按人平均累计数与按场平均",
+      "hints": [
+        "分母是2人，不是4场。"
+      ],
+      "steps": [
+        "小克累计进104－24＝80球。",
+        "两人累计合计104＋80＝184球。",
+        "每人的平均累计进球为184÷2＝92球。"
+      ],
+      "commonMistakes": [
+        "将184除以4场来回答按人平均的问题。"
+      ],
+      "prerequisites": [
+        "差量关系",
+        "平均数",
+        "统计范围"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "明确平均对象是两人的四场累计数，排除每场平均或每人每场平均口径。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6176",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "ba7c61284ab0fa9640953373c3290fe17549de0fc4231916c8c6fa1739505a86",
+        "recordSha256": "e20f32a392e0f7d482b2beb0b55822a860c585fdf1fbaa6c42407f90751b1294",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6176",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9d933fc1c52d62334ad98d9f4505f52c6a631dc2139f4c992b8cbfee638f0857",
+        "sourceDraftSha256": "9d933fc1c52d62334ad98d9f4505f52c6a631dc2139f4c992b8cbfee638f0857",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e8bd19e21f0bd132282ed2b3f314720abc20cd217a72773eb4eecdcc1d745093"
+      },
+      "contentSha256": "e8bd19e21f0bd132282ed2b3f314720abc20cd217a72773eb4eecdcc1d745093"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6190",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-04113b0d89ae2cab",
+      "assessmentGroup": "assessment-04113b0d89ae2cab",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一份虚构气象练习的4次摄氏温度读数分别为－36、＋13、－15、－10摄氏度。这4次读数的算术平均是多少摄氏度？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "-12",
+          "d": "1"
+        },
+        "unit": "摄氏度"
+      },
+      "intent": "计算含负数的平均气温",
+      "hints": [
+        "先带着正负号求总和。"
+      ],
+      "steps": [
+        "四个读数的和为－36＋13－15－10＝－48。",
+        "平均温度为－48÷4＝－12摄氏度。"
+      ],
+      "commonMistakes": [
+        "忽略负号，直接平均温度绝对值。"
+      ],
+      "prerequisites": [
+        "正负数加减",
+        "算术平均"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留四个正负读数求平均的数学关系并独立重算。",
+        "原华氏气温尺度重设为虚构气象练习的摄氏读数，保留－36、＋13、－15、－10与负数平均目标；这是教学尺度重设而非精确华氏换算，平均为－12摄氏度。",
+        "国外地名省略，练习读数不声称为真实地区气象数据。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6190",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "957d3b616f05e2b1d93a7ce697eefa93cc3f3abc9006e890d0cdc7c4f612c49e",
+        "recordSha256": "5e553d49a4e3c8bf160e9d80cd94b765d1cfba3e95edf991182111d9bf028a55",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6190",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "6640c581c5d6ee74d2bce09e4b6fb45a9a8ec409b2343fa517d4563d6bc5dd09",
+        "sourceDraftSha256": "6640c581c5d6ee74d2bce09e4b6fb45a9a8ec409b2343fa517d4563d6bc5dd09",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "706ad48ec8e1f3468c00d28f8c6ce59de4ce56d0c1feb51de998ea0c3a330914"
+      },
+      "contentSha256": "706ad48ec8e1f3468c00d28f8c6ce59de4ce56d0c1feb51de998ea0c3a330914"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6257",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-3d362cd8b21b28fb",
+      "assessmentGroup": "assessment-3d362cd8b21b28fb",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "保龄球队有4名队员，一个赛季共10轮。旧纪录为每名队员每轮平均287分。本队前9轮的全队总分为10440分。要在第10轮后追平旧纪录，第10轮每名队员平均需得的分数，比287分低多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "27",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "由赛季平均纪录反求末轮平均差",
+      "hints": [
+        "旧纪录总分要乘4名队员和10轮。"
+      ],
+      "steps": [
+        "旧纪录总分为287×4×10＝11480分。",
+        "末轮需11480－10440＝1040分，每人平均1040÷4＝260分。",
+        "比287分低287－260＝27分。"
+      ],
+      "commonMistakes": [
+        "停在末轮每人260分，未求比287低多少。"
+      ],
+      "prerequisites": [
+        "多维平均数",
+        "平均数反求",
+        "差量比较"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "明确目标为追平而非超越；原解一处把每轮1148误写1248，独立重算总目标11480。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6257",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "8bbdb482449fc9b50f1e2a80bd71b7ffa2a5d6161f4599610e1385433cecf86a",
+        "recordSha256": "0dc2e385e61f744010b84fd6687a42893dbb54210f9f0aab272efa722cd43093",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6257",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "821edfbf6e0aff8aed437c4ef7b39d444c34f1e08bc5f7f0a2a2144bdd43a18b",
+        "sourceDraftSha256": "821edfbf6e0aff8aed437c4ef7b39d444c34f1e08bc5f7f0a2a2144bdd43a18b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "71be4cbec53e3d6f9cc65394464403938654644b56f0ab55bf106298920e786e"
+      },
+      "contentSha256": "71be4cbec53e3d6f9cc65394464403938654644b56f0ab55bf106298920e786e"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6318",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-5bd2115150bfe634",
+      "assessmentGroup": "assessment-5bd2115150bfe634",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小布4月每天工作6小时，6月每天5小时，9月每天8小时，三个完整月份都各有30天，每一天都工作。这3个月平均每月工作多少小时？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "190",
+          "d": "1"
+        },
+        "unit": "小时/月"
+      },
+      "intent": "由逐日工作量求月总量再平均",
+      "hints": [
+        "三个整月各30天，包括周末。"
+      ],
+      "steps": [
+        "三个月分别工作6×30＝180小时、5×30＝150小时、8×30＝240小时。",
+        "平均每月（180＋150＋240）÷3＝190小时。"
+      ],
+      "commonMistakes": [
+        "直接平均每天6、5、8小时，忘记按月计算。"
+      ],
+      "prerequisites": [
+        "每天用量",
+        "月天换算",
+        "算术平均"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "补明各30天每天均工作，平均对象为月累计小时。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6318",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "253887c5d17409b5fe690a9fa27b91d547b230cca19331c053509d674a4c89a5",
+        "recordSha256": "21c9029c403b6226683f054f3b9764fe513582a135cdbb23bdc093cb920ba7ed",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6318",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "5b8d4a5c63c68cae16118338f2efed6d00e8db16609a1e698de34519dc23ef96",
+        "sourceDraftSha256": "5b8d4a5c63c68cae16118338f2efed6d00e8db16609a1e698de34519dc23ef96",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e1548681dc7f1b9262ecfeede4ee79cdfca3b6597b8b9cf114a57baaf5892cb9"
+      },
+      "contentSha256": "e1548681dc7f1b9262ecfeede4ee79cdfca3b6597b8b9cf114a57baaf5892cb9"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6366",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-c04749dba1b85fbc",
+      "assessmentGroup": "assessment-c04749dba1b85fbc",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "两列火车同时出发，分别走不同路线。第一列走200千米，速度50千米/小时；第二列走240千米，速度80千米/小时，两列都匀速不停站。两列行程时长的等权算术平均是多少小时？按四舍五入保留整数小时。",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "小时"
+      },
+      "intent": "先独立求各段时长再平均并取整",
+      "hints": [
+        "第一列速度是50，不是40；取整前平均为3.5小时。"
+      ],
+      "steps": [
+        "第一列用200÷50＝4小时，第二列用240÷80＝3小时。",
+        "平均（4＋3）÷2＝3.5小时。",
+        "3.5小时四舍五入到整数小时为4小时。"
+      ],
+      "commonMistakes": [
+        "沿用原解200÷40，把第一列行程算成5小时。"
+      ],
+      "prerequisites": [
+        "速度时间路程",
+        "算术平均",
+        "四舍五入"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "英里同步改为同数字千米，是情境数值重设而非精确换算；原解误将50用成40导致5小时，修正为4小时，正确平均3.5取整后答案仍4。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6366",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "5cb235ffd0a7e82f2ee38ce03c92d33f0bb008650694fda683a2ad45f280bc31",
+        "recordSha256": "04206a0a43777b2eb7925f9de8fe22613012c8ba67c1b018bdc7412d33e11dcb",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6366",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c1cc92eb884ed3e169ff751f76f1468d5ca85c2d526fbe9a3a123f75d673346a",
+        "sourceDraftSha256": "c1cc92eb884ed3e169ff751f76f1468d5ca85c2d526fbe9a3a123f75d673346a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d400bf682b0f7f1a5d0b22dbd527855491cda8f2a789d90f4050fa14cc0e790e"
+      },
+      "contentSha256": "d400bf682b0f7f1a5d0b22dbd527855491cda8f2a789d90f4050fa14cc0e790e"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-6855",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-7624ea5dba9c5bde",
+      "assessmentGroup": "assessment-7624ea5dba9c5bde",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个电视节目连续播了14年，每年恰好播1季。8季每季15集，4季每季20集，2季每季12集。平均每年播多少集？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "16",
+          "d": "1"
+        },
+        "unit": "集/年"
+      },
+      "intent": "合计不同年度产量后求全年平均",
+      "hints": [
+        "三种季数合计为14，每年1季。"
+      ],
+      "steps": [
+        "总集数为8×15＋4×20＋2×12＝120＋80＋24＝224集。",
+        "平均每年224÷14＝16集。"
+      ],
+      "commonMistakes": [
+        "对15、20、12直接除以3平均。"
+      ],
+      "prerequisites": [
+        "分类单位量",
+        "加权平均"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "补明每年恰好1季，避免季数与年数对应不清。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-6855",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "628ac1459935501021a336cb2777be8818f5eb3382e7b7332999a5bc68aeaa65",
+        "recordSha256": "0019a3669ac18b0e73b94f78d77a160ce7ca83381ae2cf7f3d69cbc0bebbcdaa",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-6855",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b0e1cdc01c987f0f62a3d518d5f2c74413087c3f7d261521362cf45a6ceacd40",
+        "sourceDraftSha256": "b0e1cdc01c987f0f62a3d518d5f2c74413087c3f7d261521362cf45a6ceacd40",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "08ac5f4a085c404d81ac89435ae716201acb00e04755ebe844f4bb1ce2394f09"
+      },
+      "contentSha256": "08ac5f4a085c404d81ac89435ae716201acb00e04755ebe844f4bb1ce2394f09"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "gsm8k:train-7372",
+      "collection": "gsm8k",
+      "category": "G06",
+      "subcategory": "总量、份数与平均数",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-f1c499883094e8b6",
+      "assessmentGroup": "assessment-f1c499883094e8b6",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小珂老师有10名学生。练习规定，班级平均分高于75分时，老师得500元奖励，平均分每比75高1分再加10元，按分数差计算。8份已批试卷平均70分，每份满分150分。要使奖励正好600元，最后2份试卷的合计分数需是多少分？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "290",
+          "d": "1"
+        },
+        "unit": "分"
+      },
+      "intent": "由奖金目标反求平均分和缺失总分",
+      "hints": [
+        "先求600元对应的平均分目标。"
+      ],
+      "steps": [
+        "额外奖励600－500＝100元，对应平均分提高100÷10＝10分，目标平均85分。",
+        "10份总分需85×10＝850分，前8份已有70×8＝560分。",
+        "最后2份需850－560＝290分，例如145分和145分，均未超过150。"
+      ],
+      "commonMistakes": [
+        "漏掉基础奖励500元，把600全除以10。"
+      ],
+      "prerequisites": [
+        "单位奖励",
+        "平均数反求",
+        "可行性检查"
+      ],
+      "adaptation": [
+        "题干改写为儿童中文，保留数量关系并独立重算。",
+        "美元金额改为人民币元；明确正好600元且10份等权，核验两份290在最高300分内可达到。"
+      ],
+      "source": {
+        "dataset": "gsm8k",
+        "sourceId": "train-7372",
+        "sourceVersion": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceCommit": "3101c7d5072418e28b9008a6636bde82a006892c",
+        "sourceFile": "grade_school_math/data/train.jsonl",
+        "sourceFileSha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+        "questionSha256": "0290c638f8d03fba9a07d68640fc60b5e55be30e0b2c84063fa02e9a5be84b00",
+        "recordSha256": "941e1ed2c9ddb2b51d933a0678c8c448a7fbe2312073de29d2169ec58e0bccb9",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/openai/grade-school-math/blob/3101c7d5072418e28b9008a6636bde82a006892c/grade_school_math/data/train.jsonl",
+        "license": "MIT",
+        "nonCommercialOnly": false,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": null,
+        "originalSplit": "train"
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "gsm8k:train-7372",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "072870091a2f3d59921c9b41869220a715d838374a7ac192a759b7840757930c",
+        "sourceDraftSha256": "072870091a2f3d59921c9b41869220a715d838374a7ac192a759b7840757930c",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "26654bced895d9b3c1cc01fe6d7e10f483f991eaabe7d31d4ed1e165a040d639"
+      },
+      "contentSha256": "26654bced895d9b3c1cc01fe6d7e10f483f991eaabe7d31d4ed1e165a040d639"
+    }
+  ]
+}

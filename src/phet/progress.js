@@ -2,7 +2,8 @@
 (() => {
   'use strict';
   let attempts = 0;
-  function attach() {
+  async function attach() {
+    await window.MathPhysicsSync?.ready;
     const sim = window.phet?.joist?.sim || window.phet?.sim;
     const model = (sim?.simScreens || sim?.screens)?.[1]?.model;
     if (!model?.gameStateProperty) {

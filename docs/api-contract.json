@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "basePath": "/mathphysics/api",
+  "authentication": {
+    "session": "GET /session returns {account:null|{id,username},profiles:[{id,label,createdAt}],csrfToken}; the first request creates an anonymous HttpOnly SameSite=Strict cookie",
+    "mutationHeaders": {
+      "Content-Type": "application/json",
+      "X-CSRF-Token": "current session csrfToken",
+      "Origin": "exact browser origin"
+    },
+    "login": "POST /login {username,password}; returns the session shape and rotates cookie and csrfToken",
+    "logout": "POST /logout {}; clears authenticated cookie; fetch /session again before next login"
+  },
+  "routes": {
+    "GET /capabilities": "public registry catalog; {objectives:[...],...}; never contains answers",
+    "POST /profiles": "{label} -> 201 {profile:{id,label,createdAt}}",
+    "GET /profiles/:id/saves": "{saves:[{moduleId,schemaVersion:1,revision,payload,updatedAt}]}",
+    "GET /profiles/:id/saves/:moduleId": "{save:snapshot|null}",
+    "PUT /profiles/:id/saves/:moduleId": "{expectedRevision:0|positive integer,schemaVersion:1,payload:object,mutationId:string} -> {save:snapshot}; all saves are unverified practice state. assessment:* is server-owned",
+    "POST /profiles/:id/saves/:moduleId/restore": "{sourceRevision:positive integer,expectedRevision:currentRevision,mutationId:string} -> {save:new snapshot}; preserves revision history",
+    "GET /profiles/:id/saves/:moduleId/revisions": "{revisions:[snapshot,...]}",
+    "POST /profiles/:id/legacy-import": "{idempotencyKey,records:[{key,value}]} -> {import:{id,status:'legacy/unverified',recordCount,createdAt},creditsDelta:0}; only call after explicit client confirmation; never delete local source",
+    "GET /profiles/:id/legacy-import": "{imports:[{id,status,recordCount,createdAt,records:[{key,value}]}]}",
+    "POST /profiles/:id/attempts": "{objectiveId,difficulty,idempotencyKey,sourceSelector?:{kind:\"word-problems\",selectionId}} -> 201 {attempt:{id,status:'issued',objectiveId,moduleId,difficulty,bucketKey,createdAt,assessment:publicDefinition}}",
+    "GET /profiles/:id/attempts": "{attempts:[attempt,...]}; limit 100 by default, maximum 500, optional ?limit=&before=",
+    "GET /profiles/:id/attempts/:attemptId": "{attempt}; issued assessment contains no solution. submitted attempt includes immutable original responses, current result, explanations and gradeHistory of original and appended revisions",
+    "POST /profiles/:id/attempts/:attemptId/submit": "{responses:{[item.id]:rawAnswer},idempotencyKey} -> {attempt,result:{rawScore,maxScore,normalizedScore:0..10000,creditsDelta:integer,creditsAfter:integer,gradeRevision:0,items:[...],ledger:[...],serverTime}}; score/correct/module/profile metadata are rejected",
+    "GET /profiles/:id/growth": "{totals:{credits,points,submittedAttempts,buckets},moduleContributions:[{moduleId,credits,points}],trends:[{date,delta,credits}],buckets:[{bucketKey,objectiveId,moduleId,difficulty,grade,bestScore,credits,first,latest,best,items:[{itemKey,first,latest,best,firstCorrect}]}],ledger:[...],legacy:{imports,records},unit:{unitsPerPoint:100,bucketMaximum:10000},description}; scores are observed assessment results, not an exact mastery estimate"
+  },
+  "conflicts": {
+    "revision_conflict": "HTTP 409 {code:'revision_conflict',current:snapshot|null}; keep both copies until explicit resolution",
+    "idempotency_conflict": "HTTP 409 {code:'idempotency_conflict'} when the same key is reused with different request content",
+    "attempt_finalized": "HTTP 409 {code:'attempt_finalized'} for a different submission after finalization; same key and same content replay the original result"
+  },
+  "limits": {
+    "jsonBodyBytes": 1048576,
+    "savePayloadBytes": 524288,
+    "profilesPerAccount": 32,
+    "legacyRecords": 256,
+    "idempotencyKeyCharacters": 128
+  },
+  "grading": {
+    "normalization": "round-half-up(rawScore*10000/maxScore), integer arithmetic",
+    "growth": "max(0,newBest-oldBest); fixed objective+grade/difficulty+compatible rule bucket; 100 points maximum per bucket",
+    "distribution": "largest remainder with stable item ordering, proportional to server graded earned score; zero-earned items receive no positive credit",
+    "completion": "each finalized attempt atomically records completion and an assessment:objectiveId save revision",
+    "internalRevision": "CLI only; append immutable grade revisions and signed correction/reversal ledger entries; no client ledger write API"
+  },
+  "publicWordProblemInput": {
+    "approval": "Human approval stays false with truthful assistant review. All 1391 non-quarantined questions remain available in ordinary classified practice; only the original 7 problem questions are isolated. There is no fixed practice/exam split or source/family eligibility gate. A fixed server release fingerprint binds issued/grading content.",
+    "parts": "A text item may publish parts:[{key,label,unit,type:'text'|'choice',placeholder,requireSimplified,requirePercent,choices?}], without any answer value. Render ordinary child-facing fields, internally serialize exact part keys and raw string values as one JSON string response. Tuple grader rejects missing/extra fields, non-string values, or part values exceeding 80 characters; whole response is limited to 2000 characters.",
+    "family": "Source/story/family are provenance only. All mapped questions use the existing canonical math objective, grade/difficulty, fixedCount, compatible/reward version 1 and the same historical-best cap as native questions. Small classified pools use the original same-objective/difficulty native issuer to fill the original fixedCount; no new goals or reward buckets.",
+    "selection": "GET /capabilities publishes wordProblemSources.assessmentSelections with selectionId, Chinese context, objectiveId, difficulty, original fixedCount, availableQuestions and nativeSupplementCount. Issued sourceContext records curatedQuestionCount and nativeSupplementCount. A single mapped classified question is usable; families do not gate issuance. Specific unresolved goal mappings are listed for decision while practice remains available."
+  },
+  "currentClassroom": {
+    "spaceflight": "Current 0.5.0 classroom has 63 stages. Only Node /mathphysics/lessons/spaceflight/ HTML responses inject an ordered sync bridge and no-store cache policy; original disk course, static-root serving and file:// remain the current unmodified zero-credit classroom.",
+    "static": "Without the optional API, all native practice and previews are zero-credit local records. New formal assessments require online server issuance."
+  }
+}

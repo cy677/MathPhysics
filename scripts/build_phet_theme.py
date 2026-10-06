@@ -10,6 +10,7 @@ import base64, hashlib, json, re
 from pathlib import Path
 from phet_registry import register_expansion
 from phet_expansion_art import apply_art
+from phet_workbench_theme import apply_workbench_theme
 
 ROOT=Path(__file__).resolve().parents[1]
 ASSETS=ROOT/'src/phet/assets'
@@ -132,6 +133,9 @@ def build(sim):
         theme_expansion(sim, text, patch)
         expansion_hook=apply_art(sim, source.decode('utf8'), patch)
 
+    if sim in ('vector-addition','states-of-matter-basics','build-a-molecule'):
+        apply_workbench_theme(sim, text, patch)
+
     if sim not in EXPANSIONS and sim!='area-builder':
         color={'forces-and-motion-basics':'Rn','energy-skate-park-basics':'_A','vector-addition':'Jo'}[sim]
         patch(f'e=>e?{color}.WHITE:{color}.BLACK',f'e=>new {color}("#315d4b")',1)
@@ -148,9 +152,12 @@ def build(sim):
            'fractions-intro':'t','fraction-matcher':'e','balancing-act':'F.Ilk',
            'circuit-construction-kit-dc':'ma','states-of-matter-basics':'ol','build-a-molecule':'to'}[sim]
     patch(f'RESET_ALL_BUTTON_BASE_COLOR:new {color}(247,151,34)',f'RESET_ALL_BUTTON_BASE_COLOR:new {color}(219,155,61)',1)
-    hook='\n<!-- Science Island display adaptation; upstream credits and all simulation logic retained. -->\n<link rel="stylesheet" href="../../theme.css">\n<script src="../view.js" defer></script>\n'
+    hook='\n<!-- Science Island display adaptation; upstream credits and all simulation logic retained. -->\n<link rel="stylesheet" href="../../theme.css">\n<script src="../../sync-client.js" defer></script><script src="../../sync-ui.js" defer></script><script src="../sync.js" defer></script>\n<script src="../view.js" defer></script>\n'
     if sim in EXPANSIONS:
         hook+=expansion_hook
+    if sim in ('vector-addition','states-of-matter-basics','build-a-molecule'):
+        revision=sha((ROOT/'src/phet/workbench.js').read_bytes()+(ROOT/'src/phet/workbench.css').read_bytes())[:12]
+        hook += f'<script src="../workbench.js?v={revision}" defer></script>\n'
     if sim=='area-builder':
         hook += '<script src="../../progress.js" defer></script>\n<script src="../progress.js" defer></script>\n'
     ending=text[text.rfind('</body>'):]

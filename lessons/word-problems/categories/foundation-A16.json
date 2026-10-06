@@ -1,0 +1,1862 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "foundation-A16",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0030",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "两方案货币总额比较",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-c4ac670a50fe63a5",
+      "assessmentGroup": "assessment-c4ac670a50fe63a5",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "希阿姨有2枚1分硬币、2枚1角硬币和2枚5分硬币。小雅有4枚1分硬币、1枚5分硬币和1枚1角硬币。谁的钱更多？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "希阿姨",
+          "小雅"
+        ],
+        "value": "希阿姨"
+      },
+      "intent": "分别合计两人的硬币金额，再作对象判断。",
+      "hints": [
+        "不能只数硬币枚数，要看面值。"
+      ],
+      "steps": [
+        "希阿姨有2×1＋2×10＋2×5＝32（分）。",
+        "小雅有4×1＋1×5＋1×10＝19（分）。",
+        "32＞19，所以希阿姨的钱更多。"
+      ],
+      "commonMistakes": [
+        "两人都有6枚硬币，就误认为钱一样多。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "元角分换算",
+        "数量比较"
+      ],
+      "adaptation": [
+        "把原1、10、5美分硬币改为人民币1分、1角、5分，显式列出面值并重算两人的32分与19分；与0031保持同一人物译名。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0030",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "667c7b65acae726f01a0aa76d1bc3a911133a4127300dfbdb35f7f81a138dcb7",
+        "recordSha256": "2660535193cd444089b92769a61faeda6e70dc820bfcb9de43e9601f7ba89a99",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0030",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "6cb2216ec6c11b7836cde00e68722066e7228fb9733827ee55116d70131d5e2c",
+        "sourceDraftSha256": "6cb2216ec6c11b7836cde00e68722066e7228fb9733827ee55116d70131d5e2c",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "fd829122965459092330eacbd551e8ad3595cefd7567073faa50f55416c36360"
+      },
+      "contentSha256": "fd829122965459092330eacbd551e8ad3595cefd7567073faa50f55416c36360"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0155",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "有限方案与最少数量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-e7e77df5fa2866f9",
+      "assessmentGroup": "assessment-e7e77df5fa2866f9",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "希阿姨买一支17角的铅笔，只能用1元、5角和1角硬币恰好付清，不找零。每种硬币都有足够多枚。最少要用多少枚硬币？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "枚"
+      },
+      "intent": "在明确的可用面值中找最少枚数的付款方案。",
+      "hints": [
+        "1元＝10角；先看能否用一枚最大的硬币。"
+      ],
+      "steps": [
+        "用1枚1元硬币，还差17－10＝7（角）。",
+        "再用1枚5角硬币和2枚1角硬币，共1＋1＋2＝4（枚）。",
+        "不用1元硬币时，3枚硬币最多15角；用1元硬币时，剩余7角不能用2枚5角或1角硬币组成，所以3枚不能付清，4枚最少。"
+      ],
+      "commonMistakes": [
+        "没有凑齐17角就停止。",
+        "把“最少”当成任意一种付款方案。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "元和角的换算",
+        "有限方案比较"
+      ],
+      "adaptation": [
+        "原题没有列出可用硬币面值，按原算式10/5/1的结构改成人民币1元、5角、1角，明确每种充足且恰好付款；价格重设为17角，独立验证最少4枚。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0155",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "88df9de51602ca4738f3c51731195a42580c6c683a94e701f0136642f46b1187",
+        "recordSha256": "850647c72772cdbaaecebbd4fd45c770d01a515a89ebaa3fca992fe40177681c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0155",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "aa09e06bdf2b0056255667d75a2758a891e5147dac46c11bd22f9097324012e6",
+        "sourceDraftSha256": "0a5557c31c0f0aee26730c9af78051fba05a968a0601fed556fc96328819c88b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6abed38de966332b500b2a594c7404a213b1107ccd9d080ed795b6023d3b1ead"
+      },
+      "localCategoryOverride": {
+        "category": "A16",
+        "subcategory": "有限方案与最少数量",
+        "level": "I2",
+        "reason": "1元、5角、1角面值充足且不找零，求17角恰付的最少枚数，需要排除更少方案。"
+      },
+      "contentSha256": "6abed38de966332b500b2a594c7404a213b1107ccd9d080ed795b6023d3b1ead"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0162",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "有限方案与最少数量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-7566e15e2f78d3ca",
+      "assessmentGroup": "assessment-7566e15e2f78d3ca",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "口袋里共有28美分，硬币面值可以是1美分、5美分、10美分或25美分。最少可能有多少枚硬币？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "枚"
+      },
+      "intent": "用给定面值凑出金额，并找最少枚数。",
+      "hints": [
+        "先试25美分硬币，剩下的钱能用哪些硬币补足？"
+      ],
+      "steps": [
+        "1枚25美分硬币和3枚1美分硬币可以凑成28美分，共4枚。",
+        "再检查3枚或更少是否可能：如果有25美分硬币，还差3美分，最多2枚硬币凑不出3美分。",
+        "如果没有25美分硬币，5美分和10美分都是5的倍数；凑28美分至少要3枚1美分硬币。若总共最多3枚，就只能有这3枚1美分硬币，总额只有3美分，也不可能。",
+        "所以最少需要4枚硬币。"
+      ],
+      "commonMistakes": [
+        "把28美分当成28枚硬币",
+        "没有检查所用面值是否存在。"
+      ],
+      "prerequisites": [
+        "列表或画图推理",
+        "按条件逐项检查",
+        "钱币单位",
+        "整数加减法"
+      ],
+      "adaptation": [
+        "原题没有列出面值，但源式使用25美分和1美分，补明美国常用1、5、10、25美分面值，保留28美分和求最少硬币数的目标。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0162",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "37cabfde995b9c19c506866ed4d2214e4c9bb23cfea964273ebe0c8c76f33cc8",
+        "recordSha256": "534e3ccf082002d59662e0f66e9223c867ee33467f9def4484a84605bf043c1f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0162",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "6649cc7cf6904ffc222bbda130ecb5c7ec7a80202133acde704d7133a9966e36",
+        "sourceDraftSha256": "52899f0aecf24e1a07ab6c8f53b633c2095171bbcdc081be9149f464f64142ed",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "86c1e0e109484b3536e53c5c778f3aa82d1ea538a58771e6f5b25b7d83b12d12"
+      },
+      "localCategoryOverride": {
+        "category": "A16",
+        "subcategory": "有限方案与最少数量",
+        "level": "I2",
+        "reason": "硬币仅有1、5、10、25美分，目标28美分且须枚数最少；比较可行组合并排除三枚及以下，不是单纯合计。"
+      },
+      "contentSha256": "86c1e0e109484b3536e53c5c778f3aa82d1ea538a58771e6f5b25b7d83b12d12"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0173",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "数量阈值与相等判断",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-a45007f8ec6a747d",
+      "assessmentGroup": "assessment-a45007f8ec6a747d",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小卡想买一支75分的笔，她有2枚5角硬币和3枚1角硬币。她的钱够买这支笔吗？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "够",
+          "不够"
+        ],
+        "value": "够"
+      },
+      "intent": "合计不同面值的钱，再判断是否达到价格。",
+      "hints": [
+        "把5角和1角都换成分。"
+      ],
+      "steps": [
+        "她有2×50＋3×10＝130（分）。",
+        "130≥75，所以钱够，还会剩130－75＝55（分）。"
+      ],
+      "commonMistakes": [
+        "只数5枚硬币，忽略面值。",
+        "把5角当成5分。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "元角分换算",
+        "数量阈值"
+      ],
+      "adaptation": [
+        "原25、10美分硬币重设为人民币5角、1角，笔价重设为75分；按新面值重算130分并作够不够选择。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0173",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "6ffc748fb0d160ee91da12a8d35e67018acca53704293aacd5a6e8706a9c0b2f",
+        "recordSha256": "d2ae8fefada3d59eb08d70fce9ea6f54e2ca49f90d4b4879489e5795362503e2",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0173",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a9cc6882b5b5fa398cbae03fa3e09cdcf84e2d2a8fc954294ae3c88619ff2a98",
+        "sourceDraftSha256": "a9cc6882b5b5fa398cbae03fa3e09cdcf84e2d2a8fc954294ae3c88619ff2a98",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f3d5998aa3ee997c47a4516db68a3d5280d2a85dfc065ab22d2d54f667b2ebd8"
+      },
+      "contentSha256": "f3d5998aa3ee997c47a4516db68a3d5280d2a85dfc065ab22d2d54f667b2ebd8"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0184",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "数量阈值与相等判断",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-282ef3eeefb93459",
+      "assessmentGroup": "assessment-282ef3eeefb93459",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小凯有4枚1角硬币、1枚5分硬币和1枚5角硬币。买一本1.00元的小书，钱够吗？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "够",
+          "不够"
+        ],
+        "value": "不够"
+      },
+      "intent": "统一货币单位后作够不够判断。",
+      "hints": [
+        "1元＝100分，先合计现有钱数。"
+      ],
+      "steps": [
+        "共有4×10＋1×5＋1×50＝95（分）。",
+        "书价1.00元＝100分。",
+        "95＜100，钱不够，还差5分。"
+      ],
+      "commonMistakes": [
+        "把1元当作10分。",
+        "将5角误读成25分。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "元角分换算",
+        "数量阈值"
+      ],
+      "adaptation": [
+        "原10、5、25美分硬币改为人民币1角、5分、5角，书价重设为1元；按新面值重算95分，而非搬用源70美分。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0184",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "615fa3b4bff96ba8b971bbbba1466421fbd7a7152bcc9e8b3b116c3777cfbd9b",
+        "recordSha256": "c0553685fd889463c2d138e84c5cd23c8ce415f0e628abc8ca728b94cf92330e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0184",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "cfd263520293244e7165d644e79809947b46a3414670a42d43b3fdba03825f2a",
+        "sourceDraftSha256": "cfd263520293244e7165d644e79809947b46a3414670a42d43b3fdba03825f2a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6809ba6af98aaf55678aa55cef6d1b830eba99184a1514db1e0fc7324e44d9e5"
+      },
+      "contentSha256": "6809ba6af98aaf55678aa55cef6d1b830eba99184a1514db1e0fc7324e44d9e5"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0190",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "数量阈值与相等判断",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-b62d435d6dfcad8b",
+      "assessmentGroup": "assessment-b62d435d6dfcad8b",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小亚有5枚1角硬币、4枚5分硬币和1枚1分硬币。买一顶90分的纸帽，钱够吗？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "够",
+          "不够"
+        ],
+        "value": "不够"
+      },
+      "intent": "用硬币总金额与商品价格比较。",
+      "hints": [
+        "1角＝10分。"
+      ],
+      "steps": [
+        "共有5×10＋4×5＋1×1＝71（分）。",
+        "71＜90，钱不够，还差90－71＝19（分）。"
+      ],
+      "commonMistakes": [
+        "把5枚1角硬币当作5分。",
+        "只比较硬币枚数10与价格90。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "元角分换算",
+        "数量阈值"
+      ],
+      "adaptation": [
+        "原10、5、1美分硬币改为人民币1角、5分、1分，帽价重设为90分；合计71分，差19分，判断不够。",
+        "明确90分商品为廉价纸帽，以匹配所设教学价格尺度。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0190",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "cc85ad7c157b5191ca212563ec6fa551b4d4e9d17cc74868d99108105203c17b",
+        "recordSha256": "6745bd937ba350c860d11ff01af9cd945c8500489eab61bdbb99f5bd89bfc20f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0190",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "11209baa90184e47895fa6dabd38e59517e3535bf53aa4d2e298a09e88f8807b",
+        "sourceDraftSha256": "7fb41eb8f9cae88031deaa67c5316a84b93a9e824021bbaed0a6bc00018582de",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "161e189bb2e97ad6a30094328f3f0a79799731466fa3f175984a90974743a685"
+      },
+      "contentSha256": "161e189bb2e97ad6a30094328f3f0a79799731466fa3f175984a90974743a685"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0196",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "对象数量或长度比较",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-59f507d1a73a0818",
+      "assessmentGroup": "assessment-59f507d1a73a0818",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小博有50颗彩虹糖，小本有20颗巧克力糖。谁的糖果颗数更多？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "小博",
+          "小本"
+        ],
+        "value": "小博"
+      },
+      "intent": "比较两人的糖果数量，回答人物。",
+      "hints": [
+        "比较50颗和20颗。"
+      ],
+      "steps": [
+        "50＞20，所以小博的糖果颗数更多。"
+      ],
+      "commonMistakes": [
+        "看到糖果种类不同，就改为比较题中没有给出的重量。"
+      ],
+      "prerequisites": [
+        "整数大小比较"
+      ],
+      "adaptation": [
+        "将品牌Skittles和M＆M概括为对应糖果种类，明确按颗数比较。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0196",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "9afe2007a7ae67836eee55127f93d1389ce14f4953fae99a471ebadd8c523e26",
+        "recordSha256": "d90748aa4cddce73263dfe055304a7be477ff9f8573bcb1261c1ffb450912681",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0196",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "ff513a8bb2db5b0b90642d1a676dec5afefdb09dad861528ff1baa5d5d5793ed",
+        "sourceDraftSha256": "ff513a8bb2db5b0b90642d1a676dec5afefdb09dad861528ff1baa5d5d5793ed",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "273f868bf29fdf6d64042e9a2af8c0048aeee4d369f9b8cdf9284daa884a513a"
+      },
+      "contentSha256": "273f868bf29fdf6d64042e9a2af8c0048aeee4d369f9b8cdf9284daa884a513a"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0795",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "有限方案与最少数量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-0ed7ec79acb05cca",
+      "assessmentGroup": "assessment-0ed7ec79acb05cca",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "运输公司有95吨油，要装入两种储油罐。大罐装满6吨，小罐装满5吨，每个使用的罐都必须装满。为了使用最少的储油罐，需要用多少个小罐？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "1",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "在总量与每桶容量约束下，找最少桶数及小桶数量。",
+      "hints": [
+        "大罐装得更多，但也要恰好装完95吨。"
+      ],
+      "steps": [
+        "15个大罐最多装15×6＝90（吨），所以储油罐总数至少16个。",
+        "用15个大罐装90吨，余95－90＝5（吨），正好用1个小罐。",
+        "这样共16个罐达到最少，需要1个小罐。"
+      ],
+      "commonMistakes": [
+        "只计算95÷5。",
+        "为了减少罐数而让最后一个大罐不装满。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "列表或画图推理",
+        "按条件逐项检查"
+      ],
+      "adaptation": [
+        "源题的5吨、6吨油桶改称工业储油罐，保留容量数值、装满约束、最少总容器数与求小容器数的目标。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0795",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "0d76871b2a860d3457e45d4a929fae39a7d7d5bfdff51d3fa95efb36ecad0d88",
+        "recordSha256": "b25335b23d5fcf910321b5f9e71bf786bf273f34dc4076fe51fa28d0cb47ff3e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0795",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "95774d88d7837076256dae748ce037540ff855d565b958267790ccf3d4acc126",
+        "sourceDraftSha256": "e90c1bea55533f55d069e6e4542bc76a2493517a38180f470c5a37f83d0f074b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6049e379dd28b359f05ee10be843b5d7d01698286c049b387e0fc170433c0bfa"
+      },
+      "localCategoryOverride": {
+        "category": "A16",
+        "subcategory": "有限方案与最少数量",
+        "level": "I2",
+        "reason": "大小储油容器分别6吨、5吨，95吨需全部装满且总容器数最少；先证至少16个，再由6×16-95=1确定1个小容器。"
+      },
+      "contentSha256": "6049e379dd28b359f05ee10be843b5d7d01698286c049b387e0fc170433c0bfa"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0803",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "有限方案与最少数量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-608f22a5660ffe49",
+      "assessmentGroup": "assessment-608f22a5660ffe49",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "李先生要运134吨水果，大货车每辆装满15吨，小货车每辆装满7吨，每辆车都必须装满。使用车辆总数最少时，需要几辆小货车？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "辆"
+      },
+      "intent": "在满载约束下找最少车辆组合。",
+      "hints": [
+        "9辆大货车会装135吨，换成1辆小货车会少8吨，能否恰好装134吨？"
+      ],
+      "steps": [
+        "8辆大货车最多装120吨，所以至少需要9辆车。",
+        "9辆全是大车可装135吨，每换1辆小车减少15－7＝8吨，无法只减少1吨，所以9辆不行。",
+        "用8辆大车装120吨，余134－120＝14吨，需14÷7＝2辆小车。",
+        "共10辆达到最少，需要2辆小货车。"
+      ],
+      "commonMistakes": [
+        "只按134÷15向上取整得9辆，忽略每车必须装满",
+        "只求车总数而未答小车数。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "列表或画图推理",
+        "按条件逐项检查"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0803",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e900720b14d88e791c471276f76acfb859679b750348888bed1f321e9b368a22",
+        "recordSha256": "45fd7ad9922b5eddd6fcc08a3b30738ca8bb43a1d9fb9896e5233732555b2bcf",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0803",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f0eb9b4a7d5a4983d3c5fc5bf05b57bb9209ba8263deee70589e88f40174286c",
+        "sourceDraftSha256": "9afe05d4bbc71beb49e4b2b1eacacc6bb797c7d1ad69a55d8bea6b5ec9207d53",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8f099ec6dd5592a03ebd940c0378d7d7211afb408b2f2def42ef94236fb8f080"
+      },
+      "localCategoryOverride": {
+        "category": "A16",
+        "subcategory": "有限方案与最少数量",
+        "level": "I2",
+        "reason": "大/小车每辆载15吨/7吨，134吨全部运输且每车装满；九车方程135-8y=134无整数解，十车150-8y=134得2辆小车，须比较最少方案。"
+      },
+      "contentSha256": "8f099ec6dd5592a03ebd940c0378d7d7211afb408b2f2def42ef94236fb8f080"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0811",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "有限方案与最少数量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-51aec67782fe7984",
+      "assessmentGroup": "assessment-51aec67782fe7984",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "芭蕾班有90名学生，要分成每组7人的大组和每组3人的小组，每组人数固定。总组数最少时，应有几个小组？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "在给定组容量下寻找最少分组方案。",
+      "hints": [
+        "13个大组共91人，每换一个小组会少4人。"
+      ],
+      "steps": [
+        "12个大组最多容纳84人，所以总组数至少13个。",
+        "13组若全为大组共91人，每换1组小组少7－3＝4人，无法恰好少1人，13组不行。",
+        "12个大组有12×7＝84人，余90－84＝6人，分成6÷3＝2个小组。",
+        "共14组最少，其中小组2个。"
+      ],
+      "commonMistakes": [
+        "把90÷7的余数6当成小组数",
+        "允许某大组人数不足7人。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "列表或画图推理",
+        "按条件逐项检查"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0811",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "dadef745b0edc0ede39bc2fcf6eb96449ca7f583c0aeb427424683390287e2a5",
+        "recordSha256": "68229609b40efe5a31ca28900e5bcde242b0ee293c945e672ae29e3fd8eee75d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0811",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "35a0970a189ce92f5d1cef9d61b5492ec61c4cacc7c55f39ec7696ba72f97580",
+        "sourceDraftSha256": "5580b648d561a567fa89289d2e14cb79318eb0913526f4ef6523af9070ffe0ce",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "79f09f9a3fbe03b3c01fe9f785c96580f49301dd5d942d169ce76411e06e4d46"
+      },
+      "localCategoryOverride": {
+        "category": "A16",
+        "subcategory": "有限方案与最少数量",
+        "level": "I2",
+        "reason": "分组大小分别7人/3人，共90人且人数用完、组数最少；12组不足、13组91-4y=90不可整分、14组98-4y=90得2个小组。"
+      },
+      "contentSha256": "79f09f9a3fbe03b3c01fe9f785c96580f49301dd5d942d169ce76411e06e4d46"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0829",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "对象数量或长度比较",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-47dfb0242128bbaa",
+      "assessmentGroup": "assessment-47dfb0242128bbaa",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小汤的书包长55厘米，小亚的书包比小汤的短15厘米。谁的书包更短？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "小汤",
+          "小亚"
+        ],
+        "value": "小亚"
+      },
+      "intent": "根据长度差作对象比较。",
+      "hints": [
+        "比55厘米短15厘米，长度需要减去15。"
+      ],
+      "steps": [
+        "小亚的书包长55－15＝40（厘米）。",
+        "40＜55，所以小亚的书包更短。"
+      ],
+      "commonMistakes": [
+        "把“短15厘米”写成55＋15。",
+        "由长度推断题中没有给出的容量。"
+      ],
+      "prerequisites": [
+        "减法",
+        "长度比较"
+      ],
+      "adaptation": [
+        "原问句smaller可能指体积；根据题中给出的唯一尺寸明确为更短，保留长度比较所求。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0829",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "53998461f99066d19438f0482ec581fe613af40c0bed8d9e82884382fd9b42ec",
+        "recordSha256": "e91dd83ae1cd8be502b313a5372aba9bba47f06af4a86e837765f17eb2bd85f5",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0829",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "19f7df41ed687915497032ef2315d95e2a64d21d300138019c2265f420d9c861",
+        "sourceDraftSha256": "19f7df41ed687915497032ef2315d95e2a64d21d300138019c2265f420d9c861",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "a52a2a0cdb64d775fb21735b03bd1276cf0a6fd14ac439a01888adfe2d25e884"
+      },
+      "contentSha256": "a52a2a0cdb64d775fb21735b03bd1276cf0a6fd14ac439a01888adfe2d25e884"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0831",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "对象数量或长度比较",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-04f5ef40554e8b57",
+      "assessmentGroup": "assessment-04f5ef40554e8b57",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小艾的床长200厘米，小吉的床比小艾的长20厘米。谁的床更长？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "小艾",
+          "小吉"
+        ],
+        "value": "小吉"
+      },
+      "intent": "根据增加的长度判断较长对象。",
+      "hints": [
+        "小吉的床需要在200厘米上加20厘米。"
+      ],
+      "steps": [
+        "小吉的床长200＋20＝220（厘米）。",
+        "220＞200，所以小吉的床更长。"
+      ],
+      "commonMistakes": [
+        "把小吉的床长算成200－20。"
+      ],
+      "prerequisites": [
+        "加法",
+        "长度比较"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0831",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "9edfa6d6bfa49ad1c9c21e022b785ca90fdeffafb0db00211a8ad6a3b0f16c42",
+        "recordSha256": "d950b2ed888d6e8cf9161e2d9b3fc6f8b06eab06027cf343b9a628f2af022c25",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0831",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "801ee2682e8f6835b62ee5e8e43f8e8791955dc4a7fc7dc461b766f2d392c3d1",
+        "sourceDraftSha256": "801ee2682e8f6835b62ee5e8e43f8e8791955dc4a7fc7dc461b766f2d392c3d1",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c26d390806761a6ef466121f1997e817ab8767029f16209d44c6041e3e5dfb3f"
+      },
+      "contentSha256": "c26d390806761a6ef466121f1997e817ab8767029f16209d44c6041e3e5dfb3f"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1046",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "两方案的比值比较",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-459dd0798fcff2bd",
+      "assessmentGroup": "assessment-459dd0798fcff2bd",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "新林中学女子田径队有14人参加长跑、20人参加短跑；男子队有10人参加长跑、16人参加短跑。哪支队伍的长跑人数与短跑人数的比值更小？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "女子田径队",
+          "男子田径队"
+        ],
+        "value": "男子田径队"
+      },
+      "intent": "比较两个按同一顺序写出的比值。",
+      "hints": [
+        "比较长跑人数除以短跑人数。"
+      ],
+      "steps": [
+        "女子队比值为14/20＝7/10＝28/40。",
+        "男子队比值为10/16＝5/8＝25/40。",
+        "25/40＜28/40，所以男子队比值更小。"
+      ],
+      "commonMistakes": [
+        "只比较长跑人数14和10。",
+        "把男子队的比值写成16/10。"
+      ],
+      "prerequisites": [
+        "比值",
+        "分数大小比较"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1046",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ac498c10ed5c44d0b1dc67fdc9092f20f2535384b9dc6631e0f464c9b21caac1",
+        "recordSha256": "6b4c45e3f21ac3cbfaf46f41cde09124f3694bbe2587bbe843c5219787244e7e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1046",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "21c9820454f91ffaa028050e7ba90c9a7af8f4a4ed8106ec4844fd5c69d19058",
+        "sourceDraftSha256": "21c9820454f91ffaa028050e7ba90c9a7af8f4a4ed8106ec4844fd5c69d19058",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "736c18f410c2f2066cdc1fb41418d4dae5030684dc813f21e2dc94d900740059"
+      },
+      "contentSha256": "736c18f410c2f2066cdc1fb41418d4dae5030684dc813f21e2dc94d900740059"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1048",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "两方案的比值比较",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-1b505d96194a097c",
+      "assessmentGroup": "assessment-1b505d96194a097c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "上个赛季，小莉的足球队赢8场、输6场；表姐小苏的队赢17场、输14场。哪支队伍的胜场数与负场数的比值更大？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "小莉的球队",
+          "小苏的球队"
+        ],
+        "value": "小莉的球队"
+      },
+      "intent": "比较两队胜场与负场的比值。",
+      "hints": [
+        "胜负比比较的是胜场数除以负场数。"
+      ],
+      "steps": [
+        "小莉的比值为8/6＝4/3＝56/42。",
+        "小苏的比值为17/14＝51/42。",
+        "56/42＞51/42，所以小莉的球队更大。"
+      ],
+      "commonMistakes": [
+        "只因17大于8就判断小苏的胜负比更大。",
+        "把负场数放在分子、胜场数放在分母，颠倒胜负比。"
+      ],
+      "prerequisites": [
+        "比值",
+        "分数大小比较"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1048",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "85c992bc3344d7a2d79c49b81ea756f5c712f9a78086fc030bd5d224fbf594b5",
+        "recordSha256": "563f6d6c27bae43fefac29a479af93b116aac0b3624a7178fa1e14f7c2691512",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1048",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "860e6052a02a68aed0be21b8d8e9745ab0784b4802f6684ec9c20ee752b90cd1",
+        "sourceDraftSha256": "a74eca09378471e71d7ce12017797dd030001342084297e7b5b6990b76619686",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "0a0024fe26b4498413f22a003f89b964a3175f6efd7485331f7caf63245e65c1"
+      },
+      "contentSha256": "0a0024fe26b4498413f22a003f89b964a3175f6efd7485331f7caf63245e65c1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1049",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "两方案的比值比较",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-226f54a2770211bf",
+      "assessmentGroup": "assessment-226f54a2770211bf",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小艾做了14个苹果派和8个蓝莓派，小珊做了12个苹果派和4个蓝莓派。谁的苹果派数量与蓝莓派数量的比值更大？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "小艾",
+          "小珊"
+        ],
+        "value": "小珊"
+      },
+      "intent": "比较两个部分量之间的比值。",
+      "hints": [
+        "苹果派数量放在分子，蓝莓派数量放在分母。"
+      ],
+      "steps": [
+        "小艾的比值为14÷8＝1.75。",
+        "小珊的比值为12÷4＝3。",
+        "3＞1.75，所以小珊的比值更大。"
+      ],
+      "commonMistakes": [
+        "只比较苹果派14个与12个。"
+      ],
+      "prerequisites": [
+        "比值",
+        "小数或分数比较"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1049",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "283bcd47e70741da786be128fc5d8610b3918a9ba3e41729430acffdb5601e83",
+        "recordSha256": "5835f4198b9f7b68eaf1b284935709d740428f4f503cbfa14d50faa9d2399382",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1049",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "3a55afc38f4ea8f6497f37884d19e5fb1ef62c072710c25e3ffb6393def279f8",
+        "sourceDraftSha256": "3a55afc38f4ea8f6497f37884d19e5fb1ef62c072710c25e3ffb6393def279f8",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "5d454f344545390a26aa83f26eb29e1232704fe84a4a120bc9bb23ffc794b4ed"
+      },
+      "contentSha256": "5d454f344545390a26aa83f26eb29e1232704fe84a4a120bc9bb23ffc794b4ed"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1058",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "两方案的比值比较",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-02c818dc8a772e19",
+      "assessmentGroup": "assessment-02c818dc8a772e19",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小瑞抽屉里有18枚回形针和12根橡皮筋，小米文具盘里有15枚回形针和10根橡皮筋。谁的回形针数量与橡皮筋数量的比值更小，还是两人的比值相等？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "小瑞的比值更小",
+          "小米的比值更小",
+          "两人的比值相等"
+        ],
+        "value": "两人的比值相等"
+      },
+      "intent": "判断两个比值相同的比较结果。",
+      "hints": [
+        "分别化简两个比。"
+      ],
+      "steps": [
+        "小瑞的比值为18/12＝3/2。",
+        "小米的比值为15/10＝3/2。",
+        "两个比值相等。"
+      ],
+      "commonMistakes": [
+        "因15小于18就判断小米的比值小。",
+        "只比较回形针总数。"
+      ],
+      "prerequisites": [
+        "比值",
+        "分数化简"
+      ],
+      "adaptation": [
+        "原问句问谁更小，但实际比值相等；在问句及选项中明确提供相等结果，保留原数学判断。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1058",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ea8e4ef579dc3971da998d67b44510a2fd047d238b62401b12c6224674423428",
+        "recordSha256": "0eb1ec3b653957cafdb8755adc173bb0859d92b9661e2ed3905f60c9af945d36",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1058",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "195e292ce80972febd7f1f767c0343b3b35819713bbbea808891bf2e3b2d5479",
+        "sourceDraftSha256": "195e292ce80972febd7f1f767c0343b3b35819713bbbea808891bf2e3b2d5479",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ab02da3a8dff67ddefe04b9f096ed047238f98793a7ce47f1018660785f7d4fb"
+      },
+      "contentSha256": "ab02da3a8dff67ddefe04b9f096ed047238f98793a7ce47f1018660785f7d4fb"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1059",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "两方案的比值比较",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-179c5066d902d6d2",
+      "assessmentGroup": "assessment-179c5066d902d6d2",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "郭家的婚礼上，新郎一方有12位客人，新娘一方有15位客人。潘家的婚礼上，新郎一方有11位，新娘一方有14位。哪场婚礼的新郎方人数与新娘方人数的比值更大？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "郭家的婚礼",
+          "潘家的婚礼"
+        ],
+        "value": "郭家的婚礼"
+      },
+      "intent": "比较两场婚礼按同一顺序计算的人数比值。",
+      "hints": [
+        "把两个分数化成相同分母比较。"
+      ],
+      "steps": [
+        "郭家的比值为12/15＝168/210。",
+        "潘家的比值为11/14＝165/210。",
+        "168/210＞165/210，所以郭家的婚礼比值更大。"
+      ],
+      "commonMistakes": [
+        "颠倒新郎方与新娘方的顺序。",
+        "只比较两场总人数。"
+      ],
+      "prerequisites": [
+        "比值",
+        "分数大小比较"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1059",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "0df38722d2970bbd2942255704fc561dd0f1aa853b5ad9764f49ea5d3edb9c29",
+        "recordSha256": "6e2230f3b80abb4d0651e12b5f520af8b9317687ff1fe93ec59c3d22226635ec",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1059",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b0ba63d2fed033d0a64de697d4ef4c6c040e0b87b05e664088b6d0d27f307e28",
+        "sourceDraftSha256": "b0ba63d2fed033d0a64de697d4ef4c6c040e0b87b05e664088b6d0d27f307e28",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "65b40382f4560ebeb9951768e508592e9de022fb438ab63ae41bf566e4400c17"
+      },
+      "contentSha256": "65b40382f4560ebeb9951768e508592e9de022fb438ab63ae41bf566e4400c17"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1061",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "两方案的比值比较",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-05d9b56a772a93ab",
+      "assessmentGroup": "assessment-05d9b56a772a93ab",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "宠物城的艾伦店有5只仓鼠和6只沙鼠，西福店有7只仓鼠和12只沙鼠。哪家店的仓鼠数量与沙鼠数量的比值更小？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "艾伦店",
+          "西福店"
+        ],
+        "value": "西福店"
+      },
+      "intent": "比较两处不同总量的相同比值。",
+      "hints": [
+        "用仓鼠数除以沙鼠数。"
+      ],
+      "steps": [
+        "艾伦店的比值为5/6＝10/12。",
+        "西福店的比值为7/12。",
+        "7/12＜10/12，所以西福店更小。"
+      ],
+      "commonMistakes": [
+        "看到西福店仓鼠7只比5只多，就判断比值更大。"
+      ],
+      "prerequisites": [
+        "比值",
+        "分数大小比较"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1061",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "950af5e482dc66dd1cd9d775623beee6c728eddc63a3393f210b9ab6ca8e144b",
+        "recordSha256": "a826a2a2701bb8273a524b3b2609ef267d4fd63178fb0981d90fa5e04eb0378e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1061",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "dc7a314f151c50f7997f8cb94f6f42ee543889ec0e2d7c28d379d82fee46e84b",
+        "sourceDraftSha256": "dc7a314f151c50f7997f8cb94f6f42ee543889ec0e2d7c28d379d82fee46e84b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "22a2d735ac447edfe9234ab0838620121c5a78c720acb156465fcb61b13c2345"
+      },
+      "contentSha256": "22a2d735ac447edfe9234ab0838620121c5a78c720acb156465fcb61b13c2345"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1086",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "有限方案与最少数量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-537cf5168259246a",
+      "assessmentGroup": "assessment-537cf5168259246a",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小琪有一些5角硬币和1角硬币，总共1.20元。她用这两种面值的硬币凑成1.20元，硬币枚数尽可能少。她一共有多少枚硬币？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "枚"
+      },
+      "intent": "比较方案，求恰好组成金额所需的最少硬币数。",
+      "hints": [
+        "先把总额换成角；尽量使用面值大的硬币，再检查更少枚是否可能。"
+      ],
+      "steps": [
+        "1.20元＝12角。",
+        "2枚5角硬币值10角，还差2角，需要2枚1角硬币。",
+        "共2＋2＝4（枚）。3枚硬币的金额可能是3、7、11或15角，都不是12角，所以4枚最少。"
+      ],
+      "commonMistakes": [
+        "把1.20元当成120角。",
+        "只按总额除以5角后舍去不足部分。"
+      ],
+      "prerequisites": [
+        "人民币面值",
+        "元和角的换算",
+        "有限方案比较"
+      ],
+      "adaptation": [
+        "把原25美分、10美分硬币重设为人民币5角、1角硬币，总额为1.20元；重新枚举，最少枚数由原6枚改为4枚。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1086",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "7cddaed40eb9524023441bf27cd13ed6663db1b2e95bb6a7438be2625f9f0080",
+        "recordSha256": "febffe133890393a776de154557424ce5f6df49ee16b79f68729e13fb6bdc539",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1086",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e2f20a01df0aecacce3e3e77cb4c6abeed7bddcd66d68f948cf63f95f506be53",
+        "sourceDraftSha256": "084b1e5904fac74e88dae9a1d08dfcd2c657b68b570dd81ad327d26ae1958be5",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b3404ba38711c8d46d3cbcc3a70c2aa9f97c77123c17a2211f2b7182762afdd4"
+      },
+      "localCategoryOverride": {
+        "category": "A16",
+        "subcategory": "有限方案与最少数量",
+        "level": "I2",
+        "reason": "限定5角、1角面值，凑12角且最小化枚数；单位换算是前置步骤，方案最小性才是所求。"
+      },
+      "contentSha256": "b3404ba38711c8d46d3cbcc3a70c2aa9f97c77123c17a2211f2b7182762afdd4"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1702",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "两方案的单价比较",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-1ceb4f7f022eb9c7",
+      "assessmentGroup": "assessment-1ceb4f7f022eb9c7",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "服装店同款围巾9月卖2条10.70元，10月卖7条37.52元。哪个月份每条围巾的价格更高？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "9月",
+          "10月"
+        ],
+        "value": "10月"
+      },
+      "intent": "把两种总价都换算成单条价格后比较。",
+      "hints": [
+        "两个月售出的条数不同，需要先求单价。"
+      ],
+      "steps": [
+        "9月每条10.70÷2＝5.35（元）。",
+        "10月每条37.52÷7＝5.36（元）。",
+        "5.36＞5.35，所以10月单条价格更高。"
+      ],
+      "commonMistakes": [
+        "只比较总价37.52与10.70，没有除以数量。"
+      ],
+      "prerequisites": [
+        "小数除法",
+        "单价比较"
+      ],
+      "adaptation": [
+        "美元情境改为人民币元，数值保留，不作汇率换算。",
+        "明确同款围巾，保留两月份与价格数据。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1702",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "91bb74f54a525af19bffcc7f947f2f4c4194b0f517fdc2a5e2dc77c71a5c2eb1",
+        "recordSha256": "ee869779e7f7112b8abe31c1dd4b8a0a990cfa9dedf644dcf38a2b5c4eee8f19",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1702",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "8c2f6d8eaa958cf6a73c0db0893182b2eb348beca8bc3ce2e60ff0753ebafc96",
+        "sourceDraftSha256": "8c2f6d8eaa958cf6a73c0db0893182b2eb348beca8bc3ce2e60ff0753ebafc96",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b23a95913cb5a114c1370378d3069f5c54412ef171995b5cf7ecdb54a5a43c09"
+      },
+      "contentSha256": "b23a95913cb5a114c1370378d3069f5c54412ef171995b5cf7ecdb54a5a43c09"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1706",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "两方案的单价比较",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-320af830dbe895dd",
+      "assessmentGroup": "assessment-320af830dbe895dd",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "市场里2袋苹果共10.40元，果园里3袋苹果共15.72元，两处苹果的品种和每袋规格相同。按每袋价格比较，在哪买更划算？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "市场",
+          "果园"
+        ],
+        "value": "市场"
+      },
+      "intent": "根据相同规格商品的单价比较购买方案。",
+      "hints": [
+        "单价更低的方案更划算。"
+      ],
+      "steps": [
+        "市场每袋10.40÷2＝5.20（元）。",
+        "果园每袋15.72÷3＝5.24（元）。",
+        "5.20＜5.24，市场更划算。"
+      ],
+      "commonMistakes": [
+        "只看买2袋总价少，忽略袋数不同。"
+      ],
+      "prerequisites": [
+        "小数除法",
+        "单价比较"
+      ],
+      "adaptation": [
+        "美元情境改为人民币元，数值保留，不作汇率换算。",
+        "补明苹果品种、每袋规格相同，并明确比较标准为每袋价格，使“更划算”有唯一含义。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1706",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "392a1a147c1e4c5d19a2c1778a3b8b20b3e1ae61a190cb197d3ddcb0b2209f3c",
+        "recordSha256": "82acc34cf691feec69bbefc8f634713db813059d8ea1f29acb81be4e8df0d044",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1706",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "d40008c2e2028e14c35e90b22f62705d47c0ebac7d8fd5ca362bec851386f0d3",
+        "sourceDraftSha256": "d40008c2e2028e14c35e90b22f62705d47c0ebac7d8fd5ca362bec851386f0d3",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d36d8a9ab99835758a0d5a2d20a506cf4041df716d83ba4db5393660ffd4bd93"
+      },
+      "contentSha256": "d36d8a9ab99835758a0d5a2d20a506cf4041df716d83ba4db5393660ffd4bd93"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1709",
+      "collection": "foundation",
+      "category": "A16",
+      "subcategory": "两方案的单价比较",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-04de97cc303fe0e8",
+      "assessmentGroup": "assessment-04de97cc303fe0e8",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "漫画展上，摊主甲3本漫画一套共31.77元，摊主乙2本漫画一套共21.32元。哪位摊主的平均每本价格更高？",
+      "answer": {
+        "type": "choice",
+        "choices": [
+          "摊主甲",
+          "摊主乙"
+        ],
+        "value": "摊主乙"
+      },
+      "intent": "计算两种套装的平均单本价格并比较。",
+      "hints": [
+        "比较每本价格，不能只比较一套总价。"
+      ],
+      "steps": [
+        "甲每本31.77÷3＝10.59（元）。",
+        "乙每本21.32÷2＝10.66（元）。",
+        "10.66＞10.59，所以摊主乙平均单价更高。"
+      ],
+      "commonMistakes": [
+        "按套装总价较高就判断单本价格较高。"
+      ],
+      "prerequisites": [
+        "小数除法",
+        "单价比较"
+      ],
+      "adaptation": [
+        "美元情境改为人民币元，数值保留，不作汇率换算。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1709",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "932bc8210848e6542fdf07a7e3dea2a86610ed79ff1f4a5aee87491bff0ddeea",
+        "recordSha256": "58a1b3e1f64f1da9bcc758f6b8983a966548ec66794e373cffade97e385d432a",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1709",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "81dac069d5740620fe964f71e02af0467091acb6113828ed8f6a9b60d150958a",
+        "sourceDraftSha256": "81dac069d5740620fe964f71e02af0467091acb6113828ed8f6a9b60d150958a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "3bce5ed702c3d5fbb7f665c7b28fd3564c888bd9cb2af30d430282f09af4284b"
+      },
+      "contentSha256": "3bce5ed702c3d5fbb7f665c7b28fd3564c888bd9cb2af30d430282f09af4284b"
+    }
+  ]
+}

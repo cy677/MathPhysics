@@ -1,0 +1,1558 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "foundation-A13",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0510",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "余数对应剩余量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-04b39c3d9fbf8268",
+      "assessmentGroup": "assessment-04b39c3d9fbf8268",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小克烤了17个牛角包，尽量平均分给7位客人，每人分到同样多的完整牛角包，牛角包不切开。分完后还剩多少个？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "3",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "求平均分完整物品后的余数。",
+      "hints": [
+        "先看17里最多有几个7。"
+      ],
+      "steps": [
+        "17÷7＝2余3，每位客人分2个。",
+        "分出7×2＝14（个），还剩17－14＝3（个）。"
+      ],
+      "commonMistakes": [
+        "答每位客人分到的2个。",
+        "把余数也分成碎块。"
+      ],
+      "prerequisites": [
+        "有余数除法"
+      ],
+      "adaptation": [
+        "明确完整牛角包不切开、每人一样多且尽量分，补足原题使用余数的条件。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0510",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "d75abf64090691b4ac87563c533e626fd85c92b00ed58864d89580dfc78169d4",
+        "recordSha256": "8036dc7b6a6cbf38961a7afac422c8ab598d26a746d39bd8f6e8533a3cb078c7",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0510",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "73045f51cd00ef5c5cb59c9606cd8b12a4f3c90946779fc833df6d394ea0537b",
+        "sourceDraftSha256": "73045f51cd00ef5c5cb59c9606cd8b12a4f3c90946779fc833df6d394ea0537b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6c01f294815d212a8c8d9da61766c8ca571274381ca3955cdd79e2bc1e0c995a"
+      },
+      "contentSha256": "6c01f294815d212a8c8d9da61766c8ca571274381ca3955cdd79e2bc1e0c995a"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0563",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "去尾求完整份数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-09f29be1ce545cf3",
+      "assessmentGroup": "assessment-09f29be1ce545cf3",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "把34支铅笔尽量平均分给6位朋友，每人得到同样多的完整铅笔，余下的先保留。每位朋友最多得到多少支？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "支"
+      },
+      "intent": "取整数商表示每人可分到的完整数量。",
+      "hints": [
+        "不足再分一轮的铅笔不会使每人的数量增加。"
+      ],
+      "steps": [
+        "34÷6＝5余4。",
+        "每位朋友可得5支，还剩4支，不够再给每人1支。"
+      ],
+      "commonMistakes": [
+        "把余数4当成每人分到的数量。",
+        "将商进一为6支，实际需要36支。"
+      ],
+      "prerequisites": [
+        "有余数除法",
+        "去尾法"
+      ],
+      "adaptation": [
+        "明确等量分完整铅笔、余下保留及每人最多数量，补足原题取整条件。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0563",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "8c2b0c8698886e150b8e9a4b5651c6101f0f27a21477c5eb7656ec83241871e0",
+        "recordSha256": "bfdd6b01b3ac5339078d1da179128c1855ba4c18d7ebe4cc7a1798712b431d61",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0563",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e62642690cc4f2179d09681ae345cf8d4e5f779ead9e02b643958460ba4569dd",
+        "sourceDraftSha256": "e62642690cc4f2179d09681ae345cf8d4e5f779ead9e02b643958460ba4569dd",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "583f44dc185422e416018cc78fba9c53f8e90bc4fcc6e2417ae8e74a8c1186df"
+      },
+      "contentSha256": "583f44dc185422e416018cc78fba9c53f8e90bc4fcc6e2417ae8e74a8c1186df"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0584",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "进一保证全部容纳",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-23872a91de42b53a",
+      "assessmentGroup": "assessment-23872a91de42b53a",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "沃阿姨准备了56个苹果供派对游戏用，每个桶最多装9个。要把这些苹果全部装下，至少需要多少个桶？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "7",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "有余数时增加一个容器保证全部装下。",
+      "hints": [
+        "剩余的苹果也需要一个桶。"
+      ],
+      "steps": [
+        "56÷9＝6余2。",
+        "6个桶装54个，还剩2个，需要再用1个桶。",
+        "至少需要6＋1＝7（个）桶。"
+      ],
+      "commonMistakes": [
+        "只取商6，漏掉剩下2个苹果。"
+      ],
+      "prerequisites": [
+        "有余数除法",
+        "进一法"
+      ],
+      "adaptation": [
+        "把水中取苹果游戏简化为派对游戏，明确全部装下及最少桶数。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0584",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "7da15347693aaca19c23a8fd2904bc9457510292f7050c8e28edd527ddf4d9e5",
+        "recordSha256": "9557aa7c33434542826e8df199bf907f3c5fcd6e8ea3872d1251b67926651fe4",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0584",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9d330d54adcda1f7a60a6a30c0f270268e205def5fe703af9d6c67bfe3803be2",
+        "sourceDraftSha256": "9d330d54adcda1f7a60a6a30c0f270268e205def5fe703af9d6c67bfe3803be2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "496c0d12b92963ffbc99b74928d9057b56c91fdd2e3f263aa24e46c57ea9c324"
+      },
+      "contentSha256": "496c0d12b92963ffbc99b74928d9057b56c91fdd2e3f263aa24e46c57ea9c324"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0675",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "去尾求完整份数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-ba28e79236269c16",
+      "assessmentGroup": "assessment-ba28e79236269c16",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "一家人买了一大桶4升橙汁，每人每次喝一杯180毫升橙汁。这桶果汁最多能倒满多少杯这样的橙汁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "22",
+          "d": "1"
+        },
+        "unit": "杯"
+      },
+      "intent": "统一容量单位并取能倒满的整杯数。",
+      "hints": [
+        "4升要先换成毫升。"
+      ],
+      "steps": [
+        "4升＝4000毫升。",
+        "4000÷180＝22余40。",
+        "最多倒满22杯，剩下40毫升不够再倒满一杯。"
+      ],
+      "commonMistakes": [
+        "把余下40毫升算成一整杯。",
+        "直接用4除以180而不统一单位。"
+      ],
+      "prerequisites": [
+        "容量单位换算",
+        "有余数除法",
+        "去尾法"
+      ],
+      "adaptation": [
+        "原1加仑与每份6盎司的英制情境重设为一桶4升、每杯180毫升；这是公制情境重设而非精确换算，按4000÷180重算为22杯。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0675",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "8fbda42770513b79850b653117b2b0d1a62c76b4244dbc4d8ad5b406c7da7c3a",
+        "recordSha256": "33bd0001173d7677e4c223d240678ea1e490054e40057fc6cdb00ebb94f585ea",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0675",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "892e5613ad440582b35cd2b07425701d2685b41df6e8fb4d1d96d06130ba058d",
+        "sourceDraftSha256": "892e5613ad440582b35cd2b07425701d2685b41df6e8fb4d1d96d06130ba058d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d80f0ccd6ab7cf451d67ce7179a46fe6e15c0badf3cf6045e72b0f5dc25caf14"
+      },
+      "contentSha256": "d80f0ccd6ab7cf451d67ce7179a46fe6e15c0badf3cf6045e72b0f5dc25caf14"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0767",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "余数对应剩余量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-60bea766d14776f4",
+      "assessmentGroup": "assessment-60bea766d14776f4",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "学校有1230名师生去郊游，每辆大巴最多载48人。先把前面的车尽量坐满，最后一辆没有坐满。最后一辆车上有多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "30",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "求尽量装满前面车辆后的余数。",
+      "hints": [
+        "48人一车，先求能坐满几车。"
+      ],
+      "steps": [
+        "1230÷48＝25余30。",
+        "前25辆满载，共48×25＝1200（人）。",
+        "最后一辆有1230－1200＝30（人）。"
+      ],
+      "commonMistakes": [
+        "答共有26辆车。",
+        "把空着的18个座位当成最后一车人数。"
+      ],
+      "prerequisites": [
+        "有余数除法"
+      ],
+      "adaptation": [
+        "明确前面的车先坐满，最后一辆承载余下人数，避免任意分配座位的歧义。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0767",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e91aad5c0bdf08c93d1cb97316c9e79b7abd1a2d676beaa34fa5dd0164ba2cdf",
+        "recordSha256": "b1c898d43be3c40de5caeac002a3205acc829bc5435694fa96d627976163ca2b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0767",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7ad79b9dcdc9d28ec748b73f6d6c5ea6b5f0fd7295d0ffd2c80d7eb62763b129",
+        "sourceDraftSha256": "7ad79b9dcdc9d28ec748b73f6d6c5ea6b5f0fd7295d0ffd2c80d7eb62763b129",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6c7e63a4cb9d871d89e91c69d75c67647f94df5df44a83766c347e8a59064ea0"
+      },
+      "contentSha256": "6c7e63a4cb9d871d89e91c69d75c67647f94df5df44a83766c347e8a59064ea0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0769",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "余数对应剩余量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-da1ecd5c5d6698bb",
+      "assessmentGroup": "assessment-da1ecd5c5d6698bb",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "汤叔叔计划修158块手表，每天最多修12块，前面的天数都按12块修，直到全部修完。最后一天修多少块？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "块"
+      },
+      "intent": "用余数表示最后一天的任务量。",
+      "hints": [
+        "前13天完成的都是整天任务。"
+      ],
+      "steps": [
+        "158÷12＝13余2。",
+        "前13天修12×13＝156（块），最后一天修158－156＝2（块）。"
+      ],
+      "commonMistakes": [
+        "答需要的总天数14天。"
+      ],
+      "prerequisites": [
+        "有余数除法"
+      ],
+      "adaptation": [
+        "明确前面的工作日按每天12块完成，最后一天只修剩余数量。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0769",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "0be2a8dafa7a56cfdccac113d777dc7596ed92e198e3265ec90217a666b7256a",
+        "recordSha256": "13c41e6d3821aa85c0a184d321affb6aebd05aa9f1cbd4c74f92921539fd359a",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0769",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e2d3ed78ceef5d6a037df2012affefedb046c14324c4f9d72653f789ec8d92d8",
+        "sourceDraftSha256": "e2d3ed78ceef5d6a037df2012affefedb046c14324c4f9d72653f789ec8d92d8",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "486a2b32dba1b01842154a87c56120d9b739f00fc86cb31f8dcb1270ca3ab5b6"
+      },
+      "contentSha256": "486a2b32dba1b01842154a87c56120d9b739f00fc86cb31f8dcb1270ca3ab5b6"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0804",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "去尾求完整份数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-9f0fa4c8f14dd105",
+      "assessmentGroup": "assessment-9f0fa4c8f14dd105",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小山有一根3730厘米长的丝带，剪成每段73厘米的完整小段。最多能剪出多少段？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "51",
+          "d": "1"
+        },
+        "unit": "段"
+      },
+      "intent": "用整数商求完整段数。",
+      "hints": [
+        "剩余长度不足73厘米时不能再算一段。"
+      ],
+      "steps": [
+        "3730÷73＝51余7。",
+        "能剪出51段，剩下7厘米。"
+      ],
+      "commonMistakes": [
+        "有余数就进一，答成52段。"
+      ],
+      "prerequisites": [
+        "有余数除法",
+        "去尾法"
+      ],
+      "adaptation": [
+        "明确求最多完整段数；沿用原题理想切割，忽略切口损耗。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0804",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "fbdbe922e375e414a6fb38bbc0f3dc55086a92048b9719ebc5f3ce96705b59fc",
+        "recordSha256": "62b0e649de74cf47d71fc0d4f4548fe90bb7719c24c73e41abe06f3725d7eab2",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0804",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "d3fcab5a38a77b95b546637561c20ab7cdddbc2a995ae9886ee5e4009a614472",
+        "sourceDraftSha256": "d3fcab5a38a77b95b546637561c20ab7cdddbc2a995ae9886ee5e4009a614472",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e243a8d34cdf364e4c81b0fa46ef2d055a8a0616c0d16cb721ebbe691b13fec3"
+      },
+      "contentSha256": "e243a8d34cdf364e4c81b0fa46ef2d055a8a0616c0d16cb721ebbe691b13fec3"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0812",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "去尾求完整份数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-ef5911872d9c6505",
+      "assessmentGroup": "assessment-ef5911872d9c6505",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一壶茶有1050毫升，每杯要倒65毫升。最多能倒满多少杯这样的茶？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "16",
+          "d": "1"
+        },
+        "unit": "杯"
+      },
+      "intent": "求能盛到规定量的完整杯数。",
+      "hints": [
+        "不足65毫升的剩余茶不算倒满一杯。"
+      ],
+      "steps": [
+        "1050÷65＝16余10。",
+        "能倒满16杯，剩下10毫升。"
+      ],
+      "commonMistakes": [
+        "将最后剩下的10毫升也算成满杯。"
+      ],
+      "prerequisites": [
+        "有余数除法",
+        "去尾法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0812",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e846c2b959c83e92fba8ad25a0243eb97fbe5c21247a7ad6ad239590746dd098",
+        "recordSha256": "a0e5ad5b6a3b92f4d69c5885adb07c2b6f0bbd95c02a600f0af5e3f117efc8d9",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0812",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "edae9d529843d20a5de5dbe84d0a11a252271e4367016b67f7e680186458422f",
+        "sourceDraftSha256": "edae9d529843d20a5de5dbe84d0a11a252271e4367016b67f7e680186458422f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b3f321bb20478db4853bd091c162a5de17c501bb4eef46e9cb4c8c20c0f1ff49"
+      },
+      "contentSha256": "b3f321bb20478db4853bd091c162a5de17c501bb4eef46e9cb4c8c20c0f1ff49"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1238",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "余数对应剩余量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-624d8c19316e4a6f",
+      "assessmentGroup": "assessment-624d8c19316e4a6f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "影像店有9张电影光盘，要全部放到2个架子上，每个架子的光盘数相同。至少还要添多少张光盘？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "1",
+          "d": "1"
+        },
+        "unit": "张"
+      },
+      "intent": "用余数求补足下一整组的数量。",
+      "hints": [
+        "9张是奇数，添到最近的偶数就能平分给2个架子。"
+      ],
+      "steps": [
+        "9÷2＝4余1。",
+        "再添2－1＝1（张）就有10张，每个架子5张。"
+      ],
+      "commonMistakes": [
+        "答留下的1张而未理解是还需添的量。",
+        "添3张虽然能平分，却不是最少。"
+      ],
+      "prerequisites": [
+        "有余数除法",
+        "补足整组"
+      ],
+      "adaptation": [
+        "将movies明确为可上架的电影光盘，并把原题“还需多少”明确为至少需要。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1238",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e1581b7721c7fd693f3aef9f45f88663194c5f9e09856a1dfd3eb011ff63c1f6",
+        "recordSha256": "4995dbbaa420417a2ef7d5aaed791e29155d4f8a85b4717ff6142318a1a7102f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1238",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "8c4e29a9c946863d9f50c26c5c93024ba7f640b9e92bdc629d3dd7af109c0286",
+        "sourceDraftSha256": "8c4e29a9c946863d9f50c26c5c93024ba7f640b9e92bdc629d3dd7af109c0286",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ca8cbd1dc9f113b8c8d28ce090119475eee252b1d02393bb165bc7ece9d842b3"
+      },
+      "contentSha256": "ca8cbd1dc9f113b8c8d28ce090119475eee252b1d02393bb165bc7ece9d842b3"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1240",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "余数对应剩余量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-21ac0b7ce4085a12",
+      "assessmentGroup": "assessment-21ac0b7ce4085a12",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "美术馆要把15幅画全部平均分到2个展区，每区画数相同。至少还要增加多少幅画？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "1",
+          "d": "1"
+        },
+        "unit": "幅"
+      },
+      "intent": "求补到可均分总数的最少增加量。",
+      "hints": [
+        "最近的大于15的偶数是16。"
+      ],
+      "steps": [
+        "15÷2＝7余1。",
+        "还需2－1＝1（幅），增加后16÷2＝8（幅）每区。"
+      ],
+      "commonMistakes": [
+        "把余下的一幅丢掉，改变“全部展出”的条件。"
+      ],
+      "prerequisites": [
+        "有余数除法",
+        "补足整组"
+      ],
+      "adaptation": [
+        "明确全部展出及最少增加量，使答案唯一。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1240",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "2127adbab4b3f311c4cbcf497b0ff4c9b6b6e36a6c5e84e93c72e76b1cf4f05b",
+        "recordSha256": "ee3223ef5e8ec40c1546fd6211f56dba1f557bb45218489afe18b8b70f3e7ad0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1240",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "1b8cf1ba5b7459167d1e4b39925261cea18fd2f8f6da453a2496c5bb6811eed6",
+        "sourceDraftSha256": "1b8cf1ba5b7459167d1e4b39925261cea18fd2f8f6da453a2496c5bb6811eed6",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "3184629b13dab516840dde040af66f77350c7472259d33de9a5e64de5774edf6"
+      },
+      "contentSha256": "3184629b13dab516840dde040af66f77350c7472259d33de9a5e64de5774edf6"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1244",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "余数对应剩余量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-29c757280de6e367",
+      "assessmentGroup": "assessment-29c757280de6e367",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "学校有14名学生报名知识竞赛，计划组成4队，每队人数相同，报名学生都参加。至少还要有多少名学生报名？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "根据余数求补齐相同人数队伍所需的人数。",
+      "hints": [
+        "人数要增加到最近的4的倍数。"
+      ],
+      "steps": [
+        "14÷4＝3余2。",
+        "还需4－2＝2（人），共16人，可分为每队4人。"
+      ],
+      "commonMistakes": [
+        "把余数2人当成要去掉的人数。",
+        "直接添4人而不检查最少需要量。"
+      ],
+      "prerequisites": [
+        "有余数除法",
+        "补足整组"
+      ],
+      "adaptation": [
+        "明确已报名者全部参加及至少需增加人数。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1244",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "887bdf8f5a4b4e28f63e1efe6bd241275d7b04055944b54687a18dd70e3de50d",
+        "recordSha256": "1a3ee369fa9e72e0188d885ce9551e663cb6fa730755f1579104def10a720eea",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1244",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "d371fbf00ba90542e344b0e5c6fe8158a95302c3ccffaa185ffd4460b99d3fbe",
+        "sourceDraftSha256": "d371fbf00ba90542e344b0e5c6fe8158a95302c3ccffaa185ffd4460b99d3fbe",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ba960f4037e9390db01f6dcbe6671b1dba9dd8f4ad83f138365cc4c0379bc75e"
+      },
+      "contentSha256": "ba960f4037e9390db01f6dcbe6671b1dba9dd8f4ad83f138365cc4c0379bc75e"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1551",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "进一保证全部容纳",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2ab5ef93d57c3846",
+      "assessmentGroup": "assessment-2ab5ef93d57c3846",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "餐厅需要至少387个新盘子，盘子每盒5个，只能整盒购买。至少要买多少盒？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "78",
+          "d": "1"
+        },
+        "unit": "盒"
+      },
+      "intent": "整盒购买时进一以达到需求。",
+      "hints": [
+        "最后不足一盒的需求也要买一盒。"
+      ],
+      "steps": [
+        "387÷5＝77余2。",
+        "77盒有385个，还差2个，因此至少买77＋1＝78（盒）。"
+      ],
+      "commonMistakes": [
+        "只买77盒，实际盘子不够。"
+      ],
+      "prerequisites": [
+        "有余数除法",
+        "进一法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1551",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "0b8bc6cf58e961a27454647bc511c470b7f0f69c8a5b3f078d88546cdc3372d0",
+        "recordSha256": "25b812024f829d6601ae8c518958008b37e09e47438bc5cad6b9b2aaa0b83778",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1551",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "27d8781bb93d31455c5bafa829d5f9770e409500ff05de2d1c82c65819a7e8b3",
+        "sourceDraftSha256": "27d8781bb93d31455c5bafa829d5f9770e409500ff05de2d1c82c65819a7e8b3",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "fedca5c94d06b068b3a01f940fe5b9c952ba0d9ce0e6efd6f66b2a698807648c"
+      },
+      "contentSha256": "fedca5c94d06b068b3a01f940fe5b9c952ba0d9ce0e6efd6f66b2a698807648c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1570",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "进一保证全部容纳",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-1af521c0fa937ccc",
+      "assessmentGroup": "assessment-1af521c0fa937ccc",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一位建筑工人需要至少154块木板，木板每包3块，只能整包购买。至少要买多少包？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "52",
+          "d": "1"
+        },
+        "unit": "包"
+      },
+      "intent": "根据整包规格求满足需要的最少包数。",
+      "hints": [
+        "51包还不够154块。"
+      ],
+      "steps": [
+        "154÷3＝51余1。",
+        "51包有153块，还差1块，需要再买1包。",
+        "至少买51＋1＝52（包）。"
+      ],
+      "commonMistakes": [
+        "把余数1当成需要买的总包数。",
+        "只取商51包。"
+      ],
+      "prerequisites": [
+        "有余数除法",
+        "进一法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1570",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b5abcf12e1a0b9b7ccafcacdfd69f6a69b7248274e283e6867b98e9f2af7ba9a",
+        "recordSha256": "30dbf23ff77e40ecb1f7083f2afb9e638364d7db3f5c1c3933ab430bac921a48",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1570",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c267f9e7cdf2fe4f0a9b0728528c0119e79a31af0d0e2653b82871661e0c1bb2",
+        "sourceDraftSha256": "c267f9e7cdf2fe4f0a9b0728528c0119e79a31af0d0e2653b82871661e0c1bb2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "7f281932b5f316628069ab17381108f75a916cb7e965ad63cdfca09177db07c3"
+      },
+      "contentSha256": "7f281932b5f316628069ab17381108f75a916cb7e965ad63cdfca09177db07c3"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1603",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "估算与取整规则待明确",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-2eca893881bca0af",
+      "assessmentGroup": "assessment-2eca893881bca0af",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "公司买了121套工作服，准备分给32家门店。用121÷32求平均每店的数量，再把结果四舍五入到整数，估算每店大约得到多少套？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "套"
+      },
+      "intent": "按明确的四舍五入规则估算平均数量。",
+      "hints": [
+        "先求平均值，再看小数部分是否达到0.5。"
+      ],
+      "steps": [
+        "平均每店121÷32＝3.78125（套）。",
+        "小数部分0.78125大于0.5，四舍五入约为4套。"
+      ],
+      "commonMistakes": [
+        "把估算值4套当成每店实际都能得到4套。",
+        "有余数就机械去尾。"
+      ],
+      "prerequisites": [
+        "除法",
+        "四舍五入"
+      ],
+      "adaptation": [
+        "原题只说“大约”而未给方法，明确将精确平均商四舍五入到整数；不把估算当成实际平均分配结果。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1603",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "14294b29d68edfb2ab07462d81a92ba92b5dfa43b77401b60675d6045fedb6a3",
+        "recordSha256": "7662c0ec971fcd232999120fad72fb28555ce6711c880b79b14a9851e87ded0d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1603",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9c22ee25dc5c726b42e7cf055b8f257513759edb44ccbf588d0313bde0ee0878",
+        "sourceDraftSha256": "9c22ee25dc5c726b42e7cf055b8f257513759edb44ccbf588d0313bde0ee0878",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f3b3828b280f7814c754def9b4e0335d3856a1e1a39b510b853c93d2541408e6"
+      },
+      "contentSha256": "f3b3828b280f7814c754def9b4e0335d3856a1e1a39b510b853c93d2541408e6"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1604",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "估算与取整规则待明确",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-c18938cae7d23639",
+      "assessmentGroup": "assessment-c18938cae7d23639",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小卡有159颗珠子，每条项链需要37颗。用159÷37计算，再将结果四舍五入到整数，估计可以做多少条项链？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "条"
+      },
+      "intent": "按指定取整规则估算制作数量。",
+      "hints": [
+        "商的整数部分与余数都要看。"
+      ],
+      "steps": [
+        "159÷37＝4余11，商是4又11/37。",
+        "11/37小于1/2，所以四舍五入约为4条。",
+        "实际也只能做4条完整项链，因为做5条需要185颗。"
+      ],
+      "commonMistakes": [
+        "将余下11颗当成还能做一条完整项链。"
+      ],
+      "prerequisites": [
+        "有余数除法",
+        "四舍五入"
+      ],
+      "adaptation": [
+        "原题未指定估算规则；明确对商四舍五入到整数，并核对完整项链也为4条。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1604",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "d92f67622b42e5c20b45eede420d9ced27d93cf05c05924b6a7d5810d9e805af",
+        "recordSha256": "224934e088858db3a571d5c161f337e462788bf741d999551f1988060e9bef25",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1604",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7a6911d739acc42c77d0a3942050e6ed00d72634f408e1f726eb939c8ac73fb6",
+        "sourceDraftSha256": "7a6911d739acc42c77d0a3942050e6ed00d72634f408e1f726eb939c8ac73fb6",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "40c51fda09c6cb64aa425e465b7ec6b0e7a075c8e36da75acaa362df4450eb19"
+      },
+      "contentSha256": "40c51fda09c6cb64aa425e465b7ec6b0e7a075c8e36da75acaa362df4450eb19"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1606",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "估算与取整规则待明确",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-5f0e9d0e71d66333",
+      "assessmentGroup": "assessment-5f0e9d0e71d66333",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "万圣节时，小亚收到201颗糖果，按每堆43颗来分。用201÷43计算，再将结果四舍五入到整数，估计相当于多少堆？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "堆"
+      },
+      "intent": "用指定方法估算总量相当于多少份。",
+      "hints": [
+        "估算的份数与实际能分出的完整堆数不同。"
+      ],
+      "steps": [
+        "201÷43＝4余29，商是4又29/43。",
+        "29/43大于1/2，所以四舍五入约为5堆。",
+        "若每堆都必须有43颗，实际只能分成4个完整堆，另剩29颗。"
+      ],
+      "commonMistakes": [
+        "把估计的5堆当成5个完整的43颗堆。"
+      ],
+      "prerequisites": [
+        "有余数除法",
+        "四舍五入"
+      ],
+      "adaptation": [
+        "明确原题“approximately”为把商四舍五入到整数，保留估算所求，并补充与完整份数的区别。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1606",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "af388690cbcfaea1a2191d03bc21bc5b60e183acad4c7fb5a76b120cb5f4245a",
+        "recordSha256": "d3bcc1916e0f43390c840facab9da177eec470b09a72c25badfc3878b56a6593",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1606",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c6698ec5fd87494046fe8617a706fbc745c4b8216804de7f849fb073d1004745",
+        "sourceDraftSha256": "c6698ec5fd87494046fe8617a706fbc745c4b8216804de7f849fb073d1004745",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "677f72a42a7cb447601adad43d50bef67506c4bbc1a7635be7c96185c1bd5d71"
+      },
+      "contentSha256": "677f72a42a7cb447601adad43d50bef67506c4bbc1a7635be7c96185c1bd5d71"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1608",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "估算与取整规则待明确",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-67083fee2b0b336f",
+      "assessmentGroup": "assessment-67083fee2b0b336f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小科有36个箱子，总质量243千克。先求平均每箱质量，再把结果四舍五入到整千克。平均每箱大约重多少千克？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "7",
+          "d": "1"
+        },
+        "unit": "千克"
+      },
+      "intent": "求平均质量，并按规定精度取近似值。",
+      "hints": [
+        "求每箱的平均值，用总质量除以箱数。"
+      ],
+      "steps": [
+        "平均每箱243÷36＝6.75（千克）。",
+        "6.75四舍五入到整数为7，所以约重7千克。"
+      ],
+      "commonMistakes": [
+        "只取商的整数部分6。",
+        "把箱子数除以总质量。"
+      ],
+      "prerequisites": [
+        "平均数",
+        "四舍五入"
+      ],
+      "adaptation": [
+        "原题未定义估算方法，明确四舍五入到整千克；原答6与6.75的该规则不符，纠正为7千克。",
+        "原题未说明每箱相同，所求明确为平均每箱质量。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1608",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "4d0a92c0ccdf65ca29bc7db51202bca432e1babb69846720062b38e10bc6399f",
+        "recordSha256": "348175bbc43c4d4d2a1036156417042e3d853bdb9661f46c6efad770937527f7",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1608",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "1488b06153231328d0ee56d7cafd5712967b2b333c585cdcc102465fc1359106",
+        "sourceDraftSha256": "1488b06153231328d0ee56d7cafd5712967b2b333c585cdcc102465fc1359106",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "3b25c20612e091c65c3557054e417b7aba2209b2bed2b1d18b614f7e576eb710"
+      },
+      "contentSha256": "3b25c20612e091c65c3557054e417b7aba2209b2bed2b1d18b614f7e576eb710"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1609",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "估算与取整规则待明确",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-632c39c7f51988f9",
+      "assessmentGroup": "assessment-632c39c7f51988f9",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "保龄球馆有31组顾客，共177人。先求平均每组人数，再将结果四舍五入到整数。估计每组大约有多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "用指定取整规则估算平均每组人数。",
+      "hints": [
+        "177人对应31组。"
+      ],
+      "steps": [
+        "177÷31＝5余22，平均为5又22/31人。",
+        "22/31大于1/2，所以四舍五入约为6人。"
+      ],
+      "commonMistakes": [
+        "直接取商的整数部分5。",
+        "以为每一组实际都必须恰好6人。"
+      ],
+      "prerequisites": [
+        "平均数",
+        "四舍五入"
+      ],
+      "adaptation": [
+        "原题没有给出估算方法，明确将平均商四舍五入到整数。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1609",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "1c6c56bef4ffe2803ffc9887701698b3227c5d3bbbc57f4b484466902aeb787b",
+        "recordSha256": "b056d9d1dd06300484bfc9e5e2c9dcdcd3c66a49ae32312c30765a8e2bc48dad",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1609",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f24f17bcaac54e6b89546b736c5d52b41d09aa3da1c5a0516ea4ac927311910a",
+        "sourceDraftSha256": "f24f17bcaac54e6b89546b736c5d52b41d09aa3da1c5a0516ea4ac927311910a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "cdb149b8a954aed9df9d6cedd9a5d37c24c3722b7ef7fd8294ea4b429f826668"
+      },
+      "contentSha256": "cdb149b8a954aed9df9d6cedd9a5d37c24c3722b7ef7fd8294ea4b429f826668"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1610",
+      "collection": "foundation",
+      "category": "A13",
+      "subcategory": "估算与取整规则待明确",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-864c6d1b272cd43b",
+      "assessmentGroup": "assessment-864c6d1b272cd43b",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "班级收集了122个回收罐，每个袋子最多装57个。老师要求用122÷57计算，将结果四舍五入到整数作为袋数的估算值。这个估算值是多少袋？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "袋"
+      },
+      "intent": "按明确规则进行估算，并区分估算与实际装袋。",
+      "hints": [
+        "这里所求按老师指定的估算方法计算。"
+      ],
+      "steps": [
+        "122÷57＝2余8，商是2又8/57。",
+        "8/57小于1/2，四舍五入的估算值是2袋。",
+        "实际装全部罐子时，2袋只能装114个，还剩8个，所以至少要3袋。"
+      ],
+      "commonMistakes": [
+        "把估算2袋当成能实际装完122个罐子。",
+        "忽略题目指定的四舍五入方法。"
+      ],
+      "prerequisites": [
+        "有余数除法",
+        "四舍五入",
+        "进一法"
+      ],
+      "adaptation": [
+        "原题混用“约需”和实际容量，明确主答为商四舍五入的估算值2袋，并在步骤核对实际全部容纳须3袋。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1610",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "87f0f81fc1c505f880b5659415db9ecf0bde596391c7c608b6d4515076296f6b",
+        "recordSha256": "471626e0c3b50c1a181a07784f9cbc11268a38701b027c33590c25582ebc0a64",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1610",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a9660779d10d1ac3a088e43f9dfcde42d3108861089bbaebd37afc47b0f95422",
+        "sourceDraftSha256": "a9660779d10d1ac3a088e43f9dfcde42d3108861089bbaebd37afc47b0f95422",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "7c9b568c19dca7a5f2e8790a66fce938c3280d1f950bd60e2f8993fe5597416c"
+      },
+      "contentSha256": "7c9b568c19dca7a5f2e8790a66fce938c3280d1f950bd60e2f8993fe5597416c"
+    }
+  ]
+}

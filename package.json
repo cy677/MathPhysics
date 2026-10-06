@@ -6,6 +6,9 @@
   "description": "Interactive primary-school geometry, physics and spaceflight classroom",
   "license": "MIT",
   "scripts": {
+    "test:spatial": "node --test tests/spatial-*.test.mjs",
+    "test:spatial:browser": "node tests/spatial-games-browser.mjs && node tests/spatial-soma-native-browser.mjs",
+    "build:spatial": "node scripts/build_spatial_soma.mjs && node scripts/build_spatial_rush.mjs",
     "build:server": "node scripts/python.mjs scripts/build_server.py",
     "build:phet": "node scripts/python.mjs scripts/build_phet_theme.py",
     "build:adapters": "node scripts/python.mjs scripts/build_display_adapters.py",
@@ -29,6 +32,8 @@
     "test:classroom:inline": "node scripts/python.mjs tests/classroom-browser.py --inline",
     "build:primary": "node scripts/python.mjs scripts/build_primary_math_standalone.py",
     "test:primary": "node --test tests/primary-math.test.mjs",
+    "test:practice": "node --test tests/practice-tiers.test.mjs",
+    "test:help:browser": "node tests/help-dialog-browser.mjs",
     "test:primary:browser": "node tests/numbers-life-browser.mjs",
     "generate:questions": "node scripts/generate_questions.mjs",
     "test:questions": "node --test tests/question-bank*.test.mjs",
@@ -46,9 +51,32 @@
     "test:demo-layout:browser": "node tests/demo-layout-browser.mjs",
     "test:phet-display-compat:browser": "node tests/phet-display-compat-browser.mjs",
     "test:curriculum": "node --test tests/singapore-curriculum.test.mjs",
-    "test:curriculum:browser": "node tests/numbers-life-browser.mjs"
+    "test:curriculum:browser": "node tests/numbers-life-browser.mjs",
+    "build:minesweeper": "node scripts/python.mjs scripts/build_logic_games.py --minesweeper",
+    "build:sudoku": "node scripts/build_sudoku.mjs",
+    "check:logic": "node scripts/python.mjs scripts/build_logic_games.py --check",
+    "test:minesweeper": "node --test tests/minesweeper.test.mjs",
+    "test:minesweeper:browser": "node tests/minesweeper-browser.mjs",
+    "test:logic:browser": "node tests/logic-games-browser.mjs",
+    "start:server": "node server/cli.mjs serve",
+    "server:init": "node server/cli.mjs init",
+    "server:verify": "node server/cli.mjs verify",
+    "server:backup": "node server/cli.mjs backup",
+    "server:restore": "node server/cli.mjs restore",
+    "server:rebuild": "node server/cli.mjs rebuild",
+    "test:server": "node --test tests/server*.test.mjs tests/assessment*.test.mjs tests/sync*.test.mjs",
+    "test:learning:browser": "node tests/learning-browser.mjs",
+    "test:offline-delivery": "node tests/offline-delivery-browser.mjs",
+    "test:server-delivery": "node tests/server-delivery.mjs",
+    "test:word-problems": "node --test tests/word-problems*.test.mjs",
+    "test:word-problems:browser": "node tests/word-problems-browser.mjs",
+    "build:assessment": "node scripts/build_assessment_catalog.mjs",
+    "build:word-problems": "node scripts/build_word_problem_catalog.mjs --require-all"
   },
   "devDependencies": {
     "playwright": "1.56.0"
+  },
+  "engines": {
+    "node": "24.14.0"
   }
 }

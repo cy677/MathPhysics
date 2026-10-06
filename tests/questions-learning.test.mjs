@@ -23,9 +23,8 @@ function assertTeaching(q,label,answer){
 }
 for(const q of QUESTIONS)test(`teaching fixed ${q.id}`,()=>{
   assertTeaching(q,q.id);assert.ok(q.steps.includes(q.solution));
-  for(const key of report.modelFields)assert.ok(q.modelGuide[key].length>=12,`${q.id} model ${key}`);
-  const others=QUESTIONS.filter(item=>item.id!==q.id);for(const key of report.modelFields)assert.ok(!others.some(item=>item.modelGuide[key]===q.modelGuide[key]),`${q.id} requires its own ${key}`);
-  report.fixedQuestions.push({id:q.id,grade:q.grade,title:q.title,view:q.view[0],source:'lessons/primary-math/bank.mjs',teachingSource:'lessons/primary-math/bank-guides.mjs',checks:{completeTeaching:true,threeHints:true,threeSteps:true,uniqueModelGuide:true},passed:true});
+  assert.equal(q.modelGuide,undefined);assert.equal(q.view,undefined);
+  report.fixedQuestions.push({id:q.id,grade:q.grade,title:q.title,source:'lessons/primary-math/bank.mjs',teachingSource:'lessons/primary-math/bank-guides.mjs',checks:{completeTeaching:true,threeHints:true,threeSteps:true},passed:true});
 });
 for(const template of allTemplates)test(`teaching template ${template.id}: every registered grade/unit and tier`,()=>{
   const units=UNITS.filter(u=>u.templateIds.includes(template.id)),modes=[...(TEMPLATES.some(t=>t.id===template.id)?[null]:[]),...units];

@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+  "bankVersion": "2026-10-06.1",
+  "counts": {
+    "representatives": 1398,
+    "available": 1391,
+    "contentReviewed": 1391,
+    "humanApproved": 0,
+    "pendingHumanApproval": 1391,
+    "formalAssessmentEligible": 0,
+    "quarantined": 7,
+    "pending": 0,
+    "byCollection": {
+      "foundation": {
+        "representatives": 617,
+        "available": 617,
+        "quarantined": 0,
+        "pending": 0
+      },
+      "gsm8k": {
+        "representatives": 781,
+        "available": 774,
+        "quarantined": 7,
+        "pending": 0
+      }
+    }
+  },
+  "coverageByDataset": {
+    "asdiv": 424,
+    "gsm8k": 781,
+    "svamp": 193
+  },
+  "correctedRecords": 59,
+  "correctedIds": [
+    "asdiv:nluds-0270",
+    "asdiv:nluds-0162",
+    "asdiv:nluds-1994",
+    "asdiv:nluds-1419",
+    "asdiv:nluds-0467",
+    "asdiv:nluds-0482",
+    "asdiv:nluds-0486",
+    "asdiv:nluds-0795",
+    "asdiv:nluds-0803",
+    "asdiv:nluds-0811",
+    "asdiv:nluds-0832",
+    "asdiv:nluds-0151",
+    "asdiv:nluds-1794",
+    "asdiv:nluds-0395",
+    "asdiv:nluds-0985",
+    "asdiv:nluds-0629",
+    "asdiv:nluds-0901",
+    "asdiv:nluds-1480",
+    "asdiv:nluds-0360",
+    "asdiv:nluds-0659",
+    "asdiv:nluds-1151",
+    "asdiv:nluds-1086",
+    "asdiv:nluds-0155",
+    "asdiv:nluds-1160",
+    "asdiv:nluds-1112",
+    "asdiv:nluds-1224",
+    "asdiv:nluds-2049",
+    "asdiv:nluds-2087",
+    "asdiv:nluds-2035",
+    "asdiv:nluds-0190",
+    "svamp:chal-597",
+    "svamp:chal-856",
+    "svamp:chal-627",
+    "svamp:chal-409",
+    "svamp:chal-830",
+    "svamp:chal-893",
+    "svamp:chal-982",
+    "svamp:chal-141",
+    "svamp:chal-180",
+    "svamp:chal-20",
+    "svamp:chal-223",
+    "svamp:chal-341",
+    "svamp:chal-345",
+    "svamp:chal-384",
+    "svamp:chal-602",
+    "svamp:chal-489",
+    "svamp:chal-911",
+    "gsm8k:train-6193",
+    "gsm8k:train-0363",
+    "gsm8k:train-3064",
+    "gsm8k:train-5187",
+    "gsm8k:train-6187",
+    "gsm8k:train-3389",
+    "gsm8k:train-6002",
+    "gsm8k:train-3451",
+    "gsm8k:train-0030",
+    "asdiv:nluds-0248",
+    "asdiv:nluds-1048",
+    "svamp:chal-138"
+  ],
+  "archiveReceipts": [
+    {
+      "file": "provenance/reviews/source-audits/foundation-review.jsonl",
+      "sha256": "07f4fd9e24945ff0e78703b0d8fb61185a9185cfd5b3f69914dbecc556740b1e"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-summary.md",
+      "sha256": "be92ea6d70177aa7ed8771118e95bae7995b42378f8e5ffacbb3ba7da59014c1"
+    },
+    {
+      "file": "provenance/reviews/source-audits/gsm8k-b-review.jsonl",
+      "sha256": "b3000e0b1ea925a135b84305cdd585b9c73da1be9b42a5785554214cbc37a618"
+    },
+    {
+      "file": "provenance/reviews/source-audits/gsm8k-b-summary.md",
+      "sha256": "a30531df39badfeebdf06ffb6dd4cc109ad7ba8c5f0f4408dd656a63521b3034"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-hash-verification.json",
+      "sha256": "5fd9372941cfd0ab178c0837f744421a93354e0630b2a137fac3308aaf058a5c"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-hash-checks.jsonl",
+      "sha256": "ed339617ca828b4ea70f9c81504733e1b7612ca41fcf9782d319f3d283ed9368"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-review.jsonl",
+      "sha256": "53d0a06fe48c9604be0203f5f3cdd1d30c822f80a7dd7ba6ff720cb6f0bd8969"
+    },
+    {
+      "file": "provenance/reviews/source-audits/gsm8k-b-review-input-manifest.json",
+      "sha256": "1a5eadfefd1ddf4a015e44e2607998b92030663f7bbdf00d82d39e2ed82a72ce"
+    },
+    {
+      "file": "provenance/reviews/source-audits/gsm8k-b-patched-review.jsonl",
+      "sha256": "01ab0d444828ce685f785e6f6ce572a3a2d9ca167e3ce0aa1ade20b27b89e131"
+    },
+    {
+      "file": "provenance/reviews/source-audits/gsm8k-b-patched-review-input-manifest.json",
+      "sha256": "3799564ceea15450530123fe76aa17308b55c80bdd14a0377694c01c4173f64a"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-recommended-content.jsonl",
+      "sha256": "ba581eba55030931cc7c901eb4e5d6aeccb40418255a720bc29685dcbd58a630"
+    },
+    {
+      "file": "provenance/reviews/source-audits/gsm8k-ac-review.jsonl",
+      "sha256": "14405fc7737e0fedeb07b9e80b66a02b0514f05ecdb92b6d49d46fbd2f443bee"
+    },
+    {
+      "file": "provenance/reviews/source-audits/gsm8k-ac-summary.md",
+      "sha256": "ccc649a7df6a394f9163044ef644a1f8b06cae0867151356714b61c356a5c197"
+    },
+    {
+      "file": "provenance/reviews/source-audits/gsm8k-ac-correction-previews.jsonl",
+      "sha256": "b9a5194f6d8022394d90c1ee39e6c506332ca95d6bfa7505a45b80744fcb252c"
+    },
+    {
+      "file": "provenance/reviews/source-audits/gsm8k-seven-quarantines-review.jsonl",
+      "sha256": "3e7b299f4e94d6fba849d2ca93736e56575c5adc8814cc49b130528b69fde1c7"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-deltas.jsonl",
+      "sha256": "2daebf6c0cf47eaf40201d4b786efde7958e8e8e69cf706053997f2f375b7cc0"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-hash-checks.jsonl",
+      "sha256": "d0811c5e8951b18a8ef5b6c9d88c5597cfdc43ef86c1199b2ffae14d220d4183"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-hash-verification.json",
+      "sha256": "6ed5bdc576f6f532b3d7caf11d202b88a3da7d6696bd29c6b8b15c7bf5eaa8ec"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-notes-001-070.json",
+      "sha256": "575356461679bdafb1e8a270500317ce9687903e7d4719232c06781fb63cf6e1"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-notes-071-140.json",
+      "sha256": "149e546db4d02c762c6193f6640476d1c369b0b651c0841a44ba8066d56838ae"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-notes-141-212.json",
+      "sha256": "02cbc3ecc42b6c02b3df3bcf56f2a8d1a7ee0c0740ddf41bcc335b5f3d07f7bf"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-notes-213-282.json",
+      "sha256": "26d7a2a5d1fd29fb69aa029b4602e7ce76a55c8076d508deb6ab667d14a932bc"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-notes-283-352.json",
+      "sha256": "141c2f5b5053e39cdb2b0af5ff44c4a4dd07c2dae6c82ed5c8e6e52996f87e0c"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-notes-353-424.json",
+      "sha256": "c28a59f05c84cbef86b6b5bde3cc2e79889b2e735396252bd7e536a36fcf114d"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-notes-425-494.json",
+      "sha256": "0d3274a6c03327964e5c3dc937d112d8325802b378e932d843a8fa62bf970ebf"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-notes-495-564.json",
+      "sha256": "27877f7eea9df3d663544d80cb8d14fc763552d13621297fa17687772dcebc95"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-notes-565-617.json",
+      "sha256": "f3ed9a94f612c98a652b75f475e46d2e82c8beca86ffee2a9c37f3313240ed09"
+    },
+    {
+      "file": "provenance/reviews/source-audits/foundation-auxiliary-summary.md",
+      "sha256": "8167a434b415146cfb2e7a732fca6fa4e19529b78727dcd5c92f6812a612d89a"
+    }
+  ],
+  "foundationAuxiliaryReview": {
+    "complete": true,
+    "reviewedRecords": 617,
+    "correctedIds": [
+      "asdiv:nluds-0248",
+      "asdiv:nluds-0270",
+      "asdiv:nluds-1048",
+      "svamp:chal-138"
+    ]
+  },
+  "limits": [
+    "No human or teacher approval was granted. All available items are explicitly teacher-review previews with zero reward.",
+    "All Chinese prompts, units, typed answers and complete steps were independently checked. All 617 foundation hints and common-mistake entries were freshly reread in a separate supplement; exact auxiliary corrections are recorded with before/after content hashes.",
+    "Story families are inferred upstream text-similarity groups, not proven original-problem genealogies.",
+    "ASDiv non-commercial licensing and unverified SVAMP/ASDiv lineage remain distinct from the root MIT license."
+  ]
+}

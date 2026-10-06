@@ -1,0 +1,1941 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "foundation-A15",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0844",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "同步周期与再次时刻",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-117bac521ddd374f",
+      "assessmentGroup": "assessment-117bac521ddd374f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "自行车厂的甲、乙、丙三位工人分别每1小时30分钟、2小时、1小时装好一辆自行车，装好后立即开始下一辆，速度不变。三人上午8:10同时开始装车，下一次同时开始装车是几点？请用24时计时法表示。",
+      "answer": {
+        "type": "time",
+        "format": "clock",
+        "minutes": 850
+      },
+      "intent": "用三个周期的最小公倍数求下一次同时开始时刻。",
+      "hints": [
+        "先把三个装车周期都换成分钟。"
+      ],
+      "steps": [
+        "周期分别是90分钟、120分钟和60分钟。",
+        "90＝2×3×3×5，120＝2×2×2×3×5，60＝2×2×3×5；最小公倍数为360分钟。",
+        "360分钟＝6小时，8:10过6小时是14:10。"
+      ],
+      "commonMistakes": [
+        "把三个周期相加。",
+        "用最大公因数求同时开始的时间。"
+      ],
+      "prerequisites": [
+        "时间单位换算",
+        "最小公倍数",
+        "时刻加法"
+      ],
+      "adaptation": [
+        "明确完成后立即开始下一辆且保持相同速度，补足重复周期的条件。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0844",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "f7e7f71cc85aac62656144be121420ed962b3ac67a1b7e0f92ab6c17c0fb6bcc",
+        "recordSha256": "863bc50cc0e2918920dc41184517d97fc5040b76bb3cfcad651c8f0dd52a703d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0844",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "15ea413c628ebbb3fb783f75918a6d16025fb670aa4d9a62a39b460260e0316c",
+        "sourceDraftSha256": "15ea413c628ebbb3fb783f75918a6d16025fb670aa4d9a62a39b460260e0316c",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "4df2aa34b437d5886e4f2907c2cf4a929a4b68e33f8567feaf1967e5940852dd"
+      },
+      "contentSha256": "4df2aa34b437d5886e4f2907c2cf4a929a4b68e33f8567feaf1967e5940852dd"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0847",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "同步周期与再次时刻",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-178d90ff6ba1ac12",
+      "assessmentGroup": "assessment-178d90ff6ba1ac12",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "甲、乙、丙三位木工分别每40分钟、1小时20分钟、1小时40分钟装好一扇门，装好后立即开始下一扇。三人上午9:15同时开始，下一次同时开始装门是几点？请用24时计时法表示。",
+      "answer": {
+        "type": "time",
+        "format": "clock",
+        "minutes": 955
+      },
+      "intent": "求工作周期的最小公倍数，再加到开始时刻。",
+      "hints": [
+        "三个周期分别为40、80、100分钟。"
+      ],
+      "steps": [
+        "40＝2×2×2×5，80＝2×2×2×2×5，100＝2×2×5×5。",
+        "最小公倍数为2×2×2×2×5×5＝400（分钟）。",
+        "400分钟＝6小时40分钟，9:15过6小时40分钟是15:55。"
+      ],
+      "commonMistakes": [
+        "把1小时20分钟写成120分钟。",
+        "把周期100分钟答成1小时。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "时间单位换算",
+        "时刻加法"
+      ],
+      "adaptation": [
+        "明确装完一扇立即开始下一扇，问句明确为下一次同时开始。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0847",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "0332d82ae592d9ac0b666f378470f6a5fc113748794d19e77c8473291b81c0cb",
+        "recordSha256": "43d44182ca29cfa633874a800447648a00b59b90c9a0d6597d555534eb48e260",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0847",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "ce1b2427ef703ba11c6de3ca2103c5bbadd9ba3d0a5c614fda3cdc7099de70c5",
+        "sourceDraftSha256": "ce1b2427ef703ba11c6de3ca2103c5bbadd9ba3d0a5c614fda3cdc7099de70c5",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "addede11031ff2fffe2d92fb955101be9b6322a64c1c7cd20a8ba9dea835c481"
+      },
+      "contentSha256": "addede11031ff2fffe2d92fb955101be9b6322a64c1c7cd20a8ba9dea835c481"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0981",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最小公倍数与配套数量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-087273b1a28268f3",
+      "assessmentGroup": "assessment-087273b1a28268f3",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "乔的洗浴用品店整盒卖香皂和瓶装洗手液：香皂每盒5块，洗手液每盒19瓶。上周两种都卖出了货，而且售出块数与瓶数相同。每种至少各卖出了多少？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "香皂",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "95",
+                "d": "1"
+              },
+              "unit": "块"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "洗手液",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "95",
+                "d": "1"
+              },
+              "unit": "瓶"
+            }
+          }
+        ]
+      },
+      "intent": "求两种包装数量最小的共同销售量。",
+      "hints": [
+        "相同数量要同时是5和19的正整数倍。"
+      ],
+      "steps": [
+        "5与19互质，最小公倍数为5×19＝95。",
+        "最少各售出95件，即香皂95块、洗手液95瓶。",
+        "对应香皂95÷5＝19盒、洗手液95÷19＝5盒。"
+      ],
+      "commonMistakes": [
+        "把最少数量算成5＋19＝24。",
+        "只给出其中一种的数量和单位。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "整包数量"
+      ],
+      "adaptation": [
+        "明确整盒出售且两类都有正销售量；原题所求为每类数量，用具名双值分别标块与瓶。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0981",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e9b41f9cbef78617535ae17c319c119d1ab9a696c4dbd10429da98d03505d571",
+        "recordSha256": "3d8edc21dd796fdadb456befe7b28e75d71d27e6d7e70d9643cf39bf1cc7fe22",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0981",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f4b853ee9194c0fa981ae2529ffb1eb342df9a94cd73fe54f173cdee323263d1",
+        "sourceDraftSha256": "f4b853ee9194c0fa981ae2529ffb1eb342df9a94cd73fe54f173cdee323263d1",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "25e5d47dc535d1482b93979dc4432a7d70779bee275e07fc234d9a72dfa1937d"
+      },
+      "contentSha256": "25e5d47dc535d1482b93979dc4432a7d70779bee275e07fc234d9a72dfa1937d"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1188",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最大等量分组",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-014341fbaad47094",
+      "assessmentGroup": "assessment-014341fbaad47094",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "聚会上的奶酪披萨切成6块，蔬菜披萨切成12块。要把所有披萨块装进若干盘，每盘的奶酪块数都相同，蔬菜块数也都相同，不留剩余。最多可以装多少盘？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6",
+          "d": "1"
+        },
+        "unit": "盘"
+      },
+      "intent": "求两类物品都能平均分的最大组数。",
+      "hints": [
+        "盘数必须同时整除6和12。"
+      ],
+      "steps": [
+        "6与12的公因数有1、2、3、6，最大公因数是6。",
+        "最多装6盘，每盘有6÷6＝1块奶酪披萨和12÷6＝2块蔬菜披萨。"
+      ],
+      "commonMistakes": [
+        "用最小公倍数12作为盘数。",
+        "只把18块平均分，忽略每盘两种的数量都相同。"
+      ],
+      "prerequisites": [
+        "最大公因数",
+        "等量分组"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1188",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "098f8a2009cc56091ed853367c760a92b345cd451f505482ebad63baab7aa582",
+        "recordSha256": "4ecd013df4b7613bd94e7485d62d935a6612c4a6bc03e6deb5f34f8041436387",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1188",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "563771913f7736cd624e84ff706cf2b3cbaee1c83a779a717298431587b08554",
+        "sourceDraftSha256": "563771913f7736cd624e84ff706cf2b3cbaee1c83a779a717298431587b08554",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "bd30c42c9a97bd4e83693d9d54ba38b37190b7bea4ba3692741c5e81ebe3086c"
+      },
+      "contentSha256": "bd30c42c9a97bd4e83693d9d54ba38b37190b7bea4ba3692741c5e81ebe3086c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1203",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最大等量分组",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-086c624549507968",
+      "assessmentGroup": "assessment-086c624549507968",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小艾有5本数学书和10本科学书，要全部平均放到若干书架上，每个书架的数学书本数相同，科学书本数也相同。最多可以使用多少个书架？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "求两类物品同时等量分组的最大组数。",
+      "hints": [
+        "书架数要同时整除5和10。"
+      ],
+      "steps": [
+        "5与10的最大公因数为5。",
+        "最多用5个书架，每架放1本数学书、2本科学书。"
+      ],
+      "commonMistakes": [
+        "把总共15本书的因数当成书架数，忽略两类分别相同。"
+      ],
+      "prerequisites": [
+        "最大公因数",
+        "等量分组"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1203",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e0b9cd135337769fe813888026843e2b24a730f5cb913f668e23c58e39a695b2",
+        "recordSha256": "79283f9d249416908cfeaecb7cb71ee47813b853506ea291fea113230906f24a",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1203",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "4c649612e29ca6b85c375ffc418a4428f7e5c4e63ff21071081840eef1f6dc55",
+        "sourceDraftSha256": "4c649612e29ca6b85c375ffc418a4428f7e5c4e63ff21071081840eef1f6dc55",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c1de45a3940fa8460a0e8890145907466062100fcff81bd055a5f72230a7e946"
+      },
+      "contentSha256": "c1de45a3940fa8460a0e8890145907466062100fcff81bd055a5f72230a7e946"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1222",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "配套数量换算包数或件数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-41090802ba94f262",
+      "assessmentGroup": "assessment-41090802ba94f262",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小琳买草莓味口香糖和蓝莓味口香糖，草莓味每包6块，蓝莓味每包5块，都只能整包买。两种都至少买1包，而且块数相同。每种最少各买多少块？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "草莓味口香糖",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "30",
+                "d": "1"
+              },
+              "unit": "块"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "蓝莓味口香糖",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "30",
+                "d": "1"
+              },
+              "unit": "块"
+            }
+          }
+        ]
+      },
+      "intent": "求两种整包规格最小的相同块数。",
+      "hints": [
+        "块数要同时是6和5的正整数倍。"
+      ],
+      "steps": [
+        "6和5的最小公倍数为30。",
+        "每种最少各买30块，对应草莓味5包、蓝莓味6包。"
+      ],
+      "commonMistakes": [
+        "把5包和6包当成两种块数。",
+        "把两种各30块合计的60块答成每种数量。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "整包数量"
+      ],
+      "adaptation": [
+        "明确整包购买且每种至少1包；所求为每种数量，用具名双值保留两类。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1222",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "edc3efceb0b83414811fe7463c5c40e07b4b699eee6a02efd3c4b4cc47fef758",
+        "recordSha256": "08efcfedbf5042d069e458f3a9ba8496cfb3aa502a036e73202a2acdb4cacf27",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1222",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "d35649b98cddb7282d2dfeafee8405596f787963c0407626b8357e44cef0844e",
+        "sourceDraftSha256": "d35649b98cddb7282d2dfeafee8405596f787963c0407626b8357e44cef0844e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "a61bfde1f70ca6c08a3d46eb45a4baebf38b9aafbfaf3df6d98b56bcf8dafb3d"
+      },
+      "contentSha256": "a61bfde1f70ca6c08a3d46eb45a4baebf38b9aafbfaf3df6d98b56bcf8dafb3d"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1224",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "同步周期与间隔",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-26e1d37e449af65c",
+      "assessmentGroup": "assessment-26e1d37e449af65c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "戏剧社在学校礼堂活动，相邻两次活动相隔3天；合唱团也在礼堂活动，相邻两次活动相隔5天。今天两个社团都在礼堂活动。再过多少天，他们会下一次在同一天使用礼堂？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "15",
+          "d": "1"
+        },
+        "unit": "天"
+      },
+      "intent": "求两种日期周期再次重合的最小间隔。",
+      "hints": [
+        "找同时是3和5倍数的最小正数。"
+      ],
+      "steps": [
+        "3的倍数有3、6、9、12、15；5的倍数有5、10、15。",
+        "最小公倍数是15，所以再过15天会同一天使用礼堂。"
+      ],
+      "commonMistakes": [
+        "把3和5相加，答成8天。",
+        "把今天算成再次重合。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "周期"
+      ],
+      "adaptation": [
+        "将可能产生包含端点计数歧义的每隔3天/5天明确为相邻两次活动相隔3天/5天，保持周期3、5及下一次同步15天。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1224",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "fe328ca04e679b67880c136ef0ec263c90655d6d75c1da4d7501d83e14af79c1",
+        "recordSha256": "cf2151c3f3eeaa7f5e1cf1c2bf520ae38acb6f9b657a7a95c0b7ed280f5ac841",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1224",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "cd7e1c152095fb9a9d3a8268d716e8a82b99c4c18ecfa189ea7e4a831b4a2855",
+        "sourceDraftSha256": "02ad60a78b6910367c78d9b4a97d9b09ab225337964476d8d938d6da6565419a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2ebdd085917911360eb15dad071f8b1aeb2ad3ef4bc759abf17cfccb8f36e204"
+      },
+      "contentSha256": "2ebdd085917911360eb15dad071f8b1aeb2ad3ef4bc759abf17cfccb8f36e204"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1225",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最小公倍数与配套数量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-16683a81557565da",
+      "assessmentGroup": "assessment-16683a81557565da",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小特和朋友共是一组人。一天他们每2人坐一桌，另一天每8人坐一桌，两次都是全员入座且每桌恰好坐满。这组人最少有多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "8",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "求能按两种人数整桌分组的最少总人数。",
+      "hints": [
+        "总人数要同时是2和8的倍数。"
+      ],
+      "steps": [
+        "2与8的最小公倍数为8。",
+        "8人第一天可以坐4桌，第二天坐1桌，所以最少8人。"
+      ],
+      "commonMistakes": [
+        "允许8人桌没有坐满而答成2人。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "等量分组"
+      ],
+      "adaptation": [
+        "补明两次所有人入座且每桌坐满，使原最小公倍数意图成立。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1225",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "7ba0e7e560f5bdc19701f99bcea2326e2d9a95bee7d63511ffc7805f82bb1815",
+        "recordSha256": "51570f36ebf7ea9fa465b8b8cedcbf087d2b15894a6084bf4bcea8a86a4d425a",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1225",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f8e3e79b7b99dab05b52a48d1119fa54832532e8f176eaf7c719c1ae1014ff1c",
+        "sourceDraftSha256": "f8e3e79b7b99dab05b52a48d1119fa54832532e8f176eaf7c719c1ae1014ff1c",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "677f9adfef19877ec365c3afd31292d8d966d0a63800604202e3e9a5decb4551"
+      },
+      "contentSha256": "677f9adfef19877ec365c3afd31292d8d966d0a63800604202e3e9a5decb4551"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2019",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "配套数量换算包数或件数",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-77fb7b5b35d87542",
+      "assessmentGroup": "assessment-77fb7b5b35d87542",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "萨拉货运公司的卡车每车只运18件包裹，瑞安货运公司的卡车每车只运11件包裹，两家公司每车都满载。今天上午两家公司都运了货，运出的包裹总件数相同。每家公司最少各运多少件？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "萨拉公司",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "198",
+                "d": "1"
+              },
+              "unit": "件"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "瑞安公司",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "198",
+                "d": "1"
+              },
+              "unit": "件"
+            }
+          }
+        ]
+      },
+      "intent": "求两种每车规格的最小相同运输件数。",
+      "hints": [
+        "总件数要同时是18和11的正整数倍。"
+      ],
+      "steps": [
+        "18与11互质，最小公倍数为18×11＝198。",
+        "每家公司最少各运198件，萨拉公司用11车，瑞安公司用18车。"
+      ],
+      "commonMistakes": [
+        "答卡车车数而非包裹件数。",
+        "把两家公司合计的396件当成各自件数。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "等量分组"
+      ],
+      "adaptation": [
+        "明确每车满载及两家公司均有实际运输；原问句所求每家公司数量用具名双值表示。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2019",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "5f110014b60b5bded0427836c0bc0482c01c8244bb1fd84944e22b37c8aec4dd",
+        "recordSha256": "559613aa24f960105dd1506aa01d5202828746d892f245ec74bde6190d75f2e2",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://home.d47.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2019",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "47d69517f1dedc5a9fac487d440cc6ce1976db6e58484dfa793244689404ace4",
+        "sourceDraftSha256": "47d69517f1dedc5a9fac487d440cc6ce1976db6e58484dfa793244689404ace4",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ce1e58c015cff09e7eb7e357a71f1c09f4c0a0b88295be395846383bc61f184b"
+      },
+      "contentSha256": "ce1e58c015cff09e7eb7e357a71f1c09f4c0a0b88295be395846383bc61f184b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2032",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最小公倍数与配套数量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-55b2edd0206f85a8",
+      "assessmentGroup": "assessment-55b2edd0206f85a8",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小恩和小贝在游乐厅玩游戏，各至少玩了1局。小恩每局赢5张奖票，小贝每局赢11张奖票。结束时两人奖票总数相同。小恩至少玩了多少局？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "11",
+          "d": "1"
+        },
+        "unit": "局"
+      },
+      "intent": "先求最小相同奖票总数，再求指定人的局数。",
+      "hints": [
+        "总奖票数须同时是5和11的正整数倍。"
+      ],
+      "steps": [
+        "5与11的最小公倍数为55，两人最少各有55张。",
+        "小恩至少玩55÷5＝11（局）；小贝玩5局。"
+      ],
+      "commonMistakes": [
+        "把55张奖票直接答成55局。",
+        "答小贝的5局。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "数量与次数"
+      ],
+      "adaptation": [
+        "明确两人至少玩1局，排除零票零局的无效解。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2032",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b2a01846bbc280ec25b28015552918611d01257943440d53f585a602d1d884d6",
+        "recordSha256": "a86634291d5db7157733c42c3111bc25b3800ca4b8231b8aec89cc81f9e91607",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2032",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "6b2a51f6821d47162dfa9c79effc3bfc5b5d2406a156c122a3d1953f82e81847",
+        "sourceDraftSha256": "6b2a51f6821d47162dfa9c79effc3bfc5b5d2406a156c122a3d1953f82e81847",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f0434189903e83ec11b440f3c50206613da60b744d0da8c31e775d2de710c8b3"
+      },
+      "contentSha256": "f0434189903e83ec11b440f3c50206613da60b744d0da8c31e775d2de710c8b3"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2035",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最小公倍数与配套数量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-842edd804b030d3d",
+      "assessmentGroup": "assessment-842edd804b030d3d",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小米和小莎在新商店开业当天各购物1次。从开业当天起，小米每次到店都花7元，小莎每次都花9元。几周后，她们在店里的总支出相同。小米从开业当天算起，至少到店购物多少次？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "9",
+          "d": "1"
+        },
+        "unit": "次"
+      },
+      "intent": "求最小相同总支出，再换算购物次数。",
+      "hints": [
+        "两人都已经去过店里，支出是正数。"
+      ],
+      "steps": [
+        "7和9的最小公倍数为63，两人最少各花63元。",
+        "小米至少去63÷7＝9（次）；小莎去7次。"
+      ],
+      "commonMistakes": [
+        "把小米的次数按9元一次来除。",
+        "只答总支出63元。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "单价与次数"
+      ],
+      "adaptation": [
+        "美元情境改为人民币元，数值保留，不作汇率換算。",
+        "明确7元和9元固定支出适用于开业当天及之后的每次购物，所求次数也包括开业当天；保持最小总支出63元及小米9次。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2035",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "44fcfad1492713f19ef76d88ea16135eb5f6a9324259c80a1611e2df15d47890",
+        "recordSha256": "777ff1103af317d0fa85c9e91de90046243e96347dd961caa8cecd174204d09d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2035",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "4707a6661fa57d6fa2ca22845a5f548766bec72f6814de3fae40aa0c3b92f8f7",
+        "sourceDraftSha256": "dc96f7ab54108597c313ca2432a054c937bbcb43ad52afd865b79cc640accd6e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "7bffaf84bbddf76276e4502958bc2237ef1a8c8bf65a52c3421d477928e223ce"
+      },
+      "contentSha256": "7bffaf84bbddf76276e4502958bc2237ef1a8c8bf65a52c3421d477928e223ce"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2040",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最大等量分组",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-70385983684548df",
+      "assessmentGroup": "assessment-70385983684548df",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小泽为同学准备相同的学习用品包，有72支铅笔和24个计算器，所有用品都要用完。若分成尽可能多的相同用品包，每包有多少支铅笔？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "3",
+          "d": "1"
+        },
+        "unit": "支"
+      },
+      "intent": "先求最多相同组数，再求每组指定物品的数量。",
+      "hints": [
+        "最多的包数是72和24的最大公因数。"
+      ],
+      "steps": [
+        "最多可分成24包，因为72与24的最大公因数为24。",
+        "每包有72÷24＝3（支）铅笔，还有1个计算器。"
+      ],
+      "commonMistakes": [
+        "只答能分成24包。",
+        "把铅笔和计算器数量相加后平均分。"
+      ],
+      "prerequisites": [
+        "最大公因数",
+        "平均分"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2040",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "715b1eb463dff663c2d307e4b1387b9f1679375526567d7bad333f3b21f7beff",
+        "recordSha256": "932768ecbc31e383171da72b422ab962791454a9539dae091367355506abd0a0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2040",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "aed8172fadbc822864cda34eceb784415ece43f85d0dd4146560349d92889955",
+        "sourceDraftSha256": "aed8172fadbc822864cda34eceb784415ece43f85d0dd4146560349d92889955",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "94eb24d12b961b11452a867960cc299805d54ffc2e4c45750720b9ee524277f0"
+      },
+      "contentSha256": "94eb24d12b961b11452a867960cc299805d54ffc2e4c45750720b9ee524277f0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2043",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最大等量分组",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-8d76449dbcdfbded",
+      "assessmentGroup": "assessment-8d76449dbcdfbded",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小里所在的篮球联盟有32名前锋和80名后卫，要把所有队员分成若干队，每队的前锋人数相同，后卫人数也相同。若队数尽可能多，每队有多少名后卫？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "先求最多队数，再求每队后卫人数。",
+      "hints": [
+        "队数要同时整除两类人数。"
+      ],
+      "steps": [
+        "32＝2×2×2×2×2，80＝2×2×2×2×5，最大公因数为16。",
+        "最多分成16队，每队后卫有80÷16＝5（人），前锋有2人。"
+      ],
+      "commonMistakes": [
+        "答每队2名前锋，混淆所求。",
+        "只答16队。"
+      ],
+      "prerequisites": [
+        "最大公因数",
+        "平均分"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2043",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "977683f5ccb9f35edbaf78e4f7baf29c93c072e9769cd380255b704642a509f8",
+        "recordSha256": "8265d86be7f69450c133587f354ff23b1591f72cb17a888a01df0f0a15a726ad",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2043",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a0179f2f39685be26975a169cf8a33e9eeaef8865838210b3dd6f96fc1ced7de",
+        "sourceDraftSha256": "a0179f2f39685be26975a169cf8a33e9eeaef8865838210b3dd6f96fc1ced7de",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b0f08c5022e145db2822b97af59e09aacee3c970f2d30bef7f9fc34aec4a3409"
+      },
+      "contentSha256": "b0f08c5022e145db2822b97af59e09aacee3c970f2d30bef7f9fc34aec4a3409"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2046",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最大等量分组",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-c756d3ce8000b88f",
+      "assessmentGroup": "assessment-c756d3ce8000b88f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "拉老师的体育课有25名女孩和35名男孩，全部分组，每组的女孩人数相同，男孩人数也相同。若组数尽可能多，每组有多少名男孩？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "7",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "由最大等量分组数求每组某类人数。",
+      "hints": [
+        "先求25和35的最大公因数。"
+      ],
+      "steps": [
+        "25与35的最大公因数为5，最多分5组。",
+        "每组男孩有35÷5＝7（人），女孩有5人。"
+      ],
+      "commonMistakes": [
+        "把最大组数5当成每组男孩数。"
+      ],
+      "prerequisites": [
+        "最大公因数",
+        "平均分"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2046",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ce792ae266e4139ca8536ea7662fa49b4fde6e4c2cae1c16d6a3e24d9b39ec1c",
+        "recordSha256": "e03126c81d41764cd80e9f43c2f91fd495b9f463ea28a521518a65bf82fd6574",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2046",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "be94e934638f14790f23aee857249c814a48cefae43f1d471f4a5ac5562e3432",
+        "sourceDraftSha256": "be94e934638f14790f23aee857249c814a48cefae43f1d471f4a5ac5562e3432",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "4ea4234e6c7b426fa702a01e92ed6d53f5d3ac2975afcb5f703df7f0349f0275"
+      },
+      "contentSha256": "4ea4234e6c7b426fa702a01e92ed6d53f5d3ac2975afcb5f703df7f0349f0275"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2049",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "同步周期与间隔",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-0db78324f860d877",
+      "assessmentGroup": "assessment-0db78324f860d877",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小罗和小蒂今天都洗了衣服。小罗相邻两次洗衣相隔6天，小蒂相邻两次洗衣相隔9天。再过多少天，他们会下一次在同一天洗衣服？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "18",
+          "d": "1"
+        },
+        "unit": "天"
+      },
+      "intent": "求两个重复日期周期的最小公倍数。",
+      "hints": [
+        "列出6和9的倍数，找第一次相同的数。"
+      ],
+      "steps": [
+        "6的倍数有6、12、18；9的倍数有9、18。",
+        "最小公倍数为18，所以再过18天同一天洗衣服。"
+      ],
+      "commonMistakes": [
+        "把间隔相加成15天。",
+        "只取较大间隔9天。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "周期"
+      ],
+      "adaptation": [
+        "明确每个人相邻两次洗衣的间隔分别为6天、9天，避免把每隔几天理解为中间另隔几个完整空日，下一次同步18天不变。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2049",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "a2f34affc5c0d765136c09d9d4f924b98eb1b2cdfdfd8d0535246b6d39f92e97",
+        "recordSha256": "ab8c4b713d50fce47f948d6398b2ba02998f55b7fd6fc66f6e1c5db167f2e60d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2049",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "5eab5f23e3e9eeea4d667d1c06676898d164d07d993d6991701fa023f1f609c4",
+        "sourceDraftSha256": "a7c8f017e1067a1189a97f38cd7643c4115021c461d070e7a2659017b14f99e0",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "fce7a75ec372dcd8da713e6cf4a75a51942db99f512db93f7e14a116ac17436f"
+      },
+      "contentSha256": "fce7a75ec372dcd8da713e6cf4a75a51942db99f512db93f7e14a116ac17436f"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2068",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "同步周期与再次时刻",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-16550532646d2a23",
+      "assessmentGroup": "assessment-16550532646d2a23",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一只铃每12秒响一次，另一只铃每15秒响一次。两只铃傍晚18:00:00同时响，下一次同时响是几点几分？",
+      "answer": {
+        "type": "time",
+        "format": "clock",
+        "minutes": 1081
+      },
+      "intent": "用响铃周期的最小公倍数求下一次时刻。",
+      "hints": [
+        "找12和15的最小公倍数。"
+      ],
+      "steps": [
+        "12＝2×2×3，15＝3×5，最小公倍数为60秒。",
+        "60秒＝1分钟，18:00:00过1分钟是18:01:00，所以时刻是18:01。"
+      ],
+      "commonMistakes": [
+        "把两次间隔相加成27秒。",
+        "答成凌晨6:01。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "秒与分钟换算",
+        "认识时刻"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2068",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "60e8cdb04149c27f6d615d4d2df2d81363433b5c8f17455c0b51b3d3a436e4af",
+        "recordSha256": "c2cf265f3e6aaba38ae618bd46f583913e26314ab243f2c8c434fb9337ed1b50",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.tutorialspoint.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2068",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c425a0f5f7838db55ffefe5351e7c1a1b43c12d09483db7d061721ec4901e3b3",
+        "sourceDraftSha256": "c425a0f5f7838db55ffefe5351e7c1a1b43c12d09483db7d061721ec4901e3b3",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "7d825bc1e5cbe13297b7a4af9c180738da5d547ce4201fbb439559ba16d395f0"
+      },
+      "contentSha256": "7d825bc1e5cbe13297b7a4af9c180738da5d547ce4201fbb439559ba16d395f0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2070",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最小公倍数与配套数量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-134138367c8dfa59",
+      "assessmentGroup": "assessment-134138367c8dfa59",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "电台把来电者从1开始按顺序编号。编号为100的倍数的来电者可得100元，编号为40的倍数的可得一张音乐会门票。一共至少接到多少位来电者，才会第一次有人同时拿到两种奖品？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "200",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "求两个奖励序号周期首次重合的位置。",
+      "hints": [
+        "编号需要同时是100和40的倍数。"
+      ],
+      "steps": [
+        "100＝2×2×5×5，40＝2×2×2×5，最小公倍数为200。",
+        "第200位首次同时中奖，因此至少接到200位来电者。"
+      ],
+      "commonMistakes": [
+        "把100元奖金加入来电人数运算。",
+        "把第200位之前的199人当成含中奖者的总人数。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "周期与序号"
+      ],
+      "adaptation": [
+        "美元情境改为人民币元，数值保留，不作汇率换算。",
+        "将电台和演唱会名称概括，并明确从1开始连续编号、计入中奖来电者，保留奖励规则。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2070",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "3f54138255191cfbd84fe48c2ead6b1e83d31686faeb458db13516217596ca3b",
+        "recordSha256": "5829eef58b1cc3c9f7258e66d2bf36b5d18a387b3b070b4f6610be099513a890",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.pyp6d2013.weebly",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2070",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "5af369b8e7354a24ee63de4c76cf3e26a425b9cb91a9402802e13a6f955bfd9f",
+        "sourceDraftSha256": "5af369b8e7354a24ee63de4c76cf3e26a425b9cb91a9402802e13a6f955bfd9f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "30c2ba4c5cba4e9e9f8f4adc824e404d6cc879dafbafe68b64e2e6cb4cc825a1"
+      },
+      "contentSha256": "30c2ba4c5cba4e9e9f8f4adc824e404d6cc879dafbafe68b64e2e6cb4cc825a1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2072",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最小公倍数与配套数量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-9cbc1a0e3922d392",
+      "assessmentGroup": "assessment-9cbc1a0e3922d392",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "电影院从每天第1位顾客开始编号，编号为75的倍数的顾客可领免费饮料，为30的倍数的可领免费爆米花。星期一共来了3000位顾客。有多少人能同时领到这两样？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "20",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "先求双奖序号周期，再数范围内有几个周期。",
+      "hints": [
+        "同时领取者的编号是75和30的公倍数。"
+      ],
+      "steps": [
+        "75与30的最小公倍数为150。",
+        "同时领取者是第150、300、450……3000位。",
+        "共有3000÷150＝20（人）。"
+      ],
+      "commonMistakes": [
+        "把两种单独领奖人数相加，重复或错算。",
+        "只答第一次同时领奖的序号150。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "周期计数"
+      ],
+      "adaptation": [
+        "明确每天从1连续编号，避免编号起点歧义。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2072",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "8a56ab827c6744b92db06e6bd010991b2d0a347d627bbcdd47409a26251afdf7",
+        "recordSha256": "74bf56c725beb218e69a87ac9e3af4b86d6679044d53f0df97b7e0d8eeeb9ee6",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.pyp6d2013.weebly",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2072",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a1a505af0087ae85130ba4bcaa23bcfdcb8a32b1917acfcaaca27ceecf164608",
+        "sourceDraftSha256": "a1a505af0087ae85130ba4bcaa23bcfdcb8a32b1917acfcaaca27ceecf164608",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "fc82120ea0b7255403bad662bf7d115c2229f0a9a2da86ce065853b0ef1fcd19"
+      },
+      "contentSha256": "fc82120ea0b7255403bad662bf7d115c2229f0a9a2da86ce065853b0ef1fcd19"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2074",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "同步周期与间隔",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-03df277daf1dca0b",
+      "assessmentGroup": "assessment-03df277daf1dca0b",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "两块霓虹灯同时打开并闪亮，之后一块每9秒闪亮一次，另一块每15秒闪亮一次。再过多少秒，两块灯会下一次同时闪亮？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "45",
+          "d": "1"
+        },
+        "unit": "秒"
+      },
+      "intent": "求两个闪烁周期下一次重合的间隔。",
+      "hints": [
+        "找9和15的最小公倍数。"
+      ],
+      "steps": [
+        "9＝3×3，15＝3×5，最小公倍数为3×3×5＝45（秒）。",
+        "再过45秒，两块灯会同时闪亮。"
+      ],
+      "commonMistakes": [
+        "把9和15相加为24秒。",
+        "把最大公因数3秒当作间隔。"
+      ],
+      "prerequisites": [
+        "最小公倍数",
+        "周期"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2074",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "dbf35168337f1949fc1353f3563d636c751eeb624a03089e4a31249464751909",
+        "recordSha256": "f09a6013ba9e755280bd8a7101b94223429dec915bb8a03fa44260858b6da2cf",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.cram.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2074",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "279b56593cd1167980a894c083599d50127e5b8e80e82341ab2a7c68bb0180da",
+        "sourceDraftSha256": "279b56593cd1167980a894c083599d50127e5b8e80e82341ab2a7c68bb0180da",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "35bcd7eb3ac15a3f575ac66f64b35db118b0f9a35b3b70039d7ef0cb7801df5b"
+      },
+      "contentSha256": "35bcd7eb3ac15a3f575ac66f64b35db118b0f9a35b3b70039d7ef0cb7801df5b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2080",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最大等长分割",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-52ed7db97ba34978",
+      "assessmentGroup": "assessment-52ed7db97ba34978",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "马丁要用大小相同的完整正方形彩纸，按行列铺满一块72厘米×90厘米的长方形板，彩纸不重叠、不留缝。每张彩纸的边长最大是多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "18",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "求同时整除长方形两边的最大正方形边长。",
+      "hints": [
+        "彩纸边长要同时整除72和90。"
+      ],
+      "steps": [
+        "72与90的最大公因数为18。",
+        "最大边长为18厘米；两边分别排72÷18＝4张、90÷18＝5张，可以铺满。"
+      ],
+      "commonMistakes": [
+        "用最小公倍数360厘米当作边长。",
+        "只计算一边的因数。"
+      ],
+      "prerequisites": [
+        "最大公因数",
+        "正方形铺排"
+      ],
+      "adaptation": [
+        "明确按行列铺排、不重叠且不留缝，与原完整正方形铺满的意图一致。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2080",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "5c30757f7828f9f197a8e704dcfa3d2a3f609e84e85a3ab14ee61629809551cf",
+        "recordSha256": "136c2b12469b6bb01590023d47b9106536a6f1a3dba829ece1b08c2997a76da1",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.onlinemathlearning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2080",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "5c017005b6ec1554b72f5dec940844c2bd466386b8eda63d2833f405d6da1662",
+        "sourceDraftSha256": "5c017005b6ec1554b72f5dec940844c2bd466386b8eda63d2833f405d6da1662",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c7f1f6385314147ae39a808359dd0b5d1f4b343c14210112d5f1966cead299c3"
+      },
+      "contentSha256": "c7f1f6385314147ae39a808359dd0b5d1f4b343c14210112d5f1966cead299c3"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2081",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最大等长分割",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-acb4261af97c88b0",
+      "assessmentGroup": "assessment-acb4261af97c88b0",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "两根铁丝分别长448厘米和616厘米，要全部剪成长度相同的小段，不留剩余，也不计剪切损耗。每段最长可以是多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "56",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "求两个长度的最大公因数。",
+      "hints": [
+        "小段长度必须同时整除两根铁丝的长度。"
+      ],
+      "steps": [
+        "616－448＝168，448÷168余112，168÷112余56，112÷56余0。",
+        "所以最大公因数是56，每段最长56厘米。",
+        "两根可分别剪成448÷56＝8段和616÷56＝11段。"
+      ],
+      "commonMistakes": [
+        "把两根长度之差168当成最大段长。",
+        "允许剩下铁丝而改变题意。"
+      ],
+      "prerequisites": [
+        "最大公因数",
+        "有余数除法"
+      ],
+      "adaptation": [
+        "明确不计剪切损耗，保留原不留余料的条件。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2081",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e8372db6fcba82a92bc6aa7cdf6463c456700c563fbca5fef5a4e1cd4620e93c",
+        "recordSha256": "c838cf59560bcb1e3f23dc0e2b498a79a687afaffb05052f0e926db32d8fef44",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.onlinemathlearning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2081",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "1f7bed52f897aa95bc50447fe93f0c759908934f3b11b7b4289dd1a171c1b5b1",
+        "sourceDraftSha256": "1f7bed52f897aa95bc50447fe93f0c759908934f3b11b7b4289dd1a171c1b5b1",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "74241429f2ec25c459d8db2dec4ed48aaf5c2880b872bca4b7b4e259e1d9d36c"
+      },
+      "contentSha256": "74241429f2ec25c459d8db2dec4ed48aaf5c2880b872bca4b7b4e259e1d9d36c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2087",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最大等长分割",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-9a46bd568aea0210",
+      "assessmentGroup": "assessment-9a46bd568aea0210",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "三卷木纹装饰带分别长42米、49米和63米，要全部剪成等长的小段，不剩材料，不计切口损耗。每段最长是多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "7",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "求三个长度的最大公因数。",
+      "hints": [
+        "每段长度要能整除三卷装饰带的长度，找三个数的最大公因数。"
+      ],
+      "steps": [
+        "42、49、63都能被7整除，且42与49的最大公因数就是7。",
+        "因此三者的最大公因数是7，每段最长7米。",
+        "三卷分别可剪成6段、7段和9段。"
+      ],
+      "commonMistakes": [
+        "把三卷总长相加后再求每段长度。",
+        "求最小公倍数而不是最大公因数。"
+      ],
+      "prerequisites": [
+        "最大公因数",
+        "等长分割"
+      ],
+      "adaptation": [
+        "明确材料全部使用且不剩余，忽略切口损耗。",
+        "将不常见的42米、49米、63米单根木料改为连续卷装木纹装饰带，保留三个长度与最长等段7米的数学关系。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2087",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ab9886e0def29aa3327d8f0dee2393a62e84f2ed8c36a9e3b4b1f62c6da2c112",
+        "recordSha256": "52a654d46bfffcc84ad8bd5b9a90cbda4d435a6294e803638a537cbef1a68f14",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.slideshare.net",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2087",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "70a6f56084a1a69e6f2f73e51e0c0d767e6053062a864e447988c9c6d938df21",
+        "sourceDraftSha256": "caf00236ed7bf313d4c7643f703798cad795b4844844eb4a45714cff17f50e71",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "74b5b83e3c9468b4f912bd737aacbb4bc3711a455fe4a0dfde7d210edcd9c310"
+      },
+      "contentSha256": "74b5b83e3c9468b4f912bd737aacbb4bc3711a455fe4a0dfde7d210edcd9c310"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2089",
+      "collection": "foundation",
+      "category": "A15",
+      "subcategory": "最大等量分组",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-04ea5f766bbdc2c0",
+      "assessmentGroup": "assessment-04ea5f766bbdc2c0",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "家长为班级野餐做三明治，有72片火鸡肉、48片奶酪和96片番茄。所有馅料都要用完，每个三明治的三种馅料片数分别相同。最多能做多少个三明治？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "24",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "求三种材料同时平均分的最大组数。",
+      "hints": [
+        "数量要同时整除72、48和96。"
+      ],
+      "steps": [
+        "72与48的最大公因数为24，96也能被24整除，所以三者最大公因数为24。",
+        "最多做24个，每个有72÷24＝3片肉、48÷24＝2片奶酪、96÷24＝4片番茄。"
+      ],
+      "commonMistakes": [
+        "只取材料数量中的最小值48，忽略必须把全部馅料用完。"
+      ],
+      "prerequisites": [
+        "最大公因数",
+        "等量分组"
+      ],
+      "adaptation": [
+        "原题没有明确所有馅料用完；根据原最大公因数解法补明这一改编条件，并独立核算72、48、96三项。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2089",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "d20410b91d64deb0b1e8b10b722ca85fcd3327f532111f9fc60d4fd689dcf013",
+        "recordSha256": "241c04f38fa202f5d983a277bd67c1fa9a89850abd49de10559720a8fcc20f29",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.kellermath.blogspot.tw",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2089",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9134ccbeee1b464a679c8dbe70ac9b60a7463aa1783a95636afa9cd7bf190638",
+        "sourceDraftSha256": "9134ccbeee1b464a679c8dbe70ac9b60a7463aa1783a95636afa9cd7bf190638",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d8a971e9c7a26a745e8eb20bb8c834462db81d183e6df6025bfc5131a1c4959b"
+      },
+      "contentSha256": "d8a971e9c7a26a745e8eb20bb8c834462db81d183e6df6025bfc5131a1c4959b"
+    }
+  ]
+}

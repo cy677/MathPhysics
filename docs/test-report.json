@@ -6,8 +6,8 @@
       "passed": true,
       "checks": [
         "full catalog",
-        "open all persists",
-        "initial subset restored",
+        "legacy closed settings do not restrict access",
+        "saved visits retained",
         "PhET iframe ready",
         "iframe removed on return"
       ]
@@ -225,6 +225,106 @@
       "passed": true
     },
     {
+      "id": "fractions-intro",
+      "passed": true
+    },
+    {
+      "id": "fraction-matcher",
+      "passed": true
+    },
+    {
+      "id": "balancing-act",
+      "passed": true
+    },
+    {
+      "id": "circuit-construction-kit-dc",
+      "passed": true
+    },
+    {
+      "id": "states-of-matter-basics",
+      "passed": true
+    },
+    {
+      "id": "build-a-molecule",
+      "passed": true
+    },
+    {
+      "id": "physics-demos",
+      "passed": true
+    },
+    {
+      "id": "geometry-proofs",
+      "passed": true
+    },
+    {
+      "id": "spaceflight",
+      "passed": true
+    },
+    {
+      "id": "jsxgraph-playground",
+      "passed": true
+    },
+    {
+      "id": "tangram-flat",
+      "passed": true
+    },
+    {
+      "id": "jsx-triangle",
+      "passed": true
+    },
+    {
+      "id": "jsx-mirror",
+      "passed": true
+    },
+    {
+      "id": "jsx-rotation",
+      "passed": true
+    },
+    {
+      "id": "jsx-scale",
+      "passed": true
+    },
+    {
+      "id": "jsx-vectors",
+      "passed": true
+    },
+    {
+      "id": "jsx-linear",
+      "passed": true
+    },
+    {
+      "id": "primary-math",
+      "passed": true
+    },
+    {
+      "id": "question-bank",
+      "passed": true
+    },
+    {
+      "id": "minesweeper",
+      "passed": true
+    },
+    {
+      "id": "sudoku",
+      "passed": true
+    },
+    {
+      "id": "spatial-soma",
+      "passed": true
+    },
+    {
+      "id": "spatial-rush",
+      "passed": true
+    },
+    {
+      "id": "spatial-merge",
+      "passed": true
+    },
+    {
+      "id": "spatial-escape",
+      "passed": true
+    },
+    {
       "id": "tablet-host-navigation",
       "passed": true
     }
@@ -235,5 +335,5 @@
     "Original simulations keep their own navigation; host records visits, not completion."
   ],
   "passed": true,
-  "total": 55
+  "total": 80
 }

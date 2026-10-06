@@ -10,27 +10,28 @@
   const guideScript=document.createElement('script');guideScript.src=new URL('../activity-learning.js',hookURL);
   const questionScript=document.createElement('script');questionScript.src=new URL('./question-learning.js',hookURL);
   const moleculeScript=document.createElement('script');moleculeScript.src=new URL('./molecule-question-learning.js',hookURL);
-  questionScript.onload=()=>document.head.append(moleculeScript);moleculeScript.onload=()=>document.head.append(guideScript);
+  const helpScript=document.createElement('script');helpScript.src=new URL('../theme.js',hookURL);
+  questionScript.onload=()=>document.head.append(moleculeScript);moleculeScript.onload=()=>{if(window.MathPhysicsHelp)document.head.append(guideScript);else document.head.append(helpScript);};helpScript.onload=()=>document.head.append(guideScript);
   guideScript.onload=()=>{
     const id=location.pathname.split('/').at(-1).replace(/\.html$/,''),guide=window.MathPhysicsLearning.PHET_GUIDES[id];if(!guide)return;
     const panel=window.MathPhysicsLearning.createPanel(guide);
     let embedded=false;try{embedded=Boolean(window.frameElement?.closest('#stage')&&parent.document.getElementById('player'));}catch{}
     const questionPanel=embedded?null:window.MathPhysicsPhetQuestions.createPanel();
     if(questionPanel){document.body.append(questionPanel.element);window.__mpQuestionPanel=questionPanel;}
-    panel.element.hidden=embedded;document.body.append(panel.element);let attempts=0,layoutInstalled=false,updateLayout=()=>{},questionWatcher=null;
+    panel.element.hidden=embedded;document.body.append(panel.element);let attempts=0,layoutInstalled=false,questionWatcher=null,helpPopup=null;
     function installLayout(sim){
       if(embedded||layoutInstalled)return;
       const display=sim.display?.domElement||sim.domElement;if(!display)return;
       layoutInstalled=true;document.body.classList.add('mp-phet-layout');
-      const science=document.createElement('main'),rail=document.createElement('aside');
+      const science=document.createElement('main'),content=document.createElement('div'),trigger=document.createElement('button');
       science.id='mp-science-viewport';science.setAttribute('aria-label','科学模拟操作区');
-      rail.id='mp-learning-rail';rail.setAttribute('aria-label','实验引导');panel.element.classList.add('mp-learning-sidebar');
-      document.body.append(science,rail);science.append(display);if(questionPanel)rail.append(questionPanel.element);rail.append(panel.element);
+      trigger.id='mp-phet-help';trigger.className='mp-help-trigger mp-phet-help';trigger.type='button';trigger.textContent='提示';
+      document.body.append(science,trigger);science.append(display);content.append(panel.element);if(questionPanel)content.append(questionPanel.element);
+      helpPopup=window.MathPhysicsHelp.create({title:'实验引导与提示',content,trigger});
       const resize=sim.resize;
-      sim.resize=function(){const rect=science.getBoundingClientRect();if(rect.width>1&&rect.height>1)return resize.call(this,Math.round(rect.width),Math.round(rect.height));};
-      updateLayout=()=>{document.body.classList.toggle('mp-guide-open',panel.element.open||questionPanel?.element.hidden===false);sim.resizeToWindow();};
-      panel.element.addEventListener('toggle',updateLayout);new ResizeObserver(()=>sim.resizeToWindow()).observe(science);updateLayout();
-      window.__mpScienceViewport=()=>({science:science.getBoundingClientRect().toJSON(),guide:rail.getBoundingClientRect().toJSON(),display:{width:sim.display.width,height:sim.display.height}});
+      sim.resize=function(){const rect=(science.querySelector('.wb-canvas')||science).getBoundingClientRect();if(rect.width>1&&rect.height>1)return resize.call(this,Math.round(rect.width),Math.round(rect.height));};
+      new ResizeObserver(()=>sim.resizeToWindow()).observe(science);sim.resizeToWindow();
+      window.__mpScienceViewport=()=>({science:science.getBoundingClientRect().toJSON(),helpOpen:helpPopup.element.open,display:{width:sim.display.width,height:sim.display.height}});
     }
     function attach(){
       // Area Builder 1.1.38 can briefly receive a zero-size viewport when an
@@ -54,12 +55,12 @@
       installLayout(sim);
       const update=()=>{const index=sim.screenProperty||sim.selectedScreenProperty?screens.indexOf(property.value):property.value,atHome=sim.showHomeScreenProperty?.value===true||index<0,current=atHome?guide:guide.screens[index]||guide;panel.update(current);window.__mpLearning={id,screen:atHome?null:index,snapshot:panel.snapshot};if(embedded)parent.postMessage({type:'mp-learning',id,screen:atHome?null:index},location.origin);};
       property.lazyLink(update);sim.showHomeScreenProperty?.lazyLink(update);update();
-      questionWatcher=window.MathPhysicsPhetQuestions.watch(id,sim,question=>{if(questionPanel){questionPanel.update(question);updateLayout();}if(embedded)parent.postMessage({type:'mp-question-learning',id,question},location.origin);});
+      questionWatcher=window.MathPhysicsPhetQuestions.watch(id,sim,question=>{if(questionPanel)questionPanel.update(question);if(embedded)parent.postMessage({type:'mp-question-learning',id,question},location.origin);});
       window.__mpQuestionLearning=questionWatcher;
       document.documentElement.dataset.learningGuide='ready';
     }
     attach();
-    window.addEventListener('pagehide',()=>{questionWatcher?.dispose();questionPanel?.dispose();panel.destroy();},{once:true});
+    window.addEventListener('pagehide',()=>{helpPopup?.destroy();questionWatcher?.dispose();questionPanel?.dispose();panel.destroy();},{once:true});
   };
   document.head.append(questionScript);
 })();

@@ -101,6 +101,57 @@ async function snapshot(id,themed){
         data.cases.push({screen:n,x:sum.x,y:sum.y});assert(sum.x===1&&sum.y===(n?5:0),'vector sum mismatch');
       }
     }
+    // Drive the same input Properties as the equation controls, then read the
+    // native results. These hand-computable cases run in both test iframes.
+    const equations=screens[3].model,cartesian=equations.cartesianScene,polar=equations.polarScene;
+    assert(cartesian&&polar,'equations must expose Cartesian and polar scenes');
+    const checkVector=(vector,expected,label)=>{
+      const {x,y}=vector.xyComponentsProperty.value,magnitude=vector.magnitude,angle=vector.angle;
+      assert(Number.isFinite(x)&&Number.isFinite(y)&&Math.abs(x-expected[0])<1e-9&&Math.abs(y-expected[1])<1e-9,`${label}: expected (${expected}), got (${x},${y})`);
+      assert(Number.isFinite(magnitude)&&magnitude>=0&&Math.abs(magnitude-Math.hypot(...expected))<1e-9,`${label}: magnitude must be the nonnegative vector length`);
+      if(expected[0]===0&&expected[1]===0)assert(angle===null,`${label}: zero vector must not have a direction`);
+      return {x,y,magnitude,angle};
+    };
+    equations.reset();equations.sceneProperty.value=cartesian;
+    const [a,b]=cartesian.vectorSet.allVectors;
+    a.baseVector.xComponentProperty.value=3;a.baseVector.yComponentProperty.value=0;
+    b.baseVector.xComponentProperty.value=0;b.baseVector.yComponentProperty.value=2;
+    for(const [name,equation,ka,kb,expected] of [
+      ['Cartesian addition','addition',1,1,[3,2]],
+      ['Cartesian subtraction','subtraction',1,1,[3,-2]],
+      ['Cartesian closing vector','negation',1,1,[-3,-2]],
+      ['negative coefficient reverses one vector','addition',-1,1,[-3,2]],
+      ['zero coefficient removes only its contribution','addition',0,1,[0,2]],
+      ['both coefficients zero','addition',0,0,[0,0]]
+    ]){
+      a.coefficientProperty.value=ka;b.coefficientProperty.value=kb;
+      cartesian.equationTypeProperty.value=equation;
+      const vectors=[checkVector(a,[3*ka,0],name+' a'),checkVector(b,[0,2*kb],name+' b')];
+      const result=checkVector(cartesian.vectorSet.resultantVector,expected,name+' c');
+      data.cases.push({screen:3,scene:'cartesian',name,equation,coefficients:[ka,kb],vectors,result});
+    }
+    equations.sceneProperty.value=polar;
+    const [d,e]=polar.vectorSet.allVectors;
+    data.modelHashes.push(await digest(sourceOf(polar.vectorSet)),await digest(sourceOf(polar.vectorSet.resultantVector)));
+    // Angles 0° and 90° make signed-radius expectations exact by inspection.
+    d.baseVector.angleDegreesProperty.value=0;e.baseVector.angleDegreesProperty.value=90;
+    for(const [name,equation,rd,re,kd,ke,expected] of [
+      ['polar addition','addition',3,2,1,1,[3,2]],
+      ['polar subtraction','subtraction',3,2,1,1,[3,-2]],
+      ['polar closing vector','negation',3,2,1,1,[-3,-2]],
+      ['negative radius reverses direction, not magnitude','addition',-3,2,1,1,[-3,2]],
+      ['negative radius and coefficient cancel signs','addition',-3,2,-1,1,[3,2]],
+      ['zero radius removes only its vector','addition',0,2,1,1,[0,2]],
+      ['both radial parameters zero','addition',0,0,1,1,[0,0]]
+    ]){
+      d.baseVector.magnitudeProperty.value=rd;e.baseVector.magnitudeProperty.value=re;
+      d.coefficientProperty.value=kd;e.coefficientProperty.value=ke;
+      polar.equationTypeProperty.value=equation;
+      const baseVectors=[checkVector(d.baseVector,[rd,0],name+' base d'),checkVector(e.baseVector,[0,re],name+' base e')];
+      const vectors=[checkVector(d,[rd*kd,0],name+' d'),checkVector(e,[0,re*ke],name+' e')];
+      const result=checkVector(polar.vectorSet.resultantVector,expected,name+' f');
+      data.cases.push({screen:3,scene:'polar',name,equation,radii:[rd,re],parameterAngles:[0,90],coefficients:[kd,ke],baseVectors,vectors,result});
+    }
   }
   return data;
 }

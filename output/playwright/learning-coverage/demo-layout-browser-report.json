@@ -3,31 +3,22 @@
   "phet": [
     {
       "id": "phet-forces-and-motion-basics/net-force",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -36,25 +27,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -64,31 +46,22 @@
     },
     {
       "id": "phet-forces-and-motion-basics/motion",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -97,25 +70,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -125,31 +89,22 @@
     },
     {
       "id": "phet-forces-and-motion-basics/friction",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -158,25 +113,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -186,31 +132,22 @@
     },
     {
       "id": "phet-forces-and-motion-basics/acceleration",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -219,25 +156,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -247,31 +175,22 @@
     },
     {
       "id": "phet-energy-skate-park-basics/intro",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -280,25 +199,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -308,31 +218,22 @@
     },
     {
       "id": "phet-energy-skate-park-basics/friction",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -341,25 +242,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -369,31 +261,22 @@
     },
     {
       "id": "phet-energy-skate-park-basics/playground",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -402,25 +285,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -430,31 +304,22 @@
     },
     {
       "id": "phet-area-builder/explore",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -463,25 +328,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -491,31 +347,22 @@
     },
     {
       "id": "phet-area-builder/game",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -524,25 +371,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -552,58 +390,40 @@
     },
     {
       "id": "phet-vector-addition/explore-1d",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
       "mobile": {
         "science": {
           "x": 0,
-          "y": 0,
+          "y": 108,
           "width": 390,
-          "height": 489.53125,
-          "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
+          "height": 736,
+          "top": 108,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 736
         }
       },
       "screenshots": [
@@ -613,58 +433,40 @@
     },
     {
       "id": "phet-vector-addition/explore-2d",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
-          "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
+          "y": 48,
+          "width": 1440,
+          "height": 952,
+          "top": 48,
+          "right": 1440,
           "bottom": 1000,
           "left": 0
         },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
-          "height": 1000,
-          "top": 0,
-          "right": 1440,
-          "bottom": 1000,
-          "left": 1080
-        },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
-          "height": 1000
+          "width": 1440,
+          "height": 952
         }
       },
       "mobile": {
         "science": {
           "x": 0,
-          "y": 0,
+          "y": 108,
           "width": 390,
-          "height": 489.53125,
-          "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
+          "height": 736,
+          "top": 108,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 736
         }
       },
       "screenshots": [
@@ -674,58 +476,40 @@
     },
     {
       "id": "phet-vector-addition/lab",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
-          "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
+          "y": 48,
+          "width": 1440,
+          "height": 952,
+          "top": 48,
+          "right": 1440,
           "bottom": 1000,
           "left": 0
         },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
-          "height": 1000,
-          "top": 0,
-          "right": 1440,
-          "bottom": 1000,
-          "left": 1080
-        },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
-          "height": 1000
+          "width": 1440,
+          "height": 952
         }
       },
       "mobile": {
         "science": {
           "x": 0,
-          "y": 0,
+          "y": 108,
           "width": 390,
-          "height": 489.53125,
-          "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
+          "height": 736,
+          "top": 108,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 736
         }
       },
       "screenshots": [
@@ -735,58 +519,40 @@
     },
     {
       "id": "phet-vector-addition/equations",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
-          "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
+          "y": 48,
+          "width": 1440,
+          "height": 952,
+          "top": 48,
+          "right": 1440,
           "bottom": 1000,
           "left": 0
         },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
-          "height": 1000,
-          "top": 0,
-          "right": 1440,
-          "bottom": 1000,
-          "left": 1080
-        },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
-          "height": 1000
+          "width": 1440,
+          "height": 952
         }
       },
       "mobile": {
         "science": {
           "x": 0,
-          "y": 0,
+          "y": 108,
           "width": 390,
-          "height": 489.53125,
-          "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
+          "height": 736,
+          "top": 108,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 736
         }
       },
       "screenshots": [
@@ -796,31 +562,22 @@
     },
     {
       "id": "phet-fractions-intro/intro",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -829,25 +586,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -857,31 +605,22 @@
     },
     {
       "id": "phet-fractions-intro/game",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -890,25 +629,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -918,31 +648,22 @@
     },
     {
       "id": "phet-fractions-intro/lab",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -951,25 +672,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -979,31 +691,22 @@
     },
     {
       "id": "phet-fraction-matcher/fractions",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -1012,25 +715,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -1040,31 +734,22 @@
     },
     {
       "id": "phet-fraction-matcher/mixed-numbers",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -1073,25 +758,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -1101,31 +777,22 @@
     },
     {
       "id": "phet-balancing-act/intro",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -1134,25 +801,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -1162,31 +820,22 @@
     },
     {
       "id": "phet-balancing-act/balance-lab",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -1195,25 +844,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -1223,31 +863,22 @@
     },
     {
       "id": "phet-balancing-act/game",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -1256,25 +887,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -1284,31 +906,22 @@
     },
     {
       "id": "phet-circuit-construction-kit-dc/intro",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -1317,25 +930,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -1345,31 +949,22 @@
     },
     {
       "id": "phet-circuit-construction-kit-dc/lab",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
@@ -1378,25 +973,16 @@
           "x": 0,
           "y": 0,
           "width": 390,
-          "height": 489.53125,
+          "height": 844,
           "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 844
         }
       },
       "screenshots": [
@@ -1406,58 +992,40 @@
     },
     {
       "id": "phet-states-of-matter-basics/states",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
           "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
-          "bottom": 1000,
-          "left": 0
-        },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
+          "width": 1440,
           "height": 1000,
           "top": 0,
           "right": 1440,
           "bottom": 1000,
-          "left": 1080
+          "left": 0
         },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
+          "width": 1440,
           "height": 1000
         }
       },
       "mobile": {
         "science": {
           "x": 0,
-          "y": 0,
+          "y": 108,
           "width": 390,
-          "height": 489.53125,
-          "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
+          "height": 736,
+          "top": 108,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 736
         }
       },
       "screenshots": [
@@ -1467,58 +1035,40 @@
     },
     {
       "id": "phet-states-of-matter-basics/phase-changes",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
-          "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
+          "y": 48,
+          "width": 1440,
+          "height": 952,
+          "top": 48,
+          "right": 1440,
           "bottom": 1000,
           "left": 0
         },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
-          "height": 1000,
-          "top": 0,
-          "right": 1440,
-          "bottom": 1000,
-          "left": 1080
-        },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
-          "height": 1000
+          "width": 1440,
+          "height": 952
         }
       },
       "mobile": {
         "science": {
           "x": 0,
-          "y": 0,
+          "y": 108,
           "width": 390,
-          "height": 489.53125,
-          "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
+          "height": 736,
+          "top": 108,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 736
         }
       },
       "screenshots": [
@@ -1528,58 +1078,40 @@
     },
     {
       "id": "phet-build-a-molecule/single-molecule",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
-          "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
+          "y": 48,
+          "width": 1440,
+          "height": 952,
+          "top": 48,
+          "right": 1440,
           "bottom": 1000,
           "left": 0
         },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
-          "height": 1000,
-          "top": 0,
-          "right": 1440,
-          "bottom": 1000,
-          "left": 1080
-        },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
-          "height": 1000
+          "width": 1440,
+          "height": 952
         }
       },
       "mobile": {
         "science": {
           "x": 0,
-          "y": 0,
+          "y": 108,
           "width": 390,
-          "height": 489.53125,
-          "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
+          "height": 736,
+          "top": 108,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 736
         }
       },
       "screenshots": [
@@ -1589,58 +1121,40 @@
     },
     {
       "id": "phet-build-a-molecule/multiple-molecules",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
-          "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
+          "y": 48,
+          "width": 1440,
+          "height": 952,
+          "top": 48,
+          "right": 1440,
           "bottom": 1000,
           "left": 0
         },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
-          "height": 1000,
-          "top": 0,
-          "right": 1440,
-          "bottom": 1000,
-          "left": 1080
-        },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
-          "height": 1000
+          "width": 1440,
+          "height": 952
         }
       },
       "mobile": {
         "science": {
           "x": 0,
-          "y": 0,
+          "y": 108,
           "width": 390,
-          "height": 489.53125,
-          "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
+          "height": 736,
+          "top": 108,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 736
         }
       },
       "screenshots": [
@@ -1650,58 +1164,40 @@
     },
     {
       "id": "phet-build-a-molecule/playground",
-      "nonOverlapping": true,
+      "helpClosed": true,
       "displayMatchesScience": true,
       "desktop": {
         "science": {
           "x": 0,
-          "y": 0,
-          "width": 1080,
-          "height": 1000,
-          "top": 0,
-          "right": 1080,
+          "y": 48,
+          "width": 1440,
+          "height": 952,
+          "top": 48,
+          "right": 1440,
           "bottom": 1000,
           "left": 0
         },
-        "guide": {
-          "x": 1080,
-          "y": 0,
-          "width": 360,
-          "height": 1000,
-          "top": 0,
-          "right": 1440,
-          "bottom": 1000,
-          "left": 1080
-        },
+        "helpOpen": false,
         "display": {
-          "width": 1080,
-          "height": 1000
+          "width": 1440,
+          "height": 952
         }
       },
       "mobile": {
         "science": {
           "x": 0,
-          "y": 0,
+          "y": 108,
           "width": 390,
-          "height": 489.53125,
-          "top": 0,
-          "right": 390,
-          "bottom": 489.53125,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 489.53125,
-          "width": 390,
-          "height": 354.46875,
-          "top": 489.53125,
+          "height": 736,
+          "top": 108,
           "right": 390,
           "bottom": 844,
           "left": 0
         },
+        "helpOpen": false,
         "display": {
           "width": 390,
-          "height": 490
+          "height": 736
         }
       },
       "screenshots": [
@@ -1713,36 +1209,26 @@
   "hostMobile": [
     {
       "id": "phet-forces-and-motion-basics",
-      "nonOverlapping": true,
+      "helpClosedByDefault": true,
       "panels": {
         "science": {
           "x": 0,
-          "y": 253.03125,
+          "y": 92,
           "width": 390,
-          "height": 547.96875,
-          "top": 253.03125,
+          "height": 716,
+          "top": 92,
           "right": 390,
-          "bottom": 801,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 118,
-          "width": 390,
-          "height": 135.03125,
-          "top": 118,
-          "right": 390,
-          "bottom": 253.03125,
+          "bottom": 808,
           "left": 0
         },
         "frame": {
           "x": 0,
-          "y": 253.03125,
+          "y": 92,
           "width": 390,
-          "height": 547.96875,
-          "top": 253.03125,
+          "height": 716,
+          "top": 92,
           "right": 390,
-          "bottom": 801,
+          "bottom": 808,
           "left": 0
         }
       },
@@ -1753,36 +1239,26 @@
     },
     {
       "id": "phet-area-builder",
-      "nonOverlapping": true,
+      "helpClosedByDefault": true,
       "panels": {
         "science": {
           "x": 0,
-          "y": 253.03125,
+          "y": 92,
           "width": 390,
-          "height": 547.96875,
-          "top": 253.03125,
+          "height": 716,
+          "top": 92,
           "right": 390,
-          "bottom": 801,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 118,
-          "width": 390,
-          "height": 135.03125,
-          "top": 118,
-          "right": 390,
-          "bottom": 253.03125,
+          "bottom": 808,
           "left": 0
         },
         "frame": {
           "x": 0,
-          "y": 253.03125,
+          "y": 92,
           "width": 390,
-          "height": 547.96875,
-          "top": 253.03125,
+          "height": 716,
+          "top": 92,
           "right": 390,
-          "bottom": 801,
+          "bottom": 808,
           "left": 0
         }
       },
@@ -1793,36 +1269,26 @@
     },
     {
       "id": "phet-states-of-matter-basics",
-      "nonOverlapping": true,
+      "helpClosedByDefault": true,
       "panels": {
         "science": {
           "x": 0,
-          "y": 253.03125,
+          "y": 92,
           "width": 390,
-          "height": 547.96875,
-          "top": 253.03125,
+          "height": 716,
+          "top": 92,
           "right": 390,
-          "bottom": 801,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 118,
-          "width": 390,
-          "height": 135.03125,
-          "top": 118,
-          "right": 390,
-          "bottom": 253.03125,
+          "bottom": 808,
           "left": 0
         },
         "frame": {
           "x": 0,
-          "y": 253.03125,
+          "y": 92,
           "width": 390,
-          "height": 547.96875,
-          "top": 253.03125,
+          "height": 716,
+          "top": 92,
           "right": 390,
-          "bottom": 801,
+          "bottom": 808,
           "left": 0
         }
       },
@@ -2049,8 +1515,8 @@
   "matterPhases": [
     {
       "id": "matter-airFriction",
-      "operateHiddenWhy": true,
-      "explainVisibleWhy": true,
+      "helpHiddenByDefault": true,
+      "directGuidanceInModal": true,
       "screenshots": [
         "output/playwright/learning-coverage/matter-airFriction-operate-mobile.png",
         "output/playwright/learning-coverage/matter-airFriction-explain-mobile.png"
@@ -2058,8 +1524,8 @@
     },
     {
       "id": "matter-bridge",
-      "operateHiddenWhy": true,
-      "explainVisibleWhy": true,
+      "helpHiddenByDefault": true,
+      "directGuidanceInModal": true,
       "screenshots": [
         "output/playwright/learning-coverage/matter-bridge-operate-mobile.png",
         "output/playwright/learning-coverage/matter-bridge-explain-mobile.png"
@@ -2067,8 +1533,8 @@
     },
     {
       "id": "matter-slingshot",
-      "operateHiddenWhy": true,
-      "explainVisibleWhy": true,
+      "helpHiddenByDefault": true,
+      "directGuidanceInModal": true,
       "screenshots": [
         "output/playwright/learning-coverage/matter-slingshot-operate-mobile.png",
         "output/playwright/learning-coverage/matter-slingshot-explain-mobile.png"
@@ -2076,8 +1542,8 @@
     },
     {
       "id": "matter-cloth",
-      "operateHiddenWhy": true,
-      "explainVisibleWhy": true,
+      "helpHiddenByDefault": true,
+      "directGuidanceInModal": true,
       "screenshots": [
         "output/playwright/learning-coverage/matter-cloth-operate-mobile.png",
         "output/playwright/learning-coverage/matter-cloth-explain-mobile.png"
@@ -2085,8 +1551,8 @@
     },
     {
       "id": "matter-collisionFiltering",
-      "operateHiddenWhy": true,
-      "explainVisibleWhy": true,
+      "helpHiddenByDefault": true,
+      "directGuidanceInModal": true,
       "screenshots": [
         "output/playwright/learning-coverage/matter-collisionFiltering-operate-mobile.png",
         "output/playwright/learning-coverage/matter-collisionFiltering-explain-mobile.png"
@@ -2094,8 +1560,8 @@
     },
     {
       "id": "matter-substep",
-      "operateHiddenWhy": true,
-      "explainVisibleWhy": true,
+      "helpHiddenByDefault": true,
+      "directGuidanceInModal": true,
       "screenshots": [
         "output/playwright/learning-coverage/matter-substep-operate-mobile.png",
         "output/playwright/learning-coverage/matter-substep-explain-mobile.png"
@@ -2103,8 +1569,8 @@
     },
     {
       "id": "matter-views",
-      "operateHiddenWhy": true,
-      "explainVisibleWhy": true,
+      "helpHiddenByDefault": true,
+      "directGuidanceInModal": true,
       "screenshots": [
         "output/playwright/learning-coverage/matter-views-operate-mobile.png",
         "output/playwright/learning-coverage/matter-views-explain-mobile.png"
@@ -2118,30 +1584,20 @@
       "state": {
         "canvas": {
           "x": 0,
-          "y": 125.984375,
-          "width": 1100,
-          "height": 771.46875,
-          "top": 125.984375,
-          "right": 1100,
+          "y": 84.546875,
+          "width": 1440,
+          "height": 812.90625,
+          "top": 84.546875,
+          "right": 1440,
           "bottom": 897.453125,
           "left": 0
         },
-        "guide": {
-          "x": 1100,
-          "y": 125.984375,
-          "width": 340,
-          "height": 771.46875,
-          "top": 125.984375,
-          "right": 1440,
-          "bottom": 897.453125,
-          "left": 1100
-        },
         "buffer": {
-          "width": 1100,
-          "height": 771
+          "width": 1440,
+          "height": 813
         }
       },
-      "nonOverlapping": true,
+      "helpClosed": true,
       "realKeyboardMove": true,
       "screenshot": "output/playwright/learning-coverage/tangram-legacy-desktop.png"
     },
@@ -2151,30 +1607,20 @@
       "state": {
         "canvas": {
           "x": 0,
-          "y": 122.59375,
+          "y": 65,
           "width": 390,
-          "height": 319.921875,
-          "top": 122.59375,
-          "right": 390,
-          "bottom": 442.515625,
-          "left": 0
-        },
-        "guide": {
-          "x": 0,
-          "y": 442.515625,
-          "width": 390,
-          "height": 250.1875,
-          "top": 442.515625,
+          "height": 627.703125,
+          "top": 65,
           "right": 390,
           "bottom": 692.703125,
           "left": 0
         },
         "buffer": {
           "width": 390,
-          "height": 320
+          "height": 628
         }
       },
-      "nonOverlapping": true,
+      "helpClosed": true,
       "realKeyboardMove": true,
       "screenshot": "output/playwright/learning-coverage/tangram-legacy-mobile.png"
     }
@@ -2187,12 +1633,12 @@
       "source": "upstream creator/toolbox globalBounds",
       "fixture": {
         "start": {
-          "x": 544.921875,
-          "y": 675.078125
+          "x": 726.5625,
+          "y": 733.4375
         },
         "end": {
-          "x": 180,
-          "y": 311.5625
+          "x": 240,
+          "y": 248.74999999999997
         },
         "before": 0,
         "areaBefore": 0
@@ -2211,11 +1657,11 @@
       "fixture": {
         "start": {
           "x": 196.77734375,
-          "y": 308.22265625
+          "y": 485.22265625
         },
         "end": {
           "x": 81.25,
-          "y": 176.953125
+          "y": 353.953125
         },
         "before": 1,
         "areaBefore": 1
@@ -2233,12 +1679,12 @@
       "source": "upstream creator/toolbox globalBounds",
       "fixture": {
         "start": {
-          "x": 900.0703125,
-          "y": 551.4907892417552
+          "x": 1200.09375,
+          "y": 592.6543856556737
         },
         "end": {
-          "x": 421.34199142456055,
-          "y": 492.96875
+          "x": 561.7893218994141,
+          "y": 514.625
         },
         "before": 0
       },
@@ -2255,11 +1701,11 @@
       "fixture": {
         "start": {
           "x": 325.025390625,
-          "y": 285.1552734375
+          "y": 516.1552734375
         },
         "end": {
           "x": 152.1512746810913,
-          "y": 242.4609375
+          "y": 473.4609375
         },
         "before": 1
       },
@@ -2847,7 +2293,7 @@
   ],
   "errors": [],
   "missing": [],
-  "base": "http://127.0.0.1:56944/MathPhysics/",
+  "base": "http://127.0.0.1:52562/MathPhysics/",
   "browserClosed": true,
   "serverClosed": true
 }

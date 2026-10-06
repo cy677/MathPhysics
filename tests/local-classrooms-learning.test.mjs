@@ -46,11 +46,11 @@ test('all 24 geometry guides and 48 question forms are parameter-aware without c
  }
 });
 
-test('4 space routes, all 62 main stages, 2 recovery instances, 9 labs, 7 systems and 16 existing quiz instances are covered',()=>{
- assert.equal(Object.keys(D.missions).length,4);assert.equal(Object.values(D.missions).flatMap(m=>m.steps).length,62);
+test('4 space routes, all 63 main stages, 3 recovery instances, 9 labs, 7 systems and 16 existing quiz instances are covered',()=>{
+ assert.deepEqual(Object.keys(D.missions),['us-crew','us-sat','cn-crew','cn-sat']);assert.equal(Object.values(D.missions).flatMap(m=>m.steps).length,63);
  let quizzes=0,branches=0;const ids=new Set();
  for(const m of Object.values(D.missions)){checkGuide(m.teaching,m.id);for(const s of m.steps){const id=m.id+'/'+s.id;assert.ok(!ids.has(id));ids.add(id);checkGuide(s.teaching,id);assert.equal(s.teaching.seniorWhy,s.why);if(s.quiz){quizzes++;checkQuestion(s.quiz,id);assert.equal(s.quiz.id,id);assert.ok(s.quiz.steps.some(t=>t.includes(s.quiz[1][s.quiz[2]])));}}if(m.branch){branches++;checkGuide(m.branch.teaching,m.id+'/recovery');}}
- assert.equal(quizzes,16);assert.equal(branches,2);
+ assert.equal(quizzes,16);assert.equal(branches,3);assert.deepEqual(Object.values(D.missions).filter(m=>m.branch).map(m=>m.id),['us-crew','us-sat','cn-sat']);
  for(const lab of D.labs){checkGuide(lab.teaching,'lab/'+lab.id);const values=Object.fromEntries(lab.controls.map(c=>[c[0],c[5]]));const a=ST.labReading(lab.id,values);assert.ok(a.length>30&&!bad.test(a));for(const control of lab.controls)for(const n of [control[2],control[3]]){const v={...values,[control[0]]:n};const text=ST.labReading(lab.id,v);assert.ok(!bad.test(text),'lab/'+lab.id);if(n!==control[5])assert.notEqual(a,text,'lab/'+lab.id+'/'+control[0]);}}
  for(const system of D.systems)checkGuide(system.teaching,'system/'+system.id);
  const live=ST.labReading('dock',{angle:3},{dock:{x:-4,y:-.5,vx:.12,vy:-.04}});assert.ok(live.includes('4 m')&&live.includes('-0.5 m')&&live.includes('0.12'));

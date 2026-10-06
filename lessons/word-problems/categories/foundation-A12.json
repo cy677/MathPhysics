@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "foundation-A12",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1982",
+      "collection": "foundation",
+      "category": "A12",
+      "subcategory": "平均数与等量化",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-2349814370070ea7",
+      "assessmentGroup": "assessment-2349814370070ea7",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "游乐会开始后的前6小时，每小时来访人数依次为58、58、62、55、49和48人。平均每小时来多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "55",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "计算6个小时的人数平均数。",
+      "hints": [
+        "相同的58人记录了两次，两次都要算。"
+      ],
+      "steps": [
+        "总人数为58＋58＋62＋55＋49＋48＝330（人）。",
+        "平均每小时330÷6＝55（人）。"
+      ],
+      "commonMistakes": [
+        "把总人数除以5，漏算一次记录。"
+      ],
+      "prerequisites": [
+        "平均数"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1982",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "27874045bb4c9b8a4779969e6c8bcc71cb489dd7c64afe3661d9073af7d98f31",
+        "recordSha256": "49809f27d610fd331ca9a7218eeaa8260df80bfbb153e60615298418813ab469",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1982",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0802a9a94f91955d69239d6ebea51ea6cfa57c7b10fc5dec4bdf27f55b771e9f",
+        "sourceDraftSha256": "0802a9a94f91955d69239d6ebea51ea6cfa57c7b10fc5dec4bdf27f55b771e9f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "1b378499811ab1890bf43e103303d32e11e822850001245a9f3f4b9874f9911a"
+      },
+      "contentSha256": "1b378499811ab1890bf43e103303d32e11e822850001245a9f3f4b9874f9911a"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1986",
+      "collection": "foundation",
+      "category": "A12",
+      "subcategory": "平均数与等量化",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-04f2f1c548647181",
+      "assessmentGroup": "assessment-04f2f1c548647181",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "戴叔叔路过5家商店，数到它们停车场里的汽车分别有30、14、14、21和25辆。平均每个停车场有多少辆汽车？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "104",
+          "d": "5"
+        },
+        "unit": "辆"
+      },
+      "intent": "求多个停车场车辆数的平均值。",
+      "hints": [
+        "平均值不一定是整数。"
+      ],
+      "steps": [
+        "总数为30＋14＋14＋21＋25＝104（辆）。",
+        "平均每处104÷5＝20.8（辆）。"
+      ],
+      "commonMistakes": [
+        "把20.8截成20，误认为平均值必须是整数。"
+      ],
+      "prerequisites": [
+        "平均数",
+        "小数除法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1986",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e2a96e364fb460dabb069986bc1f952a9e394f196eca701c8d4638dfcedfae2e",
+        "recordSha256": "8760b07e1fb693dc63b36b4cf838081c72392fc11485389b54d8ddf1e5f92dab",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1986",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "21956f929801dc2746615f19e48d6d569385c8e5dc3ef2fadd1d40a501e4e2d2",
+        "sourceDraftSha256": "21956f929801dc2746615f19e48d6d569385c8e5dc3ef2fadd1d40a501e4e2d2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "734def21b2569ecdd2bf5b25ba6b695ad92764f91196a9aada06c00584c343c5"
+      },
+      "contentSha256": "734def21b2569ecdd2bf5b25ba6b695ad92764f91196a9aada06c00584c343c5"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1987",
+      "collection": "foundation",
+      "category": "A12",
+      "subcategory": "平均数与等量化",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-080f9239787257e0",
+      "assessmentGroup": "assessment-080f9239787257e0",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小宁数操场上7种游乐设施旁的人数，依次为6、12、1、12、7、3和8人。平均每种设施旁有多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "7",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "求7个数量的平均数。",
+      "hints": [
+        "7种设施的数据都要计入。"
+      ],
+      "steps": [
+        "总人数为6＋12＋1＋12＋7＋3＋8＝49（人）。",
+        "平均每种设施旁49÷7＝7（人）。"
+      ],
+      "commonMistakes": [
+        "把两个12只算一次。"
+      ],
+      "prerequisites": [
+        "平均数"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1987",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "36b0d44e24511bb1df7b155149938dd335f1f54e66c6d359dea61e617322c3ad",
+        "recordSha256": "411368e57bf69213c0af2052d509f02e1403ef32269c22b1240e445f1e3d3709",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1987",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "061b9a5a8bb53e73d650bc9be525d37dc00916b53d6fdc31252900383fc07165",
+        "sourceDraftSha256": "061b9a5a8bb53e73d650bc9be525d37dc00916b53d6fdc31252900383fc07165",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "a0a7a4b79724253453ca6d6084ba059fc4e9d3b4af6c408a704ed02a5e481899"
+      },
+      "contentSha256": "a0a7a4b79724253453ca6d6084ba059fc4e9d3b4af6c408a704ed02a5e481899"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1990",
+      "collection": "foundation",
+      "category": "A12",
+      "subcategory": "平均数与等量化",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-b94630677a24f56f",
+      "assessmentGroup": "assessment-b94630677a24f56f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "学校举行知识竞赛，威老师、亚老师、布老师和丹老师的班级分别得了50分、57分、49分和57分。四个班的平均得分是多少？请给出精确值。",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "213",
+          "d": "4"
+        },
+        "unit": "分"
+      },
+      "intent": "合计各班得分后求精确平均数。",
+      "hints": [
+        "共有4个班。"
+      ],
+      "steps": [
+        "总得分为50＋57＋49＋57＝213（分）。",
+        "平均分为213÷4＝53.25（分）。"
+      ],
+      "commonMistakes": [
+        "只把不同的分数值相加，漏掉第二个57分。",
+        "把53.3当成精确平均值。"
+      ],
+      "prerequisites": [
+        "平均数",
+        "小数除法"
+      ],
+      "adaptation": [
+        "源答案53.3是未规定精度的近似值；题面明确求精确平均数，纠正为53.25分。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1990",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e67266eed653292997ec091b5ba9a0c07cd7150ad1b925c6f9d575ff8a8abe2c",
+        "recordSha256": "42da89d1cabb7273a03fc1c0fe0a298935876f2af06b4d08482b689b4ee8eed0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1990",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "6d16c8deadd6d96a3cd628dbef3c5cc5b22f5f01580da5428cc40c56f7946999",
+        "sourceDraftSha256": "6d16c8deadd6d96a3cd628dbef3c5cc5b22f5f01580da5428cc40c56f7946999",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "673378c8ffe30feaf047c800862fc864b8cd2f271684b937710e94898cf83f6a"
+      },
+      "contentSha256": "673378c8ffe30feaf047c800862fc864b8cd2f271684b937710e94898cf83f6a"
+    }
+  ]
+}

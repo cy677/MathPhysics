@@ -20,7 +20,7 @@ for name in ['teaching.js','catalog.js','math.js','draw.js','app.js']:
     parts.append(source)
 code='\n'.join(parts).replace('</script','<\\/script')
 html=html.replace('<link rel="stylesheet" href="styles.css">','<style>\n'+css+'\n</style>')
-html=html.replace('<script type="module" src="app.js"></script>','<script>\n(()=>{\n'+code+'\n})();\n</script>')
+html=html.replace('<script type="module" src="app.js"></script>','<script>\n(async()=>{\n'+code+'\n})();\n</script>')
 license_text=(root/'LICENSE').read_text(encoding='utf-8')
 html=html.replace('<!doctype html>','<!doctype html>\n<!--\nStandalone original MathPhysics geometry module.\n'+license_text+'\n-->')
 args.output.parent.mkdir(parents=True,exist_ok=True)

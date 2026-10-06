@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 110" role="img" aria-labelledby="title desc">
+  <title id="title">扫雷 · 从数字发现安全路径</title>
+  <desc id="desc">森林绿棋盘上的数字与金色旗帜，右侧是一面放大的标记旗。</desc>
+  <rect width="190" height="110" rx="18" fill="#e7eddf"/>
+  <circle cx="159" cy="24" r="31" fill="#faf0d5"/>
+  <path d="M0 88 Q53 67 95 88 T190 80 V110 H0Z" fill="#d8e2ce"/>
+  <g transform="translate(22 12)">
+    <rect x="2" y="4" width="92" height="88" rx="11" fill="#315d4b" opacity=".12"/>
+    <rect width="92" height="88" rx="11" fill="#fffef9" stroke="#315d4b" stroke-width="1.5"/>
+    <g fill="#dce6d3" stroke="#c7d3be" stroke-width=".7">
+      <rect x="7" y="7" width="24" height="22" rx="4"/><rect x="34" y="7" width="24" height="22" rx="4"/><rect x="61" y="7" width="24" height="22" rx="4"/>
+      <rect x="7" y="33" width="24" height="22" rx="4"/><rect x="34" y="33" width="24" height="22" rx="4"/><rect x="61" y="33" width="24" height="22" rx="4"/>
+      <rect x="7" y="59" width="24" height="22" rx="4"/><rect x="34" y="59" width="24" height="22" rx="4"/><rect x="61" y="59" width="24" height="22" rx="4"/>
+    </g>
+    <g fill="#fffef9"><rect x="8" y="8" width="22" height="20" rx="3"/><rect x="8" y="34" width="22" height="20" rx="3"/><rect x="35" y="34" width="22" height="20" rx="3"/><rect x="8" y="60" width="22" height="20" rx="3"/></g>
+    <g font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle"><text x="19" y="24" fill="#346c85">1</text><text x="19" y="50" fill="#315d4b">2</text><text x="46" y="50" fill="#346c85">1</text></g>
+    <path d="M70 10 V26 M66 26 H77" stroke="#315d4b" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M71 11 H81 L78 15 L81 19 H71Z" fill="#efc66b" stroke="#77552a" stroke-width=".8"/>
+    <path d="m15 70 3 3 6-7" fill="none" stroke="#315d4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(124 30)">
+    <ellipse cx="18" cy="62" rx="24" ry="5" fill="#315d4b" opacity=".1"/>
+    <path d="M12 3 V61 M3 61 H26" fill="none" stroke="#315d4b" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M14 5 Q27 1 42 9 L35 19 L42 31 Q26 22 14 27Z" fill="#efc66b" stroke="#77552a" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="12" cy="2" r="3" fill="#315d4b"/>
+    <path d="M40 45v8m-4-4h8" stroke="#568ba6" stroke-width="1.7" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -47,6 +47,8 @@ Phaser：备选游戏框架，本版未引入。JSXGraph 已在 v0.4 引入，�
 
 ## 修改边界
 
+2026-10-05 的题型审查材料来自 MathsMentales（`seb-cogez/mathsmentales`，固定提交 `ff60a4304aa5a439c5e567cad28c79e01a9ae74a`）和 MathALÉA 的 GitHub 历史仓库（`mathalea/mathaleaV3`，固定提交 `9f4d62dba4971d5bbc2b4927b5e699ff05b84778`）。原始定义与许可证保存在 `vendor/question-sources/`：MathsMentales 为 Apache-2.0，MathALÉA 为 AGPL-3.0；原始文件保持各自许可。41份小学题型定义、SHA-256、去重结果和加载入口见该目录 `manifest.json`。新增9种中文题型生成器独立编写，课堂不执行上游生成程序。MathALÉA 当前维护仓库位于 Forge，此次审查使用固定的 GitHub 快照。
+
 新增入口、配置管理、MIT 标注的课堂与测试采用 MIT；基于 GPL Tangram 的平面适配器采用 GPL-3.0。上游独立文件继续适用原许可证。iframe 是兼容性隔离，不作为不可信代码的安全沙箱。teacherPreview 是本地展示开关，不是身份鉴别或访问控制系统。
 
 ## v0.2 Original geometry proofs
@@ -75,3 +77,30 @@ JSXGraph 1.12.2 来自 https://github.com/jsxgraph/jsxgraph 的 npm 发行包，
 ## Launch Atlas calculation core (local spaceflight fusion, 2026-10-01)
 
 Source: https://github.com/exiztinz/rocket-launch-simulator, pinned commit b8b570cd2f25b0531724c776631160c48bba06fd. MIT, Copyright (c) 2025 Joseph Tascona. Complete license: vendor/launch-atlas/LICENSE; preserved raw sources and SHA-256: vendor/launch-atlas/SOURCE.json. The complete license is also in flight-core.js and the standalone classroom. Local changes convert modules to a classic-script factory, set RK4 dt=0.25s and scale-independent engine visibility. MathPhysics uses arbitrary teaching parameters, never upstream vehicle figures for Shenzhou or Long March. No upstream textures, presets, 3D assets, fonts or runtime dependencies are included. See docs/spaceflight-fusion.md.
+
+## 逻辑乐园
+
+2026-10-03 新增四项 MIT 游戏适配。原始文件与许可证按原样保存于 `vendor/games/spatial/`；`import-manifest.json` 记录 284 个源码文件的 SHA-256，历史收集文档存于 `collection-records/`。固定版本如下：
+
+| 项目 | 固定提交 | 版权与许可证 |
+|---|---|---|
+| rberenguel/soma | `6f4e357a7f4c96821dfd751e0b06b2f340afa862` | © 2025 Ruben Berenguel；`soma/LICENSE` |
+| fogleman/rush | `3e3b8396891d1802b30cb3129ae31fdedb319480` | © 2018 Michael Fogleman；`rush/LICENSE.md` |
+| gabrielecirulli/2048 | `478b6ec346e3787f589e4af751378d06ded4cbbc` | © 2014 Gabriele Cirulli；`2048/LICENSE.txt` |
+| abhas9/escape-run | `ab61caa41ae612057821df485bc5facf97d5b5c6` | © 2026 abhas9；`escape-run/LICENSE` |
+
+`lessons/spatial-games/` 新增中文选关、分层积分、持久化与本地运行适配。Soma 恢复原 Three.js 场景及交互模块，来源记录保存在 `soma-native/upstream/source-manifest.json`，原 MIT 声明保留。原版 46 个附加题形、经典方块和五个教学目标均可计分；逐题来源映射见 `soma-native/puzzle-audit.json`。rush 保留全部 40 个原版固定盘、网页固定障碍盘和三个教学／衍生盘，生成数据记录源文件位置及最短解。2048 沿用单次合并与随机生成规则。数学飞车复用原八类题目生成器和随机工具，使用每局随机题序、自动驾驶、拾取及答案门流程，题图改为路面外的紧凑 SVG。原上游辅助工具归档保留，其外部服务不成为课堂运行依赖。原创入口 SVG 和新增界面采用项目根 MIT 许可，原库及附带素材继续保留各自许可。
+
+逻辑乐园的扫雷基于 [DavidNHill/JSMinesweeper](https://github.com/DavidNHill/JSMinesweeper)，固定版本 `256cd7d`；数独基于 [TN1ck/super-sudoku](https://github.com/TN1ck/super-sudoku)，固定版本 `165dcdb`。两项目采用 MIT，原始源码、README 与 LICENSE 保留在 `vendor/games/`。`lessons/minesweeper/` 的完整求解器及游戏内核从固定上游生成，`lessons/sudoku/` 保留完整 React 游戏与 3,014 条题库并构建为本地静态成品。科学小岛增加中文入口、原创 SVG、主题、触屏操作和隔离的本地存档；适配代码采用根目录 MIT。相关第三方运行库及打包代码保留各自许可。
+
+## 生活应用题：ASDiv、SVAMP、GSM8K（2026-10-05 本地整合）
+
+代表清单固定于 MathPhysics 提交 `2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd`。受控管理员服务包的 `server/word-problems-private/provenance/` 保存全部1,398条来源映射、源文件SHA-256、原分类及助手中文审核状态。学生离线包及Primary单HTML包含全部1,391道无隔离题，按原分类提供零分练习；仅7道既有问题题隔离。取消固定练习/考核分区，来源和题族仅溯源，不作功能门槛。人工教学批准字段如实保持false，真实助手复核记录保留；正式服务端题沿用原知识目标和积分上限，不增加额度。
+
+| 来源 | 固定版本 | 许可与归属 |
+|---|---|---|
+| ASDiv，chaochun/nlu-asdiv-dataset | `883f90a9a65bf00304ba8f37423910fe743abc47` | CC BY-NC 4.0；中央研究院资讯科学研究所 Natural Language Understanding laboratory；Shen-yun Miao、Chao-Chun Liang、Keh-Yih Su（2020） |
+| SVAMP，arkilpatel/SVAMP | `78e727689e1c1bebfc4be39c446898e8e10b0518` | 源仓库 MIT，© 2021 Arkil Patel；与ASDiv的具体原题血缘未知处保留非商业边界与许可澄清状态 |
+| GSM8K，openai/grade-school-math | `3101c7d5072418e28b9008a6636bde82a006892c` | MIT，© 2021 OpenAI |
+
+完整 MIT 声明与 ASDiv 署名资料随学生包保留在 `lessons/word-problems/licenses/`；完整源仓库 README 与来源审读链保留在受控管理员包的 `server/word-problems-private/provenance/licenses/`。ASDiv 的 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 许可声明保留在其 README。中文题面、单位与情境改编和讲解逐题记录 `adaptation`，原始 `Source` 与来源ID保持可追溯。项目根MIT只覆盖原创加载、判题适配及界面代码，不覆盖ASDiv题文或未澄清的SVAMP原题血缘。更多内容见管理员本地 [整合说明](docs/word-problems-integration.md)。

@@ -11,8 +11,11 @@ const lessonEntries = {
   'tangram-flat': 'lessons/tangram-flat/index.html',
   'primary-math': 'lessons/primary-math/index.html',
   'question-bank': 'lessons/question-bank/index.html',
-  'matter-library': 'src/adapters/matter.html'
+  'matter-library': 'src/adapters/matter.html',
+  minesweeper: 'lessons/minesweeper/index.html',
+  sudoku: 'lessons/sudoku/index.html'
 };
+const spatialEntries = new Set(['soma', 'rush', 'merge', 'escape'].map(game => `lessons/spatial-games/index.html?game=${game}`));
 
 // Permit only the existing local lessons and the six canonical experiment URLs.
 // Query parameters must never widen the lesson path or select an unknown mode.
@@ -23,6 +26,7 @@ export function isLocalActivityEntry(activity, baseURL) {
   try { base = new URL(baseURL); url = new URL(entry, base); } catch { return false; }
   if (url.origin !== base.origin) return false;
   return entry.startsWith('vendor/') ||
+    (adapter === 'spatial-games' && spatialEntries.has(entry)) ||
     (adapter === 'jsxgraph' && playgroundEntries.has(entry)) ||
     (Object.hasOwn(lessonEntries, adapter) && entry === lessonEntries[adapter]);
 }

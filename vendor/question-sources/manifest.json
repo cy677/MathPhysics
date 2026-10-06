@@ -1,0 +1,711 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-05",
+  "scope": "Downloaded elementary exercise definitions from the two pinned GitHub snapshots; concepts adapted independently in Chinese. Full upstream catalogs are not claimed as imported.",
+  "projects": {
+    "mathsmentales": {
+      "name": "MathsMentales",
+      "repo": "seb-cogez/mathsmentales",
+      "commit": "ff60a4304aa5a439c5e567cad28c79e01a9ae74a",
+      "license": "Apache-2.0",
+      "catalogEntries": 1598
+    },
+    "mathalea": {
+      "name": "MathALÉA",
+      "repo": "mathalea/mathaleaV3",
+      "commit": "9f4d62dba4971d5bbc2b4927b5e699ff05b84778",
+      "license": "AGPL-3.0",
+      "catalogEntries": 1743
+    }
+  },
+  "totals": {
+    "downloadedExercises": 41,
+    "addedTypes": 9,
+    "reusedExercises": 32,
+    "registeredTemplates": 134,
+    "loadedTemplates": 134,
+    "units": 49
+  },
+  "assets": [
+    {
+      "file": "mathsmentales/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "file": "mathsmentales/library/content.json",
+      "sha256": "86747326c1b6b54664cbadc9f1ed2f76b6bfd5091af1ea9d4a27c24fb6e3d91e"
+    },
+    {
+      "file": "mathalea/LICENSE",
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+    }
+  ],
+  "exercises": [
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N7/7MA1.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N7/7MA1.json",
+      "sha256": "4e65c3406a3254e9dea6a7c9bac8b6369cb9c13fabcc58bec433119f4d5a5ab3",
+      "task": "常用单位换算",
+      "status": "reused",
+      "templateIds": [
+        "measure.length",
+        "measure.mass",
+        "sg.liquid"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N7/7MC1.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N7/7MC1.json",
+      "sha256": "cbd6495f2b192f3f4417eccbcda88e47e8e19e33b5d2f797e2d1bee586252b05",
+      "task": "时间的加减与经过时间",
+      "status": "reused",
+      "templateIds": [
+        "measure.elapsed",
+        "sg.clock"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N7/7MC2.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N7/7MC2.json",
+      "sha256": "23c517193283bfe4e47f3a8d0dea9eb445acdd56abd9301e38502c2d9b2784be",
+      "task": "时分秒换算",
+      "status": "reused",
+      "templateIds": [
+        "measure.duration"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N7/7NB1.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N7/7NB1.json",
+      "sha256": "864c7b8c67dd55b3c37aa989da38f106bb465ddb5be217c3812e4a615c222044",
+      "task": "一个数量的几分之几",
+      "status": "reused",
+      "templateIds": [
+        "fraction.quantity"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N7/7NE1.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N7/7NE1.json",
+      "sha256": "fa950863444b77de24cdc60790b1464b8df53fdad1a21c65a2b1535809055b83",
+      "task": "小数加法",
+      "status": "reused",
+      "templateIds": [
+        "decimal.add"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N7/7NE2.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N7/7NE2.json",
+      "sha256": "915ff5955d2a067fc0ada06fcdf7c9743f851acb784c2989d3fd0df2ed8a268b",
+      "task": "整数除以10的整次幂",
+      "status": "reused",
+      "templateIds": [
+        "decimal.scale"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N8/8MA1.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N8/8MA1.json",
+      "sha256": "cad4f9b53abc6577abe636bc6492c247ab9531660289a0c0f1a50ce0958bc3a2",
+      "task": "常用单位换算",
+      "status": "reused",
+      "templateIds": [
+        "measure.length",
+        "measure.mass",
+        "sg.liquid",
+        "measure.area"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N8/8MC1.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N8/8MC1.json",
+      "sha256": "ef54a430e768654a9c70ba2820d4e18760c9dddd8fd3f6b58e96aa48a820a52f",
+      "task": "小数小时与时分换算",
+      "status": "added",
+      "templateIds": [
+        "measure.decimal-duration"
+      ],
+      "introduced": [
+        "measure.decimal-duration"
+      ]
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N8/8ME1.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N8/8ME1.json",
+      "sha256": "7567874e329b219c6ead304bb55a689afb6784a3490603705a59fdf6fcf1fffe",
+      "task": "锐角、直角和钝角",
+      "status": "added",
+      "templateIds": [
+        "geometry.angle-kind"
+      ],
+      "introduced": [
+        "geometry.angle-kind"
+      ]
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N8/8ND1.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N8/8ND1.json",
+      "sha256": "1d5d82b31e54f955a4bf7410179c1791efac0f5333fb81711200fc901d7c7e89",
+      "task": "整数加减",
+      "status": "reused",
+      "templateIds": [
+        "integer.add",
+        "integer.subtract"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N8/8NE1.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N8/8NE1.json",
+      "sha256": "fbfee7f49a20b8a528da6a3d7be4141028be8026839041f5e290fefeed7757f1",
+      "task": "小数加法",
+      "status": "reused",
+      "templateIds": [
+        "decimal.add"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N8/8NE2.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N8/8NE2.json",
+      "sha256": "3faeefa48a7c179173f6f2247d69816178d012148b68909600c0bc0133551e59",
+      "task": "小数乘以10的整次幂",
+      "status": "reused",
+      "templateIds": [
+        "decimal.scale"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N8/8NE3.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N8/8NE3.json",
+      "sha256": "d7b0605f945d93a333f4b62f8c99b5e6da27f8bf0ace44b582068f5db66fc82a",
+      "task": "小数除以10的整次幂",
+      "status": "reused",
+      "templateIds": [
+        "decimal.scale"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N8/8NE4.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N8/8NE4.json",
+      "sha256": "361546120027fa4486987154b2bef47abbcc7007d48ac3328e06cca4b642a89d",
+      "task": "整数乘0.1、0.01、0.001",
+      "status": "reused",
+      "templateIds": [
+        "decimal.scale"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N8/8NE5.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N8/8NE5.json",
+      "sha256": "d86ad2c72d127733afbf0812a7f43e7e4ece82cf6591dec80feaad3644972136",
+      "task": "整数除0.1、0.01、0.001",
+      "status": "reused",
+      "templateIds": [
+        "decimal.scale"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N8/8NE6.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N8/8NE6.json",
+      "sha256": "bc43f2e3c69fb7c59d696e563bf2581cdf43538d23325c23ddc025e53b814458",
+      "task": "十进分数与10的整次幂",
+      "status": "reused",
+      "templateIds": [
+        "decimal.scale"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N9/9NA1.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N9/9NA1.json",
+      "sha256": "27c72659a4d32e91740424251bf08710c16adc30226971874e0924c3eab4a6a8",
+      "task": "数位与数字",
+      "status": "reused",
+      "templateIds": [
+        "number.place",
+        "sg.decimal-place"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N9/9NE1.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N9/9NE1.json",
+      "sha256": "3717bbc3d20f13dee9e67add547a29fddc0712abb1eaf04f626465f54bd75fa5",
+      "task": "整数乘以10的整次幂",
+      "status": "reused",
+      "templateIds": [
+        "decimal.scale"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N9/9NE2.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N9/9NE2.json",
+      "sha256": "30bbe0cf7fe3a1582a7b9fafe6dd30371100a5c39dbcc65df693db217516fbbf",
+      "task": "选数凑整",
+      "status": "added",
+      "templateIds": [
+        "mental.pairs"
+      ],
+      "introduced": [
+        "mental.pairs"
+      ]
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N9/9NE3.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N9/9NE3.json",
+      "sha256": "5042161352c5bb636663a63f87d4e62cfda8db95e7dce21872303df267c77a71",
+      "task": "凑整后的三数简算",
+      "status": "reused",
+      "templateIds": [
+        "mental.pairs"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathsMentales",
+      "file": "mathsmentales/library/N9/9NF1.json",
+      "upstreamUrl": "https://github.com/seb-cogez/mathsmentales/blob/ff60a4304aa5a439c5e567cad28c79e01a9ae74a/library/N9/9NF1.json",
+      "sha256": "a5095c48d93638d6c4c50793c3ebd86744b4a889b12e6af1bb16ff01f4187914",
+      "task": "乘法表",
+      "status": "reused",
+      "templateIds": [
+        "integer.multiply"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3C10-1.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3C10-1.js",
+      "sha256": "39574114689d5c35d44a6e961a27e1c1de044d47b2ca5b7067da469eefec6fc8",
+      "task": "乘法表",
+      "status": "reused",
+      "templateIds": [
+        "integer.multiply"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3C10-2.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3C10-2.js",
+      "sha256": "20313ffa8e6179e8912d71118109820c834cad2ceaa1f7d4274d63bb99be03ac",
+      "task": "倍数路径",
+      "status": "added",
+      "templateIds": [
+        "number.multiple-path"
+      ],
+      "introduced": [
+        "number.multiple-path"
+      ]
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3C10-3.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3C10-3.js",
+      "sha256": "393d4d7f4ba79359260562058b9171ab2934bbf2d741a97ff30f3f48b13bc792",
+      "task": "10的整次幂缩放",
+      "status": "reused",
+      "templateIds": [
+        "decimal.scale"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3C10-4.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3C10-4.js",
+      "sha256": "a95de0c13bf7100018b0726d72de958a6b9bceed99b18d1e63e283b54d399847",
+      "task": "加法表",
+      "status": "reused",
+      "templateIds": [
+        "integer.add"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3C10.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3C10.js",
+      "sha256": "f7b3cdf23b33dad46482cd16c01079da7afa74eddc2716a6823f47997f71b646",
+      "task": "整数计算",
+      "status": "reused",
+      "templateIds": [
+        "integer.add",
+        "integer.subtract",
+        "integer.multiply",
+        "integer.divide"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3C11.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3C11.js",
+      "sha256": "0dbd132c2dcbbff044e0e527652a2dbaa1cc967c83a05f379ca120c2faed1aee",
+      "task": "除法与余数",
+      "status": "reused",
+      "templateIds": [
+        "integer.remainder"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3C12.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3C12.js",
+      "sha256": "e22022e07c3181da0baa7fd394d0deeb7176f9cc02b80802ae22f64bf366e8d7",
+      "task": "计算结果的个位",
+      "status": "added",
+      "templateIds": [
+        "number.last-digit"
+      ],
+      "introduced": [
+        "number.last-digit"
+      ]
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3C13.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3C13.js",
+      "sha256": "4a16c269f810af37f9cb1d67e953f2275889c1f16a2d10d7296a91befb4bb0fe",
+      "task": "价格应用题",
+      "status": "reused",
+      "templateIds": [
+        "word.shopping",
+        "word.change"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3C13-1.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3C13-1.js",
+      "sha256": "25866076b814807235efdce94b8beb033e03b92d492c91778ead8d5fe8d8e2c4",
+      "task": "质量应用题",
+      "status": "reused",
+      "templateIds": [
+        "measure.mass"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3C23.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3C23.js",
+      "sha256": "5a9b8a8d382e607e70f981346db58e9b5c8d5378ae11c9c9fd8928ef32ddd608",
+      "task": "分数计算",
+      "status": "reused",
+      "templateIds": [
+        "fraction.add",
+        "fraction.subtract",
+        "fraction.multiply",
+        "fraction.divide"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3C30.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3C30.js",
+      "sha256": "83a9a408e06fdafc442e76e966c8b19ef78d3b00ccf52b814b0eea130020918e",
+      "task": "列式计算",
+      "status": "reused",
+      "templateIds": [
+        "integer.add",
+        "integer.subtract",
+        "integer.multiply"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3C31.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3C31.js",
+      "sha256": "35dea87476bc247526c1bb692bbcbcfded3cd589016eb3cf5109000584d4859a",
+      "task": "购物应用题",
+      "status": "reused",
+      "templateIds": [
+        "word.shopping",
+        "word.change"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3I11.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3I11.js",
+      "sha256": "6417e87aad8ff1addd209a2d505dff9ea4422905f3d4c92e24e239a29a5b58c8",
+      "task": "按指令在方格中移动",
+      "status": "added",
+      "templateIds": [
+        "logic.route"
+      ],
+      "introduced": [
+        "logic.route"
+      ]
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3N10.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3N10.js",
+      "sha256": "5de9a4369692112c0c4870550d8b3fb5dab51c49be1802a50a6a4220b200b491",
+      "task": "数词与数字对应",
+      "status": "added",
+      "templateIds": [
+        "number.words"
+      ],
+      "introduced": [
+        "number.words"
+      ]
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3N10-1.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3N10-1.js",
+      "sha256": "5038e59ac75b42fbe061748c26ac40968f4418e78a42c2b56af373604bde7fff",
+      "task": "按数位重组整数",
+      "status": "reused",
+      "templateIds": [
+        "number.place"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3N11.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3N11.js",
+      "sha256": "ec072cb9b9be493c4079de8f76c7996d1b1ea65eaefb1950f207862a7cef40b5",
+      "task": "读整数数轴",
+      "status": "reused",
+      "templateIds": [
+        "number.number-line"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3N20.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3N20.js",
+      "sha256": "586ccad901865e72aca49759883cb063451fba77a1da5590dba8c30613a32c38",
+      "task": "整数与十进分数组合",
+      "status": "added",
+      "templateIds": [
+        "decimal.compose"
+      ],
+      "introduced": [
+        "decimal.compose"
+      ]
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3N22.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3N22.js",
+      "sha256": "4b6331fb51cafbe2d031ba1cee1593e06571e75a8c318fa89732d768deb65230",
+      "task": "读小数数轴",
+      "status": "added",
+      "templateIds": [
+        "number.number-line"
+      ],
+      "introduced": [
+        "number.number-line"
+      ]
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3N23.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3N23.js",
+      "sha256": "07e4ce87cdc1fd9645c5a187e2321161627e0f668c1ceba88af3045bcc5dafc2",
+      "task": "读细分刻度数轴",
+      "status": "reused",
+      "templateIds": [
+        "number.number-line"
+      ],
+      "introduced": []
+    },
+    {
+      "project": "MathALÉA",
+      "file": "mathalea/src/exercices/c3/c3N30.js",
+      "upstreamUrl": "https://github.com/mathalea/mathaleaV3/blob/9f4d62dba4971d5bbc2b4927b5e699ff05b84778/src/exercices/c3/c3N30.js",
+      "sha256": "9dda25c62af7a101bf6e586321057d22b9ca014d7ea9de944b4c5c19b458b59b",
+      "task": "单位进率",
+      "status": "reused",
+      "templateIds": [
+        "measure.length",
+        "measure.mass",
+        "sg.liquid"
+      ],
+      "introduced": []
+    }
+  ],
+  "loadedTemplateIds": [
+    "data.mean",
+    "data.probability",
+    "data.range",
+    "decimal.add",
+    "decimal.compose",
+    "decimal.divide",
+    "decimal.multiply",
+    "decimal.scale",
+    "decimal.subtract",
+    "fixed.pm-01",
+    "fixed.pm-02",
+    "fixed.pm-03",
+    "fixed.pm-04",
+    "fixed.pm-05",
+    "fixed.pm-06",
+    "fixed.pm-07",
+    "fixed.pm-08",
+    "fixed.pm-09",
+    "fixed.pm-10",
+    "fixed.pm-11",
+    "fixed.pm-12",
+    "fixed.pm-13",
+    "fixed.pm-14",
+    "fixed.pm-15",
+    "fixed.pm-16",
+    "fixed.pm-17",
+    "fixed.pm-18",
+    "fixed.pm-19",
+    "fixed.pm-20",
+    "fixed.pm-21",
+    "fixed.pm-22",
+    "fixed.pm-23",
+    "fixed.pm-24",
+    "fixed.pm-25",
+    "fixed.pm-26",
+    "fixed.pm-27",
+    "fixed.pm-28",
+    "fixed.pm-29",
+    "fixed.pm-30",
+    "fixed.pm-31",
+    "fixed.pm-32",
+    "fixed.pm-33",
+    "fixed.pm-34",
+    "fixed.pm-35",
+    "fixed.pm-36",
+    "fixed.pm-37",
+    "fixed.pm-38",
+    "fixed.pm-39",
+    "fixed.pm-40",
+    "fixed.pm-41",
+    "fixed.pm-42",
+    "fixed.pm-43",
+    "fixed.pm-44",
+    "fixed.pm-45",
+    "fixed.pm-46",
+    "fixed.pm-47",
+    "fixed.pm-48",
+    "fraction.add",
+    "fraction.add-like",
+    "fraction.compare",
+    "fraction.divide",
+    "fraction.equivalent",
+    "fraction.multiply",
+    "fraction.quantity",
+    "fraction.simplify",
+    "fraction.subtract",
+    "geometry.angle",
+    "geometry.angle-kind",
+    "geometry.perimeter",
+    "geometry.rectangle",
+    "geometry.triangle",
+    "geometry.volume",
+    "integer.add",
+    "integer.divide",
+    "integer.missing",
+    "integer.mixed",
+    "integer.multiply",
+    "integer.parentheses",
+    "integer.remainder",
+    "integer.subtract",
+    "logic.route",
+    "measure.area",
+    "measure.decimal-duration",
+    "measure.duration",
+    "measure.elapsed",
+    "measure.length",
+    "measure.mass",
+    "mental.pairs",
+    "number.compare",
+    "number.double",
+    "number.half",
+    "number.last-digit",
+    "number.multiple-path",
+    "number.number-line",
+    "number.place",
+    "number.round",
+    "number.sequence",
+    "number.words",
+    "percent.convert",
+    "percent.discount",
+    "percent.quantity",
+    "sg.algebra",
+    "sg.angle-relations",
+    "sg.bar",
+    "sg.charts",
+    "sg.circle",
+    "sg.clock",
+    "sg.composite-area",
+    "sg.decimal-place",
+    "sg.factors",
+    "sg.fraction-read",
+    "sg.length",
+    "sg.lines",
+    "sg.liquid",
+    "sg.measure-angle",
+    "sg.measure-unit",
+    "sg.mixed-fraction",
+    "sg.money-cents",
+    "sg.money-count",
+    "sg.nets",
+    "sg.parity",
+    "sg.percent-change",
+    "sg.percent-whole",
+    "sg.picture",
+    "sg.rate",
+    "sg.ratio",
+    "sg.shape2d",
+    "sg.shape3d",
+    "sg.symmetry",
+    "sg.volume-unknown",
+    "word.change",
+    "word.groups",
+    "word.shopping",
+    "word.speed"
+  ]
+}

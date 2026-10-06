@@ -1,0 +1,114 @@
+{
+  "frozen": true,
+  "reviewedCandidateCount": 617,
+  "expectedCandidateCount": 617,
+  "coverageComplete": true,
+  "missingIds": [],
+  "duplicateIds": [],
+  "inputContentHashMismatches": [],
+  "all617AuxiliaryListsFreshlyRead": true,
+  "hintEntryCount": 620,
+  "commonMistakeEntryCount": 660,
+  "svampEmptyCommonMistakeListCount": 193,
+  "statusCounts": {
+    "confirmed": 613,
+    "needs-correction": 4
+  },
+  "humanApprovedTrueCount": 0,
+  "answerChangedCount": 0,
+  "primaryFreezeArtifactsUnchanged": [
+    {
+      "path": "foundation-review.jsonl",
+      "sha256": "07f4fd9e24945ff0e78703b0d8fb61185a9185cfd5b3f69914dbecc556740b1e",
+      "unchanged": true
+    },
+    {
+      "path": "foundation-recommended-content.jsonl",
+      "sha256": "ba581eba55030931cc7c901eb4e5d6aeccb40418255a720bc29685dcbd58a630",
+      "unchanged": true
+    },
+    {
+      "path": "foundation-hash-checks.jsonl",
+      "sha256": "ed339617ca828b4ea70f9c81504733e1b7612ca41fcf9782d319f3d283ed9368",
+      "unchanged": true
+    },
+    {
+      "path": "foundation-summary.md",
+      "sha256": "be92ea6d70177aa7ed8771118e95bae7995b42378f8e5ffacbb3ba7da59014c1",
+      "unchanged": true
+    }
+  ],
+  "originalInputFilesUnchanged": true,
+  "inputContentHashMethod": "sha256(UTF-8 JSON, ensure_ascii=false, sort_keys=true, separators=(',', ':'), exactly the nine contentKeys; no trailing newline)",
+  "contentKeys": [
+    "id",
+    "prompt",
+    "answer",
+    "intent",
+    "hints",
+    "steps",
+    "commonMistakes",
+    "prerequisites",
+    "adaptation"
+  ],
+  "projectDraftComparedReadOnly": true,
+  "projectDraftVsFrozenRecommendedMismatchedIds": [],
+  "projectDraftVsAuxiliaryCorrectedMismatchedIds": [
+    "asdiv:nluds-0270",
+    "asdiv:nluds-0248",
+    "asdiv:nluds-1048",
+    "svamp:chal-138"
+  ],
+  "artifacts": [
+    {
+      "path": "foundation-auxiliary-review.jsonl",
+      "bytes": 1117358,
+      "sha256": "53d0a06fe48c9604be0203f5f3cdd1d30c822f80a7dd7ba6ff720cb6f0bd8969",
+      "utf8StrictDecodePassed": true,
+      "replacementCharacterCount": 0
+    },
+    {
+      "path": "foundation-auxiliary-deltas.jsonl",
+      "bytes": 6812,
+      "sha256": "2daebf6c0cf47eaf40201d4b786efde7958e8e8e69cf706053997f2f375b7cc0",
+      "utf8StrictDecodePassed": true,
+      "replacementCharacterCount": 0
+    },
+    {
+      "path": "foundation-auxiliary-hash-checks.jsonl",
+      "bytes": 171731,
+      "sha256": "d0811c5e8951b18a8ef5b6c9d88c5597cfdc43ef86c1199b2ffae14d220d4183",
+      "utf8StrictDecodePassed": true,
+      "replacementCharacterCount": 0
+    },
+    {
+      "path": "foundation-auxiliary-summary.md",
+      "bytes": 2436,
+      "sha256": "8167a434b415146cfb2e7a732fca6fa4e19529b78727dcd5c92f6812a612d89a",
+      "utf8StrictDecodePassed": true,
+      "replacementCharacterCount": 0
+    }
+  ],
+  "deltaHashes": [
+    {
+      "id": "asdiv:nluds-0270",
+      "inputContentSha256": "e11ccfe8220853ccf719f4d06688e7e27a17e77f76899a9cb519cf60d6add4b4",
+      "correctedContentSha256": "05b797a107e44cd079b9f1bc69a5e64ff24b6dbf24a3dbc80220cc6684251231"
+    },
+    {
+      "id": "asdiv:nluds-0248",
+      "inputContentSha256": "558985759fe4ee5115c5382ae14ecca7cefda9053978c24c799554aea6c2c99c",
+      "correctedContentSha256": "8dabe8871f535c021e40bd465c93ada28e11cc9117803a7863a1b83f41527001"
+    },
+    {
+      "id": "asdiv:nluds-1048",
+      "inputContentSha256": "c404a67788f45ef75664ef13a115a5cd9e18474f4f0e5a1b82fda9f86277622e",
+      "correctedContentSha256": "c643ff50c8d878a73c6a8746e9424f9ba323f04f9e9cf6a3963118fd36839c84"
+    },
+    {
+      "id": "svamp:chal-138",
+      "inputContentSha256": "7e227a649378e7d5605f0e47925d5cb8b2e19bae245cd14365b4fbe4222bc446",
+      "correctedContentSha256": "144a52686fbab2730fe0e7b4b47106b0450865a47a27e14b254e12d88cf80de5"
+    }
+  ]
+}

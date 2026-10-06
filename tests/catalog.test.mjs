@@ -26,8 +26,8 @@ const recommended = [
 
 test('six independently graded experiment entries share the playground without replacing existing activities', () => {
   const display = read('config/presentation.json');
-  assert.equal(local.activities.length, 13);
-  assert.equal(ids.length, 72);
+  assert.equal(local.activities.length, 19);
+  assert.equal(ids.length, 78);
   assert.deepEqual(defaults.openIds, recommended);
   assert.deepEqual(display.order.slice(0, recommended.length), recommended);
   assert.equal(new Set(display.order).size, display.order.length);
@@ -72,6 +72,19 @@ test('entry allowlist accepts exactly the six canonical mode URLs and preserves 
   for (const adapter of ['proofs', 'spaceflight', 'tangram-flat', 'phet', 'unknown']) {
     assert.equal(isLocalActivityEntry({adapter, entry: `${entry}?mode=triangle`}, base), false, adapter);
   }
+});
+
+test('two complete logic games extend the existing library and follow the original first nine activities',()=>{
+  const display=read('config/presentation.json');
+  assert.deepEqual(display.order.slice(9,11),['minesweeper','sudoku']);
+  for(const [id,source] of [['minesweeper','https://github.com/DavidNHill/JSMinesweeper'],['sudoku','https://github.com/TN1ck/super-sudoku']]){
+    const activity=local.activities.find(a=>a.id===id);
+    assert.ok(activity);assert.equal(activity.zone,'logic');assert.equal(activity.entry,`lessons/${id}/index.html`);
+    assert.equal(activity.source,source);assert.equal(activity.completeUpstream,true);assert.equal(activity.license,'MIT');
+    assert.deepEqual(activity.grades,[1,2,3,4,5,6]);
+  }
+  assert.equal(local.activities.find(a=>a.id==='sudoku').puzzleCount,3014);
+  assert.equal(local.activities.find(a=>a.id==='spaceflight').stageCount,63);
 });
 
 test('legacy preference parsing remains compatible without losing existing visits', () => {

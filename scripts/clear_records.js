@@ -1,7 +1,9 @@
 /* Run in the browser at the MathPhysics site, not in a terminal. MIT. */
 const isRecordKey = key => key === 'mathphysics.state.v1' ||
   key === 'mathphysics.spaceflight.v1' || key === 'mathphysics.question-bank.v1' ||
-  key.startsWith('mathphysics.progress.v1.');
+  key.startsWith('mathphysics.progress.v1.') ||
+  key.startsWith('mathphysics.minesweeper.') || key.startsWith('mathphysics.sudoku.') ||
+  key.startsWith('mathphysics.spatial.v1.');
 
 export function recordKeys(storage = globalThis.localStorage) {
   const keys = [];

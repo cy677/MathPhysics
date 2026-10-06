@@ -40,18 +40,11 @@ footer { flex-shrink: 0; display: flex; justify-content: space-between; gap: 16p
 #teaching { padding:18px; overflow:auto; border-left:1px solid var(--mp-line); background:var(--mp-surface); min-width:0; }
 #teaching h3 { font-size:14px; margin:16px 0 4px; color:var(--mp-primary); }
 #teaching p { margin:6px 0; font-size:14px; line-height:1.65; }
-.guide-steps { display:flex; gap:4px; }
-.guide-steps button { flex:1; padding:9px 6px; min-height:44px; font-size:13px; }
-.guide-steps button[aria-current=step] { background:var(--mp-primary); color:var(--mp-surface); }
-.guide-step-text { padding:12px; border-radius:10px; background:var(--mp-leaf); }
-.prediction-label { display:block; font-size:13px; margin-top:10px; }
-#prediction { width:100%; resize:vertical; padding:8px; font:inherit; border:1px solid var(--mp-line); border-radius:8px; margin:5px 0 10px; background:var(--mp-page); color:var(--mp-ink); }
 .dedicated-control { padding:12px; border:1px solid var(--mp-line); border-radius:12px; }
 .dedicated-control label { display:block; font-size:13px; margin-bottom:6px; }
 #experiment-option { width:100%; min-height:44px; padding:7px; font:inherit; background:var(--mp-surface); border:1px solid var(--mp-line); border-radius:8px; }
 #experiment-action { width:100%; margin-top:8px; justify-content:center; }
 #teaching #action-status { font-size:12px; color:var(--mp-muted); }
-#guide-next { margin-top:10px; min-height:44px; }
 .principle { border-top:1px dashed var(--mp-line); margin-top:14px; padding-top:12px; }
 .principle summary { min-height:44px; cursor:pointer; font-size:13px; color:var(--mp-primary); }
 .experiment-controls { display:flex; align-items:center; flex-wrap:wrap; gap:6px 12px; padding:10px 16px; border-top:1px solid var(--mp-line); background:var(--mp-surface); flex-shrink:0; }

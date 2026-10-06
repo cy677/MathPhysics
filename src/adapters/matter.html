@@ -7,21 +7,18 @@
   <base href="../../vendor/matter/demo/">
   <link rel="stylesheet" href="../../../src/theme.css">
   <link rel="stylesheet" href="../../../src/adapters/matter.css">
+<script src="../../../src/sync-client.js"></script><script src="../../../src/sync-ui.js"></script>
 </head>
 <body class="mp-page mp-matter">
   <header><a id="back-home" href="../../../index.html">← 科学小岛</a><div class="heading"><small>动力车间 · 物理验收</small><h1 id="title">正在准备演示…</h1></div><div class="actions"><button id="browse" hidden>← 返回分类</button><button id="pause" class="primary" aria-pressed="true" hidden>继续</button><button id="reset" hidden>重新开始</button></div></header>
   <main id="module-browser" hidden aria-label="物理演示分类"><div class="module-content"><p id="catalog-summary" class="catalog-summary"></p><div id="category-cards" class="category-cards"></div><section id="category-detail" hidden><a id="all-categories" class="back-categories">← 全部分类</a><div class="category-heading"><h2 id="category-title"></h2><span id="category-count"></span></div><p id="category-description" class="category-description"></p><div id="example-cards" class="example-cards"></div></section></div></main>
   <main id="experiment" hidden>
     <div class="scene-column"><section id="scene" aria-label="物理实验画布"><div id="error" role="alert" hidden></div></section>
-      <div class="experiment-controls"><span id="run-status" role="status">已暂停 · 先预测</span><button id="single-step">走1帧</button><button id="limited-step">走30帧</button><output id="experiment-readings" aria-live="off"></output></div>
+      <div class="experiment-controls"><span id="run-status" role="status">已暂停</span><button id="single-step">走1帧</button><button id="limited-step">走30帧</button><output id="experiment-readings" aria-live="off"></output></div>
       <div id="view-controls" class="experiment-controls" hidden aria-label="观察视野"><button id="fit-view" aria-pressed="true">完整查看观察物</button><button id="original-view" aria-pressed="false">原版视野</button><span id="view-status" role="status"></span></div>
     </div>
     <aside id="teaching" aria-label="实验引导">
-      <div id="guide-steps" class="guide-steps" aria-label="探究步骤"></div>
-      <p id="guide-step-text" class="guide-step-text" role="status"></p>
-      <label class="prediction-label" for="prediction">我先猜一猜</label><textarea id="prediction" rows="2" placeholder="用一句话写下预测，也可以先说给同伴听。"></textarea>
-      <div class="dedicated-control"><label id="experiment-option-label" for="experiment-option"></label><select id="experiment-option"></select><button id="experiment-action" class="primary"></button><p id="action-status" role="status">操作后用“走1帧”或“走30帧”看变化。</p></div>
-      <button id="guide-next">下一步 →</button>
+      <div class="dedicated-control"><label id="experiment-option-label" for="experiment-option"></label><select id="experiment-option"></select><button id="experiment-action" class="primary"></button><p id="action-status" role="status"></p></div>
       <div id="guide-content"></div>
     </aside>
   </main>

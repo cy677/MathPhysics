@@ -1,0 +1,4 @@
+.soma-native-host{position:relative;width:100%;min-width:0;border:1px solid #d9e2d2;border-radius:18px;overflow:hidden;background:#f7f8ed}
+.soma-native-frame{display:block;width:100%;height:clamp(470px,calc(100dvh - 180px),760px);min-height:470px;border:0;background:#f7f8ed}
+.soma-native-loading{position:absolute;z-index:3;left:50%;top:42%;transform:translate(-50%,-50%);margin:0;padding:12px 18px;border-radius:12px;background:#fffef5;color:#315b48;box-shadow:0 4px 15px #315b4814;font-size:13px;white-space:nowrap;pointer-events:none}
+@media(max-width:600px){.soma-native-host{border-radius:14px}.soma-native-frame{height:clamp(490px,calc(100dvh - 180px),720px);min-height:490px}.soma-native-loading{font-size:12px}}

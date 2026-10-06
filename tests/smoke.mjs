@@ -50,7 +50,9 @@ try{
     console.log('START',a.id);page=await context.newPage();const errors=[],missing=[];
     page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.url().startsWith(base)&&r.status()>=400)missing.push(r.url());});
     try{
-      const entry=a.adapter==='phet'?a.entry.replace('vendor/phet/','src/phet/generated/'):a.entry;
+      const replacements={phet:['vendor/phet/','src/phet/generated/'],matter:['vendor/matter/demo/mathphysics.html','src/adapters/matter.html'],tangram:['vendor/tangram/index.html','src/adapters/tangram.html']};
+      const [oldEntry,newEntry]=replacements[a.adapter]||[];
+      const entry=oldEntry?a.entry.replace(oldEntry,newEntry):a.entry;
       await page.goto(base+entry,{waitUntil:'load',timeout:60000});
       await page.waitForFunction(isReady,a.adapter,{timeout:20000});
       await page.waitForTimeout(a.adapter==='matter'?900:1500);

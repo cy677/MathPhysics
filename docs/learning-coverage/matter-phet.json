@@ -40,28 +40,7 @@
     "browserClosed": true,
     "serverClosed": true,
     "layoutPassed": true,
-    "layoutReport": "output/playwright/learning-coverage/demo-layout-browser-report.json",
-    "layoutBrowserTest": "tests/demo-layout-browser.mjs",
-    "layoutScreenshotCount": 82,
-    "layoutSourceReports": [
-      "output/playwright/learning-coverage/demo-phet-layout-partial-report.json",
-      "output/playwright/learning-coverage/demo-host-layout-report.json",
-      "output/playwright/learning-coverage/demo-local-layout-report.json"
-    ],
-    "displayCompatibilityPassed": true,
-    "displayCompatibilityReport": "output/playwright/learning-coverage/phet-display-compat-browser-report.json",
-    "displayCompatibilityBrowserTest": "tests/phet-display-compat-browser.mjs",
-    "visualReview": {
-      "status": "passed_with_scope_notes",
-      "reviewerModel": "gpt-6-luna",
-      "reasoningEffort": "max",
-      "report": "docs/learning-coverage/visual-matter-phet.json",
-      "initialScreenshotPathsReviewed": 98,
-      "updatedScreenshotPathsReviewed": 82,
-      "unionUniqueScreenshotPathsReviewed": 145,
-      "outstandingFindings": 0,
-      "scope": "F1-F5 resolved; mobile PhET controls remain small; ragdoll main bodies fit while peripheral shapes can touch the camera edge. Visual observations and machine interaction checks are separate."
-    }
+    "layoutReport": "output/playwright/learning-coverage/demo-layout-browser-report.json"
   },
   "demonstrations": [
     {
@@ -140,16 +119,7 @@
         "bodyCount": 7,
         "screenshot": "output/playwright/learning-coverage/matter-airFriction-desktop.png"
       },
-      "questionIds": [],
-      "phaseValidation": {
-        "id": "matter-airFriction",
-        "operateHiddenWhy": true,
-        "explainVisibleWhy": true,
-        "screenshots": [
-          "output/playwright/learning-coverage/matter-airFriction-operate-mobile.png",
-          "output/playwright/learning-coverage/matter-airFriction-explain-mobile.png"
-        ]
-      }
+      "questionIds": []
     },
     {
       "id": "matter-friction",
@@ -617,16 +587,7 @@
         "bodyCount": 35,
         "screenshot": "output/playwright/learning-coverage/matter-bridge-desktop.png"
       },
-      "questionIds": [],
-      "phaseValidation": {
-        "id": "matter-bridge",
-        "operateHiddenWhy": true,
-        "explainVisibleWhy": true,
-        "screenshots": [
-          "output/playwright/learning-coverage/matter-bridge-operate-mobile.png",
-          "output/playwright/learning-coverage/matter-bridge-explain-mobile.png"
-        ]
-      }
+      "questionIds": []
     },
     {
       "id": "matter-car",
@@ -860,16 +821,7 @@
         "bodyCount": 37,
         "screenshot": "output/playwright/learning-coverage/matter-slingshot-desktop.png"
       },
-      "questionIds": [],
-      "phaseValidation": {
-        "id": "matter-slingshot",
-        "operateHiddenWhy": true,
-        "explainVisibleWhy": true,
-        "screenshots": [
-          "output/playwright/learning-coverage/matter-slingshot-operate-mobile.png",
-          "output/playwright/learning-coverage/matter-slingshot-explain-mobile.png"
-        ]
-      }
+      "questionIds": []
     },
     {
       "id": "matter-newtonsCradle",
@@ -2195,16 +2147,7 @@
         "bodyCount": 243,
         "screenshot": "output/playwright/learning-coverage/matter-cloth-desktop.png"
       },
-      "questionIds": [],
-      "phaseValidation": {
-        "id": "matter-cloth",
-        "operateHiddenWhy": true,
-        "explainVisibleWhy": true,
-        "screenshots": [
-          "output/playwright/learning-coverage/matter-cloth-operate-mobile.png",
-          "output/playwright/learning-coverage/matter-cloth-explain-mobile.png"
-        ]
-      }
+      "questionIds": []
     },
     {
       "id": "matter-softBody",
@@ -2712,16 +2655,7 @@
         "bodyCount": 49,
         "screenshot": "output/playwright/learning-coverage/matter-collisionFiltering-desktop.png"
       },
-      "questionIds": [],
-      "phaseValidation": {
-        "id": "matter-collisionFiltering",
-        "operateHiddenWhy": true,
-        "explainVisibleWhy": true,
-        "screenshots": [
-          "output/playwright/learning-coverage/matter-collisionFiltering-operate-mobile.png",
-          "output/playwright/learning-coverage/matter-collisionFiltering-explain-mobile.png"
-        ]
-      }
+      "questionIds": []
     },
     {
       "id": "matter-compositeManipulation",
@@ -4001,16 +3935,7 @@
         "bodyCount": 6,
         "screenshot": "output/playwright/learning-coverage/matter-substep-desktop.png"
       },
-      "questionIds": [],
-      "phaseValidation": {
-        "id": "matter-substep",
-        "operateHiddenWhy": true,
-        "explainVisibleWhy": true,
-        "screenshots": [
-          "output/playwright/learning-coverage/matter-substep-operate-mobile.png",
-          "output/playwright/learning-coverage/matter-substep-explain-mobile.png"
-        ]
-      }
+      "questionIds": []
     },
     {
       "id": "matter-views",
@@ -4088,16 +4013,7 @@
         "bodyCount": 44,
         "screenshot": "output/playwright/learning-coverage/matter-views-desktop.png"
       },
-      "questionIds": [],
-      "phaseValidation": {
-        "id": "matter-views",
-        "operateHiddenWhy": true,
-        "explainVisibleWhy": true,
-        "screenshots": [
-          "output/playwright/learning-coverage/matter-views-operate-mobile.png",
-          "output/playwright/learning-coverage/matter-views-explain-mobile.png"
-        ]
-      }
+      "questionIds": []
     },
     {
       "id": "phet-forces-and-motion-basics",
@@ -4152,53 +4068,7 @@
         "hostGuide": true,
         "keyboardGuide": true
       },
-      "questionIds": [],
-      "hostMobileValidation": {
-        "id": "phet-forces-and-motion-basics",
-        "nonOverlapping": true,
-        "panels": {
-          "science": {
-            "x": 0,
-            "y": 253.03125,
-            "width": 390,
-            "height": 547.96875,
-            "top": 253.03125,
-            "right": 390,
-            "bottom": 801,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 118,
-            "width": 390,
-            "height": 135.03125,
-            "top": 118,
-            "right": 390,
-            "bottom": 253.03125,
-            "left": 0
-          },
-          "frame": {
-            "x": 0,
-            "y": 253.03125,
-            "width": 390,
-            "height": 547.96875,
-            "top": 253.03125,
-            "right": 390,
-            "bottom": 801,
-            "left": 0
-          }
-        },
-        "screenshots": [
-          "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-mobile.png",
-          "output/playwright/learning-coverage/phet-forces-and-motion-basics-host-guide-mobile.png"
-        ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      "questionIds": []
     },
     {
       "id": "phet-energy-skate-park-basics",
@@ -4251,13 +4121,7 @@
         "hostGuide": true,
         "keyboardGuide": true
       },
-      "questionIds": [],
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      "questionIds": []
     },
     {
       "id": "phet-area-builder",
@@ -4308,54 +4172,7 @@
         "hostGuide": true,
         "keyboardGuide": true
       },
-      "questionIds": [],
-      "hostMobileValidation": {
-        "id": "phet-area-builder",
-        "nonOverlapping": true,
-        "panels": {
-          "science": {
-            "x": 0,
-            "y": 253.03125,
-            "width": 390,
-            "height": 547.96875,
-            "top": 253.03125,
-            "right": 390,
-            "bottom": 801,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 118,
-            "width": 390,
-            "height": 135.03125,
-            "top": 118,
-            "right": 390,
-            "bottom": 253.03125,
-            "left": 0
-          },
-          "frame": {
-            "x": 0,
-            "y": 253.03125,
-            "width": 390,
-            "height": 547.96875,
-            "top": 253.03125,
-            "right": 390,
-            "bottom": 801,
-            "left": 0
-          }
-        },
-        "screenshots": [
-          "output/playwright/learning-coverage/phet-area-builder-host-mobile.png",
-          "output/playwright/learning-coverage/phet-area-builder-host-guide-mobile.png"
-        ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ],
-      "inlineStylesheetOwnership": "SceneryStyle writes to its own styleElement.sheet; exact reversible display edit"
+      "questionIds": []
     },
     {
       "id": "phet-vector-addition",
@@ -4363,10 +4180,10 @@
       "source": "src/phet/generated/vector-addition.html",
       "guideFields": {
         "observe": "先向右走再向上走，与直接朝终点走的箭头有何关系？",
-        "operate": "从工具箱拖出箭头，改变方向和长度，打开合向量或分量。切换一维、二维、实验室与公式页面。",
-        "why": "箭头记录方向和距离；把箭头首尾接起来，就能找到最后的终点。",
-        "example": "导航“向东走3步再向北走2步”可用两个箭头表示。",
-        "principle": "高年级按横、纵分量分别相加；箭头平移不改变向量。箭头表示位移时才使用距离单位，不把所有箭头都叫力。"
+        "operate": "从工具箱拖出箭头，改变方向和长度，打开合向量或分量。切换一维、二维、实验与等式页面。",
+        "why": "箭头表示大小和方向。用它表示位移时，合箭头从起点指向终点，其长度不一定等于走过的总路程。",
+        "example": "向东走3格再向北走4格，路程为7格，位移大小为5格。",
+        "principle": "高年级按横、纵分量分别相加；平移不改变向量。先约定每格代表的量与单位，只把同种量、同单位的向量相加。"
       },
       "steps": [
         {
@@ -4377,12 +4194,12 @@
         {
           "id": "operate",
           "title": "再操作",
-          "text": "从工具箱拖出箭头，改变方向和长度，打开合向量或分量。切换一维、二维、实验室与公式页面。"
+          "text": "从工具箱拖出箭头，改变方向和长度，打开合向量或分量。切换一维、二维、实验与等式页面。"
         },
         {
           "id": "explain",
           "title": "说说发现",
-          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：箭头记录方向和距离；把箭头首尾接起来，就能找到最后的终点。"
+          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：箭头表示大小和方向。用它表示位移时，合箭头从起点指向终点，其长度不一定等于走过的总路程。"
         }
       ],
       "screenIds": [
@@ -4410,13 +4227,7 @@
         "hostGuide": true,
         "keyboardGuide": true
       },
-      "questionIds": [],
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      "questionIds": []
     },
     {
       "id": "phet-fractions-intro",
@@ -4469,14 +4280,7 @@
         "hostGuide": true,
         "keyboardGuide": true
       },
-      "questionIds": [],
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ],
-      "inlineStylesheetOwnership": "SceneryStyle writes to its own styleElement.sheet; exact reversible display edit"
+      "questionIds": []
     },
     {
       "id": "phet-fraction-matcher",
@@ -4527,14 +4331,7 @@
         "hostGuide": true,
         "keyboardGuide": true
       },
-      "questionIds": [],
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ],
-      "inlineStylesheetOwnership": "SceneryStyle writes to its own styleElement.sheet; exact reversible display edit"
+      "questionIds": []
     },
     {
       "id": "phet-balancing-act",
@@ -4587,13 +4384,7 @@
         "hostGuide": true,
         "keyboardGuide": true
       },
-      "questionIds": [],
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      "questionIds": []
     },
     {
       "id": "phet-circuit-construction-kit-dc",
@@ -4644,13 +4435,7 @@
         "hostGuide": true,
         "keyboardGuide": true
       },
-      "questionIds": [],
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      "questionIds": []
     },
     {
       "id": "phet-states-of-matter-basics",
@@ -4701,53 +4486,7 @@
         "hostGuide": true,
         "keyboardGuide": true
       },
-      "questionIds": [],
-      "hostMobileValidation": {
-        "id": "phet-states-of-matter-basics",
-        "nonOverlapping": true,
-        "panels": {
-          "science": {
-            "x": 0,
-            "y": 253.03125,
-            "width": 390,
-            "height": 547.96875,
-            "top": 253.03125,
-            "right": 390,
-            "bottom": 801,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 118,
-            "width": 390,
-            "height": 135.03125,
-            "top": 118,
-            "right": 390,
-            "bottom": 253.03125,
-            "left": 0
-          },
-          "frame": {
-            "x": 0,
-            "y": 253.03125,
-            "width": 390,
-            "height": 547.96875,
-            "top": 253.03125,
-            "right": 390,
-            "bottom": 801,
-            "left": 0
-          }
-        },
-        "screenshots": [
-          "output/playwright/learning-coverage/phet-states-of-matter-basics-host-mobile.png",
-          "output/playwright/learning-coverage/phet-states-of-matter-basics-host-guide-mobile.png"
-        ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      "questionIds": []
     },
     {
       "id": "phet-build-a-molecule",
@@ -4800,13 +4539,7 @@
         "hostGuide": true,
         "keyboardGuide": true
       },
-      "questionIds": [],
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      "questionIds": []
     },
     {
       "id": "phet-forces-and-motion-basics/net-force",
@@ -4845,31 +4578,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-forces-and-motion-basics/net-force",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -4878,38 +4602,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-desktop.png",
           "output/playwright/learning-coverage/phet-forces-and-motion-basics-net-force-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-forces-and-motion-basics/motion",
@@ -4948,31 +4657,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-forces-and-motion-basics/motion",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -4981,38 +4681,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-desktop.png",
           "output/playwright/learning-coverage/phet-forces-and-motion-basics-motion-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-forces-and-motion-basics/friction",
@@ -5051,31 +4736,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-forces-and-motion-basics/friction",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -5084,38 +4760,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-desktop.png",
           "output/playwright/learning-coverage/phet-forces-and-motion-basics-friction-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-forces-and-motion-basics/acceleration",
@@ -5154,31 +4815,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-forces-and-motion-basics/acceleration",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -5187,38 +4839,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-desktop.png",
           "output/playwright/learning-coverage/phet-forces-and-motion-basics-acceleration-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-energy-skate-park-basics/intro",
@@ -5257,31 +4894,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-energy-skate-park-basics/intro",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -5290,38 +4918,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-desktop.png",
           "output/playwright/learning-coverage/phet-energy-skate-park-basics-intro-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-energy-skate-park-basics/friction",
@@ -5360,31 +4973,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-energy-skate-park-basics/friction",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -5393,38 +4997,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-desktop.png",
           "output/playwright/learning-coverage/phet-energy-skate-park-basics-friction-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-energy-skate-park-basics/playground",
@@ -5463,31 +5052,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-energy-skate-park-basics/playground",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -5496,38 +5076,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-desktop.png",
           "output/playwright/learning-coverage/phet-energy-skate-park-basics-playground-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-area-builder/explore",
@@ -5566,31 +5131,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-area-builder/explore",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -5599,39 +5155,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-area-builder-explore-desktop.png",
           "output/playwright/learning-coverage/phet-area-builder-explore-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ],
-      "inlineStylesheetOwnership": "SceneryStyle writes to its own styleElement.sheet; exact reversible display edit"
+      }
     },
     {
       "id": "phet-area-builder/game",
@@ -5670,31 +5210,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-area-builder/game",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -5703,39 +5234,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-area-builder-game-desktop.png",
           "output/playwright/learning-coverage/phet-area-builder-game-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ],
-      "inlineStylesheetOwnership": "SceneryStyle writes to its own styleElement.sheet; exact reversible display edit"
+      }
     },
     {
       "id": "phet-vector-addition/explore-1d",
@@ -5774,71 +5289,47 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-vector-addition/explore-1d",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
         "mobile": {
           "science": {
             "x": 0,
-            "y": 0,
+            "y": 108,
             "width": 390,
-            "height": 489.53125,
-            "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
+            "height": 736,
+            "top": 108,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 736
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-vector-addition-explore-1d-desktop.png",
           "output/playwright/learning-coverage/phet-vector-addition-explore-1d-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-vector-addition/explore-2d",
@@ -5847,8 +5338,8 @@
       "source": "src/phet/generated/vector-addition.html",
       "guideFields": {
         "observe": "横向和纵向箭头接起来，合箭头是否从起点直指终点？",
-        "operate": "拖出两箭头，首尾相接，打开分量与合向量；固定第一支，改变第二支。",
-        "why": "横向、纵向分别累加，终点由两个方向一起确定。",
+        "operate": "拖出两箭头并首尾相接，打开合向量，把它的尾端移到第一段起点，再比较尖端与终点。",
+        "why": "横向、纵向分别累加，终点由两个方向一起确定；图上的合箭头可平移，不会自动贴到你的出发点。",
         "example": "在方格街区走不同路线，可到同一个目的地。",
         "principle": "分量和(ax+bx,ay+by)；不能直接把两个箭头长度相加当作合向量长度。"
       },
@@ -5861,12 +5352,12 @@
         {
           "id": "operate",
           "title": "再操作",
-          "text": "拖出两箭头，首尾相接，打开分量与合向量；固定第一支，改变第二支。"
+          "text": "拖出两箭头并首尾相接，打开合向量，把它的尾端移到第一段起点，再比较尖端与终点。"
         },
         {
           "id": "explain",
           "title": "说说发现",
-          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：横向、纵向分别累加，终点由两个方向一起确定。"
+          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：横向、纵向分别累加，终点由两个方向一起确定；图上的合箭头可平移，不会自动贴到你的出发点。"
         }
       ],
       "runtime": {
@@ -5877,71 +5368,47 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-vector-addition/explore-2d",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
-            "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
+            "y": 48,
+            "width": 1440,
+            "height": 952,
+            "top": 48,
+            "right": 1440,
             "bottom": 1000,
             "left": 0
           },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
-            "height": 1000,
-            "top": 0,
-            "right": 1440,
-            "bottom": 1000,
-            "left": 1080
-          },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
-            "height": 1000
+            "width": 1440,
+            "height": 952
           }
         },
         "mobile": {
           "science": {
             "x": 0,
-            "y": 0,
+            "y": 108,
             "width": 390,
-            "height": 489.53125,
-            "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
+            "height": 736,
+            "top": 108,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 736
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-vector-addition-explore-2d-desktop.png",
           "output/playwright/learning-coverage/phet-vector-addition-explore-2d-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-vector-addition/lab",
@@ -5950,7 +5417,7 @@
       "source": "src/phet/generated/vector-addition.html",
       "guideFields": {
         "observe": "两组颜色不同的箭头都能得到同样的合箭头吗？",
-        "operate": "用两个向量组，分别摆出不同箭头组合，显示各组合向量和分量，比较终点。",
+        "operate": "用两组箭头摆出不同组合，从同一出发点首尾相接；把各组合箭头的尾端放在出发点，再比较终点。",
         "why": "组合方式可不同，只要各方向总量相同，就能有相同合向量。",
         "example": "送快递选择不同街道，最终位移仍可一样。",
         "principle": "向量加法满足交换律、结合律；这些规律比较的是位移向量，不能由此说所有路线用时一样。"
@@ -5964,7 +5431,7 @@
         {
           "id": "operate",
           "title": "再操作",
-          "text": "用两个向量组，分别摆出不同箭头组合，显示各组合向量和分量，比较终点。"
+          "text": "用两组箭头摆出不同组合，从同一出发点首尾相接；把各组合箭头的尾端放在出发点，再比较终点。"
         },
         {
           "id": "explain",
@@ -5980,71 +5447,47 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-vector-addition/lab",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
-            "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
+            "y": 48,
+            "width": 1440,
+            "height": 952,
+            "top": 48,
+            "right": 1440,
             "bottom": 1000,
             "left": 0
           },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
-            "height": 1000,
-            "top": 0,
-            "right": 1440,
-            "bottom": 1000,
-            "left": 1080
-          },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
-            "height": 1000
+            "width": 1440,
+            "height": 952
           }
         },
         "mobile": {
           "science": {
             "x": 0,
-            "y": 0,
+            "y": 108,
             "width": 390,
-            "height": 489.53125,
-            "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
+            "height": 736,
+            "top": 108,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 736
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-vector-addition-lab-desktop.png",
           "output/playwright/learning-coverage/phet-vector-addition-lab-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-vector-addition/equations",
@@ -6052,27 +5495,27 @@
       "parentId": "phet-vector-addition",
       "source": "src/phet/generated/vector-addition.html",
       "guideFields": {
-        "observe": "改变箭头前的倍数，方向和长度会怎样？",
-        "operate": "调公式中的系数，打开合向量。一次只改一个系数，比较图上的箭头和分量表达式。",
-        "why": "正倍数拉长或缩短箭头，负倍数还让方向反过来。",
-        "example": "同一方向连续走两段相同距离，可以用2倍箭头表示。",
-        "principle": "用线性组合a·u+b·v逐分量计算。系数0使该箭头贡献为0，不是让别的箭头消失。"
+        "observe": "换成减法或三个箭头相加为0，结果箭头会怎样？",
+        "operate": "先选一种等式，勾选结果箭头c（极坐标为f），再一次改变一个系数；打开基向量可改初始箭头。",
+        "why": "正倍数改变长度，负倍数还使方向相反，0倍得到零向量。结果箭头由当前所选等式决定。",
+        "example": "先向东3格再向北2格，若要三个箭头合起来为0，第三支应向西3格、向南2格。",
+        "principle": "系数均为1时：加法c=a+b；减法c=a−b；闭合式a+b+c=0要求c=−(a+b)。极坐标页用d、e、f表示。不能把每种结果都当作a+b的合向量。"
       },
       "steps": [
         {
           "id": "predict",
           "title": "先预测",
-          "text": "改变箭头前的倍数，方向和长度会怎样？"
+          "text": "换成减法或三个箭头相加为0，结果箭头会怎样？"
         },
         {
           "id": "operate",
           "title": "再操作",
-          "text": "调公式中的系数，打开合向量。一次只改一个系数，比较图上的箭头和分量表达式。"
+          "text": "先选一种等式，勾选结果箭头c（极坐标为f），再一次改变一个系数；打开基向量可改初始箭头。"
         },
         {
           "id": "explain",
           "title": "说说发现",
-          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：正倍数拉长或缩短箭头，负倍数还让方向反过来。"
+          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：正倍数改变长度，负倍数还使方向相反，0倍得到零向量。结果箭头由当前所选等式决定。"
         }
       ],
       "runtime": {
@@ -6083,71 +5526,47 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-vector-addition/equations",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
-            "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
+            "y": 48,
+            "width": 1440,
+            "height": 952,
+            "top": 48,
+            "right": 1440,
             "bottom": 1000,
             "left": 0
           },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
-            "height": 1000,
-            "top": 0,
-            "right": 1440,
-            "bottom": 1000,
-            "left": 1080
-          },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
-            "height": 1000
+            "width": 1440,
+            "height": 952
           }
         },
         "mobile": {
           "science": {
             "x": 0,
-            "y": 0,
+            "y": 108,
             "width": 390,
-            "height": 489.53125,
-            "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
+            "height": 736,
+            "top": 108,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 736
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-vector-addition-equations-desktop.png",
           "output/playwright/learning-coverage/phet-vector-addition-equations-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-fractions-intro/intro",
@@ -6186,31 +5605,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-fractions-intro/intro",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -6219,39 +5629,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-fractions-intro-intro-desktop.png",
           "output/playwright/learning-coverage/phet-fractions-intro-intro-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ],
-      "inlineStylesheetOwnership": "SceneryStyle writes to its own styleElement.sheet; exact reversible display edit"
+      }
     },
     {
       "id": "phet-fractions-intro/game",
@@ -6290,31 +5684,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-fractions-intro/game",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -6323,39 +5708,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-fractions-intro-game-desktop.png",
           "output/playwright/learning-coverage/phet-fractions-intro-game-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ],
-      "inlineStylesheetOwnership": "SceneryStyle writes to its own styleElement.sheet; exact reversible display edit"
+      }
     },
     {
       "id": "phet-fractions-intro/lab",
@@ -6394,31 +5763,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-fractions-intro/lab",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -6427,39 +5787,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-fractions-intro-lab-desktop.png",
           "output/playwright/learning-coverage/phet-fractions-intro-lab-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ],
-      "inlineStylesheetOwnership": "SceneryStyle writes to its own styleElement.sheet; exact reversible display edit"
+      }
     },
     {
       "id": "phet-fraction-matcher/fractions",
@@ -6498,31 +5842,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-fraction-matcher/fractions",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -6531,39 +5866,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-fraction-matcher-fractions-desktop.png",
           "output/playwright/learning-coverage/phet-fraction-matcher-fractions-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ],
-      "inlineStylesheetOwnership": "SceneryStyle writes to its own styleElement.sheet; exact reversible display edit"
+      }
     },
     {
       "id": "phet-fraction-matcher/mixed-numbers",
@@ -6602,31 +5921,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-fraction-matcher/mixed-numbers",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -6635,39 +5945,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-desktop.png",
           "output/playwright/learning-coverage/phet-fraction-matcher-mixed-numbers-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ],
-      "inlineStylesheetOwnership": "SceneryStyle writes to its own styleElement.sheet; exact reversible display edit"
+      }
     },
     {
       "id": "phet-balancing-act/intro",
@@ -6706,31 +6000,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-balancing-act/intro",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -6739,38 +6024,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-balancing-act-intro-desktop.png",
           "output/playwright/learning-coverage/phet-balancing-act-intro-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-balancing-act/balance-lab",
@@ -6809,31 +6079,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-balancing-act/balance-lab",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -6842,38 +6103,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-balancing-act-balance-lab-desktop.png",
           "output/playwright/learning-coverage/phet-balancing-act-balance-lab-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-balancing-act/game",
@@ -6912,31 +6158,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-balancing-act/game",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -6945,38 +6182,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-balancing-act-game-desktop.png",
           "output/playwright/learning-coverage/phet-balancing-act-game-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-circuit-construction-kit-dc/intro",
@@ -7015,31 +6237,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-circuit-construction-kit-dc/intro",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -7048,38 +6261,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-desktop.png",
           "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-intro-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-circuit-construction-kit-dc/lab",
@@ -7118,31 +6316,22 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-circuit-construction-kit-dc/lab",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
@@ -7151,38 +6340,23 @@
             "x": 0,
             "y": 0,
             "width": 390,
-            "height": 489.53125,
+            "height": 844,
             "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 844
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-desktop.png",
           "output/playwright/learning-coverage/phet-circuit-construction-kit-dc-lab-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-states-of-matter-basics/states",
@@ -7191,10 +6365,10 @@
       "source": "src/phet/generated/states-of-matter-basics.html",
       "guideFields": {
         "observe": "固体的粒子在固定位置附近还会运动吗？",
-        "operate": "选同一种物质并切换三种状态，观察排列与运动；再缓慢加热和冷却。",
-        "why": "固体粒子通常在位置附近振动，液体可移动而较近，气体更分散。",
-        "example": "冰、水与水蒸气让我们看到不同物态。",
-        "principle": "粒子并非静止，温度与平均动能关联；物质种类不同，其相互作用及相变温度也不同。"
+        "operate": "先选同一种物质，用三种状态按钮比较预设的排列与运动；再缓慢加热和冷却。",
+        "why": "固体粒子通常在位置附近振动，液体粒子可以相互移动，气体粒子更分散。",
+        "example": "冰、水与水蒸气中的水分子仍是H₂O，改变的是排列与运动。",
+        "principle": "比较同种物质许多粒子的平均运动，不能只盯一颗粒子。相变取决于温度和压力；这个模型不包含相变潜热。"
       },
       "steps": [
         {
@@ -7205,12 +6379,12 @@
         {
           "id": "operate",
           "title": "再操作",
-          "text": "选同一种物质并切换三种状态，观察排列与运动；再缓慢加热和冷却。"
+          "text": "先选同一种物质，用三种状态按钮比较预设的排列与运动；再缓慢加热和冷却。"
         },
         {
           "id": "explain",
           "title": "说说发现",
-          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：固体粒子通常在位置附近振动，液体可移动而较近，气体更分散。"
+          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：固体粒子通常在位置附近振动，液体粒子可以相互移动，气体粒子更分散。"
         }
       ],
       "runtime": {
@@ -7221,71 +6395,47 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-states-of-matter-basics/states",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
             "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
-            "bottom": 1000,
-            "left": 0
-          },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
+            "width": 1440,
             "height": 1000,
             "top": 0,
             "right": 1440,
             "bottom": 1000,
-            "left": 1080
+            "left": 0
           },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
+            "width": 1440,
             "height": 1000
           }
         },
         "mobile": {
           "science": {
             "x": 0,
-            "y": 0,
+            "y": 108,
             "width": 390,
-            "height": 489.53125,
-            "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
+            "height": 736,
+            "top": 108,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 736
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-states-of-matter-basics-states-desktop.png",
           "output/playwright/learning-coverage/phet-states-of-matter-basics-states-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-states-of-matter-basics/phase-changes",
@@ -7293,27 +6443,27 @@
       "parentId": "phet-states-of-matter-basics",
       "source": "src/phet/generated/states-of-matter-basics.html",
       "guideFields": {
-        "observe": "加热、压盖与加粒子，哪个会改变碰壁的次数和压力？",
-        "operate": "先只加热，再重置只压盖，再重置只加粒子。比较粒子运动与压力读数。",
-        "why": "气体粒子碰容器壁产生压力；温度、体积和数量都可能影响碰壁。",
-        "example": "密闭空气被压缩时，容器内压力常增大。",
-        "principle": "区分温度、体积与粒子数的独立变化；相变中还涉及相互作用，不能把所有状态都直接套理想气体公式。"
+        "observe": "加热、压盖与加粒子，会怎样改变温度和压力？",
+        "operate": "每次只操作一个控制：加热、压盖或加粒子；重置后再试另一种，同时记录温度和压力的变化。",
+        "why": "气体粒子碰壁时传递动量，形成压力；碰撞次数与每次碰撞的作用都有关。",
+        "example": "密闭空气被压缩时，压力通常会增大，温度也可能改变。",
+        "principle": "只操作一个控制，不等于只有一个物理量变化。压缩、加入粒子也可能影响温度；盖子顶开后不再是密闭容器，不能把所有状态直接套理想气体公式。"
       },
       "steps": [
         {
           "id": "predict",
           "title": "先预测",
-          "text": "加热、压盖与加粒子，哪个会改变碰壁的次数和压力？"
+          "text": "加热、压盖与加粒子，会怎样改变温度和压力？"
         },
         {
           "id": "operate",
           "title": "再操作",
-          "text": "先只加热，再重置只压盖，再重置只加粒子。比较粒子运动与压力读数。"
+          "text": "每次只操作一个控制：加热、压盖或加粒子；重置后再试另一种，同时记录温度和压力的变化。"
         },
         {
           "id": "explain",
           "title": "说说发现",
-          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：气体粒子碰容器壁产生压力；温度、体积和数量都可能影响碰壁。"
+          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：气体粒子碰壁时传递动量，形成压力；碰撞次数与每次碰撞的作用都有关。"
         }
       ],
       "runtime": {
@@ -7324,71 +6474,47 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-states-of-matter-basics/phase-changes",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
-            "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
+            "y": 48,
+            "width": 1440,
+            "height": 952,
+            "top": 48,
+            "right": 1440,
             "bottom": 1000,
             "left": 0
           },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
-            "height": 1000,
-            "top": 0,
-            "right": 1440,
-            "bottom": 1000,
-            "left": 1080
-          },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
-            "height": 1000
+            "width": 1440,
+            "height": 952
           }
         },
         "mobile": {
           "science": {
             "x": 0,
-            "y": 0,
+            "y": 108,
             "width": 390,
-            "height": 489.53125,
-            "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
+            "height": 736,
+            "top": 108,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 736
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-states-of-matter-basics-phase-changes-desktop.png",
           "output/playwright/learning-coverage/phet-states-of-matter-basics-phase-changes-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-build-a-molecule/single-molecule",
@@ -7397,10 +6523,10 @@
       "source": "src/phet/generated/build-a-molecule.html",
       "guideFields": {
         "observe": "H₂O中的小2是在说两个水分子吗？",
-        "operate": "从桶中取两个H与一个O组成水，核对标签，再放到收集框。",
-        "why": "下标说明一个分子中该元素的原子数，H₂O是一种水分子。",
+        "operate": "在模型中把两个H分别接到一个O上，核对名称和连接，再放到收集框。",
+        "why": "H₂O表示水的分子组成：一个水分子含2个氢原子、1个氧原子。下标不表示水分子个数。",
         "example": "一杯水中有很多水分子，每个有2个H和1个O。",
-        "principle": "区分2H₂O与H₂O：前者两分子，共4H和2O；连接由模型预设规则确定。"
+        "principle": "在分子计数语境中，2H₂O表示2个水分子，共4个H和2个O。这里按预设规则搭建结构，不表示现实中将原子靠近就一定生成水。"
       },
       "steps": [
         {
@@ -7411,12 +6537,12 @@
         {
           "id": "operate",
           "title": "再操作",
-          "text": "从桶中取两个H与一个O组成水，核对标签，再放到收集框。"
+          "text": "在模型中把两个H分别接到一个O上，核对名称和连接，再放到收集框。"
         },
         {
           "id": "explain",
           "title": "说说发现",
-          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：下标说明一个分子中该元素的原子数，H₂O是一种水分子。"
+          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：H₂O表示水的分子组成：一个水分子含2个氢原子、1个氧原子。下标不表示水分子个数。"
         }
       ],
       "runtime": {
@@ -7427,71 +6553,47 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-build-a-molecule/single-molecule",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
-            "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
+            "y": 48,
+            "width": 1440,
+            "height": 952,
+            "top": 48,
+            "right": 1440,
             "bottom": 1000,
             "left": 0
           },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
-            "height": 1000,
-            "top": 0,
-            "right": 1440,
-            "bottom": 1000,
-            "left": 1080
-          },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
-            "height": 1000
+            "width": 1440,
+            "height": 952
           }
         },
         "mobile": {
           "science": {
             "x": 0,
-            "y": 0,
+            "y": 108,
             "width": 390,
-            "height": 489.53125,
-            "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
+            "height": 736,
+            "top": 108,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 736
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-desktop.png",
           "output/playwright/learning-coverage/phet-build-a-molecule-single-molecule-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-build-a-molecule/multiple-molecules",
@@ -7501,7 +6603,7 @@
       "guideFields": {
         "observe": "有6个H和3个O，能搭几个水分子？",
         "operate": "先数桶中的原子，按目标化学式逐个搭建，把分子收集并记录用了多少原子。",
-        "why": "每个目标分子用固定数量的原子，可搭个数还受较少的那类原子限制。",
+        "why": "每个目标分子用固定数量的原子。要按每个分子需要的配比，看看哪种原子最先不够用。",
         "example": "三套积木小人若每套用2只手和1个身子，需要6只手3个身子。",
         "principle": "按化学式作整数原子计数；6H和3O可组3H₂O。模型搭建不等于现实原子在任意条件都自动反应。"
       },
@@ -7519,7 +6621,7 @@
         {
           "id": "explain",
           "title": "说说发现",
-          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：每个目标分子用固定数量的原子，可搭个数还受较少的那类原子限制。"
+          "text": "对照预测，说清你改了哪个条件、看见什么变化，再用下面的原理解释：每个目标分子用固定数量的原子。要按每个分子需要的配比，看看哪种原子最先不够用。"
         }
       ],
       "runtime": {
@@ -7530,71 +6632,47 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-build-a-molecule/multiple-molecules",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
-            "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
+            "y": 48,
+            "width": 1440,
+            "height": 952,
+            "top": 48,
+            "right": 1440,
             "bottom": 1000,
             "left": 0
           },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
-            "height": 1000,
-            "top": 0,
-            "right": 1440,
-            "bottom": 1000,
-            "left": 1080
-          },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
-            "height": 1000
+            "width": 1440,
+            "height": 952
           }
         },
         "mobile": {
           "science": {
             "x": 0,
-            "y": 0,
+            "y": 108,
             "width": 390,
-            "height": 489.53125,
-            "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
+            "height": 736,
+            "top": 108,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 736
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-desktop.png",
           "output/playwright/learning-coverage/phet-build-a-molecule-multiple-molecules-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "phet-build-a-molecule/playground",
@@ -7633,71 +6711,47 @@
       "questionIds": [],
       "layoutValidation": {
         "id": "phet-build-a-molecule/playground",
-        "nonOverlapping": true,
+        "helpClosed": true,
         "displayMatchesScience": true,
         "desktop": {
           "science": {
             "x": 0,
-            "y": 0,
-            "width": 1080,
-            "height": 1000,
-            "top": 0,
-            "right": 1080,
+            "y": 48,
+            "width": 1440,
+            "height": 952,
+            "top": 48,
+            "right": 1440,
             "bottom": 1000,
             "left": 0
           },
-          "guide": {
-            "x": 1080,
-            "y": 0,
-            "width": 360,
-            "height": 1000,
-            "top": 0,
-            "right": 1440,
-            "bottom": 1000,
-            "left": 1080
-          },
+          "helpOpen": false,
           "display": {
-            "width": 1080,
-            "height": 1000
+            "width": 1440,
+            "height": 952
           }
         },
         "mobile": {
           "science": {
             "x": 0,
-            "y": 0,
+            "y": 108,
             "width": 390,
-            "height": 489.53125,
-            "top": 0,
-            "right": 390,
-            "bottom": 489.53125,
-            "left": 0
-          },
-          "guide": {
-            "x": 0,
-            "y": 489.53125,
-            "width": 390,
-            "height": 354.46875,
-            "top": 489.53125,
+            "height": 736,
+            "top": 108,
             "right": 390,
             "bottom": 844,
             "left": 0
           },
+          "helpOpen": false,
           "display": {
             "width": 390,
-            "height": 490
+            "height": 736
           }
         },
         "screenshots": [
           "output/playwright/learning-coverage/phet-build-a-molecule-playground-desktop.png",
           "output/playwright/learning-coverage/phet-build-a-molecule-playground-mobile.png"
         ]
-      },
-      "initializationGate": "construction complete property; old releases require topLayer, barrierRectangle, navigationBar and boundRunAnimationLoop",
-      "activeScreenPropertyOrder": [
-        "screenProperty",
-        "selectedScreenProperty",
-        "screenIndexProperty"
-      ]
+      }
     },
     {
       "id": "tangram-legacy",
@@ -7751,30 +6805,20 @@
           "state": {
             "canvas": {
               "x": 0,
-              "y": 125.984375,
-              "width": 1100,
-              "height": 771.46875,
-              "top": 125.984375,
-              "right": 1100,
+              "y": 84.546875,
+              "width": 1440,
+              "height": 812.90625,
+              "top": 84.546875,
+              "right": 1440,
               "bottom": 897.453125,
               "left": 0
             },
-            "guide": {
-              "x": 1100,
-              "y": 125.984375,
-              "width": 340,
-              "height": 771.46875,
-              "top": 125.984375,
-              "right": 1440,
-              "bottom": 897.453125,
-              "left": 1100
-            },
             "buffer": {
-              "width": 1100,
-              "height": 771
+              "width": 1440,
+              "height": 813
             }
           },
-          "nonOverlapping": true,
+          "helpClosed": true,
           "realKeyboardMove": true,
           "screenshot": "output/playwright/learning-coverage/tangram-legacy-desktop.png"
         },
@@ -7784,30 +6828,20 @@
           "state": {
             "canvas": {
               "x": 0,
-              "y": 122.59375,
+              "y": 65,
               "width": 390,
-              "height": 319.921875,
-              "top": 122.59375,
-              "right": 390,
-              "bottom": 442.515625,
-              "left": 0
-            },
-            "guide": {
-              "x": 0,
-              "y": 442.515625,
-              "width": 390,
-              "height": 250.1875,
-              "top": 442.515625,
+              "height": 627.703125,
+              "top": 65,
               "right": 390,
               "bottom": 692.703125,
               "left": 0
             },
             "buffer": {
               "width": 390,
-              "height": 320
+              "height": 628
             }
           },
-          "nonOverlapping": true,
+          "helpClosed": true,
           "realKeyboardMove": true,
           "screenshot": "output/playwright/learning-coverage/tangram-legacy-mobile.png"
         }

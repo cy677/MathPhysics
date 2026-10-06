@@ -1,0 +1,84 @@
+{
+  "frozen": true,
+  "reviewed": 617,
+  "expected": 617,
+  "coverageComplete": true,
+  "missingIds": [],
+  "duplicateIds": [],
+  "extraIds": [],
+  "inputHashMismatches": [],
+  "sourceHashMismatches": [],
+  "promptHashMismatches": [],
+  "statusCounts": {
+    "assistant-confirmed": 574,
+    "needs-correction": 43
+  },
+  "humanApprovedTrueCount": 0,
+  "inputHashMethod": "sha256(raw UTF-8 JSONL line bytes, without LF/CRLF terminator)",
+  "recommendedContentHashMethod": "sha256(UTF-8 JSON, ensure_ascii=false, sort_keys=true, separators=(',', ':'), exactly the nine contentKeys; no trailing newline)",
+  "contentKeys": [
+    "id",
+    "prompt",
+    "answer",
+    "intent",
+    "hints",
+    "steps",
+    "commonMistakes",
+    "prerequisites",
+    "adaptation"
+  ],
+  "inputFiles": [
+    {
+      "path": "content-work/results/asdiv-a.jsonl",
+      "bytes": 176300,
+      "lines": 212,
+      "sha256": "2076ce51a1424620fd48bd61ac7bf1144db75e6f9cd49815472f6d0b44ef7ac3"
+    },
+    {
+      "path": "content-work/results/asdiv-b.jsonl",
+      "bytes": 182203,
+      "lines": 212,
+      "sha256": "731f77fdbf743c41cac5224e302feecdf4d6b8bedc3b74072d160fbc646c4865"
+    },
+    {
+      "path": "content-work/results/svamp.jsonl",
+      "bytes": 143193,
+      "lines": 193,
+      "sha256": "46f8b0cb6d41762f57055aa9a7d46e4039b8983fa98a7102891f9a95884add13"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "foundation-review.jsonl",
+      "bytes": 1095853,
+      "sha256": "07f4fd9e24945ff0e78703b0d8fb61185a9185cfd5b3f69914dbecc556740b1e",
+      "utf8StrictDecodePassed": true,
+      "unicodeReplacementCharacters": 0
+    },
+    {
+      "path": "foundation-recommended-content.jsonl",
+      "bytes": 736830,
+      "sha256": "ba581eba55030931cc7c901eb4e5d6aeccb40418255a720bc29685dcbd58a630",
+      "utf8StrictDecodePassed": true,
+      "unicodeReplacementCharacters": 0
+    },
+    {
+      "path": "foundation-hash-checks.jsonl",
+      "bytes": 261103,
+      "sha256": "ed339617ca828b4ea70f9c81504733e1b7612ca41fcf9782d319f3d283ed9368",
+      "utf8StrictDecodePassed": true,
+      "unicodeReplacementCharacters": 0
+    },
+    {
+      "path": "foundation-summary.md",
+      "bytes": 8356,
+      "sha256": "be92ea6d70177aa7ed8771118e95bae7995b42378f8e5ffacbb3ba7da59014c1",
+      "utf8StrictDecodePassed": true,
+      "unicodeReplacementCharacters": 0
+    }
+  ],
+  "sourceEnglishStatementsRead": 617,
+  "chinesePromptsAndFullStepsRead": 617,
+  "unreadCandidateIds": [],
+  "auxiliaryFieldReviewLimitation": "hints/commonMistakes only first 110 fully read, plus targeted checks; no claim of complete auxiliary-field teaching review"
+}

@@ -1,7 +1,7 @@
 /* Host adapter, MIT. Upstream examples are loaded unchanged from their own files. */
 (function(){
 'use strict';
-var context=null,paused=true,experiment=null,guide=null,guideStep=0,fitScene=null,viewLens=null;
+var context=null,paused=true,experiment=null,guide=null,fitScene=null,viewLens=null,resetRequested=false;
 var projectUrl=new URL('../',document.currentScript.src);
 var resource=function(path){return new URL(path,projectUrl).href;};
 window.__mpReady=false;
@@ -9,7 +9,7 @@ window.require=function(name){if(name==='poly-decomp')return window.decomp;if(na
 function report(error){window.__mpError=String(error?.message||error);document.getElementById('experiment').hidden=false;document.getElementById('scene').hidden=false;if(document.getElementById('module-browser'))document.getElementById('module-browser').hidden=true;var el=document.getElementById('error');el.hidden=false;el.textContent='无法打开物理演示：'+window.__mpError;window.parent.postMessage({type:'mp-error',message:window.__mpError},location.origin);console.error(error);}
 function stop(){if(!context)return;Matter.Render.stop(context.render);Matter.Runner.stop(context.runner);}
 function resume(){if(!context||paused||document.hidden)return;stop();context.runner.timeLastTick=null;Matter.Render.run(context.render);Matter.Runner.run(context.runner,context.engine);}
-function syncRun(){var button=document.getElementById('pause');button.textContent=paused?'继续':'暂停';button.setAttribute('aria-pressed',String(paused));document.getElementById('run-status').textContent=paused?'已暂停 · 可以预测和操作':'正在运行 · 随时暂停看清过程';}
+function syncRun(){var button=document.getElementById('pause');button.textContent=paused?'继续':'暂停';button.setAttribute('aria-pressed',String(paused));document.getElementById('run-status').textContent=paused?'已暂停':'正在运行';}
 function readings(){if(!experiment)return;var state=experiment.snapshot();document.getElementById('experiment-readings').textContent='模拟 '+(state.elapsed/1000).toFixed(2)+' 秒 · '+state.bodies+' 个物体 · '+state.contacts+' 对接触'+(state.id==='matter-events'?' · 开始/持续/结束：'+Object.values(state.collisionCounts).join('/'):'')+(state.id==='matter-sleeping'?' · '+state.sleeping+' 个休眠':'')+(state.id==='matter-raycasting'?' · 探测 '+experiment.rayHits()+' 个物体':'');}
 function renderOnce(){if(!context)return;Matter.Render.world(context.render);context.render.context.setTransform(1,0,0,1,0,0);fitScene?.();readings();}
 function observationBounds(){
@@ -39,14 +39,15 @@ function setupObservationView(id){
   function choose(mode){viewLens.mode=mode;document.getElementById('fit-view').setAttribute('aria-pressed',String(mode==='fit'));document.getElementById('original-view').setAttribute('aria-pressed',String(mode==='original'));document.getElementById('view-status').textContent=mode==='fit'?'扩大观察范围，物体位置保持原样。':'原版画面范围，画面外的部分仍在运动。';renderOnce();}
   document.getElementById('fit-view').onclick=function(){choose('fit');};document.getElementById('original-view').onclick=function(){choose('original');};choose('fit');
 }
-function advance(frames){if(!context)return;paused=true;stop();syncRun();if(guide&&guideStep===0)setGuideStep(1);var delta=context.runner.delta||1000/60,count=Math.max(1,Math.round(frames*(1000/60)/delta));for(var i=0;i<count;i++)Matter.Engine.update(context.engine,frames*(1000/60)/count);renderOnce();}
+function advance(frames){if(!context)return;paused=true;stop();syncRun();var delta=context.runner.delta||1000/60,count=Math.max(1,Math.round(frames*(1000/60)/delta));for(var i=0;i<count;i++)Matter.Engine.update(context.engine,frames*(1000/60)/count);renderOnce();}
 document.getElementById('pause').onclick=function(){if(!context)return;paused=!paused;if(paused){stop();renderOnce();}else resume();syncRun();};
 document.getElementById('single-step').onclick=function(){advance(1);};
 document.getElementById('limited-step').onclick=function(){advance(30);};
-document.getElementById('reset').onclick=function(){stop();location.reload();};
+function resetScene(){resetRequested=true;window.MathPhysicsSync?.setSnapshot('physics-demos',null);stop();location.reload();}
+document.getElementById('reset').onclick=resetScene;
 document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else resume();});
 window.addEventListener('pagehide',stop);
-window.addEventListener('message',function(event){if(event.source===parent&&event.origin===location.origin&&event.data?.type==='mp-reset')location.reload();});
+window.addEventListener('message',function(event){if(event.source===parent&&event.origin===location.origin&&event.data?.type==='mp-reset')resetScene();});
 document.getElementById('back-home')?.addEventListener('click',function(event){if(parent!==window){event.preventDefault();parent.postMessage({type:'mp-close'},location.origin);}});
 function catalogLink(category,example){
   var url=new URL(resource('src/adapters/matter.html'));
@@ -71,7 +72,7 @@ function renderCatalog(catalog,inventory,display,categoryId){
     document.getElementById('category-description').textContent=category.description;
     document.getElementById('all-categories').href=catalogLink();
     var visited={};
-    try{visited=JSON.parse(localStorage.getItem('mathphysics.state.v1')||'{}').visited||{};}catch{}
+    try{visited=JSON.parse((window.MathPhysicsSync?.createStorage()||localStorage).getItem('mathphysics.state.v1')||'{}').visited||{};}catch{}
     document.getElementById('example-cards').innerHTML=category.examples.map(function(id){
       var activity=inventory.activities.find(function(a){return a.id==='matter-'+id&&a.adapter==='matter';});
       if(!activity)throw Error('Missing example '+id);
@@ -138,12 +139,9 @@ function setupTeaching(id,learning,operations){
   // Start with the alternate condition. Each first action is visibly testable.
   select.selectedIndex=1;
   var button=document.getElementById('experiment-action');button.textContent=control.action;button.dataset.control=control.id;
-  button.onclick=function(){try{paused=true;stop();syncRun();experiment.apply(select.value);document.getElementById('action-status').textContent='已操作：'+select.options[select.selectedIndex].textContent+'。现在走几帧，再比较你的预测。';if(guideStep===0)setGuideStep(1);renderOnce();}catch(error){report(error);}};
-  document.getElementById('guide-steps').innerHTML=guide.steps.map(function(step,index){return '<button data-guide-step="'+index+'">'+(index+1)+' '+step.title+'</button>';}).join('');
-  document.getElementById('guide-steps').onclick=function(event){var button=event.target.closest('[data-guide-step]');if(button)setGuideStep(Number(button.dataset.guideStep));};
-  document.getElementById('guide-next').onclick=function(){setGuideStep((guideStep+1)%guide.steps.length);};setGuideStep(0);
+  button.onclick=function(){try{paused=true;stop();syncRun();experiment.apply(select.value);document.getElementById('action-status').textContent='已操作：'+select.options[select.selectedIndex].textContent;renderOnce();}catch(error){report(error);}};
   Matter.Events.on(context.render,'afterRender',readings);
-  window.__mpTeaching={snapshot:function(){return {...experiment.snapshot(),paused:paused,step:guideStep,guideId:guide.id,control:control.id};},advance:advance,viewSnapshot:function(){return {mode:viewLens?.mode||'original',displayBounds:observationBounds(),physicsBounds:context.render.bounds};}};
+  window.__mpTeaching={snapshot:function(){return {...experiment.snapshot(),paused:paused,guideId:guide.id,control:control.id};},advance:advance,viewSnapshot:function(){return {mode:viewLens?.mode||'original',displayBounds:observationBounds(),physicsBounds:context.render.bounds};}};
   // A paused body can be repositioned without secretly advancing the engine.
   // Running scenes retain the upstream MouseConstraint behavior.
   var drag=null,canvas=context.canvas;
@@ -152,8 +150,9 @@ function setupTeaching(id,learning,operations){
   canvas.addEventListener('pointermove',function(event){if(!drag||drag.id!==event.pointerId||!paused)return;event.preventDefault();event.stopImmediatePropagation();var p=point(event);Matter.Body.setPosition(drag.body,{x:p.x+drag.dx,y:p.y+drag.dy});Matter.Body.setVelocity(drag.body,{x:0,y:0});Matter.Sleeping.set(drag.body,false);renderOnce();},true);
   var release=function(event){if(!drag||drag.id!==event.pointerId)return;drag=null;context.render.mouse.button=-1;Matter.Mouse.clearSourceEvents(context.render.mouse);};canvas.addEventListener('pointerup',release,true);canvas.addEventListener('pointercancel',release,true);
 }
-function setGuideStep(index){guideStep=index;document.getElementById('guide-step-text').textContent=guide.steps[index].text;document.querySelectorAll('[data-guide-step]').forEach(function(button){button.setAttribute('aria-current',Number(button.dataset.guideStep)===index?'step':'false');});document.querySelector('#guide-content [data-guide-field="why"]').hidden=index!==2;document.querySelector('#guide-content .principle').hidden=index!==2;document.getElementById('guide-next').textContent=index===2?'回到预测 ↶':'下一步 →';}
 async function start(){
+  await window.MathPhysicsSync?.ready;
+  var restored=window.MathPhysicsSync?.getSnapshot('physics-demos');
   var response=await fetch(resource('config/inventory.json'));if(!response.ok)throw Error('Missing complete inventory');
   var inventory=await response.json();
   var display=await fetch(resource('config/presentation.json')).then(function(r){return r.json();});
@@ -196,6 +195,13 @@ async function start(){
     await new Promise(function(resolve,reject){var attempts=0;function ready(){var bodies=Matter.Composite.allBodies(context.engine.world),dynamic=bodies.filter(function(body){return !body.isStatic;}).length;if((id==='svg'&&dynamic>=5)||(id==='terrain'&&dynamic>0)){resolve();return;}if(++attempts>200){reject(Error('SVG shapes did not finish loading'));return;}setTimeout(ready,25);}ready();});
   }
   window.__mpContext=context;styleScene();setupTeaching(id,learning,operations);setupObservationView(id);stop();syncRun();renderOnce();
+  if(restored?.scene===id){
+    var option=document.getElementById('experiment-option');
+    if([...option.options].some(function(o){return o.value===restored.option;})){option.value=restored.option;if(restored.applied===true)experiment.apply(option.value);}
+    var prediction=document.getElementById('prediction');if(prediction)prediction.value=typeof restored.prediction==='string'?restored.prediction.slice(0,2000):'';
+    paused=restored.paused!==false;syncRun();renderOnce();if(!paused)resume();
+  }
+  window.MathPhysicsSync?.register('physics-demos',function(){return resetRequested?null:{schemaVersion:1,scene:id,paused:paused,option:document.getElementById('experiment-option').value,applied:document.getElementById('action-status').textContent.startsWith('已操作'),prediction:document.getElementById('prediction')?.value||'',support:'scene-and-user-controls; transient bodies remain demonstration'};},window);
   if(!context?.canvas||!context.canvas.width)throw Error('No active simulation canvas');
   window.__mpReady=true;window.parent.postMessage({type:'mp-ready',id:activity.id},location.origin);
 }

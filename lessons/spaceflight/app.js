@@ -20,10 +20,11 @@ function current(){return branch?mission.branch:mission.steps[index];}
 function markSeen(){if(tab==='journey'&&!branch){saved.seen[`${mission.id}/${current().id}`]=true;persist();}}
 function refs(keys){$('step-sources').innerHTML=keys.map(k=>`<button data-source="${esc(k)}" title="${esc(D.sources[k]?.title||k)}">${esc((D.sources[k]?.title||k).split(' · ')[0])} ↗</button>`).join('');}
 function showSources(key){$('sources-dialog').showModal();if(key)requestAnimationFrame(()=>document.getElementById('source-'+key)?.scrollIntoView({block:'center'}));}
-function updateURL(){const q=new URLSearchParams({mission:mission.id,tab});if(tab==='journey')q.set('step',branch?'recovery':current().id);if(tab==='labs')q.set('lab',labId);if(tab==='systems')q.set('system',systemId);try{history.replaceState(null,'','#'+q.toString());}catch{}}
+function updateURL(){const q=new URLSearchParams({mission:mission.id,tab});if(tab==='journey'){q.set('step',branch?'recovery':current().id);q.set('view',$('diagram-mode').value);}if(tab==='labs')q.set('lab',labId);if(tab==='systems')q.set('system',systemId);try{history.replaceState(null,'','#'+q.toString());}catch{}}
 function routeButtons(){document.documentElement.style.setProperty('--mission-accent',mission.color);$('missions').innerHTML=Object.values(D.missions).map(m=>`<button class="mission-button ${m.id===mission.id?'active':''}" data-mission="${m.id}" aria-pressed="${m.id===mission.id}"><small>${esc(m.country)} · ${esc(m.tag)}</small><b>${esc(m.short)}</b><span>${esc(m.name)}</span></button>`).join('');$('route-note').textContent=mission.note;routeTeaching();}
 function itemButtons(){
  const arr=tab==='journey'?mission.steps:tab==='labs'?D.labs:D.systems;
+ $('journey-swipe-cue').hidden=tab!=='journey';
  $('lab-navigation').hidden=tab!=='labs';if(tab==='labs'){const position=D.labs.findIndex(l=>l.id===labId);$('lab-position').textContent='实验 '+String(position+1).padStart(2,'0')+' / '+D.labs.length+' · '+D.labs[position].title;$('lab-prev').disabled=position===0;$('lab-next').disabled=position===D.labs.length-1;}
  $('rail-title').textContent=tab==='journey'?'任务阶段':tab==='labs'?'原理实验':'飞行器与空间站';$('rail-count').textContent=arr.length+' 项';
  $('items').innerHTML=arr.map((a,i)=>{const active=tab==='journey'?!branch&&i===index:tab==='labs'?a.id===labId:a.id===systemId;const seen=tab==='journey'&&saved.seen[`${mission.id}/${a.id}`];return `<button class="${active?'active':''} ${seen?'seen':''}" data-item="${i}" aria-current="${active?'step':'false'}"><i>${String(i+1).padStart(2,'0')}</i><span>${esc(a.title||a.name)}</span></button>`;}).join('');
@@ -32,13 +33,15 @@ function itemButtons(){
  const list=$('items'), active=list.querySelector('button.active');
  if(active){const a=active.getBoundingClientRect(),b=list.getBoundingClientRect();if(list.scrollWidth>list.clientWidth+2)list.scrollLeft+=a.left-b.left-(b.width-a.width)/2;else list.scrollTop+=a.top-b.top-(b.height-a.height)/2;}
 }
-function setPlay(v){playing=v;$('play').textContent=v?'Ⅱ 暂停':'▶ 播放';}
+function playbackLabel(){return $('step-mode').checked?'▶ 播放本段':'▶ 连续播放';}
+function setPlay(v){playing=v;$('play').textContent=v?'Ⅱ 暂停':playbackLabel();$('diagram-play').textContent=v?'Ⅱ 暂停':branch&&mission.branch.stages?'▶ 播放回收流程':playbackLabel();$('stage-play').textContent=v?'Ⅱ 暂停':p>=1?($('step-mode').checked?'↺ 重播本段':'↺ 重播并继续'):playbackLabel();$('stage-play').setAttribute('aria-label',v?'暂停当前阶段':'连续播放后续阶段');}
 function setLabRun(v){labRunning=v;$('lab-toggle').textContent=v?'Ⅱ 暂停实验':'▶ 运行示意';$('dock-play').textContent=v?'Ⅱ 暂停实验':'▶ 开始实验';}
 function selectMission(id){if(!own(D.missions,id))return;flightJob++;clearTimeout(flightInputTimer);$('flight-view').value='ascent';mission=D.missions[id];index=0;p=0;branch=false;tab='journey';setPlay(false);setLabRun(false);requestJourney();routeButtons();render();}
 function goStep(i){setPlay(false);index=M.clamp(i,0,mission.steps.length-1);p=0;branch=false;seekJourneyTopic();render();}
-function quizRender(){const step=current(),q=step.quiz;const box=$('quiz');box.hidden=!q||branch;if(!q||branch)return;quizHintCount=0;box.innerHTML=`<h3>想一想 · ${esc(q[0])}</h3>`+q[1].map((a,i)=>`<button data-answer="${i}">${esc(a)}</button>`).join('')+'<p id="quiz-feedback" class="quiz-feedback" role="status"></p><p id="quiz-intent"></p><button id="quiz-next-hint" type="button">给我下一步提示</button><ol id="quiz-hints" aria-live="polite"></ol><details id="quiz-solution"><summary>完整解题过程与常见错误</summary><ol id="quiz-steps"></ol><b>常见错误</b><ul id="quiz-mistakes"></ul></details>';quizTeaching();$('quiz-next-hint').onclick=()=>{quizHintCount=Math.min(3,quizHintCount+1);quizTeaching();};}
+let quizPopup=null;
+function quizRender(){quizPopup?.destroy();quizPopup=null;const step=current(),q=step.quiz;const box=$('quiz');box.hidden=!q||branch;if(!q||branch)return;quizHintCount=0;box.innerHTML=`<h3>${esc(q[0])}</h3>`+q[1].map((a,i)=>`<button data-answer="${i}">${esc(a)}</button>`).join('')+'<p id="quiz-feedback" class="quiz-feedback" role="status"></p><button id="quiz-help" type="button" class="mp-help-trigger">提示</button><div id="quiz-help-content"><p id="quiz-intent"></p><button id="quiz-next-hint" type="button">给我下一步提示</button><ol id="quiz-hints" aria-live="polite"></ol><details id="quiz-solution"><summary>完整解题过程与常见错误</summary><ol id="quiz-steps"></ol><b>常见错误</b><ul id="quiz-mistakes"></ul></details></div>';if(window.MathPhysicsHelp)quizPopup=window.MathPhysicsHelp.create({title:'本题提示',content:$('quiz-help-content'),trigger:$('quiz-help')});quizTeaching();$('quiz-next-hint').onclick=()=>{quizHintCount=Math.min(3,quizHintCount+1);quizTeaching();};}
 function journeyInfo(){const s=current();$('concept').textContent=s.concept||'任务流程';$('lesson-title').textContent=s.title;$('story').textContent=saved.level==='junior'?s.kids:s.body;$('why-box').hidden=saved.level==='junior';$('why').textContent=s.why;$('mis-box').hidden=false;$('mis').textContent=s.mis;$('formula').hidden=saved.level!=='senior'||!s.formula;$('formula').textContent=s.formula||'';$('try-lab').hidden=!s.lab;$('try-lab').textContent=s.lab?'动手试试 · '+D.labs.find(l=>l.id===s.lab).title+' →':'';$('part-cards').hidden=true;refs(s.refs);quizRender();$('scene-category').textContent=branch?'PARALLEL BRANCH · 并行回收支线':'MISSION SEQUENCE · 任务流程';$('scene-count').textContent=branch?'不占用主线时序':`${String(index+1).padStart(2,'0')} / ${mission.steps.length}`;$('prev').disabled=branch||index===0;$('next').disabled=branch||index===mission.steps.length-1;$('scrub').value=Math.round(journeyPhysical()&&journeySim.flight?journeySim.flightTime/journeySim.flight.stats.durationSec*1000:p*1000);$('canvas').setAttribute('aria-label',s.title+'。'+s.kids+' 图形为非比例示意。');}
-function makeControls(){const l=D.labs.find(a=>a.id===labId);$('lab-controls').innerHTML=l.controls.map(([id,label,min,max,step,init,unit])=>`<label class="lab-control" for="control-${id}"><span>${esc(label)}</span><output id="value-${id}">${esc(displayVal(id,unit))}</output><input id="control-${id}" data-control="${id}" type="range" min="${min}" max="${max}" step="${step}" value="${values[id]}" aria-label="${esc(label)}"></label>`).join('');}
+function makeControls(){const l=D.labs.find(a=>a.id===labId);$('lab-controls').innerHTML=l.controls.map(([id,label,min,max,step,init,unit])=>`<div class="lab-control"><label for="control-${id}">${esc(label)}</label><output id="value-${id}">${esc(displayVal(id,unit))}</output><div class="range-control"><button type="button" data-range-target="control-${id}" data-range-delta="-1" aria-label="减小${esc(label)}">−</button><input id="control-${id}" data-control="${id}" type="range" min="${min}" max="${max}" step="${step}" value="${values[id]}" aria-label="${esc(label)}"><button type="button" data-range-target="control-${id}" data-range-delta="1" aria-label="增大${esc(label)}">＋</button></div></div>`).join('');}
 function displayVal(id,unit){if(unit==='开关'){if(id==='orbiting')return values[id]?'在轨':'地面';return values[id]?'开启':'关闭';}return values[id]+' '+unit;}
 function syncControls(){D.labs.find(l=>l.id===labId).controls.forEach(([id,,,,,,unit])=>{const input=$('control-'+id),out=$('value-'+id);if(input)input.value=values[id];if(out)out.textContent=displayVal(id,unit);});}
 function initLab(id){clearTimeout(flightInputTimer);flightJob++;labId=id;const l=D.labs.find(l=>l.id===id);values=Object.fromEntries(l.controls.map(v=>[v[0],v[5]]));sim={time:0,orbitPhase:0,dock:{x:-12,y:2,vx:0,vy:0},dockResult:'approaching',auto:false};if(id==='orbit')sim.orbit=M.orbit(values.alt,values.speed/100);setLabRun(false);if(id==='launch')requestFlight();}
@@ -46,12 +49,35 @@ function chooseLab(id){if(!D.labs.some(l=>l.id===id))return;initLab(id);tab='lab
 function labsInfo(){const l=D.labs.find(a=>a.id===labId);$('concept').textContent='动手实验 · '+(D.labs.findIndex(a=>a.id===labId)+1).toString().padStart(2,'0');$('lesson-title').textContent=l.title;$('story').textContent=l.question;$('why-box').hidden=false;$('why').textContent=l.text;$('formula').textContent=l.formula;$('formula').hidden=saved.level!=='senior';$('mis-box').hidden=false;$('mis').textContent=labId==='dock'?'接近时先对准，再控制相对速度。游戏里的成功提示不是工程操作指令。':'一次只改变一个条件，先猜结果，再比较。计算值来自此页的简化模型。';$('try-lab').hidden=true;$('quiz').hidden=true;$('part-cards').hidden=true;refs(l.refs);$('scene-category').textContent='PRINCIPLE LAB · 原理实验';$('scene-count').textContent=labId==='dock'?'教学模型 · 时间压缩 ×3':'不是实际型号数据';makeControls();$('canvas').setAttribute('aria-label',l.title+'。'+l.question);}
 function systemsInfo(){const s=D.systems.find(a=>a.id===systemId);$('concept').textContent='认识结构与分工';$('lesson-title').textContent=s.name;$('story').textContent=s.text;$('why-box').hidden=false;$('why').textContent=s.sub;$('mis-box').hidden=true;$('formula').hidden=true;$('quiz').hidden=true;$('try-lab').hidden=true;$('part-cards').hidden=false;$('part-cards').innerHTML=s.parts.map(([t],i)=>`<button data-part="${i}" class="${i===part?'active':''}">${esc(t)}</button>`).join('')+`<p role="status">${esc(s.parts[part][1])}</p>`;refs(s.refs);$('scene-category').textContent='VEHICLE ATLAS · 飞行器图解';$('scene-count').textContent='点选结构卡，认识各部分';$('canvas').setAttribute('aria-label',s.name+'。'+s.text);}
 function notebookInfo(){$('learning-stats').innerHTML=`<span><b>${Object.keys(saved.seen).length}</b>已浏览阶段</span><span><b>${Object.keys(saved.labs).length}</b>已打开实验</span><span><b>${Object.keys(saved.answers).length}</b>答对的检查题</span>`;$('notes').value=saved.notes;}
-function paint(){if(tab==='journey'&&current().id==='prepare'&&!journeySim.started)SpaceDraw.scene($('canvas'),mission,current(),0);else if(tab==='journey'&&journeyPhysical())SpaceDraw.lab($('canvas'),'launch',journeyValues,{...journeySim,flightView:branch?'recovery':$('flight-view').value,compact:innerWidth<=690});else if(tab==='journey')SpaceDraw.scene($('canvas'),mission,current(),p);else if(tab==='labs')SpaceDraw.lab($('canvas'),labId,values,{...sim,flightView:$('flight-view').value,compact:innerWidth<=690});else if(tab==='systems')SpaceDraw.system($('canvas'),systemId,part);if(tab==='labs')$('lab-reading').textContent=SpaceTeaching.labReading(labId,values,sim);updateMotionState();}
+function diagramCaption(){
+ let title,summary;
+ if(tab==='journey'){title=current().title;summary=current().kids;if(branch&&mission.branch.stages&&!journeyPhysical()){const stage=mission.branch.stages[Math.min(mission.branch.stages.length-1,Math.floor(p*mission.branch.stages.length))];title=stage.title;summary=stage.text;}}
+ else if(tab==='labs'){const lab=D.labs.find(l=>l.id===labId);title=lab.title;summary=SpaceTeaching.labReading(labId,values,sim);}
+ else if(tab==='systems'){const system=D.systems.find(s=>s.id===systemId);title=system.name+' · '+system.parts[part][0];summary=system.parts[part][1];}
+ else return;
+ if(activeFlightState())summary=$('flight-status').textContent;
+ $('diagram-title').textContent=title;$('diagram-summary').textContent=summary;
+}
+function stageDirector(){
+ const visible=tab==='journey'&&!journeyPhysical()&&!(branch&&mission.branch.stages);
+ $('stage-director').hidden=!visible;if(!visible){$('scrub').removeAttribute('aria-valuetext');return;}
+ const guide=SpaceStoryboard.describe(mission,current()),key=mission.id+'/'+current().id,active=SpaceStoryboard.keyframe(p),box=$('stage-keyframes');
+ if(box.dataset.stage!==key){box.dataset.stage=key;box.innerHTML=guide.frames.map((f,i)=>`<button type="button" data-stage-frame="${f.progress}" aria-pressed="false"><span>0${i+1}</span><b>${esc(f.title)}</b></button>`).join('');}
+ for(const [i,button] of [...box.children].entries())button.setAttribute('aria-pressed',String(i===active));
+ $('stage-focus').textContent=guide.focus;$('stage-action').textContent=guide.frames[active].detail;
+ $('stage-progress').textContent=Math.round(p*100)+'%';
+ if(!playing)$('stage-play').textContent=p>=1?($('step-mode').checked?'↺ 重播本段':'↺ 重播并继续'):playbackLabel();
+ $('scrub').setAttribute('aria-valuetext',Math.round(p*100)+'% · '+guide.frames[active].title);
+ $('shot-label').textContent=['turn','upper','phase','coast','transfer'].includes(current().scene)?'轨迹全景':['stage','boosters','tower','fairing','craftSep','deploy','trunk','orbitalSep','serviceSep','dock'].includes(current().scene)?'动作特写':'任务镜头';
+}
+function paint(){syncStoryboard();stageDirector();if(tab==='journey'&&journeyPhysical()&&current().id==='prepare'&&!journeySim.started)SpaceDraw.scene($('canvas'),mission,current(),0);else if(tab==='journey'&&journeyPhysical())SpaceDraw.lab($('canvas'),'launch',journeyValues,{...journeySim,flightView:branch?'recovery':$('flight-view').value,compact:innerWidth<=690});else if(tab==='journey')SpaceDraw.scene($('canvas'),mission,current(),p);else if(tab==='labs')SpaceDraw.lab($('canvas'),labId,values,{...sim,flightView:$('flight-view').value,compact:innerWidth<=690});else if(tab==='systems')SpaceDraw.system($('canvas'),systemId,part);if(tab==='labs')$('lab-reading').textContent=SpaceTeaching.labReading(labId,values,sim);updateMotionState();diagramCaption();if($('diagram-dialog').open)syncEnlarged();}
 function render(){
- $('preflight-checks').hidden=!(tab==='journey'&&!branch&&current().id==='prepare'&&!journeySim.started);$('lab-toggle').disabled=false;
+ $('workspace').dataset.mode=tab;
+ $('diagram-mode').parentElement.hidden=tab!=='journey';
+ $('preflight-checks').hidden=!(journeyPhysical()&&!branch&&current().id==='prepare'&&!journeySim.started);$('lab-toggle').disabled=false;
  document.querySelectorAll('[data-tab]').forEach(b=>{b.classList.toggle('active',b.dataset.tab===tab);b.setAttribute('aria-selected',String(b.dataset.tab===tab));});
  $('workspace').hidden=tab==='notebook';$('notebook').hidden=tab!=='notebook';$('player').hidden=tab!=='journey';$('lab-controls').hidden=tab!=='labs';$('dock-controls').hidden=tab!=='labs'||labId!=='dock';$('lab-animation').hidden=tab!=='labs'||labId==='dock';
- $('lab-toggle').hidden=tab!=='labs'||!['orbit','freefall','launch'].includes(labId);$('flight-controls').hidden=!activeFlightState();$('flight-settings').hidden=!activeFlightState();$('sim-rate-label').hidden=tab!=='labs'||!['orbit','launch'].includes(labId);$('rate').hidden=tab==='journey'&&journeyPhysical();$('play-description').textContent=journeyPhysical()?'物理时间压缩 '+simRate+'×':'片段速度';$('observation').hidden=tab!=='journey';$('motion-state').hidden=!((tab==='journey')||(tab==='labs'&&['orbit','launch'].includes(labId)));if(tab==='journey')journeyObservation();
+ $('lab-toggle').hidden=tab!=='labs'||!['orbit','freefall','launch'].includes(labId);$('flight-controls').hidden=!activeFlightState();$('flight-settings').hidden=!activeFlightState();$('sim-rate-label').hidden=tab!=='labs'||!['orbit','launch'].includes(labId);$('rate').hidden=tab==='journey'&&journeyPhysical();$('play-description').textContent=journeyPhysical()?'物理时间压缩 '+simRate+'×':'连续播放速度';$('observation').hidden=tab!=='journey';$('motion-state').hidden=!((tab==='journey')||(tab==='labs'&&['orbit','launch'].includes(labId)));if(tab==='journey')journeyObservation();
  if(tab==='notebook')notebookInfo();else {markSeen();itemButtons();if(tab==='journey')journeyInfo();if(tab==='labs')labsInfo();if(tab==='systems')systemsInfo();teachingInfo(tab==='journey'?current().teaching:tab==='labs'?D.labs.find(l=>l.id===labId).teaching:D.systems.find(s=>s.id===systemId).teaching);paint();}updateURL();
  saves.show(tab==='journey'?mission.id+'/'+current().id:tab==='labs'&&labId==='dock'?'lab/dock':null);
 }
@@ -64,13 +90,13 @@ function solveDock(dt){if(sim.dockResult!=='approaching')return;const d=sim.dock
 }
 
 const topicEvent={prepare:null,launch:'ignition',turn:'turn',maxq:'maxq',fstage:'separation',cstage:'separation',tower:'tower',boosters:'booster-sep',upper:'upper-ignition',fairing:'fairing',third:'third-separation',craftSep:'craft-separation',deploy:'deployment'};
-function journeyPhysical(){return tab==='journey'&&(branch||own(topicEvent,current().id));}
+function journeyPhysical(){return tab==='journey'&&$('diagram-mode').value==='physics'&&(branch||own(topicEvent,current().id));}
 function activeFlightState(){return tab==='labs'&&labId==='launch'?sim:journeyPhysical()?journeySim:null;}
-function configuration(params){return {mission:mission.id,...params,recovery:mission.id.startsWith('us-')?recoveryChoice:'none'};}
+function configuration(params){return {mission:mission.id,...params,recovery:mission.id!=='cn-crew'?(mission.id==='cn-sat'&&recoveryChoice==='rtls'?'sea':recoveryChoice):'none'};}
 function seekJourneyTopic(){
  if(!journeySim.flight||!journeyPhysical())return;
  journeySim.started=current().id!=='prepare'||branch;
- const code=topicEvent[current().id],event=journeySim.flight.events.find(e=>e.code===code&&e.branch==='ascent');
+ const code=branch?'separation':topicEvent[current().id],event=journeySim.flight.events.find(e=>e.code===code&&e.branch==='ascent');
  journeySim.flightTime=code?(event?.timeSec??journeySim.flight.stats.durationSec):0;
  if(code&&!event)toast('这次条件没有触发“'+current().title+'”。查看状态与事件，调整实验条件后再试。');
 }
@@ -96,7 +122,7 @@ function renderTelemetry(state,s,b,event){
  const selected=branch||$('flight-view').value==='recovery'?'booster':'main';
  const row=(sample,key,label,unit,divisor=1,precision=1)=>'<div><dt>'+label+'</dt><dd data-field="'+key+'" data-value="'+sample[key]+'">'+(sample[key]/divisor).toFixed(precision)+' <small>'+unit+'</small></dd></div>';
  const card=(frame)=>{const body=frame.sample,isBooster=frame.vehicle==='booster';
-  const status=!body?'尚未分离；此时没有独立一级读数':isBooster?(body.ended?(body.success?'接地条件满足：教学软着陆成功':'结束：'+({discarded:'不回收','fuel-empty':'推进剂耗尽','missed-target':'偏离目标','hard-contact':'接触条件未满足'}[body.reason]||body.reason)):(body.engineOn?'一级减速推进':'一级无推力，继续运动')):body.payloadSeparated?'载荷已分离，保持轨道运动':body.engineOn?'主线正在推进':'主线推力为零，仍继续运动';
+  const status=!body?'尚未分离；此时没有独立一级读数':isBooster?(body.ended?(body.success?(body.recoveryKind==='net'?'条件满足：教学网系捕获成功':'接地条件满足：教学软着陆成功'):'结束：'+({discarded:'不回收','fuel-empty':'推进剂耗尽','missed-target':'偏离目标','hard-contact':'接触条件未满足'}[body.reason]||body.reason)):(body.engineOn?'一级减速推进':'一级无推力，继续运动')):body.payloadSeparated?'载荷已分离，保持轨道运动':body.engineOn?'主线正在推进':'主线推力为零，仍继续运动';
   let readings='';if(body){readings=row(body,'altitudeM','高度','km',1000)+row(body,'airspeedMps','相对空气速度','m/s')+row(body,'dynamicPressurePa','动压','kPa',1000,2);readings+=isBooster?row(body,'verticalMps','垂直速度（向上为正）','m/s')+row(body,'fuelKg','一级剩余推进剂','kg'):row(body,'velocityMps','地心惯性速度','km/s',1000,2);}
   return '<article class="vehicle-card '+(selected===frame.vehicle?'selected':'')+'" data-vehicle="'+frame.vehicle+'"><h3>'+esc(frame.label)+(selected===frame.vehicle?' · 当前画面':'')+'</h3><p class="vehicle-status">'+esc(status)+'</p>'+(body?'<dl>'+readings+'</dl>':'')+'</article>';
  };
@@ -104,9 +130,9 @@ function renderTelemetry(state,s,b,event){
  $('flight-scene-summary').textContent='模拟 '+s.tSec.toFixed(1)+' s · '+(selected==='booster'?'观察一级回收支线':'观察主线飞行')+'。'+(event?'最近事件：'+event.label+'。':'准备发射。');
 }
 function updateFlightFeedback(state){
- const s=currentFlight(),reusable=mission.id.startsWith('us-');
+ const s=currentFlight(),reusable=mission.id!=='cn-crew';if(mission.id==='cn-sat'&&recoveryChoice==='rtls')recoveryChoice='sea';$('recovery-mode').querySelector('[value=rtls]').disabled=mission.id==='cn-sat';$('recovery-mode').querySelector('[value=sea]').textContent=mission.id==='cn-sat'?'海上网系捕获':'下程海上回收';
  $('recovery-mode').value=reusable?recoveryChoice:'none';$('recovery-mode').disabled=!reusable;$('flight-view').disabled=!reusable;
- $('configuration-note').textContent=reusable?'构型来自所选任务；两条支线共享模拟时钟，分别计算。':'此长征构型不进行一级回收；回收保留量不参与计算。';
+ $('configuration-note').textContent=mission.id==='cn-sat'?'长十乙两级构型；一级网系捕获。捕获平面20 m及其他参数均为任意教学值，不是真实船舶尺寸。':reusable?'构型来自所选任务；两条支线共享模拟时钟，分别计算。':'此长征构型不进行一级回收；回收保留量不参与计算。';
  $('flight-cutoff').disabled=!s||!s.engineOn||state.flightBusy;
  for(const id of ['flight-prev','flight-next','flight-scrub'])$(id).disabled=state.flightBusy||!s;
  if(tab==='journey'&&journeyPhysical())$('play').disabled=state.flightBusy||!!state.flightError;
@@ -116,7 +142,7 @@ function updateFlightFeedback(state){
  const b=SpaceFlight.boosterAt(state.flight,s.tSec),events=SpaceFlight.eventsAt(state.flight,s.tSec),event=events.at(-1),ended=s.tSec>=state.flight.stats.durationSec-1e-6;
  renderTelemetry(state,s,b,event);
  $('flight-scrub').value=Math.round(s.tSec/state.flight.stats.durationSec*1000);if(tab==='journey')$('scrub').value=$('flight-scrub').value;
- const booster=b?(b.ended?(b.success?'教学软着陆成功':'结束：'+({discarded:'不回收', 'fuel-empty':'推进剂耗尽','missed-target':'偏离目标','hard-contact':'接触条件未满足'}[b.reason]||b.reason)):(b.engineOn?'一级推进':'一级无推力滑行')):'一级尚未分离';
+ const booster=b?(b.ended?(b.success?(b.recoveryKind==='net'?'教学网系捕获成功':'教学软着陆成功'):'结束：'+({discarded:'不回收', 'fuel-empty':'推进剂耗尽','missed-target':'偏离目标','hard-contact':'接触条件未满足'}[b.reason]||b.reason)):(b.engineOn?'一级推进':'一级无推力滑行')):'一级尚未分离';
  $('motion-state').innerHTML='<span><small>模拟时间 / 压缩</small><b>'+s.tSec.toFixed(1)+' s / '+simRate+'×</b></span><span><small>主线高度 / 地心惯性速度</small><b>'+(s.altitudeM/1000).toFixed(1)+' km / '+(s.velocityMps/1000).toFixed(2)+' km/s</b><small>相对空气 '+s.airspeedMps.toFixed(1)+' m/s</small></span><span><small>主线 / 一级支线</small><b>'+(s.engineOn?'主线推进':'主线推力 0')+' · '+esc(booster)+'</b></span>';
  $('flight-status').textContent=(state.manualCutoff?'已在 '+state.cutoffAt.toFixed(1)+' s 主线手动关机；一级保持独立运动。':event?event.label+'。':'准备发射。')+' '+SpaceFlight.orbitStatus(s)+'。'+(ended?(state.flight.endedReason==='calculation-window'?'到达计算窗口；不能据此宣称任务成功。':'观察段结束，可回放。'):'');
  $('q-current').textContent='主线当前动压 '+(s.dynamicPressurePa/1000).toFixed(2)+' kPa';
@@ -128,7 +154,7 @@ function updateMotionState(){
  $('flight-telemetry').hidden=true;
  $('play').disabled=false;
  if(tab==='journey'){
-  $('motion-state').innerHTML='<span><small>讲解主题</small><b>'+esc(current().title)+'</b></span><span><small>画面性质</small><b>定性流程示意 · 无数值预测</b></span><span><small>模型边界</small><b>交会/返回需另看相应实验</b></span>';
+  $('motion-state').innerHTML='<span><small>讲解主题</small><b>'+esc(current().title)+'</b></span><span><small>画面性质</small><b>连续轨迹与动作示意</b></span><span><small>模型边界</small><b>时间经过压缩 · 非实测遥测</b></span>';
  }else if(tab==='labs'&&labId==='orbit'){
   const o=sim.orbit,a=M.orbitAt(o,sim.orbitTime||0),q=a.q;
   $('motion-state').innerHTML='<span><small>模拟时间 / 压缩</small><b>'+a.tSec.toFixed(0)+' s / '+simRate+'×</b></span><span><small>当前高度 / 地心惯性速度</small><b>'+(Math.hypot(q[0],q[1])-M.R).toFixed(0)+' km / '+Math.hypot(q[2],q[3]).toFixed(2)+' km/s</b></span><span><small>动力 / 轨迹</small><b>推力 0 · '+(o.stopped?'将进入大气':o.bound?'闭合轨道':'逃逸趋势')+'</b></span>';
@@ -160,7 +186,23 @@ function advanceFlight(state,dt,pauseEach){
 }
 
 function update(dt){
- if(playing&&tab==='journey'&&journeyPhysical()&&journeySim.flight&&!journeySim.flightBusy){advanceFlight(journeySim,dt,$('step-mode').checked);p=journeySim.flightTime/journeySim.flight.stats.durationSec;$('scrub').value=Math.round(p*1000);}else if(playing&&tab==='journey'&&!journeyPhysical()){p+=dt*rate/7.5;if(p>=1){p=1;if($('step-mode').checked){setPlay(false);sim.needsPaint=true;toast('这一段看完了。观察运动，再按下一阶段继续。');}else if(!branch&&index<mission.steps.length-1){index++;p=0;render();}else {setPlay(false);sim.needsPaint=true;}}$('scrub').value=Math.round(p*1000);}
+ if(playing&&tab==='journey'&&journeyPhysical()&&journeySim.flight&&!journeySim.flightBusy){advanceFlight(journeySim,dt,$('step-mode').checked);p=journeySim.flightTime/journeySim.flight.stats.durationSec;$('scrub').value=Math.round(p*1000);}else if(playing&&tab==='journey'&&!journeyPhysical()){
+  let remaining=dt*rate;
+  while(remaining>1e-9&&playing){
+   const duration=branch?(current().duration||49):SpaceStoryboard.describe(mission,current()).duration;
+   const divisions=branch&&current().stages?current().stages.length:1;
+   const end=$('step-mode').checked?Math.min(1,(Math.floor(p*divisions+1e-7)+1)/divisions):1;
+   const needed=(end-p)*duration;
+   if(remaining<needed){p+=remaining/duration;remaining=0;}
+   else{
+    p=end;remaining=Math.max(0,remaining-needed);
+    if($('step-mode').checked){setPlay(false);sim.needsPaint=true;toast('已按逐段讲解设置暂停；播放可继续。');}
+    else if(!branch&&index<mission.steps.length-1){index++;p=0;render();}
+    else{setPlay(false);sim.needsPaint=true;}
+   }
+  }
+  $('scrub').value=Math.round(p*1000);
+ }
  if(labRunning&&tab==='labs'){sim.time+=dt;if(labId==='orbit'){sim.orbitTime=Math.min(sim.orbit.durationSec,(sim.orbitTime||0)+dt*simRate);sim.orbitPhase=sim.orbitTime/sim.orbit.durationSec;if(sim.orbitTime>=sim.orbit.durationSec){sim.needsPaint=true;setLabRun(false);}}if(labId==='launch'&&sim.flight&&!sim.flightBusy)advanceFlight(sim,dt,$('flight-step-mode').checked);if(labId==='dock')solveDock(dt*3);}
 }
 function tick(now){const dt=Math.min((now-last)/1000,.05);last=now;update(dt);
@@ -169,9 +211,10 @@ function tick(now){const dt=Math.min((now-last)/1000,.05);last=now;update(dt);
  if(sim.needsPaint){paint();sim.needsPaint=false;}requestAnimationFrame(tick);
 }
 function setSourceList(){$('source-list').innerHTML=Object.entries(D.sources).map(([id,s],i)=>`<article class="source-item" id="source-${id}"><h3>${String(i+1).padStart(2,'0')} <a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a></h3><p>${esc(s.scope)}</p></article>`).join('');}
-function onHash(){const q=new URLSearchParams(location.hash.slice(1));if(own(D.missions,q.get('mission')))mission=D.missions[q.get('mission')];const i=mission.steps.findIndex(s=>s.id===q.get('step'));index=i<0?0:i;branch=q.get('step')==='recovery'&&!!mission.branch;if(D.labs.some(l=>l.id===q.get('lab')))initLab(q.get('lab'));if(D.systems.some(s=>s.id===q.get('system')))systemId=q.get('system');if(['journey','labs','systems','notebook'].includes(q.get('tab')))tab=q.get('tab');setPlay(false);setLabRun(false);p=0;if(journeySim.flight?.config.mission!==mission.id)requestJourney();else seekJourneyTopic();routeButtons();render();}
+function onHash(){const q=new URLSearchParams(location.hash.slice(1));if(q.get('system')==='cz3a')q.set('system','cz10b');if(q.get('mission')==='cn-sat'&&q.get('step')==='third')q.set('step','upper');if(['steps','physics'].includes(q.get('view')))$('diagram-mode').value=q.get('view');if(own(D.missions,q.get('mission')))mission=D.missions[q.get('mission')];const i=mission.steps.findIndex(s=>s.id===q.get('step'));index=i<0?0:i;branch=q.get('step')==='recovery'&&!!mission.branch;if(D.labs.some(l=>l.id===q.get('lab')))initLab(q.get('lab'));if(D.systems.some(s=>s.id===q.get('system')))systemId=q.get('system');if(['journey','labs','systems','notebook'].includes(q.get('tab')))tab=q.get('tab');setPlay(false);setLabRun(false);p=0;if(journeySim.flight?.config.mission!==mission.id)requestJourney();else seekJourneyTopic();routeButtons();render();}
 document.addEventListener('click',e=>{
  const b=e.target.closest('button');if(!b)return;
+ if(b.dataset.rangeTarget){const input=$(b.dataset.rangeTarget);if(input&&!input.disabled){input.stepUp(Number(b.dataset.rangeDelta));input.dispatchEvent(new Event('input',{bubbles:true}));}return;}
  if(b.dataset.mission){selectMission(b.dataset.mission);return;}if(b.dataset.tab){tabTo(b.dataset.tab);return;}
  if(own(b.dataset,'item')){const i=Number(b.dataset.item);if(tab==='journey')goStep(i);if(tab==='labs')chooseLab(D.labs[i].id);if(tab==='systems'){systemId=D.systems[i].id;part=0;render();}return;}
  if(b.dataset.source){showSources(b.dataset.source);return;}
@@ -186,14 +229,62 @@ $('lab-toggle').onclick=()=>{if(labId==='launch'&&(sim.flightBusy||!sim.flight))
 $('sources-open').onclick=()=>showSources();$('about-open').onclick=()=>showSources();$('sources-close').onclick=()=>$('sources-dialog').close();$('sources-dialog').addEventListener('click',e=>{if(e.target===$('sources-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
 $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if(document.documentElement.requestFullscreen)await document.documentElement.requestFullscreen();else toast('此浏览器不提供网页全屏，请横屏查看。');}catch{toast('浏览器未允许网页全屏，请横屏查看。');}};
 $('notes').addEventListener('input',e=>{saved.notes=M.validateNote(e.target.value);clearTimeout(noteTimer);noteTimer=setTimeout(()=>{$('notes-status').textContent=persist()?'已保存在此浏览器':'浏览器保存不可用，请导出记录。';},350);});
-$('export-notes').onclick=()=>{const content=['# 太空任务 · 探究记录','',`已浏览阶段：${Object.keys(saved.seen).length}；已打开实验：${Object.keys(saved.labs).length}；答对检查题：${Object.keys(saved.answers).length}。`,'以上记录不等于通关、掌握程度或飞行训练成绩。','',saved.notes,'','课程事实核对日期：2026-09-28；教学模型非真实遥测。'].join('\n');const u=URL.createObjectURL(new Blob([content],{type:'text/markdown;charset=utf-8'}));const a=document.createElement('a');a.href=u;a.download='太空任务-探究记录.md';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000);};
+$('export-notes').onclick=()=>{const content=['# 太空任务 · 探究记录','',`已浏览阶段：${Object.keys(saved.seen).length}；已打开实验：${Object.keys(saved.labs).length}；答对检查题：${Object.keys(saved.answers).length}。`,'以上记录不等于通关、掌握程度或飞行训练成绩。','',saved.notes,'','课程事实核对日期：2026-10-02；教学模型非真实遥测。'].join('\n');const u=URL.createObjectURL(new Blob([content],{type:'text/markdown;charset=utf-8'}));const a=document.createElement('a');a.href=u;a.download='太空任务-探究记录.md';a.click();setTimeout(()=>URL.revokeObjectURL(u),2000);};
 document.addEventListener('visibilitychange',()=>{if(document.hidden){setPlay(false);setLabRun(false);}});window.addEventListener('hashchange',onHash);document.addEventListener('keydown',e=>{if(e.key.toLowerCase()==='f'&&!/input|textarea|select/i.test(e.target.tagName))$('fullscreen').click();});
 // Expose observable, read-only snapshots for acceptance tests and future integration.
-window.SpaceClassroom={snapshot:()=>({mission:mission.id,index,step:current().id,tab,branch,p,playing,lab:labId,values:{...values},dock:sim.dock?{...sim.dock}:null,dockResult:sim.dockResult,auto:!!sim.auto,labRunning,system:systemId,level:saved.level,coordinateSystem:'地心惯性坐标，米/秒；轨道实验q为km与km/s',simRate,orbit:tab==='labs'&&labId==='orbit'?{tSec:sim.orbitTime||0,q:M.orbitAt(sim.orbit,sim.orbitTime||0).q,durationSec:sim.orbit.durationSec,status:sim.orbit.status}:null,flight:activeFlightState()?(()=>{const state=activeFlightState(),sample=currentFlight();return {busy:!!state.flightBusy,error:state.flightError||'',manualCutoff:!!state.manualCutoff,sample,booster:SpaceFlight.boosterAt(state.flight,state.flightTime||0),events:SpaceFlight.eventsAt(state.flight,state.flightTime||0),config:state.flight?.config,durationSec:state.flight?.stats.durationSec,endedReason:state.flight?.endedReason};})():null}),counts:{missions:4,stages:Object.values(D.missions).reduce((n,m)=>n+m.steps.length,0),labs:D.labs.length,systems:7}};
+window.SpaceClassroom={snapshot:()=>({mission:mission.id,index,step:current().id,tab,branch,p,playing,lab:labId,values:{...values},dock:sim.dock?{...sim.dock}:null,dockResult:sim.dockResult,auto:!!sim.auto,labRunning,system:systemId,level:saved.level,diagramMode:$('diagram-mode').value,renderer:'svg',coordinateSystem:'地心惯性坐标，米/秒；轨道实验q为km与km/s',simRate,orbit:tab==='labs'&&labId==='orbit'?{tSec:sim.orbitTime||0,q:M.orbitAt(sim.orbit,sim.orbitTime||0).q,durationSec:sim.orbit.durationSec,status:sim.orbit.status}:null,flight:activeFlightState()?(()=>{const state=activeFlightState(),sample=currentFlight();return {busy:!!state.flightBusy,error:state.flightError||'',manualCutoff:!!state.manualCutoff,sample,booster:SpaceFlight.boosterAt(state.flight,state.flightTime||0),events:SpaceFlight.eventsAt(state.flight,state.flightTime||0),config:state.flight?.config,durationSec:state.flight?.stats.durationSec,endedReason:state.flight?.endedReason};})():null}),counts:{missions:4,stages:Object.values(D.missions).reduce((n,m)=>n+m.steps.length,0),labs:D.labs.length,systems:7}};
 window.SpaceClassroom.learningSnapshot=()=>({route:mission.teaching,guide:tab==='journey'?current().teaching:tab==='labs'?D.labs.find(l=>l.id===labId).teaching:D.systems.find(s=>s.id===systemId).teaching,question:tab==='journey'&&current().quiz?Object.fromEntries(['id','intent','hints','steps','commonMistakes'].map(k=>[k,current().quiz[k]])):null});
+
+function syncStoryboard(){
+ const box=$('recovery-storyboard'),visible=tab==='journey'&&branch&&mission.branch.stages&&!journeyPhysical();
+ box.hidden=!visible;$('recovery-swipe-cue').hidden=!visible;if(!visible)return;
+ const stages=mission.branch.stages,k=Math.min(stages.length-1,Math.floor(p*stages.length));
+ if(box.dataset.phase!==String(k)||box.children.length!==stages.length){
+  box.dataset.phase=String(k);box.innerHTML=stages.map((s,i)=>`<button type="button" data-recovery-phase="${i}" aria-pressed="${i===k}">${String(i+1).padStart(2,'0')} ${esc(s.title)}</button>`).join('');
+  const active=box.querySelector('[aria-pressed=true]');if(active){const a=active.getBoundingClientRect(),r=box.getBoundingClientRect();box.scrollLeft+=a.left-r.left-(r.width-a.width)/2;}
+ }
+ $('story').textContent=stages[k].text;$('canvas').setAttribute('aria-label',mission.name+'一级回收：'+stages[k].title+'。'+stages[k].text);
+}
+$('step-mode').onchange=()=>{setPlay(playing);paint();};
+$('recovery-storyboard').onclick=e=>{const b=e.target.closest('[data-recovery-phase]');if(!b)return;setPlay(false);p=(Number(b.dataset.recoveryPhase)+.001)/mission.branch.stages.length;$('scrub').value=Math.round(p*1000);paint();};
+$('diagram-mode').onchange=()=>{setPlay(false);setLabRun(false);p=0;$('recovery-storyboard').dataset.phase='';if(journeyPhysical())seekJourneyTopic();render();};
+let diagramZoom=1;
+function setDiagramZoom(value){
+ const viewport=$('diagram-zoom-viewport'),previous=diagramZoom;diagramZoom=M.clamp(value,.5,3);
+ const centerX=(viewport.scrollLeft+viewport.clientWidth/2)/previous,centerY=(viewport.scrollTop+viewport.clientHeight/2)/previous;
+ $('diagram-zoom-content').style.width=(1040*diagramZoom)+'px';$('diagram-zoom-label').textContent=Math.round(diagramZoom*100)+'%';
+ $('diagram-zoom-out').disabled=diagramZoom<=.5;$('diagram-zoom-in').disabled=diagramZoom>=3;
+ viewport.scrollLeft=centerX*diagramZoom-viewport.clientWidth/2;viewport.scrollTop=centerY*diagramZoom-viewport.clientHeight/2;
+}
+function syncEnlarged(){
+ const svg=$('canvas').cloneNode(true);svg.id='diagram-enlarged';
+ const ids=new Map();for(const node of svg.querySelectorAll('[id]')){const before=node.id,after='diagram-zoom-'+before;ids.set(before,after);node.id=after;}
+ for(const node of svg.querySelectorAll('*'))for(const attr of [...node.attributes])if(attr.value.includes('url(#'))node.setAttribute(attr.name,attr.value.replace(/url\(#([^)]+)\)/g,(match,id)=>ids.has(id)?'url(#'+ids.get(id)+')':match));
+ $('diagram-zoom-content').replaceChildren(svg);$('diagram-dialog-title').textContent=$('diagram-title').textContent;$('diagram-dialog-summary').textContent=$('diagram-summary').textContent;
+ if(tab==='journey'&&!journeyPhysical()&&!(branch&&mission.branch.stages))$('diagram-dialog-summary').textContent=SpaceStoryboard.describe(mission,current()).frames[SpaceStoryboard.keyframe(p)].detail;
+}
+$('expand-diagram').onclick=()=>{
+ setLabRun(false);paint();syncEnlarged();
+ $('diagram-playback').hidden=tab!=='journey'||journeyPhysical();
+ const recoveryFlow=branch&&mission.branch.stages;
+ $('diagram-replay').textContent=recoveryFlow?'↺ 重播回收流程':($('step-mode').checked?'↺ 重播本段':'↺ 重播并继续');
+ [...document.querySelectorAll('[data-diagram-frame]')].forEach((button,i)=>button.textContent=(recoveryFlow?['流程开始','流程中段','流程结束']:['动作前','动作中','动作后'])[i]);
+ $('diagram-dialog').showModal();diagramZoom=1;setDiagramZoom(Math.min(1,($('diagram-zoom-viewport').clientWidth-2)/1040));
+ requestAnimationFrame(()=>{const viewport=$('diagram-zoom-viewport');viewport.scrollLeft=(viewport.scrollWidth-viewport.clientWidth)/2;viewport.scrollTop=(viewport.scrollHeight-viewport.clientHeight)/2;});
+};
+function seekStage(value){setPlay(false);p=M.clamp(value,0,1);$('scrub').value=Math.round(p*1000);paint();}
+$('stage-keyframes').onclick=e=>{const button=e.target.closest('[data-stage-frame]');if(button)seekStage(Number(button.dataset.stageFrame));};
+$('diagram-playback').onclick=e=>{const button=e.target.closest('[data-diagram-frame]');if(button)seekStage(Number(button.dataset.diagramFrame));};
+$('diagram-play').onclick=()=>$('play').click();
+$('stage-play').onclick=()=>$('play').click();
+$('diagram-replay').onclick=()=>{seekStage(0);setPlay(true);};
+$('diagram-dialog').addEventListener('close',()=>setPlay(false));
+$('diagram-close').onclick=()=>$('diagram-dialog').close();$('diagram-zoom-in').onclick=()=>setDiagramZoom(diagramZoom+.25);$('diagram-zoom-out').onclick=()=>setDiagramZoom(diagramZoom-.25);$('diagram-zoom-reset').onclick=()=>setDiagramZoom(1);
+$('download-svg').onclick=()=>{const svg=$('canvas'),blob=new Blob([SpaceSVG.serialize(svg)],{type:'image/svg+xml;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`spaceflight-${mission.id}-${tab==='journey'?current().id:tab==='labs'?labId:systemId}.svg`;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);};
+
 initLab(labId);setSourceList();
 const checkpoint=saves.resume();
-if(!location.hash&&checkpoint){requestJourney();if(checkpoint.levelId==='lab/dock'){initLab('dock');tab='labs';}else{const [m,s]=checkpoint.levelId.split('/');mission=D.missions[m];index=mission.steps.findIndex(a=>a.id===s);}routeButtons();render();}else onHash();
+if(!location.hash&&checkpoint){if(checkpoint.levelId==='lab/dock'){initLab('dock');tab='labs';}else{const [m,s]=checkpoint.levelId.split('/');mission=D.missions[m];index=mission.steps.findIndex(a=>a.id===s);}requestJourney();routeButtons();render();}else onHash();
 if(checkpoint?.levelId==='lab/dock'&&tab==='labs'&&labId==='dock'){const d=checkpoint.dock;if(d&&['x','y','vx','vy'].every(k=>Number.isFinite(d[k]))&&Number.isFinite(checkpoint.angle)&&M.dockStatus(d,checkpoint.angle)==='docked'){sim.dock={...d};values.angle=checkpoint.angle;sim.dockResult='docked';render();}}
 window.render_game_to_text=()=>JSON.stringify({...window.SpaceClassroom.snapshot(),save:saves.snapshot()});
 window.advanceTime=ms=>{if(!Number.isFinite(ms)||ms<0)return;const steps=Math.max(1,Math.ceil(ms/(1000/60)));for(let i=0;i<steps;i++)update(ms/steps/1000);paint();sim.needsPaint=false;};

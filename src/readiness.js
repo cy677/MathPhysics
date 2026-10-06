@@ -2,7 +2,8 @@
 export function isReady(adapter, w = window) {
   try {
     const d = w.document;
-    if (adapter === 'matter' || adapter === 'matter-library' || adapter === 'proofs' || adapter === 'spaceflight' || adapter === 'jsxgraph' || adapter === 'tangram-flat' || adapter === 'primary-math' || adapter === 'question-bank') return w.__mpReady === true;
+    if (adapter === 'spatial-games') return w.__mpReady === true;
+    if (adapter === 'matter' || adapter === 'matter-library' || adapter === 'proofs' || adapter === 'spaceflight' || adapter === 'jsxgraph' || adapter === 'tangram-flat' || adapter === 'primary-math' || adapter === 'question-bank' || adapter === 'minesweeper' || adapter === 'sudoku') return w.__mpReady === true;
     if (adapter === 'phet') {
       const sim = w.phet?.joist?.sim || w.phet?.sim;
       const screens = sim?.simScreens || sim?.screens;

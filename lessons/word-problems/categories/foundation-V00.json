@@ -1,0 +1,3498 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "foundation-V00",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-100",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "总量与部分：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-b0c404fa308c2e2f",
+      "assessmentGroup": "assessment-b0c404fa308c2e2f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一套校园故事共有20本，小明还有5本没读。已经读了多少本？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "15",
+          "d": "1"
+        },
+        "unit": "本"
+      },
+      "intent": "根据全集与未完成部分求已完成部分。",
+      "hints": [
+        "“还有5本没读”是未读数量。"
+      ],
+      "steps": [
+        "所有书分为已读和未读两部分。",
+        "已经读了20－5＝15本。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "总量与部分",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "将英文系列名称本土化为校园故事。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-100",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "a9e1e62a974c96c066dbd683543625656f5f4d59ed28544fe6b77a2768a0e057",
+        "recordSha256": "ececdd96c45761ee20384af82741f9ca6b182f313747e6afecec1d8caa20b190",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-100",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a1bd4a66c26581d4836a7548b13e60360e31db70507c41525fa785454e296bd6",
+        "sourceDraftSha256": "a1bd4a66c26581d4836a7548b13e60360e31db70507c41525fa785454e296bd6",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e41cb7ae309fd040f56dc697b9be7c642bf24aa2eef0a9c59281f7981846c06e"
+      },
+      "contentSha256": "e41cb7ae309fd040f56dc697b9be7c642bf24aa2eef0a9c59281f7981846c06e"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-118",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "总量与部分：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-cfa120b10e504f59",
+      "assessmentGroup": "assessment-cfa120b10e504f59",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "夏令营上午一批15人去划船，下午另一批人去划船，两批人员不重复，共32人。下午去了多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "17",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "由两批合计人数反求其中一批。",
+      "hints": [
+        "32人包括上午的15人。"
+      ],
+      "steps": [
+        "总人数由上午和下午两批组成。",
+        "下午有32－15＝17人。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "总量与部分",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "明确两批不重复，避免把人数合计误当独立人数去重。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-118",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "c52a6e8550daf671f3fdce89056ca701db15698758ac305a6a880e3a1f201d46",
+        "recordSha256": "3f7a48967cc74beeab1e307d18d3a7635905bdcf5bc292e8f07f0ea2527638ca",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-118",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "897195f2d2e54e226deffd114ca4821fad29f6f6942524f16362a4d37d7168d5",
+        "sourceDraftSha256": "897195f2d2e54e226deffd114ca4821fad29f6f6942524f16362a4d37d7168d5",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ffa8a9223d7ae1bbc453615973e3120bd4ce15e764374ed545c29bfe09734373"
+      },
+      "contentSha256": "ffa8a9223d7ae1bbc453615973e3120bd4ce15e764374ed545c29bfe09734373"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-128",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "两步混合关系：直接关系基线（未证实变式操作）",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-959704c56a87ddd0",
+      "assessmentGroup": "assessment-959704c56a87ddd0",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "菜园里有171个番茄，昨天摘了134个，今天又摘了30个。今天摘完后，菜园里还剩多少个番茄？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "7",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "从初始总量连续减去两次减少量。",
+      "hints": [
+        "可以先算昨天摘完后剩多少。"
+      ],
+      "steps": [
+        "昨天摘完还剩171－134＝37个。",
+        "今天又摘30个，还剩37－30＝7个。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "两步混合关系",
+        "读懂数量关系"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-128",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "2d4f7b2a2a16337802c60adb4e312f10c32e4ba43fd0490e1d4016822d154d3b",
+        "recordSha256": "b6a973e334f9e5e5e718f161f7a93c9bc006b8256289b9abcba90a388614a63f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-128",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "017fba9fbb8fcaba012ea4740d258a7f11ff5770468871fec3ad6bad739e751e",
+        "sourceDraftSha256": "017fba9fbb8fcaba012ea4740d258a7f11ff5770468871fec3ad6bad739e751e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "bdf07f1e64b73cb364429665c28497be86b8e4957a3f415ba62679fb60c2417c"
+      },
+      "contentSha256": "bdf07f1e64b73cb364429665c28497be86b8e4957a3f415ba62679fb60c2417c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-138",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "等量分组：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-4e68c4f8828ac9c8",
+      "assessmentGroup": "assessment-4e68c4f8828ac9c8",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个街区有20户人家，邮递员要给每户送9份宣传单。这一个街区要送多少份？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "180",
+          "d": "1"
+        },
+        "unit": "份"
+      },
+      "intent": "按每组数量和组数求总量。",
+      "hints": [
+        "20户人家，每户都要送9份宣传单。"
+      ],
+      "steps": [
+        "每户都有9份，一共20户。",
+        "9×20＝180份。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "等量分组",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "将垃圾邮件表述改为宣传单。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-138",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "27b71219064a9e77cb087043a9daec9b74efbbd43c29aa918cbfb64039bee5fd",
+        "recordSha256": "cee47dc773dedaa43c795fcceb85ae1047d264b767127f16b2449e7a8c2e0de5",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-138",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "3192121fa8aa87bb16d85dbc38975feb3b560f2dec3b0d6dbd969c459b1ad967",
+        "sourceDraftSha256": "d43c51793e33ffc28bfdfc928c71e78a4e1635a9be0641f28f032c72a341fb38",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "af938fdc7244de203d1041a3258032e565b018065506d0f993d887cbb8f1e550"
+      },
+      "contentSha256": "af938fdc7244de203d1041a3258032e565b018065506d0f993d887cbb8f1e550"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-14",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "倍数关系：直接关系基线（未证实变式操作）",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-3a9d4d149a8a0b30",
+      "assessmentGroup": "assessment-3a9d4d149a8a0b30",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "测量杆甲长13厘米，测量杆乙比甲长4厘米。一个水池的水深是乙杆长度的15倍。水池深多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "255",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "先根据差量求乙杆，再根据倍数求水深。",
+      "hints": [
+        "15倍对应的是乙杆，不是甲杆。"
+      ],
+      "steps": [
+        "乙杆长13＋4＝17厘米。",
+        "水池深17×15＝255厘米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "倍数关系",
+        "单位与度量",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "原题身高13英尺和游泳情境不合理；改为厘米测量杆，重设公制情境，非精确英尺换算；保留差量及倍数关系并重算。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-14",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "fc3de0e7e42a715ae9c31e777e3a7b0f7713acc301041c84f7a73b0ffc0ae5c7",
+        "recordSha256": "14a6b229b305cce6df6c0e8c1697c5b7981b4895c796a325f42c79d0afc67ce8",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-14",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "ff2183c7e111a03858d6c51b69c226d3eb5ac13f478f7623dda93028ac18302f",
+        "sourceDraftSha256": "ff2183c7e111a03858d6c51b69c226d3eb5ac13f478f7623dda93028ac18302f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "94e89e25a1ecd4b6d08f989bf13f1b12b1ea73bda92e7915f68d66970d9e2a1b"
+      },
+      "contentSha256": "94e89e25a1ecd4b6d08f989bf13f1b12b1ea73bda92e7915f68d66970d9e2a1b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-143",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "两步混合关系：直接关系基线（未证实变式操作）",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-dd6f496a91626647",
+      "assessmentGroup": "assessment-dd6f496a91626647",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "篮子里有7个红桃、15个黄桃和8个青桃。篮子里一共有多少个桃？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "30",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "合并三个互不重叠的部分。",
+      "hints": [
+        "三种颜色的桃都要算进去。"
+      ],
+      "steps": [
+        "红桃和黄桃共有7＋15＝22个。",
+        "再加青桃：22＋8＝30个。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "两步混合关系",
+        "读懂数量关系"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-143",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "9228e782221c2cb80b31c1b81c83f70d8134b1b38a9011fef05aaf7204775417",
+        "recordSha256": "0fb61cfe737ce55f9927f2463fb0deb26f7296ad246aacc73b410032b3fa985c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-143",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0ae3912dd0b707bbed6cdd2719f3cef3284149c89883942db018f97409ad274e",
+        "sourceDraftSha256": "0ae3912dd0b707bbed6cdd2719f3cef3284149c89883942db018f97409ad274e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9d09cca53364cabcdf5b86969610923bb8174e31f462aaed0881dd5d4bcbba51"
+      },
+      "contentSha256": "9d09cca53364cabcdf5b86969610923bb8174e31f462aaed0881dd5d4bcbba51"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-151",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "倍数关系：直接关系基线（未证实变式操作）",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-3a9d4d149a8a0b30",
+      "assessmentGroup": "assessment-3a9d4d149a8a0b30",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "测量杆甲长14厘米，乙杆比甲短8厘米。鱼缸水深是乙杆长度的2倍。鱼缸深多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "12",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "先求较短长度，再求该长度的倍数。",
+      "hints": [
+        "“短8厘米”要用减法。"
+      ],
+      "steps": [
+        "乙杆长14－8＝6厘米。",
+        "鱼缸深6×2＝12厘米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "倍数关系",
+        "单位与度量",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "原题身高14英尺和8英尺差值不适合人物情境；改成厘米测量杆及鱼缸，公制数值重设，非精确换算。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-151",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "6d944eabebeffa293db98e524196b64a1e4e46bb7236977779b7deafba546489",
+        "recordSha256": "d77e5683eba80523c5676acb8bd7e9448fdc529da214fb3a8894c4d308f46a74",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-151",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "12dd64c9ef25c3d5da0d8905bcf32461f78b09f9968f2a849ba0e27411c3df14",
+        "sourceDraftSha256": "12dd64c9ef25c3d5da0d8905bcf32461f78b09f9968f2a849ba0e27411c3df14",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "0e426212d1421dbd98e413bfc0286985fce72a63a7d572d4312fe47886740cc4"
+      },
+      "contentSha256": "0e426212d1421dbd98e413bfc0286985fce72a63a7d572d4312fe47886740cc4"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-202",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "单价、数量、总价与找零：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-469c7eac0e85eb9c",
+      "assessmentGroup": "assessment-469c7eac0e85eb9c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "义卖时每卖出一件T恤获得10元收入，总收入是60元。一共卖出了多少件T恤？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6",
+          "d": "1"
+        },
+        "unit": "件"
+      },
+      "intent": "根据单位收入和总收入求数量。",
+      "hints": [
+        "总收入中包含几份10元？"
+      ],
+      "steps": [
+        "每件对应10元收入。",
+        "60÷10＝6件。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "单价、数量、总价与找零",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "美元收入改为人民币元；明确统一单位收入，不作货币汇率换算。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-202",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "a08f7e14d766b54afb673f0573014d8f4aa33eb3f652317516af5508b5f939d5",
+        "recordSha256": "44ba8c03953f94c8c047dceaa3d11a3ac104c66ae6199491feef95c1251c292f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-202",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "01e26177fafe687e3c17722c458944adf3b908e1d00f2763ed6223c7e8772e7f",
+        "sourceDraftSha256": "01e26177fafe687e3c17722c458944adf3b908e1d00f2763ed6223c7e8772e7f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "7aad1b12d929c9921fd74c0023ce8f9922796ff2cd8da720c08668dbfca00fc6"
+      },
+      "contentSha256": "7aad1b12d929c9921fd74c0023ce8f9922796ff2cd8da720c08668dbfca00fc6"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-236",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "初始量、变化量与最终量：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-452c7ee719234a86",
+      "assessmentGroup": "assessment-452c7ee719234a86",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小华生日时收到253支蜡笔，到学年结束时共丢失或送出70支。现在还剩多少支？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "183",
+          "d": "1"
+        },
+        "unit": "支"
+      },
+      "intent": "从初始量扣除合并的减少量。",
+      "hints": [
+        "70支已经包括丢失和送出的所有蜡笔。"
+      ],
+      "steps": [
+        "丢失和送出的合计是70支，不必再分开计算。",
+        "剩下253－70＝183支。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "初始量、变化量与最终量",
+        "读懂数量关系"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-236",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "7e0b88f014644a3159226d104c0cd83ad550fbf78aece1383f6fb9dd1c2f74cb",
+        "recordSha256": "950f0b1d9501db128be92b4fa4c90f274dfb2968abeb1ccfd57348be136fc409",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-236",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "3de7dc17ebdeb18fa297534a817159308ffc9b556ec9185b94a46d54ce180339",
+        "sourceDraftSha256": "3de7dc17ebdeb18fa297534a817159308ffc9b556ec9185b94a46d54ce180339",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d0226c05b2c738e3f79ee263af069a40b591a4a93a67f2f20bd07e8f03e6c5fe"
+      },
+      "contentSha256": "d0226c05b2c738e3f79ee263af069a40b591a4a93a67f2f20bd07e8f03e6c5fe"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-248",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "等量分组：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-27d6cf7c56727642",
+      "assessmentGroup": "assessment-27d6cf7c56727642",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个街区有20户人家，邮递员要给每户送32份宣传单。这个街区一共要送多少份？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "640",
+          "d": "1"
+        },
+        "unit": "份"
+      },
+      "intent": "根据相同的每户数量求整区总量。",
+      "hints": [
+        "每户都要送32份。"
+      ],
+      "steps": [
+        "每户32份，20户共20组。",
+        "32×20＝640份。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "等量分组",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "将垃圾邮件表述改为宣传单。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-248",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "b724dccc593823c0ece9f72ee44cbd483fd05e5ee9626956a6a072a21e170b0e",
+        "recordSha256": "84aaf98193ac1a6802c3f9fb03f513cfa89b80151ccff049f1641f68d78294ec",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-248",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7cf9af99cc13b08a61b709eda0fbecbe400fd184244993a7dc083b6deb7f9c3b",
+        "sourceDraftSha256": "7cf9af99cc13b08a61b709eda0fbecbe400fd184244993a7dc083b6deb7f9c3b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ee28e604627198070094dd525654761b719c217fcdc255379de39f176ce61d6d"
+      },
+      "contentSha256": "ee28e604627198070094dd525654761b719c217fcdc255379de39f176ce61d6d"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-253",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "长方形或正方形的周长与面积：直接关系基线（未证实变式操作）",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-f65b1f557e0df52f",
+      "assessmentGroup": "assessment-f65b1f557e0df52f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "展览馆有20个相同的长方形大厅，每个长19米、宽18米。铺满所有大厅的地板，共需要多少平方米地毯？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6840",
+          "d": "1"
+        },
+        "unit": "平方米"
+      },
+      "intent": "先求单个面积，再求多个相同面积的总和。",
+      "hints": [
+        "19和18都是一个大厅的边长。"
+      ],
+      "steps": [
+        "每个大厅面积19×18＝342平方米。",
+        "20个大厅共342×20＝6840平方米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "单位与度量",
+        "长方形或正方形的周长与面积",
+        "长方形面积",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "原20个房间改为展览大厅；英制重设为公制面积情境，同步核算，非精确换算。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-253",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "4238e168bd654f4fd968ac91c032ab390c90db70a2e37856bdd60f3a6d50e1e1",
+        "recordSha256": "41d7020f90eaa8f7b639c5d216c7fc7a26849ccbedd8911c54519ea105162218",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-253",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "767928ad9c8519966932b43a79f7d03b4a4968a027ea2be8c74d55f85460b25d",
+        "sourceDraftSha256": "767928ad9c8519966932b43a79f7d03b4a4968a027ea2be8c74d55f85460b25d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "5470798b21c88066e8527a1a15e3385436ee03a86df7476b28bfadc876552657"
+      },
+      "contentSha256": "5470798b21c88066e8527a1a15e3385436ee03a86df7476b28bfadc876552657"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-278",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "长方形或正方形的周长与面积：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-4d5a32b55503f9b1",
+      "assessmentGroup": "assessment-4d5a32b55503f9b1",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "小杰房间的地板是长方形，面积10平方米，宽2米。地板长多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "由长方形面积与宽反求长。",
+      "hints": [
+        "面积除以已知的一条边。"
+      ],
+      "steps": [
+        "长方形面积＝长×宽。",
+        "长＝10÷2＝5米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "单位与度量",
+        "长方形或正方形的周长与面积",
+        "长方形面积",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "将10平方英尺和2英尺重设为10平方米和2米的公制房间；非精确单位换算。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-278",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "2a5f85e0fde80996c7c75942a26d1e72141945829051759c9193a1156fcc20b0",
+        "recordSha256": "317e3d54d1a524675a5318fcede955e5c9f879407a203804dd968fa0beef3436",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-278",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2edbc850feda4d07afcd5d91ff7bba6b5ebb8f00905eb8f993015f5794936231",
+        "sourceDraftSha256": "2edbc850feda4d07afcd5d91ff7bba6b5ebb8f00905eb8f993015f5794936231",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9ee86af6cc4a95eb98d1997a0d1d8aeaea2dca498d17d22a5bb8455db7907a5c"
+      },
+      "contentSha256": "9ee86af6cc4a95eb98d1997a0d1d8aeaea2dca498d17d22a5bb8455db7907a5c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-315",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "等量分组：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-0267426b9a403ca2",
+      "assessmentGroup": "assessment-0267426b9a403ca2",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小明把16颗糖平均放进2个袋子。每个袋子有多少颗糖？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "8",
+          "d": "1"
+        },
+        "unit": "颗"
+      },
+      "intent": "将总量平均分成相同组。",
+      "hints": [
+        "16颗是两个袋子合起来的数量。"
+      ],
+      "steps": [
+        "平均分意味着两袋数量相同。",
+        "16÷2＝8颗。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "等量分组",
+        "读懂数量关系"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-315",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "25801172b28f04cb2d9b8e5e7d0f5bba49ac202ab27171fd924e05896e1659c3",
+        "recordSha256": "7b1dea02633834e9a9e12d7bb4f8b887cd804b8395abb938a25de71c0eaa742e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-315",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "5bf4b25ae3465e93d74a771d0ac005806f834e9515d9f5df80116f35cf0e05d8",
+        "sourceDraftSha256": "5bf4b25ae3465e93d74a771d0ac005806f834e9515d9f5df80116f35cf0e05d8",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ef4664b298d55b7c00f6b41904a6829eca472bfab79a105af94ec91f61f6e1a7"
+      },
+      "contentSha256": "ef4664b298d55b7c00f6b41904a6829eca472bfab79a105af94ec91f61f6e1a7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-373",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "单价、数量、总价与找零：直接关系基线（未证实变式操作）",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-ea5a253db56935a1",
+      "assessmentGroup": "assessment-ea5a253db56935a1",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小文生日时妈妈给她2元，爸爸又给她4元。她花了3元，还剩多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "3",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "先合并收入，再扣除支出。",
+      "hints": [
+        "爸爸给4元，不是比妈妈多4元。"
+      ],
+      "steps": [
+        "先合并收到的钱：2＋4＝6元。",
+        "花掉3元后还剩6－3＝3元。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "单价、数量、总价与找零",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "美元改为人民币元。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-373",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "5f1769e6a4b005a6b655c473388fa3d8ae084955c1a3be5e3a55de0d8048c6ff",
+        "recordSha256": "bf01264c76d16b95c7eafe6f70c62de2096ad258c8f4ae53013a0ac493650253",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-373",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c96ee5f0adf427185732e60ad877510ad41dea2bc557f843ab6c16c4ab53a7b2",
+        "sourceDraftSha256": "c96ee5f0adf427185732e60ad877510ad41dea2bc557f843ab6c16c4ab53a7b2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6e9be332066695aacc5ecdea9e30b142ef1f3f042dd9dc932f0e8d3cf3080af9"
+      },
+      "contentSha256": "6e9be332066695aacc5ecdea9e30b142ef1f3f042dd9dc932f0e8d3cf3080af9"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-432",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "单价、数量、总价与找零：直接关系基线（未证实变式操作）",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-fa0297f6125a6e48",
+      "assessmentGroup": "assessment-fa0297f6125a6e48",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一套光盘原价107元，现在每套减价106元。小明有93元，最多可以买多少套？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "93",
+          "d": "1"
+        },
+        "unit": "套"
+      },
+      "intent": "先求降价后的单价，再求可购买数量。",
+      "hints": [
+        "先弄清106元是减掉的金额。"
+      ],
+      "steps": [
+        "每套现价是107－106＝1元。",
+        "93÷1＝93套，钱正好用完。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "单价、数量、总价与找零",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "美元价格改为人民币元，保留每套减价关系。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-432",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "983782a0b408cadf925747d49c72863147f0ae9835d83415317bf14a1892571a",
+        "recordSha256": "b269d42208d4d28b30ef17e5edcfcd1491745dc3d1c93dfa499a61eeddb8ccae",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-432",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7101cb34b9fe7315ef0ee4b91b49245a6b833e5ef9eac0781eb55e59bb83aa04",
+        "sourceDraftSha256": "7101cb34b9fe7315ef0ee4b91b49245a6b833e5ef9eac0781eb55e59bb83aa04",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "a5145b628126329404d887500c7836045eb573edf7de9fdea579469bddd4d9d5"
+      },
+      "contentSha256": "a5145b628126329404d887500c7836045eb573edf7de9fdea579469bddd4d9d5"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-435",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "等量分组：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-0c641677d014f1d3",
+      "assessmentGroup": "assessment-0c641677d014f1d3",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小华把28本书平均放在7个书架上。每个书架有多少本？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "1"
+        },
+        "unit": "本"
+      },
+      "intent": "根据总量和组数求每组数量。",
+      "hints": [
+        "平均分给7个书架。"
+      ],
+      "steps": [
+        "7个书架上的书同样多。",
+        "每架28÷7＝4本。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "等量分组",
+        "读懂数量关系"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-435",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "126c730ff49a4e172d5a0db09fc0fa8cf1c15cecb938468d98da362aae89eb9f",
+        "recordSha256": "024cb0cd43e71112ee9faaa0b844537367562320aea24dd9985369e272f32772",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-435",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "fb9cc24803086b8aee2ccad3a4352bcb585e66fbc109ad41ab6ca9588bf7523c",
+        "sourceDraftSha256": "fb9cc24803086b8aee2ccad3a4352bcb585e66fbc109ad41ab6ca9588bf7523c",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2385e9d33ca0780a6eaa97ca8738008dc12035cdf8767d0e4af530882282e647"
+      },
+      "contentSha256": "2385e9d33ca0780a6eaa97ca8738008dc12035cdf8767d0e4af530882282e647"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-519",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "单价、数量、总价与找零：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-37a344a92a552805",
+      "assessmentGroup": "assessment-37a344a92a552805",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "6套相同的光盘一共卖120元。每套售价多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "20",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "从总价和数量求单价。",
+      "hints": [
+        "120元是6套的合计价格。"
+      ],
+      "steps": [
+        "6套价格相同，可以平均分总价。",
+        "120÷6＝20元。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "单价、数量、总价与找零",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "将美元标价改为人民币元情境，保留数量关系。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-519",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "83e55b0fa0f001c4d192b8a128eec138bf631b60170e43ec1d3cc1b9c8414ee5",
+        "recordSha256": "731a5601591bd715e6bc32fe6c512d92129c967340c531161ff7eeba1e2eac3e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-519",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7b1bcc31e6f7b0f98fcecde917014409bed782760cf832e5c00c9fa069bf4779",
+        "sourceDraftSha256": "7b1bcc31e6f7b0f98fcecde917014409bed782760cf832e5c00c9fa069bf4779",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "0b7d8fc311690ff2453ef8b72d9245c76fda8760daae919e2825251a7ee9ad95"
+      },
+      "contentSha256": "0b7d8fc311690ff2453ef8b72d9245c76fda8760daae919e2825251a7ee9ad95"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-529",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "两步混合关系：直接关系基线（未证实变式操作）",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-643f730dbd7734aa",
+      "assessmentGroup": "assessment-643f730dbd7734aa",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小明一天共收到10封邮件，其中上午收到6封，下午收到3封，其余都是晚上收到的。晚上收到多少封邮件？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "1",
+          "d": "1"
+        },
+        "unit": "封"
+      },
+      "intent": "由全天总数反求其中一个时段的数量。",
+      "hints": [
+        "先把已知两个时段的数量合起来。"
+      ],
+      "steps": [
+        "上午和下午共收到6＋3＝9封。",
+        "晚上收到10－9＝1封。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "两步混合关系",
+        "读懂数量关系"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-529",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "eb1cdffd39516ad3129fcb83c5c34cdba44c17b096410ce2fd47e4d11479668e",
+        "recordSha256": "416bf4a8fd42808ef5cf51391e04fe2ed28fe100de6b337cc7c2fdddb3b0d701",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-529",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "4a202903c990c621d637e87f0a5961c0c0dd7babe5164736046e41694ab1ad50",
+        "sourceDraftSha256": "4a202903c990c621d637e87f0a5961c0c0dd7babe5164736046e41694ab1ad50",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "5ad97d0532d15dca6cf63ed42b77d743e9aceb3d578b06e7f3fa155e85067fbe"
+      },
+      "contentSha256": "5ad97d0532d15dca6cf63ed42b77d743e9aceb3d578b06e7f3fa155e85067fbe"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-572",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "两步混合关系：直接关系基线（未证实变式操作）",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-00605ef59773f051",
+      "assessmentGroup": "assessment-00605ef59773f051",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小华原有134本书，送给朋友39本，又在义卖中卖出一些，最后剩68本。义卖中卖出了多少本书？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "27",
+          "d": "1"
+        },
+        "unit": "本"
+      },
+      "intent": "区分送出量、卖出量和最后剩余量。",
+      "hints": [
+        "先排除已经送出的39本。"
+      ],
+      "steps": [
+        "送书后有134－39＝95本。",
+        "卖出的书是95－68＝27本。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "两步混合关系",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "将车库售卖情境改为儿童熟悉的义卖。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-572",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "56efbd03c34ca3b6ab1007cca2fe89ffebd190dd08b9b144e25f6ce51d2de658",
+        "recordSha256": "4205986ed63b969dcea66b0c0b97dd032ff9e79080fd6c20533db51a9b05c8c7",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-572",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2c28e1cfcaa71db7f2fb4c272af9b94d80263ce73ccf1ff8e2f7303a0b67d4c0",
+        "sourceDraftSha256": "2c28e1cfcaa71db7f2fb4c272af9b94d80263ce73ccf1ff8e2f7303a0b67d4c0",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "eb2dd4a31f8cd70e9dc0eb7648d42121f80fff1aad5417d09959abdbdadd4ead"
+      },
+      "contentSha256": "eb2dd4a31f8cd70e9dc0eb7648d42121f80fff1aad5417d09959abdbdadd4ead"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-580",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "单价、数量、总价与找零：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2df7c3e94c909338",
+      "assessmentGroup": "assessment-2df7c3e94c909338",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小丽原有128元，在超市花了38元。现在还剩多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "90",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "计算购物后剩余的钱。",
+      "hints": [
+        "从原有的钱中减去花掉的钱。"
+      ],
+      "steps": [
+        "花掉的钱从原有的钱中扣除。",
+        "128－38＝90元。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "单价、数量、总价与找零",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "美元钱包金额改为人民币元情境。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-580",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "838cd2b6738b9a5c0462a54adc95c649a17762f8e9dbbe0776a92680a420829b",
+        "recordSha256": "8053f1ebae962c9057023a52caa54723137063100cbf789ac18c7ce9f169be08",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-580",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "aa5e5f9e9aafb2bdf04a5e68d63164dd8360b80601c76c8838f1a342d18ce92e",
+        "sourceDraftSha256": "aa5e5f9e9aafb2bdf04a5e68d63164dd8360b80601c76c8838f1a342d18ce92e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "a9dc7cee8e0474592d1b81b40d1d15963de1ed0c18e5ffa3653b4ac65e8c75ef"
+      },
+      "contentSha256": "a9dc7cee8e0474592d1b81b40d1d15963de1ed0c18e5ffa3653b4ac65e8c75ef"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-589",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "初始量、变化量与最终量：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-452c7ee719234a86",
+      "assessmentGroup": "assessment-452c7ee719234a86",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小华生日时收到一些蜡笔。后来共丢失或送出315支，最后剩291支。生日时共收到多少支？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "606",
+          "d": "1"
+        },
+        "unit": "支"
+      },
+      "intent": "由变化量与最后量反求初始量。",
+      "hints": [
+        "把减少的蜡笔补回去。"
+      ],
+      "steps": [
+        "原有蜡笔由减少的和剩下的两部分组成。",
+        "315＋291＝606支。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "初始量、变化量与最终量",
+        "读懂数量关系"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-589",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "7d1ead390c20754b314473d2c0742b06cd8c512368f77f23d7c7f6b935491fa4",
+        "recordSha256": "dd3a8a0c95ab8d0e0b38aa3877fca1b0a80d4e3dc4b7e940afb561e23344f448",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-589",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "6cdb765a4339ab6421cf3a0ff2d242ae912d467ca807d08843ff2da7004f3afa",
+        "sourceDraftSha256": "6cdb765a4339ab6421cf3a0ff2d242ae912d467ca807d08843ff2da7004f3afa",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "1d2f556e3d193da7d394155704c7dadbdc7cd8d96c9a72aa4339bb10e1bbc11c"
+      },
+      "contentSha256": "1d2f556e3d193da7d394155704c7dadbdc7cd8d96c9a72aa4339bb10e1bbc11c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-594",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "单价、数量、总价与找零：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-469c7eac0e85eb9c",
+      "assessmentGroup": "assessment-469c7eac0e85eb9c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "店里卖出5件售价相同的T恤，共收入215元。每件T恤售价多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "43",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "由总价平均求相同商品的单价。",
+      "hints": [
+        "先确认5件T恤的售价相同。"
+      ],
+      "steps": [
+        "5件的总收入是215元。",
+        "每件价格是215÷5＝43元。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "单价、数量、总价与找零",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "美元改为人民币元；明确各件售价相同。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-594",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "ce831f08a52ef418f27c77b559fe0d74221915eae698df0f51ced466e3ab6cc9",
+        "recordSha256": "0c633e8505439ad7c96bd9a953064a16037ffa6a87c45c56bad3a35987c9f083",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-594",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "925f940c599bf7cf70299f95772aa6ffbb75a0c6d1b3fa97f2fa497f31fd4869",
+        "sourceDraftSha256": "925f940c599bf7cf70299f95772aa6ffbb75a0c6d1b3fa97f2fa497f31fd4869",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6d3132ebe93fcc37a77d788fcd889fe7f91cf010c2ae287a8687d80d512853a0"
+      },
+      "contentSha256": "6d3132ebe93fcc37a77d788fcd889fe7f91cf010c2ae287a8687d80d512853a0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-597",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "长方形或正方形的周长与面积：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-73e9ff1f066f5f3d",
+      "assessmentGroup": "assessment-73e9ff1f066f5f3d",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "一块长方形地毯面积14平方米，一条边长7米。另一条边长多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "用长方形面积反求未知边。",
+      "hints": [
+        "已知一条边和面积，求另一条边。"
+      ],
+      "steps": [
+        "面积是两条相邻边长度的乘积。",
+        "另一条边长14÷7＝2米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "单位与度量",
+        "长方形或正方形的周长与面积",
+        "长方形面积",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "原宽7英尺、面积14平方英尺的狭长房间改为长方形地毯，重设面积14平方米、一条边7米，另一边2米；属于物件及公制教学尺度改编，不是精确英尺换算。",
+        "用相邻两边表达7米与2米，避免中文长宽名称与大小约定冲突。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-597",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "5c43f66a2cee912aa20ab2ada147a607bac77ce3ee73f5f8a3fb3bfc7e2a86c0",
+        "recordSha256": "962c0b2871f449265dd64560fd24be80bc182e2b4d8f2d4ef470da9a80d26708",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-597",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "3dc5bef7a3792eb7b15c6cf7bc129ec4782aaf3034c68628e344bf5b3acdf5fb",
+        "sourceDraftSha256": "c8d68a6955643d31640827a49ad43916694453023ccabe74339d995d5c33adf5",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "43367d528d0551061d3a1ec2d3d25d5536de9de9eaa5427fcfdaeb59e2260e37"
+      },
+      "contentSha256": "43367d528d0551061d3a1ec2d3d25d5536de9de9eaa5427fcfdaeb59e2260e37"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-613",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "总量与部分：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-cfa120b10e504f59",
+      "assessmentGroup": "assessment-cfa120b10e504f59",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "夏令营上午一批人去划船，下午另一批7人去划船，两批人员不重复，共60人。上午去了多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "53",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "根据合计人数与下午人数反求上午人数。",
+      "hints": [
+        "要找上午的人数，应扣除下午的人数。"
+      ],
+      "steps": [
+        "60人是上午和下午的合计。",
+        "上午人数是60－7＝53人。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "总量与部分",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "明确两批人员不重复。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-613",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "e14345aaa7772f407d3d7268c6f63c18a68dbf510c8db567e5e77f649781023f",
+        "recordSha256": "ba13890944d67d483e45eae62f15cfc5fc675e0b3a56617563cc7599b61a8cb7",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-613",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7de2a434b5275f3fd0728950d180dd3c8f2e017fe1116d17d970b1711bb73977",
+        "sourceDraftSha256": "7de2a434b5275f3fd0728950d180dd3c8f2e017fe1116d17d970b1711bb73977",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "934c79daf7334b43863111a6a6a22733ac89652eca4fdf7b4e8a588c26133882"
+      },
+      "contentSha256": "934c79daf7334b43863111a6a6a22733ac89652eca4fdf7b4e8a588c26133882"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-63",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "等量分组：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2115327c0fc5bf87",
+      "assessmentGroup": "assessment-2115327c0fc5bf87",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "水族馆有26个水箱，52只海水动物平均分养在这些水箱中。每个水箱有多少只？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "只"
+      },
+      "intent": "辨别总数量和水箱数量。",
+      "hints": [
+        "52只要平均分到26个水箱。"
+      ],
+      "steps": [
+        "52只是所有水箱中的总数。",
+        "每箱52÷26＝2只。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "等量分组",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "修正原题单复数水箱表述。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-63",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "4c02303664e3a3d88df713ae8ea2fb90f18cbce077e4f4962037a985c7f30379",
+        "recordSha256": "768e69e27a2cdf5c0635e15cf87b735df7d6e557969dd1fe927fda899b010b0d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-63",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7a733cf42dc520fd855467dfd3bd422355bd975b0f192692766cf50dd9ffae21",
+        "sourceDraftSha256": "7a733cf42dc520fd855467dfd3bd422355bd975b0f192692766cf50dd9ffae21",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "00d83e91794672ea4e8777fef9c181fddb54ea94d7f370cf23f29697c7025af0"
+      },
+      "contentSha256": "00d83e91794672ea4e8777fef9c181fddb54ea94d7f370cf23f29697c7025af0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-69",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "等量分组：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-0c148872f505473a",
+      "assessmentGroup": "assessment-0c148872f505473a",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小明把自己所有的饼干分给11位朋友，每人正好2块，全部分完。小明原有多少块饼干？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "22",
+          "d": "1"
+        },
+        "unit": "块"
+      },
+      "intent": "根据分完后的每人数量反求初始总量。",
+      "hints": [
+        "“全部分完”说明分出的数量就是原有数量。"
+      ],
+      "steps": [
+        "11位朋友每人2块，共分出11×2＝22块。",
+        "全部分完，所以原有22块。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "等量分组",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "明确全部分完；原文只说每人收到2块，未排除还有剩余饼干。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-69",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "accbb82621a2a43ebe5a51666093f698c3bf171e29555df3f74839dfb2c57073",
+        "recordSha256": "d638c5653af9de5fe6140514ccc9326770cd38ec701b746b753ced095ebb206c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-69",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "99d1b260beb40362d6844fb1bb4e913d7156c1f764473aae5208ed94b43e40d7",
+        "sourceDraftSha256": "99d1b260beb40362d6844fb1bb4e913d7156c1f764473aae5208ed94b43e40d7",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "20070afd8b3f99635749a9ba144808eb673e65896b7e23ca7a7250e46c638d24"
+      },
+      "contentSha256": "20070afd8b3f99635749a9ba144808eb673e65896b7e23ca7a7250e46c638d24"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-711",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "总量与部分：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2e38b48da7b9b676",
+      "assessmentGroup": "assessment-2e38b48da7b9b676",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小明今天共收到9封邮件，上午收到7封，其余都在下午收到。下午收到多少封？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "封"
+      },
+      "intent": "由总数和一个部分求另一个部分。",
+      "hints": [
+        "7封是上午的数量。"
+      ],
+      "steps": [
+        "全天的邮件分为上午和下午两部分。",
+        "下午收到9－7＝2封。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "总量与部分",
+        "读懂数量关系"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-711",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "80dfba48192504767b7b73a24a65f8c7dea6768d8ac628f6347e546de3489d17",
+        "recordSha256": "9e30f9a23da27642130b9aaffdfdc5eafa7fabc875cc57cab7755d44a6f41be2",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-711",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "06c9b67d911a512ddde628cc14e5beace16bca25e97fcf6eb89b7bbcb689608a",
+        "sourceDraftSha256": "06c9b67d911a512ddde628cc14e5beace16bca25e97fcf6eb89b7bbcb689608a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8373459ec3cbff66870849bc9dc4226304f39ae2ec40eb11beb419c5ff23342f"
+      },
+      "contentSha256": "8373459ec3cbff66870849bc9dc4226304f39ae2ec40eb11beb419c5ff23342f"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-72",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "总量与部分：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-bda8ee1ec1a823f4",
+      "assessmentGroup": "assessment-bda8ee1ec1a823f4",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "学校向310名同学征求菜单意见，每人只选一种。185人选土豆泥，其余选培根。有多少人选培根？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "125",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "从全体人数中去掉另一类别的人数。",
+      "hints": [
+        "两类意见的人数合起来是310人。"
+      ],
+      "steps": [
+        "意见分成土豆泥和培根两类。",
+        "选培根的有310－185＝125人。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "总量与部分",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "补明每人只选一种，以消除可能的意见重叠。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-72",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "13adfee338ae76ee9c96900642ff6061700c68bf2574f8f469a5108ca2bc9504",
+        "recordSha256": "5cd8b37923118e9a2bb155d6e80c3e5061c68230ea952e6bf0ba87736f085b9c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-72",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "1aa89ebacf0d9e92b5e538444c7e6d3f3163ea9265630fb2beb5d552349da426",
+        "sourceDraftSha256": "1aa89ebacf0d9e92b5e538444c7e6d3f3163ea9265630fb2beb5d552349da426",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "0eb71b78da76419b9ea8d6e638867dfef0ad6d4a2df6d52c65a4dc3bc6abfbc8"
+      },
+      "contentSha256": "0eb71b78da76419b9ea8d6e638867dfef0ad6d4a2df6d52c65a4dc3bc6abfbc8"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-721",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "初始量、变化量与最终量：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2b4f74e6aca9c2c9",
+      "assessmentGroup": "assessment-2b4f74e6aca9c2c9",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一袋粮食原来重71千克，取出20千克后，袋中粮食还重多少千克？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "51",
+          "d": "1"
+        },
+        "unit": "千克"
+      },
+      "intent": "计算质量减少后的最终量。",
+      "hints": [
+        "取出20千克，应从71千克中减去。"
+      ],
+      "steps": [
+        "取出的粮食使总质量减少。",
+        "71－20＝51千克。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "初始量、变化量与最终量",
+        "单位与度量",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "将人物运动减重情境改为粮食质量变化；保留71－20的数量关系，避免向儿童设置减重目标。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-721",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "80339f92dd0f371a4d232feb7171d8ad104eadef2a8b8cd08fc5c197a322750b",
+        "recordSha256": "e7ef4d119d46ec2088e0dde1d0de379e8a6381b5149f24a3d2e9936ed082710a",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-721",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e5943df3f9fc16ddafd2b78d2b418528f36833cb9be84dd0c809c4d66aa248fd",
+        "sourceDraftSha256": "e5943df3f9fc16ddafd2b78d2b418528f36833cb9be84dd0c809c4d66aa248fd",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "cd47f7e68974681d519bb1d6167a3c082ab05c8fd5cc472f7e164b19ece824e4"
+      },
+      "contentSha256": "cd47f7e68974681d519bb1d6167a3c082ab05c8fd5cc472f7e164b19ece824e4"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-749",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "单价、数量、总价与找零：直接关系基线（未证实变式操作）",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-668ca23bfed29165",
+      "assessmentGroup": "assessment-668ca23bfed29165",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小丹有7元，买糖棒花2元，买巧克力花3元。还剩多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "扣除两笔支出。",
+      "hints": [
+        "两样东西的花费都要算。"
+      ],
+      "steps": [
+        "总共花2＋3＝5元。",
+        "剩下7－5＝2元。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "单价、数量、总价与找零",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "美元改为人民币元。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-749",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "4db2d3dc96952887dbcceba9110ed121044dbb83828ca77ba6cf4a2c05e74817",
+        "recordSha256": "f89183ecbab824dd055de4ff026fe76c764d091b68cad0b624be560de61090ca",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-749",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "074f718a978070cf30f8aafcb2516f35f40b1972a2d519d39ed0259c2751001a",
+        "sourceDraftSha256": "074f718a978070cf30f8aafcb2516f35f40b1972a2d519d39ed0259c2751001a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "360a5450d2434ffff1ec84962c3178ab581d6a094cc5191375dc319e89c8f349"
+      },
+      "contentSha256": "360a5450d2434ffff1ec84962c3178ab581d6a094cc5191375dc319e89c8f349"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-75",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "总量与部分：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-bda8ee1ec1a823f4",
+      "assessmentGroup": "assessment-bda8ee1ec1a823f4",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "菜单调查中，218人同时建议土豆泥和培根，另有351人只建议培根。建议培根的共有多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "569",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "识别“同时选择”与“只选择”的集合关系。",
+      "hints": [
+        "不能漏掉同时建议两样的218人。"
+      ],
+      "steps": [
+        "同时建议两样的218人也建议培根。",
+        "两组不重叠，合计218＋351＝569人。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "总量与部分",
+        "读懂数量关系"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-75",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "247b06f8f0d7bdac0e0f5961725ac956dca247f58cbcbe9e93418d2d9e98f9f5",
+        "recordSha256": "aa3bbe068e5653f71fa41cc119981341ed43725984e551e2df0304df68935334",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-75",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a055d2a3f713dc408b2eb8d20fae669719b3d8e56df72baf0251d3d8b3c423c5",
+        "sourceDraftSha256": "a055d2a3f713dc408b2eb8d20fae669719b3d8e56df72baf0251d3d8b3c423c5",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "372970ede62b90bb181f36a45aafb8a5d32ff6d8bcd61297b8bc937fa8cf7d82"
+      },
+      "contentSha256": "372970ede62b90bb181f36a45aafb8a5d32ff6d8bcd61297b8bc937fa8cf7d82"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-750",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "总量与部分：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-02eb007d4b928d77",
+      "assessmentGroup": "assessment-02eb007d4b928d77",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一个地区共有91676名儿童。暑假有61619人留在家，其余都参加夏令营。参加夏令营的准确人数是多少？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "30057",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "用大数减法求另一部分的精确数量。",
+      "hints": [
+        "这里求准确人数，不要求四舍五入。"
+      ],
+      "steps": [
+        "总人数分为在家和参加夏令营两部分。",
+        "91676－61619＝30057人。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "总量与部分",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "原题说“about”但提供精确答案且未规定取整位数；中文明确求准确人数。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-750",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "48ee8b843b56f384bc89fcfd4439c397a5bf6f46c08864a004064f283f5d616b",
+        "recordSha256": "3396ea14210e8595d449731cdbe3c445c54c236d680c8cebc475b5a9327a5cca",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-750",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f1cdad3be3f301a00ed4364c5ff931c5da4d34bd2a45b9b8a16c4315b778e476",
+        "sourceDraftSha256": "f1cdad3be3f301a00ed4364c5ff931c5da4d34bd2a45b9b8a16c4315b778e476",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "266e51a84e2ed21eebdd27580a9e634df8dfd89d393401de0d4d582f89386ea3"
+      },
+      "contentSha256": "266e51a84e2ed21eebdd27580a9e634df8dfd89d393401de0d4d582f89386ea3"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-755",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "初始量、变化量与最终量：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-452c7ee719234a86",
+      "assessmentGroup": "assessment-452c7ee719234a86",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小华生日时收到一些蜡笔，后来丢失或送出551支，还剩177支。生日时收到了多少支？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "728",
+          "d": "1"
+        },
+        "unit": "支"
+      },
+      "intent": "把剩余量和减少量合并，反求初始量。",
+      "hints": [
+        "已减少的551支也属于原来的蜡笔。"
+      ],
+      "steps": [
+        "初始数量等于减少的数量加剩余数量。",
+        "551＋177＝728支。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "初始量、变化量与最终量",
+        "读懂数量关系"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-755",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "9dd854fa5387a8643825f7bda006315afae5e7c9de634ea3f31d40bfb7cd18ee",
+        "recordSha256": "f2972d6d772ae58d392a476c3f8549c7b4dc7e8a631fbb8e1b6c5b86eedfeffd",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-755",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "669536f06adec9bd1e643a27ae6ca62c252e375772d0589c41936f4175e767e2",
+        "sourceDraftSha256": "669536f06adec9bd1e643a27ae6ca62c252e375772d0589c41936f4175e767e2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "7f395bd634aca2aad9fbab5c08605b52eecd0d734c848eb2376e2b24dfdced96"
+      },
+      "contentSha256": "7f395bd634aca2aad9fbab5c08605b52eecd0d734c848eb2376e2b24dfdced96"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-817",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "总量与部分：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-3649ef0fe1d9c483",
+      "assessmentGroup": "assessment-3649ef0fe1d9c483",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小玉星期一和一些小朋友玩游戏，星期二和14个小朋友玩。两天参加的小朋友不重复，共16人。星期一有多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "由两日不重叠的合计人数反求一日人数。",
+      "hints": [
+        "16人是两天的合计。"
+      ],
+      "steps": [
+        "两天人数可以相加，因为人员不重复。",
+        "星期一人数是16－14＝2人。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "总量与部分",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "明确两天参与人员不重复，避免集合交集歧义。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-817",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "41c30ea4ccd23e6496e8b754fd7a6d3105a162194cc6031ce86294f1662c2408",
+        "recordSha256": "f9a7b9d38a4cf047cdf084fbfdcce7f5d2dc28c66b0c75bf44a7becde5f39758",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-817",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "337615c20515d42d3b6add4dbe65777af9609976b334789768916d405ce5edf6",
+        "sourceDraftSha256": "337615c20515d42d3b6add4dbe65777af9609976b334789768916d405ce5edf6",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "3835310ae4aa97d69a14e6ab9de846a7d300877e13fefd36ec5a877a31bdb013"
+      },
+      "contentSha256": "3835310ae4aa97d69a14e6ab9de846a7d300877e13fefd36ec5a877a31bdb013"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-837",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "总量与部分：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-bda8ee1ec1a823f4",
+      "assessmentGroup": "assessment-bda8ee1ec1a823f4",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "菜单调查共有288名同学，每人只选一种。264人选培根，其余选土豆泥。选土豆泥的有多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "24",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "从总体中扣除已知类别，求另一类。",
+      "hints": [
+        "题目问土豆泥，不是培根。"
+      ],
+      "steps": [
+        "两类意见组成288人的全部意见。",
+        "土豆泥有288－264＝24人选择。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "总量与部分",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "补明每人只选一种。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-837",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "e035b664c107149b800f7e7926ea365a705811b2e3dfda56e845b08d91426d56",
+        "recordSha256": "43112a0bb9da6ce0b3768eb403dd38323bb9146ef095da59ab7c702e134b3f77",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-837",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "252c113b34fa9e085c4abd89c23c399d441467815d1d6042fa3c6e5e55c4cc69",
+        "sourceDraftSha256": "252c113b34fa9e085c4abd89c23c399d441467815d1d6042fa3c6e5e55c4cc69",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "704d651062e2f679c0b27bf0a71e671f8a31e585f0689646fc7e250bc3a8f6de"
+      },
+      "contentSha256": "704d651062e2f679c0b27bf0a71e671f8a31e585f0689646fc7e250bc3a8f6de"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-856",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "长方形或正方形的周长与面积：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-73e9ff1f066f5f3d",
+      "assessmentGroup": "assessment-73e9ff1f066f5f3d",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "一块长方形地毯面积14平方米，长7米。宽多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "根据面积和长求宽。",
+      "hints": [
+        "14是面积，7是已知边长。"
+      ],
+      "steps": [
+        "面积＝长×宽。",
+        "宽＝14÷7＝2米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "单位与度量",
+        "长方形或正方形的周长与面积",
+        "长方形面积",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "将原长7英尺、面积14平方英尺的房间改为长方形地毯，重设面积14平方米、长7米；这是生活物件及公制数值重设，不是精确换算，重新核算宽2米。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-856",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "a299dd81083aeeae8565a9de3d97a3d84e04a3fb9a5287986d5f729a5cb7cbc0",
+        "recordSha256": "7148eb23585d8ee66e283c84d0065d7e8679a55ec972e5c9c2df3999a6898102",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-856",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f0cb8d41a012b49ad8bd86c90fb5a74a9fb782abf075088f7ae01c318f8f6ac0",
+        "sourceDraftSha256": "72daa14f0fd536687bb6aeb1e1b182f187865ab541b7c769fd0c26252464b80a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "27304c41015256ff7bfff518cef53d13d3b6930af7b79fa58658ef887ceaaf23"
+      },
+      "contentSha256": "27304c41015256ff7bfff518cef53d13d3b6930af7b79fa58658ef887ceaaf23"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-881",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "初始量、变化量与最终量：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-0eea4eaf5496bd68",
+      "assessmentGroup": "assessment-0eea4eaf5496bd68",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "树上原有7个苹果，小红摘下4个。树上还剩多少个苹果？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "3",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "区分摘下的数量与仍在树上的数量。",
+      "hints": [
+        "题目问的是树上剩下的苹果。"
+      ],
+      "steps": [
+        "摘下的苹果已经不在树上。",
+        "树上还剩7－4＝3个。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "初始量、变化量与最终量",
+        "读懂数量关系"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-881",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "e473ae3732d9b86a1f1c43b813858afe5651e6d34fddaf9216a228cac8847ac8",
+        "recordSha256": "5e2ae86fe38ba47d48e16395b90318eace8cc7ad98e4bdd8abcb02197dc8f299",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-881",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "1cd48058751202da2dbf824b3d30eaf7899b5479c4ceace064d04ada18b67154",
+        "sourceDraftSha256": "1cd48058751202da2dbf824b3d30eaf7899b5479c4ceace064d04ada18b67154",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d7b241437994e7d806da4a6f3e374f49a5faa46e0e7ef3e4eabf405e61e5ee6c"
+      },
+      "contentSha256": "d7b241437994e7d806da4a6f3e374f49a5faa46e0e7ef3e4eabf405e61e5ee6c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-886",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "总量与部分：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-3649ef0fe1d9c483",
+      "assessmentGroup": "assessment-3649ef0fe1d9c483",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小玉星期一和5个小朋友玩游戏，星期二和另一批小朋友玩，两批人员不重复，共15人。星期二有多少人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "10",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "反求第二批人数。",
+      "hints": [
+        "从总人数中扣除第一批。"
+      ],
+      "steps": [
+        "总人数包括星期一的5人。",
+        "星期二有15－5＝10人。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "总量与部分",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "明确两批人员不重复。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-886",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "f0d6ddda1ab88e11996488930cdefc58fe3c599201cb19d77a585068538b43c2",
+        "recordSha256": "49a01ab85cddc40604e3ed04b2ec78c02989abac146c3ef621665bad358d2668",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-886",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e5fdd1b4b0e64ed30d86ada9baaede6596a7072fde7115eb46a79cb299013e94",
+        "sourceDraftSha256": "e5fdd1b4b0e64ed30d86ada9baaede6596a7072fde7115eb46a79cb299013e94",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9e94f9d04a30c193cb4a1a23aab2c5b78444cb14d8155884d334430850f62e20"
+      },
+      "contentSha256": "9e94f9d04a30c193cb4a1a23aab2c5b78444cb14d8155884d334430850f62e20"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-906",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "长方形或正方形的周长与面积：直接关系基线（未证实变式操作）",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-b0f72ba5581873f1",
+      "assessmentGroup": "assessment-b0f72ba5581873f1",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "一个长方形展区长12米、宽2米。每块正方形地板面积4平方米，刚好铺满，且不用裁切。需要多少块？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6",
+          "d": "1"
+        },
+        "unit": "块"
+      },
+      "intent": "先求总面积，再除以每块覆盖面积。",
+      "hints": [
+        "不能把边长直接除以4平方米。"
+      ],
+      "steps": [
+        "展区面积12×2＝24平方米。",
+        "每块4平方米，共24÷4＝6块。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "单位与度量",
+        "长方形或正方形的周长与面积",
+        "长方形面积",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "原长2英尺、宽12英尺改为长12米宽2米展区；地板重设4平方米正方形，边长2米可整铺；非精确换算。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-906",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "ccf3542fb93700a9228a6729a42d5432c4a72805c78cb9b069a2783de1908d10",
+        "recordSha256": "ae709cb63b769fd80be6ab85cc18eb974f997195f6ca7ff0d9db4378566f1522",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-906",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "4469bf376b4993c462e75d140e76d886dea3abfbcbd8153d09032ea646ef1080",
+        "sourceDraftSha256": "4469bf376b4993c462e75d140e76d886dea3abfbcbd8153d09032ea646ef1080",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "cda8762a971fd9d7561afc2c542cb85660406a40533adae8d8376ac094fef7f1"
+      },
+      "contentSha256": "cda8762a971fd9d7561afc2c542cb85660406a40533adae8d8376ac094fef7f1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-925",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "总量与部分：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-b0c404fa308c2e2f",
+      "assessmentGroup": "assessment-b0c404fa308c2e2f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一套校园故事，小明已经读了13本，还有8本没读。这套故事共有多少本？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "21",
+          "d": "1"
+        },
+        "unit": "本"
+      },
+      "intent": "合并已完成与未完成两部分。",
+      "hints": [
+        "已经读的和没读的都属于这套书。"
+      ],
+      "steps": [
+        "已读和未读合起来就是全套。",
+        "13＋8＝21本。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "总量与部分",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "将英文系列名改为校园故事。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-925",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "15bbbd4fa1a2146aa9f6ab2e4d97b7a468cc7d49f0552c893e1a8f443541403e",
+        "recordSha256": "839122ede9295f8133d8a2ff6047d86882119ce38111be4ed442e70bd85e95ac",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-925",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f8855ae969d1cd31126b836a15be8613b3da8fbaa565895f058e367a570bc4f7",
+        "sourceDraftSha256": "f8855ae969d1cd31126b836a15be8613b3da8fbaa565895f058e367a570bc4f7",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "58be6a8f4600059718cf3640a948aae7352c08a2d9165033541149bc52a30263"
+      },
+      "contentSha256": "58be6a8f4600059718cf3640a948aae7352c08a2d9165033541149bc52a30263"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-965",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "两步混合关系：直接关系基线（未证实变式操作）",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-299ec8e178f2a0d7",
+      "assessmentGroup": "assessment-299ec8e178f2a0d7",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "两篮桃的数量相同，每篮都有4个红桃，其余是青桃。两篮一共有12个桃。每篮有多少个青桃？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "先求每组总量，再求每组中的部分量。",
+      "hints": [
+        "12个是两篮合起来的数量。"
+      ],
+      "steps": [
+        "每篮共有12÷2＝6个桃。",
+        "每篮青桃有6－4＝2个。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "两步混合关系",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "明确两篮总数相同，以支撑平均分。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-965",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "c76fc5ac06c9c07128c0b21f3cccaa289a5edb118cb9c8928211a639bb3421d1",
+        "recordSha256": "118375ad4837834ab4214ce237a6cf1f4ee34977145a9deca9ff48c3b479be08",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-965",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "4a3f90c0b48d1d6579cfb9ca309bf23cc7c4b8d90378a1f6b795bffbdf448116",
+        "sourceDraftSha256": "4a3f90c0b48d1d6579cfb9ca309bf23cc7c4b8d90378a1f6b795bffbdf448116",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f6a6a260ba392fb533c0b09324874bae8e0d9cea060f7510dd4c5daa3f25f5b6"
+      },
+      "contentSha256": "f6a6a260ba392fb533c0b09324874bae8e0d9cea060f7510dd4c5daa3f25f5b6"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-970",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "长方形或正方形的周长与面积：直接关系基线（未证实变式操作）",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-4d5a32b55503f9b1",
+      "assessmentGroup": "assessment-4d5a32b55503f9b1",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "房间的长方形地板面积10平方米，长5米。宽多少米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "2",
+          "d": "1"
+        },
+        "unit": "米"
+      },
+      "intent": "辨别面积与边长，并反求未知边。",
+      "hints": [
+        "用面积除以长。"
+      ],
+      "steps": [
+        "长方形面积＝长×宽。",
+        "宽＝10÷5＝2米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "单位与度量",
+        "长方形或正方形的周长与面积",
+        "长方形面积",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "公制情境数值重设：10平方米、5米，非精确英制换算。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-970",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "d62834242c057b294144d1de2601bebd3a87fa2d514a7b14751cad48bb328296",
+        "recordSha256": "cb27578685d2740546060254eeab2715c92ec949dcba3f7e7fa6cc3d7cc87caf",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-970",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "366eb77d6b0400ce9e5ca46d5f709af289d7dcd3bba32de37ead3280cf8f8cbe",
+        "sourceDraftSha256": "366eb77d6b0400ce9e5ca46d5f709af289d7dcd3bba32de37ead3280cf8f8cbe",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9f55a353bda4b67e5a4bb4a9e3455d60e4180ec06f982783ffb21f93ae152f9a"
+      },
+      "contentSha256": "9f55a353bda4b67e5a4bb4a9e3455d60e4180ec06f982783ffb21f93ae152f9a"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-971",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "两步混合关系：直接关系基线（未证实变式操作）",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-0377e926053b2551",
+      "assessmentGroup": "assessment-0377e926053b2551",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "活动室有4502颗彩色珠子和4276块橡皮，把这些物品平均分成154份。每份共有多少件物品？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "57",
+          "d": "1"
+        },
+        "unit": "件"
+      },
+      "intent": "先合并不同物品的数量，再平均分组。",
+      "hints": [
+        "先算所有物品合起来的件数。"
+      ],
+      "steps": [
+        "物品总数是4502＋4276＝8778件。",
+        "平均分成154份，每份8778÷154＝57件。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "两步混合关系",
+        "乘除互逆",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "将糖果收藏改为彩色珠子；明确平均分配的是物品总件数。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-971",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "48b074c510ac70134479daf54098e9ba123d83a02af3fdd6797ff985b461cac7",
+        "recordSha256": "1e7ef9e4cb527c1c6c81c4c8cfedf0b7a7edf43b0b392927e40fd71bbdb37da7",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-971",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7a6b866bc09271840e1307f88091e8edff24b8849ced0e3ec62efe2d87c857ad",
+        "sourceDraftSha256": "7a6b866bc09271840e1307f88091e8edff24b8849ced0e3ec62efe2d87c857ad",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2b8dd57d222d56dcd15fdf288e437d062fd84efe28f9eb4f5617af40056a1bbe"
+      },
+      "contentSha256": "2b8dd57d222d56dcd15fdf288e437d062fd84efe28f9eb4f5617af40056a1bbe"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "svamp:chal-991",
+      "collection": "foundation",
+      "category": "V00",
+      "subcategory": "倍数关系：直接关系基线（未证实变式操作）",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-f2a7973fcafcbf1c",
+      "assessmentGroup": "assessment-f2a7973fcafcbf1c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "甲测量杆长15厘米，乙测量杆比甲短6厘米。一个水槽的水深是乙杆长度的9倍。水槽深多少厘米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "81",
+          "d": "1"
+        },
+        "unit": "厘米"
+      },
+      "intent": "找对倍数所对应的比较量。",
+      "hints": [
+        "先算乙杆长多少厘米。"
+      ],
+      "steps": [
+        "乙杆长15－6＝9厘米。",
+        "水槽深9×9＝81厘米。"
+      ],
+      "commonMistakes": [],
+      "prerequisites": [
+        "乘除互逆",
+        "倍数关系",
+        "单位与度量",
+        "读懂数量关系"
+      ],
+      "adaptation": [
+        "原题人物身高15英尺不合理；改为厘米测量杆，保留比较及倍数关系，公制数值重设非精确换算。"
+      ],
+      "source": {
+        "dataset": "svamp",
+        "sourceId": "chal-991",
+        "sourceVersion": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceCommit": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+        "sourceFile": "SVAMP.json",
+        "sourceFileSha256": "5be77703a6d891ae476d7c082787ad361392aa02453b132516cdd5f4e7934e3e",
+        "questionSha256": "fcbaaebb144937339fbf0fd8c51655cad7718084b4188b2845d09563ddb3ead5",
+        "recordSha256": "34b1095eebd3bed4942470df5ac9504a2d607c40e617a1d7bc94b1c1da9fdc75",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/arkilpatel/SVAMP/blob/78e727689e1c1bebfc4be39c446898e8e10b0518/SVAMP.json",
+        "license": "MIT (source repository); ASDiv lineage requires clarification",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "needs-license-clarification",
+        "originalOrigin": null,
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "svamp:chal-991",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9c959ac0f4b7a45f448592f4213ac1c34e20bd0e263bc205eb676ff5edcc54df",
+        "sourceDraftSha256": "9c959ac0f4b7a45f448592f4213ac1c34e20bd0e263bc205eb676ff5edcc54df",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "094d27a33b7a9ba79b636c1172ad6459cde6bcd4c7475287127b35b40983825d"
+      },
+      "contentSha256": "094d27a33b7a9ba79b636c1172ad6459cde6bcd4c7475287127b35b40983825d"
+    }
+  ]
+}

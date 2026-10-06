@@ -12,7 +12,8 @@ test('clearing records removes visits, every activity checkpoint and legacy spac
   const keys = ['mathphysics.state.v1', 'mathphysics.progress.v1.primary-math',
     'mathphysics.progress.v1.geometry-proofs', 'mathphysics.progress.v1.jsxgraph-playground',
     'mathphysics.progress.v1.tangram-flat', 'mathphysics.progress.v1.spaceflight',
-    'mathphysics.progress.v1.phet-area-builder', 'mathphysics.spaceflight.v1', 'mathphysics.question-bank.v1'];
+    'mathphysics.progress.v1.phet-area-builder', 'mathphysics.spaceflight.v1', 'mathphysics.question-bank.v1',
+    'mathphysics.minesweeper.session.v1','mathphysics.minesweeper.preferences.v1','mathphysics.sudoku.session.v1'];
   const saved = storage(keys.map(key => [key, 'record']));
   assert.deepEqual(recordKeys(saved), keys);
   assert.equal(clearRecords(saved), keys.length);

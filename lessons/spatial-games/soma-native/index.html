@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>立体拼块 · 科学小岛</title><link rel="icon" href="../../../src/assets/spatial/soma-cover.svg" type="image/svg+xml"><link rel="stylesheet" href="../../../src/theme.css"><link rel="stylesheet" href="../../../vendor/games/spatial/soma/styles.css"><link rel="stylesheet" href="theme.css"></head>
+<body>
+  <div id="container" aria-label="索玛三维拼块，拖动拼块摆放，拖动空白处旋转视角">
+    <div id="win-message" role="status"><div id="win-message-main-text"></div><div id="solution-info"></div><div id="win-buttons-container"><button id="export-btn">导出作品</button><button id="hide-btn">收起</button><button id="restart-btn">重新摆放</button></div></div>
+  </div>
+  <div class="native-toolbar"><button id="puzzle-menu-btn" aria-label="打开原版题形菜单">☰ 原版题形</button><button id="help-btn" aria-label="操作帮助">?</button><button id="restart-native">重新摆放</button></div>
+  <div id="mode-status" role="status"><strong id="mode-title">正在准备拼块…</strong><span id="mode-detail">拖动拼块放入轮廓</span><button id="return-challenge" hidden>回到本关</button></div>
+  <div id="piece-choices" aria-label="选择拼块"></div>
+  <div id="selected-tools" hidden><span id="selected-name"></span><button data-turn="x" aria-label="绕 X 轴旋转90度">绕 X 转</button><button data-turn="y" aria-label="绕 Y 轴旋转90度">绕 Y 转</button><button data-turn="z" aria-label="绕 Z 轴旋转90度">绕 Z 转</button></div>
+  <div id="native-hint">单指拖拼块 · 单指拖空白转视角 · 双指缩放</div>
+  <div id="puzzle-panel" class="hidden"><h2>原版题形</h2><p>46 个额外题形，选择后进入自由探索。</p><div id="puzzle-preview"></div><div id="puzzle-list"></div><div id="puzzle-pagination"><button id="prev-puzzle-page" aria-label="上一页">◀</button><span id="puzzle-page-info"></span><button id="next-puzzle-page" aria-label="下一页">▶</button></div><button id="solve-cube-btn">经典 3 × 3 × 3 方块</button><button id="cancel-puzzle-btn">关闭菜单</button></div>
+  <div id="info" class="hidden"><h1>在三维空间里，亲手拼起来</h1><p>这里保留原版 Soma 的三维操作。拖动任意一块，它会吸附到整数网格；松手完成摆放。</p><ul><li><b>观察：</b>拖动空白区域环绕，滚轮或双指缩放。</li><li><b>旋转：</b>选中拼块后拖动右下旋转球，松手对齐 90°；也可用 A/R/S 或 Z/X/V 键和旋转按钮。</li><li><b>微调：</b>左下方向键按当前视角平移拼块。换个视角，就能移动到另一层。</li><li><b>题形：</b>菜单保留 46 个原版额外题形和经典方块。探索不计本关积分，随时可回到计分挑战。</li></ul><p>经典方块有 240 种去重解，指同一个目标的不同拼法。完成后可导出作品。</p><p class="attribution">原作 Ruben Berenguel · <a href="../../../vendor/games/spatial/soma/LICENSE" target="_blank" rel="noopener">MIT 许可证</a></p><button id="close-info-btn">开始动手</button></div>
+  <div id="blur" class="hidden"></div>
+  <div id="nudge-pad" class="hidden" aria-label="按当前视角微调拼块"><button id="nudge-up" aria-label="向画面上方微调">↑</button><button id="nudge-left" aria-label="向画面左方微调">←</button><button id="nudge-right" aria-label="向画面右方微调">→</button><button id="nudge-down" aria-label="向画面下方微调">↓</button></div>
+  <script type="importmap">{"imports":{"three":"../../../vendor/games/spatial/soma/libs/three.module.js"}}</script><script type="module" src="main.js"></script>
+</body></html>

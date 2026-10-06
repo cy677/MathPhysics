@@ -1,0 +1,961 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "foundation-A09",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0166",
+      "collection": "foundation",
+      "category": "A09",
+      "subcategory": "由开始时刻求结束时刻",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-6da336d9a4915494",
+      "assessmentGroup": "assessment-6da336d9a4915494",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "木偶剧下午2:00开始，演出持续1小时30分钟。演出几点结束？请用24时计时法表示。",
+      "answer": {
+        "type": "time",
+        "format": "clock",
+        "minutes": 930
+      },
+      "intent": "根据开始时刻和演出时长求结束时刻。",
+      "hints": [
+        "下午2:00就是14:00。"
+      ],
+      "steps": [
+        "14:00过1小时是15:00。",
+        "再过30分钟是15:30。"
+      ],
+      "commonMistakes": [
+        "忽略下午，答成凌晨3:30。",
+        "把1小时30分钟当作130分钟。"
+      ],
+      "prerequisites": [
+        "认识时刻",
+        "24时计时法",
+        "时长加法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0166",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "5246870154f8d938fcdaad673d9633fa001fb823f04bad4361285782d3f0257e",
+        "recordSha256": "54735df03f05432284a047acfa6479283302b0e81ad08029abf5fabdd826a143",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0166",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "166d56742552afee3d74b602c0a3fb4dce46a5d5b78d51e6860c7bcbfcefc2d2",
+        "sourceDraftSha256": "166d56742552afee3d74b602c0a3fb4dce46a5d5b78d51e6860c7bcbfcefc2d2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e61f5baadb3a0b4c92bc4e2b7e766c62bec911582726c4cfb77d3ff2f8f43d17"
+      },
+      "contentSha256": "e61f5baadb3a0b4c92bc4e2b7e766c62bec911582726c4cfb77d3ff2f8f43d17"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0175",
+      "collection": "foundation",
+      "category": "A09",
+      "subcategory": "由开始时刻求结束时刻",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-2a13364cabe3c7cd",
+      "assessmentGroup": "assessment-2a13364cabe3c7cd",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "现在是凌晨2:00，再过3小时45分钟是几点？请用24时计时法表示。",
+      "answer": {
+        "type": "time",
+        "format": "clock",
+        "minutes": 345
+      },
+      "intent": "把经过的小时和分钟加到开始时刻。",
+      "hints": [
+        "先加3小时，再加45分钟。"
+      ],
+      "steps": [
+        "2:00过3小时是5:00。",
+        "再过45分钟是5:45，写成05:45。"
+      ],
+      "commonMistakes": [
+        "把45分钟加在小时数上。"
+      ],
+      "prerequisites": [
+        "认识时刻",
+        "时长加法"
+      ],
+      "adaptation": [
+        "原题没有注明上下午，为使用24时计时法明确为凌晨2:00；保留2:00加3小时45分钟的关系。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0175",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b73dc90245fbc18ece23b46ae613a18d2ccdfc94bf09b88f25dd21956a922446",
+        "recordSha256": "9efa02be6a064ead2c0d33ea8451a39625a1297986ce3f167da8c6734af75656",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0175",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "cc6597f36b34cc4a2d4e18c2d471e3ead8d278b674632636861bd4a39c633f16",
+        "sourceDraftSha256": "cc6597f36b34cc4a2d4e18c2d471e3ead8d278b674632636861bd4a39c633f16",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e8576d003073de43c25354834523a4d75209d387fc988a4e1be798a59be04e6d"
+      },
+      "contentSha256": "e8576d003073de43c25354834523a4d75209d387fc988a4e1be798a59be04e6d"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0183",
+      "collection": "foundation",
+      "category": "A09",
+      "subcategory": "由开始时刻求结束时刻",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-e49af8bf806f049e",
+      "assessmentGroup": "assessment-e49af8bf806f049e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小丹中午12:30开始吃午饭，吃了20分钟。她几点吃完？",
+      "answer": {
+        "type": "time",
+        "format": "clock",
+        "minutes": 770
+      },
+      "intent": "根据开始时刻和经过时间求结束时刻。",
+      "hints": [
+        "20分钟后仍在12点这一小时内。"
+      ],
+      "steps": [
+        "30＋20＝50（分钟）。",
+        "因此12:30过20分钟是12:50。"
+      ],
+      "commonMistakes": [
+        "把20分钟加在小时数上。"
+      ],
+      "prerequisites": [
+        "认识时刻",
+        "分钟加法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0183",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ab47feb60f9279556e2f4622b26866c5cd850350a65d3c301d70cdb21055bd46",
+        "recordSha256": "13b531acadede279e7de7a5d061c00c9254304ac066a0198ac390d4a1af08cfc",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0183",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "fec18344f91f8ddc33213dec96033059c623b1eaf182b9cab9210136838decb2",
+        "sourceDraftSha256": "fec18344f91f8ddc33213dec96033059c623b1eaf182b9cab9210136838decb2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ce74d7763030a964e50d2d85bc26291847fb011a70fc8d6c34724ed88864d7e4"
+      },
+      "contentSha256": "ce74d7763030a964e50d2d85bc26291847fb011a70fc8d6c34724ed88864d7e4"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0198",
+      "collection": "foundation",
+      "category": "A09",
+      "subcategory": "由结束时刻反推开始时刻",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-9311de147b98cf4e",
+      "assessmentGroup": "assessment-9311de147b98cf4e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "烤熟披萨需要20分钟。小杰想在傍晚18:30吃到刚烤好的披萨，他应该几点把披萨放进烤箱？",
+      "answer": {
+        "type": "time",
+        "format": "clock",
+        "minutes": 1090
+      },
+      "intent": "从预计完成时刻反推开始时刻。",
+      "hints": [
+        "需要往前推20分钟。"
+      ],
+      "steps": [
+        "18:30往前20分钟是18:10。"
+      ],
+      "commonMistakes": [
+        "把20分钟加上去，求成18:50。"
+      ],
+      "prerequisites": [
+        "认识时刻",
+        "时刻逆推"
+      ],
+      "adaptation": [
+        "原题6:30未注明上下午，按晚饭情境明确为18:30，并重算为18:10。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0198",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "145c61b631bbf482c75dc55b8a77457112a8faab6be53691ef730b548bb712f6",
+        "recordSha256": "ef3a36358d11b527d8bbf1e408970f779307f2e32c32cd26748c416e59ccb34b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0198",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "28094d389906120117b160c38066b484d7044421a9e0eca4d17379bde25bd3ad",
+        "sourceDraftSha256": "28094d389906120117b160c38066b484d7044421a9e0eca4d17379bde25bd3ad",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ced553c5a3de2c2564044f4069a61feb9bd149cfe06ecbb7d5d3a0749cfd1073"
+      },
+      "contentSha256": "ced553c5a3de2c2564044f4069a61feb9bd149cfe06ecbb7d5d3a0749cfd1073"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0199",
+      "collection": "foundation",
+      "category": "A09",
+      "subcategory": "由结束时刻反推开始时刻",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-01054252f8111738",
+      "assessmentGroup": "assessment-01054252f8111738",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小迈到林边镇需要15分钟。如果他上午8:30到达，他是几点出发的？请用24时计时法表示。",
+      "answer": {
+        "type": "time",
+        "format": "clock",
+        "minutes": 495
+      },
+      "intent": "由到达时刻和路上时间求出发时刻。",
+      "hints": [
+        "从8:30减去15分钟。"
+      ],
+      "steps": [
+        "8:30往前15分钟是8:15，写成08:15。"
+      ],
+      "commonMistakes": [
+        "把15分钟加到到达时刻上。"
+      ],
+      "prerequisites": [
+        "认识时刻",
+        "时刻逆推"
+      ],
+      "adaptation": [
+        "原题8:30未注明上下午，明确为上午；地名Edgewood译为林边镇。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0199",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "323c4646cf576f8abe2587cc5bb5eab3bfcbb91d97c4eb7d533c062c4b3d22c3",
+        "recordSha256": "1a5eb2f34f7bc0e748c087511a5106313bdc7772df9816bc3737430328662eb2",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0199",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "8267345a71918bb7b0a6cfaeee478fe13abfa1ec812f4e1715f18b72e5c7a418",
+        "sourceDraftSha256": "8267345a71918bb7b0a6cfaeee478fe13abfa1ec812f4e1715f18b72e5c7a418",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b1830f71e191f916735da748fef139d08ceaa1f4fba718aff75d098721af094c"
+      },
+      "contentSha256": "b1830f71e191f916735da748fef139d08ceaa1f4fba718aff75d098721af094c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0200",
+      "collection": "foundation",
+      "category": "A09",
+      "subcategory": "经过时间与空闲时间",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-906a6982d2048c18",
+      "assessmentGroup": "assessment-906a6982d2048c18",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "火车9:45出发，当天10:00到达车站。这段路程用了多少分钟？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "15",
+          "d": "1"
+        },
+        "unit": "分钟"
+      },
+      "intent": "求跨整点的经过时间。",
+      "hints": [
+        "从9:45到10:00还有15分钟。"
+      ],
+      "steps": [
+        "9:45＝从0:00起的585分钟，10:00＝600分钟。",
+        "用了600－585＝15（分钟）。"
+      ],
+      "commonMistakes": [
+        "直接用1000减945而得到55分钟。"
+      ],
+      "prerequisites": [
+        "认识时刻",
+        "经过时间"
+      ],
+      "adaptation": [
+        "明确两时刻为同一天，以排除多日旅程解释。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0200",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "4d658188323faccd155073afbea195cec53dcf996bc9c885f1764dea56e44047",
+        "recordSha256": "09e7578b67d52234d53f043f6b84ac1158911fd821f80889938a767d61ecdd26",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0200",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c14f1fd50c07c0afd12b66cb3885b7301c01ca25e497030b09c881d42e96846d",
+        "sourceDraftSha256": "c14f1fd50c07c0afd12b66cb3885b7301c01ca25e497030b09c881d42e96846d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "64c64990c6663e5012df427bb1422ca407fbc5671e4aa3e5ee8fd47a53a46415"
+      },
+      "contentSha256": "64c64990c6663e5012df427bb1422ca407fbc5671e4aa3e5ee8fd47a53a46415"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0889",
+      "collection": "foundation",
+      "category": "A09",
+      "subcategory": "经过时间与空闲时间",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-5b820d482e1b3991",
+      "assessmentGroup": "assessment-5b820d482e1b3991",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小伊和小弗轮流划船。小伊从10:50划到11:15，小弗划船的时间是小伊的2倍。两人合起来划了多少分钟？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "75",
+          "d": "1"
+        },
+        "unit": "分钟"
+      },
+      "intent": "先求一人的经过时间，再用倍数关系求总时长。",
+      "hints": [
+        "从10:50到11:00是10分钟，之后还有15分钟。"
+      ],
+      "steps": [
+        "小伊划了10＋15＝25（分钟）。",
+        "小弗划了25×2＝50（分钟）。",
+        "合起来划了25＋50＝75（分钟）。"
+      ],
+      "commonMistakes": [
+        "直接用15减50。",
+        "只答小弗划的50分钟。"
+      ],
+      "prerequisites": [
+        "经过时间",
+        "倍数关系",
+        "加法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0889",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "73ffba7a4f2c2a93e55b24880abfd0003f52b677955477cb7580f99a405755eb",
+        "recordSha256": "40c18fbf6c5e4ce0a1e212c1afd8e3122e1dcf0bd1a00c50c1ffcf7589da8b80",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0889",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "72dd478032a1b73cc917d49e2e659496635b1ec3a62b0a07dd8592c3763591a1",
+        "sourceDraftSha256": "72dd478032a1b73cc917d49e2e659496635b1ec3a62b0a07dd8592c3763591a1",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "cd244d97433a34a8ac5e346eb72567a1b03b2f1e04661e437f16731f60a3290c"
+      },
+      "contentSha256": "cd244d97433a34a8ac5e346eb72567a1b03b2f1e04661e437f16731f60a3290c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1100",
+      "collection": "foundation",
+      "category": "A09",
+      "subcategory": "经过时间与空闲时间",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-36dcbe52d3b16335",
+      "assessmentGroup": "assessment-36dcbe52d3b16335",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小佩下午15:27出发骑车，骑了85分钟。她家当天17:45吃晚饭。骑车结束后，到吃晚饭前还有多少分钟？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "53",
+          "d": "1"
+        },
+        "unit": "分钟"
+      },
+      "intent": "计算活动结束到下一事件之间的空闲时间。",
+      "hints": [
+        "可以先求结束骑车的时刻。"
+      ],
+      "steps": [
+        "15:27过85分钟，也就是1小时25分钟，是16:52。",
+        "16:52到17:00有8分钟，到17:45再有45分钟。",
+        "空闲时间是8＋45＝53（分钟）。"
+      ],
+      "commonMistakes": [
+        "只计算出发到晚饭的全部时间。",
+        "忘记扣掉85分钟骑车时间。"
+      ],
+      "prerequisites": [
+        "经过时间",
+        "小时与分钟换算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1100",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "f6b27601ce07a2a2f397026a6e20a43d71dafd3a305f450d9b18d7cc6502708b",
+        "recordSha256": "d3a21ceef704dc760ea252e4c5d316e83625dcaad1292753ecf682df7e5fe869",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1100",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "11e1dd68338b7c41379d4264cdaa11a7a54b208e682b8a8d75337f66f30d40eb",
+        "sourceDraftSha256": "11e1dd68338b7c41379d4264cdaa11a7a54b208e682b8a8d75337f66f30d40eb",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "09c88803a67387ea924c152fd14ff944ea263a3af11b9364fab68a938eff229d"
+      },
+      "contentSha256": "09c88803a67387ea924c152fd14ff944ea263a3af11b9364fab68a938eff229d"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1103",
+      "collection": "foundation",
+      "category": "A09",
+      "subcategory": "经过时间与空闲时间",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-a7e232cb7cf0b754",
+      "assessmentGroup": "assessment-a7e232cb7cf0b754",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "现在是下午16:12。小艾的妈妈70分钟后下班到家，小艾当天18:00开始上体操课。妈妈到家后，到体操课开始前还有多少分钟？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "38",
+          "d": "1"
+        },
+        "unit": "分钟"
+      },
+      "intent": "求两次事件之间的间隔。",
+      "hints": [
+        "先把70分钟加到16:12上。"
+      ],
+      "steps": [
+        "70分钟＝1小时10分钟，妈妈17:22到家。",
+        "17:22到18:00还有60－22＝38（分钟）。"
+      ],
+      "commonMistakes": [
+        "直接用18:00减16:12，没有扣70分钟。"
+      ],
+      "prerequisites": [
+        "经过时间",
+        "时刻加法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1103",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "8670c92af6e0b49104025896e4f9c0d56e3a66fe0cde6b06ddbc9bf12a44dbd4",
+        "recordSha256": "4ba43cb88ab00db2f7b0f03e3254f6442c193367391056faca864f6c57d06d74",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1103",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7c8a2f33c7b998361ec388a872d18ce8402867229dc0407fd47d5a2328defef2",
+        "sourceDraftSha256": "7c8a2f33c7b998361ec388a872d18ce8402867229dc0407fd47d5a2328defef2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "3343b3ba50c1953507c9a75cbdc4d66a446638d10ad1f4331a452671b7964535"
+      },
+      "contentSha256": "3343b3ba50c1953507c9a75cbdc4d66a446638d10ad1f4331a452671b7964535"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1110",
+      "collection": "foundation",
+      "category": "A09",
+      "subcategory": "由结束时刻反推开始时刻",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-0b3218839b90cd90",
+      "assessmentGroup": "assessment-0b3218839b90cd90",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小露和小瑞通电话，共聊了1小时21分钟，在凌晨1:06结束。他们在前一天的几点开始通话？请用24时计时法表示。",
+      "answer": {
+        "type": "time",
+        "format": "clock",
+        "minutes": 1425
+      },
+      "intent": "跨午夜反推开始时刻。",
+      "hints": [
+        "从凌晨1:06先往前推1小时，再往前推21分钟。"
+      ],
+      "steps": [
+        "凌晨1:06往前1小时是凌晨0:06。",
+        "再往前6分钟到前一天24:00，还需往前21－6＝15（分钟）。",
+        "开始时刻是前一天23:45。"
+      ],
+      "commonMistakes": [
+        "按100分钟进位。",
+        "忽略跨日，答成同一天的23:45。"
+      ],
+      "prerequisites": [
+        "认识时刻",
+        "小时与分钟换算",
+        "跨日时间"
+      ],
+      "adaptation": [
+        "在问句明确所求是前一天的时刻，日期关系由题干承载，答案仍采用HH:mm。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1110",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ce05fe2928247eea5fdd1deb5aa638bd80b97a4b97d6c3d13ffa8e62bdc78e91",
+        "recordSha256": "3e3d4243d880963981880574280a394912fdf6ca100930ac27741ff89f028745",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://mtapreviewer.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1110",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a4f237bb606dd3af62fb31f06c4b5f36e45385f9aefdf97fdd17fb2ac46b1e6d",
+        "sourceDraftSha256": "a4f237bb606dd3af62fb31f06c4b5f36e45385f9aefdf97fdd17fb2ac46b1e6d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "5e04a168b256ce36addb07686bf50ad419ecf66ad21985764a6bbf96842f536e"
+      },
+      "contentSha256": "5e04a168b256ce36addb07686bf50ad419ecf66ad21985764a6bbf96842f536e"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1158",
+      "collection": "foundation",
+      "category": "A09",
+      "subcategory": "经过时间与空闲时间",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-5967b37c2dcefc33",
+      "assessmentGroup": "assessment-5967b37c2dcefc33",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "现在是下午16:27，小安的妈妈说65分钟后下班到家。小安当天18:00开始练舞。妈妈到家后，到练舞开始前还有多少分钟？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "28",
+          "d": "1"
+        },
+        "unit": "分钟"
+      },
+      "intent": "先求到家时刻，再求剩余时长。",
+      "hints": [
+        "65分钟是1小时5分钟。"
+      ],
+      "steps": [
+        "妈妈16:27过1小时5分钟到家，是17:32。",
+        "到18:00还有60－32＝28（分钟）。"
+      ],
+      "commonMistakes": [
+        "把65分钟当成65个百分之一小时。",
+        "漏掉妈妈还在路上的时间。"
+      ],
+      "prerequisites": [
+        "经过时间",
+        "时刻加法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1158",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "a7eb930f454e794ef31cfcde74d2f5a4781355aa1e08955df2a15d89fb2914ac",
+        "recordSha256": "278ba8327402058bcad6f9aecf2fb6d98fc36162d612e30333521b3142ce6bef",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1158",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "576ec9ec35ba70f3fed225f4e487e25f2bc363eed342eb2b0fde1f7802ba9cdb",
+        "sourceDraftSha256": "576ec9ec35ba70f3fed225f4e487e25f2bc363eed342eb2b0fde1f7802ba9cdb",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "eebdc3c88267175bb7e29fc2c1e17df5d1775e95d13605f083643f6d46082a58"
+      },
+      "contentSha256": "eebdc3c88267175bb7e29fc2c1e17df5d1775e95d13605f083643f6d46082a58"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1160",
+      "collection": "foundation",
+      "category": "A09",
+      "subcategory": "经过时间与空闲时间",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-b5de0ce20eeab849",
+      "assessmentGroup": "assessment-b5de0ce20eeab849",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "韩叔叔早上6:00出门上班，因为堵车，早上7:20才到。他路上用了多少小时？请用分数表示。",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "4",
+          "d": "3"
+        },
+        "unit": "小时"
+      },
+      "intent": "求经过时间，并认识小时的精确分数表示。",
+      "hints": [
+        "先用分钟算出准确时长。"
+      ],
+      "steps": [
+        "6:00到7:00是60分钟，再到7:20是20分钟。",
+        "共用了60＋20＝80（分钟）。",
+        "换成小时是80÷60＝4/3（小时），也就是1又1/3小时。"
+      ],
+      "commonMistakes": [
+        "把1小时20分钟写成1.20小时。",
+        "把1.33小时当作精确答案。"
+      ],
+      "prerequisites": [
+        "经过时间",
+        "时间单位换算",
+        "分数"
+      ],
+      "adaptation": [
+        "原答案1.33小时为未声明精度的近似值；保留原题小时所求，明确用分数作答，独立精确换算为4/3小时。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1160",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "07d3f2e9a7e32a133e0a45f82a36cf4536a61ed26ea7fe3bdb254aa25489bdc1",
+        "recordSha256": "78c89162f87dc0bb1e4f944874c73b41b3e3847865a6a0d818798dd9e38759ae",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ixl.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1160",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f2c529e0f8b958fc15eca9c6368a479ea41798f3df0537f72e3893c45558562e",
+        "sourceDraftSha256": "2e2c796163aa71c3432ca3acdd75073ae32f2b7e263f74ad5393ae9fa291251b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "445d00d89bb7b33df756573885883e8df961cd71966889a854ddc46c8dabe5b7"
+      },
+      "contentSha256": "445d00d89bb7b33df756573885883e8df961cd71966889a854ddc46c8dabe5b7"
+    }
+  ]
+}

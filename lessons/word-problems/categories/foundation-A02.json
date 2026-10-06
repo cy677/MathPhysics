@@ -1,0 +1,2760 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "foundation-A02",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0013",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-13ae858d8beda109",
+      "assessmentGroup": "assessment-13ae858d8beda109",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "篮子里有20个桃子，又放入25个。现在篮子里有多少个桃子？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "45",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "用原有量加上增加量，求现在数量。",
+      "hints": [
+        "又放入桃子后，数量会增加。"
+      ],
+      "steps": [
+        "20＋25＝45（个）。",
+        "现在篮子里有45个桃子。"
+      ],
+      "commonMistakes": [
+        "把放入25个误当成取走25个。"
+      ],
+      "prerequisites": [
+        "整数加法",
+        "部分量与总量"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0013",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "35ad0bec658eeff2f615a162a940a71da7974cdd5cf0ac40956a8bf053faf4f2",
+        "recordSha256": "b2d86092c859a604adbfac04593f78690b12cb7b2c07196ac6470fd9024b84c1",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0013",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "ab6e2c45879564acdad09c445703d9889cac54d2820907ea471583a6d1758767",
+        "sourceDraftSha256": "ab6e2c45879564acdad09c445703d9889cac54d2820907ea471583a6d1758767",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ff777021533dbb3effc81ee2647976da55e558dc158bca01265236f54b0542c8"
+      },
+      "contentSha256": "ff777021533dbb3effc81ee2647976da55e558dc158bca01265236f54b0542c8"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0124",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初末状态求变化量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-17ae3bc560398236",
+      "assessmentGroup": "assessment-17ae3bc560398236",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小凯已有56个苹果，想一共有105个。她还需要摘多少个苹果？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "49",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "由目标量和已有量求还需增加的数量。",
+      "hints": [
+        "还需要的加上已有的，应等于105个。"
+      ],
+      "steps": [
+        "105－56＝49（个）。",
+        "她还需要摘49个苹果。"
+      ],
+      "commonMistakes": [
+        "把已有56个与目标105个相加。"
+      ],
+      "prerequisites": [
+        "整数减法",
+        "部分量与总量"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0124",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "4ca69cfa84374fac140b9a5a11b9cf561719611172dc292fbbb8bfe665a658f1",
+        "recordSha256": "6a0b2643b10ec0144628879600057b055fed97d899027bbf69677a66bf662d6f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0124",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "91a0476d6221b5de113094b2667a1e721beb13dae89b4e71a1d7d9657521289b",
+        "sourceDraftSha256": "91a0476d6221b5de113094b2667a1e721beb13dae89b4e71a1d7d9657521289b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9bd214e7a7c042d036ee8756d95537f60c19b0f54adf5403d42e369cfcc8ea01"
+      },
+      "contentSha256": "9bd214e7a7c042d036ee8756d95537f60c19b0f54adf5403d42e369cfcc8ea01"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0286",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-06728e0333904827",
+      "assessmentGroup": "assessment-06728e0333904827",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小雯喜欢把自己的东西分享给朋友。今年生日收到新鞋后，她共有33双鞋。她送给朋友14双后，自己还剩多少双鞋？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "19",
+          "d": "1"
+        },
+        "unit": "双"
+      },
+      "intent": "从原有数量中减去送出的数量。",
+      "hints": [
+        "送出鞋子后，自己的鞋子会减少。"
+      ],
+      "steps": [
+        "33－14＝19（双）。",
+        "小雯还剩19双鞋。"
+      ],
+      "commonMistakes": [
+        "把14双当成新收到的鞋子而相加。"
+      ],
+      "prerequisites": [
+        "整数减法",
+        "部分量与总量"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0286",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "5f7462f780b3fe0ebc9c330ce4c1896a119c6a8217ef1fbf49463db8ddd7472c",
+        "recordSha256": "a42f26b25dc6134619b9a5d57f2397b246bcd809a218be99077ce9aa16ea8866",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0286",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "739f688ca119e2b8f30f6eabc623cfd2f8bf6e456d7233268d956bbf9b72024c",
+        "sourceDraftSha256": "739f688ca119e2b8f30f6eabc623cfd2f8bf6e456d7233268d956bbf9b72024c",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f99b7b397b77d7aa4b1d91516e564969ea9f9d6798aa1db9474cc107769b5aa7"
+      },
+      "contentSha256": "f99b7b397b77d7aa4b1d91516e564969ea9f9d6798aa1db9474cc107769b5aa7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0349",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知变化与结果反求初始量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-704f81ad3ba2af28",
+      "assessmentGroup": "assessment-704f81ad3ba2af28",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "爸爸想建一个水泥壁炉抵御森林里夜间的寒冷。他新买215千克水泥，儿子又带来137千克。现在共有450千克。爸爸原来有多少千克水泥？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "98",
+          "d": "1"
+        },
+        "unit": "千克"
+      },
+      "intent": "从最终总量中减去后来增加的量，反求原有量。",
+      "hints": [
+        "450千克包含原有的和新增加的两部分。"
+      ],
+      "steps": [
+        "新增加215＋137＝352（千克）。",
+        "原有450－352＝98（千克）。"
+      ],
+      "commonMistakes": [
+        "把新买的215千克当成原有量",
+        "将新增数量加到450上。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "把215、137、450磅分别重设为215、137、450千克，属于公制教学尺度改编而非精确换算，重新核算450－215－137＝98千克。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0349",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "211f3254764acfff5a67e2c02bb04f4efa688694b7982a98e41f2d54acb7b9bd",
+        "recordSha256": "0e78140e61e20af5ab7400e925622b5c7dbc6a2b988a11cff60f725741cc64c9",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0349",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "15ae549eed387aea884be1801ffe30a5b25342149809f30f6956c2c244f408c7",
+        "sourceDraftSha256": "15ae549eed387aea884be1801ffe30a5b25342149809f30f6956c2c244f408c7",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "357270318982a9d28a6936944792f039990ddc10e8bf182f3fb7abedc59a64d0"
+      },
+      "contentSha256": "357270318982a9d28a6936944792f039990ddc10e8bf182f3fb7abedc59a64d0"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0579",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-787a7bc8d66a3664",
+      "assessmentGroup": "assessment-787a7bc8d66a3664",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小美有3包纸杯蛋糕，每包4个。她吃了5个，还剩多少个？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "7",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "先求蛋糕总数，再减去吃掉的数量。",
+      "hints": [
+        "3包各4个，先用乘法算总数。"
+      ],
+      "steps": [
+        "原有3×4＝12（个）。",
+        "吃掉5个后，剩12－5＝7（个）。"
+      ],
+      "commonMistakes": [
+        "把3包当成3个蛋糕",
+        "先用4－5计算。"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "几个相同量相加",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0579",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "0035e036522a8b64f2843f342dc66e5b291bc04ea4573898021d316c160c0bba",
+        "recordSha256": "3ae73746373a7e929ef84fb182dfa7c880cbca0b207d827c2148111f059b7981",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0579",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "1dfe354c9deae8bafddb57693189f1e2723717c6d0f9d90353793a453c6a8d39",
+        "sourceDraftSha256": "1dfe354c9deae8bafddb57693189f1e2723717c6d0f9d90353793a453c6a8d39",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d735e056ce945aedb654cc599f059fdfd0db33643987ebbaaa12b11f9b0679ee"
+      },
+      "contentSha256": "d735e056ce945aedb654cc599f059fdfd0db33643987ebbaaa12b11f9b0679ee"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0653",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-a15e35f18d47ea1c",
+      "assessmentGroup": "assessment-a15e35f18d47ea1c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小雪原有92颗糖，给9个朋友每人4颗。她还剩多少颗糖？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "56",
+          "d": "1"
+        },
+        "unit": "颗"
+      },
+      "intent": "求平均每人给定数量时的赠送总量，再求剩余。",
+      "hints": [
+        "给9人，每人4颗，送出的是9份4颗。"
+      ],
+      "steps": [
+        "送出9×4＝36（颗）。",
+        "还剩92－36＝56（颗）。"
+      ],
+      "commonMistakes": [
+        "只减去4颗或9颗，没有计算送出的总数。"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "几个相同量相加",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0653",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "7cdae68786e854b2fea4ed0a177be51893624a85f80297582c1dd3c7f5b97916",
+        "recordSha256": "4f2cdd4e16f89242505b55382c9e1c4a16aca2dca1e306b0952e18b0bf2aa09e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://exam.ciwong.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0653",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "48b185c9ac02f2240c0ce1002f247cb3b3e3d51d061f2f0dd377efc1e8fc717e",
+        "sourceDraftSha256": "48b185c9ac02f2240c0ce1002f247cb3b3e3d51d061f2f0dd377efc1e8fc717e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ba13ae0f85fc17ff453d1b049f826b238fd09e30b59de3a73ffbea79ba346862"
+      },
+      "contentSha256": "ba13ae0f85fc17ff453d1b049f826b238fd09e30b59de3a73ffbea79ba346862"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0700",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初末状态求变化量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-0815b3275ead1b54",
+      "assessmentGroup": "assessment-0815b3275ead1b54",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小雅有16个李子、18个番石榴和21个苹果。她把一些水果送给小珍后，还剩15个水果。她一共送出多少个水果？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "40",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "先合并原有水果，再由剩余量求送出量。",
+      "hints": [
+        "送出的和剩下的合起来等于原有总数。"
+      ],
+      "steps": [
+        "原有16＋18＋21＝55（个）水果。",
+        "送出55－15＝40（个）。"
+      ],
+      "commonMistakes": [
+        "把15个剩余水果当成送出的水果。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0700",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b7812acb330da2a080d351d7b3e6fa19b5c1ec7a5f59f1f038f1e8cb785c8b91",
+        "recordSha256": "0a24c1b1e795bf5b72a18af8b6e4b3e08266a50ec59bba26f2d7010473837575",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0700",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "15c088f7cbb77fe1f571c867794e57f91b1c5804ab544e4ae65c9b7126d20f04",
+        "sourceDraftSha256": "15c088f7cbb77fe1f571c867794e57f91b1c5804ab544e4ae65c9b7126d20f04",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "f400f8333f17cddc96fb5fbc8791f38f7de5098e055b2ae67e57e91c6bf6d62b"
+      },
+      "contentSha256": "f400f8333f17cddc96fb5fbc8791f38f7de5098e055b2ae67e57e91c6bf6d62b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0820",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初末状态求变化量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-64a3e326b5a16a4c",
+      "assessmentGroup": "assessment-64a3e326b5a16a4c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小贝有367颗珠子，想把所有珠子用来做15条项链，每条珠子数量相同。她最少还需增加多少颗珠子？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "8",
+          "d": "1"
+        },
+        "unit": "颗"
+      },
+      "intent": "用余数求补到下一次整除所需的数量。",
+      "hints": [
+        "不能丢掉珠子，要把总数补到15的倍数。"
+      ],
+      "steps": [
+        "367÷15＝24……7，每条放24颗后多7颗。",
+        "若每条再放1颗，共需15颗，已有7颗，还差15－7＝8（颗）。",
+        "增加8颗后共375颗，375÷15＝25，正好每条25颗。"
+      ],
+      "commonMistakes": [
+        "把余数7当成还需增加的颗数",
+        "丢掉7颗而没有回答增加多少。"
+      ],
+      "prerequisites": [
+        "有余数的除法",
+        "按题意解释余数"
+      ],
+      "adaptation": [
+        "明确“最少增加”且所有珠子都用上，以对应原题补足下一个15的倍数的目标。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0820",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e3bd4b563e137a272ad12d5dbb320388b37271397d82f30f2d88c670213c4d70",
+        "recordSha256": "ba280e9c54e576b7da274399d87625971b025eccd32db909b6fdaccd734a2c23",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0820",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "68dc26736d5a419413b09ca4904e93af87c6abbde0b442b3d6bd4a59eae54222",
+        "sourceDraftSha256": "68dc26736d5a419413b09ca4904e93af87c6abbde0b442b3d6bd4a59eae54222",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c038bf925742c2e077402b56f7ab09be5b7d8c49da228653ead8bf3b67f06a55"
+      },
+      "contentSha256": "c038bf925742c2e077402b56f7ab09be5b7d8c49da228653ead8bf3b67f06a55"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0880",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知变化与结果反求初始量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-ea384e1a65e265db",
+      "assessmentGroup": "assessment-ea384e1a65e265db",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小德给小马12颗弹珠后，两人各有25颗。原来小德比小马多多少颗弹珠？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "24",
+          "d": "1"
+        },
+        "unit": "颗"
+      },
+      "intent": "反推两人原有数量，再求原来的差。",
+      "hints": [
+        "送出者原来更多，收到者原来更少，都要倒推12颗。"
+      ],
+      "steps": [
+        "小德原有25＋12＝37（颗）。",
+        "小马原有25－12＝13（颗）。",
+        "原来相差37－13＝24（颗）。"
+      ],
+      "commonMistakes": [
+        "把赠送12颗当成两人原来的差额，忽略两方同时变化。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0880",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "3f2b6a8a53eb6c5d4c187d397f1035305967fd016691308319535e3ffe7180ef",
+        "recordSha256": "713a64e70b7a558e65a5fa8a0b1842b878de982fde7554c2129e09a0d89372a0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0880",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "8bd339a7d36ff355705656324baa81017ce4f2b096d564fb3e470e2fa74eb58a",
+        "sourceDraftSha256": "8bd339a7d36ff355705656324baa81017ce4f2b096d564fb3e470e2fa74eb58a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "35c76c89c7d105d6e64892cba326a6e1041040fabe6f77c6b94702a8ef24ebc1"
+      },
+      "contentSha256": "35c76c89c7d105d6e64892cba326a6e1041040fabe6f77c6b94702a8ef24ebc1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0891",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "年龄跨时点与不变量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-654920cc4fe4dfc7",
+      "assessmentGroup": "assessment-654920cc4fe4dfc7",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小伦现在11岁，小布现在16岁。若干年前，小布的年龄是小伦的2倍。小伦当时几岁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "岁"
+      },
+      "intent": "利用年龄差不变和当时的倍数关系求过去年龄。",
+      "hints": [
+        "两人年龄差一直是5岁。当大者是小者的2倍时，差也是小者的年龄。"
+      ],
+      "steps": [
+        "现在年龄差是16－11＝5（岁）。",
+        "当时小布比小伦多1份小伦的年龄，这1份就是5岁，所以小伦当时5岁。",
+        "检查6年前两人分别为5岁和10岁，10＝2×5。"
+      ],
+      "commonMistakes": [
+        "把距今6年当成小伦当时6岁",
+        "认为两人的年龄差会随时间变化。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "年龄差不变"
+      ],
+      "adaptation": [
+        "纠正源答案6岁：源式求出的6是距今的年数，题目实际问当时小伦年龄，按11－6＝5岁作答，题干目标与数量保持不变。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0891",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "73fc5d78671af984c8dfb374255ae24a565cb79c59d70c85bb4b84e31ac1db0c",
+        "recordSha256": "b28a9ff67b131950c291b6a26fd93cc596a75a46264749d0bb8ef8319ea79bbd",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0891",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "8d774026204e9f83a2053ba0bf107ea27f531a091ce580c92ddc3f972535c3a8",
+        "sourceDraftSha256": "8d774026204e9f83a2053ba0bf107ea27f531a091ce580c92ddc3f972535c3a8",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d73bc4077cf3a0acfcc58bc93ad2002a52fc738353eda9b097355cf22a465550"
+      },
+      "contentSha256": "d73bc4077cf3a0acfcc58bc93ad2002a52fc738353eda9b097355cf22a465550"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0909",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知变化与结果反求初始量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-06cd554df3bde5be",
+      "assessmentGroup": "assessment-06cd554df3bde5be",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小本原来有一些棒球卡，朋友小提有20张。小本又买了3张后，卡片数是小提的2倍。小本原来有多少张？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "37",
+          "d": "1"
+        },
+        "unit": "张"
+      },
+      "intent": "先由倍数求最终数量，再反求增加前的数量。",
+      "hints": [
+        "小本买完后有两份20张。"
+      ],
+      "steps": [
+        "买完后有20×2＝40（张）。",
+        "原来有40－3＝37（张）。"
+      ],
+      "commonMistakes": [
+        "把买入3张加到40张上",
+        "先把20减3再乘2。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0909",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e449efc29c6de3ed2c4d0267cdd10fe32e46f1be872c4fdb420a9ae0f5f18931",
+        "recordSha256": "d4c65968b9ad134ad5a0310c16176a9dc1616b461400e1c5c8d5a1750bb04450",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0909",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2f8fe60946b8226d752b8eb24b037b9ce68698bab144ab890d685b61ffabf52e",
+        "sourceDraftSha256": "2f8fe60946b8226d752b8eb24b037b9ce68698bab144ab890d685b61ffabf52e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "cdba237b3e55fa2f08b2120f4146bafba19afa5e99cb692598d45783ac01c412"
+      },
+      "contentSha256": "cdba237b3e55fa2f08b2120f4146bafba19afa5e99cb692598d45783ac01c412"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0913",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-4eb3a57f5165796b",
+      "assessmentGroup": "assessment-4eb3a57f5165796b",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小伊在大楼里送包裹。他从第1层向上走7层，再向下走3层，又向上走16层。这时他距离顶层还差2层。这座大楼一共有多少层？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "23",
+          "d": "1"
+        },
+        "unit": "层"
+      },
+      "intent": "跟踪楼层变化，再求顶层层号。",
+      "hints": [
+        "从第1层开始，上楼加、下楼减，最后还要加上距顶层的2层。"
+      ],
+      "steps": [
+        "先到1＋7＝8（层），再到8－3＝5（层）。",
+        "又上16层，到5＋16＝21（层）。",
+        "顶层是21＋2＝23（层），大楼共有23层。"
+      ],
+      "commonMistakes": [
+        "从0层开始，漏掉初始第1层",
+        "把下楼3层也加上。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0913",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "009378ddbd08162e1d884e1f60b297e2043c6d044e96760fdf441c5c1e1ab714",
+        "recordSha256": "a06bd1f6e55a5805c2f620661da60b6736a00143ad634ef66ec3b9f1fc68a13b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0913",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "94d9095fbb847f6508fd5dbec3483551e811c99104e1ff8e9b3492ef922a6490",
+        "sourceDraftSha256": "94d9095fbb847f6508fd5dbec3483551e811c99104e1ff8e9b3492ef922a6490",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ae3dee434f4a53cdd2428b1622f7c692b5987724b9e821be0a9fa552f5617c7d"
+      },
+      "contentSha256": "ae3dee434f4a53cdd2428b1622f7c692b5987724b9e821be0a9fa552f5617c7d"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0942",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-032913f786b429e1",
+      "assessmentGroup": "assessment-032913f786b429e1",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小艾读一本95页的南希·德鲁探案故事。第一天读18页，第二天读58页。她还有多少页没有读？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "19",
+          "d": "1"
+        },
+        "unit": "页"
+      },
+      "intent": "从总页数中减去两天读过的页数。",
+      "hints": [
+        "两天读过的页数需要先合计。"
+      ],
+      "steps": [
+        "两天读了18＋58＝76（页）。",
+        "还剩95－76＝19（页）没有读。"
+      ],
+      "commonMistakes": [
+        "只减去第二天读的58页。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0942",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "81dd014cdf7907c1c4ebcaeec024261db6949e1be5f80c471a5fbe5a060d2d76",
+        "recordSha256": "6790c0a60c276a912d7ee3d732c01b68603cea9ccf9019e67d66a0447c869f2d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0942",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "be860966e7d7387f415fa4a56b23a3a0c1aaceb3ab116c550e2c7fcecc4fe702",
+        "sourceDraftSha256": "be860966e7d7387f415fa4a56b23a3a0c1aaceb3ab116c550e2c7fcecc4fe702",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e0e47acd1a590212f47f7fd053e6aab249ae02a3d55548f575af4a207bbd98ea"
+      },
+      "contentSha256": "e0e47acd1a590212f47f7fd053e6aab249ae02a3d55548f575af4a207bbd98ea"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0952",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-00bfe4cd784d8f21",
+      "assessmentGroup": "assessment-00bfe4cd784d8f21",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小肖和朋友玩地产桌游，原有27座房屋模型。他卖掉8座换钱购买地产，后来又用收到的租金买了12座。现在他有多少座房屋模型？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "31",
+          "d": "1"
+        },
+        "unit": "座"
+      },
+      "intent": "按先减少后增加的顺序求最终数量。",
+      "hints": [
+        "卖掉的减去，新买的加上。"
+      ],
+      "steps": [
+        "卖掉后有27－8＝19（座）。",
+        "又买12座后有19＋12＝31（座）。"
+      ],
+      "commonMistakes": [
+        "把卖掉8座也当成增加",
+        "用27－8－12计算。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "明确桌游中的房屋是模型，以便中文读者理解游戏情境，数量关系不变。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0952",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "616aa5141fb1f35e7dcb78cec6f6b158bf9ffe0156c993c12c926c88e9db83cd",
+        "recordSha256": "7de9f3ec45fdf9bc85b73fd196b76fe5893908a40191aaed63b1c21465c681ca",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0952",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "ad4ce1bb6b0a8574d6e85495b2e792f2d443dc519f9690eb32438597a64e6521",
+        "sourceDraftSha256": "ad4ce1bb6b0a8574d6e85495b2e792f2d443dc519f9690eb32438597a64e6521",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "7325574da0b4d4c794b4da61cef5322f108ac0f3269878c66629a67f083191cf"
+      },
+      "contentSha256": "7325574da0b4d4c794b4da61cef5322f108ac0f3269878c66629a67f083191cf"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0954",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-beeeab96b4a80b84",
+      "assessmentGroup": "assessment-beeeab96b4a80b84",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小安和双胞胎妹妹小美各摘了16朵花。她们一起送给妈妈18朵。姐妹俩还剩多少朵花？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "14",
+          "d": "1"
+        },
+        "unit": "朵"
+      },
+      "intent": "合并两人的原有数量，再减去送出的数量。",
+      "hints": [
+        "“各16朵”表示两个人都有16朵。"
+      ],
+      "steps": [
+        "姐妹俩原有16×2＝32（朵）。",
+        "送给妈妈后剩32－18＝14（朵）。"
+      ],
+      "commonMistakes": [
+        "只算一个人的16朵",
+        "把给妈妈的18朵减两次。"
+      ],
+      "prerequisites": [
+        "整数乘法",
+        "几个相同量相加",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0954",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ff95153abff923b11d1bc46d02232661e7d7a3ade8b6cce052b63e0d12e490b7",
+        "recordSha256": "e682e63a08bcf94ff75ad3d59820b4be8cde00a9b53734fc37e00c7d9bca35fd",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0954",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c08cea27b00f4c12559cb7eecaadee208bc123d58b27f95d7b537758e3938b09",
+        "sourceDraftSha256": "c08cea27b00f4c12559cb7eecaadee208bc123d58b27f95d7b537758e3938b09",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "94a600a2a291502788c5cb5af9ccd5f6bee41b4541ef3294e51d89571372b526"
+      },
+      "contentSha256": "94a600a2a291502788c5cb5af9ccd5f6bee41b4541ef3294e51d89571372b526"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0966",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知变化与结果反求初始量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-0f3e6a354887a199",
+      "assessmentGroup": "assessment-0f3e6a354887a199",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小米收藏了一些音乐光盘。她送给朋友15张后，还剩78张。她原来有多少张音乐光盘？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "93",
+          "d": "1"
+        },
+        "unit": "张"
+      },
+      "intent": "由剩余量加回减少量，反求原有量。",
+      "hints": [
+        "原有的包括送出的15张和剩下的78张。"
+      ],
+      "steps": [
+        "78＋15＝93（张）。",
+        "她原来有93张音乐光盘。"
+      ],
+      "commonMistakes": [
+        "看到“送给”就直接用78－15。"
+      ],
+      "prerequisites": [
+        "整数加法",
+        "部分量与总量"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0966",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "90932e62d118932567be617d688586be0314cc3278f8e8b1b63ac20a807ed9c0",
+        "recordSha256": "1a1b21fe96de7b4770d00a931b7682dde435b439619394a5f9bcd78187667a69",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0966",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a199a189673487442c0725ec3fe9711acdccde91c47288afee01d92b72dac82e",
+        "sourceDraftSha256": "a199a189673487442c0725ec3fe9711acdccde91c47288afee01d92b72dac82e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "3cb831edb586edd9355426491854ace296daa92a0448379f9fc247306bc12f6c"
+      },
+      "contentSha256": "3cb831edb586edd9355426491854ace296daa92a0448379f9fc247306bc12f6c"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1003",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初末状态求变化量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-8d2a53e0d682bf77",
+      "assessmentGroup": "assessment-8d2a53e0d682bf77",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小艾在糖果店工作，每周需要卖出90条巧克力棒。周一卖了45条，周二比周一少卖16条。她还需要卖多少条才能完成本周目标？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "16",
+          "d": "1"
+        },
+        "unit": "条"
+      },
+      "intent": "由比较关系求第二天销量，再求距目标的差。",
+      "hints": [
+        "周二少16条，需先用周一销量减16。"
+      ],
+      "steps": [
+        "周二卖了45－16＝29（条）。",
+        "两天共卖45＋29＝74（条）。",
+        "还需卖90－74＝16（条）。"
+      ],
+      "commonMistakes": [
+        "把“少16条”理解成周二卖了16条",
+        "把周二销量加16。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1003",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "689158b1dd004a1fa266e64bb00fea334f732effac2844e65ead7c35d826a9df",
+        "recordSha256": "b5436aeed01b5aa161110d9dfb246e147bdaaa5c08d989cbbc412b12bfc729f8",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1003",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "255041011d0d2bfce26aaea1a030d52bf2bd3b42162668b65d10e68613b14b24",
+        "sourceDraftSha256": "255041011d0d2bfce26aaea1a030d52bf2bd3b42162668b65d10e68613b14b24",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "66934229da9ae6f014272d322ecd00a3391b8f42686fe958a55d4a83937282b1"
+      },
+      "contentSha256": "66934229da9ae6f014272d322ecd00a3391b8f42686fe958a55d4a83937282b1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1093",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初末状态求变化量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-717a18d2cea2d562",
+      "assessmentGroup": "assessment-717a18d2cea2d562",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小安有777元，小比有1111元。小比应给小安多少元，两人的钱才会一样多？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "167",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "用差额的一半求从多的一方转给少的一方的金额。",
+      "hints": [
+        "转出1元会使两人的差额缩小2元。"
+      ],
+      "steps": [
+        "两人原来相差1111－777＝334（元）。",
+        "应转给小安334÷2＝167（元）。",
+        "检查1111－167＝944，777＋167＝944，两人一样多。"
+      ],
+      "commonMistakes": [
+        "把全部差额334元转给小安，使两人金额反过来不相等。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "钱币单位"
+      ],
+      "adaptation": [
+        "美元改为人民币元，保留两人777与1111的金额和转账目标，重新核算差额一半为167元。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1093",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "fbc823349d69830f22bf91daca2a66d55c47758831e112162f057f9afc67e47c",
+        "recordSha256": "0bbbf9f8e409e154e13512dad9ff5088d14ee1c0259b49e2f686b15cff1266d0",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.aplusclick.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1093",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9551f9ebc6bdf93329c2cc0dc6cb519b2d5fad16d3273f8148a427b2bccac508",
+        "sourceDraftSha256": "9551f9ebc6bdf93329c2cc0dc6cb519b2d5fad16d3273f8148a427b2bccac508",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "bce9ff7622eda071821bd0659bc6416f963942709fd6ef4daf6026e6847deef7"
+      },
+      "contentSha256": "bce9ff7622eda071821bd0659bc6416f963942709fd6ef4daf6026e6847deef7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1279",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知变化与结果反求初始量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-fcff3fd9a0ccb5d7",
+      "assessmentGroup": "assessment-fcff3fd9a0ccb5d7",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "宠物店原有68只沙鼠，卖出了14只。原有沙鼠的只数与卖出沙鼠的只数相差多少？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "54",
+          "d": "1"
+        },
+        "unit": "只"
+      },
+      "intent": "按原题目标求原有量与卖出量的差。",
+      "hints": [
+        "要比较的两个数量是68只和14只。"
+      ],
+      "steps": [
+        "68－14＝54（只）。",
+        "这两个数量相差54只。"
+      ],
+      "commonMistakes": [
+        "把问题误读为原有量与剩余量相差多少。"
+      ],
+      "prerequisites": [
+        "整数减法",
+        "部分量与总量"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1279",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "fe26a29a28751be07b8fa65168d7d9d07b2f7487a039a52ef0bdd48f03e4c6b8",
+        "recordSha256": "a42c20ec166a0dce15fb10a03c1a52756cfd566986445a04d362169e6ac736d4",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "Created by an Annotator",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1279",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "423107457cb381a8e548bc0694862ccc671b73a6112fbe84c7831f1bd8ca6175",
+        "sourceDraftSha256": "423107457cb381a8e548bc0694862ccc671b73a6112fbe84c7831f1bd8ca6175",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "cc3e7de0b2464dcb751b3a8ed7376f09753c58e74ac7d136f2b520ab20e285d1"
+      },
+      "contentSha256": "cc3e7de0b2464dcb751b3a8ed7376f09753c58e74ac7d136f2b520ab20e285d1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1302",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "年龄跨时点与不变量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-71215c22144061ab",
+      "assessmentGroup": "assessment-71215c22144061ab",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小阿现在的年龄与7年前的年龄相加是31岁。他现在几岁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "19",
+          "d": "1"
+        },
+        "unit": "岁"
+      },
+      "intent": "用两个相差7的年龄和求现在年龄。",
+      "hints": [
+        "把7年前的年龄增加7岁，两个年龄就都变成现在的年龄。"
+      ],
+      "steps": [
+        "31＋7＝38（岁），等于现在年龄的2倍。",
+        "38÷2＝19（岁）。",
+        "检查7年前为19－7＝12岁，19＋12＝31。"
+      ],
+      "commonMistakes": [
+        "直接把31除以2，忘记两个年龄相差7岁。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "年龄随时间增加"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1302",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "09c91fc6b708c2109881c09ff1d9771acd69095db2d2be3c5191c33ebfa82713",
+        "recordSha256": "0ca9b943aa360d3506709c1e606fd342507a25bfb9f8bfba5533679832eccac6",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathocean.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1302",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "31bd171e7bcd9078978b8db4f54e1e3a2aed63602b2f60ad977b18836ccab093",
+        "sourceDraftSha256": "31bd171e7bcd9078978b8db4f54e1e3a2aed63602b2f60ad977b18836ccab093",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c5005372b38e2fe5aa7025e8a0a8f536fa73f66a488b51d5a1af55a1bb6ac2ea"
+      },
+      "contentSha256": "c5005372b38e2fe5aa7025e8a0a8f536fa73f66a488b51d5a1af55a1bb6ac2ea"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1397",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知变化与结果反求初始量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-f1b02e3a8e46f71e",
+      "assessmentGroup": "assessment-f1b02e3a8e46f71e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小苏的爸爸买来一些棒棒糖。孩子们吃了5根后，还剩7根。爸爸原来买来多少根棒棒糖？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "12",
+          "d": "1"
+        },
+        "unit": "根"
+      },
+      "intent": "把用去的量与剩余量合并，反求原有量。",
+      "hints": [
+        "原有的包括吃掉的和剩下的。"
+      ],
+      "steps": [
+        "5＋7＝12（根）。",
+        "爸爸原来买来12根棒棒糖。"
+      ],
+      "commonMistakes": [
+        "用剩下的7根减去吃掉的5根。"
+      ],
+      "prerequisites": [
+        "整数加法",
+        "部分量与总量"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1397",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e65b3066efe7d5073bd9a2d650cb6d6ac117662d94e0eca4c1190abeb96de94e",
+        "recordSha256": "db82751141c41d9507e31a53d084dcd77a4fb426b6ef13172498bd68caf82ab5",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1397",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "3bf2168431988a1e278642e4933e414459b7104bbce5604290422b82c412092f",
+        "sourceDraftSha256": "3bf2168431988a1e278642e4933e414459b7104bbce5604290422b82c412092f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "12a54db92a3dd2be0b7ee35b68522899900e24bbe00c2703ca51417ba264d42f"
+      },
+      "contentSha256": "12a54db92a3dd2be0b7ee35b68522899900e24bbe00c2703ca51417ba264d42f"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1398",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-51d7ff69443833de",
+      "assessmentGroup": "assessment-51d7ff69443833de",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小罗10年前是25岁，他现在几岁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "35",
+          "d": "1"
+        },
+        "unit": "岁"
+      },
+      "intent": "由过去年龄和经过年数求现在年龄。",
+      "hints": [
+        "从10年前到现在，年龄增加了10岁。"
+      ],
+      "steps": [
+        "25＋10＝35（岁）。",
+        "小罗现在35岁。"
+      ],
+      "commonMistakes": [
+        "再减去10岁，算出20年前的年龄。"
+      ],
+      "prerequisites": [
+        "整数加法",
+        "部分量与总量",
+        "年龄随时间增加"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1398",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e24724dc4a11838ddb9ea34d7b0b5412ff5ff0b160d2e45f65d256e4d1e32698",
+        "recordSha256": "8261cdec1326631e6ff96c1f57e94c7c12ba273a692474e24484b1fc3fc3969e",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1398",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "092fd048f2075a40538e3e83ce0ee1f5beba44bf3bd3180ca650db0ebdfd8e04",
+        "sourceDraftSha256": "092fd048f2075a40538e3e83ce0ee1f5beba44bf3bd3180ca650db0ebdfd8e04",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2d874a3478e0c6db27c88508fa7ae6e29844d56a3ba58219a40b149b62cf8d64"
+      },
+      "contentSha256": "2d874a3478e0c6db27c88508fa7ae6e29844d56a3ba58219a40b149b62cf8d64"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1399",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "年龄跨时点与不变量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-ea4a1f6439d30647",
+      "assessmentGroup": "assessment-ea4a1f6439d30647",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小艾15年后的年龄将是她现在年龄的4倍。她现在几岁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "岁"
+      },
+      "intent": "用年龄增加量对应的份数求现在年龄。",
+      "hints": [
+        "现在年龄算1份，15年后是4份，多出的3份就是15岁。"
+      ],
+      "steps": [
+        "多出的份数是4－1＝3（份）。",
+        "现在年龄是15÷3＝5（岁）。",
+        "检查15年后20岁，20＝4×5。"
+      ],
+      "commonMistakes": [
+        "把15除以4，误把增加的15岁当成未来年龄。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "年龄随时间增加"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1399",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b4094a1b55e9ee7ba3f9ee946a9a1059e97f78d781c8752d46f565a1d466a3e1",
+        "recordSha256": "7556d938130893ec5676a265e3e98203d1abf5cec585eaa6cb13f6c69754c48c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1399",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "6081ec5c4f8d80ddc07722fbbbdaf7e896388f3a5dbeb800ee41c88b9cddfdd9",
+        "sourceDraftSha256": "6081ec5c4f8d80ddc07722fbbbdaf7e896388f3a5dbeb800ee41c88b9cddfdd9",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6b3169efeae4cb7899d2a190f65cae84f41e02b9a5b9ad8c65dd4fa6249d0b69"
+      },
+      "contentSha256": "6b3169efeae4cb7899d2a190f65cae84f41e02b9a5b9ad8c65dd4fa6249d0b69"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1412",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "年龄跨时点与不变量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-131a40cd5c97ad25",
+      "assessmentGroup": "assessment-131a40cd5c97ad25",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "5年后，爸爸的年龄将是儿子的3倍；5年前，爸爸的年龄是儿子的7倍。爸爸和儿子现在各几岁？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "爸爸现在年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "40",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "儿子现在年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "10",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          }
+        ]
+      },
+      "intent": "利用年龄差不变，把两个时点的倍数关系联结起来。",
+      "hints": [
+        "5年前到5年后相隔10年。用儿子5年前的年龄作1份，比较两个时点的年龄差。"
+      ],
+      "steps": [
+        "5年前的年龄差是儿子当时年龄的7－1＝6倍。",
+        "5年后的年龄差是儿子当时年龄的3－1＝2倍，儿子比5年前多10岁。",
+        "这10岁对应2×10＝20岁，等于5年前儿子年龄的6－2＝4倍，因此儿子5年前20÷4＝5岁。",
+        "儿子现在5＋5＝10岁，爸爸现在7×5＋5＝40岁。",
+        "检查5年后45＝3×15，5年前35＝7×5。"
+      ],
+      "commonMistakes": [
+        "把5年前到5年后的间隔当成5年",
+        "只返回一个人的年龄。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "年龄差不变"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1412",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "38fb96673d3d1f2cbb54a2e0fea86613d3bb2b85c05e2772625b73e424021c2f",
+        "recordSha256": "8011454b0b91584dd4d92f79aaa07dc03775ae0ffdc9df203185f4fb451a8c95",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1412",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "d01f662bf9f6a50670c89036f6b0b0e7261c905bfa0f3fafb1b11981f29c8a3a",
+        "sourceDraftSha256": "d01f662bf9f6a50670c89036f6b0b0e7261c905bfa0f3fafb1b11981f29c8a3a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "1b4338f34217f2a6c11d3badf6dfa20423764efcb0946178d2d50fb353fb7e56"
+      },
+      "contentSha256": "1b4338f34217f2a6c11d3badf6dfa20423764efcb0946178d2d50fb353fb7e56"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1419",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "年龄跨时点与不变量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-1580284441eb56fb",
+      "assessmentGroup": "assessment-1580284441eb56fb",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "5年前，小南的年龄是小山的3倍；从现在起10年后，小南的年龄将是小山的2倍。小南和小山现在各几岁？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "小南现在年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "50",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "小山现在年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "20",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          }
+        ]
+      },
+      "intent": "用不变的年龄差联结两个时点的倍数关系。",
+      "hints": [
+        "5年前到10年后相隔15年，两人的年龄差不变。"
+      ],
+      "steps": [
+        "5年前年龄差是小山当时年龄的3－1＝2倍，10年后年龄差等于小山当时的年龄。",
+        "所以小山从5年前到10年后增加的15岁，正好等于他5年前的年龄。",
+        "小山现在15＋5＝20岁，小南现在3×15＋5＝50岁。",
+        "检查5年前45＝3×15，10年后60＝2×30。"
+      ],
+      "commonMistakes": [
+        "把“10年后”理解成从5年前再过10年",
+        "把倍数直接用于现在年龄。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "年龄差不变"
+      ],
+      "adaptation": [
+        "原英文Ten years later起算点未完全明示；本题明确采用‘从现在起10年后’，两次比较相隔15年。按此条件独立求得现在小南50岁、小山20岁，不声称另一时点解释也得同一答案。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1419",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b78f825100274448c4abc351287a62230f0868716f8dcd1e8c8045278afb0a10",
+        "recordSha256": "a062a6753461a05790d4e50b4bf8638668c1a9d37fc680c71040aaba25adf8c7",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1419",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c923410d11820fadd96b233e60d3a65edcf7cdc420e6b398cbbbc99e627ef67b",
+        "sourceDraftSha256": "042f793d5e43d5ad0af00e6a0a0f6e3c235d92b8e9035bf901b0f2b4982b2a01",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "de6ee28658c2eec7fe85c26debb125f819c4245f972696a21abe9b757c4993e3"
+      },
+      "contentSha256": "de6ee28658c2eec7fe85c26debb125f819c4245f972696a21abe9b757c4993e3"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1446",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "年龄跨时点与不变量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-35b31b0c82e06ab9",
+      "assessmentGroup": "assessment-35b31b0c82e06ab9",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "爸爸现在的年龄是儿子的3倍，12年后爸爸的年龄将是儿子的2倍。爸爸和儿子现在各几岁？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "爸爸现在年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "36",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "儿子现在年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "12",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          }
+        ]
+      },
+      "intent": "用年龄差不变求现在年龄。",
+      "hints": [
+        "现在的年龄差是儿子现在年龄的2倍，12年后的年龄差等于儿子那时的年龄。"
+      ],
+      "steps": [
+        "儿子12年后的年龄比现在多12岁，又等于现在年龄的2倍。",
+        "因此儿子现在12÷（2－1）＝12（岁）。",
+        "爸爸现在3×12＝36（岁）。",
+        "检查12年后爸爸48岁、儿子24岁，48＝2×24。"
+      ],
+      "commonMistakes": [
+        "把12年后的倍数直接用于现在年龄",
+        "遗漏其中一个人的答案。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "年龄差不变"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1446",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "0c441446361ea5c4754acdb53c707bb2e095617087997bbedb3fde46f13cc120",
+        "recordSha256": "9d477f29001d6a8f56395c4dccb50dde546f8e8dfe12a169aebeecfd1a7c4499",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1446",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "771c516c54de382f0f89d68cb40c69185bdc3709953b580264820ac2c46dbad7",
+        "sourceDraftSha256": "771c516c54de382f0f89d68cb40c69185bdc3709953b580264820ac2c46dbad7",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "e3036e2ff118fb6bc763430fed09f97ff7a3742e8f839d5305759199dcbd2ed7"
+      },
+      "contentSha256": "e3036e2ff118fb6bc763430fed09f97ff7a3742e8f839d5305759199dcbd2ed7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1537",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初末状态求变化量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-deaadbcf451b04b3",
+      "assessmentGroup": "assessment-deaadbcf451b04b3",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "九个朋友在嘉年华买了865张票，想把所有票平均分给9人。他们最少还需买多少张票？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "8",
+          "d": "1"
+        },
+        "unit": "张"
+      },
+      "intent": "把总量补到可平均分的倍数。",
+      "hints": [
+        "先看865除以9余几张，增加后要没有余数。"
+      ],
+      "steps": [
+        "865÷9＝96……1，每人96张后多1张。",
+        "要让每人再多1张，还需9－1＝8（张）。",
+        "补足后873÷9＝97，每人97张。"
+      ],
+      "commonMistakes": [
+        "把余数1张当成还需要买的数量。"
+      ],
+      "prerequisites": [
+        "有余数的除法",
+        "按题意解释余数"
+      ],
+      "adaptation": [
+        "明确最少补足并分完所有票，保留源题865张平均分给9人的约束。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1537",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e0c81d87c16fa09dbbc23c5d7a83e3ced08abb6a20501d11939a8f341c8af9dc",
+        "recordSha256": "30fa4aaa1e41e24d94a6a1e08e84c8e191027dedccc43ff025ef05fe0e782253",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1537",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "23e9cd28ae3403ab7e3ba952b8a9dfafb845653ac13d2d360cc1ec25c04875b5",
+        "sourceDraftSha256": "23e9cd28ae3403ab7e3ba952b8a9dfafb845653ac13d2d360cc1ec25c04875b5",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "fad38807459944697ba288ccfac550edb642b50b22d358841fcdb20a4eda288b"
+      },
+      "contentSha256": "fad38807459944697ba288ccfac550edb642b50b22d358841fcdb20a4eda288b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1548",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初末状态求变化量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-aa5e9508d3706691",
+      "assessmentGroup": "assessment-aa5e9508d3706691",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小比有650颗糖，想把所有糖平均装进3个袋子。他最少还需要多少颗糖？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "1",
+          "d": "1"
+        },
+        "unit": "颗"
+      },
+      "intent": "根据余数补足平均分所需的最小数量。",
+      "hints": [
+        "650不是3的倍数，向上补到最近的3的倍数。"
+      ],
+      "steps": [
+        "650÷3＝216……2。",
+        "每袋再多放1颗需3颗，已有2颗，还需3－2＝1（颗）。",
+        "651÷3＝217，正好每袋217颗。"
+      ],
+      "commonMistakes": [
+        "把余数2颗当成需增加的数量。"
+      ],
+      "prerequisites": [
+        "有余数的除法",
+        "按题意解释余数"
+      ],
+      "adaptation": [
+        "补明“所有糖”和“最少增加”，使补足而非舍弃余数的目标明确。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1548",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "229b04490babb7e15cf1c950afc8a9e112fada273de0da4ea57958cf438dd7bc",
+        "recordSha256": "b100245e173222397cc7d66355218d5bb00403fbe8c0f0abbd753e06b3e43916",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1548",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "3993968408408d777c544ce3451ba4c2a228fd846f8929858bed2c5982fb65c2",
+        "sourceDraftSha256": "3993968408408d777c544ce3451ba4c2a228fd846f8929858bed2c5982fb65c2",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "17d1e387a7734fa33406edc2b35b6362573200284cc6992d98f894091d777243"
+      },
+      "contentSha256": "17d1e387a7734fa33406edc2b35b6362573200284cc6992d98f894091d777243"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1853",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "支出后的余额",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2d8d1f6e38cb99e8",
+      "assessmentGroup": "assessment-2d8d1f6e38cb99e8",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小杰原有18元，花6元买了新电子游戏。现在还剩多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "12",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "从原有金额中减去支出，求余额。",
+      "hints": [
+        "花掉的钱使余额减少。"
+      ],
+      "steps": [
+        "18－6＝12（元）。",
+        "现在还剩12元。"
+      ],
+      "commonMistakes": [
+        "把花出的6元加到原有金额中。"
+      ],
+      "prerequisites": [
+        "整数减法",
+        "部分量与总量",
+        "钱币单位",
+        "整数加减法"
+      ],
+      "adaptation": [
+        "美元改为人民币元，数字和减法关系不变，重新核算18－6＝12元。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1853",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "60418812c69a0fef3c27f34ba4b3b6f5bdf8e39bb86376dc1da47191c786d264",
+        "recordSha256": "50054902deb95b23403542fe0a3f3bcd2c1a03438e24c7e7d2151367093f021b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1853",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "953b369c3d0f4f263b59a5068a1ec9e85f4dced9373fee24f17b1ccfe0a9c3af",
+        "sourceDraftSha256": "953b369c3d0f4f263b59a5068a1ec9e85f4dced9373fee24f17b1ccfe0a9c3af",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "197163225b56bb31b750b085c9cb38700cdcf533964a370e9a1510b91e0454fb"
+      },
+      "localCategoryOverride": {
+        "category": "A02",
+        "reason": "已知原有金额与一次支出求余额，属于状态变化。",
+        "subcategory": "支出后的余额"
+      },
+      "contentSha256": "197163225b56bb31b750b085c9cb38700cdcf533964a370e9a1510b91e0454fb"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1896",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-0db23865679fc28d",
+      "assessmentGroup": "assessment-0db23865679fc28d",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "货架上原有98个洋葱，卖出了65个。现在还剩多少个洋葱？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "33",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "从原有量中减去卖出的量。",
+      "hints": [
+        "卖出的洋葱已经不在货架上。"
+      ],
+      "steps": [
+        "98－65＝33（个）。",
+        "现在还剩33个洋葱。"
+      ],
+      "commonMistakes": [
+        "把卖出的数量加到原有数量上。"
+      ],
+      "prerequisites": [
+        "整数减法",
+        "部分量与总量"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1896",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "75c0344aad5bda64f76924c473e81820d1296c3ea2243ef1870350e8d1c5eb0c",
+        "recordSha256": "fc04546c7a32d2c975f993e71bf8d5cd91f0b4226521d96b5e1d7bf0e2a80997",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1896",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "de7b6e762037cbaa0c834e3cbbaeb8b7bb207b9785027d4e8ac008ebadf659ff",
+        "sourceDraftSha256": "de7b6e762037cbaa0c834e3cbbaeb8b7bb207b9785027d4e8ac008ebadf659ff",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "a3a692fbba04cebd552f6807ede5fcfcf2b8f6d55ab17d09043717c0de096540"
+      },
+      "contentSha256": "a3a692fbba04cebd552f6807ede5fcfcf2b8f6d55ab17d09043717c0de096540"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1994",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-086d576e537d2b7e",
+      "assessmentGroup": "assessment-086d576e537d2b7e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "宠物店原有13只暹罗猫和5只其他家猫，促销时卖出了10只。现在还剩多少只猫？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "8",
+          "d": "1"
+        },
+        "unit": "只"
+      },
+      "intent": "合并两类猫，再减去卖出的总数。",
+      "hints": [
+        "先求宠物店原有的猫的总数。"
+      ],
+      "steps": [
+        "原有13＋5＝18（只）。",
+        "卖出后剩18－10＝8（只）。"
+      ],
+      "commonMistakes": [
+        "只用13－10，漏算另一类猫。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "原题把Siamese cats与house cats列为两组；中文补为‘暹罗猫和其他家猫’，明确两组不重叠，原数13、5、10不变。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1994",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "c343fbb2199234d7d3191ff9bcc8b7d15ace1b7349f1b70c6ba6bd9e7b5abaf3",
+        "recordSha256": "d166e34a20fdbe97828bb31852789dd8566273ae45db465bc13683c9e7f9124c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1994",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "deac220da08d4cc24a4f3db11a9690d5f6f5b261c84f4f43db6545a24121fa48",
+        "sourceDraftSha256": "6d6240c1c2de36a57e95f37d378113c54e6227ea2a37f17c57ceb0e7163dc802",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "4620a627696303ba8852269c253e28ddc33f7e2bea25bf4a902c0a0b5fefca7a"
+      },
+      "contentSha256": "4620a627696303ba8852269c253e28ddc33f7e2bea25bf4a902c0a0b5fefca7a"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1998",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-bf71887a4fd79413",
+      "assessmentGroup": "assessment-bf71887a4fd79413",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小卓买了两本涂色书，每本有44幅图。一周后，她已经给其中20幅涂了颜色。还有多少幅没有涂色？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "68",
+          "d": "1"
+        },
+        "unit": "幅"
+      },
+      "intent": "求两本书的图画总数，再减去已完成数量。",
+      "hints": [
+        "两本各44幅，共有两份44幅。"
+      ],
+      "steps": [
+        "两本共有44＋44＝88（幅）。",
+        "未涂色的有88－20＝68（幅）。"
+      ],
+      "commonMistakes": [
+        "只计算一本书剩下的图画",
+        "把20幅按每本计算两次。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1998",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "76e3816ec62ae4fc0b5210f70a37406e624161a6e421d9da8828779165cc0be8",
+        "recordSha256": "5e1d24e7461b3a1bc9572a6f6e28d273ad990b0d48ef8caf9abeb67a44660999",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1998",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "8a32068e354b7aee7f6a7018475cdf912236470227f6b77db6dc4ee09e35b0bc",
+        "sourceDraftSha256": "8a32068e354b7aee7f6a7018475cdf912236470227f6b77db6dc4ee09e35b0bc",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "a40c7cf5810af5f768655b350135f562408c4dcbc85df33d9b7dd26401a12a18"
+      },
+      "contentSha256": "a40c7cf5810af5f768655b350135f562408c4dcbc85df33d9b7dd26401a12a18"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-2174",
+      "collection": "foundation",
+      "category": "A02",
+      "subcategory": "已知初始量与变化求最终量",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-03fe84a4f247d405",
+      "assessmentGroup": "assessment-03fe84a4f247d405",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小亚原有33本书，卖掉11本后，用赚到的钱买了23本新书。现在他有多少本书？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "45",
+          "d": "1"
+        },
+        "unit": "本"
+      },
+      "intent": "根据卖出和买入求最终数量。",
+      "hints": [
+        "卖出使书减少，买入使书增加。"
+      ],
+      "steps": [
+        "卖掉后有33－11＝22（本）。",
+        "买入后有22＋23＝45（本）。"
+      ],
+      "commonMistakes": [
+        "把卖出的11本也加到总数里。"
+      ],
+      "prerequisites": [
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-2174",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "32ae218b6f888f91d7960efdc8edc49a693ced48c3d9ab6db28746bd260362d8",
+        "recordSha256": "540c5a4311d7caedcf3a44786d53c60ef03b5eb2b8d4059a524e679732f4e27d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.commoncoresheets.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-2174",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "01d31322ed5afe20797f56cfc7336745a3d0b2e029fd731d01f9504ef1d96705",
+        "sourceDraftSha256": "01d31322ed5afe20797f56cfc7336745a3d0b2e029fd731d01f9504ef1d96705",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "bbf036162ae40220f6fe01360d037e8d0a6655acb04fda8cf8fe997d4cc09665"
+      },
+      "contentSha256": "bbf036162ae40220f6fe01360d037e8d0a6655acb04fda8cf8fe997d4cc09665"
+    }
+  ]
+}

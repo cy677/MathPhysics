@@ -1,0 +1,1848 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "foundation-A05",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0084",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-399920d5ee6facae",
+      "assessmentGroup": "assessment-399920d5ee6facae",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小伊用同样大小的小方块排成一排来量头发，原来头发的长度相当于18个小方块的边长。接发后，长度变成原来的2倍。现在的长度相当于多少个同样小方块的边长？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "36",
+          "d": "1"
+        },
+        "unit": "个小方块边长"
+      },
+      "intent": "在相同非标准长度单位下求2倍长度。",
+      "hints": [
+        "长度变成2倍，就是两份原来的长度。"
+      ],
+      "steps": [
+        "18×2＝36（个小方块边长）。",
+        "现在的长度相当于36个同样小方块的边长。"
+      ],
+      "commonMistakes": [
+        "把方块数当成头发根数",
+        "误以为加2个方块。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "非标准长度单位"
+      ],
+      "adaptation": [
+        "原文以“cubes”表示长度，补明同样小方块排成一排、每块边长为测量单位，保留18和长度翻倍，避免把长度误读为体积。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0084",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "11df7101e077e6eae4b8219288f03f5e8c977e328dc35e7fe035925dc36ccf32",
+        "recordSha256": "c2ba0244e206948a025360b08fe2df9d53a0a80fb7ced9f66140d6cfe70ee6aa",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0084",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "28d7894a0be0bbb6935ee3061475641ba58d7e3845858b7a88456d12a0a50679",
+        "sourceDraftSha256": "28d7894a0be0bbb6935ee3061475641ba58d7e3845858b7a88456d12a0a50679",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9e4c84cbfab857bc3adcd9ef63780a718499141571257ad1cede38be3ff23598"
+      },
+      "contentSha256": "9e4c84cbfab857bc3adcd9ef63780a718499141571257ad1cede38be3ff23598"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0174",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-8e933918ea054547",
+      "assessmentGroup": "assessment-8e933918ea054547",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小杰的蜡笔数是小乔的2倍，小乔有12支。小杰有多少支蜡笔？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "24",
+          "d": "1"
+        },
+        "unit": "支"
+      },
+      "intent": "用基准量和倍数求比较量。",
+      "hints": [
+        "小杰有两份12支。"
+      ],
+      "steps": [
+        "12×2＝24（支）。",
+        "小杰有24支蜡笔。"
+      ],
+      "commonMistakes": [
+        "用12＋2",
+        "把倍数当成相差数量。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0174",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "fc49a78ddb5d4e1959bfcdaf92b6c1461aa26a655bb51c594e81924fba280ced",
+        "recordSha256": "9d785f870c8ba7654806c2a09a4a1edb2412e6dcd2b2ce73d8a39ee66bc19b24",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0174",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "6186ddef4ae5d726b5ba816fc9a1b2090df584cd55ca67b08ea17a79513549d7",
+        "sourceDraftSha256": "6186ddef4ae5d726b5ba816fc9a1b2090df584cd55ca67b08ea17a79513549d7",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "c9579c3f753983d0874900a35570c9aa2f1b0d6a1efd78acf61586c4d50951c4"
+      },
+      "contentSha256": "c9579c3f753983d0874900a35570c9aa2f1b0d6a1efd78acf61586c4d50951c4"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0396",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2c7b19a34f1ab58b",
+      "assessmentGroup": "assessment-2c7b19a34f1ab58b",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小迈和小汤喜欢收藏机器人，每月会比较藏品。小迈有8个动物机器人，小汤的数量是小迈的2倍。小汤有多少个动物机器人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "16",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "由一个人的数量和倍数求另一人的数量。",
+      "hints": [
+        "2倍表示两份8个。"
+      ],
+      "steps": [
+        "8×2＝16（个）。",
+        "小汤有16个动物机器人。"
+      ],
+      "commonMistakes": [
+        "把两人的数量相加后作答",
+        "将2倍理解为多2个。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0396",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "5feabd1dba2b2166d5b09c0907490b2ebfed79895730d4ed7a369d6c89b954b8",
+        "recordSha256": "bdb9dbbff5e3da49014dbb43aa11db72c0467c9fb7ae47105a9dc42082241968",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0396",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "fd9f89667ec6cc7684d4813e12aadccd04a4097957d1d857897fd9167ebc5daf",
+        "sourceDraftSha256": "fd9f89667ec6cc7684d4813e12aadccd04a4097957d1d857897fd9167ebc5daf",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2feefb5a0aad32eb78b3e3aabf529fd46d02442bd9e8a7c0a5ce4de3961e6c55"
+      },
+      "contentSha256": "2feefb5a0aad32eb78b3e3aabf529fd46d02442bd9e8a7c0a5ce4de3961e6c55"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0398",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "和倍或差倍分配",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-4cfcdfcc679da155",
+      "assessmentGroup": "assessment-4cfcdfcc679da155",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小汤和小迈比较汽车机器人藏品。两人合计有9个，小鲍的汽车机器人数量是他们合计数量的9倍。小鲍有多少个汽车机器人？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "81",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "以两人合计量为基准求倍数数量。",
+      "hints": [
+        "基准是两人合计的9个，不是每人9个。"
+      ],
+      "steps": [
+        "9×9＝81（个）。",
+        "小鲍有81个汽车机器人。"
+      ],
+      "commonMistakes": [
+        "将“两人有9个”理解成各9个",
+        "把9倍理解为再加9倍。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法"
+      ],
+      "adaptation": [
+        "原文“9 times more”易与“多9倍”混淆，按源式9×9明确为“数量是合计的9倍”，并明确两人9个为合计。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0398",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "5e4e7877a5ae82545c8b4e1be453b9c0a98a7846ff430837707b4ff5509320e7",
+        "recordSha256": "c5b3263bef231b535475c204ff19bd71ed259b1749881da39b4bcf68a7b05eee",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0398",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "c9cac22cfb674fb2821e9b94542a4463fe28cd8e07f5d794e8b4e58ef8229dc4",
+        "sourceDraftSha256": "c9cac22cfb674fb2821e9b94542a4463fe28cd8e07f5d794e8b4e58ef8229dc4",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "92bba2872fbd60ccfa6307bbd130749f91c7930ba4ee66f9c3e70b767de49384"
+      },
+      "contentSha256": "92bba2872fbd60ccfa6307bbd130749f91c7930ba4ee66f9c3e70b767de49384"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0455",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "和倍或差倍分配",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-bf9cadc810972b30",
+      "assessmentGroup": "assessment-bf9cadc810972b30",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "adapt",
+      "prompt": "快乐乐园的面积是超级欢乐乐园的2倍。超级欢乐乐园面积为4897平方米，快乐乐园面积是多少平方米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "9794",
+          "d": "1"
+        },
+        "unit": "平方米"
+      },
+      "intent": "由面积基准量和倍数求比较面积。",
+      "hints": [
+        "所求是快乐乐园面积，不是两个乐园合计。"
+      ],
+      "steps": [
+        "4897×2＝9794（平方米）。",
+        "快乐乐园面积为9794平方米。"
+      ],
+      "commonMistakes": [
+        "在9794上又加4897，回答两园合计面积。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "面积单位"
+      ],
+      "adaptation": [
+        "将4897平方英尺重设为4897平方米，属于公制教学尺度改编而非精确换算",
+        "重新核算快乐乐园面积4897×2＝9794平方米。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0455",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "d954567f4124e63be34db571fbcf1e8ac31cefaea707252d23ab5fbe68b774ae",
+        "recordSha256": "7730dc9e024b137d2338a745bf0ca30f23ff3677fa7a7651b70457547062a0a2",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0455",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7f7be15d6ffe68d47140cb2262d0d009951d8dfb70b3ac84ff2a2383229125e4",
+        "sourceDraftSha256": "7f7be15d6ffe68d47140cb2262d0d009951d8dfb70b3ac84ff2a2383229125e4",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "b6393e24c8de00ec48fe7ef492ebd7246af039916831c2039e108f7770ec51ba"
+      },
+      "contentSha256": "b6393e24c8de00ec48fe7ef492ebd7246af039916831c2039e108f7770ec51ba"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0546",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-8cd36c74d2141ab3",
+      "assessmentGroup": "assessment-8cd36c74d2141ab3",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小莎摘了45个苹果，她的弟弟摘了9个。小莎摘的苹果数是弟弟的多少倍？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "1"
+        },
+        "unit": "倍"
+      },
+      "intent": "用比较量除以基准量，求倍数。",
+      "hints": [
+        "求45里面有几个9。"
+      ],
+      "steps": [
+        "45÷9＝5。",
+        "小莎摘的苹果数是弟弟的5倍。"
+      ],
+      "commonMistakes": [
+        "用45－9求相差量",
+        "将倍数写成苹果个数。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0546",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "8df2e08f31fd942661ba9a32dc2a81e1cc11ba7105078250a52e4a2570e99638",
+        "recordSha256": "87fde4716ea11fc544ee301cc1f4caede821264a56fc683f2c2f96b60f48bd27",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0546",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "37c49995be773766c915e20e5f64abc2c22c47cc4d078396c235bbed48d93a09",
+        "sourceDraftSha256": "37c49995be773766c915e20e5f64abc2c22c47cc4d078396c235bbed48d93a09",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "25e29046abba90e70cd9365c22ac0fc41c11fd67ab17ee502c638b827e376acb"
+      },
+      "contentSha256": "25e29046abba90e70cd9365c22ac0fc41c11fd67ab17ee502c638b827e376acb"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0613",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "C1",
+      "locale": "zh-CN",
+      "storyFamily": "story-a571de9df2de61fa",
+      "assessmentGroup": "assessment-a571de9df2de61fa",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "星期五有1250人到动物园参观，星期六的人数是星期五的3倍。星期六有多少人参观？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "3750",
+          "d": "1"
+        },
+        "unit": "人"
+      },
+      "intent": "根据基准人数和倍数求另一天人数。",
+      "hints": [
+        "星期六人数是3份1250人。"
+      ],
+      "steps": [
+        "1250×3＝3750（人）。",
+        "星期六有3750人参观。"
+      ],
+      "commonMistakes": [
+        "计算两天合计1250＋3750后作答",
+        "将3倍误作加3。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0613",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b178b0b1cae808c26a78989894a5fa3b39e3d5212b80f50e71f7d4e9fffe3aa8",
+        "recordSha256": "5470857dddd4ad013dc887f5a67775c9e7799d0d49ac0e6b67b7d5d70b6c0803",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0613",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b6b608eb1b05a5ca4210311ce2c2677be8ba16d5e6ae9c3bbf68e220b19995a7",
+        "sourceDraftSha256": "b6b608eb1b05a5ca4210311ce2c2677be8ba16d5e6ae9c3bbf68e220b19995a7",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6a7ddc4da7824a9dcf8eefdc069cf1e33e2f2589897a8ecd657dbade25a91596"
+      },
+      "contentSha256": "6a7ddc4da7824a9dcf8eefdc069cf1e33e2f2589897a8ecd657dbade25a91596"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0651",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-b1bda7dd9b7c79ae",
+      "assessmentGroup": "assessment-b1bda7dd9b7c79ae",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小琪有14个蓝色信封，黄色比蓝色少6个，绿色是黄色的3倍。她一共有多少个信封？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "46",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "沿差额与倍数关系求各类数量，再求总数。",
+      "hints": [
+        "先求黄色，绿色以黄色为基准。"
+      ],
+      "steps": [
+        "黄色有14－6＝8（个）。",
+        "绿色有8×3＝24（个）。",
+        "共有14＋8＋24＝46（个）。"
+      ],
+      "commonMistakes": [
+        "将绿色按蓝色的3倍算",
+        "漏掉黄色数量。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0651",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "53969ec0cff3aafa022654f4edf5c4a4a4d7953ed348b603cf0b5630dd8dbd59",
+        "recordSha256": "d86e7a095fcb5a01c4280f2c7c471743f5a68f7798e6a2e4c34edeb2312758c3",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://exam.ciwong.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0651",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "ae39434f619b49d55627deb31068def7306e2dc12999e4ff45da403466306da5",
+        "sourceDraftSha256": "ae39434f619b49d55627deb31068def7306e2dc12999e4ff45da403466306da5",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "330485d6d6528e59d96557b9b026bc926576b24b24981fdc1f2cb9e3726c0746"
+      },
+      "contentSha256": "330485d6d6528e59d96557b9b026bc926576b24b24981fdc1f2cb9e3726c0746"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0660",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-ceba46ccdfd85bb4",
+      "assessmentGroup": "assessment-ceba46ccdfd85bb4",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小本教室里有红、黄、蓝三种椅子。红椅子3把，黄椅子数是红椅子的4倍，蓝椅子比黄椅子少2把。一共有多少把椅子？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "25",
+          "d": "1"
+        },
+        "unit": "把"
+      },
+      "intent": "由倍数和相差关系依次求各部分，再合并。",
+      "hints": [
+        "先求黄色，再求蓝色，最后加上红色。"
+      ],
+      "steps": [
+        "黄色有3×4＝12（把）。",
+        "蓝色有12－2＝10（把）。",
+        "一共有3＋12＋10＝25（把）。"
+      ],
+      "commonMistakes": [
+        "用红椅子数量减2来求蓝椅子",
+        "漏掉红椅子。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0660",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e4466b38dc66fa2f0e9f1071544af2bdb6db96bf0fbd8d6f4480df60cb82a7da",
+        "recordSha256": "8ee232f800989d62e51174a79d62e6607624fead187f140198674e9be1d7384f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://exam.ciwong.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0660",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "902377ade37c58dc80834086df57e3358b3c49685112e0fc5b31c0d22865e8b3",
+        "sourceDraftSha256": "902377ade37c58dc80834086df57e3358b3c49685112e0fc5b31c0d22865e8b3",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "253427c58ad9267d07a7ab77a109fb8b30e05b606a0c9c973083afe1d76bb3ba"
+      },
+      "contentSha256": "253427c58ad9267d07a7ab77a109fb8b30e05b606a0c9c973083afe1d76bb3ba"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0834",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "和倍或差倍分配",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-90ca7e60f2563f6f",
+      "assessmentGroup": "assessment-90ca7e60f2563f6f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "5张相同的单人床共重50千克。2张这样的单人床和4张相同的双人床共重100千克。一张双人床比一张单人床重多少千克？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "10",
+          "d": "1"
+        },
+        "unit": "千克"
+      },
+      "intent": "分别求两类每件重量，再求重量差。",
+      "hints": [
+        "先算一张单人床的重量，才能从100千克中减去2张的重量。"
+      ],
+      "steps": [
+        "单人床每张50÷5＝10（千克）。",
+        "4张双人床重100－2×10＝80（千克），每张80÷4＝20（千克）。",
+        "一张双人床比一张单人床重20－10＝10（千克）。"
+      ],
+      "commonMistakes": [
+        "把100千克直接除以4，漏去单人床重量",
+        "回答双人床重量20千克而非重量差。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "补明同类床重量相同，保留原题按相同单件重量计算的条件。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0834",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "3a00f07b44dde1c340227a12747a6a0f0d45a8ddfe789c8eb0ac6fd612d1dc32",
+        "recordSha256": "95f39050936d45cfe884e81c9980524856abd18020ed9b4e1cfcf6859f6a5ad9",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ck12.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0834",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "7ef564fd49ddd587cec13abe6dd59be2d5fbaa659ed4eea17dbeb13dddc55f4d",
+        "sourceDraftSha256": "7ef564fd49ddd587cec13abe6dd59be2d5fbaa659ed4eea17dbeb13dddc55f4d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "4c644a9d5bc3b703afbd703461600f2281d09eb015f0132f9d26aa6e79767565"
+      },
+      "contentSha256": "4c644a9d5bc3b703afbd703461600f2281d09eb015f0132f9d26aa6e79767565"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0878",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-92c0a682abd1cc54",
+      "assessmentGroup": "assessment-92c0a682abd1cc54",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小乔有一台数字机器，输入一个数后，先把它乘2，再加3。比如输入25，会输出53。现在输入16，会输出哪个数？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "35",
+          "d": "1"
+        },
+        "unit": ""
+      },
+      "intent": "根据给定运算规则求输出值。",
+      "hints": [
+        "按顺序先乘2，再加3。"
+      ],
+      "steps": [
+        "16×2＝32。",
+        "32＋3＝35，所以输出35。"
+      ],
+      "commonMistakes": [
+        "先加3再乘2，得到38",
+        "把示例输入25也计入运算。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "运算顺序"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0878",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "8cac356853ac9a905b652dd7fae440b472299c893a27496e2c9ecafa7ccf12b7",
+        "recordSha256": "7d4422dc3cebaa2ff6c630af1c6a0bc8f6619fedb6359501e85f72941c61ba05",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0878",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f089d6a218dbd39c9e3fc6ac5e088b1cd738de56dffeba77891797887cac610d",
+        "sourceDraftSha256": "f089d6a218dbd39c9e3fc6ac5e088b1cd738de56dffeba77891797887cac610d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "fbb9d5ceba5df4708d81e7746bb995e568ad0aed6c1bbca639d1023f0c9f8b6b"
+      },
+      "contentSha256": "fbb9d5ceba5df4708d81e7746bb995e568ad0aed6c1bbca639d1023f0c9f8b6b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0879",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-4763473e4f86b5e4",
+      "assessmentGroup": "assessment-4763473e4f86b5e4",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小乔的数字机器把输入的数先乘2，再加3。这次输出27，她输入的是哪个数？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "12",
+          "d": "1"
+        },
+        "unit": ""
+      },
+      "intent": "逆向运算，由输出反求输入。",
+      "hints": [
+        "倒过来，先减掉3，再除以2。"
+      ],
+      "steps": [
+        "27－3＝24。",
+        "24÷2＝12，所以输入12。",
+        "检查12×2＋3＝27。"
+      ],
+      "commonMistakes": [
+        "按正向规则把27乘2再加3",
+        "先除以2再减3。"
+      ],
+      "prerequisites": [
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "逆运算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0879",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "d818b5fe427882bbc98e448da78a939bcf2a1acc2e33b9638ef24126ec71b165",
+        "recordSha256": "0203003bb8a62f00055225897a7231f19ec0f1d15634ff3c08354e6ab648b290",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0879",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "4e33ecd9effddb44fe55196c84ac5ce2f754e12427a20d683ae19da95248dc2a",
+        "sourceDraftSha256": "4e33ecd9effddb44fe55196c84ac5ce2f754e12427a20d683ae19da95248dc2a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "50dac33bf074be84587251e40492097bb029fb204ec1f38cd8a105070927ccd7"
+      },
+      "contentSha256": "50dac33bf074be84587251e40492097bb029fb204ec1f38cd8a105070927ccd7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0914",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-b26a62d88725b687",
+      "assessmentGroup": "assessment-b26a62d88725b687",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小杰买了一本游乐票，里面只有红、蓝、黄三种票。红票有8张，蓝票是红票的2倍，黄票有6张，黄票已经全部用掉。他原来一共买了多少张票？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "30",
+          "d": "1"
+        },
+        "unit": "张"
+      },
+      "intent": "由倍数求一个部分，再合并原有全部部分。",
+      "hints": [
+        "求的是原来买的总数，用掉的6张黄票仍要计入。"
+      ],
+      "steps": [
+        "蓝票有8×2＝16（张）。",
+        "原来共有8＋16＋6＝30（张）。"
+      ],
+      "commonMistakes": [
+        "把已用掉的黄票减去，回答现在剩余的票数。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "明确票本只有三种颜色，所求为购入时的总数，保留已使用6张黄票这一原情境。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0914",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "3832d860eaf5b6afaf90976e1a1741da3436eb2cf3f49d813518c115b674e94a",
+        "recordSha256": "8221efcdd8d19042ffc3108bf1f1970ec6a78b1b79080e63b0f3645aeee3021b",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0914",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "f501ceeceef884344598424434eab520cf8355adcd7b03724d6c38ea9a435171",
+        "sourceDraftSha256": "f501ceeceef884344598424434eab520cf8355adcd7b03724d6c38ea9a435171",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6011265a4a00abf6a9c21c491d5a37243c8da49eda1316998fe8162d8f4d33f7"
+      },
+      "contentSha256": "6011265a4a00abf6a9c21c491d5a37243c8da49eda1316998fe8162d8f4d33f7"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1294",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-42555968636a410f",
+      "assessmentGroup": "assessment-42555968636a410f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小米的爸爸46岁，比儿子年龄的3倍多4岁。儿子现在几岁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "14",
+          "d": "1"
+        },
+        "unit": "岁"
+      },
+      "intent": "扣除超出的数量，再除以倍数求基准量。",
+      "hints": [
+        "先减去多出的4岁，剩下的是儿子年龄的3倍。"
+      ],
+      "steps": [
+        "46－4＝42（岁）。",
+        "42÷3＝14（岁），儿子现在14岁。"
+      ],
+      "commonMistakes": [
+        "先将46除以3再减4",
+        "将4岁加到46岁上。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1294",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "609c25e07837668a468d34f1da6e1bc361d675690bcc3f2691b9c8322153288e",
+        "recordSha256": "8773acfb3d2dafe1ef70aa1b40577762550d576b8601812b4040246563041870",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathocean.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1294",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "05e025125fcc320b31cda1acd8753e262fc143255c73433e17f73e5eb8f1b63a",
+        "sourceDraftSha256": "05e025125fcc320b31cda1acd8753e262fc143255c73433e17f73e5eb8f1b63a",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2dcb680ee4bd124a276af1b47bbd3e76a5754aa24052960ba24a5ba076064634"
+      },
+      "contentSha256": "2dcb680ee4bd124a276af1b47bbd3e76a5754aa24052960ba24a5ba076064634"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1395",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-7d1927627e584b33",
+      "assessmentGroup": "assessment-7d1927627e584b33",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小维的妈妈44岁，比小维现在年龄的3倍多5岁。小维现在几岁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "13",
+          "d": "1"
+        },
+        "unit": "岁"
+      },
+      "intent": "用已知比较量反求基准年龄。",
+      "hints": [
+        "44减5得到小维年龄的3倍。"
+      ],
+      "steps": [
+        "44－5＝39（岁）。",
+        "39÷3＝13（岁），小维现在13岁。"
+      ],
+      "commonMistakes": [
+        "把44＋5后除以3",
+        "直接用44÷3。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1395",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b23cc917d9b07580ac3d47c5c66d97487ca320604f0abac110b7ff5967770ca8",
+        "recordSha256": "ff0f1ef4211a994563e7839c80bd9dcc63ef88ea2706054bafbc84d0357a5ead",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1395",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a3ae8a12cbb338025ea30d52cccbbe193a929bdc1421489ef6095d38224d9385",
+        "sourceDraftSha256": "a3ae8a12cbb338025ea30d52cccbbe193a929bdc1421489ef6095d38224d9385",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "3d21333c5d49d1c18bff4298935340a9c78b6f5f366679dee3008270c49c7796"
+      },
+      "contentSha256": "3d21333c5d49d1c18bff4298935340a9c78b6f5f366679dee3008270c49c7796"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1396",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-2ca7acdaf45d5843",
+      "assessmentGroup": "assessment-2ca7acdaf45d5843",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小沙有42本书，比小普书的数量的6倍还多6本。小普有多少本书？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6",
+          "d": "1"
+        },
+        "unit": "本"
+      },
+      "intent": "扣除额外量后，根据倍数求基准数量。",
+      "hints": [
+        "先从42本中减去额外多的6本。"
+      ],
+      "steps": [
+        "42－6＝36（本），是小普数量的6倍。",
+        "36÷6＝6（本），小普有6本。"
+      ],
+      "commonMistakes": [
+        "把两个6当成同一个条件，漏掉先减再除的一步。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1396",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "12f86c8c951bc52d31ea10b4c103b52e4093d207208761550bd3efc37eaa3393",
+        "recordSha256": "b379079d14c2c198a09905ccb64b8eb5758ade0bfc73c6b87081249fb1b86541",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1396",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "ef892a4a200f8799e6714509348036679df252ffc85a0a3c1db900934957b834",
+        "sourceDraftSha256": "ef892a4a200f8799e6714509348036679df252ffc85a0a3c1db900934957b834",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "1ccc479f4b91cc18d2ca8da80b90eb428ac802b083d3f4687fb0005a4adc21bc"
+      },
+      "contentSha256": "1ccc479f4b91cc18d2ca8da80b90eb428ac802b083d3f4687fb0005a4adc21bc"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1409",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-3371392bed86932d",
+      "assessmentGroup": "assessment-3371392bed86932d",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小安比小贝大2岁。小安的爸爸年龄是小安的2倍，小贝的年龄是妹妹小希的2倍。爸爸比小希大40岁。小安和小贝现在各几岁？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "小安现在年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "26",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "小贝现在年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "24",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          }
+        ]
+      },
+      "intent": "把多个倍数和差额关系统一到一个基准年龄。",
+      "hints": [
+        "把小希年龄当1份，小贝为2份，小安为2份加2岁。"
+      ],
+      "steps": [
+        "爸爸年龄是2×（2份＋2岁），即4份加4岁。",
+        "爸爸比小希大40岁，因此3份加4岁等于40岁，3份是40－4＝36岁。",
+        "小希36÷3＝12岁，小贝12×2＝24岁，小安24＋2＝26岁。",
+        "检查爸爸52岁，比小希12岁大40岁。"
+      ],
+      "commonMistakes": [
+        "把爸爸年龄当成小贝的2倍",
+        "把大2岁放在乘2之外，漏乘一次2。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1409",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "1da0c195067d486eb229a82b2f02afd0ff13e5f727afdf49d8f4a7609fd6d6ac",
+        "recordSha256": "63891d8189a763e3243b64b652c49dad6d4703ac20ae4ade6763ccbe0d12318f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1409",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "98095af4163d36a6b341a022cb185200ac114b195f0e80bb716114dd7b3208dd",
+        "sourceDraftSha256": "98095af4163d36a6b341a022cb185200ac114b195f0e80bb716114dd7b3208dd",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "304b8247ba04841df0756aa15bcf16bd5bf845e543a6012d1449a7204571326d"
+      },
+      "contentSha256": "304b8247ba04841df0756aa15bcf16bd5bf845e543a6012d1449a7204571326d"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1415",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "和倍或差倍分配",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-12491716ebeaa450",
+      "assessmentGroup": "assessment-12491716ebeaa450",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "把儿子年龄的2倍加上爸爸年龄，合计70岁；把爸爸年龄的2倍加上儿子年龄，合计95岁。爸爸和儿子各几岁？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "爸爸年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "40",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "儿子年龄",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "15",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          }
+        ]
+      },
+      "intent": "把两条年龄和的条件联立，用份数消去一个量。",
+      "hints": [
+        "把第一条条件整体乘2，再与第二条比较。"
+      ],
+      "steps": [
+        "第一条乘2，得到2份爸爸年龄加4份儿子年龄，共70×2＝140岁。",
+        "减去第二条的2份爸爸年龄加1份儿子年龄，剩3份儿子年龄，共140－95＝45岁。",
+        "儿子45÷3＝15岁，爸爸70－2×15＝40岁。",
+        "检查2×40＋15＝95。"
+      ],
+      "commonMistakes": [
+        "只将第一条的儿子年龄乘2，没有把总和和爸爸年龄同步乘2",
+        "把两人的答案顺序弄反。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "等式两边同时运算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1415",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "886c82386db17dddbe3b18b45f58e07c705a34800c4094ca89e0c4b5c2761472",
+        "recordSha256": "37d8c71684c26ae2044b1b2507a81de7fcfe562ab18ca7989c0da627b2c0fa57",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1415",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b3692272d50abf550f8e27bd5dcabd3ff69b27785b6c5198edb3c18b74e9762b",
+        "sourceDraftSha256": "b3692272d50abf550f8e27bd5dcabd3ff69b27785b6c5198edb3c18b74e9762b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "d1cc36f4ce080a732adcbf752e34569297493cd73931ecc528690ae26307b4c5"
+      },
+      "contentSha256": "d1cc36f4ce080a732adcbf752e34569297493cd73931ecc528690ae26307b4c5"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1462",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-113dec37c826f27c",
+      "assessmentGroup": "assessment-113dec37c826f27c",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "教室里有45名学生，女生人数是男生的2倍。女生和男生各有多少名？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "女生人数",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "30",
+                "d": "1"
+              },
+              "unit": "名"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "男生人数",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "15",
+                "d": "1"
+              },
+              "unit": "名"
+            }
+          }
+        ]
+      },
+      "intent": "按1份与2份的和分配总人数。",
+      "hints": [
+        "男生算1份，女生算2份，一共3份。"
+      ],
+      "steps": [
+        "一份是45÷（1＋2）＝15（名），所以男生15名。",
+        "女生15×2＝30（名）。",
+        "检查30＋15＝45。"
+      ],
+      "commonMistakes": [
+        "把45直接除以2",
+        "只回答一种人数。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1462",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "fbe6d763d80a214d5a489f46e9d43d797ea3b09e1d2b8eaec6e9efe14526aed7",
+        "recordSha256": "1270724f3e073ffcaedd106ac3a0602e97f60f5e9616aa6535065b26cf867634",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://iesbajocinca.catedu.es",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1462",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "9e658ae49f3fe464c7b73712c7ba71c8032537c6cefa409e9c0ca071ce3739af",
+        "sourceDraftSha256": "9e658ae49f3fe464c7b73712c7ba71c8032537c6cefa409e9c0ca071ce3739af",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "cc9c0b291a22dec578facc4986c3b8f332b2795c326d852d938d46864b32e0f3"
+      },
+      "contentSha256": "cc9c0b291a22dec578facc4986c3b8f332b2795c326d852d938d46864b32e0f3"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1477",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "倍数已知求比较量或基准量",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-13ba7f335e374b00",
+      "assessmentGroup": "assessment-13ba7f335e374b00",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小哈和妹妹共收集240枚邮票，小哈收集的数量是妹妹的3倍。小哈和妹妹各收集多少枚？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "小哈邮票数",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "180",
+                "d": "1"
+              },
+              "unit": "枚"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "妹妹邮票数",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "60",
+                "d": "1"
+              },
+              "unit": "枚"
+            }
+          }
+        ]
+      },
+      "intent": "按倍数份数分配总量，并对应两人。",
+      "hints": [
+        "妹妹算1份，小哈算3份，一共4份。"
+      ],
+      "steps": [
+        "妹妹收集240÷（1＋3）＝60（枚）。",
+        "小哈收集60×3＝180（枚）。",
+        "检查180＋60＝240，180＝3×60。"
+      ],
+      "commonMistakes": [
+        "把60枚分配给小哈、180枚分配给妹妹",
+        "把总数只除以3。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式"
+      ],
+      "adaptation": [
+        "源答案写60与180但没有绑定人名，本地按题干和源式明确小哈180枚、妹妹60枚，保留两人数量目标。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1477",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "a73fcfa0fd090e58365d3f7adcb12c49915493667ddd55e07fa74cef3b0388bd",
+        "recordSha256": "0cab82ece6f027defffa65e1ed7bc2ad61ef87eb34b81875dea37119977e6ceb",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.wallace.ccfaculty.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1477",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2abd89e3e25a08b59387a705025fc5dd56f2d558c3ee15d97507f7e452152aa1",
+        "sourceDraftSha256": "2abd89e3e25a08b59387a705025fc5dd56f2d558c3ee15d97507f7e452152aa1",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "38c2ded0c62646da0da6d411ec2bf758db0838e28b490a9057831ab0669f8cb8"
+      },
+      "contentSha256": "38c2ded0c62646da0da6d411ec2bf758db0838e28b490a9057831ab0669f8cb8"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1478",
+      "collection": "foundation",
+      "category": "A05",
+      "subcategory": "和倍或差倍分配",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-e99a455b49fd08e5",
+      "assessmentGroup": "assessment-e99a455b49fd08e5",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "布朗先生和儿子共有220元，爸爸的钱是儿子的10倍。爸爸和儿子各有多少元？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "爸爸的钱",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "200",
+                "d": "1"
+              },
+              "unit": "元"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "儿子的钱",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "20",
+                "d": "1"
+              },
+              "unit": "元"
+            }
+          }
+        ]
+      },
+      "intent": "按10份与1份的和分配总金额。",
+      "hints": [
+        "儿子算1份，爸爸算10份，总共11份。"
+      ],
+      "steps": [
+        "儿子有220÷（10＋1）＝20（元）。",
+        "爸爸有20×10＝200（元）。",
+        "检查200＋20＝220，200＝10×20。"
+      ],
+      "commonMistakes": [
+        "把220除以10",
+        "把20元和200元对应到错误的人。"
+      ],
+      "prerequisites": [
+        "倍数关系",
+        "整数乘除法",
+        "整数加减法",
+        "分步列式",
+        "钱币单位"
+      ],
+      "adaptation": [
+        "美元改为人民币元，数量关系不变",
+        "源答案20与200没有量名，本地明确爸爸200元、儿子20元并重新核算。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1478",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "05ad29aea6a17346e72c1963ca6dc71d37ae63653d91e1ddeb2cd95144d67155",
+        "recordSha256": "63c74ebb50aaf958daceb31fdb2a9913c0de447cc6d67a22c59505aa1c637d73",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.wallace.ccfaculty.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1478",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "194b205950b89aa7f62c83544c2d5046ca8d5f4dac6bc76507378e1df760735e",
+        "sourceDraftSha256": "194b205950b89aa7f62c83544c2d5046ca8d5f4dac6bc76507378e1df760735e",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "58a37c76f93bfa243d06d2048389346b380b16fac81f71cebfb96b9dfb5eaa70"
+      },
+      "contentSha256": "58a37c76f93bfa243d06d2048389346b380b16fac81f71cebfb96b9dfb5eaa70"
+    }
+  ]
+}

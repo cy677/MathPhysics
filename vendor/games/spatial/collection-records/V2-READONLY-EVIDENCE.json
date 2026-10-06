@@ -1,0 +1,422 @@
+{
+  "checkedAtUTC": "2026-10-03T04:43:14.772932+00:00",
+  "mainPath": "C:\\Users\\cheng\\Desktop\\MathPhysics",
+  "v2Path": "C:\\Users\\cheng\\Documents\\Codex\\2026-10-02\\task\\candidate-v2",
+  "frozenManifestSHA256": "9916c438f6554457fd7694c162e157083161406300deb98ff652f3f7d8ae1991",
+  "frozenManifestExpectedLine": "9916c438f6554457fd7694c162e157083161406300deb98ff652f3f7d8ae1991  source-manifest.json",
+  "frozenAtUTC": "2026-10-02T05:18:07.263409+00:00",
+  "inspection": "ordinary file reads and hashing only; no Git, execution, database open, dependency installation or writeback",
+  "checkedFrozenFiles": [
+    {
+      "path": "server/database.mjs",
+      "sha256": "a9702c03883f430e7757e8686eb3591553a1f56c74427b9219bd41c625dcce02",
+      "manifestSha256": "a9702c03883f430e7757e8686eb3591553a1f56c74427b9219bd41c625dcce02",
+      "manifestMatch": true,
+      "bytes": 10099,
+      "afterReviewSha256": "a9702c03883f430e7757e8686eb3591553a1f56c74427b9219bd41c625dcce02",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "server/domain.mjs",
+      "sha256": "db18da3f39726863fa7ba7aced9a7b4c559df23e47359baeb5c07be9838d6f67",
+      "manifestSha256": "db18da3f39726863fa7ba7aced9a7b4c559df23e47359baeb5c07be9838d6f67",
+      "manifestMatch": true,
+      "bytes": 29614,
+      "afterReviewSha256": "db18da3f39726863fa7ba7aced9a7b4c559df23e47359baeb5c07be9838d6f67",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "server/assessments.mjs",
+      "sha256": "3770288c99a8f7526aaf11c7fd1bcf22a421faf4cb43defe7af62aabefe6fa97",
+      "manifestSha256": "3770288c99a8f7526aaf11c7fd1bcf22a421faf4cb43defe7af62aabefe6fa97",
+      "manifestMatch": true,
+      "bytes": 51612,
+      "afterReviewSha256": "3770288c99a8f7526aaf11c7fd1bcf22a421faf4cb43defe7af62aabefe6fa97",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "server/assessment-references.json",
+      "sha256": "761549789f108e1cbb350904af83d726fe64e1fc9e8cd8ca5a90f8b22c443188",
+      "manifestSha256": "761549789f108e1cbb350904af83d726fe64e1fc9e8cd8ca5a90f8b22c443188",
+      "manifestMatch": true,
+      "bytes": 22563,
+      "afterReviewSha256": "761549789f108e1cbb350904af83d726fe64e1fc9e8cd8ca5a90f8b22c443188",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "server/validation.mjs",
+      "sha256": "0d5f4a99580c79e7f3c617892d14c8175933b75058658c3e649aebde5bb2c44a",
+      "manifestSha256": "0d5f4a99580c79e7f3c617892d14c8175933b75058658c3e649aebde5bb2c44a",
+      "manifestMatch": true,
+      "bytes": 2755,
+      "afterReviewSha256": "0d5f4a99580c79e7f3c617892d14c8175933b75058658c3e649aebde5bb2c44a",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "server/http.mjs",
+      "sha256": "aa484bc436a80e3bd45676cda39cb834f4fed4622b8cd5fd6db0b588fcdeb506",
+      "manifestSha256": "aa484bc436a80e3bd45676cda39cb834f4fed4622b8cd5fd6db0b588fcdeb506",
+      "manifestMatch": true,
+      "bytes": 13188,
+      "afterReviewSha256": "aa484bc436a80e3bd45676cda39cb834f4fed4622b8cd5fd6db0b588fcdeb506",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "docs/api-contract.json",
+      "sha256": "83be1ae121cb25622a6ec01beb677b37b71dc86c7ba62eb660b96b6c6621cb0d",
+      "manifestSha256": "83be1ae121cb25622a6ec01beb677b37b71dc86c7ba62eb660b96b6c6621cb0d",
+      "manifestMatch": true,
+      "bytes": 4343,
+      "afterReviewSha256": "83be1ae121cb25622a6ec01beb677b37b71dc86c7ba62eb660b96b6c6621cb0d",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "config/assessment-catalog.json",
+      "sha256": "33fe82cb881e9a8bd1881dd77ea549d97e26075120f739b46a25a1e489dea8ba",
+      "manifestSha256": "33fe82cb881e9a8bd1881dd77ea549d97e26075120f739b46a25a1e489dea8ba",
+      "manifestMatch": true,
+      "bytes": 192875,
+      "afterReviewSha256": "33fe82cb881e9a8bd1881dd77ea549d97e26075120f739b46a25a1e489dea8ba",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "src/sync-client.js",
+      "sha256": "787753f1a4c4f7414660332ecc127195cdf185d20f662aef7adced209fb09a2a",
+      "manifestSha256": "787753f1a4c4f7414660332ecc127195cdf185d20f662aef7adced209fb09a2a",
+      "manifestMatch": true,
+      "bytes": 23900,
+      "afterReviewSha256": "787753f1a4c4f7414660332ecc127195cdf185d20f662aef7adced209fb09a2a",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "src/progress.js",
+      "sha256": "7727f68e89d9b0758295078eb175c8e7d3dd6683c7cc5119398a9af3e2aad01d",
+      "manifestSha256": "7727f68e89d9b0758295078eb175c8e7d3dd6683c7cc5119398a9af3e2aad01d",
+      "manifestMatch": true,
+      "bytes": 3168,
+      "afterReviewSha256": "7727f68e89d9b0758295078eb175c8e7d3dd6683c7cc5119398a9af3e2aad01d",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "learning/app.js",
+      "sha256": "9b8381704637a7956c6a0b235516fe42e62ed1901c8c6c447336a9ff05921a40",
+      "manifestSha256": "9b8381704637a7956c6a0b235516fe42e62ed1901c8c6c447336a9ff05921a40",
+      "manifestMatch": true,
+      "bytes": 48855,
+      "afterReviewSha256": "9b8381704637a7956c6a0b235516fe42e62ed1901c8c6c447336a9ff05921a40",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "tests/assessment.test.mjs",
+      "sha256": "7777f707513262531a9d37d9a1254e19a424b4d8678f7abaaa0151b07ac632fd",
+      "manifestSha256": "7777f707513262531a9d37d9a1254e19a424b4d8678f7abaaa0151b07ac632fd",
+      "manifestMatch": true,
+      "bytes": 31371,
+      "afterReviewSha256": "7777f707513262531a9d37d9a1254e19a424b4d8678f7abaaa0151b07ac632fd",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "tests/server-registry.test.mjs",
+      "sha256": "a0f06cbc13eeb82e3dd88aefaa0ebea8743432f9221f9c50663f8a8f8dac7d78",
+      "manifestSha256": "a0f06cbc13eeb82e3dd88aefaa0ebea8743432f9221f9c50663f8a8f8dac7d78",
+      "manifestMatch": true,
+      "bytes": 3792,
+      "afterReviewSha256": "a0f06cbc13eeb82e3dd88aefaa0ebea8743432f9221f9c50663f8a8f8dac7d78",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "docs/sync-adapters.md",
+      "sha256": "db46751409947144fc045edc7899299d4e2924ecbf4022802e47e95de8f59fe5",
+      "manifestSha256": "db46751409947144fc045edc7899299d4e2924ecbf4022802e47e95de8f59fe5",
+      "manifestMatch": true,
+      "bytes": 8199,
+      "afterReviewSha256": "db46751409947144fc045edc7899299d4e2924ecbf4022802e47e95de8f59fe5",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "docs/assessment-coverage.md",
+      "sha256": "863a3b7b15e4190d6770aabda5b7c6fa59537226cd5449aa67e9e90bd40f87e9",
+      "manifestSha256": "863a3b7b15e4190d6770aabda5b7c6fa59537226cd5449aa67e9e90bd40f87e9",
+      "manifestMatch": true,
+      "bytes": 54209,
+      "afterReviewSha256": "863a3b7b15e4190d6770aabda5b7c6fa59537226cd5449aa67e9e90bd40f87e9",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "lessons/tangram-flat/app.js",
+      "sha256": "a65fb2640cfe9ef40132b746ab543b51c6a853d6f54973dcdcef021d8151004a",
+      "manifestSha256": "a65fb2640cfe9ef40132b746ab543b51c6a853d6f54973dcdcef021d8151004a",
+      "manifestMatch": true,
+      "bytes": 12025,
+      "afterReviewSha256": "a65fb2640cfe9ef40132b746ab543b51c6a853d6f54973dcdcef021d8151004a",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "src/catalog.js",
+      "sha256": "e5a8acd39773d394ac83c012fe666859b642b3a57d4858ada0a3717b563c3bdd",
+      "manifestSha256": "e5a8acd39773d394ac83c012fe666859b642b3a57d4858ada0a3717b563c3bdd",
+      "manifestMatch": true,
+      "bytes": 2436,
+      "afterReviewSha256": "e5a8acd39773d394ac83c012fe666859b642b3a57d4858ada0a3717b563c3bdd",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "config/local-activities.json",
+      "sha256": "8430e8c8ae0dbda677df3d9a0e65fed871394b029aaeb6df895a3e6db2115864",
+      "manifestSha256": "8430e8c8ae0dbda677df3d9a0e65fed871394b029aaeb6df895a3e6db2115864",
+      "manifestMatch": true,
+      "bytes": 11829,
+      "afterReviewSha256": "8430e8c8ae0dbda677df3d9a0e65fed871394b029aaeb6df895a3e6db2115864",
+      "unchangedDuringReview": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "ad4bfec68c07ae77ae736a5ad0cb5383a9acf836b788e9e206ed4236825ae0fd",
+      "manifestSha256": "ad4bfec68c07ae77ae736a5ad0cb5383a9acf836b788e9e206ed4236825ae0fd",
+      "manifestMatch": true,
+      "bytes": 4018,
+      "afterReviewSha256": "ad4bfec68c07ae77ae736a5ad0cb5383a9acf836b788e9e206ed4236825ae0fd",
+      "unchangedDuringReview": true
+    }
+  ],
+  "mainV2SelectedComparisons": [
+    {
+      "path": "server/database.mjs",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "a9702c03883f430e7757e8686eb3591553a1f56c74427b9219bd41c625dcce02",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "server/domain.mjs",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "db18da3f39726863fa7ba7aced9a7b4c559df23e47359baeb5c07be9838d6f67",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "server/assessments.mjs",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "3770288c99a8f7526aaf11c7fd1bcf22a421faf4cb43defe7af62aabefe6fa97",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "server/assessment-references.json",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "761549789f108e1cbb350904af83d726fe64e1fc9e8cd8ca5a90f8b22c443188",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "server/validation.mjs",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "0d5f4a99580c79e7f3c617892d14c8175933b75058658c3e649aebde5bb2c44a",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "server/http.mjs",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "aa484bc436a80e3bd45676cda39cb834f4fed4622b8cd5fd6db0b588fcdeb506",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "docs/api-contract.json",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "83be1ae121cb25622a6ec01beb677b37b71dc86c7ba62eb660b96b6c6621cb0d",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "config/assessment-catalog.json",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "33fe82cb881e9a8bd1881dd77ea549d97e26075120f739b46a25a1e489dea8ba",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "src/sync-client.js",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "787753f1a4c4f7414660332ecc127195cdf185d20f662aef7adced209fb09a2a",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "src/progress.js",
+      "mainExists": true,
+      "v2Exists": true,
+      "mainSha256": "5826d5b5d0cf2e6c9cbe1f13ef6ee621a173be747cdc10a228e215741263da1d",
+      "v2Sha256": "7727f68e89d9b0758295078eb175c8e7d3dd6683c7cc5119398a9af3e2aad01d",
+      "sameBytes": false,
+      "mainAfterReviewSha256": "5826d5b5d0cf2e6c9cbe1f13ef6ee621a173be747cdc10a228e215741263da1d",
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "learning/app.js",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "9b8381704637a7956c6a0b235516fe42e62ed1901c8c6c447336a9ff05921a40",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "tests/assessment.test.mjs",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "7777f707513262531a9d37d9a1254e19a424b4d8678f7abaaa0151b07ac632fd",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "tests/server-registry.test.mjs",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "a0f06cbc13eeb82e3dd88aefaa0ebea8743432f9221f9c50663f8a8f8dac7d78",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "docs/sync-adapters.md",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "db46751409947144fc045edc7899299d4e2924ecbf4022802e47e95de8f59fe5",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "docs/assessment-coverage.md",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "863a3b7b15e4190d6770aabda5b7c6fa59537226cd5449aa67e9e90bd40f87e9",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "lessons/tangram-flat/app.js",
+      "mainExists": true,
+      "v2Exists": true,
+      "mainSha256": "5b5cf65590cd01864e66606d4e0db9edf1a2366000dfb2ded0db170a97deb744",
+      "v2Sha256": "a65fb2640cfe9ef40132b746ab543b51c6a853d6f54973dcdcef021d8151004a",
+      "sameBytes": false,
+      "mainAfterReviewSha256": "5b5cf65590cd01864e66606d4e0db9edf1a2366000dfb2ded0db170a97deb744",
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "src/catalog.js",
+      "mainExists": true,
+      "v2Exists": true,
+      "mainSha256": "8fc348bfb90e07355e9e5795570091961411a564bd682d6fefedddae30b0b543",
+      "v2Sha256": "e5a8acd39773d394ac83c012fe666859b642b3a57d4858ada0a3717b563c3bdd",
+      "sameBytes": false,
+      "mainAfterReviewSha256": "8fc348bfb90e07355e9e5795570091961411a564bd682d6fefedddae30b0b543",
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "config/local-activities.json",
+      "mainExists": true,
+      "v2Exists": true,
+      "mainSha256": "3bcaaad2b5559ccefc99683c15de62ae2c9295a320e88f2d6ade12cd7cc6fec5",
+      "v2Sha256": "8430e8c8ae0dbda677df3d9a0e65fed871394b029aaeb6df895a3e6db2115864",
+      "sameBytes": false,
+      "mainAfterReviewSha256": "3bcaaad2b5559ccefc99683c15de62ae2c9295a320e88f2d6ade12cd7cc6fec5",
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "package.json",
+      "mainExists": true,
+      "v2Exists": true,
+      "mainSha256": "e25d1bbc2a2fb002abffdb6a2b80b1023bd6dd2ce4d1e3d9b1b7d192d2cc9455",
+      "v2Sha256": "ad4bfec68c07ae77ae736a5ad0cb5383a9acf836b788e9e206ed4236825ae0fd",
+      "sameBytes": false,
+      "mainAfterReviewSha256": "e25d1bbc2a2fb002abffdb6a2b80b1023bd6dd2ce4d1e3d9b1b7d192d2cc9455",
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "learning/index.html",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "b25b2f840aa267fd15d6e5c01dd444a1f6b4d9a427384b5d3f0e99c9349f0994",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "src/sync-ui.js",
+      "mainExists": false,
+      "v2Exists": true,
+      "mainSha256": null,
+      "v2Sha256": "3bdc89b3a138eb1ac75c3a7a7d3f9b8295869c10e6b52ee2427cb0244a88f46b",
+      "sameBytes": false,
+      "mainAfterReviewSha256": null,
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "lessons/minesweeper/index.html",
+      "mainExists": true,
+      "v2Exists": false,
+      "mainSha256": "99b6fe12ce8c48392c04671b5c4d0f31750997729cc52c53f7f6e60ad91d4798",
+      "v2Sha256": null,
+      "sameBytes": false,
+      "mainAfterReviewSha256": "99b6fe12ce8c48392c04671b5c4d0f31750997729cc52c53f7f6e60ad91d4798",
+      "mainUnchangedDuringSelectedCheck": true
+    },
+    {
+      "path": "lessons/sudoku/index.html",
+      "mainExists": true,
+      "v2Exists": false,
+      "mainSha256": "3f0dd49ade36940595350bbe7bc22f68851369a240cd908b287c2abfd1a5cb7e",
+      "v2Sha256": null,
+      "sameBytes": false,
+      "mainAfterReviewSha256": "3f0dd49ade36940595350bbe7bc22f68851369a240cd908b287c2abfd1a5cb7e",
+      "mainUnchangedDuringSelectedCheck": true
+    }
+  ],
+  "scopeNote": "This checks selected contract inputs, not all 2806 frozen files or the whole main project.",
+  "frozenManifestAfterReviewSHA256": "9916c438f6554457fd7694c162e157083161406300deb98ff652f3f7d8ae1991",
+  "frozenManifestUnchangedDuringReview": true,
+  "reviewEndedAtUTC": "2026-10-03T04:52:36.945953+00:00",
+  "downloadedSourcesRechecked": {
+    "fileCount": 250,
+    "sha256MismatchCount": 0
+  }
+}

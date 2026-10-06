@@ -1,0 +1,1646 @@
+{
+  "schemaVersion": 1,
+  "revisions": [
+    {
+      "id": "asdiv:nluds-0270",
+      "beforeSha256": "ef6a763ba0efc1a000bc37433171fe3f76d9b8736704518425c03a24cd43e61a",
+      "afterSha256": "ba8efb953e3487b2db58d56ba5bc5a8eae983556555ca4814c8d453593abf0a9",
+      "fields": [
+        "adaptation",
+        "hints",
+        "prompt"
+      ],
+      "before": {
+        "adaptation": [
+          "原文将层数不同的两部分都称为“半栋”，改为“第一部分”和“第二部分”，保留145与255层及求总层数的目标。"
+        ],
+        "hints": [
+          "两部分合起来就是大楼的总层数。"
+        ],
+        "prompt": "工人们用一年建成了阿尼姆斯塔。大楼的第一部分有145层，第二部分有255层。这座塔一共有多少层？"
+      },
+      "after": {
+        "adaptation": [
+          "原文把层数不同的两部分称为半栋，改为不重叠的两个部分。",
+          "删除一年建成的工期，以虚拟积木游戏塔承载400层的教学数值，保留145＋255及层数所求。"
+        ],
+        "hints": [
+          "两个不重叠的部分合起来就是虚拟塔的总层数。"
+        ],
+        "prompt": "在积木游戏里，一座虚拟塔由两个不重叠的部分组成。第一部分有145层，第二部分有255层。这座虚拟塔一共有多少层？"
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl",
+      "supplementaryReviewSource": "content-audit/foundation-auxiliary-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0162",
+      "beforeSha256": "52899f0aecf24e1a07ab6c8f53b633c2095171bbcdc081be9149f464f64142ed",
+      "afterSha256": "6649cc7cf6904ffc222bbda130ecb5c7ec7a80202133acde704d7133a9966e36",
+      "fields": [
+        "localCategoryOverride",
+        "steps"
+      ],
+      "before": {
+        "steps": [
+          "用1枚25美分硬币后，还差28－25＝3（美分），需3枚1美分硬币，共4枚。",
+          "若不用25美分硬币，其他面值除1美分外都是5的倍数，凑28美分至少需要3枚1美分，再凑25美分至少用3枚，不能更少。",
+          "所以最少有4枚硬币。"
+        ],
+        "localCategoryOverride": null
+      },
+      "after": {
+        "steps": [
+          "1枚25美分硬币和3枚1美分硬币可以凑成28美分，共4枚。",
+          "再检查3枚或更少是否可能：如果有25美分硬币，还差3美分，最多2枚硬币凑不出3美分。",
+          "如果没有25美分硬币，5美分和10美分都是5的倍数；凑28美分至少要3枚1美分硬币。若总共最多3枚，就只能有这3枚1美分硬币，总额只有3美分，也不可能。",
+          "所以最少需要4枚硬币。"
+        ],
+        "localCategoryOverride": {
+          "category": "A16",
+          "subcategory": "有限方案与最少数量",
+          "level": "I2",
+          "reason": "硬币仅有1、5、10、25美分，目标28美分且须枚数最少；比较可行组合并排除三枚及以下，不是单纯合计。"
+        }
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-1994",
+      "beforeSha256": "6d6240c1c2de36a57e95f37d378113c54e6227ea2a37f17c57ceb0e7163dc802",
+      "afterSha256": "deac220da08d4cc24a4f3db11a9690d5f6f5b261c84f4f43db6545a24121fa48",
+      "fields": [
+        "adaptation",
+        "prompt"
+      ],
+      "before": {
+        "prompt": "宠物店原有13只暹罗猫和5只家猫，促销时卖出了10只。现在还剩多少只猫？",
+        "adaptation": []
+      },
+      "after": {
+        "prompt": "宠物店原有13只暹罗猫和5只其他家猫，促销时卖出了10只。现在还剩多少只猫？",
+        "adaptation": [
+          "原题把Siamese cats与house cats列为两组；中文补为‘暹罗猫和其他家猫’，明确两组不重叠，原数13、5、10不变。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-1419",
+      "beforeSha256": "042f793d5e43d5ad0af00e6a0a0f6e3c235d92b8e9035bf901b0f2b4982b2a01",
+      "afterSha256": "c923410d11820fadd96b233e60d3a65edcf7cdc420e6b398cbbbc99e627ef67b",
+      "fields": [
+        "adaptation",
+        "prompt"
+      ],
+      "before": {
+        "prompt": "5年前，小南的年龄是小山的3倍；10年后，小南的年龄将是小山的2倍。小南和小山现在各几岁？",
+        "adaptation": []
+      },
+      "after": {
+        "prompt": "5年前，小南的年龄是小山的3倍；从现在起10年后，小南的年龄将是小山的2倍。小南和小山现在各几岁？",
+        "adaptation": [
+          "原英文Ten years later起算点未完全明示；本题明确采用‘从现在起10年后’，两次比较相隔15年。按此条件独立求得现在小南50岁、小山20岁，不声称另一时点解释也得同一答案。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0467",
+      "beforeSha256": "5cc62c3f672eb9afa59bc4f742b929d70c64b83ec6f9d2c3c1c4b2ddb680c1cc",
+      "afterSha256": "f6a7c412e1093687a628a4913edf5a5c91de653c9f8143a64ae4a10dcdf15fde",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "补明准备的柠檬水正好全部倒出，每壶按满壶5杯计；30杯因此对应6壶。原文未明确用完，不把六壶当作缺少该条件时的唯一结论。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0482",
+      "beforeSha256": "5219360a876a2271caba1f4a13613c697859ee2f6ca05db553cf7a0082bd8974",
+      "afterSha256": "381aeffa14bc8ba512387dcf0211ee375dcd0e5ed92f96c515a8c1f0bf374921",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "补明140颗圆石全部用于做每条14颗的完整手链，没有剩余；独立核算140÷14=10条。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0486",
+      "beforeSha256": "3ff9ab011d02d7bbd9e3aa2c6fc59041a2ce72012884b2593f8f2e8f5316fb96",
+      "afterSha256": "bbc0b48678b6f2200303425c093681e713a7a49fbe76d5d906f1603135baadf3",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "保留原题每罐种子相等的条件，补明54粒全部分入9个罐子；因此54÷9=6粒/罐。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0795",
+      "beforeSha256": "e90c1bea55533f55d069e6e4542bc76a2493517a38180f470c5a37f83d0f074b",
+      "afterSha256": "95774d88d7837076256dae748ce037540ff855d565b958267790ccf3d4acc126",
+      "fields": [
+        "adaptation",
+        "commonMistakes",
+        "hints",
+        "localCategoryOverride",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "运输公司有95吨油，要装入两种容器。大桶装满6吨，小桶装满5吨，每个使用的桶都必须装满。为了使用最少的桶，需要用多少个小桶？",
+        "steps": [
+          "15个大桶最多装15×6＝90（吨），所以总桶数至少16个。",
+          "用15个大桶装90吨，余95－90＝5（吨），正好用1个小桶。",
+          "这样共16个桶达到最少，需要1个小桶。"
+        ],
+        "hints": [
+          "桶越大越省，但也要恰好装完95吨。"
+        ],
+        "commonMistakes": [
+          "只计算95÷5",
+          "为了少用桶而让最后一个大桶不装满。"
+        ],
+        "adaptation": [],
+        "localCategoryOverride": null
+      },
+      "after": {
+        "prompt": "运输公司有95吨油，要装入两种储油罐。大罐装满6吨，小罐装满5吨，每个使用的罐都必须装满。为了使用最少的储油罐，需要用多少个小罐？",
+        "steps": [
+          "15个大罐最多装15×6＝90（吨），所以储油罐总数至少16个。",
+          "用15个大罐装90吨，余95－90＝5（吨），正好用1个小罐。",
+          "这样共16个罐达到最少，需要1个小罐。"
+        ],
+        "hints": [
+          "大罐装得更多，但也要恰好装完95吨。"
+        ],
+        "commonMistakes": [
+          "只计算95÷5。",
+          "为了减少罐数而让最后一个大罐不装满。"
+        ],
+        "adaptation": [
+          "源题的5吨、6吨油桶改称工业储油罐，保留容量数值、装满约束、最少总容器数与求小容器数的目标。"
+        ],
+        "localCategoryOverride": {
+          "category": "A16",
+          "subcategory": "有限方案与最少数量",
+          "level": "I2",
+          "reason": "大小储油容器分别6吨、5吨，95吨需全部装满且总容器数最少；先证至少16个，再由6×16-95=1确定1个小容器。"
+        }
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0803",
+      "beforeSha256": "9afe05d4bbc71beb49e4b2b1eacacc6bb797c7d1ad69a55d8bea6b5ec9207d53",
+      "afterSha256": "f0eb9b4a7d5a4983d3c5fc5bf05b57bb9209ba8263deee70589e88f40174286c",
+      "fields": [
+        "localCategoryOverride"
+      ],
+      "before": {
+        "localCategoryOverride": null
+      },
+      "after": {
+        "localCategoryOverride": {
+          "category": "A16",
+          "subcategory": "有限方案与最少数量",
+          "level": "I2",
+          "reason": "大/小车每辆载15吨/7吨，134吨全部运输且每车装满；九车方程135-8y=134无整数解，十车150-8y=134得2辆小车，须比较最少方案。"
+        }
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0811",
+      "beforeSha256": "5580b648d561a567fa89289d2e14cb79318eb0913526f4ef6523af9070ffe0ce",
+      "afterSha256": "35a0970a189ce92f5d1cef9d61b5492ec61c4cacc7c55f39ec7696ba72f97580",
+      "fields": [
+        "localCategoryOverride"
+      ],
+      "before": {
+        "localCategoryOverride": null
+      },
+      "after": {
+        "localCategoryOverride": {
+          "category": "A16",
+          "subcategory": "有限方案与最少数量",
+          "level": "I2",
+          "reason": "分组大小分别7人/3人，共90人且人数用完、组数最少；12组不足、13组91-4y=90不可整分、14组98-4y=90得2个小组。"
+        }
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0832",
+      "beforeSha256": "2396aa2e8f36e5abc44050844500e44ec88402a4407dd3b81f2dbb2512ec0246",
+      "afterSha256": "4a849de182dbec6a4ccd2e623d059bdfdbd7e6e349a5cb57c8aa2273ee1557ca",
+      "fields": [
+        "adaptation",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "2袋相同的薯片共重800克，5袋这样的薯片和4瓶相同的果汁共重2千克200克。一袋薯片比一瓶果汁重多少克？",
+        "steps": [
+          "一袋薯片重800÷2＝400（克），2千克200克＝2200克。",
+          "4瓶果汁共重2200－5×400＝200（克），每瓶200÷4＝50（克）。",
+          "一袋薯片比一瓶果汁重400－50＝350（克）。"
+        ],
+        "adaptation": [
+          "补明同类薯片与果汁单件质量相同，保留全部源数据。"
+        ]
+      },
+      "after": {
+        "prompt": "2袋相同的家庭装薯片共重800克，5袋这样的薯片和4瓶相同的果汁试饮小样共重2千克200克。一袋薯片比一瓶果汁试饮小样重多少克？",
+        "steps": [
+          "一袋薯片重800÷2＝400（克），2千克200克＝2200克。",
+          "4瓶果汁试饮小样共重2200－5×400＝200（克），每瓶小样200÷4＝50（克）。",
+          "一袋薯片比一瓶果汁试饮小样重400－50＝350（克）。"
+        ],
+        "adaptation": [
+          "补明同类物品单件质量相同，保留原质量数据。",
+          "将400克薯片明确为家庭装、50克瓶装果汁明确为试饮小样，使食品包装尺度与计算所得质量相符。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0151",
+      "beforeSha256": "f83bdf6a1d1553437754b4a31023c07a58b805b1d61d816109ce770697dd9954",
+      "afterSha256": "1dca9fe58394c9741f34b187c54ae89ffff004426e28311c53e1658d7925a42e",
+      "fields": [
+        "adaptation",
+        "answer",
+        "commonMistakes",
+        "hints",
+        "prerequisites",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "老师买了6个热狗，每个50分。她一共付了多少分？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "300",
+            "d": "1"
+          },
+          "unit": "分"
+        },
+        "hints": [
+          "6个热狗，每个都要付50分。"
+        ],
+        "steps": [
+          "6×50＝300（分）。",
+          "她一共付了300分，也就是3元。"
+        ],
+        "commonMistakes": [
+          "只把6和50相加",
+          "把300分写成300元。"
+        ],
+        "prerequisites": [
+          "整数乘法",
+          "几个相同量相加",
+          "钱币单位",
+          "整数加减法",
+          "元与分的换算"
+        ],
+        "adaptation": [
+          "将美分价格情境改为人民币分，数值50、数量6及求总价关系不变，重新核算300分＝3元。"
+        ]
+      },
+      "after": {
+        "prompt": "老师买了6个热狗，每个5元。她一共付了多少元？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "30",
+            "d": "1"
+          },
+          "unit": "元"
+        },
+        "hints": [
+          "6个热狗，每个都要付5元。"
+        ],
+        "steps": [
+          "6×5＝30（元）。",
+          "她一共付了30元。"
+        ],
+        "commonMistakes": [
+          "只把6和5相加。"
+        ],
+        "prerequisites": [
+          "整数乘法",
+          "几个相同量相加",
+          "钱币单位"
+        ],
+        "adaptation": [
+          "将原50美分单价重设为人民币5元，而非货币汇率换算；保留6个热狗及数量乘单价关系，重算总价30元。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-1794",
+      "beforeSha256": "c0dbb2c8cdc74ada093a98f9b70b4497ac521d9871b4ae6339e49d8ff4e56254",
+      "afterSha256": "162760c0813085142f4fc602e191e323a575ad418013de1ced68d6d8a632771d",
+      "fields": [
+        "adaptation",
+        "answer",
+        "commonMistakes",
+        "hints",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "小艾过生日，爸爸带大家出去吃饭。成人合计花5元，孩子合计花5元。所有人一共花多少元？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "10",
+            "d": "1"
+          },
+          "unit": "元"
+        },
+        "hints": [
+          "5元分别是成人和孩子的合计费用。"
+        ],
+        "steps": [
+          "5＋5＝10（元）。",
+          "所有人一共花10元。"
+        ],
+        "commonMistakes": [
+          "把5元当成每位成人或孩子的单价，而题目没有给人数。"
+        ],
+        "adaptation": [
+          "美元改为人民币元，补明两笔5元分别为成人、孩子合计餐费，重新核算总费10元。"
+        ]
+      },
+      "after": {
+        "prompt": "小艾过生日，爸爸带大家出去吃饭。成人合计花50元，孩子合计花50元。所有人一共花多少元？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "100",
+            "d": "1"
+          },
+          "unit": "元"
+        },
+        "hints": [
+          "50元分别是成人和孩子的合计费用。"
+        ],
+        "steps": [
+          "50＋50＝100（元）。",
+          "所有人一共花100元。"
+        ],
+        "commonMistakes": [
+          "把50元当成每位成人或孩子的单价，而题目没有给人数。"
+        ],
+        "adaptation": [
+          "美元情境改为人民币教学情境，两组原5美元分别重设为50元合计餐费，非汇率换算；保留两类餐费相加，重算100元。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0395",
+      "beforeSha256": "afa23a2acaa9d59017099880f708f702f8679014be925b88c64e422d0b8971c5",
+      "afterSha256": "29167f4e14214a0b677db61e63d7db86e21561e4cf9db619986ff38f8316702e",
+      "fields": [
+        "adaptation",
+        "answer",
+        "commonMistakes",
+        "hints",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "小安要参加村活动中心的万圣节聚会。她租了4套不同的服装，每套租金2元。一共花多少元？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "8",
+            "d": "1"
+          },
+          "unit": "元"
+        },
+        "hints": [
+          "每套租金都相同，计算4份2元。"
+        ],
+        "steps": [
+          "4×2＝8（元）。",
+          "一共花8元。"
+        ],
+        "commonMistakes": [
+          "把4和2相加",
+          "把4套服装当成租金4元。"
+        ],
+        "adaptation": [
+          "美元租金改为人民币元，数字及乘法关系不变，重新核算4×2＝8元。"
+        ]
+      },
+      "after": {
+        "prompt": "小安要参加村活动中心的万圣节聚会。她租了4套不同的服装，每套租金20元。一共花多少元？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "80",
+            "d": "1"
+          },
+          "unit": "元"
+        },
+        "hints": [
+          "每套租金都相同，计算4份20元。"
+        ],
+        "steps": [
+          "4×20＝80（元）。",
+          "一共花80元。"
+        ],
+        "commonMistakes": [
+          "把4和20相加。",
+          "把4套服装当成租金4元。"
+        ],
+        "adaptation": [
+          "原每套2美元租金重设为人民币教学情境每套20元，不作汇率換算；保留4套及等单价关系，重算80元。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0985",
+      "beforeSha256": "32a11fdfce98ad795128538afe060713c186df2c35b80db99b2671ed52be64a1",
+      "afterSha256": "2ab34c10bccbb95db68f4946027fd9f744a763594d9c60ec195bdd70d8578db6",
+      "fields": [
+        "adaptation",
+        "answer",
+        "commonMistakes",
+        "hints",
+        "prerequisites",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "小安每天有75分午餐钱，花27分买了一盒果汁，又买了一个纸杯蛋糕，最后剩8分。纸杯蛋糕花了多少分？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "40",
+            "d": "1"
+          },
+          "unit": "分"
+        },
+        "hints": [
+          "75分包括果汁费用、蛋糕费用和剩下的8分。"
+        ],
+        "steps": [
+          "用于购物的钱是75－8＝67（分）。",
+          "蛋糕花67－27＝40（分）。"
+        ],
+        "commonMistakes": [
+          "把8分找剩的钱加到支出上",
+          "只算75－27。"
+        ],
+        "prerequisites": [
+          "整数加减法",
+          "分步列式",
+          "钱币单位"
+        ],
+        "adaptation": [
+          "美分情境改为人民币分，保持75、27、8与支出加余额等于原有金额的关系，重新核算蛋糕40分。"
+        ]
+      },
+      "after": {
+        "prompt": "小安带了7.50元，花2.70元买了一盒果汁，又买了一个纸杯蛋糕，最后剩0.80元。纸杯蛋糕花了多少元？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "4",
+            "d": "1"
+          },
+          "unit": "元"
+        },
+        "hints": [
+          "7.50元包括果汁费用、蛋糕费用和剩下的0.80元。"
+        ],
+        "steps": [
+          "用于购物的钱是7.50－0.80＝6.70（元）。",
+          "蛋糕花6.70－2.70＝4.00（元）。"
+        ],
+        "commonMistakes": [
+          "把0.80元剩余钱加到支出上。",
+          "只算7.50－2.70。"
+        ],
+        "prerequisites": [
+          "小数加减法",
+          "分步列式",
+          "钱币单位"
+        ],
+        "adaptation": [
+          "原75、27、8美分分别重设为人民币7.50、2.70、0.80元，非汇率换算；把每日午餐改为一次购买点心，保持预算等于两项支出加余额，重算蛋糕4元。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0629",
+      "beforeSha256": "c1e64c53deab1a8e0394ccc9005616afccc686f70e026a946efc51084f3ad78f",
+      "afterSha256": "6939ed42e921cf2bace7364c17fc6723bc6055f0e79ec8e87683ecb6545f5e77",
+      "fields": [
+        "adaptation",
+        "answer",
+        "commonMistakes",
+        "prerequisites",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "老师在学校商店花了74分，买了35分的笔记本、18分的尺子和3支同价铅笔。一支铅笔多少钱？请用分作答。",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "7",
+            "d": "1"
+          },
+          "unit": "分"
+        },
+        "steps": [
+          "笔记本和尺子共35＋18＝53（分）。",
+          "铅笔共花74－53＝21（分）。",
+          "每支21÷3＝7（分）。"
+        ],
+        "commonMistakes": [
+          "直接把74分平均分给3支铅笔",
+          "忘记先扣除其他商品费用。"
+        ],
+        "prerequisites": [
+          "整数乘除法",
+          "整数加减法",
+          "分步列式",
+          "钱币单位"
+        ],
+        "adaptation": [
+          "美分改为人民币分，补明3支铅笔单价相同，保留74、35、18与数量3，重新核算每支7分。"
+        ]
+      },
+      "after": {
+        "prompt": "老师在学校商店花了7.40元，买了3.50元的笔记本、1.80元的尺子和3支同价铅笔。一支铅笔多少钱？请用元作答。",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "7",
+            "d": "10"
+          },
+          "unit": "元"
+        },
+        "steps": [
+          "笔记本和尺子共3.50＋1.80＝5.30（元）。",
+          "铅笔共花7.40－5.30＝2.10（元）。",
+          "每支2.10÷3＝0.70（元）。"
+        ],
+        "commonMistakes": [
+          "直接把7.40元平均分给3支铅笔。",
+          "忘记先扣除其他商品费用。"
+        ],
+        "prerequisites": [
+          "小数加减法",
+          "小数除以整数",
+          "分步列式",
+          "钱币单位"
+        ],
+        "adaptation": [
+          "原74、35、18美分分别重设为人民币7.40、3.50、1.80元，非汇率換算；保留3支同价铅笔及总价组成关系，重算每支0.70元。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0901",
+      "beforeSha256": "9011ca17658541b76b047456125037f8c084ef5b458d9c48beacd384667660a7",
+      "afterSha256": "8f64eda942a47ffc308a1122af031908ede2abf1b3856b702f0ff9d2b3c5ee28",
+      "fields": [
+        "adaptation",
+        "answer",
+        "commonMistakes",
+        "prerequisites",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "小戴共花74分，买了一把29分的尺子、一个25分的文件夹和2支同价铅笔。一支铅笔花多少分？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "10",
+            "d": "1"
+          },
+          "unit": "分"
+        },
+        "steps": [
+          "尺子和文件夹共29＋25＝54（分）。",
+          "2支铅笔共74－54＝20（分）。",
+          "每支20÷2＝10（分）。"
+        ],
+        "commonMistakes": [
+          "把74分直接除以2",
+          "只减去尺子价格，漏减文件夹。"
+        ],
+        "prerequisites": [
+          "整数乘除法",
+          "整数加减法",
+          "分步列式",
+          "钱币单位"
+        ],
+        "adaptation": [
+          "美分改为人民币分，补明两支铅笔同价，保留74、29、25与数量2，重新核算每支10分。"
+        ]
+      },
+      "after": {
+        "prompt": "小戴共花7.40元，买了一把2.90元的尺子、一个2.50元的文件夹和2支同价铅笔。一支铅笔花多少元？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "1",
+            "d": "1"
+          },
+          "unit": "元"
+        },
+        "steps": [
+          "尺子和文件夹共2.90＋2.50＝5.40（元）。",
+          "2支铅笔共7.40－5.40＝2.00（元）。",
+          "每支2.00÷2＝1.00（元）。"
+        ],
+        "commonMistakes": [
+          "把7.40元直接除以2。",
+          "只减去尺子价格，漏减文件夹。"
+        ],
+        "prerequisites": [
+          "小数加减法",
+          "小数除以整数",
+          "分步列式",
+          "钱币单位"
+        ],
+        "adaptation": [
+          "原74、29、25美分分别重设为人民币7.40、2.90、2.50元，非汇率換算；两支同价铅笔约束不变，重算每支1元。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-1480",
+      "beforeSha256": "397fbf9464972d1185b58be94b34215309c7998fb272678ccc95b9cc36ddb71c",
+      "afterSha256": "2a9a6aac4a32e4a0cab7736437e5241b2cef2eeffff3b5c3b0cffdbfc1a47bb8",
+      "fields": [
+        "adaptation",
+        "prompt"
+      ],
+      "before": {
+        "prompt": "一位农场主买了一头母牛和一头小牛，共花990元。母牛的价格是小牛的8倍。母牛和小牛各多少钱？",
+        "adaptation": [
+          "美元情境改为人民币元，数值保留，不作汇率换算。"
+        ]
+      },
+      "after": {
+        "prompt": "在牧场模拟游戏的虚拟商店里，一头母牛和一头小牛共标价990元。母牛的标价是小牛的8倍。母牛和小牛各标价多少元？",
+        "adaptation": [
+          "将美元标价改为人民币教学数值，非汇率換算。",
+          "明确为牧场模拟游戏的虚拟商店标价，避免将母牛880元、小牛110元呈现为现实活牛价格；保留总990与8倍关系。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0360",
+      "beforeSha256": "858397b6a7cfb0930eaf68b28d75fd3431212fe39046d98b8e2453e8bb9dff62",
+      "afterSha256": "5e6b0fa6d6cf67975b4470570a2b3743cdd7d98c504a1960cb74f00481bea3a4",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": [
+          "美元情境改为人民币元，数值保留，不作汇率换算。"
+        ]
+      },
+      "after": {
+        "adaptation": [
+          "美元情境改为人民币元，数值保留，不作汇率换算。",
+          "原题estimated total改为给定的精确总费用560元，配合食品268元及其他118元确定饮料174元；这是教学条件重设，不把估计值当作实际账单证明。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0659",
+      "beforeSha256": "54590579e4afe9fd56dbdb3c398a32a1b88563c66df0de057bc25bf564e21213",
+      "afterSha256": "1d9e82f850b5caed748409996e6fede2232dbea0862b427d631ae7e160e5267a",
+      "fields": [
+        "adaptation",
+        "answer",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "小晨想买一个10.20元的足球、一条12.80元的短裤和一双9.15元的足球鞋。他有31.50元，还差多少元？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "13",
+            "d": "20"
+          },
+          "unit": "元"
+        },
+        "steps": [
+          "总价是10.20＋12.80＋9.15＝32.15（元）。",
+          "还差32.15－31.50＝0.65（元）。"
+        ],
+        "adaptation": [
+          "美元情境改为人民币元，数值保留，不作汇率换算。"
+        ]
+      },
+      "after": {
+        "prompt": "小晨想买一个102元的足球、一条128元的短裤和一双91.50元的足球鞋。他有315元，还差多少元？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "13",
+            "d": "2"
+          },
+          "unit": "元"
+        },
+        "steps": [
+          "总价是102＋128＋91.50＝321.50（元）。",
+          "还差321.50－315＝6.50（元）。"
+        ],
+        "adaptation": [
+          "把原美元的三项单价10.20、12.80、9.15及预算31.50统一重设为人民币102、128、91.50及315元，非汇率换算；保持总价与预算求差，重算缺6.50元。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-1151",
+      "beforeSha256": "1c2225c417b88b2f4ac6d655d0057767a76ad1fe9ed09a48fc7f42348ecdbd8d",
+      "afterSha256": "36362e99a75d86ea3d973c92ec355584ea1c5a8bf776a112df17859f654f33f3",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "补明留下1千克后剩余3500克平均分入7个碗；平均条件是本地补义，按此条件每碗500克，不声称任意分装也有相同碗重。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-1086",
+      "beforeSha256": "084b1e5904fac74e88dae9a1d08dfcd2c657b68b570dd81ad327d26ae1958be5",
+      "afterSha256": "e2f20a01df0aecacce3e3e77cb4c6abeed7bddcd66d68f948cf63f95f506be53",
+      "fields": [
+        "localCategoryOverride"
+      ],
+      "before": {
+        "localCategoryOverride": null
+      },
+      "after": {
+        "localCategoryOverride": {
+          "category": "A16",
+          "subcategory": "有限方案与最少数量",
+          "level": "I2",
+          "reason": "限定5角、1角面值，凑12角且最小化枚数；单位换算是前置步骤，方案最小性才是所求。"
+        }
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0155",
+      "beforeSha256": "0a5557c31c0f0aee26730c9af78051fba05a968a0601fed556fc96328819c88b",
+      "afterSha256": "aa09e06bdf2b0056255667d75a2758a891e5147dac46c11bd22f9097324012e6",
+      "fields": [
+        "localCategoryOverride"
+      ],
+      "before": {
+        "localCategoryOverride": null
+      },
+      "after": {
+        "localCategoryOverride": {
+          "category": "A16",
+          "subcategory": "有限方案与最少数量",
+          "level": "I2",
+          "reason": "1元、5角、1角面值充足且不找零，求17角恰付的最少枚数，需要排除更少方案。"
+        }
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-1160",
+      "beforeSha256": "2e2c796163aa71c3432ca3acdd75073ae32f2b7e263f74ad5393ae9fa291251b",
+      "afterSha256": "f2c529e0f8b958fc15eca9c6368a479ea41798f3df0537f72e3893c45558562e",
+      "fields": [
+        "adaptation",
+        "answer",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "韩叔叔早上6:00出门上班，因为堵车，早上7:20才到。他路上用了多少分钟？这些分钟相当于多少小时，可以用分数表示？",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "80",
+            "d": "1"
+          },
+          "unit": "分钟"
+        },
+        "steps": [
+          "6:00到7:00是60分钟，再到7:20是20分钟。",
+          "共用了60＋20＝80（分钟）。",
+          "换成小时是80÷60＝4/3（小时），也就是1又1/3小时。"
+        ],
+        "adaptation": [
+          "源答案1.33小时为未声明精度的近似值；改用分钟作为主答单位，并保留精确4/3小时的换算任务。"
+        ]
+      },
+      "after": {
+        "prompt": "韩叔叔早上6:00出门上班，因为堵车，早上7:20才到。他路上用了多少小时？请用分数表示。",
+        "answer": {
+          "type": "number",
+          "value": {
+            "n": "4",
+            "d": "3"
+          },
+          "unit": "小时"
+        },
+        "steps": [
+          "6:00到7:00是60分钟，再到7:20是20分钟。",
+          "共用了60＋20＝80（分钟）。",
+          "换成小时是80÷60＝4/3（小时），也就是1又1/3小时。"
+        ],
+        "adaptation": [
+          "原答案1.33小时为未声明精度的近似值；保留原题小时所求，明确用分数作答，独立精确换算为4/3小时。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-1112",
+      "beforeSha256": "7b495a7ce5fd4ca762eb84fab130289a0304410bf93b67f330c1cba2cb470abb",
+      "afterSha256": "8360c14a9410f4803ba13f946012d932d7a6a46d3947ab98f750b0b864030674",
+      "fields": [
+        "adaptation",
+        "prompt"
+      ],
+      "before": {
+        "prompt": "小山数学测验答对的题数与答错的题数的比是7∶3，答对的题比答错的多20道。这张试卷一共有多少道题？",
+        "adaptation": []
+      },
+      "after": {
+        "prompt": "小山做完一张数学试卷，所有题都作了答。答对的题数与答错的题数的比是7∶3，答对的题比答错的多20道。这张试卷一共有多少道题？",
+        "adaptation": [
+          "补明整张试卷所有题均作答，使答对、答错两类穷尽总题数，保留7∶3和差20及总50道。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-1224",
+      "beforeSha256": "02ad60a78b6910367c78d9b4a97d9b09ab225337964476d8d938d6da6565419a",
+      "afterSha256": "cd7e1c152095fb9a9d3a8268d716e8a82b99c4c18ecfa189ea7e4a831b4a2855",
+      "fields": [
+        "adaptation",
+        "prompt"
+      ],
+      "before": {
+        "prompt": "戏剧社每隔3天在学校礼堂活动，合唱团每隔5天也在礼堂活动。今天两个社团都在礼堂活动。再过多少天，他们会下一次在同一天使用礼堂？",
+        "adaptation": []
+      },
+      "after": {
+        "prompt": "戏剧社在学校礼堂活动，相邻两次活动相隔3天；合唱团也在礼堂活动，相邻两次活动相隔5天。今天两个社团都在礼堂活动。再过多少天，他们会下一次在同一天使用礼堂？",
+        "adaptation": [
+          "将可能产生包含端点计数歧义的每隔3天/5天明确为相邻两次活动相隔3天/5天，保持周期3、5及下一次同步15天。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-2049",
+      "beforeSha256": "a7c8f017e1067a1189a97f38cd7643c4115021c461d070e7a2659017b14f99e0",
+      "afterSha256": "5eab5f23e3e9eeea4d667d1c06676898d164d07d993d6991701fa023f1f609c4",
+      "fields": [
+        "adaptation",
+        "prompt"
+      ],
+      "before": {
+        "prompt": "小罗和小蒂今天都洗了衣服。小罗每隔6天洗一次，小蒂每隔9天洗一次。再过多少天，他们会下一次在同一天洗衣服？",
+        "adaptation": []
+      },
+      "after": {
+        "prompt": "小罗和小蒂今天都洗了衣服。小罗相邻两次洗衣相隔6天，小蒂相邻两次洗衣相隔9天。再过多少天，他们会下一次在同一天洗衣服？",
+        "adaptation": [
+          "明确每个人相邻两次洗衣的间隔分别为6天、9天，避免把每隔几天理解为中间另隔几个完整空日，下一次同步18天不变。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-2087",
+      "beforeSha256": "caf00236ed7bf313d4c7643f703798cad795b4844844eb4a45714cff17f50e71",
+      "afterSha256": "70a6f56084a1a69e6f2f73e51e0c0d767e6053062a864e447988c9c6d938df21",
+      "fields": [
+        "adaptation",
+        "commonMistakes",
+        "hints",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "三根木料分别长42米、49米和63米，要全部分成等长木板，不剩木料，不计切口损耗。每块木板最长是多少米？",
+        "steps": [
+          "42、49、63都能被7整除，且42与49的最大公因数就是7。",
+          "因此三者的最大公因数是7，木板最长7米。",
+          "三根分别可分6块、7块和9块。"
+        ],
+        "hints": [
+          "木板长度必须同时整除42、49和63。"
+        ],
+        "commonMistakes": [
+          "只取最短的42米，忽略49米不能按42米无余料分割。"
+        ],
+        "adaptation": [
+          "原题未写明余料条件，明确全部分割且无剩余，符合源最大公因数解法；忽略切口损耗。"
+        ]
+      },
+      "after": {
+        "prompt": "三卷木纹装饰带分别长42米、49米和63米，要全部剪成等长的小段，不剩材料，不计切口损耗。每段最长是多少米？",
+        "steps": [
+          "42、49、63都能被7整除，且42与49的最大公因数就是7。",
+          "因此三者的最大公因数是7，每段最长7米。",
+          "三卷分别可剪成6段、7段和9段。"
+        ],
+        "hints": [
+          "每段长度要能整除三卷装饰带的长度，找三个数的最大公因数。"
+        ],
+        "commonMistakes": [
+          "把三卷总长相加后再求每段长度。",
+          "求最小公倍数而不是最大公因数。"
+        ],
+        "adaptation": [
+          "明确材料全部使用且不剩余，忽略切口损耗。",
+          "将不常见的42米、49米、63米单根木料改为连续卷装木纹装饰带，保留三个长度与最长等段7米的数学关系。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-2035",
+      "beforeSha256": "dc96f7ab54108597c313ca2432a054c937bbcb43ad52afd865b79cc640accd6e",
+      "afterSha256": "4707a6661fa57d6fa2ca22845a5f548766bec72f6814de3fae40aa0c3b92f8f7",
+      "fields": [
+        "adaptation",
+        "prompt"
+      ],
+      "before": {
+        "prompt": "小米和小莎在新商店开业当天一起购物。以后每次到店，小米都按计划花7元，小莎都按计划花9元。几周后她们在店里的总支出相同。小米至少到店购物多少次？",
+        "adaptation": [
+          "美元情境改为人民币元，数值保留，不作汇率换算。",
+          "将“计划每次花费”明确为每次实际按计划花费固定金额，补足总支出对应整次数的条件。"
+        ]
+      },
+      "after": {
+        "prompt": "小米和小莎在新商店开业当天各购物1次。从开业当天起，小米每次到店都花7元，小莎每次都花9元。几周后，她们在店里的总支出相同。小米从开业当天算起，至少到店购物多少次？",
+        "adaptation": [
+          "美元情境改为人民币元，数值保留，不作汇率換算。",
+          "明确7元和9元固定支出适用于开业当天及之后的每次购物，所求次数也包括开业当天；保持最小总支出63元及小米9次。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0190",
+      "beforeSha256": "7fb41eb8f9cae88031deaa67c5316a84b93a9e824021bbaed0a6bc00018582de",
+      "afterSha256": "11209baa90184e47895fa6dabd38e59517e3535bf53aa4d2e298a09e88f8807b",
+      "fields": [
+        "adaptation",
+        "prompt"
+      ],
+      "before": {
+        "prompt": "小亚有5枚1角硬币、4枚5分硬币和1枚1分硬币。买一顶90分的帽子，钱够吗？",
+        "adaptation": [
+          "原10、5、1美分硬币改为人民币1角、5分、1分，帽价重设为90分；重新合计为71分并判定不够。"
+        ]
+      },
+      "after": {
+        "prompt": "小亚有5枚1角硬币、4枚5分硬币和1枚1分硬币。买一顶90分的纸帽，钱够吗？",
+        "adaptation": [
+          "原10、5、1美分硬币改为人民币1角、5分、1分，帽价重设为90分；合计71分，差19分，判断不够。",
+          "明确90分商品为廉价纸帽，以匹配所设教学价格尺度。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-597",
+      "beforeSha256": "c8d68a6955643d31640827a49ad43916694453023ccabe74339d995d5c33adf5",
+      "afterSha256": "3dc5bef7a3792eb7b15c6cf7bc129ec4782aaf3034c68628e344bf5b3acdf5fb",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": [
+          "原宽7英尺且所求长2英尺；改为相邻两边，避免中文长宽约定歧义；重设公制数值非精确换算。"
+        ]
+      },
+      "after": {
+        "adaptation": [
+          "原宽7英尺、面积14平方英尺的狭长房间改为长方形地毯，重设面积14平方米、一条边7米，另一边2米；属于物件及公制教学尺度改编，不是精确英尺换算。",
+          "用相邻两边表达7米与2米，避免中文长宽名称与大小约定冲突。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-856",
+      "beforeSha256": "72daa14f0fd536687bb6aeb1e1b182f187865ab541b7c769fd0c26252464b80a",
+      "afterSha256": "f0cb8d41a012b49ad8bd86c90fb5a74a9fb782abf075088f7ae01c318f8f6ac0",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": [
+          "平方英尺和英尺重设为平方米和米，非精确换算。"
+        ]
+      },
+      "after": {
+        "adaptation": [
+          "将原长7英尺、面积14平方英尺的房间改为长方形地毯，重设面积14平方米、长7米；这是生活物件及公制数值重设，不是精确换算，重新核算宽2米。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-627",
+      "beforeSha256": "40fc3978ee4d408f51426a3bf8514d8194e714435ab6371721a8fbac134f0fe2",
+      "afterSha256": "f8ebe0c6e5c30de895da5972ac3466550119bcb9f16e6c6bf18a7ef241fbb2a8",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": [
+          "美元改为人民币元；将低总价的书明确为旧书，不改变金额关系。"
+        ]
+      },
+      "after": {
+        "adaptation": [
+          "美元改为人民币教学情境；92册书明确为整批旧书，总价16元，仍求原有金额16＋6＝22元。",
+          "不保留原文每册同价条件，因为16元÷92不能表示为整分单价；该条件与所求初始金额无关，删除后不影响22元答案。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-409",
+      "beforeSha256": "212cd7c5e2a9d03c218e60c38489a85515bf90c4c16e81d799567fbf95d19736",
+      "afterSha256": "ea61cefa70650cfca2ed6add7b5d1a752d267e49f1159ae73ef9e78b3880bb45",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "将原篮中红桃5个、青桃11个的比较改为红气球5个、绿气球11个；计数单位仍为个，保留绿比红多的目标并重算11－5＝6。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-830",
+      "beforeSha256": "40de2d0bfa52d220e9fc6425d1f02ae64d37e886b4d3974194b1d7457613c95c",
+      "afterSha256": "db6b816b4e1ba8b117a1be2856251a50784face9f109a4b24b441362bbc81876",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "原篮中红桃17个、青桃16个改为红气球17个、绿气球16个；计数单位个不变，保留红比绿多的比较方向，重算17－16＝1。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-893",
+      "beforeSha256": "319ed5bfa06bedc33ce20787cf3515b45b4757b886c763cca69b1e3ef41a1264",
+      "afterSha256": "717e004a8fe7cf815e657fed30469a1544120402ac6151875374d70c37040798",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "原上午52人、下午61人的划船人数比较，改为一人上午划52分钟、下午划61分钟的时长比较；这是数量含义与单位的生活改编，非换算，重新核算下午多61－52＝9分钟。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-982",
+      "beforeSha256": "54c30b8a3b7861ea094b00438484c3cafd674e40f89cbda40d4a6c2ce2f7acfb",
+      "afterSha256": "a4aadec8db624676e9e4ddc10570962829ded25b36f6806b7917b9cb7f803e20",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "原上午62人、下午39人的划船人数比较，重设为一人上午划62分钟、下午划39分钟；属于数量含义与单位的生活改编，非换算，重算上午多62－39＝23分钟。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-141",
+      "beforeSha256": "01436d795b5252890eb97d500d877cb3e3145caa50301b3614e10289fc6177c4",
+      "afterSha256": "a2255f9f2a4bb02617a44577bd93aa29d5fe8ec56178ff812ae443e2fabab374",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "原公交站同时描述上24人与下车若干人；中文明确先上车后下车，使中间47人足够供39人下车，保留初23、上24、末8和下车比上车多15的目标。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-180",
+      "beforeSha256": "d9384005c4d3cf8f1e2ab6ef505b51327330b17101fc895a7c5d8cdbb70d6efa",
+      "afterSha256": "24f92a2b60b162665fb8cfb5d8e04b7d34945048a93bb461a58f044bcf50181d",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "将原桃子比较改为弹珠比较，保留三个角色的小者少5、中间者多18及基准87；单位由个桃变为颗弹珠，重算目标差18－5＝13颗。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-20",
+      "beforeSha256": "6d37a8ab6edba664da94a975571abfed0e3f068484909037680deef3ccdc0e6a",
+      "afterSha256": "47747db80ac30eadcbdcf4f754233af6549ca454b080c3e0acf1aa501b62c7ca",
+      "fields": [
+        "prompt"
+      ],
+      "before": {
+        "prompt": "生日时小明收到457块橡皮和617支蜡笔。到开学时蜡笔剩523支，橡皮没有减少。现在蜡笔比橡皮多多少件？"
+      },
+      "after": {
+        "prompt": "生日时小明收到457块橡皮和617支蜡笔。到学年结束时蜡笔剩523支，橡皮没有减少。现在蜡笔比橡皮多多少件？"
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-223",
+      "beforeSha256": "68df0b34f94875b04d063303a13994c410f39923d0a89760512240b470a1dcfd",
+      "afterSha256": "9f2fb49b14b1247e1465fb1b744d75696ff7f553c4f0b6f2f67fd357d316e21c",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "原校园系列共有62部电影、19本书的作品清单，改为小明计划看62部电影、读19本书；已完成电影34和读书4不变，重算剩余读书目标19－4＝15本。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-341",
+      "beforeSha256": "4b39b83349d0bb277bd8f5db1aa7b35523a41895b4fd705a937e0033f235a710",
+      "afterSha256": "13099431371feace68ac26f4aed652da0b43aa32a0ff692c9106fc0d244c0ecc",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "将原下午3封、上午5封、晚上16封邮件改为一人下午划3分钟、上午5分钟、晚上16分钟；属于数量含义与单位的情境重设，非换算，所问上午比下午多2分钟重算为5－3＝2。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-345",
+      "beforeSha256": "6d2849b3ecdf3df9e4df2bb36490bf6a3c88690ab357ea0a55f725d5e59f6b40",
+      "afterSha256": "f2aca3039c1e08d77f0809d9b90917ed62723c26e0917ae0047005c53cf0e5a4",
+      "fields": [
+        "adaptation"
+      ],
+      "before": {
+        "adaptation": []
+      },
+      "after": {
+        "adaptation": [
+          "原校园系列有8部电影、21本书改为个人计划看8部电影、读21本书，已看4部、已读7本不变；保留未看电影目标，重算8－4＝4部。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-384",
+      "beforeSha256": "b5440c1ab28904d737e153b64394d1f472cbecf687cb6e60606dff309e097a72",
+      "afterSha256": "a900a7b269f62dcba36ebec2cced2595962d801593c288a7dd4b4b9c1e51d8bc",
+      "fields": [
+        "prompt"
+      ],
+      "before": {
+        "prompt": "生日时小明收到601支蜡笔和406块橡皮。到开学时蜡笔剩336支，橡皮没有减少。现在橡皮比蜡笔多多少件？"
+      },
+      "after": {
+        "prompt": "生日时小明收到601支蜡笔和406块橡皮。到学年结束时蜡笔剩336支，橡皮没有减少。现在橡皮比蜡笔多多少件？"
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-602",
+      "beforeSha256": "6092a43991f1da1c16d33c7dc46fc0bbfb9d886272a8bce5b833ea2a76b42a47",
+      "afterSha256": "c675b3c0ac7e379a36b6c56f2cae7b1e25108973a3fcddfd710df57c8d944de1",
+      "fields": [
+        "adaptation",
+        "hints",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "小明先装好28颗糖果，后来又装好42颗糖果，还装好63块巧克力。他共装好了多少颗糖果？",
+        "steps": [
+          "只合计两次装好的糖果。",
+          "28＋42＝70颗。"
+        ],
+        "hints": [
+          "63块巧克力不用。"
+        ],
+        "adaptation": [
+          "把一次大量吃糖的情境改为包装糖果，保留两个时间阶段和物品分类关系。"
+        ]
+      },
+      "after": {
+        "prompt": "小明先装好28颗水果糖，后来又装好42颗水果糖，还装好63块巧克力。他共装好了多少颗水果糖？",
+        "steps": [
+          "只合计两次装好的水果糖。",
+          "28＋42＝70（颗）。"
+        ],
+        "hints": [
+          "所问是水果糖，两次水果糖数量相加。"
+        ],
+        "adaptation": [
+          "将原一次大量吃糖改为包装食品，保留两个时间阶段。",
+          "将泛称糖果明确为水果糖，与巧克力作互不重叠的食品类别，保留28＋42＝70颗，巧克力63块是无关信息。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-489",
+      "beforeSha256": "2116a5f6fcf8d4824589f86f0286a625b9a749798099559c96a6c5ca9218e680",
+      "afterSha256": "bec5981217e5f8c2aef38e51aa3e965a9300803802df4f42de86674e8fe9d2aa",
+      "fields": [
+        "adaptation",
+        "hints",
+        "prompt",
+        "steps"
+      ],
+      "before": {
+        "prompt": "小明有21包口香糖和45包糖果，每包都有9颗。他有多少颗糖果？",
+        "steps": [
+          "糖果45包，每包9颗。",
+          "45×9＝405颗。"
+        ],
+        "hints": [
+          "口香糖21包不计入糖果。"
+        ],
+        "adaptation": []
+      },
+      "after": {
+        "prompt": "小明有21包口香糖和45包水果糖，每包都有9颗。他有多少颗水果糖？",
+        "steps": [
+          "水果糖45包，每包9颗。",
+          "45×9＝405（颗）。"
+        ],
+        "hints": [
+          "只计算45包水果糖的颗数。"
+        ],
+        "adaptation": [
+          "将与口香糖并列的泛称糖果明确为水果糖，使两类互不重叠；保留每包9颗及水果糖45包，重算405颗，口香糖21包为无关信息。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-911",
+      "beforeSha256": "d4f73c9b0f07285d37bd417827bef31f6195678251aa90687c4490f0a48cb946",
+      "afterSha256": "b18bf8edeba575ee764a0900c9296c33dc9fb6e39b741335cb6f7bdb7e41fc44",
+      "fields": [
+        "adaptation",
+        "prompt"
+      ],
+      "before": {
+        "prompt": "小明有28包口香糖和13包糖果，每包都有4颗。他有多少颗口香糖？",
+        "adaptation": []
+      },
+      "after": {
+        "prompt": "小明有28包口香糖和13包水果糖，每包都有4颗。他有多少颗口香糖？",
+        "adaptation": [
+          "与口香糖并列的泛称糖果明确为水果糖，使类别互不重叠；所求仍是口香糖28包每包4颗，独立重算112颗。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl"
+    },
+    {
+      "id": "gsm8k:train-6193",
+      "beforeSha256": "9f50086e190ea8dafc8f519399bd37d1c124708c06aadca5e6abd0dc70285535",
+      "afterSha256": "4f1faae91fa9bb25dd82403ed6371c061cddd05be3ea3cc28d75653777fd8506",
+      "fields": [
+        "steps"
+      ],
+      "before": {
+        "steps": [
+          "小马克13个",
+          "四人共18+18+13=49个，妈妈用40个后剩49−40=9个"
+        ]
+      },
+      "after": {
+        "steps": [
+          "小葛和小莎各有18÷2=9个苹果，小苏有9×2=18个，小马克有18−5=13个。",
+          "四人共有18+18+13=49个，妈妈用40个后剩49−40=9个。"
+        ]
+      },
+      "reviewSource": "content-audit/gsm8k-ac-review.jsonl"
+    },
+    {
+      "id": "gsm8k:train-0363",
+      "beforeSha256": "cf2d1d2d29869082c52297d07660b53844ca87e8a61f6bc2573c49798c22d2ae",
+      "afterSha256": "cf2b38aece174d0d305a5edbaf7905dec33a2f578b945e537d6d0c399c076b4a",
+      "fields": [
+        "steps"
+      ],
+      "before": {
+        "steps": [
+          "文件6÷6=1千克，电脑6−1=5千克",
+          "比小凯包4千克多5−4=1千克"
+        ]
+      },
+      "after": {
+        "steps": [
+          "小科的空公文包重4÷2=2千克，装满后重4×2=8千克，包内物品共8−2=6千克。",
+          "文件重6÷6=1千克，电脑重6−1=5千克。",
+          "电脑比小凯的包重5−4=1千克。"
+        ]
+      },
+      "reviewSource": "content-audit/gsm8k-ac-review.jsonl"
+    },
+    {
+      "id": "gsm8k:train-3064",
+      "beforeSha256": "1643cfc3eb155500eb4cf053476ea5fd1d1f6da2019adb9b751891e75791e3a8",
+      "afterSha256": "5b4c6eb9d900a1524cb729b78050d193782e7d5716e494427e48f7522b0b69d8",
+      "fields": [
+        "steps"
+      ],
+      "before": {
+        "steps": [
+          "小罗8年、小麦6年、小汤16年",
+          "老赵12+8+6+16=42年，距离50年还差8年"
+        ]
+      },
+      "after": {
+        "steps": [
+          "小彼的工龄是19−7=12年，小罗是12−4=8年，小麦是8−2=6年，小汤是8×2=16年。",
+          "老赵的工龄是12+8+6+16=42年，距离50年还需50−42=8年。"
+        ]
+      },
+      "reviewSource": "content-audit/gsm8k-ac-review.jsonl"
+    },
+    {
+      "id": "gsm8k:train-5187",
+      "beforeSha256": "f95500fce7cb109ac6c4e8fa47ad130b15dea793837bfef9772a70e95a7abf62",
+      "afterSha256": "de56055060a0e5132935277442fcb3e104af0b3a774a7a6222478dc9e500331f",
+      "fields": [
+        "steps"
+      ],
+      "before": {
+        "steps": [
+          "小詹8年前14岁，小珍当时7岁，现在15岁",
+          "小苏比小珍小3岁，现在12岁，5年后17岁"
+        ]
+      },
+      "after": {
+        "steps": [
+          "小詹现在37−15=22岁，8年前22−8=14岁；小珍8年前14÷2=7岁，现在7+8=15岁。",
+          "小苏比小珍小3岁，现在15−3=12岁，5年后12+5=17岁。"
+        ]
+      },
+      "reviewSource": "content-audit/gsm8k-ac-review.jsonl"
+    },
+    {
+      "id": "gsm8k:train-6187",
+      "beforeSha256": "397b8d12efcdeb9dd473c8677e53725d45c2bb34f18609e1a3a2014ff38e9315",
+      "afterSha256": "156004600fa91b8e55940b338c3cc6e5b8945d8fa620cff559ca4781da00e018",
+      "fields": [
+        "steps"
+      ],
+      "before": {
+        "steps": [
+          "小吉7年前30÷2+5=20岁，现在27岁",
+          "2年后29岁"
+        ]
+      },
+      "after": {
+        "steps": [
+          "小汤现在32+5=37岁，7年前37−7=30岁；小吉7年前30÷2+5=20岁。",
+          "小吉现在20+7=27岁，2年后27+2=29岁。"
+        ]
+      },
+      "reviewSource": "content-audit/gsm8k-ac-review.jsonl"
+    },
+    {
+      "id": "gsm8k:train-3389",
+      "beforeSha256": "32426b8c22371cbdf5a72faede76ac1238819bf48ea331a8ab34d9f6f7820dfc",
+      "afterSha256": "36302726307bbad2f5c4fdcab9f6f6099abea7553ff3d9ca680b5cc850d480a3",
+      "fields": [
+        "hints"
+      ],
+      "before": {
+        "hints": [
+          "先把所有盎司重量加起来再换成磅。"
+        ]
+      },
+      "after": {
+        "hints": [
+          "先把香水、肥皂和果酱的克数相加，再按1千克＝1000克换成千克。"
+        ]
+      },
+      "reviewSource": "content-audit/gsm8k-b-review.jsonl"
+    },
+    {
+      "id": "gsm8k:train-6002",
+      "beforeSha256": "980e12ccf7e7721c41af97d0ee017284f58434182c1f57a32896ed47b71e593e",
+      "afterSha256": "7f9dd0999614a854c501113d043e5b7a0d6e125a41634186f313b2b226ee65d1",
+      "fields": [
+        "hints"
+      ],
+      "before": {
+        "hints": [
+          "统一使用华氏度，不混入摄氏度换算。"
+        ]
+      },
+      "after": {
+        "hints": [
+          "先把7次摄氏温度读数相加，再除以7。"
+        ]
+      },
+      "reviewSource": "content-audit/gsm8k-b-review.jsonl"
+    },
+    {
+      "id": "gsm8k:train-3451",
+      "beforeSha256": "ebf9743f677781b49b1cb6ed7390fbdaa9f88c1d4f9f34560414ef710d43836a",
+      "afterSha256": "63afac8d8ad92eb8b9159fb3238f64172d33ac18e5148510287393c2f4b2af2b",
+      "fields": [
+        "commonMistakes"
+      ],
+      "before": {
+        "commonMistakes": [
+          "把每排半分钟误当作每株半分钟。"
+        ]
+      },
+      "after": {
+        "commonMistakes": [
+          "把每株半分钟误当作每排半分钟，少算了每排7株的用时。"
+        ]
+      },
+      "reviewSource": "content-audit/gsm8k-b-review.jsonl"
+    },
+    {
+      "id": "gsm8k:train-0030",
+      "beforeSha256": "c0bab932bbb1915fcf6524771d71a7649e00bcd760047ef306bd80d8fa447e15",
+      "afterSha256": "670d39c631a3f7914540a557a6dc80f33a1153fc95c22c4330e5e717e0671fbe",
+      "fields": [
+        "steps"
+      ],
+      "before": {
+        "steps": [
+          "若把旧收入的25%先对应出来，增加的600元使费用多对应600×25%=150元。",
+          "这150元等于旧收入的40%−25%=15%，所以旧收入150÷0.15=1000元。"
+        ]
+      },
+      "after": {
+        "steps": [
+          "房租和水电费金额不变，原收入的40%等于增加600元后收入的25%；后者等于原收入的25%加上600×25%=150元。",
+          "因此原收入的40%−25%=15%是150元，原月收入为150÷0.15=1000元。"
+        ]
+      },
+      "reviewSource": "content-audit/gsm8k-ac-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-0248",
+      "beforeSha256": "018c97297b293adfa4b26aab0a3b5b7e0ff9f8bfdd029ceafbe2957ea4b8243d",
+      "afterSha256": "3e567f96b065e3e2359c22519c913b137d43941c521b5e8fa24bc2ed500000f4",
+      "fields": [
+        "commonMistakes"
+      ],
+      "before": {
+        "commonMistakes": [
+          "看到“更多”就做减法，但题目没有给比较基准。"
+        ]
+      },
+      "after": {
+        "commonMistakes": [
+          "把三个年级的人数误作相差关系而做减法。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl",
+      "supplementaryReviewSource": "content-audit/foundation-auxiliary-review.jsonl"
+    },
+    {
+      "id": "asdiv:nluds-1048",
+      "beforeSha256": "a74eca09378471e71d7ce12017797dd030001342084297e7b5b6990b76619686",
+      "afterSha256": "860e6052a02a68aed0be21b8d8e9745ab0784b4802f6684ec9c20ee752b90cd1",
+      "fields": [
+        "commonMistakes"
+      ],
+      "before": {
+        "commonMistakes": [
+          "只因17大于8就判断小苏的胜负比更大。",
+          "用胜场与总场数比较，改变所求的比。"
+        ]
+      },
+      "after": {
+        "commonMistakes": [
+          "只因17大于8就判断小苏的胜负比更大。",
+          "把负场数放在分子、胜场数放在分母，颠倒胜负比。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl",
+      "supplementaryReviewSource": "content-audit/foundation-auxiliary-review.jsonl"
+    },
+    {
+      "id": "svamp:chal-138",
+      "beforeSha256": "d43c51793e33ffc28bfdfc928c71e78a4e1635a9be0641f28f032c72a341fb38",
+      "afterSha256": "3192121fa8aa87bb16d85dbc38975feb3b560f2dec3b0d6dbd969c459b1ad967",
+      "fields": [
+        "hints"
+      ],
+      "before": {
+        "hints": [
+          "20户各有一份9份的数量。"
+        ]
+      },
+      "after": {
+        "hints": [
+          "20户人家，每户都要送9份宣传单。"
+        ]
+      },
+      "reviewSource": "content-audit/foundation-review.jsonl",
+      "supplementaryReviewSource": "content-audit/foundation-auxiliary-review.jsonl"
+    }
+  ]
+}

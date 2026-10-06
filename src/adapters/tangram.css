@@ -8,7 +8,7 @@ h1 { margin: 2px 0; font-size: 22px; line-height: 1.4; }
 header button { margin-left: auto; white-space: nowrap; font-size: 14px; }
 .instructions { margin: 0; padding: 10px 24px; background: var(--mp-leaf); color: var(--mp-ink); font-size: 13px; flex-shrink: 0; }
 #container { position: relative; flex: 1; min-height: 0; width: 100%; overflow: hidden; background: var(--mp-surface); }
-#tangram-workspace { flex:1; min-height:0; display:grid; grid-template-columns:minmax(0,1fr) 340px; }
+#tangram-workspace { flex:1; min-height:0; display:grid; grid-template-columns:minmax(0,1fr); }
 #tangram-learning { overflow:auto; padding:10px; border-left:1px solid var(--mp-line); }
 #tangram-learning .mp-learning-body { max-height:calc(100dvh - 320px); }
 body.mp-embedded #tangram-workspace { grid-template-columns:minmax(0,1fr); }

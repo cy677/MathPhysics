@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "passed": true,
-  "checkedAt": "2026-10-01T09:44:46.822Z",
+  "checkedAt": "2026-10-05T06:56:53.616Z",
   "questionFamilies": [
     "build-a-molecule/single-molecule/collection",
     "build-a-molecule/multiple-molecules/collection"
@@ -20,31 +20,31 @@
         "id": "build-a-molecule/single-molecule/collection-2",
         "goals": [
           {
-            "cid": 222,
-            "capacity": 1,
-            "atomCount": 4,
-            "bondCount": 3
-          },
-          {
-            "cid": 11638,
+            "cid": 23953,
             "capacity": 1,
             "atomCount": 5,
             "bondCount": 4
           },
           {
-            "cid": 281,
+            "cid": 297,
+            "capacity": 1,
+            "atomCount": 5,
+            "bondCount": 4
+          },
+          {
+            "cid": 6356,
+            "capacity": 1,
+            "atomCount": 4,
+            "bondCount": 3
+          },
+          {
+            "cid": 24526,
             "capacity": 1,
             "atomCount": 2,
             "bondCount": 1
           },
           {
-            "cid": 783,
-            "capacity": 1,
-            "atomCount": 2,
-            "bondCount": 1
-          },
-          {
-            "cid": 962,
+            "cid": 1119,
             "capacity": 1,
             "atomCount": 3,
             "bondCount": 2
@@ -69,28 +69,28 @@
         "id": "build-a-molecule/multiple-molecules/collection-4",
         "goals": [
           {
-            "cid": 6331,
+            "cid": 947,
+            "capacity": 2,
+            "atomCount": 2,
+            "bondCount": 1
+          },
+          {
+            "cid": 784,
             "capacity": 1,
             "atomCount": 4,
             "bondCount": 3
           },
           {
-            "cid": 768,
-            "capacity": 2,
-            "atomCount": 3,
-            "bondCount": 2
-          },
-          {
-            "cid": 402,
-            "capacity": 2,
-            "atomCount": 3,
-            "bondCount": 2
-          },
-          {
-            "cid": 6327,
+            "cid": 6356,
             "capacity": 3,
-            "atomCount": 5,
-            "bondCount": 4
+            "atomCount": 4,
+            "bondCount": 3
+          },
+          {
+            "cid": 24823,
+            "capacity": 3,
+            "atomCount": 3,
+            "bondCount": 2
           }
         ],
         "resetsExpanded": true,
@@ -115,10 +115,16 @@
         "id": "build-a-molecule/single-molecule/collection-2",
         "goals": [
           {
-            "cid": 145068,
+            "cid": 783,
             "capacity": 1,
             "atomCount": 2,
             "bondCount": 1
+          },
+          {
+            "cid": 6356,
+            "capacity": 1,
+            "atomCount": 4,
+            "bondCount": 3
           },
           {
             "cid": 297,
@@ -127,19 +133,13 @@
             "bondCount": 4
           },
           {
-            "cid": 11638,
+            "cid": 768,
             "capacity": 1,
-            "atomCount": 5,
-            "bondCount": 4
+            "atomCount": 3,
+            "bondCount": 2
           },
           {
-            "cid": 947,
-            "capacity": 1,
-            "atomCount": 2,
-            "bondCount": 1
-          },
-          {
-            "cid": 222,
+            "cid": 6326,
             "capacity": 1,
             "atomCount": 4,
             "bondCount": 3
@@ -161,10 +161,16 @@
         "id": "build-a-molecule/multiple-molecules/collection-4",
         "goals": [
           {
-            "cid": 948,
-            "capacity": 1,
-            "atomCount": 3,
-            "bondCount": 2
+            "cid": 6325,
+            "capacity": 2,
+            "atomCount": 6,
+            "bondCount": 5
+          },
+          {
+            "cid": 24524,
+            "capacity": 2,
+            "atomCount": 2,
+            "bondCount": 1
           },
           {
             "cid": 23953,
@@ -173,16 +179,10 @@
             "bondCount": 4
           },
           {
-            "cid": 6325,
-            "capacity": 1,
-            "atomCount": 6,
-            "bondCount": 5
-          },
-          {
-            "cid": 6327,
+            "cid": 24404,
             "capacity": 3,
-            "atomCount": 5,
-            "bondCount": 4
+            "atomCount": 4,
+            "bondCount": 3
           }
         ],
         "resetsExpanded": true,
@@ -1295,15 +1295,7 @@
   ],
   "errors": [],
   "visualReview": {
-    "status": "passed_with_scope_notes",
-    "reviewerModel": "gpt-6-luna",
-    "reasoningEffort": "max",
-    "report": "docs/learning-coverage/visual-phet-molecule.json",
-    "currentUniqueScreenshotPathsReviewed": 10,
-    "primaryScreenshotPathsReviewed": 8,
-    "comparisonScreenshotPathsReviewed": 2,
-    "outstandingFindings": 0,
-    "scope": "Updated full cards and real qty=1 collection viewports; two native/theme qty=0 empty-slot comparisons. Reference pool and all generated states are not visually enumerated."
+    "status": "pending"
   },
   "unitTest": "tests/phet-molecule-question-learning.test.mjs",
   "nativeInteractionLimits": [
@@ -1320,6 +1312,74 @@
     {
       "id": "bam-whole-question-and-collected-preview",
       "checkedAt": "2026-10-01T09:44:46.822Z",
+      "status": "passed",
+      "visualStatus": "pending",
+      "firstReviewImages": [
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-single-desktop-question.png",
+          "sha256": "876a03ae875bac9e4e9b3907e640d9263b7acf76eb18d6f374ff54f5f49ba3df"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-single-desktop-viewport.png",
+          "sha256": "b5cabe4e946e125693369eb019f0e1df565cd0e2bee88f2344917b49a40233e1"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-single-390-question.png",
+          "sha256": "fa518c8493f241ff78179f78275be6a69aa63247d52607aa4155cf298ddc9ffb"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-single-390-viewport.png",
+          "sha256": "4fda786277d892bd612801c4d11875f09b6e707ec303efadfe4cd854b1553399"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-multiple-desktop-question.png",
+          "sha256": "9faaca5b6c2dd1507dbcd56193a3bdf2a1bea80d06c365b3b1be03b2038acfe8"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-multiple-desktop-viewport.png",
+          "sha256": "75fb097f5938d22ab0e1fe1db0e9448a8009482a9503a759eb68ea8ae1969803"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-multiple-390-question.png",
+          "sha256": "29b9ade84cb2e27a26c2ba28fb1b018309370ebccc7c9ad7cb7ebddc8dc8ae7c"
+        },
+        {
+          "path": "output/playwright/learning-coverage/phet-molecule/first-review/http-multiple-390-viewport.png",
+          "sha256": "6275c96025f05e93410ed2cc669bbb25608059c52de27de523368f18e3410697"
+        }
+      ],
+      "firstReviewFindings": [
+        {
+          "reviewer": "Luna",
+          "finding": "Four question captures were clipped by the scroll rail; later solution text and common mistakes were absent."
+        },
+        {
+          "reviewer": "Luna",
+          "finding": "Four quantity-zero viewport captures showed plain black collection rectangles; native empty-slot semantics needed confirmation."
+        }
+      ],
+      "resolution": "Use a taller actual browser viewport scaled to the rail height, expose all four hints and complete solution/errors, verify bounds; capture all eight main images after real pointer collection quantity1.",
+      "wholePanelProofs": 4,
+      "collectedThumbnailPixelProofs": 2,
+      "rephotographed": [
+        "output/playwright/learning-coverage/phet-molecule/http-single-desktop-question.png",
+        "output/playwright/learning-coverage/phet-molecule/http-single-desktop-viewport.png",
+        "output/playwright/learning-coverage/phet-molecule/http-single-390-question.png",
+        "output/playwright/learning-coverage/phet-molecule/http-single-390-viewport.png",
+        "output/playwright/learning-coverage/phet-molecule/http-multiple-desktop-question.png",
+        "output/playwright/learning-coverage/phet-molecule/http-multiple-desktop-viewport.png",
+        "output/playwright/learning-coverage/phet-molecule/http-multiple-390-question.png",
+        "output/playwright/learning-coverage/phet-molecule/http-multiple-390-viewport.png"
+      ],
+      "cleanup": {
+        "browserClosed": true,
+        "serverClosed": true,
+        "portReleased": true
+      }
+    },
+    {
+      "id": "bam-whole-question-and-collected-preview",
+      "checkedAt": "2026-10-05T06:56:53.616Z",
       "status": "passed",
       "visualStatus": "pending",
       "firstReviewImages": [
@@ -1473,19 +1533,19 @@
       "compiledEvidence": [
         {
           "literal": "N.blackBox=new Rr(0,0,160,50,{fill:to.BLACK,lineWidth:4})",
-          "characterOffset": 8555697
+          "characterOffset": 8555964
         },
         {
           "literal": "O.visible=H>0",
-          "characterOffset": 8555943
+          "characterOffset": 8556210
         },
         {
           "literal": "H.addedMoleculeEmitter.addListener(N.addMolecule.bind(N))",
-          "characterOffset": 8556455
+          "characterOffset": 8556722
         },
         {
           "literal": "key:\"lookupThumbnail\"",
-          "characterOffset": 8559033
+          "characterOffset": 8559300
         }
       ]
     },
@@ -1498,70 +1558,71 @@
         "cid": 962,
         "quantity": 0,
         "capacity": 1,
-        "fill": "Ho[r:0 g:0 b:0 a:1]",
+        "fill": "#e7eddf",
         "moleculeNodes": 0,
         "bounds": {
-          "x": 853.76953125,
-          "y": 261.3330078125,
-          "width": 200.78285993756913,
-          "height": 52.734375
+          "x": 1138.359375,
+          "y": 157.77734374999994,
+          "width": 267.7104799167589,
+          "height": 70.3125
         }
       },
       {
         "cid": 977,
         "quantity": 0,
         "capacity": 1,
-        "fill": "Ho[r:0 g:0 b:0 a:1]",
+        "fill": "#e7eddf",
         "moleculeNodes": 0,
         "bounds": {
-          "x": 853.76953125,
-          "y": 358.232421875,
-          "width": 200.78285993756913,
-          "height": 52.734375
+          "x": 1138.359375,
+          "y": 286.97656249999994,
+          "width": 267.7104799167589,
+          "height": 70.3125
         }
       },
       {
         "cid": 783,
         "quantity": 0,
         "capacity": 1,
-        "fill": "Ho[r:0 g:0 b:0 a:1]",
+        "fill": "#e7eddf",
         "moleculeNodes": 0,
         "bounds": {
-          "x": 853.76953125,
-          "y": 455.1318359375,
-          "width": 200.78285993756913,
-          "height": 52.734375
+          "x": 1138.359375,
+          "y": 416.17578124999994,
+          "width": 267.7104799167589,
+          "height": 70.3125
         }
       },
       {
         "cid": 280,
         "quantity": 0,
         "capacity": 1,
-        "fill": "Ho[r:0 g:0 b:0 a:1]",
+        "fill": "#e7eddf",
         "moleculeNodes": 0,
         "bounds": {
-          "x": 853.76953125,
-          "y": 552.03125,
-          "width": 200.78285993756913,
-          "height": 52.734375
+          "x": 1138.359375,
+          "y": 545.375,
+          "width": 267.7104799167589,
+          "height": 70.3125
         }
       },
       {
         "cid": 947,
         "quantity": 0,
         "capacity": 1,
-        "fill": "Ho[r:0 g:0 b:0 a:1]",
+        "fill": "#e7eddf",
         "moleculeNodes": 0,
         "bounds": {
-          "x": 853.76953125,
-          "y": 648.9306640625,
-          "width": 200.78285993756913,
-          "height": 52.734375
+          "x": 1138.359375,
+          "y": 674.57421875,
+          "width": 267.7104799167589,
+          "height": 70.3125
         }
       }
     ],
     "matchesNativeEmptySemantics": true
   },
+  "scopeAudit": "docs/learning-coverage/phet-other-question-audit.json",
   "finiteCoverage": {
     "referenceTypes": 26,
     "boxGoalParameterSignatures": 103,
@@ -1595,1582 +1656,1320 @@
   ],
   "wholePanelCaptures": [
     {
+      "method": "page screenshot with an explicit clip; no implicit element scrolling",
       "viewport": {
         "width": 1440,
-        "height": 2897
+        "height": 2176
+      },
+      "clip": {
+        "x": 397,
+        "y": 340,
+        "width": 646,
+        "height": 1731
       },
       "panel": {
-        "x": 1093,
-        "y": 12,
-        "width": 335,
-        "height": 2737.1875,
-        "top": 12,
-        "right": 1428,
-        "bottom": 2749.1875,
-        "left": 1093
+        "x": 397,
+        "y": 340.953125,
+        "width": 646,
+        "height": 1729.609375,
+        "top": 340.953125,
+        "right": 1043,
+        "bottom": 2070.5625,
+        "left": 397
       },
-      "rail": {
-        "x": 1080,
-        "y": 0,
-        "width": 360,
-        "height": 2897,
-        "top": 0,
-        "right": 1440,
-        "bottom": 2897,
-        "left": 1080,
-        "scrollHeight": 2897,
-        "clientHeight": 2897,
-        "scrollTop": 0
-      },
-      "fields": [
-        {
-          "key": "intent",
-          "bounds": {
-            "x": 1108,
-            "y": 53.390625,
-            "width": 305,
-            "height": 111.953125,
-            "top": 53.390625,
-            "right": 1413,
-            "bottom": 165.34375,
-            "left": 1108
-          },
-          "textLength": 112,
-          "itemCount": 0,
-          "expectedItems": 0,
-          "items": []
+      "wholePanelVisible": true,
+      "allFieldsInRail": true,
+      "lastMistakeLineVisible": true,
+      "before": {
+        "windowScroll": {
+          "x": 0,
+          "y": 0
         },
-        {
-          "key": "hints",
-          "bounds": {
-            "x": 1108,
-            "y": 227.34375,
-            "width": 305,
-            "height": 306.078125,
-            "top": 227.34375,
-            "right": 1413,
-            "bottom": 533.421875,
-            "left": 1108
+        "rail": {
+          "rect": {
+            "x": 380,
+            "y": 16,
+            "width": 680,
+            "height": 2081.5625,
+            "top": 16,
+            "right": 1060,
+            "bottom": 2097.5625,
+            "left": 380
           },
-          "textLength": 235,
-          "itemCount": 4,
-          "expectedItems": 4,
-          "items": [
-            {
-              "x": 1132,
-              "y": 227.34375,
-              "width": 281,
-              "height": 67.171875,
-              "top": 227.34375,
-              "right": 1413,
-              "bottom": 294.515625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 299.515625,
-              "width": 281,
-              "height": 67.171875,
-              "top": 299.515625,
-              "right": 1413,
-              "bottom": 366.6875,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 371.6875,
-              "width": 281,
-              "height": 67.171875,
-              "top": 371.6875,
-              "right": 1413,
-              "bottom": 438.859375,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 443.859375,
-              "width": 281,
-              "height": 89.5625,
-              "top": 443.859375,
-              "right": 1413,
-              "bottom": 533.421875,
-              "left": 1132
-            }
-          ]
+          "scrollHeight": 2080,
+          "clientHeight": 2080,
+          "scrollTop": 0,
+          "scrollLeft": 0
         },
-        {
-          "key": "steps",
-          "bounds": {
-            "x": 1108,
-            "y": 636.8125,
-            "width": 305,
-            "height": 1814.078125,
-            "top": 636.8125,
-            "right": 1413,
-            "bottom": 2450.890625,
-            "left": 1108
-          },
-          "textLength": 1457,
-          "itemCount": 19,
-          "expectedItems": 19,
-          "items": [
-            {
-              "x": 1132,
-              "y": 636.8125,
-              "width": 281,
-              "height": 89.5625,
-              "top": 636.8125,
-              "right": 1413,
-              "bottom": 726.375,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 731.375,
-              "width": 281,
-              "height": 111.953125,
-              "top": 731.375,
-              "right": 1413,
-              "bottom": 843.328125,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 848.328125,
-              "width": 281,
-              "height": 89.5625,
-              "top": 848.328125,
-              "right": 1413,
-              "bottom": 937.890625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 942.890625,
-              "width": 281,
-              "height": 67.171875,
-              "top": 942.890625,
-              "right": 1413,
-              "bottom": 1010.0625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1015.0625,
-              "width": 281,
-              "height": 89.5625,
-              "top": 1015.0625,
-              "right": 1413,
-              "bottom": 1104.625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1109.625,
-              "width": 281,
-              "height": 111.953125,
-              "top": 1109.625,
-              "right": 1413,
-              "bottom": 1221.578125,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1226.578125,
-              "width": 281,
-              "height": 44.78125,
-              "top": 1226.578125,
-              "right": 1413,
-              "bottom": 1271.359375,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1276.359375,
-              "width": 281,
-              "height": 67.171875,
-              "top": 1276.359375,
-              "right": 1413,
-              "bottom": 1343.53125,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1348.53125,
-              "width": 281,
-              "height": 89.5625,
-              "top": 1348.53125,
-              "right": 1413,
-              "bottom": 1438.09375,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1443.09375,
-              "width": 281,
-              "height": 89.5625,
-              "top": 1443.09375,
-              "right": 1413,
-              "bottom": 1532.65625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1537.65625,
-              "width": 281,
-              "height": 89.5625,
-              "top": 1537.65625,
-              "right": 1413,
-              "bottom": 1627.21875,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1632.21875,
-              "width": 281,
-              "height": 111.953125,
-              "top": 1632.21875,
-              "right": 1413,
-              "bottom": 1744.171875,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1749.171875,
-              "width": 281,
-              "height": 134.34375,
-              "top": 1749.171875,
-              "right": 1413,
-              "bottom": 1883.515625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1888.515625,
-              "width": 281,
-              "height": 89.5625,
-              "top": 1888.515625,
-              "right": 1413,
-              "bottom": 1978.078125,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1983.078125,
-              "width": 281,
-              "height": 67.171875,
-              "top": 1983.078125,
-              "right": 1413,
-              "bottom": 2050.25,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 2055.25,
-              "width": 281,
-              "height": 89.5625,
-              "top": 2055.25,
-              "right": 1413,
-              "bottom": 2144.8125,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 2149.8125,
-              "width": 281,
-              "height": 111.953125,
-              "top": 2149.8125,
-              "right": 1413,
-              "bottom": 2261.765625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 2266.765625,
-              "width": 281,
-              "height": 89.5625,
-              "top": 2266.765625,
-              "right": 1413,
-              "bottom": 2356.328125,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 2361.328125,
-              "width": 281,
-              "height": 89.5625,
-              "top": 2361.328125,
-              "right": 1413,
-              "bottom": 2450.890625,
-              "left": 1132
-            }
-          ]
+        "panel": {
+          "x": 397,
+          "y": 340.953125,
+          "width": 646,
+          "height": 1729.609375,
+          "top": 340.953125,
+          "right": 1043,
+          "bottom": 2070.5625,
+          "left": 397
         },
-        {
-          "key": "commonMistakes",
-          "bounds": {
-            "x": 1108,
-            "y": 2489.28125,
-            "width": 305,
-            "height": 238.90625,
-            "top": 2489.28125,
-            "right": 1413,
-            "bottom": 2728.1875,
-            "left": 1108
+        "fields": {
+          "intent": {
+            "x": 412,
+            "y": 382.34375,
+            "width": 616,
+            "height": 67.171875,
+            "top": 382.34375,
+            "right": 1028,
+            "bottom": 449.515625,
+            "left": 412
           },
-          "textLength": 192,
-          "itemCount": 4,
-          "expectedItems": 4,
-          "items": [
-            {
-              "x": 1132,
-              "y": 2489.28125,
-              "width": 281,
-              "height": 67.171875,
-              "top": 2489.28125,
-              "right": 1413,
-              "bottom": 2556.453125,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 2561.453125,
-              "width": 281,
-              "height": 67.171875,
-              "top": 2561.453125,
-              "right": 1413,
-              "bottom": 2628.625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 2633.625,
-              "width": 281,
-              "height": 44.78125,
-              "top": 2633.625,
-              "right": 1413,
-              "bottom": 2678.40625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 2683.40625,
-              "width": 281,
-              "height": 44.78125,
-              "top": 2683.40625,
-              "right": 1413,
-              "bottom": 2728.1875,
-              "left": 1132
-            }
-          ]
-        }
-      ],
-      "questionId": "build-a-molecule/single-molecule/collection-1",
-      "progress": {
-        "collected": 1,
-        "remaining": 4,
-        "boxes": [
-          {
-            "cid": 962,
-            "quantity": 0,
-            "capacity": 1
+          "hints": {
+            "x": 412,
+            "y": 511.515625,
+            "width": 616,
+            "height": 194.125,
+            "top": 511.515625,
+            "right": 1028,
+            "bottom": 705.640625,
+            "left": 412
           },
-          {
-            "cid": 977,
-            "quantity": 1,
-            "capacity": 1
+          "steps": {
+            "x": 412,
+            "y": 809.03125,
+            "width": 616,
+            "height": 1052.796875,
+            "top": 809.03125,
+            "right": 1028,
+            "bottom": 1861.828125,
+            "left": 412
           },
-          {
-            "cid": 783,
-            "quantity": 0,
-            "capacity": 1
-          },
-          {
-            "cid": 280,
-            "quantity": 0,
-            "capacity": 1
-          },
-          {
-            "cid": 947,
-            "quantity": 0,
-            "capacity": 1
+          "commonMistakes": {
+            "x": 412,
+            "y": 1900.21875,
+            "width": 616,
+            "height": 149.34375,
+            "top": 1900.21875,
+            "right": 1028,
+            "bottom": 2049.5625,
+            "left": 412
           }
-        ]
+        },
+        "allFieldsInRail": true,
+        "title": {
+          "text": "本题学习",
+          "rect": {
+            "x": 412,
+            "y": 353.953125,
+            "width": 616,
+            "height": 22.390625,
+            "top": 353.953125,
+            "right": 1028,
+            "bottom": 376.34375,
+            "left": 412
+          },
+          "line": {
+            "x": 412,
+            "y": 355.953125,
+            "width": 56,
+            "height": 18,
+            "top": 355.953125,
+            "right": 468,
+            "bottom": 373.953125,
+            "left": 412
+          },
+          "visible": true,
+          "hit": "H3"
+        },
+        "intentFirstLine": {
+          "text": "本轮收集5种分子，共5个；已经收集1个，还差4个。第1框水（H2O）0/1；第2框氧气（O2）1/1；第3框氢气（H2）0/1；第4框二氧化碳（CO2）0/1；第5框氮气（N2）0/1。每框都要有正确的原子种类、数量和连接。",
+          "rect": {
+            "x": 412,
+            "y": 382.34375,
+            "width": 616,
+            "height": 67.171875,
+            "top": 382.34375,
+            "right": 1028,
+            "bottom": 449.515625,
+            "left": 412
+          },
+          "line": {
+            "x": 412,
+            "y": 384.34375,
+            "width": 583.734375,
+            "height": 18,
+            "top": 384.34375,
+            "right": 995.734375,
+            "bottom": 402.34375,
+            "left": 412
+          },
+          "visible": true,
+          "hit": "P"
+        },
+        "lastMistake": {
+          "text": "整个分子旋转或平移后仍可相同；要比较哪些原子相邻，而不是要求画面朝向完全一样。",
+          "rect": {
+            "x": 436,
+            "y": 2027.171875,
+            "width": 592,
+            "height": 22.390625,
+            "top": 2027.171875,
+            "right": 1028,
+            "bottom": 2049.5625,
+            "left": 436
+          },
+          "line": {
+            "x": 436,
+            "y": 2029.171875,
+            "width": 546,
+            "height": 18,
+            "top": 2029.171875,
+            "right": 982,
+            "bottom": 2047.171875,
+            "left": 436
+          },
+          "visible": true,
+          "hit": "LI"
+        },
+        "fingerprint": "63fb2e63"
       },
-      "image": {
-        "width": 335,
-        "height": 2738
+      "after": {
+        "windowScroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rail": {
+          "rect": {
+            "x": 380,
+            "y": 16,
+            "width": 680,
+            "height": 2081.5625,
+            "top": 16,
+            "right": 1060,
+            "bottom": 2097.5625,
+            "left": 380
+          },
+          "scrollHeight": 2080,
+          "clientHeight": 2080,
+          "scrollTop": 0,
+          "scrollLeft": 0
+        },
+        "panel": {
+          "x": 397,
+          "y": 340.953125,
+          "width": 646,
+          "height": 1729.609375,
+          "top": 340.953125,
+          "right": 1043,
+          "bottom": 2070.5625,
+          "left": 397
+        },
+        "fields": {
+          "intent": {
+            "x": 412,
+            "y": 382.34375,
+            "width": 616,
+            "height": 67.171875,
+            "top": 382.34375,
+            "right": 1028,
+            "bottom": 449.515625,
+            "left": 412
+          },
+          "hints": {
+            "x": 412,
+            "y": 511.515625,
+            "width": 616,
+            "height": 194.125,
+            "top": 511.515625,
+            "right": 1028,
+            "bottom": 705.640625,
+            "left": 412
+          },
+          "steps": {
+            "x": 412,
+            "y": 809.03125,
+            "width": 616,
+            "height": 1052.796875,
+            "top": 809.03125,
+            "right": 1028,
+            "bottom": 1861.828125,
+            "left": 412
+          },
+          "commonMistakes": {
+            "x": 412,
+            "y": 1900.21875,
+            "width": 616,
+            "height": 149.34375,
+            "top": 1900.21875,
+            "right": 1028,
+            "bottom": 2049.5625,
+            "left": 412
+          }
+        },
+        "allFieldsInRail": true,
+        "title": {
+          "text": "本题学习",
+          "rect": {
+            "x": 412,
+            "y": 353.953125,
+            "width": 616,
+            "height": 22.390625,
+            "top": 353.953125,
+            "right": 1028,
+            "bottom": 376.34375,
+            "left": 412
+          },
+          "line": {
+            "x": 412,
+            "y": 355.953125,
+            "width": 56,
+            "height": 18,
+            "top": 355.953125,
+            "right": 468,
+            "bottom": 373.953125,
+            "left": 412
+          },
+          "visible": true,
+          "hit": "H3"
+        },
+        "intentFirstLine": {
+          "text": "本轮收集5种分子，共5个；已经收集1个，还差4个。第1框水（H2O）0/1；第2框氧气（O2）1/1；第3框氢气（H2）0/1；第4框二氧化碳（CO2）0/1；第5框氮气（N2）0/1。每框都要有正确的原子种类、数量和连接。",
+          "rect": {
+            "x": 412,
+            "y": 382.34375,
+            "width": 616,
+            "height": 67.171875,
+            "top": 382.34375,
+            "right": 1028,
+            "bottom": 449.515625,
+            "left": 412
+          },
+          "line": {
+            "x": 412,
+            "y": 384.34375,
+            "width": 583.734375,
+            "height": 18,
+            "top": 384.34375,
+            "right": 995.734375,
+            "bottom": 402.34375,
+            "left": 412
+          },
+          "visible": true,
+          "hit": "P"
+        },
+        "lastMistake": {
+          "text": "整个分子旋转或平移后仍可相同；要比较哪些原子相邻，而不是要求画面朝向完全一样。",
+          "rect": {
+            "x": 436,
+            "y": 2027.171875,
+            "width": 592,
+            "height": 22.390625,
+            "top": 2027.171875,
+            "right": 1028,
+            "bottom": 2049.5625,
+            "left": 436
+          },
+          "line": {
+            "x": 436,
+            "y": 2029.171875,
+            "width": 546,
+            "height": 18,
+            "top": 2029.171875,
+            "right": 982,
+            "bottom": 2047.171875,
+            "left": 436
+          },
+          "visible": true,
+          "hit": "LI"
+        },
+        "fingerprint": "63fb2e63"
       },
-      "path": "output/playwright/learning-coverage/phet-molecule/http-single-desktop-question.png",
-      "checks": {
-        "allFourFieldsPresent": true,
-        "allHintsExpanded": true,
-        "allSolutionStepsPresent": true,
-        "allCommonMistakesPresent": true,
-        "wholePanelInViewport": true,
-        "railNotClipping": true
-      }
+      "path": "output/playwright/learning-coverage/phet-molecule/http-single-desktop-question.png"
     },
     {
+      "method": "page screenshot with an explicit clip; no implicit element scrolling",
       "viewport": {
         "width": 390,
-        "height": 6475
+        "height": 3469
+      },
+      "clip": {
+        "x": 35,
+        "y": 358,
+        "width": 320,
+        "height": 3007
       },
       "panel": {
-        "x": 7,
-        "y": 3763.5,
-        "width": 376,
-        "height": 2558.0625,
-        "top": 3763.5,
-        "right": 383,
-        "bottom": 6321.5625,
-        "left": 7
+        "x": 35,
+        "y": 358.5625,
+        "width": 320,
+        "height": 3005.875,
+        "top": 358.5625,
+        "right": 355,
+        "bottom": 3364.4375,
+        "left": 35
       },
-      "rail": {
-        "x": 0,
-        "y": 3755.5,
-        "width": 390,
-        "height": 2719.5,
-        "top": 3755.5,
-        "right": 390,
-        "bottom": 6475,
-        "left": 0,
-        "scrollHeight": 2719,
-        "clientHeight": 2719,
-        "scrollTop": 0
-      },
-      "fields": [
-        {
-          "key": "intent",
-          "bounds": {
-            "x": 22,
-            "y": 3804.890625,
-            "width": 346,
+      "wholePanelVisible": true,
+      "allFieldsInRail": true,
+      "lastMistakeLineVisible": true,
+      "before": {
+        "windowScroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rail": {
+          "rect": {
+            "x": 18,
+            "y": 16,
+            "width": 354,
+            "height": 3375.4375,
+            "top": 16,
+            "right": 372,
+            "bottom": 3391.4375,
+            "left": 18
+          },
+          "scrollHeight": 3373,
+          "clientHeight": 3373,
+          "scrollTop": 0,
+          "scrollLeft": 0
+        },
+        "panel": {
+          "x": 35,
+          "y": 358.5625,
+          "width": 320,
+          "height": 3005.875,
+          "top": 358.5625,
+          "right": 355,
+          "bottom": 3364.4375,
+          "left": 35
+        },
+        "fields": {
+          "intent": {
+            "x": 50,
+            "y": 399.953125,
+            "width": 290,
             "height": 111.953125,
-            "top": 3804.890625,
-            "right": 368,
-            "bottom": 3916.84375,
-            "left": 22
+            "top": 399.953125,
+            "right": 340,
+            "bottom": 511.90625,
+            "left": 50
           },
-          "textLength": 112,
-          "itemCount": 0,
-          "expectedItems": 0,
-          "items": []
-        },
-        {
-          "key": "hints",
-          "bounds": {
-            "x": 22,
-            "y": 3978.84375,
-            "width": 346,
-            "height": 261.296875,
-            "top": 3978.84375,
-            "right": 368,
-            "bottom": 4240.140625,
-            "left": 22
-          },
-          "textLength": 235,
-          "itemCount": 4,
-          "expectedItems": 4,
-          "items": [
-            {
-              "x": 46,
-              "y": 3978.84375,
-              "width": 322,
-              "height": 67.171875,
-              "top": 3978.84375,
-              "right": 368,
-              "bottom": 4046.015625,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4051.015625,
-              "width": 322,
-              "height": 44.78125,
-              "top": 4051.015625,
-              "right": 368,
-              "bottom": 4095.796875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4100.796875,
-              "width": 322,
-              "height": 67.171875,
-              "top": 4100.796875,
-              "right": 368,
-              "bottom": 4167.96875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4172.96875,
-              "width": 322,
-              "height": 67.171875,
-              "top": 4172.96875,
-              "right": 368,
-              "bottom": 4240.140625,
-              "left": 46
-            }
-          ]
-        },
-        {
-          "key": "steps",
-          "bounds": {
-            "x": 22,
-            "y": 4343.53125,
-            "width": 346,
-            "height": 1679.734375,
-            "top": 4343.53125,
-            "right": 368,
-            "bottom": 6023.265625,
-            "left": 22
-          },
-          "textLength": 1457,
-          "itemCount": 19,
-          "expectedItems": 19,
-          "items": [
-            {
-              "x": 46,
-              "y": 4343.53125,
-              "width": 322,
-              "height": 89.5625,
-              "top": 4343.53125,
-              "right": 368,
-              "bottom": 4433.09375,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4438.09375,
-              "width": 322,
-              "height": 89.5625,
-              "top": 4438.09375,
-              "right": 368,
-              "bottom": 4527.65625,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4532.65625,
-              "width": 322,
-              "height": 89.5625,
-              "top": 4532.65625,
-              "right": 368,
-              "bottom": 4622.21875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4627.21875,
-              "width": 322,
-              "height": 67.171875,
-              "top": 4627.21875,
-              "right": 368,
-              "bottom": 4694.390625,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4699.390625,
-              "width": 322,
-              "height": 89.5625,
-              "top": 4699.390625,
-              "right": 368,
-              "bottom": 4788.953125,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4793.953125,
-              "width": 322,
-              "height": 111.953125,
-              "top": 4793.953125,
-              "right": 368,
-              "bottom": 4905.90625,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4910.90625,
-              "width": 322,
-              "height": 44.78125,
-              "top": 4910.90625,
-              "right": 368,
-              "bottom": 4955.6875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4960.6875,
-              "width": 322,
-              "height": 67.171875,
-              "top": 4960.6875,
-              "right": 368,
-              "bottom": 5027.859375,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5032.859375,
-              "width": 322,
-              "height": 89.5625,
-              "top": 5032.859375,
-              "right": 368,
-              "bottom": 5122.421875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5127.421875,
-              "width": 322,
-              "height": 67.171875,
-              "top": 5127.421875,
-              "right": 368,
-              "bottom": 5194.59375,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5199.59375,
-              "width": 322,
-              "height": 89.5625,
-              "top": 5199.59375,
-              "right": 368,
-              "bottom": 5289.15625,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5294.15625,
-              "width": 322,
-              "height": 89.5625,
-              "top": 5294.15625,
-              "right": 368,
-              "bottom": 5383.71875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5388.71875,
-              "width": 322,
-              "height": 111.953125,
-              "top": 5388.71875,
-              "right": 368,
-              "bottom": 5500.671875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5505.671875,
-              "width": 322,
-              "height": 89.5625,
-              "top": 5505.671875,
-              "right": 368,
-              "bottom": 5595.234375,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5600.234375,
-              "width": 322,
-              "height": 67.171875,
-              "top": 5600.234375,
-              "right": 368,
-              "bottom": 5667.40625,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5672.40625,
-              "width": 322,
-              "height": 89.5625,
-              "top": 5672.40625,
-              "right": 368,
-              "bottom": 5761.96875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5766.96875,
-              "width": 322,
-              "height": 111.953125,
-              "top": 5766.96875,
-              "right": 368,
-              "bottom": 5878.921875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5883.921875,
-              "width": 322,
-              "height": 67.171875,
-              "top": 5883.921875,
-              "right": 368,
-              "bottom": 5951.09375,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5956.09375,
-              "width": 322,
-              "height": 67.171875,
-              "top": 5956.09375,
-              "right": 368,
-              "bottom": 6023.265625,
-              "left": 46
-            }
-          ]
-        },
-        {
-          "key": "commonMistakes",
-          "bounds": {
-            "x": 22,
-            "y": 6061.65625,
-            "width": 346,
-            "height": 238.90625,
-            "top": 6061.65625,
-            "right": 368,
-            "bottom": 6300.5625,
-            "left": 22
-          },
-          "textLength": 192,
-          "itemCount": 4,
-          "expectedItems": 4,
-          "items": [
-            {
-              "x": 46,
-              "y": 6061.65625,
-              "width": 322,
-              "height": 67.171875,
-              "top": 6061.65625,
-              "right": 368,
-              "bottom": 6128.828125,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 6133.828125,
-              "width": 322,
-              "height": 67.171875,
-              "top": 6133.828125,
-              "right": 368,
-              "bottom": 6201,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 6206,
-              "width": 322,
-              "height": 44.78125,
-              "top": 6206,
-              "right": 368,
-              "bottom": 6250.78125,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 6255.78125,
-              "width": 322,
-              "height": 44.78125,
-              "top": 6255.78125,
-              "right": 368,
-              "bottom": 6300.5625,
-              "left": 46
-            }
-          ]
-        }
-      ],
-      "questionId": "build-a-molecule/single-molecule/collection-1",
-      "progress": {
-        "collected": 1,
-        "remaining": 4,
-        "boxes": [
-          {
-            "cid": 962,
-            "quantity": 0,
-            "capacity": 1
-          },
-          {
-            "cid": 977,
-            "quantity": 1,
-            "capacity": 1
-          },
-          {
-            "cid": 783,
-            "quantity": 0,
-            "capacity": 1
-          },
-          {
-            "cid": 280,
-            "quantity": 0,
-            "capacity": 1
-          },
-          {
-            "cid": 947,
-            "quantity": 0,
-            "capacity": 1
-          }
-        ]
-      },
-      "image": {
-        "width": 376,
-        "height": 2559
-      },
-      "path": "output/playwright/learning-coverage/phet-molecule/http-single-390-question.png",
-      "checks": {
-        "allFourFieldsPresent": true,
-        "allHintsExpanded": true,
-        "allSolutionStepsPresent": true,
-        "allCommonMistakesPresent": true,
-        "wholePanelInViewport": true,
-        "railNotClipping": true
-      }
-    },
-    {
-      "viewport": {
-        "width": 1440,
-        "height": 2586
-      },
-      "panel": {
-        "x": 1093,
-        "y": 12,
-        "width": 335,
-        "height": 2426.109375,
-        "top": 12,
-        "right": 1428,
-        "bottom": 2438.109375,
-        "left": 1093
-      },
-      "rail": {
-        "x": 1080,
-        "y": 0,
-        "width": 360,
-        "height": 2586,
-        "top": 0,
-        "right": 1440,
-        "bottom": 2586,
-        "left": 1080,
-        "scrollHeight": 2586,
-        "clientHeight": 2586,
-        "scrollTop": 0
-      },
-      "fields": [
-        {
-          "key": "intent",
-          "bounds": {
-            "x": 1108,
-            "y": 53.390625,
-            "width": 305,
-            "height": 111.953125,
-            "top": 53.390625,
-            "right": 1413,
-            "bottom": 165.34375,
-            "left": 1108
-          },
-          "textLength": 100,
-          "itemCount": 0,
-          "expectedItems": 0,
-          "items": []
-        },
-        {
-          "key": "hints",
-          "bounds": {
-            "x": 1108,
-            "y": 227.34375,
-            "width": 305,
+          "hints": {
+            "x": 50,
+            "y": 573.90625,
+            "width": 290,
             "height": 328.46875,
-            "top": 227.34375,
-            "right": 1413,
-            "bottom": 555.8125,
-            "left": 1108
+            "top": 573.90625,
+            "right": 340,
+            "bottom": 902.375,
+            "left": 50
           },
-          "textLength": 241,
-          "itemCount": 4,
-          "expectedItems": 4,
-          "items": [
-            {
-              "x": 1132,
-              "y": 227.34375,
-              "width": 281,
-              "height": 67.171875,
-              "top": 227.34375,
-              "right": 1413,
-              "bottom": 294.515625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 299.515625,
-              "width": 281,
-              "height": 67.171875,
-              "top": 299.515625,
-              "right": 1413,
-              "bottom": 366.6875,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 371.6875,
-              "width": 281,
-              "height": 89.5625,
-              "top": 371.6875,
-              "right": 1413,
-              "bottom": 461.25,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 466.25,
-              "width": 281,
-              "height": 89.5625,
-              "top": 466.25,
-              "right": 1413,
-              "bottom": 555.8125,
-              "left": 1132
-            }
-          ]
-        },
-        {
-          "key": "steps",
-          "bounds": {
-            "x": 1108,
-            "y": 659.203125,
-            "width": 305,
-            "height": 1480.609375,
-            "top": 659.203125,
-            "right": 1413,
-            "bottom": 2139.8125,
-            "left": 1108
+          "steps": {
+            "x": 50,
+            "y": 1005.765625,
+            "width": 290,
+            "height": 2015.59375,
+            "top": 1005.765625,
+            "right": 340,
+            "bottom": 3021.359375,
+            "left": 50
           },
-          "textLength": 1191,
-          "itemCount": 15,
-          "expectedItems": 15,
-          "items": [
-            {
-              "x": 1132,
-              "y": 659.203125,
-              "width": 281,
-              "height": 89.5625,
-              "top": 659.203125,
-              "right": 1413,
-              "bottom": 748.765625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 753.765625,
-              "width": 281,
-              "height": 111.953125,
-              "top": 753.765625,
-              "right": 1413,
-              "bottom": 865.71875,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 870.71875,
-              "width": 281,
-              "height": 134.34375,
-              "top": 870.71875,
-              "right": 1413,
-              "bottom": 1005.0625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1010.0625,
-              "width": 281,
-              "height": 89.5625,
-              "top": 1010.0625,
-              "right": 1413,
-              "bottom": 1099.625,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1104.625,
-              "width": 281,
-              "height": 67.171875,
-              "top": 1104.625,
-              "right": 1413,
-              "bottom": 1171.796875,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1176.796875,
-              "width": 281,
-              "height": 89.5625,
-              "top": 1176.796875,
-              "right": 1413,
-              "bottom": 1266.359375,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1271.359375,
-              "width": 281,
-              "height": 111.953125,
-              "top": 1271.359375,
-              "right": 1413,
-              "bottom": 1383.3125,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1388.3125,
-              "width": 281,
-              "height": 89.5625,
-              "top": 1388.3125,
-              "right": 1413,
-              "bottom": 1477.875,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1482.875,
-              "width": 281,
-              "height": 67.171875,
-              "top": 1482.875,
-              "right": 1413,
-              "bottom": 1550.046875,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1555.046875,
-              "width": 281,
-              "height": 89.5625,
-              "top": 1555.046875,
-              "right": 1413,
-              "bottom": 1644.609375,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1649.609375,
-              "width": 281,
-              "height": 89.5625,
-              "top": 1649.609375,
-              "right": 1413,
-              "bottom": 1739.171875,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1744.171875,
-              "width": 281,
-              "height": 89.5625,
-              "top": 1744.171875,
-              "right": 1413,
-              "bottom": 1833.734375,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1838.734375,
-              "width": 281,
-              "height": 111.953125,
-              "top": 1838.734375,
-              "right": 1413,
-              "bottom": 1950.6875,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 1955.6875,
-              "width": 281,
-              "height": 89.5625,
-              "top": 1955.6875,
-              "right": 1413,
-              "bottom": 2045.25,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 2050.25,
-              "width": 281,
-              "height": 89.5625,
-              "top": 2050.25,
-              "right": 1413,
-              "bottom": 2139.8125,
-              "left": 1132
-            }
-          ]
-        },
-        {
-          "key": "commonMistakes",
-          "bounds": {
-            "x": 1108,
-            "y": 2178.203125,
-            "width": 305,
-            "height": 238.90625,
-            "top": 2178.203125,
-            "right": 1413,
-            "bottom": 2417.109375,
-            "left": 1108
-          },
-          "textLength": 192,
-          "itemCount": 4,
-          "expectedItems": 4,
-          "items": [
-            {
-              "x": 1132,
-              "y": 2178.203125,
-              "width": 281,
-              "height": 67.171875,
-              "top": 2178.203125,
-              "right": 1413,
-              "bottom": 2245.375,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 2250.375,
-              "width": 281,
-              "height": 67.171875,
-              "top": 2250.375,
-              "right": 1413,
-              "bottom": 2317.546875,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 2322.546875,
-              "width": 281,
-              "height": 44.78125,
-              "top": 2322.546875,
-              "right": 1413,
-              "bottom": 2367.328125,
-              "left": 1132
-            },
-            {
-              "x": 1132,
-              "y": 2372.328125,
-              "width": 281,
-              "height": 44.78125,
-              "top": 2372.328125,
-              "right": 1413,
-              "bottom": 2417.109375,
-              "left": 1132
-            }
-          ]
-        }
-      ],
-      "questionId": "build-a-molecule/multiple-molecules/collection-3",
-      "progress": {
-        "collected": 1,
-        "remaining": 9,
-        "boxes": [
-          {
-            "cid": 280,
-            "quantity": 0,
-            "capacity": 2
-          },
-          {
-            "cid": 977,
-            "quantity": 1,
-            "capacity": 2
-          },
-          {
-            "cid": 783,
-            "quantity": 0,
-            "capacity": 4
-          },
-          {
-            "cid": 222,
-            "quantity": 0,
-            "capacity": 2
+          "commonMistakes": {
+            "x": 50,
+            "y": 3059.75,
+            "width": 290,
+            "height": 283.6875,
+            "top": 3059.75,
+            "right": 340,
+            "bottom": 3343.4375,
+            "left": 50
           }
-        ]
+        },
+        "allFieldsInRail": true,
+        "title": {
+          "text": "本题学习",
+          "rect": {
+            "x": 50,
+            "y": 371.5625,
+            "width": 290,
+            "height": 22.390625,
+            "top": 371.5625,
+            "right": 340,
+            "bottom": 393.953125,
+            "left": 50
+          },
+          "line": {
+            "x": 50,
+            "y": 373.5625,
+            "width": 56,
+            "height": 18,
+            "top": 373.5625,
+            "right": 106,
+            "bottom": 391.5625,
+            "left": 50
+          },
+          "visible": true,
+          "hit": "H3"
+        },
+        "intentFirstLine": {
+          "text": "本轮收集5种分子，共5个；已经收集1个，还差4个。第1框水（H2O）0/1；第2框氧气（O2）1/1；第3框氢气（H2）0/1；第4框二氧化碳（CO2）0/1；第5框氮气（N2）0/1。每框都要有正确的原子种类、数量和连接。",
+          "rect": {
+            "x": 50,
+            "y": 399.953125,
+            "width": 290,
+            "height": 111.953125,
+            "top": 399.953125,
+            "right": 340,
+            "bottom": 511.90625,
+            "left": 50
+          },
+          "line": {
+            "x": 50,
+            "y": 401.953125,
+            "width": 276.640625,
+            "height": 18,
+            "top": 401.953125,
+            "right": 326.640625,
+            "bottom": 419.953125,
+            "left": 50
+          },
+          "visible": true,
+          "hit": "P"
+        },
+        "lastMistake": {
+          "text": "整个分子旋转或平移后仍可相同；要比较哪些原子相邻，而不是要求画面朝向完全一样。",
+          "rect": {
+            "x": 74,
+            "y": 3276.265625,
+            "width": 266,
+            "height": 67.171875,
+            "top": 3276.265625,
+            "right": 340,
+            "bottom": 3343.4375,
+            "left": 74
+          },
+          "line": {
+            "x": 74,
+            "y": 3323.046875,
+            "width": 28,
+            "height": 18,
+            "top": 3323.046875,
+            "right": 102,
+            "bottom": 3341.046875,
+            "left": 74
+          },
+          "visible": true,
+          "hit": "LI"
+        },
+        "fingerprint": "63fb2e63"
       },
-      "image": {
-        "width": 335,
-        "height": 2427
+      "after": {
+        "windowScroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rail": {
+          "rect": {
+            "x": 18,
+            "y": 16,
+            "width": 354,
+            "height": 3375.4375,
+            "top": 16,
+            "right": 372,
+            "bottom": 3391.4375,
+            "left": 18
+          },
+          "scrollHeight": 3373,
+          "clientHeight": 3373,
+          "scrollTop": 0,
+          "scrollLeft": 0
+        },
+        "panel": {
+          "x": 35,
+          "y": 358.5625,
+          "width": 320,
+          "height": 3005.875,
+          "top": 358.5625,
+          "right": 355,
+          "bottom": 3364.4375,
+          "left": 35
+        },
+        "fields": {
+          "intent": {
+            "x": 50,
+            "y": 399.953125,
+            "width": 290,
+            "height": 111.953125,
+            "top": 399.953125,
+            "right": 340,
+            "bottom": 511.90625,
+            "left": 50
+          },
+          "hints": {
+            "x": 50,
+            "y": 573.90625,
+            "width": 290,
+            "height": 328.46875,
+            "top": 573.90625,
+            "right": 340,
+            "bottom": 902.375,
+            "left": 50
+          },
+          "steps": {
+            "x": 50,
+            "y": 1005.765625,
+            "width": 290,
+            "height": 2015.59375,
+            "top": 1005.765625,
+            "right": 340,
+            "bottom": 3021.359375,
+            "left": 50
+          },
+          "commonMistakes": {
+            "x": 50,
+            "y": 3059.75,
+            "width": 290,
+            "height": 283.6875,
+            "top": 3059.75,
+            "right": 340,
+            "bottom": 3343.4375,
+            "left": 50
+          }
+        },
+        "allFieldsInRail": true,
+        "title": {
+          "text": "本题学习",
+          "rect": {
+            "x": 50,
+            "y": 371.5625,
+            "width": 290,
+            "height": 22.390625,
+            "top": 371.5625,
+            "right": 340,
+            "bottom": 393.953125,
+            "left": 50
+          },
+          "line": {
+            "x": 50,
+            "y": 373.5625,
+            "width": 56,
+            "height": 18,
+            "top": 373.5625,
+            "right": 106,
+            "bottom": 391.5625,
+            "left": 50
+          },
+          "visible": true,
+          "hit": "H3"
+        },
+        "intentFirstLine": {
+          "text": "本轮收集5种分子，共5个；已经收集1个，还差4个。第1框水（H2O）0/1；第2框氧气（O2）1/1；第3框氢气（H2）0/1；第4框二氧化碳（CO2）0/1；第5框氮气（N2）0/1。每框都要有正确的原子种类、数量和连接。",
+          "rect": {
+            "x": 50,
+            "y": 399.953125,
+            "width": 290,
+            "height": 111.953125,
+            "top": 399.953125,
+            "right": 340,
+            "bottom": 511.90625,
+            "left": 50
+          },
+          "line": {
+            "x": 50,
+            "y": 401.953125,
+            "width": 276.640625,
+            "height": 18,
+            "top": 401.953125,
+            "right": 326.640625,
+            "bottom": 419.953125,
+            "left": 50
+          },
+          "visible": true,
+          "hit": "P"
+        },
+        "lastMistake": {
+          "text": "整个分子旋转或平移后仍可相同；要比较哪些原子相邻，而不是要求画面朝向完全一样。",
+          "rect": {
+            "x": 74,
+            "y": 3276.265625,
+            "width": 266,
+            "height": 67.171875,
+            "top": 3276.265625,
+            "right": 340,
+            "bottom": 3343.4375,
+            "left": 74
+          },
+          "line": {
+            "x": 74,
+            "y": 3323.046875,
+            "width": 28,
+            "height": 18,
+            "top": 3323.046875,
+            "right": 102,
+            "bottom": 3341.046875,
+            "left": 74
+          },
+          "visible": true,
+          "hit": "LI"
+        },
+        "fingerprint": "63fb2e63"
       },
-      "path": "output/playwright/learning-coverage/phet-molecule/http-multiple-desktop-question.png",
-      "checks": {
-        "allFourFieldsPresent": true,
-        "allHintsExpanded": true,
-        "allSolutionStepsPresent": true,
-        "allCommonMistakesPresent": true,
-        "wholePanelInViewport": true,
-        "railNotClipping": true
-      }
+      "path": "output/playwright/learning-coverage/phet-molecule/http-single-390-question.png"
     },
     {
+      "method": "page screenshot with an explicit clip; no implicit element scrolling",
       "viewport": {
-        "width": 390,
-        "height": 5679
+        "width": 1440,
+        "height": 1976
+      },
+      "clip": {
+        "x": 397,
+        "y": 340,
+        "width": 646,
+        "height": 1532
       },
       "panel": {
-        "x": 7,
-        "y": 3301.828125,
-        "width": 376,
-        "height": 2224.59375,
-        "top": 3301.828125,
-        "right": 383,
-        "bottom": 5526.421875,
-        "left": 7
+        "x": 397,
+        "y": 340.953125,
+        "width": 646,
+        "height": 1530.484375,
+        "top": 340.953125,
+        "right": 1043,
+        "bottom": 1871.4375,
+        "left": 397
       },
-      "rail": {
-        "x": 0,
-        "y": 3293.828125,
-        "width": 390,
-        "height": 2385.171875,
-        "top": 3293.828125,
-        "right": 390,
-        "bottom": 5679,
-        "left": 0,
-        "scrollHeight": 2384,
-        "clientHeight": 2384,
-        "scrollTop": 0
-      },
-      "fields": [
-        {
-          "key": "intent",
-          "bounds": {
-            "x": 22,
-            "y": 3343.21875,
-            "width": 346,
-            "height": 89.5625,
-            "top": 3343.21875,
-            "right": 368,
-            "bottom": 3432.78125,
-            "left": 22
-          },
-          "textLength": 100,
-          "itemCount": 0,
-          "expectedItems": 0,
-          "items": []
+      "wholePanelVisible": true,
+      "allFieldsInRail": true,
+      "lastMistakeLineVisible": true,
+      "before": {
+        "windowScroll": {
+          "x": 0,
+          "y": 0
         },
-        {
-          "key": "hints",
-          "bounds": {
-            "x": 22,
-            "y": 3494.78125,
-            "width": 346,
-            "height": 261.296875,
-            "top": 3494.78125,
-            "right": 368,
-            "bottom": 3756.078125,
-            "left": 22
+        "rail": {
+          "rect": {
+            "x": 380,
+            "y": 16,
+            "width": 680,
+            "height": 1882.4375,
+            "top": 16,
+            "right": 1060,
+            "bottom": 1898.4375,
+            "left": 380
           },
-          "textLength": 241,
-          "itemCount": 4,
-          "expectedItems": 4,
-          "items": [
-            {
-              "x": 46,
-              "y": 3494.78125,
-              "width": 322,
-              "height": 67.171875,
-              "top": 3494.78125,
-              "right": 368,
-              "bottom": 3561.953125,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 3566.953125,
-              "width": 322,
-              "height": 44.78125,
-              "top": 3566.953125,
-              "right": 368,
-              "bottom": 3611.734375,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 3616.734375,
-              "width": 322,
-              "height": 67.171875,
-              "top": 3616.734375,
-              "right": 368,
-              "bottom": 3683.90625,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 3688.90625,
-              "width": 322,
-              "height": 67.171875,
-              "top": 3688.90625,
-              "right": 368,
-              "bottom": 3756.078125,
-              "left": 46
-            }
-          ]
+          "scrollHeight": 1880,
+          "clientHeight": 1880,
+          "scrollTop": 0,
+          "scrollLeft": 0
         },
-        {
-          "key": "steps",
-          "bounds": {
-            "x": 22,
-            "y": 3859.46875,
-            "width": 346,
-            "height": 1368.65625,
-            "top": 3859.46875,
-            "right": 368,
-            "bottom": 5228.125,
-            "left": 22
-          },
-          "textLength": 1191,
-          "itemCount": 15,
-          "expectedItems": 15,
-          "items": [
-            {
-              "x": 46,
-              "y": 3859.46875,
-              "width": 322,
-              "height": 89.5625,
-              "top": 3859.46875,
-              "right": 368,
-              "bottom": 3949.03125,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 3954.03125,
-              "width": 322,
-              "height": 89.5625,
-              "top": 3954.03125,
-              "right": 368,
-              "bottom": 4043.59375,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4048.59375,
-              "width": 322,
-              "height": 111.953125,
-              "top": 4048.59375,
-              "right": 368,
-              "bottom": 4160.546875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4165.546875,
-              "width": 322,
-              "height": 89.5625,
-              "top": 4165.546875,
-              "right": 368,
-              "bottom": 4255.109375,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4260.109375,
-              "width": 322,
-              "height": 67.171875,
-              "top": 4260.109375,
-              "right": 368,
-              "bottom": 4327.28125,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4332.28125,
-              "width": 322,
-              "height": 89.5625,
-              "top": 4332.28125,
-              "right": 368,
-              "bottom": 4421.84375,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4426.84375,
-              "width": 322,
-              "height": 111.953125,
-              "top": 4426.84375,
-              "right": 368,
-              "bottom": 4538.796875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4543.796875,
-              "width": 322,
-              "height": 67.171875,
-              "top": 4543.796875,
-              "right": 368,
-              "bottom": 4610.96875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4615.96875,
-              "width": 322,
-              "height": 67.171875,
-              "top": 4615.96875,
-              "right": 368,
-              "bottom": 4683.140625,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4688.140625,
-              "width": 322,
-              "height": 89.5625,
-              "top": 4688.140625,
-              "right": 368,
-              "bottom": 4777.703125,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4782.703125,
-              "width": 322,
-              "height": 67.171875,
-              "top": 4782.703125,
-              "right": 368,
-              "bottom": 4849.875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4854.875,
-              "width": 322,
-              "height": 89.5625,
-              "top": 4854.875,
-              "right": 368,
-              "bottom": 4944.4375,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 4949.4375,
-              "width": 322,
-              "height": 111.953125,
-              "top": 4949.4375,
-              "right": 368,
-              "bottom": 5061.390625,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5066.390625,
-              "width": 322,
-              "height": 89.5625,
-              "top": 5066.390625,
-              "right": 368,
-              "bottom": 5155.953125,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5160.953125,
-              "width": 322,
-              "height": 67.171875,
-              "top": 5160.953125,
-              "right": 368,
-              "bottom": 5228.125,
-              "left": 46
-            }
-          ]
+        "panel": {
+          "x": 397,
+          "y": 340.953125,
+          "width": 646,
+          "height": 1530.484375,
+          "top": 340.953125,
+          "right": 1043,
+          "bottom": 1871.4375,
+          "left": 397
         },
-        {
-          "key": "commonMistakes",
-          "bounds": {
-            "x": 22,
-            "y": 5266.515625,
-            "width": 346,
-            "height": 238.90625,
-            "top": 5266.515625,
-            "right": 368,
-            "bottom": 5505.421875,
-            "left": 22
+        "fields": {
+          "intent": {
+            "x": 412,
+            "y": 382.34375,
+            "width": 616,
+            "height": 67.171875,
+            "top": 382.34375,
+            "right": 1028,
+            "bottom": 449.515625,
+            "left": 412
           },
-          "textLength": 192,
-          "itemCount": 4,
-          "expectedItems": 4,
-          "items": [
-            {
-              "x": 46,
-              "y": 5266.515625,
-              "width": 322,
-              "height": 67.171875,
-              "top": 5266.515625,
-              "right": 368,
-              "bottom": 5333.6875,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5338.6875,
-              "width": 322,
-              "height": 67.171875,
-              "top": 5338.6875,
-              "right": 368,
-              "bottom": 5405.859375,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5410.859375,
-              "width": 322,
-              "height": 44.78125,
-              "top": 5410.859375,
-              "right": 368,
-              "bottom": 5455.640625,
-              "left": 46
-            },
-            {
-              "x": 46,
-              "y": 5460.640625,
-              "width": 322,
-              "height": 44.78125,
-              "top": 5460.640625,
-              "right": 368,
-              "bottom": 5505.421875,
-              "left": 46
-            }
-          ]
-        }
-      ],
-      "questionId": "build-a-molecule/multiple-molecules/collection-3",
-      "progress": {
-        "collected": 1,
-        "remaining": 9,
-        "boxes": [
-          {
-            "cid": 280,
-            "quantity": 0,
-            "capacity": 2
+          "hints": {
+            "x": 412,
+            "y": 511.515625,
+            "width": 616,
+            "height": 194.125,
+            "top": 511.515625,
+            "right": 1028,
+            "bottom": 705.640625,
+            "left": 412
           },
-          {
-            "cid": 977,
-            "quantity": 1,
-            "capacity": 2
+          "steps": {
+            "x": 412,
+            "y": 809.03125,
+            "width": 616,
+            "height": 853.671875,
+            "top": 809.03125,
+            "right": 1028,
+            "bottom": 1662.703125,
+            "left": 412
           },
-          {
-            "cid": 783,
-            "quantity": 0,
-            "capacity": 4
-          },
-          {
-            "cid": 222,
-            "quantity": 0,
-            "capacity": 2
+          "commonMistakes": {
+            "x": 412,
+            "y": 1701.09375,
+            "width": 616,
+            "height": 149.34375,
+            "top": 1701.09375,
+            "right": 1028,
+            "bottom": 1850.4375,
+            "left": 412
           }
-        ]
+        },
+        "allFieldsInRail": true,
+        "title": {
+          "text": "本题学习",
+          "rect": {
+            "x": 412,
+            "y": 353.953125,
+            "width": 616,
+            "height": 22.390625,
+            "top": 353.953125,
+            "right": 1028,
+            "bottom": 376.34375,
+            "left": 412
+          },
+          "line": {
+            "x": 412,
+            "y": 355.953125,
+            "width": 56,
+            "height": 18,
+            "top": 355.953125,
+            "right": 468,
+            "bottom": 373.953125,
+            "left": 412
+          },
+          "visible": true,
+          "hit": "H3"
+        },
+        "intentFirstLine": {
+          "text": "本轮收集4种分子，共10个；已经收集1个，还差9个。第1框二氧化碳（CO2）0/2；第2框氧气（O2）1/2；第3框氢气（H2）0/4；第4框氨（NH3）0/2。每框都要有正确的原子种类、数量和连接。",
+          "rect": {
+            "x": 412,
+            "y": 382.34375,
+            "width": 616,
+            "height": 67.171875,
+            "top": 382.34375,
+            "right": 1028,
+            "bottom": 449.515625,
+            "left": 412
+          },
+          "line": {
+            "x": 412,
+            "y": 384.34375,
+            "width": 584.671875,
+            "height": 18,
+            "top": 384.34375,
+            "right": 996.671875,
+            "bottom": 402.34375,
+            "left": 412
+          },
+          "visible": true,
+          "hit": "P"
+        },
+        "lastMistake": {
+          "text": "整个分子旋转或平移后仍可相同；要比较哪些原子相邻，而不是要求画面朝向完全一样。",
+          "rect": {
+            "x": 436,
+            "y": 1828.046875,
+            "width": 592,
+            "height": 22.390625,
+            "top": 1828.046875,
+            "right": 1028,
+            "bottom": 1850.4375,
+            "left": 436
+          },
+          "line": {
+            "x": 436,
+            "y": 1830.046875,
+            "width": 546,
+            "height": 18,
+            "top": 1830.046875,
+            "right": 982,
+            "bottom": 1848.046875,
+            "left": 436
+          },
+          "visible": true,
+          "hit": "LI"
+        },
+        "fingerprint": "626a3f39"
       },
-      "image": {
-        "width": 376,
-        "height": 2226
+      "after": {
+        "windowScroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rail": {
+          "rect": {
+            "x": 380,
+            "y": 16,
+            "width": 680,
+            "height": 1882.4375,
+            "top": 16,
+            "right": 1060,
+            "bottom": 1898.4375,
+            "left": 380
+          },
+          "scrollHeight": 1880,
+          "clientHeight": 1880,
+          "scrollTop": 0,
+          "scrollLeft": 0
+        },
+        "panel": {
+          "x": 397,
+          "y": 340.953125,
+          "width": 646,
+          "height": 1530.484375,
+          "top": 340.953125,
+          "right": 1043,
+          "bottom": 1871.4375,
+          "left": 397
+        },
+        "fields": {
+          "intent": {
+            "x": 412,
+            "y": 382.34375,
+            "width": 616,
+            "height": 67.171875,
+            "top": 382.34375,
+            "right": 1028,
+            "bottom": 449.515625,
+            "left": 412
+          },
+          "hints": {
+            "x": 412,
+            "y": 511.515625,
+            "width": 616,
+            "height": 194.125,
+            "top": 511.515625,
+            "right": 1028,
+            "bottom": 705.640625,
+            "left": 412
+          },
+          "steps": {
+            "x": 412,
+            "y": 809.03125,
+            "width": 616,
+            "height": 853.671875,
+            "top": 809.03125,
+            "right": 1028,
+            "bottom": 1662.703125,
+            "left": 412
+          },
+          "commonMistakes": {
+            "x": 412,
+            "y": 1701.09375,
+            "width": 616,
+            "height": 149.34375,
+            "top": 1701.09375,
+            "right": 1028,
+            "bottom": 1850.4375,
+            "left": 412
+          }
+        },
+        "allFieldsInRail": true,
+        "title": {
+          "text": "本题学习",
+          "rect": {
+            "x": 412,
+            "y": 353.953125,
+            "width": 616,
+            "height": 22.390625,
+            "top": 353.953125,
+            "right": 1028,
+            "bottom": 376.34375,
+            "left": 412
+          },
+          "line": {
+            "x": 412,
+            "y": 355.953125,
+            "width": 56,
+            "height": 18,
+            "top": 355.953125,
+            "right": 468,
+            "bottom": 373.953125,
+            "left": 412
+          },
+          "visible": true,
+          "hit": "H3"
+        },
+        "intentFirstLine": {
+          "text": "本轮收集4种分子，共10个；已经收集1个，还差9个。第1框二氧化碳（CO2）0/2；第2框氧气（O2）1/2；第3框氢气（H2）0/4；第4框氨（NH3）0/2。每框都要有正确的原子种类、数量和连接。",
+          "rect": {
+            "x": 412,
+            "y": 382.34375,
+            "width": 616,
+            "height": 67.171875,
+            "top": 382.34375,
+            "right": 1028,
+            "bottom": 449.515625,
+            "left": 412
+          },
+          "line": {
+            "x": 412,
+            "y": 384.34375,
+            "width": 584.671875,
+            "height": 18,
+            "top": 384.34375,
+            "right": 996.671875,
+            "bottom": 402.34375,
+            "left": 412
+          },
+          "visible": true,
+          "hit": "P"
+        },
+        "lastMistake": {
+          "text": "整个分子旋转或平移后仍可相同；要比较哪些原子相邻，而不是要求画面朝向完全一样。",
+          "rect": {
+            "x": 436,
+            "y": 1828.046875,
+            "width": 592,
+            "height": 22.390625,
+            "top": 1828.046875,
+            "right": 1028,
+            "bottom": 1850.4375,
+            "left": 436
+          },
+          "line": {
+            "x": 436,
+            "y": 1830.046875,
+            "width": 546,
+            "height": 18,
+            "top": 1830.046875,
+            "right": 982,
+            "bottom": 1848.046875,
+            "left": 436
+          },
+          "visible": true,
+          "hit": "LI"
+        },
+        "fingerprint": "626a3f39"
       },
-      "path": "output/playwright/learning-coverage/phet-molecule/http-multiple-390-question.png",
-      "checks": {
-        "allFourFieldsPresent": true,
-        "allHintsExpanded": true,
-        "allSolutionStepsPresent": true,
-        "allCommonMistakesPresent": true,
-        "wholePanelInViewport": true,
-        "railNotClipping": true
-      }
+      "path": "output/playwright/learning-coverage/phet-molecule/http-multiple-desktop-question.png"
+    },
+    {
+      "method": "page screenshot with an explicit clip; no implicit element scrolling",
+      "viewport": {
+        "width": 390,
+        "height": 3069
+      },
+      "clip": {
+        "x": 35,
+        "y": 358,
+        "width": 320,
+        "height": 2606
+      },
+      "panel": {
+        "x": 35,
+        "y": 358.5625,
+        "width": 320,
+        "height": 2605.234375,
+        "top": 358.5625,
+        "right": 355,
+        "bottom": 2963.796875,
+        "left": 35
+      },
+      "wholePanelVisible": true,
+      "allFieldsInRail": true,
+      "lastMistakeLineVisible": true,
+      "before": {
+        "windowScroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rail": {
+          "rect": {
+            "x": 18,
+            "y": 16,
+            "width": 354,
+            "height": 2974.796875,
+            "top": 16,
+            "right": 372,
+            "bottom": 2990.796875,
+            "left": 18
+          },
+          "scrollHeight": 2973,
+          "clientHeight": 2973,
+          "scrollTop": 0,
+          "scrollLeft": 0
+        },
+        "panel": {
+          "x": 35,
+          "y": 358.5625,
+          "width": 320,
+          "height": 2605.234375,
+          "top": 358.5625,
+          "right": 355,
+          "bottom": 2963.796875,
+          "left": 35
+        },
+        "fields": {
+          "intent": {
+            "x": 50,
+            "y": 399.953125,
+            "width": 290,
+            "height": 111.953125,
+            "top": 399.953125,
+            "right": 340,
+            "bottom": 511.90625,
+            "left": 50
+          },
+          "hints": {
+            "x": 50,
+            "y": 573.90625,
+            "width": 290,
+            "height": 328.46875,
+            "top": 573.90625,
+            "right": 340,
+            "bottom": 902.375,
+            "left": 50
+          },
+          "steps": {
+            "x": 50,
+            "y": 1005.765625,
+            "width": 290,
+            "height": 1614.953125,
+            "top": 1005.765625,
+            "right": 340,
+            "bottom": 2620.71875,
+            "left": 50
+          },
+          "commonMistakes": {
+            "x": 50,
+            "y": 2659.109375,
+            "width": 290,
+            "height": 283.6875,
+            "top": 2659.109375,
+            "right": 340,
+            "bottom": 2942.796875,
+            "left": 50
+          }
+        },
+        "allFieldsInRail": true,
+        "title": {
+          "text": "本题学习",
+          "rect": {
+            "x": 50,
+            "y": 371.5625,
+            "width": 290,
+            "height": 22.390625,
+            "top": 371.5625,
+            "right": 340,
+            "bottom": 393.953125,
+            "left": 50
+          },
+          "line": {
+            "x": 50,
+            "y": 373.5625,
+            "width": 56,
+            "height": 18,
+            "top": 373.5625,
+            "right": 106,
+            "bottom": 391.5625,
+            "left": 50
+          },
+          "visible": true,
+          "hit": "H3"
+        },
+        "intentFirstLine": {
+          "text": "本轮收集4种分子，共10个；已经收集1个，还差9个。第1框二氧化碳（CO2）0/2；第2框氧气（O2）1/2；第3框氢气（H2）0/4；第4框氨（NH3）0/2。每框都要有正确的原子种类、数量和连接。",
+          "rect": {
+            "x": 50,
+            "y": 399.953125,
+            "width": 290,
+            "height": 111.953125,
+            "top": 399.953125,
+            "right": 340,
+            "bottom": 511.90625,
+            "left": 50
+          },
+          "line": {
+            "x": 50,
+            "y": 401.953125,
+            "width": 284.84375,
+            "height": 18,
+            "top": 401.953125,
+            "right": 334.84375,
+            "bottom": 419.953125,
+            "left": 50
+          },
+          "visible": true,
+          "hit": "P"
+        },
+        "lastMistake": {
+          "text": "整个分子旋转或平移后仍可相同；要比较哪些原子相邻，而不是要求画面朝向完全一样。",
+          "rect": {
+            "x": 74,
+            "y": 2875.625,
+            "width": 266,
+            "height": 67.171875,
+            "top": 2875.625,
+            "right": 340,
+            "bottom": 2942.796875,
+            "left": 74
+          },
+          "line": {
+            "x": 74,
+            "y": 2922.40625,
+            "width": 28,
+            "height": 18,
+            "top": 2922.40625,
+            "right": 102,
+            "bottom": 2940.40625,
+            "left": 74
+          },
+          "visible": true,
+          "hit": "LI"
+        },
+        "fingerprint": "626a3f39"
+      },
+      "after": {
+        "windowScroll": {
+          "x": 0,
+          "y": 0
+        },
+        "rail": {
+          "rect": {
+            "x": 18,
+            "y": 16,
+            "width": 354,
+            "height": 2974.796875,
+            "top": 16,
+            "right": 372,
+            "bottom": 2990.796875,
+            "left": 18
+          },
+          "scrollHeight": 2973,
+          "clientHeight": 2973,
+          "scrollTop": 0,
+          "scrollLeft": 0
+        },
+        "panel": {
+          "x": 35,
+          "y": 358.5625,
+          "width": 320,
+          "height": 2605.234375,
+          "top": 358.5625,
+          "right": 355,
+          "bottom": 2963.796875,
+          "left": 35
+        },
+        "fields": {
+          "intent": {
+            "x": 50,
+            "y": 399.953125,
+            "width": 290,
+            "height": 111.953125,
+            "top": 399.953125,
+            "right": 340,
+            "bottom": 511.90625,
+            "left": 50
+          },
+          "hints": {
+            "x": 50,
+            "y": 573.90625,
+            "width": 290,
+            "height": 328.46875,
+            "top": 573.90625,
+            "right": 340,
+            "bottom": 902.375,
+            "left": 50
+          },
+          "steps": {
+            "x": 50,
+            "y": 1005.765625,
+            "width": 290,
+            "height": 1614.953125,
+            "top": 1005.765625,
+            "right": 340,
+            "bottom": 2620.71875,
+            "left": 50
+          },
+          "commonMistakes": {
+            "x": 50,
+            "y": 2659.109375,
+            "width": 290,
+            "height": 283.6875,
+            "top": 2659.109375,
+            "right": 340,
+            "bottom": 2942.796875,
+            "left": 50
+          }
+        },
+        "allFieldsInRail": true,
+        "title": {
+          "text": "本题学习",
+          "rect": {
+            "x": 50,
+            "y": 371.5625,
+            "width": 290,
+            "height": 22.390625,
+            "top": 371.5625,
+            "right": 340,
+            "bottom": 393.953125,
+            "left": 50
+          },
+          "line": {
+            "x": 50,
+            "y": 373.5625,
+            "width": 56,
+            "height": 18,
+            "top": 373.5625,
+            "right": 106,
+            "bottom": 391.5625,
+            "left": 50
+          },
+          "visible": true,
+          "hit": "H3"
+        },
+        "intentFirstLine": {
+          "text": "本轮收集4种分子，共10个；已经收集1个，还差9个。第1框二氧化碳（CO2）0/2；第2框氧气（O2）1/2；第3框氢气（H2）0/4；第4框氨（NH3）0/2。每框都要有正确的原子种类、数量和连接。",
+          "rect": {
+            "x": 50,
+            "y": 399.953125,
+            "width": 290,
+            "height": 111.953125,
+            "top": 399.953125,
+            "right": 340,
+            "bottom": 511.90625,
+            "left": 50
+          },
+          "line": {
+            "x": 50,
+            "y": 401.953125,
+            "width": 284.84375,
+            "height": 18,
+            "top": 401.953125,
+            "right": 334.84375,
+            "bottom": 419.953125,
+            "left": 50
+          },
+          "visible": true,
+          "hit": "P"
+        },
+        "lastMistake": {
+          "text": "整个分子旋转或平移后仍可相同；要比较哪些原子相邻，而不是要求画面朝向完全一样。",
+          "rect": {
+            "x": 74,
+            "y": 2875.625,
+            "width": 266,
+            "height": 67.171875,
+            "top": 2875.625,
+            "right": 340,
+            "bottom": 2942.796875,
+            "left": 74
+          },
+          "line": {
+            "x": 74,
+            "y": 2922.40625,
+            "width": 28,
+            "height": 18,
+            "top": 2922.40625,
+            "right": 102,
+            "bottom": 2940.40625,
+            "left": 74
+          },
+          "visible": true,
+          "hit": "LI"
+        },
+        "fingerprint": "626a3f39"
+      },
+      "path": "output/playwright/learning-coverage/phet-molecule/http-multiple-390-question.png"
     }
   ],
   "cleanup": {
@@ -3180,8 +2979,8 @@
   },
   "sourceHashes": {
     "vendor/phet/build-a-molecule.html": "2d60a20708150c70399c7798fc512a6fd7fc9ce726e87f695fd0040cc846a09a",
-    "src/phet/generated/build-a-molecule.html": "51a21f2411381293cd7858f2717cc98c7c5d04a8e0447eeddc09c3fe3159aefa",
-    "src/phet/molecule-question-learning.js": "7c76e298fa7b36aad0d985e54fcb2958f85a54fbc0e03f98c98fad8beaae13bd",
+    "src/phet/generated/build-a-molecule.html": "26364438f91395db1f88587139fba3b880c2bb7db018263e325fcdfb3d3ab6bf",
+    "src/phet/molecule-question-learning.js": "8186199c8e7e0ec6618d7d2f12fd0a0e5a089ed0b01e44e9c50391a83e603baa",
     "tests/fixtures/phet-molecule-references.json": "954ded9512b3ecc5bc5b3b43a9c3eeef43e3cf2f2551ff7c825e640690cac3a4"
   },
   "sourceHashComparison": {
@@ -3192,26 +2991,18 @@
     },
     "src/phet/generated/build-a-molecule.html": {
       "previous": "51a21f2411381293cd7858f2717cc98c7c5d04a8e0447eeddc09c3fe3159aefa",
-      "current": "51a21f2411381293cd7858f2717cc98c7c5d04a8e0447eeddc09c3fe3159aefa",
-      "unchanged": true
+      "current": "26364438f91395db1f88587139fba3b880c2bb7db018263e325fcdfb3d3ab6bf",
+      "unchanged": false
     },
     "src/phet/molecule-question-learning.js": {
       "previous": "7c76e298fa7b36aad0d985e54fcb2958f85a54fbc0e03f98c98fad8beaae13bd",
-      "current": "7c76e298fa7b36aad0d985e54fcb2958f85a54fbc0e03f98c98fad8beaae13bd",
-      "unchanged": true
+      "current": "8186199c8e7e0ec6618d7d2f12fd0a0e5a089ed0b01e44e9c50391a83e603baa",
+      "unchanged": false
     },
     "tests/fixtures/phet-molecule-references.json": {
       "previous": "954ded9512b3ecc5bc5b3b43a9c3eeef43e3cf2f2551ff7c825e640690cac3a4",
       "current": "954ded9512b3ecc5bc5b3b43a9c3eeef43e3cf2f2551ff7c825e640690cac3a4",
       "unchanged": true
     }
-  },
-  "unitValidation": {
-    "command": "node --test tests/phet-molecule-question-learning.test.mjs",
-    "passed": 4,
-    "failed": 0,
-    "reusedAfterScreenshotOnlyChange": true,
-    "asserted": "26 reference graphs; 103 finite signatures; model/RNG pure reads; dynamic remaining counts and old-Joist home context."
-  },
-  "scopeAudit": "docs/learning-coverage/phet-other-question-audit.json"
+  }
 }

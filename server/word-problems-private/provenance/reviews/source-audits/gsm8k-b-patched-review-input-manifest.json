@@ -1,0 +1,67 @@
+{
+  "reviewedDate": "2026-10-06",
+  "reviewKind": "independent assistant follow-up semantic audit of three actual patched records",
+  "humanApproved": false,
+  "inputHashMethod": "SHA-256 of UTF-8 json.dumps(object, ensure_ascii=False, sort_keys=True, separators=(',', ':')); no trailing newline",
+  "baseReviewJsonlSha256": "b3000e0b1ea925a135b84305cdd585b9c73da1be9b42a5785554214cbc37a618",
+  "patchedReviewJsonlSha256": "01ab0d444828ce685f785e6f6ce572a3a2d9ca167e3ce0aa1ade20b27b89e131",
+  "patchedDraftRawFileSha256": "5f10ade0344e91f705e2d111203987779e8e18e327767f4a4d8e8ca9429fa05d",
+  "patchedDraftCanonicalArraySha256": "3b81faba090d12b07b788eb6f3e6c0a36b4b76e84d4b1e58ac517f0c2116f0c1",
+  "frozenDraftRawFileSha256": "0598e3dc45b01233ef3bd9e883d7a8657d7e77b902d3e6cd9d6ea425c7f5e353",
+  "followupReviewedIds": [
+    "gsm8k:train-3389",
+    "gsm8k:train-6002",
+    "gsm8k:train-3451"
+  ],
+  "patches": [
+    {
+      "id": "gsm8k:train-3389",
+      "beforeInputSha256": "32426b8c22371cbdf5a72faede76ac1238819bf48ea331a8ab34d9f6f7820dfc",
+      "afterInputSha256": "36302726307bbad2f5c4fdcab9f6f6099abea7553ff3d9ca680b5cc850d480a3",
+      "fields": [
+        "hints"
+      ],
+      "status": "assistant-confirmed"
+    },
+    {
+      "id": "gsm8k:train-6002",
+      "beforeInputSha256": "980e12ccf7e7721c41af97d0ee017284f58434182c1f57a32896ed47b71e593e",
+      "afterInputSha256": "7f9dd0999614a854c501113d043e5b7a0d6e125a41634186f313b2b226ee65d1",
+      "fields": [
+        "hints"
+      ],
+      "status": "assistant-confirmed"
+    },
+    {
+      "id": "gsm8k:train-3451",
+      "beforeInputSha256": "ebf9743f677781b49b1cb6ed7390fbdaa9f88c1d4f9f34560414ef710d43836a",
+      "afterInputSha256": "63afac8d8ad92eb8b9159fb3238f64172d33ac18e5148510287393c2f4b2af2b",
+      "fields": [
+        "commonMistakes"
+      ],
+      "status": "assistant-confirmed"
+    }
+  ],
+  "allOtherRecordsUnchangedCount": 257,
+  "actualChangedIds": [
+    "gsm8k:train-3389",
+    "gsm8k:train-6002",
+    "gsm8k:train-3451"
+  ],
+  "draftRows": 260,
+  "duplicateIds": 0,
+  "followupUnreviewedScope": "This follow-up re-read only the three corrected records. The other 257 records retain original complete semantic audit evidence and are verified structurally unchanged.",
+  "combinedCurrentVerdictCounts": {
+    "assistant-confirmed": 255,
+    "needs-correction": 0,
+    "quarantine": 5
+  },
+  "quarantineIds": [
+    "gsm8k:train-6304",
+    "gsm8k:train-6539",
+    "gsm8k:train-5980",
+    "gsm8k:train-4060",
+    "gsm8k:train-5472"
+  ],
+  "supplementaryCheckScope": "Structural equality and SHA binding only; the semantic follow-up is independently authored in the patched review records."
+}

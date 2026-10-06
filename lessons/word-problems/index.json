@@ -1,0 +1,1645 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+  "reviewBasis": "assistant-reviewed; no teacher or human approval claimed",
+  "counts": {
+    "representatives": 1398,
+    "available": 1391,
+    "studentPractice": 1391,
+    "contentReviewed": 1391,
+    "reservedAssessment": 0,
+    "humanApproved": 0,
+    "quarantined": 7,
+    "pending": 0,
+    "byCollection": {
+      "foundation": {
+        "representatives": 617,
+        "available": 617,
+        "contentReviewed": 617,
+        "studentPractice": 617,
+        "reservedAssessment": 0,
+        "quarantined": 0,
+        "pending": 0
+      },
+      "gsm8k": {
+        "representatives": 781,
+        "available": 774,
+        "contentReviewed": 774,
+        "studentPractice": 774,
+        "reservedAssessment": 0,
+        "quarantined": 7,
+        "pending": 0
+      }
+    }
+  },
+  "rewardPolicy": {
+    "rewardEligible": false,
+    "growthAward": 0,
+    "verification": "student-practice",
+    "formalVerification": "server-issued-and-graded; immutable independent-assistant-reviewed release; existing canonical math goal caps"
+  },
+  "familyPolicy": {
+    "basis": "inferred assessment_group_id",
+    "metadataOnly": true,
+    "practiceAssessmentSameQuestionAllowed": true,
+    "sourceTrainTestUsed": false
+  },
+  "categories": [
+    {
+      "key": "foundation-A01",
+      "id": "A01",
+      "collection": "foundation",
+      "title": "总量与部分量",
+      "count": 40,
+      "reviewedCount": 40,
+      "practiceCount": 40,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C1",
+          "title": "基础巩固",
+          "count": 8
+        },
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 20
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 12
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "合并多个部分",
+          "title": "合并多个部分",
+          "count": 3
+        },
+        {
+          "id": "合并部分求总量",
+          "title": "合并部分求总量",
+          "count": 17
+        },
+        {
+          "id": "已知总量求部分量",
+          "title": "已知总量求部分量",
+          "count": 16
+        },
+        {
+          "id": "总量减去已知部分",
+          "title": "总量减去已知部分",
+          "count": 4
+        }
+      ],
+      "file": "categories/foundation-A01.json"
+    },
+    {
+      "key": "foundation-A02",
+      "id": "A02",
+      "collection": "foundation",
+      "title": "初始量、变化量与最终量",
+      "count": 33,
+      "reviewedCount": 33,
+      "practiceCount": 33,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C1",
+          "title": "基础巩固",
+          "count": 5
+        },
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 8
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 14
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 6
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "已知初始量与变化求最终量",
+          "title": "已知初始量与变化求最终量",
+          "count": 13
+        },
+        {
+          "id": "已知初末状态求变化量",
+          "title": "已知初末状态求变化量",
+          "count": 7
+        },
+        {
+          "id": "已知变化与结果反求初始量",
+          "title": "已知变化与结果反求初始量",
+          "count": 6
+        },
+        {
+          "id": "年龄跨时点与不变量",
+          "title": "年龄跨时点与不变量",
+          "count": 6
+        },
+        {
+          "id": "支出后的余额",
+          "title": "支出后的余额",
+          "count": 1
+        }
+      ],
+      "file": "categories/foundation-A02.json"
+    },
+    {
+      "key": "foundation-A03",
+      "id": "A03",
+      "collection": "foundation",
+      "title": "加法比较关系",
+      "count": 25,
+      "reviewedCount": 25,
+      "practiceCount": 25,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C1",
+          "title": "基础巩固",
+          "count": 4
+        },
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 17
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 4
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "两人收入差",
+          "title": "两人收入差",
+          "count": 1
+        },
+        {
+          "id": "已知基准量与多出的数量求比较量",
+          "title": "已知基准量与多出的数量求比较量",
+          "count": 1
+        },
+        {
+          "id": "比较后求合计",
+          "title": "比较后求合计",
+          "count": 1
+        },
+        {
+          "id": "求相差量或比较量",
+          "title": "求相差量或比较量",
+          "count": 22
+        }
+      ],
+      "file": "categories/foundation-A03.json"
+    },
+    {
+      "key": "foundation-A04",
+      "id": "A04",
+      "collection": "foundation",
+      "title": "等量分组",
+      "count": 20,
+      "reviewedCount": 20,
+      "practiceCount": 20,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C1",
+          "title": "基础巩固",
+          "count": 9
+        },
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 7
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 4
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "包含分求份数",
+          "title": "包含分求份数",
+          "count": 4
+        },
+        {
+          "id": "已知组数与每组数量求总量",
+          "title": "已知组数与每组数量求总量",
+          "count": 1
+        },
+        {
+          "id": "平均分求每份量",
+          "title": "平均分求每份量",
+          "count": 4
+        },
+        {
+          "id": "相同单位量求总量",
+          "title": "相同单位量求总量",
+          "count": 2
+        },
+        {
+          "id": "等量分组求总量",
+          "title": "等量分组求总量",
+          "count": 9
+        }
+      ],
+      "file": "categories/foundation-A04.json"
+    },
+    {
+      "key": "foundation-A05",
+      "id": "A05",
+      "collection": "foundation",
+      "title": "倍数关系",
+      "count": 21,
+      "reviewedCount": 21,
+      "practiceCount": 21,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C1",
+          "title": "基础巩固",
+          "count": 4
+        },
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 1
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 14
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 2
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "倍数已知求比较量或基准量",
+          "title": "倍数已知求比较量或基准量",
+          "count": 16
+        },
+        {
+          "id": "和倍或差倍分配",
+          "title": "和倍或差倍分配",
+          "count": 5
+        }
+      ],
+      "file": "categories/foundation-A05.json"
+    },
+    {
+      "key": "foundation-A06",
+      "id": "A06",
+      "collection": "foundation",
+      "title": "两步混合数量关系",
+      "count": 36,
+      "reviewedCount": 36,
+      "practiceCount": 36,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 33
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 3
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "两份收入的和差分配",
+          "title": "两份收入的和差分配",
+          "count": 1
+        },
+        {
+          "id": "串联两个加法比较关系",
+          "title": "串联两个加法比较关系",
+          "count": 1
+        },
+        {
+          "id": "先求每份或份数再运算",
+          "title": "先求每份或份数再运算",
+          "count": 20
+        },
+        {
+          "id": "和差分配或多对象关系",
+          "title": "和差分配或多对象关系",
+          "count": 9
+        },
+        {
+          "id": "未知量的简单逆推",
+          "title": "未知量的简单逆推",
+          "count": 5
+        }
+      ],
+      "file": "categories/foundation-A06.json"
+    },
+    {
+      "key": "foundation-A07",
+      "id": "A07",
+      "collection": "foundation",
+      "title": "单价、数量、总价与找零",
+      "count": 75,
+      "reviewedCount": 75,
+      "practiceCount": 75,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C1",
+          "title": "基础巩固",
+          "count": 10
+        },
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 31
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 31
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 3
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "两项或两组支出的差额比较",
+          "title": "两项或两组支出的差额比较",
+          "count": 2
+        },
+        {
+          "id": "单项或多项购物总价",
+          "title": "单项或多项购物总价",
+          "count": 26
+        },
+        {
+          "id": "同单价物品先合并数量求总价",
+          "title": "同单价物品先合并数量求总价",
+          "count": 1
+        },
+        {
+          "id": "基本票价与固定费用综合",
+          "title": "基本票价与固定费用综合",
+          "count": 1
+        },
+        {
+          "id": "已知总价反求单价",
+          "title": "已知总价反求单价",
+          "count": 11
+        },
+        {
+          "id": "由总支出反求某项费用",
+          "title": "由总支出反求某项费用",
+          "count": 3
+        },
+        {
+          "id": "由支出与余额反求购物前金额",
+          "title": "由支出与余额反求购物前金额",
+          "count": 4
+        },
+        {
+          "id": "由购物前金额与余额反求支出",
+          "title": "由购物前金额与余额反求支出",
+          "count": 3
+        },
+        {
+          "id": "购物后余额、找零或差额",
+          "title": "购物后余额、找零或差额",
+          "count": 18
+        },
+        {
+          "id": "预算或总价反求数量",
+          "title": "预算或总价反求数量",
+          "count": 6
+        }
+      ],
+      "file": "categories/foundation-A07.json"
+    },
+    {
+      "key": "foundation-A08",
+      "id": "A08",
+      "collection": "foundation",
+      "title": "常用单位换算应用",
+      "count": 16,
+      "reviewedCount": 16,
+      "practiceCount": 16,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 10
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 2
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 4
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "常用单位换算与数量关系",
+          "title": "常用单位换算与数量关系",
+          "count": 6
+        },
+        {
+          "id": "时间单位换算",
+          "title": "时间单位换算",
+          "count": 2
+        },
+        {
+          "id": "货币面值换算",
+          "title": "货币面值换算",
+          "count": 8
+        }
+      ],
+      "file": "categories/foundation-A08.json"
+    },
+    {
+      "key": "foundation-A09",
+      "id": "A09",
+      "collection": "foundation",
+      "title": "时刻、经过时间与周期内安排",
+      "count": 12,
+      "reviewedCount": 12,
+      "practiceCount": 12,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C1",
+          "title": "基础巩固",
+          "count": 1
+        },
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 5
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 2
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 4
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "由开始时刻求结束时刻",
+          "title": "由开始时刻求结束时刻",
+          "count": 3
+        },
+        {
+          "id": "由结束时刻反推开始时刻",
+          "title": "由结束时刻反推开始时刻",
+          "count": 3
+        },
+        {
+          "id": "经过时间与空闲时间",
+          "title": "经过时间与空闲时间",
+          "count": 6
+        }
+      ],
+      "file": "categories/foundation-A09.json"
+    },
+    {
+      "key": "foundation-A10",
+      "id": "A10",
+      "collection": "foundation",
+      "title": "分数意义、部分与整体",
+      "count": 18,
+      "reviewedCount": 18,
+      "practiceCount": 18,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 3
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 10
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 5
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "已知整体求部分或分数关系",
+          "title": "已知整体求部分或分数关系",
+          "count": 8
+        },
+        {
+          "id": "由部分或剩余反求整体",
+          "title": "由部分或剩余反求整体",
+          "count": 10
+        }
+      ],
+      "file": "categories/foundation-A10.json"
+    },
+    {
+      "key": "foundation-A11",
+      "id": "A11",
+      "collection": "foundation",
+      "title": "简单比与按比例分配",
+      "count": 36,
+      "reviewedCount": 36,
+      "practiceCount": 36,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 17
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 15
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 4
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "两个数量的比及化简",
+          "title": "两个数量的比及化简",
+          "count": 3
+        },
+        {
+          "id": "先求缺失数量再化比",
+          "title": "先求缺失数量再化比",
+          "count": 3
+        },
+        {
+          "id": "同一速率或配方按比例求量",
+          "title": "同一速率或配方按比例求量",
+          "count": 4
+        },
+        {
+          "id": "已知一量按比求另一量",
+          "title": "已知一量按比求另一量",
+          "count": 4
+        },
+        {
+          "id": "已知差与比求数量",
+          "title": "已知差与比求数量",
+          "count": 4
+        },
+        {
+          "id": "已知整体按比分配",
+          "title": "已知整体按比分配",
+          "count": 7
+        },
+        {
+          "id": "已知部分与比求整体",
+          "title": "已知部分与比求整体",
+          "count": 4
+        },
+        {
+          "id": "数量变化后的比",
+          "title": "数量变化后的比",
+          "count": 3
+        },
+        {
+          "id": "部分量与总量的比",
+          "title": "部分量与总量的比",
+          "count": 4
+        }
+      ],
+      "file": "categories/foundation-A11.json"
+    },
+    {
+      "key": "foundation-A12",
+      "id": "A12",
+      "collection": "foundation",
+      "title": "平均数",
+      "count": 4,
+      "reviewedCount": 4,
+      "practiceCount": 4,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 1
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 3
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "平均数与等量化",
+          "title": "平均数与等量化",
+          "count": 4
+        }
+      ],
+      "file": "categories/foundation-A12.json"
+    },
+    {
+      "key": "foundation-A13",
+      "id": "A13",
+      "collection": "foundation",
+      "title": "商、余数与取整决策",
+      "count": 19,
+      "reviewedCount": 19,
+      "practiceCount": 19,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 6
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 13
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "估算与取整规则待明确",
+          "title": "估算与取整规则待明确",
+          "count": 6
+        },
+        {
+          "id": "余数对应剩余量",
+          "title": "余数对应剩余量",
+          "count": 6
+        },
+        {
+          "id": "去尾求完整份数",
+          "title": "去尾求完整份数",
+          "count": 4
+        },
+        {
+          "id": "进一保证全部容纳",
+          "title": "进一保证全部容纳",
+          "count": 3
+        }
+      ],
+      "file": "categories/foundation-A13.json"
+    },
+    {
+      "key": "foundation-A14",
+      "id": "A14",
+      "collection": "foundation",
+      "title": "长方形或正方形的周长与面积",
+      "count": 24,
+      "reviewedCount": 24,
+      "practiceCount": 24,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 6
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 10
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 8
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "由周长面积反求边长",
+          "title": "由周长面积反求边长",
+          "count": 6
+        },
+        {
+          "id": "由边长或周长求面积",
+          "title": "由边长或周长求面积",
+          "count": 5
+        },
+        {
+          "id": "由边长或面积求周长",
+          "title": "由边长或面积求周长",
+          "count": 4
+        },
+        {
+          "id": "组合或逆向周长面积",
+          "title": "组合或逆向周长面积",
+          "count": 4
+        },
+        {
+          "id": "铺排分割与长度面积关联",
+          "title": "铺排分割与长度面积关联",
+          "count": 3
+        },
+        {
+          "id": "面积、用量与费用综合",
+          "title": "面积、用量与费用综合",
+          "count": 1
+        },
+        {
+          "id": "面积中的部分与整体",
+          "title": "面积中的部分与整体",
+          "count": 1
+        }
+      ],
+      "file": "categories/foundation-A14.json"
+    },
+    {
+      "key": "foundation-A15",
+      "id": "A15",
+      "collection": "foundation",
+      "title": "最大公因数、最小公倍数与简单周期",
+      "count": 23,
+      "reviewedCount": 23,
+      "practiceCount": 23,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 20
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 3
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "同步周期与再次时刻",
+          "title": "同步周期与再次时刻",
+          "count": 3
+        },
+        {
+          "id": "同步周期与间隔",
+          "title": "同步周期与间隔",
+          "count": 3
+        },
+        {
+          "id": "最大等量分组",
+          "title": "最大等量分组",
+          "count": 6
+        },
+        {
+          "id": "最大等长分割",
+          "title": "最大等长分割",
+          "count": 3
+        },
+        {
+          "id": "最小公倍数与配套数量",
+          "title": "最小公倍数与配套数量",
+          "count": 6
+        },
+        {
+          "id": "配套数量换算包数或件数",
+          "title": "配套数量换算包数或件数",
+          "count": 2
+        }
+      ],
+      "file": "categories/foundation-A15.json"
+    },
+    {
+      "key": "foundation-A16",
+      "id": "A16",
+      "collection": "foundation",
+      "title": "有限方案比较",
+      "count": 22,
+      "reviewedCount": 22,
+      "practiceCount": 22,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C1",
+          "title": "基础巩固",
+          "count": 3
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 6
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 13
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "两方案的单价比较",
+          "title": "两方案的单价比较",
+          "count": 3
+        },
+        {
+          "id": "两方案的比值比较",
+          "title": "两方案的比值比较",
+          "count": 6
+        },
+        {
+          "id": "两方案货币总额比较",
+          "title": "两方案货币总额比较",
+          "count": 1
+        },
+        {
+          "id": "对象数量或长度比较",
+          "title": "对象数量或长度比较",
+          "count": 3
+        },
+        {
+          "id": "数量阈值与相等判断",
+          "title": "数量阈值与相等判断",
+          "count": 3
+        },
+        {
+          "id": "有限方案与最少数量",
+          "title": "有限方案与最少数量",
+          "count": 6
+        }
+      ],
+      "file": "categories/foundation-A16.json"
+    },
+    {
+      "key": "foundation-V00",
+      "id": "V00",
+      "collection": "foundation",
+      "title": "直接数量关系",
+      "count": 44,
+      "reviewedCount": 44,
+      "practiceCount": 44,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C1",
+          "title": "基础巩固",
+          "count": 30
+        },
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 11
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 3
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "两步混合关系：直接关系基线（未证实变式操作）",
+          "title": "两步混合关系：直接数量关系",
+          "count": 6
+        },
+        {
+          "id": "倍数关系：直接关系基线（未证实变式操作）",
+          "title": "倍数关系：直接数量关系",
+          "count": 3
+        },
+        {
+          "id": "初始量、变化量与最终量：直接关系基线（未证实变式操作）",
+          "title": "初始量、变化量与最终量：直接数量关系",
+          "count": 5
+        },
+        {
+          "id": "单价、数量、总价与找零：直接关系基线（未证实变式操作）",
+          "title": "单价、数量、总价与找零：直接数量关系",
+          "count": 7
+        },
+        {
+          "id": "总量与部分：直接关系基线（未证实变式操作）",
+          "title": "总量与部分：直接数量关系",
+          "count": 11
+        },
+        {
+          "id": "等量分组：直接关系基线（未证实变式操作）",
+          "title": "等量分组：直接数量关系",
+          "count": 6
+        },
+        {
+          "id": "长方形或正方形的周长与面积：直接关系基线（未证实变式操作）",
+          "title": "长方形或正方形的周长与面积：直接数量关系",
+          "count": 6
+        }
+      ],
+      "file": "categories/foundation-V00.json"
+    },
+    {
+      "key": "foundation-V01",
+      "id": "V01",
+      "collection": "foundation",
+      "title": "找准未知量",
+      "count": 39,
+      "reviewedCount": 39,
+      "practiceCount": 39,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 39
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "初始量、变化量与最终量：未知量位置辨析候选",
+          "title": "初始量、变化量与最终量：未知量位置辨析",
+          "count": 11
+        },
+        {
+          "id": "加法比较：未知量位置辨析候选",
+          "title": "加法比较：未知量位置辨析",
+          "count": 14
+        },
+        {
+          "id": "单价、数量、总价与找零：未知量位置辨析候选",
+          "title": "单价、数量、总价与找零：未知量位置辨析",
+          "count": 5
+        },
+        {
+          "id": "总量与部分：未知量位置辨析候选",
+          "title": "总量与部分：未知量位置辨析",
+          "count": 6
+        },
+        {
+          "id": "等量分组：未知量位置辨析候选",
+          "title": "等量分组：未知量位置辨析",
+          "count": 3
+        }
+      ],
+      "file": "categories/foundation-V01.json"
+    },
+    {
+      "key": "foundation-V02",
+      "id": "V02",
+      "collection": "foundation",
+      "title": "比较对象与方向",
+      "count": 48,
+      "reviewedCount": 48,
+      "practiceCount": 48,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C1",
+          "title": "基础巩固",
+          "count": 10
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 38
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "加法比较：比较对象与方向辨析候选",
+          "title": "加法比较：比较对象与方向辨析",
+          "count": 37
+        },
+        {
+          "id": "单价、数量、总价与找零：比较对象与方向辨析候选",
+          "title": "单价、数量、总价与找零：比较对象与方向辨析",
+          "count": 11
+        }
+      ],
+      "file": "categories/foundation-V02.json"
+    },
+    {
+      "key": "foundation-V03",
+      "id": "V03",
+      "collection": "foundation",
+      "title": "辨清所问范围",
+      "count": 15,
+      "reviewedCount": 15,
+      "practiceCount": 15,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 15
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "初始量、变化量与最终量：所问范围辨析候选",
+          "title": "初始量、变化量与最终量：所问范围辨析",
+          "count": 5
+        },
+        {
+          "id": "单价、数量、总价与找零：所问范围辨析候选",
+          "title": "单价、数量、总价与找零：所问范围辨析",
+          "count": 2
+        },
+        {
+          "id": "总量与部分：所问范围辨析候选",
+          "title": "总量与部分：所问范围辨析",
+          "count": 5
+        },
+        {
+          "id": "等量分组：所问范围辨析候选",
+          "title": "等量分组：所问范围辨析",
+          "count": 3
+        }
+      ],
+      "file": "categories/foundation-V03.json"
+    },
+    {
+      "key": "foundation-V05",
+      "id": "V05",
+      "collection": "foundation",
+      "title": "排除无关信息",
+      "count": 28,
+      "reviewedCount": 28,
+      "practiceCount": 28,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 28
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "两步混合关系：无关信息辨析候选",
+          "title": "两步混合关系：无关信息辨析",
+          "count": 1
+        },
+        {
+          "id": "倍数关系：无关信息辨析候选",
+          "title": "倍数关系：无关信息辨析",
+          "count": 1
+        },
+        {
+          "id": "初始量、变化量与最终量：无关信息辨析候选",
+          "title": "初始量、变化量与最终量：无关信息辨析",
+          "count": 4
+        },
+        {
+          "id": "单价、数量、总价与找零：无关信息辨析候选",
+          "title": "单价、数量、总价与找零：无关信息辨析",
+          "count": 6
+        },
+        {
+          "id": "总量与部分：无关信息辨析候选",
+          "title": "总量与部分：无关信息辨析",
+          "count": 7
+        },
+        {
+          "id": "等量分组：无关信息辨析候选",
+          "title": "等量分组：无关信息辨析",
+          "count": 9
+        }
+      ],
+      "file": "categories/foundation-V05.json"
+    },
+    {
+      "key": "foundation-V07",
+      "id": "V07",
+      "collection": "foundation",
+      "title": "两步关系与目标",
+      "count": 19,
+      "reviewedCount": 19,
+      "practiceCount": 19,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 19
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "两步混合关系：两步关系目标辨析候选",
+          "title": "两步混合关系：两步关系目标辨析",
+          "count": 13
+        },
+        {
+          "id": "倍数关系：两步关系目标辨析候选",
+          "title": "倍数关系：两步关系目标辨析",
+          "count": 1
+        },
+        {
+          "id": "单价、数量、总价与找零：两步关系目标辨析候选",
+          "title": "单价、数量、总价与找零：两步关系目标辨析",
+          "count": 3
+        },
+        {
+          "id": "长方形或正方形的周长与面积：两步关系目标辨析候选",
+          "title": "长方形或正方形的周长与面积：两步关系目标辨析",
+          "count": 2
+        }
+      ],
+      "file": "categories/foundation-V07.json"
+    },
+    {
+      "key": "gsm8k-G01",
+      "id": "G01",
+      "collection": "gsm8k",
+      "title": "多阶段总量与剩余",
+      "count": 61,
+      "reviewedCount": 61,
+      "practiceCount": 61,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 32
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 18
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 11
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "单价、数量、总价",
+          "title": "单价、数量、总价",
+          "count": 3
+        },
+        {
+          "id": "多阶段合并、变化与剩余",
+          "title": "多阶段合并、变化与剩余",
+          "count": 52
+        },
+        {
+          "id": "总量、份数与平均数",
+          "title": "总量、份数与平均数",
+          "count": 1
+        },
+        {
+          "id": "时间、速率与工作量",
+          "title": "时间、速率与工作量",
+          "count": 1
+        },
+        {
+          "id": "每日目标与前期欠额累计",
+          "title": "每日目标与前期欠额累计",
+          "count": 1
+        },
+        {
+          "id": "等量分组与单位量",
+          "title": "等量分组与单位量",
+          "count": 3
+        }
+      ],
+      "file": "categories/gsm8k-G01.json"
+    },
+    {
+      "key": "gsm8k-G02",
+      "id": "G02",
+      "collection": "gsm8k",
+      "title": "单价、数量、总价与预算",
+      "count": 119,
+      "reviewedCount": 119,
+      "practiceCount": 119,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 54
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 42
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 23
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "单价、数量、总价",
+          "title": "单价、数量、总价",
+          "count": 67
+        },
+        {
+          "id": "总量、份数与平均数",
+          "title": "总量、份数与平均数",
+          "count": 1
+        },
+        {
+          "id": "预算、收支与余款",
+          "title": "预算、收支与余款",
+          "count": 51
+        }
+      ],
+      "file": "categories/gsm8k-G02.json"
+    },
+    {
+      "key": "gsm8k-G03",
+      "id": "G03",
+      "collection": "gsm8k",
+      "title": "倍数与差量组合",
+      "count": 80,
+      "reviewedCount": 80,
+      "practiceCount": 80,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 29
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 27
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 24
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "倍数与差量的顺序组合",
+          "title": "倍数与差量的顺序组合",
+          "count": 62
+        },
+        {
+          "id": "和差、和倍或差倍反求",
+          "title": "和差、和倍或差倍反求",
+          "count": 17
+        },
+        {
+          "id": "多对象和倍反求",
+          "title": "多对象和倍反求",
+          "count": 1
+        }
+      ],
+      "file": "categories/gsm8k-G03.json"
+    },
+    {
+      "key": "gsm8k-G04",
+      "id": "G04",
+      "collection": "gsm8k",
+      "title": "分数、部分与整体",
+      "count": 126,
+      "reviewedCount": 126,
+      "practiceCount": 126,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 29
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 63
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 34
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "时间、速率与工作量",
+          "title": "时间、速率与工作量",
+          "count": 2
+        },
+        {
+          "id": "由部分反求整体",
+          "title": "由部分反求整体",
+          "count": 30
+        },
+        {
+          "id": "部分、整体及剩余基数",
+          "title": "部分、整体及剩余基数",
+          "count": 94
+        }
+      ],
+      "file": "categories/gsm8k-G04.json"
+    },
+    {
+      "key": "gsm8k-G05",
+      "id": "G05",
+      "collection": "gsm8k",
+      "title": "比例分配与单位量",
+      "count": 74,
+      "reviewedCount": 74,
+      "practiceCount": 74,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 38
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 27
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 9
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "按比或份数分配",
+          "title": "按比或份数分配",
+          "count": 15
+        },
+        {
+          "id": "时间、速率与工作量",
+          "title": "时间、速率与工作量",
+          "count": 1
+        },
+        {
+          "id": "等量分组与单位量",
+          "title": "等量分组与单位量",
+          "count": 58
+        }
+      ],
+      "file": "categories/gsm8k-G05.json"
+    },
+    {
+      "key": "gsm8k-G06",
+      "id": "G06",
+      "collection": "gsm8k",
+      "title": "平均数与缺失数据",
+      "count": 32,
+      "reviewedCount": 32,
+      "practiceCount": 32,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 13
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 11
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 8
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "总量、份数与平均数",
+          "title": "总量、份数与平均数",
+          "count": 30
+        },
+        {
+          "id": "等量分组与单位量",
+          "title": "等量分组与单位量",
+          "count": 2
+        }
+      ],
+      "file": "categories/gsm8k-G06.json"
+    },
+    {
+      "key": "gsm8k-G07",
+      "id": "G07",
+      "collection": "gsm8k",
+      "title": "时间、速率和产量",
+      "count": 131,
+      "reviewedCount": 131,
+      "practiceCount": 131,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 54
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 47
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 30
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "时间、速率与工作量",
+          "title": "时间、速率与工作量",
+          "count": 80
+        },
+        {
+          "id": "时间与单位量换算",
+          "title": "时间与单位量换算",
+          "count": 47
+        },
+        {
+          "id": "百分数求量与简单折扣",
+          "title": "百分数求量与简单折扣",
+          "count": 1
+        },
+        {
+          "id": "等量分组与单位量",
+          "title": "等量分组与单位量",
+          "count": 3
+        }
+      ],
+      "file": "categories/gsm8k-G07.json"
+    },
+    {
+      "key": "gsm8k-G08",
+      "id": "G08",
+      "collection": "gsm8k",
+      "title": "几何量与生活计算",
+      "count": 20,
+      "reviewedCount": 20,
+      "practiceCount": 20,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 8
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 7
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 5
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "矩形、正方形或几何量应用",
+          "title": "矩形、正方形或几何量应用",
+          "count": 20
+        }
+      ],
+      "file": "categories/gsm8k-G08.json"
+    },
+    {
+      "key": "gsm8k-G09",
+      "id": "G09",
+      "collection": "gsm8k",
+      "title": "百分数和简单折扣",
+      "count": 88,
+      "reviewedCount": 88,
+      "practiceCount": 88,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 30
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 35
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 23
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "不变量与百分比基数变化",
+          "title": "不变量与百分比基数变化",
+          "count": 1
+        },
+        {
+          "id": "百分数求量与简单折扣",
+          "title": "百分数求量与简单折扣",
+          "count": 75
+        },
+        {
+          "id": "百分比反求",
+          "title": "百分比反求",
+          "count": 12
+        }
+      ],
+      "file": "categories/gsm8k-G09.json"
+    },
+    {
+      "key": "gsm8k-G10",
+      "id": "G10",
+      "collection": "gsm8k",
+      "title": "两类关系的综合任务",
+      "count": 43,
+      "reviewedCount": 43,
+      "practiceCount": 43,
+      "reservedAssessmentCount": 0,
+      "levels": [
+        {
+          "id": "C2",
+          "title": "综合巩固",
+          "count": 1
+        },
+        {
+          "id": "I1",
+          "title": "审题提高",
+          "count": 21
+        },
+        {
+          "id": "I2",
+          "title": "关系提高",
+          "count": 21
+        }
+      ],
+      "subcategories": [
+        {
+          "id": "几何量与另一类数量关系",
+          "title": "几何量与另一类数量关系",
+          "count": 6
+        },
+        {
+          "id": "平均数与部分整体关系",
+          "title": "平均数与部分整体关系",
+          "count": 21
+        },
+        {
+          "id": "等量分组与单位量",
+          "title": "等量分组与单位量",
+          "count": 1
+        },
+        {
+          "id": "速率与百分比变化",
+          "title": "速率与百分比变化",
+          "count": 15
+        }
+      ],
+      "file": "categories/gsm8k-G10.json"
+    }
+  ]
+}

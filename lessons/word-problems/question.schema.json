@@ -1,0 +1,496 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/cy677/MathPhysics/word-problems.question.schema.json",
+  "title": "Independently assistant-reviewed Chinese word problem for practice and canonical assessment",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "bankVersion",
+    "id",
+    "collection",
+    "category",
+    "subcategory",
+    "level",
+    "locale",
+    "storyFamily",
+    "assessmentGroup",
+    "decision",
+    "prompt",
+    "answer",
+    "intent",
+    "hints",
+    "steps",
+    "commonMistakes",
+    "prerequisites",
+    "source",
+    "review",
+    "reviewMethod",
+    "publication",
+    "independentReview",
+    "contentSha256"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "bankVersion": {
+      "const": "2026-10-06.3"
+    },
+    "reviewMethod": {
+      "const": "independent-assistant-content-review"
+    },
+    "publication": {
+      "type": "object",
+      "required": [
+        "audience",
+        "usageScope"
+      ],
+      "properties": {
+        "audience": {
+          "const": "student-learning"
+        },
+        "usageScope": {
+          "const": "local-noncommercial-teaching"
+        }
+      },
+      "additionalProperties": false
+    },
+    "contentSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^(asdiv:nluds-[0-9]{4}|svamp:chal-[0-9]+|gsm8k:train-[0-9]{4})$"
+    },
+    "collection": {
+      "enum": [
+        "foundation",
+        "gsm8k"
+      ]
+    },
+    "category": {
+      "type": "string",
+      "pattern": "^[AVG][0-9]{2}$"
+    },
+    "subcategory": {
+      "type": "string",
+      "minLength": 1
+    },
+    "level": {
+      "enum": [
+        "C1",
+        "C2",
+        "I1",
+        "I2"
+      ]
+    },
+    "locale": {
+      "const": "zh-CN"
+    },
+    "storyFamily": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assessmentGroup": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "enum": [
+        "keep",
+        "adapt"
+      ]
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 3000
+    },
+    "answer": {
+      "$ref": "#/$defs/answer"
+    },
+    "intent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hints": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "commonMistakes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "adaptation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "dataset",
+        "sourceId",
+        "sourceVersion",
+        "sourceCommit",
+        "sourceFile",
+        "sourceFileSha256",
+        "questionSha256",
+        "recordSha256",
+        "selectionCommit",
+        "url",
+        "license",
+        "lineageId"
+      ],
+      "properties": {
+        "dataset": {
+          "enum": [
+            "asdiv",
+            "svamp",
+            "gsm8k"
+          ]
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceVersion": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "sourceCommit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "sourceFile": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceFileSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "questionSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "recordSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "selectionCommit": {
+          "const": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd"
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lineageId": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "translation",
+        "content",
+        "answer",
+        "publishAllowed",
+        "humanApproved"
+      ],
+      "properties": {
+        "translation": {
+          "const": "completed"
+        },
+        "content": {
+          "const": "assistant-reviewed"
+        },
+        "answer": {
+          "const": "verified"
+        },
+        "publishAllowed": {
+          "const": true
+        },
+        "humanApproved": {
+          "type": "boolean"
+        }
+      }
+    },
+    "independentReview": {
+      "type": "object",
+      "required": [
+        "recordId",
+        "status",
+        "reviewerType",
+        "draftSha256",
+        "contentSha256",
+        "sourceDraftSha256",
+        "evidenceFile"
+      ],
+      "properties": {
+        "recordId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "const": "assistant-verified"
+        },
+        "reviewerType": {
+          "const": "assistant"
+        },
+        "draftSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "contentSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "sourceDraftSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "evidenceFile": {
+          "const": "server/word-problems-private/provenance/reviews/independent-content-review.json"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "rational": {
+      "type": "object",
+      "required": [
+        "n",
+        "d"
+      ],
+      "properties": {
+        "n": {
+          "type": "string",
+          "pattern": "^-?[0-9]{1,24}$"
+        },
+        "d": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{0,23}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "scalar": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "value"
+          ],
+          "properties": {
+            "type": {
+              "const": "number"
+            },
+            "value": {
+              "$ref": "#/$defs/rational"
+            },
+            "unit": {
+              "type": "string",
+              "maxLength": 30
+            },
+            "requirePercent": {
+              "type": "boolean"
+            },
+            "requireSimplified": {
+              "type": "boolean"
+            },
+            "tolerance": {
+              "$ref": "#/$defs/rational"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "choices",
+            "value"
+          ],
+          "properties": {
+            "type": {
+              "const": "choice"
+            },
+            "choices": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 10,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "value": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "value"
+          ],
+          "properties": {
+            "type": {
+              "const": "ratio"
+            },
+            "value": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": "string",
+                "pattern": "^[1-9][0-9]{0,23}$"
+              }
+            },
+            "requireSimplified": {
+              "type": "boolean"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "format",
+            "minutes"
+          ],
+          "properties": {
+            "type": {
+              "const": "time"
+            },
+            "format": {
+              "enum": [
+                "clock",
+                "duration"
+              ]
+            },
+            "minutes": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      ]
+    },
+    "answer": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/scalar"
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "parts"
+          ],
+          "properties": {
+            "type": {
+              "const": "tuple"
+            },
+            "parts": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 6,
+              "items": {
+                "type": "object",
+                "required": [
+                  "key",
+                  "label",
+                  "answer"
+                ],
+                "properties": {
+                  "key": {
+                    "type": "string",
+                    "pattern": "^part-[1-6]$"
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "answer": {
+                    "$ref": "#/$defs/scalar"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "labels",
+            "values"
+          ],
+          "properties": {
+            "type": {
+              "const": "numbers"
+            },
+            "labels": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 6,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "values": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 6,
+              "items": {
+                "$ref": "#/$defs/rational"
+              }
+            },
+            "units": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -70,6 +70,28 @@ window.__mpTangramControls = {
     if (puzzle.actualTangram.hasCollisions(tan)) tan.transform(tan.position, previous);
     syncTanTransforms(puzzle.actualTangram); updateGui(); renderFrame();
   },
+  refresh() {
+    syncTanTransforms(puzzle.actualTangram); updateGui(); renderFrame();
+  },
+  restore(pieces, selected) {
+    if (!Array.isArray(pieces) || pieces.length !== puzzle.actualTangram.tans.length
+        || !pieces.every(p => p && [p.x, p.y, p.rotation].every(n => Number.isFinite(n) && Math.abs(n) < 1000)
+          && typeof p.active === 'boolean')) return false;
+    var previous = puzzle.state;
+    pieces.forEach((piece, index) => {
+      var tan = puzzle.actualTangram.tans[index], position = tan.position.clone();
+      position.x = piece.x; position.y = piece.y;
+      tan.transform(position, piece.rotation); tan.active = piece.active;
+    });
+    // Restoring a selection must never invoke the native place/snap/activate path.
+    puzzle.selectedTan = Number.isInteger(selected) ? puzzle.actualTangram.tans[selected] || null : null;
+    if (pieces.some(piece => piece.active)) {
+      if (puzzle.state === Puzzle.STATE_REVIEW) puzzle.showGame();
+      puzzle.hideSelection();
+    }
+    if (previous !== puzzle.state) handleStateChanged(previous);
+    this.refresh(); return true;
+  },
   snapshot() { return puzzle.actualTangram.tans.map(t => ({ x:t.position.x, y:t.position.y, rotation:t.rotation, active:t.active })); }
 };''', kind='host-controls')
     patch('const SERVER_URL', 'const themeColor = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();\n\nconst SERVER_URL')

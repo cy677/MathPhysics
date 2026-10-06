@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f3e9"><title>家庭学习 · 科学小岛</title><link rel="stylesheet" href="../src/theme.css"><link rel="stylesheet" href="style.css"><script src="../src/sync-client.js"></script><script src="../src/sync-ui.js"></script></head>
+<body class="mp-page" data-mp-learning="true">
+<a class="skip" href="#learning-main">跳到学习内容</a>
+<header class="learning-header"><a class="brand" href="../index.html">△ 科学小岛</a><span>FAMILY LEARNING</span></header>
+<main id="learning-main">
+<section class="learning-hero"><div><p class="eyebrow">一步一步，看见自己的成长</p><h1>我的家庭学习</h1><p>先在课堂自由探索，再用正式考核记录这一次的答案。</p></div><div class="hero-note"><strong>演示练习 · 0分</strong><span>正式交卷由服务器判定；离线可暂存已发放考核的答案。</span></div></section>
+<nav class="learning-tabs" role="tablist" aria-label="家庭学习页面"><button id="tab-assessment" role="tab" aria-selected="true" aria-controls="panel-assessment">考核</button><button id="tab-growth" role="tab" aria-selected="false" aria-controls="panel-growth" tabindex="-1">成长</button><button id="tab-profiles" role="tab" aria-selected="false" aria-controls="panel-profiles" tabindex="-1">档案</button></nav>
+<p id="learning-alert" role="alert"></p>
+<section id="panel-assessment" role="tabpanel" aria-labelledby="tab-assessment">
+<div id="assessment-menu"><div class="panel-head"><div><h2>选一个学习目标</h2><p>服务器冻结题目和规则。每次考核保留原始答案，交卷后才能查看解析。</p></div><button id="refresh-attempts" class="quiet">刷新考核记录</button></div>
+<div class="selectors"><label>模块<select id="module-filter"><option value="all">全部模块</option></select></label><label>找一找目标<input id="objective-search" type="search" placeholder="例如：分数、三角形、时钟"></label></div>
+<div id="capability-list" class="capability-list"></div><div class="pager" id="objective-pager"></div>
+<section class="draft-section"><h2>已发放的考核与交卷记录</h2><p>断网前已发放的考核可以继续作答。离线新练习只能作为演示（0分）。</p><div id="attempt-list" class="attempt-list"></div></section></div>
+<article id="active-assessment" hidden><div class="panel-head"><div><span id="assessment-badge" class="badge">正式考核</span><h2 id="assessment-title"></h2><p id="assessment-meta"></p></div><button id="assessment-back" class="quiet">返回目标列表</button></div><p id="assessment-status" role="status" class="notice"></p><div id="assessment-items" class="assessment-items"></div><div id="submission-actions" class="submission-actions"><button id="submit-assessment" class="primary">确认交卷</button><span>交卷后答案冻结，不能修改。</span></div><section id="assessment-result" hidden></section></article>
+</section>
+<section id="panel-growth" role="tabpanel" aria-labelledby="tab-growth" hidden><div class="panel-head"><div><h2>历史成绩与积分</h2><p>首次、最近和历史最好成绩；同一目标、难度和兼容规则内比较。</p></div><button id="refresh-growth" class="quiet">刷新成长记录</button></div><div id="growth-content"></div></section>
+<section id="panel-profiles" role="tabpanel" aria-labelledby="tab-profiles" hidden><div class="panel-head"><div><h2>我的档案</h2><p>使用昵称即可，不需要真实姓名或生日。</p></div><button id="manage-profiles" class="primary">管理账号与档案</button></div><div id="profile-content"></div><section class="notice"><strong>存档恢复范围</strong><p>保存首页探索、当前练习单及答案、课堂未完成参数、七巧板拼块、航天笔记与任务观察状态。物理演示保存场景和可操作参数；PhET 保存页面与支持的控制项，未承诺完整物理世界恢复。</p><a href="../docs/sync-adapters.md">查看每个模块支持的字段</a></section></section>
+</main><footer>科学小岛 · 家庭学习 <a href="../index.html#library">回到自由探索</a></footer>
+<script type="module" src="app.js"></script><script src="../src/theme.js"></script>
+</body></html>

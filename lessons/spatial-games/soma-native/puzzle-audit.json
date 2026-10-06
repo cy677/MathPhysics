@@ -1,0 +1,1492 @@
+{
+  "sourcePath": "vendor/games/spatial/soma/extra-puzzles/puzzles.md",
+  "sourceSha256": "5008ff70098303d15ed61a7f3d1a9a8ba7bc377499eafad68cb64151aa7ed190",
+  "sourceDefinitions": 46,
+  "validDefinitions": 46,
+  "excluded": [],
+  "digitToPiece": {
+    "1": "V",
+    "2": "L",
+    "3": "T",
+    "4": "Z",
+    "5": "B",
+    "6": "A",
+    "7": "P"
+  },
+  "coordinateTransform": "[x,y,z] -> [x,-z,y], then translate the occupied minimum to [0,0,0]; matches the original proper X-axis rotation.",
+  "uniqueTargetsIncludingClassic": 47,
+  "records": [
+    {
+      "sourceName": "SOMA002",
+      "sourceLine": 10,
+      "levelId": "soma-002",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        7,
+        7,
+        2
+      ],
+      "size": [
+        7,
+        2,
+        7
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          7,
+          2,
+          7
+        ],
+        "compactness": 0.2755,
+        "maxSpan": 7,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA003",
+      "sourceLine": 21,
+      "levelId": "soma-003",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        6,
+        3,
+        4
+      ],
+      "size": [
+        6,
+        4,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          6,
+          4,
+          3
+        ],
+        "compactness": 0.375,
+        "maxSpan": 6,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA004",
+      "sourceLine": 28,
+      "levelId": "soma-004",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        8,
+        2
+      ],
+      "size": [
+        5,
+        2,
+        8
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          2,
+          8
+        ],
+        "compactness": 0.3375,
+        "maxSpan": 8,
+        "hiddenVoxels": 0,
+        "reason": "跨度较大，需要协调多个伸展方向。"
+      }
+    },
+    {
+      "sourceName": "SOMA005",
+      "sourceLine": 40,
+      "levelId": "soma-005",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        3,
+        5
+      ],
+      "size": [
+        3,
+        5,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          5,
+          3
+        ],
+        "compactness": 0.6,
+        "maxSpan": 5,
+        "hiddenVoxels": 1,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA006",
+      "sourceLine": 47,
+      "levelId": "soma-006",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        5,
+        2
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          2,
+          5
+        ],
+        "compactness": 0.54,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA007",
+      "sourceLine": 56,
+      "levelId": "soma-007",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        7,
+        3,
+        2
+      ],
+      "size": [
+        7,
+        2,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          7,
+          2,
+          3
+        ],
+        "compactness": 0.6429,
+        "maxSpan": 7,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA008",
+      "sourceLine": 63,
+      "levelId": "soma-008",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        2,
+        2,
+        7
+      ],
+      "size": [
+        2,
+        7,
+        2
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          2,
+          7,
+          2
+        ],
+        "compactness": 0.9643,
+        "maxSpan": 7,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA009",
+      "sourceLine": 69,
+      "levelId": "soma-009",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        3,
+        5
+      ],
+      "size": [
+        3,
+        5,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          5,
+          3
+        ],
+        "compactness": 0.6,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA010",
+      "sourceLine": 76,
+      "levelId": "soma-010",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        3,
+        2
+      ],
+      "size": [
+        5,
+        2,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          2,
+          3
+        ],
+        "compactness": 0.9,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA011",
+      "sourceLine": 83,
+      "levelId": "soma-011",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        5,
+        2
+      ],
+      "size": [
+        5,
+        2,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          2,
+          5
+        ],
+        "compactness": 0.54,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA012",
+      "sourceLine": 92,
+      "levelId": "soma-012",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        10,
+        4,
+        4
+      ],
+      "size": [
+        10,
+        4,
+        4
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          10,
+          4,
+          4
+        ],
+        "compactness": 0.1688,
+        "maxSpan": 10,
+        "hiddenVoxels": 0,
+        "reason": "跨度较大，需要协调多个伸展方向。"
+      }
+    },
+    {
+      "sourceName": "SOMA013",
+      "sourceLine": 100,
+      "levelId": "soma-013",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        3,
+        3
+      ],
+      "size": [
+        5,
+        3,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          3,
+          3
+        ],
+        "compactness": 0.6,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA014",
+      "sourceLine": 107,
+      "levelId": "soma-014",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        5,
+        6
+      ],
+      "size": [
+        3,
+        6,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          6,
+          5
+        ],
+        "compactness": 0.3,
+        "maxSpan": 6,
+        "hiddenVoxels": 2,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA015",
+      "sourceLine": 116,
+      "levelId": "soma-015",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        5,
+        5
+      ],
+      "size": [
+        5,
+        5,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          5,
+          5
+        ],
+        "compactness": 0.216,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA016",
+      "sourceLine": 125,
+      "levelId": "soma-016",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        3,
+        3
+      ],
+      "size": [
+        5,
+        3,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          3,
+          3
+        ],
+        "compactness": 0.6,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA017",
+      "sourceLine": 132,
+      "levelId": "soma-017",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        5,
+        3
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          3,
+          5
+        ],
+        "compactness": 0.36,
+        "maxSpan": 5,
+        "hiddenVoxels": 1,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA018",
+      "sourceLine": 141,
+      "levelId": "soma-018",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        5,
+        3
+      ],
+      "size": [
+        3,
+        3,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          3,
+          5
+        ],
+        "compactness": 0.6,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA019",
+      "sourceLine": 150,
+      "levelId": "soma-019",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        5,
+        4
+      ],
+      "size": [
+        5,
+        4,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          4,
+          5
+        ],
+        "compactness": 0.27,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA020",
+      "sourceLine": 159,
+      "levelId": "soma-020",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        5,
+        6
+      ],
+      "size": [
+        3,
+        6,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          6,
+          5
+        ],
+        "compactness": 0.3,
+        "maxSpan": 6,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA021",
+      "sourceLine": 168,
+      "levelId": "soma-021",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        3,
+        4
+      ],
+      "size": [
+        3,
+        4,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          4,
+          3
+        ],
+        "compactness": 0.75,
+        "maxSpan": 4,
+        "hiddenVoxels": 0,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA022",
+      "sourceLine": 175,
+      "levelId": "soma-022",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        3,
+        5
+      ],
+      "size": [
+        3,
+        5,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          5,
+          3
+        ],
+        "compactness": 0.6,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA023",
+      "sourceLine": 182,
+      "levelId": "soma-023",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        5,
+        3
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          3,
+          5
+        ],
+        "compactness": 0.36,
+        "maxSpan": 5,
+        "hiddenVoxels": 1,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA025",
+      "sourceLine": 191,
+      "levelId": "soma-025",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        5,
+        3
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          3,
+          5
+        ],
+        "compactness": 0.36,
+        "maxSpan": 5,
+        "hiddenVoxels": 1,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA026",
+      "sourceLine": 200,
+      "levelId": "soma-026",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        3,
+        3
+      ],
+      "size": [
+        5,
+        3,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          3,
+          3
+        ],
+        "compactness": 0.6,
+        "maxSpan": 5,
+        "hiddenVoxels": 1,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA027",
+      "sourceLine": 207,
+      "levelId": "soma-027",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        3,
+        7
+      ],
+      "size": [
+        3,
+        7,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          7,
+          3
+        ],
+        "compactness": 0.4286,
+        "maxSpan": 7,
+        "hiddenVoxels": 0,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA028",
+      "sourceLine": 214,
+      "levelId": "soma-028",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        3,
+        7
+      ],
+      "size": [
+        3,
+        7,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          7,
+          3
+        ],
+        "compactness": 0.4286,
+        "maxSpan": 7,
+        "hiddenVoxels": 0,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA030",
+      "sourceLine": 221,
+      "levelId": "soma-030",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        3,
+        3
+      ],
+      "size": [
+        5,
+        3,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          3,
+          3
+        ],
+        "compactness": 0.6,
+        "maxSpan": 5,
+        "hiddenVoxels": 1,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA031",
+      "sourceLine": 228,
+      "levelId": "soma-031",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        7,
+        3,
+        3
+      ],
+      "size": [
+        7,
+        3,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          7,
+          3,
+          3
+        ],
+        "compactness": 0.4286,
+        "maxSpan": 7,
+        "hiddenVoxels": 0,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA032",
+      "sourceLine": 235,
+      "levelId": "soma-032",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        5,
+        3
+      ],
+      "size": [
+        5,
+        3,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          3,
+          5
+        ],
+        "compactness": 0.36,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA034",
+      "sourceLine": 244,
+      "levelId": "soma-034",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        6,
+        4,
+        2
+      ],
+      "size": [
+        6,
+        2,
+        4
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          6,
+          2,
+          4
+        ],
+        "compactness": 0.5625,
+        "maxSpan": 6,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA035",
+      "sourceLine": 252,
+      "levelId": "soma-035",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        6,
+        5,
+        2
+      ],
+      "size": [
+        6,
+        2,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          6,
+          2,
+          5
+        ],
+        "compactness": 0.45,
+        "maxSpan": 6,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA036",
+      "sourceLine": 261,
+      "levelId": "soma-036",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        6,
+        6,
+        2
+      ],
+      "size": [
+        6,
+        2,
+        6
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          6,
+          2,
+          6
+        ],
+        "compactness": 0.375,
+        "maxSpan": 6,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA037",
+      "sourceLine": 271,
+      "levelId": "soma-037",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        7,
+        2
+      ],
+      "size": [
+        5,
+        2,
+        7
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          2,
+          7
+        ],
+        "compactness": 0.3857,
+        "maxSpan": 7,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA038",
+      "sourceLine": 282,
+      "levelId": "soma-038",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        4,
+        4,
+        6
+      ],
+      "size": [
+        4,
+        6,
+        4
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          4,
+          6,
+          4
+        ],
+        "compactness": 0.2813,
+        "maxSpan": 6,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA039",
+      "sourceLine": 290,
+      "levelId": "soma-039",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        5,
+        6
+      ],
+      "size": [
+        3,
+        6,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          6,
+          5
+        ],
+        "compactness": 0.3,
+        "maxSpan": 6,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA040",
+      "sourceLine": 299,
+      "levelId": "soma-040",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        5,
+        6
+      ],
+      "size": [
+        3,
+        6,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          6,
+          5
+        ],
+        "compactness": 0.3,
+        "maxSpan": 6,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA041",
+      "sourceLine": 308,
+      "levelId": "soma-041",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        5,
+        5
+      ],
+      "size": [
+        3,
+        5,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          5,
+          5
+        ],
+        "compactness": 0.36,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA042",
+      "sourceLine": 317,
+      "levelId": "soma-042",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        5,
+        4
+      ],
+      "size": [
+        3,
+        4,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          4,
+          5
+        ],
+        "compactness": 0.45,
+        "maxSpan": 5,
+        "hiddenVoxels": 0,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA043",
+      "sourceLine": 326,
+      "levelId": "soma-043",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        5,
+        7
+      ],
+      "size": [
+        3,
+        7,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          7,
+          5
+        ],
+        "compactness": 0.2571,
+        "maxSpan": 7,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA044",
+      "sourceLine": 335,
+      "levelId": "soma-044",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        5,
+        7
+      ],
+      "size": [
+        3,
+        7,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          7,
+          5
+        ],
+        "compactness": 0.2571,
+        "maxSpan": 7,
+        "hiddenVoxels": 2,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA045",
+      "sourceLine": 344,
+      "levelId": "soma-045",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        4,
+        4,
+        8
+      ],
+      "size": [
+        4,
+        8,
+        4
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          4,
+          8,
+          4
+        ],
+        "compactness": 0.2109,
+        "maxSpan": 8,
+        "hiddenVoxels": 0,
+        "reason": "跨度较大，需要协调多个伸展方向。"
+      }
+    },
+    {
+      "sourceName": "SOMA046",
+      "sourceLine": 352,
+      "levelId": "soma-046",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        7,
+        5,
+        3
+      ],
+      "size": [
+        7,
+        3,
+        5
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          7,
+          3,
+          5
+        ],
+        "compactness": 0.2571,
+        "maxSpan": 7,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    },
+    {
+      "sourceName": "SOMA047",
+      "sourceLine": 361,
+      "levelId": "soma-047",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        4,
+        3,
+        3
+      ],
+      "size": [
+        4,
+        3,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          4,
+          3,
+          3
+        ],
+        "compactness": 0.75,
+        "maxSpan": 4,
+        "hiddenVoxels": 0,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA048",
+      "sourceLine": 368,
+      "levelId": "soma-048",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        4,
+        3,
+        3
+      ],
+      "size": [
+        4,
+        3,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          4,
+          3,
+          3
+        ],
+        "compactness": 0.75,
+        "maxSpan": 4,
+        "hiddenVoxels": 1,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA049",
+      "sourceLine": 375,
+      "levelId": "soma-049",
+      "tier": 3,
+      "voxelCount": 27,
+      "sourceSize": [
+        3,
+        3,
+        4
+      ],
+      "size": [
+        3,
+        4,
+        3
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          3,
+          4,
+          3
+        ],
+        "compactness": 0.75,
+        "maxSpan": 4,
+        "hiddenVoxels": 1,
+        "reason": "体形较紧凑，需要环绕检查内部空间。"
+      }
+    },
+    {
+      "sourceName": "SOMA050",
+      "sourceLine": 382,
+      "levelId": "soma-050",
+      "tier": 2,
+      "voxelCount": 27,
+      "sourceSize": [
+        5,
+        6,
+        2
+      ],
+      "size": [
+        5,
+        2,
+        6
+      ],
+      "solutionVerified": true,
+      "duplicateOf": null,
+      "mirrorOf": null,
+      "difficulty": {
+        "basis": "geometry",
+        "size": [
+          5,
+          2,
+          6
+        ],
+        "compactness": 0.45,
+        "maxSpan": 6,
+        "hiddenVoxels": 0,
+        "reason": "轮廓较展开，可先辨认局部拐角和分支。"
+      }
+    }
+  ]
+}

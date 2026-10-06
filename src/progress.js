@@ -8,6 +8,7 @@
   function create(activityId, levelIds, status) {
     const allowed = new Set(levelIds);
     const key = prefix + activityId;
+    const storage = window.MathPhysicsSync?.createStorage() || window.localStorage;
     let current = null, failed = false;
     function normalize(input) {
       const result = {schemaVersion: 1, completed: {}, checkpoint: null};
@@ -24,7 +25,7 @@
       return result;
     }
     function read() {
-      try { return normalize(JSON.parse(window.localStorage.getItem(key))); }
+      try { return normalize(JSON.parse(storage.getItem(key))); }
       catch { return normalize(null); }
     }
     let state = read();
@@ -34,11 +35,11 @@
         status.dataset.saved = String(!failed);
         status.textContent = `已完成 ${Object.keys(state.completed).length} / ${allowed.size}` +
           (state.completed[current] ? ' · 本关已完成' : '') +
-          (failed ? ' · 浏览器未能保存，进度仅在本页有效' : state.checkpoint ? ' · 已自动存档' : ' · 完成后自动存档');
+          (failed ? ' · 浏览器未能保存，进度仅在本页有效' : state.checkpoint ? ' · 演示练习已存档（0分）' : ' · 演示完成后存档（0分）');
       }
     }
     function write() {
-      try { window.localStorage.setItem(key, JSON.stringify(state)); failed = false; }
+      try { storage.setItem(key, JSON.stringify(state)); failed = false; }
       catch { failed = true; }
       show();
       return !failed;

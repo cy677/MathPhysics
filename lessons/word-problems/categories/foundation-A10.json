@@ -1,0 +1,1552 @@
+{
+  "schemaVersion": 1,
+  "bankVersion": "2026-10-06.3",
+  "categoryKey": "foundation-A10",
+  "questions": [
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0679",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "由部分或剩余反求整体",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-9776fb6a920c1994",
+      "assessmentGroup": "assessment-9776fb6a920c1994",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "希阿姨有6个披萨，每个切成6块。她卖掉了全部披萨块的1/4。还剩多少块？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "27",
+          "d": "1"
+        },
+        "unit": "块"
+      },
+      "intent": "先求总块数，再扣除卖掉的分数部分。",
+      "hints": [
+        "1/4是全部36块的1/4。"
+      ],
+      "steps": [
+        "共有6×6＝36（块）。",
+        "卖掉36÷4＝9（块）。",
+        "还剩36－9＝27（块）。"
+      ],
+      "commonMistakes": [
+        "把1/4理解成只卖掉一个披萨的1/4。",
+        "只答卖掉的9块。"
+      ],
+      "prerequisites": [
+        "乘法",
+        "分数意义",
+        "减法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0679",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "9a9e813fb0e53e0d5d15d86dffff159c03249d414c7c08f985798cf8fbd9da02",
+        "recordSha256": "fb2047bafc5d1ed548f0f0a036542f9fa3c5efa44346a109c8050dcf7251c91c",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.k5learning.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0679",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "43394a8404e899a8f987a116f8b519c6af945afbb5933a56166f032ff32e747f",
+        "sourceDraftSha256": "43394a8404e899a8f987a116f8b519c6af945afbb5933a56166f032ff32e747f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "32e04c619cffe59ac4885d494412a50f9cc9be56965792818b5455417e308d62"
+      },
+      "contentSha256": "32e04c619cffe59ac4885d494412a50f9cc9be56965792818b5455417e308d62"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0887",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "由部分或剩余反求整体",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-09178691eafa2a2e",
+      "assessmentGroup": "assessment-09178691eafa2a2e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "格雷格的妈妈做了饼干，每个饼干都切成两半。格雷格吃了4个半块，弟弟布拉德吃了6个半块，还剩18个半块。妈妈原来做了多少个完整饼干？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "14",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "合计半块数量，再换算成完整饼干数量。",
+      "hints": [
+        "2个半块合起来才是1个完整饼干。"
+      ],
+      "steps": [
+        "原来共有4＋6＋18＝28（个半块）。",
+        "完整饼干有28÷2＝14（个）。"
+      ],
+      "commonMistakes": [
+        "直接把28个半块当成28个完整饼干。",
+        "只计算剩下的18个半块。"
+      ],
+      "prerequisites": [
+        "一半",
+        "总量与部分量",
+        "除法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0887",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ca0af6cee1b366be180ae8777a3bba6452b33386cd97779f59d7c48cb3aa8098",
+        "recordSha256": "dfef38282847d46d41ea3b5d8fb7e8fd066f103669ce37be1f49b3e9c2f8b5ce",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0887",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e24252075ca76fe5f425c6636c095d33b85735a375d6bb447666eea4b66f6f1f",
+        "sourceDraftSha256": "e24252075ca76fe5f425c6636c095d33b85735a375d6bb447666eea4b66f6f1f",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9377e674d2298e868354690d3e90ca7904c98a7dc96a78222e11ed0d6e48fcd9"
+      },
+      "contentSha256": "9377e674d2298e868354690d3e90ca7904c98a7dc96a78222e11ed0d6e48fcd9"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0900",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "由部分或剩余反求整体",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-ff8ddede9cd0225a",
+      "assessmentGroup": "assessment-ff8ddede9cd0225a",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小婷收藏了许多毛绒玩偶。她送给表弟8个，送给妹妹的数量是8个的一半，又送给需要帮助的孩子36个，自己留下12个。她原来有多少个玩偶？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "60",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "合计给出的各部分与保留的部分，反求原有总量。",
+      "hints": [
+        "妹妹得到的是给表弟数量的一半。"
+      ],
+      "steps": [
+        "妹妹得到8÷2＝4（个）。",
+        "原来共有8＋4＋36＋12＝60（个）。"
+      ],
+      "commonMistakes": [
+        "把妹妹得到的数量当作全部收藏的一半。",
+        "漏掉自己留下的12个。"
+      ],
+      "prerequisites": [
+        "一半",
+        "总量与部分量"
+      ],
+      "adaptation": [
+        "将品牌名Beanie Babies概括为毛绒玩偶，保留各部分数量。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0900",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "94717dec9f4510f373a58a6bcce8bf3b78932fa8948e1622cbeb4f2e2f80a1aa",
+        "recordSha256": "3c3592b9723d79320995b24f1c025f57b59b3786e86663c2103130da5dfe3529",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0900",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "cc6c989bad5e49aaaeca47813d5792da35066e26fd899187eb49f9ee7a2aab0b",
+        "sourceDraftSha256": "cc6c989bad5e49aaaeca47813d5792da35066e26fd899187eb49f9ee7a2aab0b",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "bc89461dec7135795600f47cfe95399107f85940c01ed45af223ff9f1d0f0cc1"
+      },
+      "contentSha256": "bc89461dec7135795600f47cfe95399107f85940c01ed45af223ff9f1d0f0cc1"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0911",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "由部分或剩余反求整体",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-304913dd52f9c401",
+      "assessmentGroup": "assessment-304913dd52f9c401",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "保罗的点心店收到一箱苹果。他先把一半留作以后做苹果派，剩下的苹果中有25个放进冰箱，最后还有6个用来做小蛋糕。这箱苹果原来有多少个？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "62",
+          "d": "1"
+        },
+        "unit": "个"
+      },
+      "intent": "先合计剩余一半中的两部分，再反求整体。",
+      "hints": [
+        "25个和6个合起来是全箱的一半。"
+      ],
+      "steps": [
+        "一半苹果共有25＋6＝31（个）。",
+        "原来全箱有31×2＝62（个）。"
+      ],
+      "commonMistakes": [
+        "只把25个看成全箱的一半。",
+        "给31再加2而不是乘2。"
+      ],
+      "prerequisites": [
+        "一半与整体",
+        "两步运算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0911",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "a0afabfa6098faacf7fcad01e17c767b20defb93bef2ebb8b38b749463eac3fc",
+        "recordSha256": "30fb8f7815890c47d21c8b7bb57e54d9185492757aec4dd50e7cec63ec18a785",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0911",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b2cae290947a11d9d31a809725480760ffc542b1214988af1a4d5150eb31f71d",
+        "sourceDraftSha256": "b2cae290947a11d9d31a809725480760ffc542b1214988af1a4d5150eb31f71d",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "80ed6a51dff4091b2f872829ecdcc73fdb6f0a0d59a14974cbb4fde9a22fb372"
+      },
+      "contentSha256": "80ed6a51dff4091b2f872829ecdcc73fdb6f0a0d59a14974cbb4fde9a22fb372"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-0997",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "已知整体求部分或分数关系",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-8c46079ef65c14c1",
+      "assessmentGroup": "assessment-8c46079ef65c14c1",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小本有18颗弹珠，小约有17颗。小本把自己弹珠的一半送给小约。送完后，小约比小本多多少颗弹珠？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "17",
+          "d": "1"
+        },
+        "unit": "颗"
+      },
+      "intent": "计算转移之后两人的数量差。",
+      "hints": [
+        "给出与收到的是同一批弹珠。"
+      ],
+      "steps": [
+        "小本送出18÷2＝9（颗），自己剩18－9＝9（颗）。",
+        "小约现在有17＋9＝26（颗）。",
+        "小约比小本多26－9＝17（颗）。"
+      ],
+      "commonMistakes": [
+        "只给小约加9，没有给小本减9。",
+        "比较送出之前的数量。"
+      ],
+      "prerequisites": [
+        "一半",
+        "变化前后数量",
+        "加法比较"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-0997",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "a42d69655003333c14ee043f26a84fee94caff89a40226a0f1671f5d4eddfee5",
+        "recordSha256": "52de485624f8d52efdb6f3c885e31cb6017680834c1261a994feaaee56cb4ad5",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathplayground.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-0997",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a31a774545be546b8ab4843f89ce049fbf523be6f52093fd1db332b26f1d6182",
+        "sourceDraftSha256": "a31a774545be546b8ab4843f89ce049fbf523be6f52093fd1db332b26f1d6182",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "784aa711adde8788331dd9e8e8e6c20ff7a9faf2d80e12504d4c8834df107307"
+      },
+      "contentSha256": "784aa711adde8788331dd9e8e8e6c20ff7a9faf2d80e12504d4c8834df107307"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1096",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "已知整体求部分或分数关系",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-e36ada70bfbbc9c0",
+      "assessmentGroup": "assessment-e36ada70bfbbc9c0",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "唐叔叔做了8700毫升番茄汤，取出1.6升装进孩子的午餐盒，再把剩余汤的一半冷冻起来。他冷冻了多少毫升汤？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "3550",
+          "d": "1"
+        },
+        "unit": "毫升"
+      },
+      "intent": "统一容量单位，求剩余量的一半。",
+      "hints": [
+        "要冷冻的是取出午餐用汤之后的剩余部分。"
+      ],
+      "steps": [
+        "1.6升＝1600毫升。",
+        "剩余汤有8700－1600＝7100（毫升）。",
+        "冷冻了7100÷2＝3550（毫升）。"
+      ],
+      "commonMistakes": [
+        "直接将8700除以2。",
+        "单位没有统一。"
+      ],
+      "prerequisites": [
+        "容量单位换算",
+        "一半",
+        "两步运算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1096",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "a8acea21aab4d55b957aecf2312ea39e058044f2ba5a4bb72652eb029826a405",
+        "recordSha256": "0bb22ba8886d4ceb781211cc9687fcf196fe26621d54476e1d6a746e77542856",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1096",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b954aba5db01cb5e4f80846fe8430c5e66ea78e0fef84eecfd4aae37fd1629a5",
+        "sourceDraftSha256": "b954aba5db01cb5e4f80846fe8430c5e66ea78e0fef84eecfd4aae37fd1629a5",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8e4df96cc1d321b4bdaef4e07e0eaa1447bd98d860615fefecea83e0788be6ce"
+      },
+      "contentSha256": "8e4df96cc1d321b4bdaef4e07e0eaa1447bd98d860615fefecea83e0788be6ce"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1097",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "已知整体求部分或分数关系",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-869720301472d0fd",
+      "assessmentGroup": "assessment-869720301472d0fd",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小伊从学校回家，先慢跑了全程的2/3，累了以后步行走完剩下的3200米。学校到他家的全程是多少千米？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "48",
+          "d": "5"
+        },
+        "unit": "千米"
+      },
+      "intent": "根据剩余部分占整体的分数反求总路程。",
+      "hints": [
+        "走路的部分占全程的1/3。"
+      ],
+      "steps": [
+        "剩余部分占1－2/3＝1/3。",
+        "全程为3200÷（1/3）＝9600（米）。",
+        "9600米＝9.6千米。"
+      ],
+      "commonMistakes": [
+        "把3200米当作全程的2/3。",
+        "求出米数后没有换成千米。"
+      ],
+      "prerequisites": [
+        "分数意义",
+        "由部分求整体",
+        "长度单位换算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1097",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "e3457c2019ddf3e61860960e7865f49f531dca0c4e08e5c0583f1747fbb95146",
+        "recordSha256": "a0285415c3cdaa40ae0777957cc440433cec63f1e75bf5b0de830fc1466845e9",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1097",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "b7c000292d727929194ff25c64e421962d2fe4d63926be6cfe314d1c867c3f21",
+        "sourceDraftSha256": "b7c000292d727929194ff25c64e421962d2fe4d63926be6cfe314d1c867c3f21",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "86e10f1413d37ebc8f1bba6eb69751851f1eb6095edd53aaa9155d6992308665"
+      },
+      "contentSha256": "86e10f1413d37ebc8f1bba6eb69751851f1eb6095edd53aaa9155d6992308665"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1099",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "由部分或剩余反求整体",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-1bade9dac615f2ba",
+      "assessmentGroup": "assessment-1bade9dac615f2ba",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "女童子军营地早餐时用掉了燕麦脆片的一半。晚饭后，大家把剩下的6250克全部撒在酸奶甜点上。营地最初有多少千克燕麦脆片？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "25",
+          "d": "2"
+        },
+        "unit": "千克"
+      },
+      "intent": "由剩余一半反求最初质量并换算。",
+      "hints": [
+        "剩余6250克也是原来的一半。"
+      ],
+      "steps": [
+        "最初有6250×2＝12500（克）。",
+        "12500克＝12.5千克。"
+      ],
+      "commonMistakes": [
+        "把6250除以2。",
+        "只答12500而漏掉千克单位换算。"
+      ],
+      "prerequisites": [
+        "一半与整体",
+        "质量单位换算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1099",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "f87d5608720e776681f61cd95896c96c7ff2fc4fa131a80f58754d993c72672f",
+        "recordSha256": "16bee9572471f75b2f9e184ee0386ac25260c1264b75d758e2dc183e1c84b809",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1099",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "757fd95370a800edcae4a482e646e55c54bb95b1d93cae6a0ea2a59c1c32e640",
+        "sourceDraftSha256": "757fd95370a800edcae4a482e646e55c54bb95b1d93cae6a0ea2a59c1c32e640",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "6e9ecc52ef74252cc3521d232d5593444b45d0d799f07ae0a7b234201063655d"
+      },
+      "contentSha256": "6e9ecc52ef74252cc3521d232d5593444b45d0d799f07ae0a7b234201063655d"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1105",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "已知整体求部分或分数关系",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-79d2631ecf1ff765",
+      "assessmentGroup": "assessment-79d2631ecf1ff765",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小韦调果汁，先用橙汁装到果汁碗容量的一半，再用葡萄汁装满剩余空间的一半，最后用300毫升樱桃汁装满余下的空间。一共倒入了多少升果汁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6",
+          "d": "5"
+        },
+        "unit": "升"
+      },
+      "intent": "辨认连续取一半后剩下的比例，反求整体。",
+      "hints": [
+        "第二次的一半是剩余空间的一半。"
+      ],
+      "steps": [
+        "葡萄汁占全碗的（1－1/2）÷2＝1/4。",
+        "樱桃汁占1－1/2－1/4＝1/4。",
+        "整碗果汁为300×4＝1200（毫升），即1.2升。"
+      ],
+      "commonMistakes": [
+        "把葡萄汁也当成全碗的一半。",
+        "把300毫升当成全碗的容量。"
+      ],
+      "prerequisites": [
+        "分数意义",
+        "由部分求整体",
+        "容量单位换算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1105",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ce19e2b19c051d03ec1fe3e13782f9bc6e7cf524a3f850f51560270f41a22a70",
+        "recordSha256": "06cb9b1b194f3e7c653f9565341c73b0850ab4ef73fc1447c745c0ef3e9c0d69",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1105",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0ae8badcb4af96b4bd07cf97f4d4eecaeefabbe62a39b7c7ef9e9d6c1e1ad1a5",
+        "sourceDraftSha256": "0ae8badcb4af96b4bd07cf97f4d4eecaeefabbe62a39b7c7ef9e9d6c1e1ad1a5",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "0f8150bbca438c060a77460cb3d9a4075e04c8232ae16957d36f94eb5f6cde2b"
+      },
+      "contentSha256": "0f8150bbca438c060a77460cb3d9a4075e04c8232ae16957d36f94eb5f6cde2b"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1106",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "已知整体求部分或分数关系",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-21f3174ca011ba8f",
+      "assessmentGroup": "assessment-21f3174ca011ba8f",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小吉调紫色颜料，先把容器的1/3装上红色颜料，再倒入4升蓝色颜料，正好装满剩余空间。她一共倒入了多少毫升颜料？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "6000",
+          "d": "1"
+        },
+        "unit": "毫升"
+      },
+      "intent": "根据剩余空间的比例反求总体积。",
+      "hints": [
+        "蓝色颜料占容器的2/3。"
+      ],
+      "steps": [
+        "蓝色颜料占1－1/3＝2/3。",
+        "总量是4÷（2/3）＝6（升）。",
+        "6升＝6000毫升。"
+      ],
+      "commonMistakes": [
+        "把4升当作1/3。",
+        "把6升答成6毫升。"
+      ],
+      "prerequisites": [
+        "分数意义",
+        "由部分求整体",
+        "容量单位换算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1106",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "0951ae4481a18dafa036128cc98482126409fcab3740cd23b8202ee9d6beb5d8",
+        "recordSha256": "e82ac100434e1ba60637e0e6518c10cde73b780cf9ace5d49f90fb41d45e0c56",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1106",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "8026c817ab574790f9dfc04156784135c7f0a1a390bb99a3c3f27b9439770170",
+        "sourceDraftSha256": "8026c817ab574790f9dfc04156784135c7f0a1a390bb99a3c3f27b9439770170",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "280f5a7baa5573ddce7426aaa46795c550c4a03309b52e6ba70932d5d8057ef9"
+      },
+      "contentSha256": "280f5a7baa5573ddce7426aaa46795c550c4a03309b52e6ba70932d5d8057ef9"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1154",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "已知整体求部分或分数关系",
+      "level": "I2",
+      "locale": "zh-CN",
+      "storyFamily": "story-3d89464839e6cec3",
+      "assessmentGroup": "assessment-3d89464839e6cec3",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "星期六，小洁把桶的1/4装上堆肥。星期日又用4200克相同的堆肥装满剩余部分，两次装填的紧密程度相同。桶里的堆肥一共重多少千克？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "28",
+          "d": "5"
+        },
+        "unit": "千克"
+      },
+      "intent": "根据相同堆肥占据的比例反求总质量。",
+      "hints": [
+        "4200克对应桶的3/4。"
+      ],
+      "steps": [
+        "剩余部分占1－1/4＝3/4。",
+        "全桶堆肥重4200÷（3/4）＝5600（克）。",
+        "5600克＝5.6千克。"
+      ],
+      "commonMistakes": [
+        "把4200克当作全桶的1/4。",
+        "遗漏克与千克的换算。"
+      ],
+      "prerequisites": [
+        "分数意义",
+        "质量单位换算",
+        "由部分求整体"
+      ],
+      "adaptation": [
+        "明确使用相同堆肥、装填紧密程度相同，使占空间的分数与质量比例一致。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1154",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "b6c81e96bcd2f371ebac042dc5843756817da0a9cf17ab64648e6625b1015b39",
+        "recordSha256": "0776c69fffc1685050f1024791d88c0efce60e49ddfc1817d1fb0ffa51bc4701",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.khanacademy.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1154",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "1315dc99b92866d7c64a7be205b49da917eb463e8f30eefd7ae29b0f808c9afe",
+        "sourceDraftSha256": "1315dc99b92866d7c64a7be205b49da917eb463e8f30eefd7ae29b0f808c9afe",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "2e1ef6bd33c2c8bd3d57b218ee9b4225805024b3da06cc8143fc1d7159fa6c67"
+      },
+      "contentSha256": "2e1ef6bd33c2c8bd3d57b218ee9b4225805024b3da06cc8143fc1d7159fa6c67"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1295",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "由部分或剩余反求整体",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-f821c912ee247e7a",
+      "assessmentGroup": "assessment-f821c912ee247e7a",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小佩、小博和小菲是表兄弟。小佩的年龄是小博的1/3，小菲比小博大5岁，三人的年龄之和为40岁。三人各多少岁？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "小佩",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "5",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "小博",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "15",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-3",
+            "label": "小菲",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "20",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          }
+        ]
+      },
+      "intent": "扣除多出的年龄后按份数求三人的年龄。",
+      "hints": [
+        "把小佩的年龄看成1份，小博为3份，小菲为3份再多5岁。"
+      ],
+      "steps": [
+        "去掉小菲多出的5岁，还剩40－5＝35（岁）。",
+        "35岁对应1＋3＋3＝7（份），每份35÷7＝5（岁）。",
+        "小佩5岁，小博5×3＝15（岁），小菲15＋5＝20（岁）。"
+      ],
+      "commonMistakes": [
+        "把小菲多5岁误写成5倍。",
+        "把40岁直接按7份平均分。"
+      ],
+      "prerequisites": [
+        "分数与倍数",
+        "按份数分配"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1295",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "282a20bd5914f0ffd0f580fb6726db041b1ea8256261f34b5d192b00b85f2302",
+        "recordSha256": "49e2083070590723e3af9c8a9d2c2c528c6bd9f75f97a779e46dda9bf2544b07",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathocean.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1295",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "2502e042d0c84f077646e6a57e846e45678b5ef238a9230620fcbf0cdea607d6",
+        "sourceDraftSha256": "2502e042d0c84f077646e6a57e846e45678b5ef238a9230620fcbf0cdea607d6",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "5f906216b2258e8fee199742d6af4c5c4a6c918b645d8c87ac9b98719b779942"
+      },
+      "contentSha256": "5f906216b2258e8fee199742d6af4c5c4a6c918b645d8c87ac9b98719b779942"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1299",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "由部分或剩余反求整体",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-64ac5df8ac37280d",
+      "assessmentGroup": "assessment-64ac5df8ac37280d",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小德12岁，他的年龄比小史年龄的一半多2岁。小史多少岁？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "20",
+          "d": "1"
+        },
+        "unit": "岁"
+      },
+      "intent": "根据一半再多的关系反求整体年龄。",
+      "hints": [
+        "先去掉多出的2岁。"
+      ],
+      "steps": [
+        "小史年龄的一半为12－2＝10（岁）。",
+        "小史年龄为10×2＝20（岁）。"
+      ],
+      "commonMistakes": [
+        "先给12加2。",
+        "用10除以2。"
+      ],
+      "prerequisites": [
+        "一半与整体",
+        "两步运算"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1299",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "3d51b8750900946a22a80b6a48f2de56ca7ac32257be99f40f35fc069cc894b5",
+        "recordSha256": "a8c759166b97cdc64f9d80e58b1511e4488160df69850772eebc1c85fd2d862d",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.mathocean.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1299",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "24b0178be604969094b8830a18a687be139532528cc62dbceb98634237dd30a8",
+        "sourceDraftSha256": "24b0178be604969094b8830a18a687be139532528cc62dbceb98634237dd30a8",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "7f5fda75e88852c0e2cc53f4c79b2e03861598a59f49df7e59caa3773f948204"
+      },
+      "contentSha256": "7f5fda75e88852c0e2cc53f4c79b2e03861598a59f49df7e59caa3773f948204"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1355",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "已知整体求部分或分数关系",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-63e561dbffec110a",
+      "assessmentGroup": "assessment-63e561dbffec110a",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "烘焙社团做一批饼干需要3千克糖，小佳已经放入0.5千克糖。还需要放入多少千克糖？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "5",
+          "d": "2"
+        },
+        "unit": "千克"
+      },
+      "intent": "从所需总量中减去已经放入的部分。",
+      "hints": [
+        "0.5千克就是半千克。"
+      ],
+      "steps": [
+        "还需要3－0.5＝2.5（千克）糖。"
+      ],
+      "commonMistakes": [
+        "把半千克误当成1.5千克。",
+        "将已加入量与总需要量相加。"
+      ],
+      "prerequisites": [
+        "小数或分数减法",
+        "整体与部分"
+      ],
+      "adaptation": [
+        "原题使用英制杯，重设为社团批量烘焙的千克情境；3和0.5的数量关系保留，这是情境重设而非精确单位换算。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1355",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "6679ee4ddf18156cce4fdd61016256c76fadb78bc78bb055ac38e863a3309b1c",
+        "recordSha256": "16cdcd3ddcc1ede77c7316a36d485456953add6cf552362419d196125bccf06f",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.moomoomath.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1355",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "dbb4ed4b123d2058739c251880940a1932d96d4caf9e2b7d4e84878133b83040",
+        "sourceDraftSha256": "dbb4ed4b123d2058739c251880940a1932d96d4caf9e2b7d4e84878133b83040",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "ba7b89f126f64c64be91fb17683e339373011a324e591301d2b55b126d003d52"
+      },
+      "contentSha256": "ba7b89f126f64c64be91fb17683e339373011a324e591301d2b55b126d003d52"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1356",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "已知整体求部分或分数关系",
+      "level": "C2",
+      "locale": "zh-CN",
+      "storyFamily": "story-9f6b37a320788845",
+      "assessmentGroup": "assessment-9f6b37a320788845",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小约收到14元用来买一件礼物，这些钱刚好是礼物价格的一半。这件礼物多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "28",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "根据一半的价格反求总价。",
+      "hints": [
+        "总价包含两份相同的14元。"
+      ],
+      "steps": [
+        "礼物价格为14×2＝28（元）。"
+      ],
+      "commonMistakes": [
+        "把14元再除以2。"
+      ],
+      "prerequisites": [
+        "一半与整体",
+        "乘法"
+      ],
+      "adaptation": [
+        "美元情境改为人民币元，数值保留，不作汇率换算。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1356",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "df876cf43e1cc2325ca8a517eaa6efcbaf2210215b2c70d9bc43239c385c060e",
+        "recordSha256": "ae1ac9b803d7ec18abe3b387e051a8bf47d2c001472e5d7544d89422ee8eed79",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.moomoomath.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1356",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "0fc4eefd130cda2ece2881d515ce7c1faf8f085e84bb757a93ddf39891adbc90",
+        "sourceDraftSha256": "0fc4eefd130cda2ece2881d515ce7c1faf8f085e84bb757a93ddf39891adbc90",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "8ab7225d04a9e9e4862561969a699ebb13eb58504dba6212e727a4a8f020c9a6"
+      },
+      "contentSha256": "8ab7225d04a9e9e4862561969a699ebb13eb58504dba6212e727a4a8f020c9a6"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1387",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "由部分或剩余反求整体",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-b89fdd05848bab44",
+      "assessmentGroup": "assessment-b89fdd05848bab44",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "小杰看电影花掉本周零用钱的一半，后来帮家里洗车挣了6元，最后有11元。她本周原来的零用钱是多少元？",
+      "answer": {
+        "type": "number",
+        "value": {
+          "n": "10",
+          "d": "1"
+        },
+        "unit": "元"
+      },
+      "intent": "先扣除后来挣的钱，再由剩余一半反求零用钱。",
+      "hints": [
+        "原来零用钱的一半，加上6元后是11元。"
+      ],
+      "steps": [
+        "原来零用钱的一半是11－6＝5（元）。",
+        "原来零用钱是5×2＝10（元）。"
+      ],
+      "commonMistakes": [
+        "把后来挣的6元加回11元。",
+        "把5元当成全部零用钱。"
+      ],
+      "prerequisites": [
+        "一半与整体",
+        "变化前后数量"
+      ],
+      "adaptation": [
+        "美元情境改为人民币元，数值保留，不作汇率换算。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1387",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "ad2cb580f6ef5493cdf357396ea4f605f086afe4da08452fef6f342adbcfd246",
+        "recordSha256": "547e9fa28907104f081fc9c46aa622e3ff209d5008845007881a0eda6872b8aa",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.math-aids.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1387",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "a5d38c67384694ed488a3a8fc3c9b2c6d75bae7f88ffbcf832f13205d45f02ce",
+        "sourceDraftSha256": "a5d38c67384694ed488a3a8fc3c9b2c6d75bae7f88ffbcf832f13205d45f02ce",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "eebc9c388563de6de5228fa8b64ad0cc3333477bc631a8b216b27fc232daa520"
+      },
+      "contentSha256": "eebc9c388563de6de5228fa8b64ad0cc3333477bc631a8b216b27fc232daa520"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1416",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "由部分或剩余反求整体",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-0f0992c94fc2d64b",
+      "assessmentGroup": "assessment-0f0992c94fc2d64b",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "一位父亲说：“我现在的年龄是儿子的3倍。5年后，我的年龄是儿子的2.5倍。”父亲和儿子现在各多少岁？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "父亲",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "45",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "儿子",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "15",
+                "d": "1"
+              },
+              "unit": "岁"
+            }
+          }
+        ]
+      },
+      "intent": "理解两人年龄同增，利用前后倍数关系求年龄。",
+      "hints": [
+        "5年后，父亲和儿子都会增加5岁。"
+      ],
+      "steps": [
+        "把儿子现在的年龄看成1份，父亲现在就是3份。",
+        "5年后父亲增加5岁，而儿子年龄的2.5倍增加5×2.5＝12.5（岁）。",
+        "原来相差3－2.5＝0.5份，这0.5份对应12.5－5＝7.5（岁）。",
+        "儿子现在7.5÷0.5＝15（岁），父亲15×3＝45（岁）。",
+        "验算5年后：50÷20＝2.5，符合条件。"
+      ],
+      "commonMistakes": [
+        "只给父亲增加5岁，忘记儿子也会长大。",
+        "把2.5倍理解成多2.5岁。"
+      ],
+      "prerequisites": [
+        "年龄变化",
+        "倍数关系",
+        "小数乘除法"
+      ],
+      "adaptation": [],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1416",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "1858b7d65d74f54a4e6db1c54faa870c54c0fbe187dae3ef3f50d3b36f9b0a67",
+        "recordSha256": "fba38761966427e19da74cf55b937a297672304029ec41e1c709fb89a3e81732",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.ask-math.com",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1416",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "73191e1383df031d39713269e1995eac1c51aef80b500804342b1a4314598e81",
+        "sourceDraftSha256": "73191e1383df031d39713269e1995eac1c51aef80b500804342b1a4314598e81",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "eeadf2cfcb59bbcf6e9bb41e12086e9fc48512e71c36fdc50b59cca12ccad263"
+      },
+      "contentSha256": "eeadf2cfcb59bbcf6e9bb41e12086e9fc48512e71c36fdc50b59cca12ccad263"
+    },
+    {
+      "schemaVersion": 1,
+      "bankVersion": "2026-10-06.3",
+      "id": "asdiv:nluds-1481",
+      "collection": "foundation",
+      "category": "A10",
+      "subcategory": "由部分或剩余反求整体",
+      "level": "I1",
+      "locale": "zh-CN",
+      "storyFamily": "story-93063beb6b08c73e",
+      "assessmentGroup": "assessment-93063beb6b08c73e",
+      "familyBasis": "inferred-text-similarity",
+      "decision": "keep",
+      "prompt": "贾先生和莫先生合伙做生意，共投入7500元。贾先生投入的钱是莫先生的一半。两人各投入多少元？",
+      "answer": {
+        "type": "tuple",
+        "parts": [
+          {
+            "key": "part-1",
+            "label": "贾先生",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "2500",
+                "d": "1"
+              },
+              "unit": "元"
+            }
+          },
+          {
+            "key": "part-2",
+            "label": "莫先生",
+            "answer": {
+              "type": "number",
+              "value": {
+                "n": "5000",
+                "d": "1"
+              },
+              "unit": "元"
+            }
+          }
+        ]
+      },
+      "intent": "按一半的关系分配共同投入的总金额。",
+      "hints": [
+        "把贾先生的钱看成1份，莫先生的钱是2份。"
+      ],
+      "steps": [
+        "共有1＋2＝3（份）。",
+        "贾先生投入7500÷3＝2500（元）。",
+        "莫先生投入2500×2＝5000（元）。"
+      ],
+      "commonMistakes": [
+        "把7500平均分给两人。",
+        "颠倒谁是一半。"
+      ],
+      "prerequisites": [
+        "一半与倍数",
+        "按份数分配"
+      ],
+      "adaptation": [
+        "美元情境改为人民币元，数值保留，不作汇率换算。"
+      ],
+      "source": {
+        "dataset": "asdiv",
+        "sourceId": "nluds-1481",
+        "sourceVersion": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceCommit": "883f90a9a65bf00304ba8f37423910fe743abc47",
+        "sourceFile": "dataset/ASDiv.xml",
+        "sourceFileSha256": "ef8904068482919ac48c8eeaaf6df344b8a308ba66d048c2d4d87eab82dc4929",
+        "questionSha256": "8a9af88e1e116f2d84ff83c49f7da3066796c0cc1644b1884cebd8e732340f9a",
+        "recordSha256": "800fcbd174f5f14f49264cb32c4d4e4ccbc1e3ed9c42292fa1f72fc3a6a5ebf3",
+        "selectionCommit": "2d5b5ec5251d632e6cb5d731eb31cfc7fce7eccd",
+        "url": "https://github.com/chaochun/nlu-asdiv-dataset/blob/883f90a9a65bf00304ba8f37423910fe743abc47/dataset/ASDiv.xml",
+        "license": "CC-BY-NC-4.0",
+        "nonCommercialOnly": true,
+        "lineageId": "unknown",
+        "lineageStatus": "source-recorded",
+        "originalOrigin": "http://www.wallace.ccfaculty.org",
+        "originalSplit": null
+      },
+      "review": {
+        "translation": "completed",
+        "content": "assistant-reviewed",
+        "answer": "verified",
+        "publishAllowed": true,
+        "humanApproved": false
+      },
+      "reviewMethod": "independent-assistant-content-review",
+      "publication": {
+        "audience": "student-learning",
+        "usageScope": "local-noncommercial-teaching"
+      },
+      "independentReview": {
+        "recordId": "asdiv:nluds-1481",
+        "status": "assistant-verified",
+        "reviewerType": "assistant",
+        "draftSha256": "e6d922d0e974d91a32025a4f3f5d4f71eb4eb6b9727c96ba1bb3876ca1eaf9d4",
+        "sourceDraftSha256": "e6d922d0e974d91a32025a4f3f5d4f71eb4eb6b9727c96ba1bb3876ca1eaf9d4",
+        "evidenceFile": "server/word-problems-private/provenance/reviews/independent-content-review.json",
+        "contentSha256": "9e1ab6fbad74a9c8b487547f78b6b5153641fe240b096bd7640521223772693a"
+      },
+      "contentSha256": "9e1ab6fbad74a9c8b487547f78b6b5153641fe240b096bd7640521223772693a"
+    }
+  ]
+}
