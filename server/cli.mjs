@@ -1,5 +1,7 @@
 import {fileURLToPath} from 'node:url';
 import {dirname, resolve} from 'node:path';
+import {spawn} from 'node:child_process';
+import {createInterface} from 'node:readline/promises';
 import {openDatabase, assertRuntime} from './database.mjs';
 import {createAccount} from './auth.mjs';
 import {createApplication} from './http.mjs';
@@ -44,18 +46,48 @@ async function passwordFromStdin() {
   if (/\r|\n/.test(value)) throw new Error('Password stdin must contain exactly one line');
   return value;
 }
+async function accountPassword(args) {
+  if (args['password-stdin'] === true) return passwordFromStdin();
+  const password = await hiddenPassword('Password (hidden, at least 12 characters): ');
+  if (password !== await hiddenPassword('Repeat password (hidden): ')) throw new Error('Passwords do not match');
+  return password;
+}
+async function setupFirstAccount(databasePath, staticRoot, args) {
+  assertNotServing(databasePath);
+  const db = openDatabase(databasePath, {staticRoot});
+  try {
+    if (db.prepare('SELECT COUNT(*) AS count FROM accounts').get().count) return;
+    let username = args.username;
+    if (!username) {
+      if (!process.stdin.isTTY) throw new Error('First launch needs an account. Run init --username NAME, or start --username NAME --password-stdin.');
+      const prompt = createInterface({input:process.stdin, output:process.stdout});
+      try { username = (await prompt.question('Create your learning account [family]: ')).trim() || 'family'; }
+      finally { prompt.close(); }
+    }
+    await createAccount(db, {username, password:await accountPassword(args), label:args.label || '默认学习档案', firstOnly:true});
+    process.stdout.write(`Learning account created: ${username}\n`);
+  } finally { db.close(); }
+}
+function openBrowser(url) {
+  const command = process.platform === 'win32' ? 'rundll32.exe' : process.platform === 'darwin' ? 'open' : 'xdg-open';
+  const args = process.platform === 'win32' ? ['url.dll,FileProtocolHandler', url] : [url];
+  const child = spawn(command, args, {stdio:'ignore', windowsHide:true, detached:true});
+  child.on('error', () => process.stderr.write(`Open this address in your browser: ${url}\n`));
+  child.unref();
+}
 export async function main(argv = process.argv.slice(2)) {
   assertRuntime(); const args = options(argv);
   const staticRoot = resolve(args.root || fileURLToPath(new URL('../',import.meta.url)));
-  const databasePath = resolve(args.db || resolve(dirname(staticRoot),'runtime','mathphysics.sqlite3'));
-  const known = new Set(['command','root','db','username','label','password-stdin','port','host','production','public-origin','out','from','replace','profile','attempt','reason','grader-version','help']);
+  const databasePath = args.db === ':memory:' ? ':memory:' : resolve(args.db || resolve(dirname(staticRoot),'runtime','mathphysics.sqlite3'));
+  const known = new Set(['command','root','db','username','label','password-stdin','port','host','production','public-origin','out','from','replace','profile','attempt','reason','grader-version','help','open']);
   for (const option of Object.keys(args)) if (!known.has(option)) throw new Error(`Unknown option --${option}`);
-  for (const flag of ['production','replace','password-stdin','help']) if (Object.hasOwn(args,flag) && args[flag]!==true) throw new Error(`--${flag} is a switch; do not supply a value`);
+  for (const flag of ['production','replace','password-stdin','help','open']) if (Object.hasOwn(args,flag) && args[flag]!==true) throw new Error(`--${flag} is a switch; do not supply a value`);
   if (args.command === 'help' || args.help) {
     process.stdout.write(`MathPhysics Node 24.14.0 + SQLite 3.51.2\n\n`+
       `init --username NAME [--label LABEL] [--password-stdin] [--db OUTSIDE_PUBLIC_ROOT]\n`+
       `account-add --username NAME [--password-stdin] [--db PATH]\n`+
-      `serve [--db PATH] [--port 8000] [--host 127.0.0.1]\n`+
+      `start [--open] [--db PATH] [--port 8317] (sets up an account on first launch)\n`+
+      `serve [--open] [--db PATH] [--port 8317] [--host 127.0.0.1]\n`+
       `serve --production --public-origin https://YOUR_HOST [--db PATH]\n`+
       `verify | rebuild [--db PATH]\nbackup --out NEW_BACKUP [--db PATH]\n`+
       `restore --from BACKUP [--db NEW_PATH] [--replace]\n`+
@@ -63,15 +95,23 @@ export async function main(argv = process.argv.slice(2)) {
       `Passwords are never accepted in argv. Default data is a sibling runtime directory outside the static root. Stop serve before restore/rebuild/regrade.\n`);
     return;
   }
-  if (args.command === 'serve') {
-    const port = args.port === undefined ? 8000 : Number(args.port);
+  if (args.command === 'serve' || args.command === 'start') {
+    const port = args.port === undefined ? 8317 : Number(args.port);
     if (!Number.isInteger(port) || port < 0 || port > 65535) throw new Error('Invalid --port');
+    if (args.command === 'start') {
+      if (databasePath === ':memory:') throw new Error('start requires a persistent --db path; use serve for an in-memory service');
+      await setupFirstAccount(databasePath, staticRoot, args);
+    }
     let app;
     try {
       app = await createApplication({databasePath,staticRoot,host:args.host || '127.0.0.1',production:args.production === true,publicOrigin:args['public-origin'] || null,
         onError:error => process.stderr.write(`API failure: ${error.name}\n`)});
       const address = await app.listen(port);
       process.stdout.write(`MathPhysics API listening on ${address.address}:${address.port}; data ${databasePath}\n`);
+      const browserHost = ['0.0.0.0','::'].includes(address.address) ? '127.0.0.1' : address.address.includes(':') ? `[${address.address}]` : address.address;
+      const url = args['public-origin'] ? `${args['public-origin']}/mathphysics/learning/` : `http://${browserHost}:${address.port}/mathphysics/learning/`;
+      process.stdout.write(`Assessment: ${url}\n`);
+      if (args.open) openBrowser(url);
     } catch (error) { if (app) await app.close(); throw error; }
     let stopping = false;
     const stop = async () => { if (stopping) return; stopping = true; await app.close(); };
@@ -89,9 +129,7 @@ export async function main(argv = process.argv.slice(2)) {
     let result;
     if (args.command === 'init' || args.command === 'account-add') {
       if (typeof args.username !== 'string') throw new Error('--username is required');
-      let password;
-      if (args['password-stdin']===true) password = await passwordFromStdin();
-      else { password = await hiddenPassword('Password (hidden): '); const confirmation = await hiddenPassword('Repeat password (hidden): '); if (password!==confirmation) throw new Error('Passwords do not match'); }
+      let password = await accountPassword(args);
       result = await createAccount(db,{username:args.username,password,label:args.label || '默认学习档案',firstOnly:args.command==='init'});
       password = null;
     } else if (args.command === 'verify') {

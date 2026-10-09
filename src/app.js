@@ -160,7 +160,7 @@ function wire(){
 async function init(){
   await window.MathPhysicsSync?.ready;
   storage=window.MathPhysicsSync?.createStorage()||window.localStorage;
-  if(location.protocol==='file:')throw Error('请通过本地服务器打开：运行 python scripts/serve.py，然后访问 http://localhost:8000。双击HTML不能可靠加载模块与资源。');
+  if(location.protocol==='file:')throw Error('请运行 START_WINDOWS.bat 或 npm start，然后访问 http://127.0.0.1:8317/mathphysics/learning/。');
   const inventoryResponse=await fetch('config/inventory.json');
   if(!inventoryResponse.ok)throw Error('内容库尚未导入，请先运行 python scripts/import_upstream.py，或下载已经包含内容的离线包。');
   inventory=await inventoryResponse.json();

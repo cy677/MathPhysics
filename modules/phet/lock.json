@@ -4,37 +4,37 @@
     {
       "id": "fractions-intro",
       "bytes": 2877396,
-      "sha256": "d0cf4bbb8888d0a16628ad4a69df9ad5b49b4cc4b15d9433a979dfc1157448c3",
+      "sha256": "d065dd234842a1d573cc9577d201a160fa9cc109e755baf88fac9649a1c3f9b6",
       "url": "https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_all.html"
     },
     {
       "id": "fraction-matcher",
       "bytes": 2100862,
-      "sha256": "28d8fbb3aabe7d10b4b64bd02d26b6b9aa7e5025f4c226396f9d6cf057b1cbfc",
+      "sha256": "8bb6d33402d5164b5ca1e6b4499c0ce921c57f2f1b8613efbb47e45b19b17518",
       "url": "https://phet.colorado.edu/sims/html/fraction-matcher/latest/fraction-matcher_all.html"
     },
     {
       "id": "balancing-act",
       "bytes": 3509612,
-      "sha256": "fa365bacf9b52b0800b4596b307ac61d7675143443178288c8e832c6e3a76e6c",
+      "sha256": "caff0cc6dceb757dc04970a498dda547074fcf82f38dcdbf8353a5bcefe5500b",
       "url": "https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act_all.html"
     },
     {
       "id": "circuit-construction-kit-dc",
       "bytes": 3926289,
-      "sha256": "4feae7b4823354d57112fc46c3bdca9de5c3612e7695cd8967b8c32f122736f1",
+      "sha256": "f1d5e86972d1bc1a1f783038b1131f5fba3e7d8825193049661a70acb7f09618",
       "url": "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_all.html"
     },
     {
       "id": "states-of-matter-basics",
       "bytes": 2670753,
-      "sha256": "fdb67dbaf55910c07246e074c8a68c18224cc7b037733fa581a29aee0ab2a762",
+      "sha256": "3dc8dd2e94805c5a8bbad28e571840f4848170a530ef1353693804f75baa3af2",
       "url": "https://phet.colorado.edu/sims/html/states-of-matter-basics/latest/states-of-matter-basics_all.html"
     },
     {
       "id": "build-a-molecule",
       "bytes": 8771113,
-      "sha256": "2d60a20708150c70399c7798fc512a6fd7fc9ce726e87f695fd0040cc846a09a",
+      "sha256": "f4cc89d6683ddd718635012730b2624bb3f5bf5621c8bdf60d8fa53d5e18a39a",
       "url": "https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_all.html"
     }
   ]

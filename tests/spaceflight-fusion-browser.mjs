@@ -21,7 +21,7 @@ try{
  browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_EXECUTABLE?{executablePath:process.env.CHROMIUM_EXECUTABLE}:{})});
  const session=await browser.newContext({viewport:{width:1280,height:1000}});
  await session.addInitScript(()=>{window.__longTasks=[];try{new PerformanceObserver(list=>window.__longTasks.push(...list.getEntries().map(e=>({start:e.startTime,duration:e.duration})))).observe({type:'longtask',buffered:true});}catch{}});
- await session.route('**/*',route=>{const url=route.request().url();if(/^(http|https):/.test(url)&&!url.startsWith(base)){remote.push(url);return route.abort();}return route.continue();});
+ await session.route('**/*',route=>{const url=route.request().url();if(/^(http|https):/.test(url)&&!url.startsWith(new URL(base).origin+'/')){remote.push(url);return route.abort();}return route.continue();});
  const page=await session.newPage();page.setDefaultTimeout(10000);page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));
  const ready=()=>page.waitForFunction(()=>window.__mpReady===true);
  const snapshot=()=>page.evaluate(()=>SpaceClassroom.snapshot());

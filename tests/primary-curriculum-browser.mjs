@@ -41,7 +41,7 @@ try{
   const context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'});
   const page=await context.newPage();const pageErrors=[],externalRequests=[];
   page.on('pageerror',e=>pageErrors.push(e.message));
-  page.on('request',r=>{if(!r.url().startsWith(base))externalRequests.push(r.url());});
+  page.on('request',r=>{if(!r.url().startsWith(new URL(base).origin+'/'))externalRequests.push(r.url());});
   await page.goto(new URL('lessons/primary-math/index.html',base).href,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__mpReady===true,null,{timeout:45000});
   check('Direct primary page reaches ready state',await page.evaluate(()=>window.__mpReady===true));

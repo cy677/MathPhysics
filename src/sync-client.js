@@ -21,9 +21,9 @@
   const listeners = new Set(), providers = new Set(), controllers = new Set(), inflight = new Set();
   const nativeStorage = window.localStorage;
   const local = {getItem:key=>nativeStorage.getItem(key),setItem:(key,value)=>nativeStorage.setItem(key,value),removeItem:key=>nativeStorage.removeItem(key)};
-  let account = null, profiles = [], profileId = null, csrfToken = '', epoch = 0, available = false, connection = location.protocol === 'file:' ? 'standalone' : 'connecting', expired = false, errorMessage = '', cache = {modules:{},attempts:{}}, timer, replaying = false, storageFailed = false;
+  let account = null, profiles = [], profileId = null, csrfToken = '', epoch = 0, available = false, connection = 'connecting', expired = false, errorMessage = '', cache = {modules:{},attempts:{}}, timer, replaying = false, storageFailed = false;
   function read(key, fallback) { try { const v = JSON.parse(local.getItem(key)); return object(v) ? v : fallback; } catch { return fallback; } }
-  function cacheKey() { return PREFIX + 'scope.' + (account ? encodeURIComponent(account.id) + '.' + encodeURIComponent(profileId || 'none') : 'demo'); }
+  function cacheKey() { return PREFIX + 'scope.' + (account ? encodeURIComponent(account.id) + '.' + encodeURIComponent(profileId || 'none') : 'guest'); }
   function persist() {
     try { local.setItem(cacheKey(), JSON.stringify(cache)); storageFailed = false; return true; }
     catch { storageFailed = true; errorMessage = '浏览器无法保存离线副本，请保持此页打开。'; return false; }
@@ -38,7 +38,7 @@
     const entries = Object.values(cache.modules), drafts = Object.values(cache.attempts);
     const conflicts = entries.filter(e=>e.conflict).map(e=>copy(e));
     const queued = entries.filter(e=>e.pending).length + drafts.filter(d=>d.submission && !d.result).length;
-    let status = expired ? 'expired' : !account ? 'demo' : conflicts.length ? 'conflict' : storageFailed ? 'failed' : connection === 'offline' ? 'offline' : connection !== 'online' ? 'failed' : inflight.size ? 'saving' : errorMessage ? 'failed' : queued ? 'queued' : 'saved';
+    let status = expired ? 'expired' : !account ? (connection === 'connecting' ? 'connecting' : connection !== 'online' || !available ? 'unavailable' : errorMessage ? 'failed' : 'signed-out') : conflicts.length ? 'conflict' : storageFailed ? 'failed' : connection === 'offline' ? 'offline' : connection !== 'online' ? 'failed' : inflight.size ? 'saving' : errorMessage ? 'failed' : queued ? 'queued' : 'saved';
     return {account:copy(account),profiles:copy(profiles),profileId,profile:copy(profiles.find(p=>p.id===profileId)||null),connection,status,queued,conflicts,errorMessage,storageFailed,pendingLogout:read(SIGNOUT,{}).pending===true,serverConfirmed:entries.some(e=>e.server?.revision>0)||drafts.some(d=>d.result),scope:cacheKey(),epoch,available};
   }
   function subscribe(fn) { listeners.add(fn); fn(snapshot()); return ()=>listeners.delete(fn); }
@@ -49,13 +49,18 @@
     ++epoch; clearTimeout(timer); controllers.forEach(c=>c.abort()); controllers.clear(); inflight.clear();
     providers.clear();
   }
-  function useCache() { cache = read(cacheKey(),{modules:{},attempts:{}}); if (!object(cache.modules)) cache.modules={}; if (!object(cache.attempts)) cache.attempts={}; }
+  function useCache() {
+    const empty={modules:{},attempts:{}};
+    // Read older unsigned classroom copies without restoring their former mode.
+    cache=read(cacheKey(),!account?read(PREFIX+'scope.demo',empty):empty);
+    if(!object(cache.modules))cache.modules={};if(!object(cache.attempts))cache.attempts={};
+  }
   function expire() {
     switchBoundary(); account=null;profiles=[];profileId=null;csrfToken='';expired=true;cacheSession();useCache();emit();
     window.dispatchEvent(new CustomEvent('mathphysics:scope-change'));
   }
   async function request(path, options={}) {
-    if (location.protocol==='file:') throw Object.assign(Error('单文件课堂只保存本机演示。'),{code:'offline'});
+    if (!['http:','https:'].includes(location.protocol)) throw Object.assign(Error('请通过 START_WINDOWS.bat 或 npm start 打开学习服务。'),{code:'service_required'});
     const controller=new AbortController(), token=epoch;controllers.add(controller);
     try {
       const method=options.method||'GET', headers={Accept:'application/json'};
@@ -198,7 +203,7 @@
     if(Object.values(cache.modules).some(e=>e.pending&&!e.conflict)&&connection==='online'&&!errorMessage)schedule();
   }
   function preserveConflict(e){
-    const key=PREFIX+'recovery.'+encodeURIComponent(account?.id||'demo')+'.'+encodeURIComponent(profileId||'demo')+'.'+uuid();
+    const key=PREFIX+'recovery.'+encodeURIComponent(account?.id||'guest')+'.'+encodeURIComponent(profileId||'guest')+'.'+uuid();
     local.setItem(key,JSON.stringify({moduleId:e.moduleId,scope:cacheKey(),createdAt:new Date().toISOString(),local:copy(e.payload),server:copy(e.conflict.server)}));return key;
   }
   function resolveConflict(moduleId,choice){
@@ -241,7 +246,7 @@
     const d={attempt:copy(attempt),responses:copy(responses),updatedAt:Date.now(),submission:null,result:attempt.result||null};cache.attempts[attempt.id]=d;persist();emit();return copy(d);
   }
   async function issueAttempt(objectiveId,difficulty,idempotencyKey,sourceSelector){
-    if(connection!=='online')throw Error('离线无法发放新考核。可以继续演示练习（0分）。');
+    if(connection!=='online'||!available)throw Error('请先连接学习服务，再开始新的考核。');
     if(object(idempotencyKey)&&sourceSelector===undefined){sourceSelector=idempotencyKey;idempotencyKey=undefined;}
     const previous=cache.creation;
     const body=previous&&previous.objectiveId===objectiveId&&previous.difficulty===difficulty&&same(previous.sourceSelector,sourceSelector)?previous:{objectiveId,difficulty,idempotencyKey:idempotencyKey||uuid(),...(sourceSelector===undefined?{}:{sourceSelector:copy(sourceSelector)})};
@@ -282,7 +287,6 @@
   window.MathPhysicsSync=api;
   api.ready=(async()=>{
     useCache();
-    if(location.protocol==='file:'||!location.pathname.startsWith('/mathphysics/')){if(location.protocol!=='file:')connection='demo';emit();return snapshot();}
     try{await refreshSession();}
     catch(error){
       if(connection==='offline'){

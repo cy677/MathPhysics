@@ -112,7 +112,7 @@ export async function createApplication({databasePath, staticRoot, registry, pro
       const expectedOrigin = safeRequestOrigin(req, publicOrigin, host);
       const url = new URL(req.url, expectedOrigin), pathname = url.pathname;
       if (pathname !== PREFIX && !pathname.startsWith(`${PREFIX}/`)) {
-        if ((pathname === '/' || pathname === '/mathphysics') && (req.method === 'GET' || req.method === 'HEAD')) { res.writeHead(302, {Location:'/mathphysics/'}); res.end(); return; }
+        if (['/', '/mathphysics', '/mathphysics/'].includes(pathname) && (req.method === 'GET' || req.method === 'HEAD')) { res.writeHead(302, {Location:'/mathphysics/learning/'}); res.end(); return; }
         if (req.method !== 'GET' && req.method !== 'HEAD') fail(405, 'method_not_allowed');
         const file = publicFile(root, pathname);
         if (!file) fail(404, 'not_found');

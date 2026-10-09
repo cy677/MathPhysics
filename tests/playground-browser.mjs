@@ -8,7 +8,7 @@ import assert from 'node:assert/strict';
 import {findPython} from '../scripts/python.mjs';
 
 const root=fileURLToPath(new URL('..',import.meta.url));
-const base='http://127.0.0.1:8792/';
+const base='http://127.0.0.1:8792/mathphysics/';
 const out=path.join(root,'output/playwright/graded-style');
 const modes=['triangle','mirror','rotate','scale','vectors','linear'];
 const report={suite:'Graded experiments: interaction, responsive layout, host and offline delivery',results:[],limitations:['Chromium viewport and touch emulation; not physical iPad Safari.']};
@@ -138,7 +138,7 @@ try {
   assert.equal(occupied,false,'Test port 8792 is already in use.');
   const python=findPython();
   execFileSync(python,['scripts/build_playground_standalone.py'],{cwd:root,stdio:'inherit',windowsHide:true});
-  server=spawn(python,['scripts/serve.py','--port','8792'],{cwd:root,stdio:'ignore',windowsHide:true});
+  server=spawn(process.execPath,['server/cli.mjs','serve','--db',':memory:','--port','8792'],{cwd:root,stdio:'ignore',windowsHide:true});
   let serverError;server.on('error',e=>{serverError=e;});
   let listening=false;
   for(let i=0;i<50;i++) {
@@ -245,7 +245,7 @@ try {
     }
     record('viewport-'+size.width,{modes:6});
   }
-  await page.setViewportSize({width:1024,height:768});await page.goto(base);await page.waitForSelector('[data-activity]');
+  await page.setViewportSize({width:1024,height:768});await page.goto(base+'index.html');await page.waitForSelector('[data-activity]');
   const {displayActivities}=await import('../src/catalog.js');
   const [upstream,local,presentation]=await Promise.all(['config/inventory.json','config/local-activities.json','config/presentation.json'].map(async file=>JSON.parse(await fs.readFile(path.join(root,file),'utf8'))));
   const visibleActivities=displayActivities([...upstream.activities,...local.activities],presentation);

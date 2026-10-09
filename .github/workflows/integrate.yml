@@ -40,7 +40,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: MathPhysics-unverified-snapshot
-          path: dist/MathPhysics-offline.zip
+          path: dist/MathPhysics-server-*.tar.gz
           retention-days: 7
       - name: Install browser test dependency
         run: npm install --ignore-scripts && npx playwright install --with-deps chromium
@@ -61,7 +61,7 @@ jobs:
             git commit -m 'build: vendor complete licensed activities and verify inventory [assets]'
             git push origin HEAD:main
           fi
-      - name: Build verified offline distribution
+      - name: Build verified learning service
         run: npm run package
       - uses: actions/upload-artifact@v4
         if: always()
@@ -76,6 +76,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: success()
         with:
-          name: MathPhysics-offline
-          path: dist/MathPhysics-offline.zip
+          name: MathPhysics-learning-service
+          path: dist/MathPhysics-server-*.tar.gz
           retention-days: 30

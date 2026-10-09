@@ -167,6 +167,21 @@ test('concurrent same-bucket submissions award a single cap; zero/lower results 
   assert.equal(growth.buckets[0].items[0].independentFirstCorrect,null);assert.equal(growth.moduleContributions[0].credits,10000);assert.equal(verifyDatabase(f.application.db).ok,true);
 });
 
+test('repeated assessments retain every answer and reward only improvements in the highest score',async t=>{
+  const f=await fixture(t),c=client(f);await c.login();const profile=f.first.profile.id;
+  const answers=[{i01:10},{i01:10,i02:20},{i01:10,i02:20,i03:30},{i01:10,i02:20,i03:30},{}];
+  const scores=[1667,5000,10000,10000,0],deltas=[1667,3333,5000,0,0],ids=[];
+  for(let i=0;i<answers.length;i++){
+    const attempt=await issue(c,profile);ids.push(attempt.id);const submitted=await submit(c,profile,attempt,answers[i]);
+    assert.equal(submitted.status,200);assert.equal(submitted.value.result.normalizedScore,scores[i]);assert.equal(submitted.value.result.creditsDelta,deltas[i]);
+  }
+  assert.equal(new Set(ids).size,answers.length);
+  const growth=(await c.request(path(profile,'/growth'))).value;
+  assert.equal(growth.totals.submittedAttempts,5);assert.equal(growth.totals.credits,10000);
+  assert.equal(growth.buckets[0].first.normalizedScore,1667);assert.equal(growth.buckets[0].latest.normalizedScore,0);assert.equal(growth.buckets[0].best.normalizedScore,10000);
+  for(let i=0;i<ids.length;i++){const saved=(await c.request(path(profile,'/attempts/'+ids[i]))).value;assert.deepEqual(saved.attempt.responses,answers[i]);}
+  assert.equal(verifyDatabase(f.application.db).ok,true);
+});
 test('independent SQLite connections submitting simultaneously serialize the bucket award',async t=>{
   const f=await fixture(t),c=client(f);await c.login();const profile=f.first.profile.id,attempts=[await issue(c,profile),await issue(c,profile)];
   const code=`const {parentPort,workerData}=require('node:worker_threads');

@@ -9,9 +9,6 @@
       "title": "围栏花园",
       "canonicalModuleId": "area-builder",
       "supportsAssessment": true,
-      "progressMode": "companion-assessment",
-      "nativeMode": "demonstration",
-      "reason": "原生界面是公开的练习和演示；客户端完成、分数、数量、位置槽或题卡身份不是可信考核证据。正式考核使用服务器另发的配套题。",
       "objectives": [
         "phet/area-builder/areaConstructed",
         "phet/area-builder/areaAndPerimeterConstructed",
@@ -27,9 +24,6 @@
       "title": "搬运挑战",
       "canonicalModuleId": "forces-and-motion-basics",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -37,9 +31,6 @@
       "title": "轨道游乐场",
       "canonicalModuleId": "energy-skate-park-basics",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -47,9 +38,6 @@
       "title": "箭头导航",
       "canonicalModuleId": "vector-addition",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -57,9 +45,6 @@
       "title": "七巧板工坊",
       "canonicalModuleId": "tangram",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -67,9 +52,6 @@
       "title": "空气阻力",
       "canonicalModuleId": "matter-airFriction",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -77,9 +59,6 @@
       "title": "滚落的积木",
       "canonicalModuleId": "matter-avalanche",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -87,9 +66,6 @@
       "title": "小球池",
       "canonicalModuleId": "matter-ballPool",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -97,9 +73,6 @@
       "title": "吊桥实验",
       "canonicalModuleId": "matter-bridge",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -107,9 +80,6 @@
       "title": "小车过桥",
       "canonicalModuleId": "matter-car",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -117,9 +87,6 @@
       "title": "跷跷板投石机",
       "canonicalModuleId": "matter-catapult",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -127,9 +94,6 @@
       "title": "链条",
       "canonicalModuleId": "matter-chains",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -137,9 +101,6 @@
       "title": "圆球堆叠",
       "canonicalModuleId": "matter-circleStack",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -147,9 +108,6 @@
       "title": "柔软布料",
       "canonicalModuleId": "matter-cloth",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -157,9 +115,6 @@
       "title": "碰撞分类",
       "canonicalModuleId": "matter-collisionFiltering",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -167,9 +122,6 @@
       "title": "组合物体变换",
       "canonicalModuleId": "matter-compositeManipulation",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -177,9 +129,6 @@
       "title": "复合形状",
       "canonicalModuleId": "matter-compound",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -187,9 +136,6 @@
       "title": "复合积木堆叠",
       "canonicalModuleId": "matter-compoundStack",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -197,9 +143,6 @@
       "title": "凹形积木",
       "canonicalModuleId": "matter-concave",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -207,9 +150,6 @@
       "title": "弹簧与约束",
       "canonicalModuleId": "matter-constraints",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -217,9 +157,6 @@
       "title": "双摆",
       "canonicalModuleId": "matter-doublePendulum",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -227,9 +164,6 @@
       "title": "碰撞事件",
       "canonicalModuleId": "matter-events",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -237,9 +171,6 @@
       "title": "摩擦力",
       "canonicalModuleId": "matter-friction",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -247,9 +178,6 @@
       "title": "改变重力",
       "canonicalModuleId": "matter-gravity",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -257,9 +185,6 @@
       "title": "陀螺",
       "canonicalModuleId": "matter-gyro",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -267,9 +192,6 @@
       "title": "物体操作",
       "canonicalModuleId": "matter-manipulation",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -277,9 +199,6 @@
       "title": "形状游乐场",
       "canonicalModuleId": "matter-mixed",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -287,9 +206,6 @@
       "title": "牛顿摆",
       "canonicalModuleId": "matter-newtonsCradle",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -297,9 +213,6 @@
       "title": "布偶",
       "canonicalModuleId": "matter-ragdoll",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -307,9 +220,6 @@
       "title": "积木金字塔",
       "canonicalModuleId": "matter-pyramid",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -317,9 +227,6 @@
       "title": "射线探测",
       "canonicalModuleId": "matter-raycasting",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -327,9 +234,6 @@
       "title": "弹性与反弹",
       "canonicalModuleId": "matter-restitution",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -337,9 +241,6 @@
       "title": "圆角积木",
       "canonicalModuleId": "matter-rounded",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -347,9 +248,6 @@
       "title": "添加与移除",
       "canonicalModuleId": "matter-remove",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -357,9 +255,6 @@
       "title": "自适应画布",
       "canonicalModuleId": "matter-renderResize",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -367,9 +262,6 @@
       "title": "传感器",
       "canonicalModuleId": "matter-sensors",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -377,9 +269,6 @@
       "title": "静止与唤醒",
       "canonicalModuleId": "matter-sleeping",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -387,9 +276,6 @@
       "title": "弹弓实验",
       "canonicalModuleId": "matter-slingshot",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -397,9 +283,6 @@
       "title": "软体结构",
       "canonicalModuleId": "matter-softBody",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -407,9 +290,6 @@
       "title": "贴图物体",
       "canonicalModuleId": "matter-sprites",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -417,9 +297,6 @@
       "title": "积木塔",
       "canonicalModuleId": "matter-stack",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -427,9 +304,6 @@
       "title": "静摩擦",
       "canonicalModuleId": "matter-staticFriction",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -437,9 +311,6 @@
       "title": "运行统计",
       "canonicalModuleId": "matter-stats",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -447,9 +318,6 @@
       "title": "压力测试一",
       "canonicalModuleId": "matter-stress",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -457,9 +325,6 @@
       "title": "压力测试二",
       "canonicalModuleId": "matter-stress2",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -467,9 +332,6 @@
       "title": "压力测试三",
       "canonicalModuleId": "matter-stress3",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -477,9 +339,6 @@
       "title": "压力测试四",
       "canonicalModuleId": "matter-stress4",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -487,9 +346,6 @@
       "title": "时间子步",
       "canonicalModuleId": "matter-substep",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -497,9 +353,6 @@
       "title": "SVG形状",
       "canonicalModuleId": "matter-svg",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -507,9 +360,6 @@
       "title": "凹形地形",
       "canonicalModuleId": "matter-terrain",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -517,9 +367,6 @@
       "title": "时间快慢",
       "canonicalModuleId": "matter-timescale",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -527,9 +374,6 @@
       "title": "移动视野",
       "canonicalModuleId": "matter-views",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -537,9 +381,6 @@
       "title": "拆除球",
       "canonicalModuleId": "matter-wreckingBall",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -547,9 +388,6 @@
       "title": "分数入门",
       "canonicalModuleId": "fractions-intro",
       "supportsAssessment": true,
-      "progressMode": "companion-assessment",
-      "nativeMode": "demonstration",
-      "reason": "原生界面是公开的练习和演示；客户端完成、分数、数量、位置槽或题卡身份不是可信考核证据。正式考核使用服务器另发的配套题。",
       "objectives": [
         "phet/fractions-intro/shape-PIE",
         "phet/fractions-intro/shape-BAR",
@@ -561,9 +399,6 @@
       "title": "分数配对",
       "canonicalModuleId": "fraction-matcher",
       "supportsAssessment": true,
-      "progressMode": "companion-assessment",
-      "nativeMode": "demonstration",
-      "reason": "原生界面是公开的练习和演示；客户端完成、分数、数量、位置槽或题卡身份不是可信考核证据。正式考核使用服务器另发的配套题。",
       "objectives": [
         "phet/fraction-matcher/fractions",
         "phet/fraction-matcher/mixed-numbers"
@@ -574,9 +409,6 @@
       "title": "平衡挑战",
       "canonicalModuleId": "balancing-act",
       "supportsAssessment": true,
-      "progressMode": "companion-assessment",
-      "nativeMode": "demonstration",
-      "reason": "原生界面是公开的练习和演示；客户端完成、分数、数量、位置槽或题卡身份不是可信考核证据。正式考核使用服务器另发的配套题。",
       "objectives": [
         "phet/balancing-act/position",
         "phet/balancing-act/mass",
@@ -588,9 +420,6 @@
       "title": "直流电路实验室",
       "canonicalModuleId": "circuit-construction-kit-dc",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -598,9 +427,6 @@
       "title": "物质状态",
       "canonicalModuleId": "states-of-matter-basics",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -608,9 +434,6 @@
       "title": "搭建分子",
       "canonicalModuleId": "build-a-molecule",
       "supportsAssessment": true,
-      "progressMode": "companion-assessment",
-      "nativeMode": "demonstration",
-      "reason": "原生界面是公开的练习和演示；客户端完成、分数、数量、位置槽或题卡身份不是可信考核证据。正式考核使用服务器另发的配套题。",
       "objectives": [
         "molecule/cid-280",
         "molecule/cid-962",
@@ -645,9 +468,6 @@
       "title": "物理验收",
       "canonicalModuleId": "physics-demos",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -655,9 +475,6 @@
       "title": "看见公式",
       "canonicalModuleId": "geometry-proofs",
       "supportsAssessment": true,
-      "progressMode": "assessment",
-      "nativeMode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。",
       "objectives": [
         "proof/rectangle",
         "proof/parallelogram",
@@ -690,9 +507,6 @@
       "title": "从地球出发",
       "canonicalModuleId": "spaceflight",
       "supportsAssessment": true,
-      "progressMode": "assessment",
-      "nativeMode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。",
       "objectives": [
         "space/prepare",
         "space/launch",
@@ -707,9 +521,6 @@
       "title": "图形会变魔术",
       "canonicalModuleId": "jsxgraph-playground",
       "supportsAssessment": true,
-      "progressMode": "assessment",
-      "nativeMode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。",
       "objectives": [
         "jsx/triangle",
         "jsx/mirror",
@@ -724,9 +535,6 @@
       "title": "七巧板拼图",
       "canonicalModuleId": "tangram-flat",
       "supportsAssessment": true,
-      "progressMode": "assessment",
-      "nativeMode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。",
       "objectives": [
         "tangram/square",
         "tangram/creative"
@@ -737,9 +545,6 @@
       "title": "三角形滑滑梯",
       "canonicalModuleId": "jsxgraph-playground",
       "supportsAssessment": true,
-      "progressMode": "assessment",
-      "nativeMode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。",
       "objectives": [
         "jsx/triangle"
       ]
@@ -749,9 +554,6 @@
       "title": "镜子里的图形",
       "canonicalModuleId": "jsxgraph-playground",
       "supportsAssessment": true,
-      "progressMode": "assessment",
-      "nativeMode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。",
       "objectives": [
         "jsx/mirror"
       ]
@@ -761,9 +563,6 @@
       "title": "转一转图形",
       "canonicalModuleId": "jsxgraph-playground",
       "supportsAssessment": true,
-      "progressMode": "assessment",
-      "nativeMode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。",
       "objectives": [
         "jsx/rotate"
       ]
@@ -773,9 +572,6 @@
       "title": "图形放大镜",
       "canonicalModuleId": "jsxgraph-playground",
       "supportsAssessment": true,
-      "progressMode": "assessment",
-      "nativeMode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。",
       "objectives": [
         "jsx/scale"
       ]
@@ -785,9 +581,6 @@
       "title": "箭头送快递",
       "canonicalModuleId": "jsxgraph-playground",
       "supportsAssessment": true,
-      "progressMode": "assessment",
-      "nativeMode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。",
       "objectives": [
         "jsx/vectors"
       ]
@@ -797,9 +590,6 @@
       "title": "网格变形机",
       "canonicalModuleId": "jsxgraph-playground",
       "supportsAssessment": true,
-      "progressMode": "assessment",
-      "nativeMode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。",
       "objectives": [
         "jsx/linear"
       ]
@@ -809,9 +599,6 @@
       "title": "数与生活",
       "canonicalModuleId": "primary-math",
       "supportsAssessment": true,
-      "progressMode": "assessment",
-      "nativeMode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。",
       "objectives": [
         "math/integer.add",
         "math/integer.subtract",
@@ -945,9 +732,6 @@
       "title": "数与生活",
       "canonicalModuleId": "primary-math",
       "supportsAssessment": true,
-      "progressMode": "assessment",
-      "nativeMode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。",
       "objectives": [
         "math/integer.add",
         "math/integer.subtract",
@@ -1081,9 +865,6 @@
       "title": "扫雷",
       "canonicalModuleId": "minesweeper",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -1091,9 +872,6 @@
       "title": "数独",
       "canonicalModuleId": "sudoku",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -1101,9 +879,6 @@
       "title": "立体拼块",
       "canonicalModuleId": "spatial-soma",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -1111,9 +886,6 @@
       "title": "移车出库",
       "canonicalModuleId": "spatial-rush",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -1121,9 +893,6 @@
       "title": "2048 合合岛",
       "canonicalModuleId": "spatial-merge",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     },
     {
@@ -1131,9 +900,6 @@
       "title": "数学飞车",
       "canonicalModuleId": "spatial-escape",
       "supportsAssessment": false,
-      "progressMode": "demonstration",
-      "nativeMode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。",
       "objectives": []
     }
   ],
@@ -43016,785 +42782,6 @@
       "response": "{pieces:[{id:string,x:number,y:number,rotation:number,flipped?:false}]}"
     }
   },
-  "demonstrations": [
-    {
-      "id": "area-builder/free-practice",
-      "moduleId": "area-builder",
-      "title": "围栏花园：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "原生界面是公开的练习和演示；客户端完成、分数、数量、位置槽或题卡身份不是可信考核证据。正式考核使用服务器另发的配套题。"
-    },
-    {
-      "id": "forces-and-motion-basics",
-      "moduleId": "forces-and-motion-basics",
-      "title": "搬运挑战",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "energy-skate-park-basics",
-      "moduleId": "energy-skate-park-basics",
-      "title": "轨道游乐场",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "vector-addition",
-      "moduleId": "vector-addition",
-      "title": "箭头导航",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "tangram",
-      "moduleId": "tangram",
-      "title": "七巧板工坊",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-airFriction",
-      "moduleId": "matter-airFriction",
-      "title": "空气阻力",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-avalanche",
-      "moduleId": "matter-avalanche",
-      "title": "滚落的积木",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-ballPool",
-      "moduleId": "matter-ballPool",
-      "title": "小球池",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-bridge",
-      "moduleId": "matter-bridge",
-      "title": "吊桥实验",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-car",
-      "moduleId": "matter-car",
-      "title": "小车过桥",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-catapult",
-      "moduleId": "matter-catapult",
-      "title": "跷跷板投石机",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-chains",
-      "moduleId": "matter-chains",
-      "title": "链条",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-circleStack",
-      "moduleId": "matter-circleStack",
-      "title": "圆球堆叠",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-cloth",
-      "moduleId": "matter-cloth",
-      "title": "柔软布料",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-collisionFiltering",
-      "moduleId": "matter-collisionFiltering",
-      "title": "碰撞分类",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-compositeManipulation",
-      "moduleId": "matter-compositeManipulation",
-      "title": "组合物体变换",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-compound",
-      "moduleId": "matter-compound",
-      "title": "复合形状",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-compoundStack",
-      "moduleId": "matter-compoundStack",
-      "title": "复合积木堆叠",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-concave",
-      "moduleId": "matter-concave",
-      "title": "凹形积木",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-constraints",
-      "moduleId": "matter-constraints",
-      "title": "弹簧与约束",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-doublePendulum",
-      "moduleId": "matter-doublePendulum",
-      "title": "双摆",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-events",
-      "moduleId": "matter-events",
-      "title": "碰撞事件",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-friction",
-      "moduleId": "matter-friction",
-      "title": "摩擦力",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-gravity",
-      "moduleId": "matter-gravity",
-      "title": "改变重力",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-gyro",
-      "moduleId": "matter-gyro",
-      "title": "陀螺",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-manipulation",
-      "moduleId": "matter-manipulation",
-      "title": "物体操作",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-mixed",
-      "moduleId": "matter-mixed",
-      "title": "形状游乐场",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-newtonsCradle",
-      "moduleId": "matter-newtonsCradle",
-      "title": "牛顿摆",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-ragdoll",
-      "moduleId": "matter-ragdoll",
-      "title": "布偶",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-pyramid",
-      "moduleId": "matter-pyramid",
-      "title": "积木金字塔",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-raycasting",
-      "moduleId": "matter-raycasting",
-      "title": "射线探测",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-restitution",
-      "moduleId": "matter-restitution",
-      "title": "弹性与反弹",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-rounded",
-      "moduleId": "matter-rounded",
-      "title": "圆角积木",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-remove",
-      "moduleId": "matter-remove",
-      "title": "添加与移除",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-renderResize",
-      "moduleId": "matter-renderResize",
-      "title": "自适应画布",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-sensors",
-      "moduleId": "matter-sensors",
-      "title": "传感器",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-sleeping",
-      "moduleId": "matter-sleeping",
-      "title": "静止与唤醒",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-slingshot",
-      "moduleId": "matter-slingshot",
-      "title": "弹弓实验",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-softBody",
-      "moduleId": "matter-softBody",
-      "title": "软体结构",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-sprites",
-      "moduleId": "matter-sprites",
-      "title": "贴图物体",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-stack",
-      "moduleId": "matter-stack",
-      "title": "积木塔",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-staticFriction",
-      "moduleId": "matter-staticFriction",
-      "title": "静摩擦",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-stats",
-      "moduleId": "matter-stats",
-      "title": "运行统计",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-stress",
-      "moduleId": "matter-stress",
-      "title": "压力测试一",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-stress2",
-      "moduleId": "matter-stress2",
-      "title": "压力测试二",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-stress3",
-      "moduleId": "matter-stress3",
-      "title": "压力测试三",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-stress4",
-      "moduleId": "matter-stress4",
-      "title": "压力测试四",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-substep",
-      "moduleId": "matter-substep",
-      "title": "时间子步",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-svg",
-      "moduleId": "matter-svg",
-      "title": "SVG形状",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-terrain",
-      "moduleId": "matter-terrain",
-      "title": "凹形地形",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-timescale",
-      "moduleId": "matter-timescale",
-      "title": "时间快慢",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-views",
-      "moduleId": "matter-views",
-      "title": "移动视野",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "matter-wreckingBall",
-      "moduleId": "matter-wreckingBall",
-      "title": "拆除球",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "fractions-intro/free-practice",
-      "moduleId": "fractions-intro",
-      "title": "分数入门：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "原生界面是公开的练习和演示；客户端完成、分数、数量、位置槽或题卡身份不是可信考核证据。正式考核使用服务器另发的配套题。"
-    },
-    {
-      "id": "fraction-matcher/free-practice",
-      "moduleId": "fraction-matcher",
-      "title": "分数配对：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "原生界面是公开的练习和演示；客户端完成、分数、数量、位置槽或题卡身份不是可信考核证据。正式考核使用服务器另发的配套题。"
-    },
-    {
-      "id": "balancing-act/free-practice",
-      "moduleId": "balancing-act",
-      "title": "平衡挑战：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "原生界面是公开的练习和演示；客户端完成、分数、数量、位置槽或题卡身份不是可信考核证据。正式考核使用服务器另发的配套题。"
-    },
-    {
-      "id": "circuit-construction-kit-dc",
-      "moduleId": "circuit-construction-kit-dc",
-      "title": "直流电路实验室",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "states-of-matter-basics",
-      "moduleId": "states-of-matter-basics",
-      "title": "物质状态",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "build-a-molecule/free-practice",
-      "moduleId": "build-a-molecule",
-      "title": "搭建分子：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "原生界面是公开的练习和演示；客户端完成、分数、数量、位置槽或题卡身份不是可信考核证据。正式考核使用服务器另发的配套题。"
-    },
-    {
-      "id": "physics-demos",
-      "moduleId": "physics-demos",
-      "title": "物理验收",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "geometry-proofs/free-practice",
-      "moduleId": "geometry-proofs",
-      "title": "看见公式：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。"
-    },
-    {
-      "id": "spaceflight/free-practice",
-      "moduleId": "spaceflight",
-      "title": "从地球出发：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。"
-    },
-    {
-      "id": "jsxgraph-playground/free-practice",
-      "moduleId": "jsxgraph-playground",
-      "title": "图形会变魔术：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。"
-    },
-    {
-      "id": "tangram-flat/free-practice",
-      "moduleId": "tangram-flat",
-      "title": "七巧板拼图：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。"
-    },
-    {
-      "id": "jsx-triangle/free-practice",
-      "moduleId": "jsx-triangle",
-      "title": "三角形滑滑梯：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。"
-    },
-    {
-      "id": "jsx-mirror/free-practice",
-      "moduleId": "jsx-mirror",
-      "title": "镜子里的图形：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。"
-    },
-    {
-      "id": "jsx-rotation/free-practice",
-      "moduleId": "jsx-rotation",
-      "title": "转一转图形：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。"
-    },
-    {
-      "id": "jsx-scale/free-practice",
-      "moduleId": "jsx-scale",
-      "title": "图形放大镜：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。"
-    },
-    {
-      "id": "jsx-vectors/free-practice",
-      "moduleId": "jsx-vectors",
-      "title": "箭头送快递：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。"
-    },
-    {
-      "id": "jsx-linear/free-practice",
-      "moduleId": "jsx-linear",
-      "title": "网格变形机：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。"
-    },
-    {
-      "id": "primary-math/free-practice",
-      "moduleId": "primary-math",
-      "title": "数与生活：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。"
-    },
-    {
-      "id": "question-bank/free-practice",
-      "moduleId": "question-bank",
-      "title": "数与生活：原生活动与自由练习",
-      "mode": "demonstration",
-      "reason": "正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。"
-    },
-    {
-      "id": "minesweeper",
-      "moduleId": "minesweeper",
-      "title": "扫雷",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "sudoku",
-      "moduleId": "sudoku",
-      "title": "数独",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "spatial-soma",
-      "moduleId": "spatial-soma",
-      "title": "立体拼块",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "spatial-rush",
-      "moduleId": "spatial-rush",
-      "title": "移车出库",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "spatial-merge",
-      "moduleId": "spatial-merge",
-      "title": "2048 合合岛",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "spatial-escape",
-      "moduleId": "spatial-escape",
-      "title": "数学飞车",
-      "mode": "demonstration",
-      "reason": "自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。"
-    },
-    {
-      "id": "spaceflight/lab/thrust",
-      "moduleId": "spaceflight",
-      "title": "航天自由实验：thrust",
-      "mode": "demonstration",
-      "reason": "不改动既有状态驱动科学模型；未定义服务器控制的实验初态和操作序列，自报参数或模拟状态不计考核分。"
-    },
-    {
-      "id": "spaceflight/lab/staging",
-      "moduleId": "spaceflight",
-      "title": "航天自由实验：staging",
-      "mode": "demonstration",
-      "reason": "不改动既有状态驱动科学模型；未定义服务器控制的实验初态和操作序列，自报参数或模拟状态不计考核分。"
-    },
-    {
-      "id": "spaceflight/lab/orbit",
-      "moduleId": "spaceflight",
-      "title": "航天自由实验：orbit",
-      "mode": "demonstration",
-      "reason": "不改动既有状态驱动科学模型；未定义服务器控制的实验初态和操作序列，自报参数或模拟状态不计考核分。"
-    },
-    {
-      "id": "spaceflight/lab/dock",
-      "moduleId": "spaceflight",
-      "title": "航天自由实验：dock",
-      "mode": "demonstration",
-      "reason": "不改动既有状态驱动科学模型；未定义服务器控制的实验初态和操作序列，自报参数或模拟状态不计考核分。"
-    },
-    {
-      "id": "spaceflight/lab/power",
-      "moduleId": "spaceflight",
-      "title": "航天自由实验：power",
-      "mode": "demonstration",
-      "reason": "不改动既有状态驱动科学模型；未定义服务器控制的实验初态和操作序列，自报参数或模拟状态不计考核分。"
-    },
-    {
-      "id": "spaceflight/lab/freefall",
-      "moduleId": "spaceflight",
-      "title": "航天自由实验：freefall",
-      "mode": "demonstration",
-      "reason": "不改动既有状态驱动科学模型；未定义服务器控制的实验初态和操作序列，自报参数或模拟状态不计考核分。"
-    },
-    {
-      "id": "spaceflight/lab/entry",
-      "moduleId": "spaceflight",
-      "title": "航天自由实验：entry",
-      "mode": "demonstration",
-      "reason": "不改动既有状态驱动科学模型；未定义服务器控制的实验初态和操作序列，自报参数或模拟状态不计考核分。"
-    },
-    {
-      "id": "spaceflight/lab/chute",
-      "moduleId": "spaceflight",
-      "title": "航天自由实验：chute",
-      "mode": "demonstration",
-      "reason": "不改动既有状态驱动科学模型；未定义服务器控制的实验初态和操作序列，自报参数或模拟状态不计考核分。"
-    },
-    {
-      "id": "spaceflight/lab/launch",
-      "moduleId": "spaceflight",
-      "title": "航天自由实验：launch",
-      "mode": "demonstration",
-      "reason": "不改动既有状态驱动科学模型；未定义服务器控制的实验初态和操作序列，自报参数或模拟状态不计考核分。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/rectangle",
-      "moduleId": "geometry-proofs",
-      "title": "长方形与正方形：数方格：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/parallelogram",
-      "moduleId": "geometry-proofs",
-      "title": "平行四边形：剪一块、移一块：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/triangle",
-      "moduleId": "geometry-proofs",
-      "title": "三角形：为什么要除以二：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/trapezoid",
-      "moduleId": "geometry-proofs",
-      "title": "梯形：两块拼出一个底：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/rhombus",
-      "moduleId": "geometry-proofs",
-      "title": "菱形：两条对角线的秘密：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/circle",
-      "moduleId": "geometry-proofs",
-      "title": "圆：扇形越细，越接近长方形：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/sector",
-      "moduleId": "geometry-proofs",
-      "title": "扇形：占整圆的多少：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/annulus",
-      "moduleId": "geometry-proofs",
-      "title": "圆环：大圆减去小圆：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/triangle-ratio",
-      "moduleId": "geometry-proofs",
-      "title": "等高三角形：底比等于面积比：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/similarity",
-      "moduleId": "geometry-proofs",
-      "title": "相似图形：边长翻倍，面积呢：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/square-sum",
-      "moduleId": "geometry-proofs",
-      "title": "(a+b)²：为什么有两个 ab：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/square-minus",
-      "moduleId": "geometry-proofs",
-      "title": "(a−b)²：为什么要加回 b²：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/difference-squares",
-      "moduleId": "geometry-proofs",
-      "title": "平方差：把 L 形拼成长方形：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/distributive",
-      "moduleId": "geometry-proofs",
-      "title": "分配律：一块分成两块：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/pythagoras",
-      "moduleId": "geometry-proofs",
-      "title": "勾股定理：四个三角形围一个方形：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/cuboid",
-      "moduleId": "geometry-proofs",
-      "title": "长方体与正方体：一层一层数：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/cuboid-net",
-      "moduleId": "geometry-proofs",
-      "title": "长方体表面积：六个面展开：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/prism",
-      "moduleId": "geometry-proofs",
-      "title": "直三棱柱：两个拼一个长方体：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/cylinder",
-      "moduleId": "geometry-proofs",
-      "title": "圆柱：多边形柱越来越圆：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/cylinder-net",
-      "moduleId": "geometry-proofs",
-      "title": "圆柱表面积：侧面是一张纸：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/pyramid",
-      "moduleId": "geometry-proofs",
-      "title": "棱锥：三分之一从哪里来：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/cone",
-      "moduleId": "geometry-proofs",
-      "title": "圆锥：与棱锥逐层比较：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/sphere",
-      "moduleId": "geometry-proofs",
-      "title": "球：半球与“圆柱减圆锥”：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    },
-    {
-      "id": "geometry-proofs/reasoning/volume-scale",
-      "moduleId": "geometry-proofs",
-      "title": "立体缩放：为什么是 k³：口头解释与观察",
-      "mode": "demonstration",
-      "reason": "数值题可判分；自由口头证明、观察和反思没有自动评分规则。"
-    }
-  ],
   "nativeLevelReferences": [
     {
       "moduleId": "area-builder",
@@ -45084,5 +44071,5 @@
     "jsx-vectors": "jsxgraph-playground",
     "jsx-linear": "jsxgraph-playground"
   },
-  "notice": "正式题目独立发行、一次交卷后定稿并提供解析。公开演示仍可学习；这不是防作弊考试系统。"
+  "notice": "选择目标即可开始考核。每次交卷后提供解析，可再次考核并保留最高成绩。"
 }

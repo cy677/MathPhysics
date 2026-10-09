@@ -8,7 +8,7 @@ import {createApplication} from '../server/http.mjs';
 import {createAccount} from '../server/auth.mjs';
 import {generateWorksheet,exportRecipe} from '../lessons/question-bank/engine.mjs';
 import {CURRICULUM_VERSION} from '../lessons/primary-math/curriculum.mjs';
-const root=path.resolve(import.meta.dirname,'..'),output=path.resolve(root,'../evidence/browser-learning');
+const root=path.resolve(import.meta.dirname,'..'),output=path.resolve(root,'output/playwright/service-learning');
 await fs.mkdir(output,{recursive:true});
 const temp=await fs.mkdtemp(path.join(os.tmpdir(),'mathphysics-learning-ui-'));
 const app=await createApplication({databasePath:path.join(temp,'synthetic.sqlite'),staticRoot:root});
@@ -23,10 +23,12 @@ try{
  const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true});const page=await context.newPage();
  page.on('pageerror',e=>report.pageErrors.push(e.message));page.on('response',r=>{if(r.status()===404)report.missing.push(r.url());});page.on('dialog',d=>d.accept());
  page.on('request',r=>{if(r.url().endsWith('/submit')){const b=r.postDataJSON();report.rawSubmissions.push({keys:Object.keys(b),responseKeys:Object.keys(b.responses),idempotencyKey:b.idempotencyKey});}});
- await page.goto(base+'learning/index.html');await page.waitForFunction(()=>!!window.__mpLearningApp);await page.getByRole('button',{name:'账号与档案',exact:true}).tap();
+ await page.goto(base);await page.waitForFunction(()=>!!window.__mpLearningApp);assert.equal(page.url(),base+'learning/');assert.equal(await page.locator('.badge.demo').count(),0);assert.equal(await page.getByText('演示练习 · 0分',{exact:true}).count(),0);assert.equal(await page.locator('#module-filter option').evaluateAll(options=>options.some(option=>option.textContent.includes('演示'))),false);record('服务首页直接进入考核，目录不包含静态演示入口');await page.getByRole('button',{name:'账号与档案',exact:true}).tap();
  app.db.prepare('UPDATE sessions SET expires_at=? WHERE account_id IS NULL').run(Date.now()-1);await page.locator('input[name=username]').fill('frontend-synthetic');await page.locator('input[name=password]').fill(password);await page.getByRole('button',{name:'登录',exact:true}).tap();await page.waitForFunction(()=>MathPhysicsSync.snapshot().account?.username==='frontend-synthetic');
  assert.equal(await page.getByText('别人的档案',{exact:true}).count(),0);await page.locator('.mp-account-dialog .mp-dialog-head button').tap();
  assert.equal(await page.evaluate(secret=>Object.values(localStorage).some(v=>v.includes(secret)),password),false);record('匿名会话过期后自动刷新一次再登录，账号隔离且密码未进入浏览器存档');
+ await page.getByRole('link',{name:'返回探索',exact:true}).tap();await page.locator('[data-activity]').first().waitFor();await page.waitForFunction(()=>MathPhysicsSync.snapshot().account?.username==='frontend-synthetic');assert.equal(page.url(),base+'index.html');
+ await page.getByRole('link',{name:'开始考核'}).tap();await page.waitForFunction(()=>!!window.__mpLearningApp);assert.equal(page.url(),base+'learning/');record('课堂探索保留，返回考核时复用同一学习服务和账号');
  await page.getByRole('tab',{name:'成长',exact:true}).tap();await page.getByText('还没有正式考核数据：',{exact:false}).waitFor();assert.equal(await page.locator('.growth-total strong').first().innerText(),'0.00');record('无测量与已测零分具有不同文案');
  await page.getByRole('tab',{name:'考核',exact:true}).tap();
  await page.locator('#objective-search').fill('math/integer.add');await page.locator('[data-objective-id="math/integer.add"] button').tap();await page.locator('#active-assessment').waitFor({state:'visible'});
@@ -35,6 +37,12 @@ try{
  for(const[id,value]of answers)await page.locator(`[data-item-id="${id}"] input[type=text]`).fill(String(value));
  await page.locator('#submit-assessment').tap();await page.locator('.result-summary').waitFor();assert((await page.locator('#assessment-status').innerText()).includes('服务器已确认'));assert.equal(report.rawSubmissions[0].keys.sort().join(','),'idempotencyKey,responses');record('正式数值考核由服务器交卷判定，提交体只含原始答案与幂等键');
  const submittedId=await page.evaluate(()=>__mpLearningApp.active.id);const countBefore=app.db.prepare('SELECT COUNT(*) n FROM attempts WHERE status=?').get('submitted').n;await page.evaluate(()=>MathPhysicsSync.reconnect());assert.equal(app.db.prepare('SELECT COUNT(*) n FROM attempts WHERE status=?').get('submitted').n,countBefore);record('重放已确认提交不增加交卷次数');
+ await page.getByRole('button',{name:'再次考核',exact:true}).tap();await page.waitForFunction(id=>__mpLearningApp.active.id!==id&&__mpLearningApp.active.status==='issued',submittedId);
+ const repeated=await page.evaluate(()=>({id:__mpLearningApp.active.id,objectiveId:__mpLearningApp.active.objectiveId,bucketKey:__mpLearningApp.active.bucketKey}));assert.equal(repeated.objectiveId,'math/integer.add');
+ for(const field of await page.locator('#assessment-items input[type=text]').all())await field.fill('-999');
+ await page.locator('#submit-assessment').tap();await page.locator('.result-summary').waitFor();
+ const repeatedGrowth=app.store.growth(own.profile.id),repeatedBucket=repeatedGrowth.buckets.find(bucket=>bucket.bucketKey===repeated.bucketKey);
+ assert.equal(repeatedBucket.latest.normalizedScore,0);assert.equal(repeatedBucket.best.normalizedScore,10000);assert.equal(repeatedGrowth.totals.credits,10000);assert.equal(app.store.getAttempt(own.profile.id,submittedId).attempt.status,'submitted');record('再次考核签发新试卷，低分保留最高成绩且不重复增加积分');
  async function issue(id){await page.evaluate(async id=>{const attempt=await MathPhysicsSync.issueAttempt(id,1);await __mpLearningApp.openAttempt(attempt);},id);await page.locator('#active-assessment').waitFor({state:'visible'});}
  await issue('space/prepare');await page.getByRole('button',{name:'暂停并排查',exact:true}).tap();await context.setOffline(true);await page.locator('#submit-assessment').tap();await page.waitForFunction(()=>MathPhysicsSync.drafts().some(d=>d.attempt.id===__mpLearningApp.active.id&&d.submission&&!d.result));assert.equal(await page.locator('.result-summary').count(),0);assert.match(await page.locator('#assessment-status').innerText(),/排队|等待/);record('断网后的已发放考核冻结原始答案，不冒充正式结果');
  const offlineId=await page.evaluate(()=>__mpLearningApp.active.id);await context.setOffline(false);await page.locator('.result-summary').waitFor({timeout:30000});await page.evaluate(()=>MathPhysicsSync.reconnect());assert.equal(app.db.prepare('SELECT COUNT(*) n FROM grade_revisions WHERE attempt_id=?').get(offlineId).n,1);record('联网自动重放同一交卷键，正式判分一次');

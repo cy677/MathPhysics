@@ -1,0 +1,346 @@
+{
+  "releaseId": "20261009T065600Z-learning-service",
+  "verifiedAtUTC": "2026-10-09T07:18:38.372Z",
+  "url": "https://124.70.198.189/mathphysics/",
+  "learningURL": "https://124.70.198.189/mathphysics/learning/",
+  "classroomURL": "https://124.70.198.189/mathphysics/index.html",
+  "sourceIdentity": "Current working-tree code, including uncommitted additions and deletions, rebuilt on the server; raw bytes verified against the release manifest and Git index before publishing main",
+  "archiveSHA256": "627d69bf7007ffdd8a007fa16ce21cfee62a968aa372bac6ad9762b5d5e056d1",
+  "manifestFileCount": 2941,
+  "source": {
+    "releaseId": "20261009T065600Z-learning-service",
+    "checkedAtUTC": "2026-10-09T07:17:46.656Z",
+    "archiveSHA256": "627d69bf7007ffdd8a007fa16ce21cfee62a968aa372bac6ad9762b5d5e056d1",
+    "publicManifestSHA256": "154229327b9adbd4dff051a3a90baf9abfd299d3e3f9722de0b47e2e22770e62",
+    "manifestFiles": 2941,
+    "workingTreeMatchesRelease": true,
+    "publicManifestMatchesRelease": true,
+    "gitIndexMatchesRelease": true,
+    "gitlinks": 0,
+    "passed": true
+  },
+  "localTests": {
+    "tests": 895,
+    "pass": 891,
+    "fail": 0,
+    "skipped": 4
+  },
+  "server": {
+    "activation": {
+      "releaseId": "20261009T065600Z-learning-service",
+      "current": "/srv/mathphysics/releases/20261009T065600Z-learning-service",
+      "nginxSnippetUpdated": false,
+      "meowServiceUnchanged": true,
+      "learningService": "mathphysics-learning.service",
+      "learningData": "/srv/mathphysics/runtime/mathphysics.sqlite3",
+      "learningEnabled": true,
+      "serviceSourceRoot": "/srv/mathphysics/releases/20261009T065600Z-learning-service",
+      "firstAccountPending": true
+    },
+    "cleanup": {
+      "temporaryUploadsRemoved": true,
+      "releaseRetained": "/srv/mathphysics/releases/20261009T065600Z-learning-service",
+      "backupRetained": "/srv/mathphysics/backups/20261009T065600Z-learning-service"
+    },
+    "database-final": {
+      "databaseTables": 12,
+      "changedTables": [],
+      "databaseUnchanged": true,
+      "snapshotIntegrity": "ok",
+      "checkedAtUTC": "2026-10-09T07:13:18.324588+00:00"
+    },
+    "learning-final": {
+      "integrity": "ok",
+      "databaseOutsideRelease": true,
+      "privateBackupCreated": true,
+      "factsPreserved": true,
+      "factTablesChecked": 16,
+      "firstAccountPending": true,
+      "accountCount": 0,
+      "checkedAtUTC": "2026-10-09T07:13:18.330769+00:00"
+    },
+    "public-permissions": {
+      "directoryMode": "0755",
+      "fileMode": "0644",
+      "nginxUserCanRead": true,
+      "scope": "new release only"
+    },
+    "release-state.final": {
+      "releaseId": "20261009T065600Z-learning-service",
+      "current": "/srv/mathphysics/releases/20261009T065600Z-learning-service",
+      "releaseDirectoriesRetained": [
+        "20260930T061500Z",
+        "20261001T005739Z-965c72c",
+        "20261001T113119Z-965c72c",
+        "20261002T071617Z-e5764f0",
+        "20261003T105809Z-e5764f0",
+        "20261005T094051Z-help-tiers",
+        "20261005T100552Z-help-tiers",
+        "20261006T091933Z-learning-sync",
+        "20261006T094706Z-learning-sync",
+        "20261009T065600Z-learning-service"
+      ],
+      "backup": "/srv/mathphysics/backups/20261009T065600Z-learning-service",
+      "backupDirectoryMode": "0700",
+      "meowService": {
+        "MainPID": "3283709",
+        "ExecMainStartTimestamp": "Wed 2026-09-30 20:04:20 CST",
+        "ActiveState": "active",
+        "FragmentPath": "/etc/systemd/system/meow-pet.service",
+        "ActiveEnterTimestamp": "Wed 2026-09-30 20:04:20 CST"
+      },
+      "learningService": {
+        "MainPID": "1531077",
+        "ExecMainStartTimestamp": "Fri 2026-10-09 15:11:46 CST",
+        "ActiveState": "active",
+        "FragmentPath": "/etc/systemd/system/mathphysics-learning.service",
+        "ActiveEnterTimestamp": "Fri 2026-10-09 15:11:46 CST"
+      },
+      "learningData": "/srv/mathphysics/runtime/mathphysics.sqlite3",
+      "incomingFiles": [],
+      "userDatabasePreserved": true,
+      "databaseFinalUnchanged": true,
+      "learningFactsPreserved": true,
+      "firstAccountPending": true
+    },
+    "server-delivery-report": {
+      "startedAtUTC": "2026-10-09T07:11:13.524Z",
+      "releaseId": "20261009T065600Z-learning-service",
+      "checks": [
+        {
+          "name": "extracted-service-auth-and-static-private-boundary"
+        },
+        {
+          "name": "release-raw-scoring-idempotency-ledger-and-fixed-bucket",
+          "credits": 10000,
+          "points": 100,
+          "attempts": 2
+        },
+        {
+          "name": "actual-extracted-disk-sqlite-restart-restores-save-and-ledger"
+        }
+      ],
+      "passed": true,
+      "scope": "Synthetic account in separate temporary database; no production accounts or saves accessed",
+      "finishedAtUTC": "2026-10-09T07:11:14.158Z"
+    },
+    "stage": {
+      "releaseId": "20261009T065600Z-learning-service",
+      "archiveSHA256": "627d69bf7007ffdd8a007fa16ce21cfee62a968aa372bac6ad9762b5d5e056d1",
+      "deltaSHA256": "2a3657b7431d6c084f6cb7dc1603088a985a8fe571d1a0a93c3702d2a22683db",
+      "uploadMethod": "verified-previous-source-copy-plus-delta",
+      "baseReleaseId": "20261006T094706Z-learning-sync",
+      "copiedUnchangedSourceFiles": 2889,
+      "verifiedFiles": 2941,
+      "sourceCommit": null,
+      "activityCount": 78,
+      "serverRebuildMatchesLocal": true,
+      "nodeVersion": "v24.14.0",
+      "tests": {
+        "tests": 895,
+        "pass": 891,
+        "fail": 0,
+        "skipped": 4
+      },
+      "deliveryChecks": 3,
+      "ready": true
+    },
+    "verification": {
+      "releaseId": "20261009T065600Z-learning-service",
+      "verifiedFiles": 2941,
+      "activityCount": 78,
+      "entryChecks": 33,
+      "servedResourceHashesMatch": 391,
+      "javascriptModuleMimeChecks": 20,
+      "publicReferenceChecks": 5,
+      "cacheRefreshReturns200": true,
+      "privatePathsHidden": true,
+      "privatePathChecks": 19,
+      "licenseChecks": 20,
+      "sudokuXMLConfigServed": true,
+      "learningServiceEnabled": true,
+      "learningDataOutsideRelease": true,
+      "learningIntegrity": "ok",
+      "learningFactsPreserved": true,
+      "learningFactTablesChecked": 16,
+      "accountCount": 0,
+      "defaultEntryRedirectsToAssessment": true,
+      "productionSecureCookie": true,
+      "anonymousSessionWorks": true,
+      "spaceflightProfileAdapterServed": true,
+      "firstAccountPending": true,
+      "sudokuPWAScopeConfined": true,
+      "meowServiceUnchanged": true,
+      "meowFilesUnchanged": true,
+      "meowHomeUnchanged": true,
+      "meowServiceConfigUnchanged": true,
+      "nginxOtherFilesUnchanged": true,
+      "databaseTables": 12,
+      "dataPreserved": true,
+      "databaseUnchanged": true,
+      "databaseChangedTables": [],
+      "backupIntegrity": "ok",
+      "backup": "/srv/mathphysics/backups/20261009T065600Z-learning-service",
+      "passed": true,
+      "databaseFinalUnchanged": true,
+      "finalDatabaseChangedTables": []
+    }
+  },
+  "localLearningBrowser": {
+    "passed": true,
+    "cases": 31,
+    "checks": [
+      "服务首页直接进入考核，目录不包含静态演示入口",
+      "匿名会话过期后自动刷新一次再登录，账号隔离且密码未进入浏览器存档",
+      "课堂探索保留，返回考核时复用同一学习服务和账号",
+      "无测量与已测零分具有不同文案",
+      "正式数值考核由服务器交卷判定，提交体只含原始答案与幂等键",
+      "重放已确认提交不增加交卷次数",
+      "再次考核签发新试卷，低分保留最高成绩且不重复增加积分",
+      "断网后的已发放考核冻结原始答案，不冒充正式结果",
+      "联网自动重放同一交卷键，正式判分一次",
+      "坐标题可触摸选择点并用坐标与方向按钮调整",
+      "面积颜色题以触摸方格操作，390px下棋盘独立滚动",
+      "面积构造题仅展示服务器允许的颜色",
+      "正交、斜边、空洞面积题显示必要单位网格与轮廓",
+      "分数拼块题用整体、分母与加减按钮操作",
+      "数字分数题用可点选卡片分子分母槽位",
+      "等值配对题先选左卡再选右卡，原始配对ID保存",
+      "分子题通过增加原子和点选连接操作，无JSON编辑",
+      "七巧板题保留预放锁定拼板，其他拼板触摸移动旋转",
+      "390 / 1024 / 1280 布局均无页面横向溢出",
+      "六画板与题库别名筛选显示canonical考核目标",
+      "成长总数等于流水，别名筛选、同组趋势与每笔题目和触发修订来源可读",
+      "409明确选择本地版后按最新revision同步，两份笔记保留恢复副本",
+      "旧记录预览确认后可恢复为未核验练习，保留原键与当前恢复副本且积分不变",
+      "新浏览器设备从服务器已导入旧备份继续练习，无共享原键回退",
+      "真实航天页联网恢复新服务器笔记，旧provider不以新revision静默覆盖",
+      "另一设备先交卷后正式答案使用服务器版本，本机未交副本保留且未计分",
+      "切换档案清除旧考核UI，并拒绝旧存档句柄跨档案写入",
+      "host档案切换会停止并移除旧课堂iframe",
+      "401过期清除账号档案与正式考核UI",
+      "完成checkpoint第5题与当前未完成第0题并存，刷新恢复当前坐标而不丢完成记录",
+      "模拟慢读导入500题组合，完成后再断言并经刷新与再次生成精确复现"
+    ],
+    "pageErrors": [],
+    "missingResources": [],
+    "scope": "Synthetic accounts in an isolated temporary database; no production account created"
+  },
+  "localReleaseDelivery": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "archive-safe-extraction-and-manifest",
+        "files": 2941,
+        "extraction": {
+          "files": 2942
+        },
+        "releaseId": "20261009T065600Z-learning-service"
+      },
+      {
+        "name": "extracted-service-auth-and-static-private-boundary"
+      },
+      {
+        "name": "release-raw-scoring-idempotency-ledger-and-fixed-bucket",
+        "credits": 10000,
+        "points": 100,
+        "attempts": 2
+      },
+      {
+        "name": "actual-extracted-disk-sqlite-restart-restores-save-and-ledger"
+      }
+    ],
+    "archiveSHA256": "627d69bf7007ffdd8a007fa16ce21cfee62a968aa372bac6ad9762b5d5e056d1"
+  },
+  "publicBrowser": {
+    "releaseId": "20261009T065600Z-learning-service",
+    "passed": true,
+    "checks": [
+      "Default public entry opens latest assessment page with repeated assessment and highest-score wording",
+      "Older sync scope remains intact and is read compatibly through current guest scope",
+      "Latest release and online anonymous sync preserve old records, preferences and unrelated storage",
+      "Account/profile dialog is available; no production account is created",
+      "Old worksheet IDs, prompts, answers and visible completed level restore",
+      "1391 reviewed word problems load, accept an actual answer and resume after reload",
+      "Public primary-math classroom with account controls fits a 390-pixel viewport",
+      "Pre-update Minesweeper board and engine restore exactly",
+      "Pre-update Sudoku entries, notes and undo history restore exactly",
+      "Spaceflight scoped adapter preserves old nonempty notes and resumes new notes after reload",
+      "Online learning and growth page connects anonymously; first real account remains pending",
+      "Latest assessment and account controls fit a 390-pixel viewport"
+    ],
+    "errors": [],
+    "failedResources": [],
+    "scope": "Independent test browser with actual pre-update fixtures; user browser data is not accessed",
+    "fileCount": 2941,
+    "activityCount": 78,
+    "reviewedWordProblems": 1391,
+    "serviceWorkerScopes": [
+      "https://124.70.198.189/mathphysics/lessons/sudoku/"
+    ]
+  },
+  "browserCleanup": {
+    "checkedAtUTC": "2026-10-09T07:15:44.5159969Z",
+    "processesBefore": 9,
+    "remainingProcesses": [],
+    "remainingListeners": [],
+    "passed": true
+  },
+  "phetSourceReview": {
+    "checkedAtUTC": "2026-10-09T07:05:25.587Z",
+    "simulationContentUnchanged": true,
+    "difference": "External Cloudflare beacon URL and integrity only; themed build removes it",
+    "changes": [
+      {
+        "id": "fractions-intro",
+        "file": "vendor/phet/fractions-intro.html",
+        "before": "d0cf4bbb8888d0a16628ad4a69df9ad5b49b4cc4b15d9433a979dfc1157448c3",
+        "after": "d065dd234842a1d573cc9577d201a160fa9cc109e755baf88fac9649a1c3f9b6",
+        "bytes": 2877396
+      },
+      {
+        "id": "fraction-matcher",
+        "file": "vendor/phet/fraction-matcher.html",
+        "before": "28d8fbb3aabe7d10b4b64bd02d26b6b9aa7e5025f4c226396f9d6cf057b1cbfc",
+        "after": "8bb6d33402d5164b5ca1e6b4499c0ce921c57f2f1b8613efbb47e45b19b17518",
+        "bytes": 2100862
+      },
+      {
+        "id": "balancing-act",
+        "file": "vendor/phet/balancing-act.html",
+        "before": "fa365bacf9b52b0800b4596b307ac61d7675143443178288c8e832c6e3a76e6c",
+        "after": "caff0cc6dceb757dc04970a498dda547074fcf82f38dcdbf8353a5bcefe5500b",
+        "bytes": 3509612
+      },
+      {
+        "id": "circuit-construction-kit-dc",
+        "file": "vendor/phet/circuit-construction-kit-dc.html",
+        "before": "4feae7b4823354d57112fc46c3bdca9de5c3612e7695cd8967b8c32f122736f1",
+        "after": "f1d5e86972d1bc1a1f783038b1131f5fba3e7d8825193049661a70acb7f09618",
+        "bytes": 3926289
+      },
+      {
+        "id": "states-of-matter-basics",
+        "file": "vendor/phet/states-of-matter-basics.html",
+        "before": "fdb67dbaf55910c07246e074c8a68c18224cc7b037733fa581a29aee0ab2a762",
+        "after": "3dc8dd2e94805c5a8bbad28e571840f4848170a530ef1353693804f75baa3af2",
+        "bytes": 2670753
+      },
+      {
+        "id": "build-a-molecule",
+        "file": "vendor/phet/build-a-molecule.html",
+        "before": "2d60a20708150c70399c7798fc512a6fd7fc9ce726e87f695fd0040cc846a09a",
+        "after": "f4cc89d6683ddd718635012730b2624bb3f5bf5621c8bdf60d8fa53d5e18a39a",
+        "bytes": 8771113
+      }
+    ]
+  },
+  "backup": "/srv/mathphysics/backups/20261009T065600Z-learning-service",
+  "firstAccountPending": true,
+  "limitations": [
+    "Browser save restoration used pre-update synthetic fixtures in a dedicated browser; actual user browser data was not accessed",
+    "390px touch and desktop checks used Chromium; no physical iPad/Safari device test",
+    "First real learning account remains to be configured separately, as previously requested"
+  ],
+  "passed": true
+}

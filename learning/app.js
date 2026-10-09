@@ -8,7 +8,7 @@ const svgNode=(tag,attrs={},text)=>{const e=document.createElementNS('http://www
 const date=v=>v?new Date(v).toLocaleString('zh-CN',{hour12:false}):'尚无记录';
 const points=v=>(Number(v||0)/100).toFixed(2);
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
-let catalog={modules:[],objectives:[]},active=null,responses={},locked=false,currentTab='assessment',page=0,scope=sync.snapshot().scope,remoteAttempts=[],generation=0,loadingAttempts=false;
+let catalog={modules:[],objectives:[]},active=null,responses={},locked=false,currentTab='assessment',page=0,scope=sync.snapshot().scope,remoteAttempts=[],generation=0,loadingAttempts=false,repeating=false;
 function alert(text){$('learning-alert').textContent=text||'';}
 async function run(fn){alert('');try{return await fn();}catch(e){if(e.name!=='AbortError')alert(e.message||'暂时无法完成，请重试。');return null;}}
 function moduleTitle(id){return catalog.modules.find(m=>m.id===id)?.title||id;}
@@ -26,34 +26,33 @@ $('manage-profiles').onclick=()=>window.MathPhysicsSyncUI?.open();
 $('refresh-attempts').onclick=()=>run(loadAttempts);$('refresh-growth').onclick=()=>run(loadGrowth);
 $('module-filter').onchange=()=>{page=0;renderCatalog();};$('objective-search').oninput=()=>{page=0;renderCatalog();};
 async function loadCatalog(){
- try{catalog=await (sync.snapshot().available?sync.request('/capabilities'):fetch('../config/assessment-catalog.json').then(r=>{if(!r.ok)throw Error('目标清单尚未生成。');return r.json();}));}
- catch{try{catalog=JSON.parse(localStorage.getItem('mathphysics.public-capabilities.v1'))||catalog;}catch{}}
+ try{catalog=await sync.request('/capabilities');}
+ catch(error){
+  if(sync.snapshot().connection!=='offline')throw Error('学习服务未连接，请启动服务后刷新页面。');
+  try{const saved=JSON.parse(localStorage.getItem('mathphysics.public-capabilities.v1'));if(!saved)throw error;catalog=saved;}catch{throw error;}
+ }
  try{localStorage.setItem('mathphysics.public-capabilities.v1',JSON.stringify(catalog));}catch{}
  if(!Array.isArray(catalog.objectives)||!Array.isArray(catalog.modules))throw Error('目标清单不可用。');
  const filter=$('module-filter');filter.replaceChildren();const all=node('option','全部模块');all.value='all';filter.append(all);
- for(const m of catalog.modules){const option=node('option',m.title+(m.supportsAssessment?'':' · 演示'));option.value=m.id;filter.append(option);}
- const requested=new URLSearchParams(location.search).get('module');if(catalog.modules.some(m=>m.id===requested))filter.value=requested;
+ for(const m of catalog.modules.filter(m=>m.supportsAssessment)){const option=node('option',m.title);option.value=m.id;filter.append(option);}
+ const requested=new URLSearchParams(location.search).get('module');if(catalog.modules.some(m=>m.id===requested&&m.supportsAssessment))filter.value=requested;
  renderCatalog();
 }
-function demoLink(moduleId){const a=node('a','去演示练习（0分）');a.href='../index.html#activity/'+encodeURIComponent(moduleId);return a;}
 function renderCatalog(){
  const selected=$('module-filter').value,query=$('objective-search').value.trim().toLowerCase(),state=sync.snapshot();
   const objectives=catalog.objectives.filter(o=>matchesModule(o,selected)&&(!query||(o.title+' '+o.id+' '+moduleTitle(o.moduleId)).toLowerCase().includes(query)));
- const demos=catalog.modules.filter(m=>!m.supportsAssessment&&(selected==='all'||m.id===selected)&&(!query||(m.title+' '+m.reason).toLowerCase().includes(query)));
- const items=[...objectives.map(o=>({objective:o})),...demos.map(m=>({module:m}))],size=18,totalPages=Math.max(1,Math.ceil(items.length/size));page=Math.min(page,totalPages-1);
+ const size=18,totalPages=Math.max(1,Math.ceil(objectives.length/size));page=Math.min(page,totalPages-1);
  const list=$('capability-list');list.replaceChildren();
- if(!items.length)list.append(node('p','没有符合筛选的目标，试试另一个模块或词语。','empty-card'));
- for(const item of items.slice(page*size,(page+1)*size)){
+ if(!objectives.length)list.append(node('p','没有符合筛选的目标，试试另一个模块或词语。','empty-card'));
+ for(const o of objectives.slice(page*size,(page+1)*size)){
   const card=node('article',undefined,'objective-card');
-  if(item.module){const m=item.module;card.append(node('span','演示练习 · 0分','badge demo'),node('h3',m.title),node('p',m.reason||'此活动提供自由观察和操作。当前没有可自动判定的正式考核目标。','reason'),demoLink(m.id));}
-  else{const o=item.objective;card.dataset.objectiveId=o.id;card.append(node('span',moduleTitle(o.moduleId),'badge'),node('h3',o.title),node('small',`${o.fixedCount}道固定题 · ${o.grade==='general'||!o.grade?'跨年级':o.grade+'年级'}`));
+  card.dataset.objectiveId=o.id;card.append(node('span',moduleTitle(o.moduleId),'badge'),node('h3',o.title),node('small',`${o.fixedCount}道固定题 · ${o.grade==='general'||!o.grade?'跨年级':o.grade+'年级'}`));
    const row=node('div',undefined,'card-actions'),difficulty=node('select');difficulty.setAttribute('aria-label',o.title+'难度');for(const d of o.difficulties||[1]){const option=node('option',({1:'起步',2:'进阶',3:'挑战'}[d])||'难度'+d);option.value=d;difficulty.append(option);}
    const issue=button('开始考核',()=>{if(!sync.snapshot().account){window.MathPhysicsSyncUI?.open();return;}issue.disabled=true;run(async()=>{active=await sync.issueAttempt(o.id,Number(difficulty.value));await openAttempt(active);}).finally(()=>{issue.disabled=false;renderCatalog();});},'primary');
-   issue.disabled=state.account&&state.connection!=='online';row.append(difficulty,issue);card.append(row,demoLink(o.moduleId));if(state.connection!=='online')card.append(node('small','离线新题仅演示；联网后才能发放正式考核。'));
-  }
+   issue.disabled=state.connection!=='online'||!state.available;row.append(difficulty,issue);card.append(row);if(state.connection!=='online'||!state.available)card.append(node('small','连接学习服务后即可开始考核。'));
   list.append(card);
  }
- $('objective-pager').replaceChildren();if(items.length>size){const prev=button('上一页',()=>{page--;renderCatalog();}),next=button('下一页',()=>{page++;renderCatalog();});prev.disabled=page===0;next.disabled=page===totalPages-1;$('objective-pager').append(prev,node('span',`${page+1} / ${totalPages} · 共${items.length}项`),next);}
+ $('objective-pager').replaceChildren();if(objectives.length>size){const prev=button('上一页',()=>{page--;renderCatalog();}),next=button('下一页',()=>{page++;renderCatalog();});prev.disabled=page===0;next.disabled=page===totalPages-1;$('objective-pager').append(prev,node('span',`${page+1} / ${totalPages} · 共${objectives.length}项`),next);}
 }
 async function loadAttempts(){
  if(loadingAttempts)return;const state=sync.snapshot();if(!state.account){remoteAttempts=[];renderAttempts();return;}loadingAttempts=true;const token=generation;
@@ -204,9 +203,14 @@ function renderResult(result){
  locked=true;$('submission-actions').hidden=true;$('assessment-status').textContent='服务器已确认交卷 · 正式结果已存档';const parent=$('assessment-result');parent.hidden=false;parent.replaceChildren();const summary=node('div',undefined,'result-summary');summary.append(node('h2','这一次的正式结果'));const score=node('div',undefined,'score-row');for(const[v,label]of[[result.rawScore+'/'+result.maxScore,'原始成绩'],[points(result.normalizedScore)+' / 100','标准化成绩'],[(result.creditsDelta>=0?'+':'')+points(result.creditsDelta),'本次积分变化']]){const e=node('div');e.append(node('strong',v),node('span',label));score.append(e);}summary.append(score,node('p',`服务器确认时间：${date(result.serverTime)}。历史最好成绩增量才增加积分；重复同分不会再次加分。`));parent.append(summary);
  for(const graded of result.items||[]){const item=active.assessment.items.find(i=>i.id===graded.id||i.questionId===graded.questionId);const card=node('section',undefined,'result-item');card.dataset.correct=String(graded.correct===true);card.append(node('strong',`${graded.correct?'已答对':'继续练习'} · ${graded.earned??graded.score??0} / ${graded.maxScore}`));if(item){card.append(node('p',item.prompt),node('p','你的答案：'+readable(item,responses[item.id]),'review-answer'));if(graded.solution?.answer!==undefined)card.append(node('p','参考答案：'+readable(item,graded.solution.answer)));}const explanation=graded.solution?.explanation;if(Array.isArray(explanation))explanation.forEach(s=>card.append(node('p',String(s))));else if(explanation)card.append(node('p',String(explanation)));parent.append(card);}
  if(draft?.localSubmission?.responses&&official&&JSON.stringify(draft.localSubmission.responses)!==JSON.stringify(official)){const previous=node('details');previous.append(node('summary','此前本机的未提交副本（未计分）'),node('p','这份答案没有成为正式交卷。上方成绩和“你的答案”来自服务器确认的原始答案；本机副本仍保留。'));for(const item of active.assessment.items)previous.append(node('p',item.prompt+'；本机副本：'+readable(item,draft.localSubmission.responses[item.id]),'review-answer'));parent.append(previous);}
- parent.append(button('查看成长记录',()=>selectTab('growth'),'primary'));renderAttempts();
+ const repeat=button('再次考核',()=>run(async()=>{
+  if(repeating)return;repeating=true;repeat.disabled=true;
+  try{const current=active,context=current.assessment.sourceContext,selector=context?{kind:'word-problems',selectionId:context.selectionId}:undefined;await openAttempt(await sync.issueAttempt(current.objectiveId,Number(current.difficulty),undefined,selector));await loadAttempts();}
+  finally{repeating=false;repeat.disabled=sync.snapshot().connection!=='online';}
+ }),'primary');repeat.id='repeat-assessment';repeat.disabled=sync.snapshot().connection!=='online';
+ parent.append(repeat,button('查看成长记录',()=>selectTab('growth')));renderAttempts();
 }
-function renderProfiles(){const content=$('profile-content'),state=sync.snapshot();content.replaceChildren();if(!state.account){content.append(node('p','当前未登录。演示仍可在本机继续；登录后查看自己的档案。','empty-card'));return;}content.append(node('p','当前账号：'+(state.account.username||'此前登录的账号（离线副本）')));const list=node('div',undefined,'profile-list');for(const p of state.profiles){const b=button(p.label,()=>run(()=>sync.selectProfile(p.id)));b.setAttribute('aria-pressed',String(p.id===state.profileId));list.append(b);}content.append(list,node('p',state.connection==='online'?'档案归属由服务器会话确认。':'当前使用本机离线副本，联网后核对会话。','notice'));}
+function renderProfiles(){const content=$('profile-content'),state=sync.snapshot();content.replaceChildren();if(!state.account){content.append(node('p','登录后查看自己的档案、考核成绩和成长记录。','empty-card'));return;}content.append(node('p','当前账号：'+(state.account.username||'此前登录的账号（离线副本）')));const list=node('div',undefined,'profile-list');for(const p of state.profiles){const b=button(p.label,()=>run(()=>sync.selectProfile(p.id)));b.setAttribute('aria-pressed',String(p.id===state.profileId));list.append(b);}content.append(list,node('p',state.connection==='online'?'档案归属由服务器会话确认。':'当前使用本机离线副本，联网后核对会话。','notice'));}
 function metric(label,value){const e=node('div');e.append(node('strong',value),node('span',label));return e;}
 async function loadGrowth(){
  const parent=$('growth-content'),state=sync.snapshot(),token=generation;
@@ -216,7 +220,7 @@ async function loadGrowth(){
  const sum=(data.ledger||[]).reduce((s,e)=>s+e.delta,0),moduleSum=(data.moduleContributions||[]).reduce((s,e)=>s+e.credits,0);if(sum!==data.totals.credits||moduleSum!==sum)throw Error('服务器积分总数与流水暂未一致，请重试。');
  parent.replaceChildren();const metrics=node('div',undefined,'growth-total');metrics.append(metric('累计积分（流水合计）',points(sum)),metric('正式交卷次数',data.totals.submittedAttempts),metric('已测目标 / 难度组合',data.totals.buckets));parent.append(metrics,node('p','积分记录历史最好成绩的增量。重新抽题也可能提高历史最好成绩；它不是精确掌握度。每100最小单位显示1.00点，每个目标、年级、难度及兼容规则桶最多100.00点。标准化成绩由服务器按整数四舍五入，显示保留两位小数。','notice'));
  parent.append(node('small','本页服务器读取时间：'+date(Date.now())));
- if(!data.totals.submittedAttempts)parent.append(node('p','还没有正式考核数据：这是“未测”，不是答错或零分。演示完成和旧记录不计入积分。','empty-card'));
+ if(!data.totals.submittedAttempts)parent.append(node('p','还没有正式考核数据：这是“未测”，不是答错或零分。选择一个目标开始考核，记录自己的成绩。','empty-card'));
  else if(sum===0)parent.append(node('p','已有正式考核记录，当前积分为0.00。请在下方查看原始成绩；已测零分与未测分别显示。','notice'));
  parent.append(node('h2','各模块的积分贡献'));const contributions=node('div',undefined,'contributions'),maximum=Math.max(1,...data.moduleContributions.map(m=>Math.abs(m.credits)));for(const m of data.moduleContributions){const row=node('div',undefined,'contribution-row'),meter=node('div',undefined,'contribution-meter'),fill=node('i');fill.style.width=Math.abs(m.credits)/maximum*100+'%';meter.append(fill);row.append(node('span',moduleTitle(m.moduleId)),meter,node('strong',points(m.credits)));contributions.append(row);}if(!data.moduleContributions.length)contributions.append(node('p','尚无积分流水。'));parent.append(contributions);
  if(data.trends?.length){parent.append(node('h2','积分时间线'));const plot=svgNode('svg',{viewBox:'0 0 720 170',class:'timeline-svg',role:'img','aria-label':'服务器积分随日期变化'}),max=Math.max(1,...data.trends.map(t=>Math.abs(t.credits))),coords=data.trends.map((t,i)=>({x:35+i/Math.max(1,data.trends.length-1)*650,y:130-t.credits/max*95}));plot.append(svgNode('line',{x1:35,y1:130,x2:685,y2:130,stroke:'#d2dcc9'}),svgNode('polyline',{points:coords.map(p=>p.x+','+p.y).join(' '),fill:'none',stroke:'#315d4b','stroke-width':3}));coords.forEach((p,i)=>{const point=svgNode('circle',{cx:p.x,cy:p.y,r:5,fill:'#b87428'});point.append(svgNode('title',{},data.trends[i].date+' · '+points(data.trends[i].credits)+'点'));plot.append(point);});plot.append(svgNode('text',{x:35,y:160,'font-size':12},data.trends[0].date),svgNode('text',{x:685,y:160,'text-anchor':'end','font-size':12},data.trends.at(-1).date));parent.append(plot);}
@@ -228,7 +232,7 @@ async function loadGrowth(){
  select.onchange=search.oninput=()=>{trendPage=0;renderTrends();};renderTrends();
  parent.append(node('h2','每一笔积分'));const ledger=node('ol',undefined,'ledger-list');let running=0;const entries=data.ledger.map(e=>({...e,totalBefore:running,totalAfter:running+=e.delta}));for(const e of entries.reverse()){const card=node('li',undefined,'ledger-entry'),head=node('div',undefined,'ledger-head');head.append(node('strong',objectiveTitle(e.objectiveId)),node('span',(e.delta>=0?'+':'')+points(e.delta)+'点','delta'));card.append(head,node('time',date(e.serverTime)),node('p',`${moduleTitle(e.moduleId)} · 总积分 ${points(e.totalBefore)} → ${points(e.totalAfter)} · 此目标历史最好 ${points(e.beforeBest)} → ${points(e.afterBest)}`));const detail=node('details'),list=node('dl');detail.append(node('summary','查看考核、题目与规则来源'));for(const[k,v]of[['考核ID',e.attemptId],['逐题项目',e.itemKey],['题目ID',e.questionId],['题目版本',e.questionVersion],['目标',e.objectiveId],['难度 / 年级',e.difficulty+' / '+e.grade],['考核版本',e.assessmentVersion],['评分规则',e.ruleVersion],['积分规则',e.rewardVersion],['归因成绩版本',e.gradeRevision],['触发考核ID',e.triggerAttemptId],['触发修订版本',e.triggerRevision],['原因',e.reason],['冲销来源',e.reversesLedgerId||'无']])list.append(node('dt',k),node('dd',String(v??'—')));detail.append(list);card.append(detail);ledger.append(card);}if(!entries.length)ledger.append(node('li',data.totals.submittedAttempts?'已有交卷记录，但暂未形成正向积分流水。':'尚无积分流水。','empty-card'));parent.append(ledger,node('p',`旧记录导入：${data.legacy?.imports||0}次 / ${data.legacy?.records||0}条，标为 legacy/unverified，积分为0。`));
 }
-const unsubscribe=sync.subscribe(state=>{renderProfiles();if(state.scope!==scope){scope=state.scope;generation++;active=null;responses={};remoteAttempts=[];locked=false;$('active-assessment').hidden=true;$('assessment-menu').hidden=false;$('assessment-items').replaceChildren();$('assessment-result').replaceChildren();$('growth-content').replaceChildren();alert('');if(currentTab==='growth')run(loadGrowth);run(loadAttempts);}renderAttempts();if(active){const d=sync.drafts().find(d=>d.attempt.id===active.id);if(d?.result&&!$('assessment-result').querySelector('.result-summary'))renderResult(d.result);}});
+const unsubscribe=sync.subscribe(state=>{renderProfiles();if(state.scope!==scope){scope=state.scope;generation++;active=null;responses={};remoteAttempts=[];locked=false;$('active-assessment').hidden=true;$('assessment-menu').hidden=false;$('assessment-items').replaceChildren();$('assessment-result').replaceChildren();$('growth-content').replaceChildren();alert('');if(currentTab==='growth')run(loadGrowth);run(loadAttempts);}renderAttempts();if(active){const d=sync.drafts().find(d=>d.attempt.id===active.id);if(d?.result&&!$('assessment-result').querySelector('.result-summary'))renderResult(d.result);const repeat=$('repeat-assessment');if(repeat)repeat.disabled=repeating||state.connection!=='online';}});
 window.addEventListener('pagehide',unsubscribe,{once:true});
 window.addEventListener('mathphysics:scope-change',()=>renderCatalog());
 window.addEventListener('online',()=>{renderCatalog();run(loadAttempts);});window.addEventListener('offline',renderCatalog);

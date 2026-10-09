@@ -65,12 +65,12 @@ jobs:
           set -o pipefail
           npm ci --ignore-scripts
           npm test | tee docs/classroom-unit-report.txt
-      - name: Build self-contained classroom files
+      - name: Build classroom regression fixtures
         run: |
-          npm run standalone:geometry
-          npm run build:spaceflight
-          npm run build:playground
-          npm run build:primary
+          node scripts/python.mjs scripts/build_geometry_standalone.py
+          node scripts/python.mjs scripts/build_spaceflight_standalone.py
+          node scripts/python.mjs scripts/build_playground_standalone.py
+          node scripts/python.mjs scripts/build_primary_math_standalone.py
       - name: Install browser test dependency
         run: |
           npx playwright install --with-deps chromium
@@ -99,19 +99,14 @@ jobs:
         run: |
           npm run test:demo-layout:browser
           npm run test:phet-display-compat:browser
-      - name: Package offline classroom
+      - name: Package learning service
         run: npm run package
       - uses: actions/upload-artifact@v4
         if: success()
         with:
           name: MathPhysics-classroom-delivery
           path: |
-            dist/MathPhysics-offline.zip
-            dist/MathPhysics-Playground.html
-            dist/MathPhysics-Tangram.html
-            dist/MathPhysics-Geometry-Proofs.html
-            dist/MathPhysics-Spaceflight.html
-            dist/MathPhysics-Primary-Math.html
+            dist/MathPhysics-server-*.tar.gz
           retention-days: 30
       - uses: actions/upload-artifact@v4
         if: always()

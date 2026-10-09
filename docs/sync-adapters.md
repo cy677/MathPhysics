@@ -4,7 +4,7 @@
 
 ## 运行入口
 
-Node `/mathphysics/` 提供账号 API、同步工具条和 `/learning/`。普通静态目录、历史静态路径及 `file://` 单文件没有正式服务时继续本机 0 分模式。同步 API 不可用时页面保留当前教学资源和本机记录，不能把练习结果标成已确认考核。
+Node `/mathphysics/` 提供账号API、同步工具条，并默认打开 `/learning/` 考核页。本地与远程使用相同服务入口；没有API时显示服务未连接，不回退到静态演示模式。已签发考核仍可离线暂存答案，恢复连接后确认正式结果。
 
 当前航天磁盘文件保持原样。Node 只在 `/mathphysics/lessons/spaceflight/` 的 HTML 响应中加入同步入口，等账号/档案缓存准备好后再运行一次原控制器；返回 UTF-8、正确 Content-Length 及 `Cache-Control: no-store`。普通静态根与单文件继续原航天入口，不加载此桥接。运行时使用当前 63 阶段、Worker 模型及稳定任务 ID。
 

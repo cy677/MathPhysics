@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Classroom v0.4 acceptance. Default: real HTTP; --inline: isolated bundles only."""
-import argparse,json,os,subprocess,sys,time,traceback,urllib.request
+import argparse,json,os,shutil,subprocess,sys,time,traceback,urllib.request
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
@@ -13,7 +13,7 @@ presentation=json.loads((ROOT/'config/presentation.json').read_text(encoding='ut
 visible_activities=[a for a in activities if a['adapter']!='matter' and not presentation['activities'].get(a['id'],{}).get('hidden',False)]
 report={'suite':'v0.4 isolated inline bundles' if args.inline else 'v0.4 actual HTTP, all activities, interactions and file:// bundles','results':[],'limitations':['Touch emulation is not a physical iPad Safari test.','Smoke tests verify execution, not every randomized upstream challenge.']}
 if args.inline:report['limitations'].append('Inline checks do not replace the real HTTP and file:// CI checks.')
-base='http://127.0.0.1:8784/';server=None
+base='http://127.0.0.1:8784/mathphysics/';server=None
 
 def run(name,fn):
  try:
@@ -31,7 +31,7 @@ def drag_jxg_point(page,index,dx,dy):
 
 try:
  if not args.inline:
-  server=subprocess.Popen([sys.executable,'scripts/serve.py','--port','8784'],cwd=ROOT,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
+  server=subprocess.Popen([shutil.which('node'),'server/cli.mjs','serve','--db',':memory:','--port','8784'],cwd=ROOT,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
   for _ in range(60):
    try:
     if urllib.request.urlopen(base,timeout=1).status==200:break
@@ -53,7 +53,7 @@ try:
    page.wait_for_function('window.__mpReady===true')
   if not args.inline:
    def host():
-    page.goto(base);page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==len(visible_activities)
+    page.goto(base+'index.html');page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==len(visible_activities)
     text=page.locator('#home').inner_text();assert not any(s in text for s in ['第一版统一','暂不改写','原版完整保留','未开放的内容不会被删除'])
     assert page.locator('[data-activity]').first.get_attribute('data-activity')=='jsxgraph-playground'
     assert page.locator('#teacher-open, #teacher-dialog, #only-open, button.locked').count()==0
@@ -80,7 +80,7 @@ try:
     return {'defaultEntries':len(visible_activities),'nonPhET':sum(a['adapter']!='phet' for a in visible_activities),'allEntries':len(visible_activities)}
    run('host-library-and-adapters',host)
    def migration():
-    key='mathphysics.state.v1';page.goto(base)
+    key='mathphysics.state.v1';page.goto(base+'index.html')
     page.evaluate('([key,val])=>localStorage.setItem(key,JSON.stringify(val))',[key,{'schemaVersion':1,'openIds':['area-builder','forces-and-motion-basics','vector-addition'],'visited':{'area-builder':123}}])
     page.reload();page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==len(visible_activities)
     state=page.evaluate('(key)=>JSON.parse(localStorage.getItem(key))',key);assert state['visited']['area-builder']==123
@@ -91,7 +91,7 @@ try:
    run('legacy-closed-settings-no-longer-restrict-access-and-visits-persist',migration)
    def graded_entries():
     modes={'jsx-triangle':'triangle','jsx-mirror':'mirror','jsx-rotation':'rotate','jsx-scale':'scale','jsx-vectors':'vectors','jsx-linear':'linear'}
-    page.goto(base);page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==len(visible_activities)
+    page.goto(base+'index.html');page.wait_for_selector('[data-activity]');assert page.locator('[data-activity]').count()==len(visible_activities)
     for id in modes:assert page.locator('[data-launch="'+id+'"]').is_enabled()
     for grade,expected in [(1,[]),(2,['jsx-mirror']),(3,[]),(4,['jsx-rotation']),(5,['jsx-triangle']),(6,['jsx-scale','jsx-vectors','jsx-linear'])]:
      page.locator('[data-grade="'+str(grade)+'"]').click()
@@ -108,7 +108,7 @@ try:
     page.locator('#player-back').click();page.wait_for_selector('iframe',state='detached')
     assert page.locator('[data-activity]').count()==len(visible_activities)
     for id in modes:assert page.locator('[data-launch="'+id+'"]').is_enabled()
-    page.goto(base)
+    page.goto(base+'index.html')
     return {'independentEntries':6,'gradeFiltering':True,'allOpen':True,'deepLinkMode':'linear','visitsPersist':True}
    run('graded-experiment-all-open-and-deep-links',graded_entries)
    for a in activities:

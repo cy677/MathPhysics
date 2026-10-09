@@ -15,8 +15,10 @@ async function harness({protocol='http:',pathname='/mathphysics/',legacy={},auth
  vm.runInContext(source,context);const sync=window.MathPhysicsSync;await sync.ready;
  return{sync,disk,calls,events,session,window,storage};
 }
-test('file and old static roots stay network-independent; guest records do not resurrect after clearing',async()=>{
- for(const params of [{protocol:'file:'},{pathname:'/MathPhysics/'}]){const h=await harness({...params,legacy:{'mathphysics.spaceflight.v1':'{"notes":"old"}'}});assert.equal(h.calls.length,0);const storage=h.sync.createStorage();assert.match(storage.getItem('mathphysics.spaceflight.v1'),/old/);storage.setItem('mathphysics.spaceflight.v1','new');h.disk.delete('mathphysics.spaceflight.v1');assert.equal(storage.getItem('mathphysics.spaceflight.v1'),null);assert.equal(h.calls.length,0);}
+test('HTTP pages use the learning API regardless of entry path; file pages require the service',async()=>{
+ for(const pathname of ['/','/MathPhysics/','/mathphysics/learning/']){const h=await harness({pathname});assert.ok(h.calls.some(call=>call.path==='/session'));assert.equal(h.sync.snapshot().connection,'online');}
+ const h=await harness({protocol:'file:',authenticated:false,legacy:{'mathphysics.spaceflight.v1':'{"notes":"old"}'}});assert.equal(h.calls.length,0);assert.equal(h.sync.snapshot().status,'unavailable');assert.equal(h.sync.snapshot().connection,'unavailable');await assert.rejects(h.sync.issueAttempt('math/integer.add',1),/学习服务/);
+ const storage=h.sync.createStorage();assert.match(storage.getItem('mathphysics.spaceflight.v1'),/old/);storage.setItem('mathphysics.spaceflight.v1','new');h.disk.delete('mathphysics.spaceflight.v1');assert.equal(storage.getItem('mathphysics.spaceflight.v1'),null);
 });
 test('authenticated scopes never auto-import legacy; profile switching invalidates old handles',async()=>{
  const h=await harness({legacy:{'mathphysics.spaceflight.v1':'legacy'}}),old=h.sync.createStorage();assert.equal(old.getItem('mathphysics.spaceflight.v1'),null);old.setItem('mathphysics.spaceflight.v1','own-note');await h.sync.selectProfile('p2');old.setItem('mathphysics.spaceflight.v1','must-not-cross');assert.equal(h.sync.createStorage().getItem('mathphysics.spaceflight.v1'),null);await h.sync.selectProfile('p1');assert.equal(h.sync.createStorage().getItem('mathphysics.spaceflight.v1'),'own-note');assert.equal(h.disk.get('mathphysics.spaceflight.v1'),'legacy');
@@ -72,7 +74,15 @@ test('invalid credentials and rate limits do not refresh or retry login',async()
  for(const code of ['invalid_credentials','too_many_requests']){const h=await harness({authenticated:false,handler:call=>call.path==='/login'?{status:code==='invalid_credentials'?401:429,data:{code}}:null});await assert.rejects(h.sync.login('synthetic','wrong'));assert.equal(h.calls.filter(c=>c.path==='/login').length,1);assert.equal(h.calls.filter(c=>c.path==='/session').length,1);}
 });
 test('guest primary snapshot does not override an externally replaced worksheet recipe',async()=>{
- const h=await harness({pathname:'/MathPhysics/'}),storage=h.sync.createStorage();storage.setItem('mathphysics.question-bank.v1','old-recipe');h.sync.setSnapshot('primary-math',{difficulty:3});assert.equal(h.sync.getSnapshot('primary-math').difficulty,3);h.disk.set('mathphysics.question-bank.v1','replacement-recipe');assert.equal(h.sync.getSnapshot('primary-math'),null);
+ const h=await harness({authenticated:false}),storage=h.sync.createStorage();storage.setItem('mathphysics.question-bank.v1','old-recipe');h.sync.setSnapshot('primary-math',{difficulty:3});assert.equal(h.sync.getSnapshot('primary-math').difficulty,3);h.disk.set('mathphysics.question-bank.v1','replacement-recipe');assert.equal(h.sync.getSnapshot('primary-math'),null);
+});
+test('unsigned classroom cache survives removal of its former mode without importing into an account',async()=>{
+ const prior=JSON.stringify({modules:{spaceflight:{payload:{records:{},snapshot:{stage:'saved-stage'}}}},attempts:{}});
+ const h=await harness({authenticated:false,legacy:{'mathphysics.sync.v1.scope.demo':prior}});
+ assert.equal(h.sync.snapshot().status,'signed-out');assert.equal(h.sync.getSnapshot('spaceflight').stage,'saved-stage');
+ h.sync.setSnapshot('spaceflight',{stage:'new-stage'});
+ assert.equal(h.disk.get('mathphysics.sync.v1.scope.demo'),prior);assert.ok(h.disk.has('mathphysics.sync.v1.scope.guest'));
+ const signed=await harness({legacy:{'mathphysics.sync.v1.scope.demo':prior}});assert.equal(signed.sync.getSnapshot('spaceflight'),null);
 });
 test('a finalized attempt displays official server responses while retaining the unsubmitted local copy',async()=>{
  const attempt={id:'same-attempt',status:'issued',assessment:{items:[{id:'i01',type:'choice'}]}};const official={...attempt,status:'submitted',responses:{i01:1},result:{items:[{id:'i01',correct:true}]}};

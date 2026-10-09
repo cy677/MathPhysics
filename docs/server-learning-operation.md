@@ -6,7 +6,7 @@
 
 学习服务使用 Node.js 24.14.0 及其内置 SQLite 3.51.2，HTTP、密码派生和数据库均使用 Node 内置模块。Python 3 继续负责静态服务与构建。Playwright 仅为测试依赖。
 
-`npm start` 和 `START_WINDOWS.bat` 保留原静态演示方式。正式服务入口为 `http://127.0.0.1:8317/mathphysics/`；根路径、历史大写 `/MathPhysics/` 和单文件 `file://` 不进入正式积分模式。
+`npm start` 和 `START_WINDOWS.bat` 统一启动 Node 学习服务。默认端口为8317，根路径及 `/mathphysics/` 自动进入 `/mathphysics/learning/` 考核页。本地与远程使用同一套发题、判题和最高分规则，已取消静态演示服务器和静态目录回退。
 
 数据库默认位于项目父目录的 `runtime/mathphysics.sqlite3`。桌面项目的默认位置是 `C:\Users\cheng\Desktop\runtime\mathphysics.sqlite3`，不在静态根目录内。可以用 `--db` 指定另一个明确的外部路径。SQLite 主文件、WAL、SHM、服务锁和备份不进入源码或交付包。
 
@@ -19,14 +19,13 @@ node --version
 node server/cli.mjs help
 ```
 
-由操作者首次初始化账号，密码在终端隐藏输入并再次确认：
+Windows 双击 `START_WINDOWS.bat` 即可启动并打开考核页；首次启动会询问账号名，再隐藏输入并确认密码。也可以在终端执行：
 
 ```powershell
-npm run server:init -- --username family --label "学习档案"
-npm run start:server -- --port 8317
+npm start -- --open
 ```
 
-打开小写 `/mathphysics/` 入口，再从“账号与档案”登录。账号可以有多个昵称档案，无需真实姓名或生日。密码至少 12 个字符；CLI 拒绝命令行 `--password`，本轮没有预置密码。自动化验证只使用合成账号及临时数据库。
+从“账号与档案”登录后即可开始考核。已有账号时启动会直接复用原数据库。密码至少12个字符；没有预置密码。终端保持打开，按 `Ctrl+C` 停止服务。远程部署也可先执行 `npm run server:init -- --username family --label "学习档案"`，随后由服务管理器运行 `serve`。
 
 已有账号时 `init` 拒绝再次初始化，不覆盖档案。需要第二个账号可执行 `node server/cli.mjs account-add --username family2`。服务默认仅监听回环地址，关闭后再启动继续保留原数据库内容。
 
@@ -45,7 +44,7 @@ npm run start:server -- --db ..\runtime\family.sqlite3 --port 8317
 
 存档提交携带 `expectedRevision` 和 `mutationId`。修订不一致返回 `409 revision_conflict`，界面同时保留服务器版本与本地待同步版本，让操作者选择采用服务器或上传本地。相同幂等键用于不同内容返回 `409 idempotency_conflict`。档案切换使旧请求与旧存储句柄失效，防止跨档案串写。
 
-正式考核由服务器签发固定题目，提交只包含题目 ID 与原始回答。客户端不能提交 `score`、`correct`、`credits` 或自己的试卷定义。未答题仍计入服务器冻结分母；重复提交返回原结果，已定案试卷的不同回答被拒绝。同目标奖励按兼容规则取历史最佳增量，积分账目可以追溯到实际题目与考核。
+考核由服务器签发固定题目，提交只包含题目ID与原始回答。结果页可点“再次考核”签发新试卷，所有答卷分别保留。同一目标、年级、难度和兼容规则按最高成绩记录，积分只增加最高成绩的提高部分；同分或低分重考不重复奖励，也不降低最高分。已交卷的原试卷不能改写，重复发送同一次交卷返回原结果。
 
 生活应用题另保留题目家族和跨池关联，正式发题与奖励控制不能把换数字或相似故事当作无限独立奖励。当前候选尚需批准时正式题库能力为空；练习预览、演示与历史本地记录导入都是零分。
 
@@ -84,7 +83,6 @@ npm run test:learning:browser
 npm run test:word-problems
 npm run test:word-problems:browser
 npm run package
-npm run test:offline-delivery
 npm run build:server
 npm run test:server-delivery
 ```

@@ -1,6 +1,18 @@
 # MathPhysics 与 meow 并行部署方案
 
-最近更新：2026-10-06。目标服务器：124.70.198.189，Ubuntu 24.04。
+最近更新：2026-10-09。目标服务器：124.70.198.189，Ubuntu 24.04。
+
+## 2026-10-09 更新结果
+
+- 当前版本为 `20261009T065600Z-learning-service`。`https://124.70.198.189/mathphysics/` 自动进入学习考核页，课堂入口保留为 `/mathphysics/index.html`。本地和远程统一使用 Node 学习服务，支持再次考核、保留每次答卷与最高成绩；旧匿名浏览器同步副本仍兼容读取。
+- 服务器在独立发布目录重新编译空间游戏、考核目录、航天核心、展示适配器和 PhET。2941个发布文件与本地包逐项匹配，公网完整 BUILD 清单也与包内文件字节一致。数独、扫雷的构建输入未变，现有成品校验通过。本地和服务器各895项测试：891通过、4项平台或历史快照条件跳过、0失败。
+- 本地学习服务浏览器31项验收通过，覆盖登录、重复考核与最高分、离线交卷重放、冲突处理、档案隔离、旧记录导入及恢复。独立公网浏览器12项检查通过：升级前生成的题目与答案、可见完成记录、扫雷完整棋盘和引擎、数独填写／笔记／撤销历史、非空航天笔记、课程偏好及旧同步副本均保留；应用题实际作答与刷新恢复、默认考核入口和390像素页面通过。没有页面脚本异常或本站资源缺失。
+- 公网78项登记活动、33个入口、391份资源哈希、20个模块类型、5份公开说明、20份授权文件和19个内部路径检查通过。新版源文件中的6项PhET仅外部统计脚本地址与完整性值变化；经字节比较确认科学模型及其他内容未变，同步源码清单并重新生成可逆主题构建。
+- 原 Meow 数据库12张表在部署前、部署后及最终一致性快照的内容指纹相同；学习数据库16张非会话表在服务切换前后和最终快照一致。继续沿用 `/srv/mathphysics/runtime/mathphysics.sqlite3`，未在生产库创建测试账号。首次真实学习账号仍按用户此前选择另行设置。Meow的PID `3283709`、启动时间、服务配置、程序文件和首页未变，Nginx无需修改。
+- 私有备份为 `/srv/mathphysics/backups/20261009T065600Z-learning-service/`，权限0700，包含两套数据库的一致性备份、配置基线和构建／验收日志。十个历史及当前发布目录保留，回退只切换程序与服务配置。临时上传目录已清空，独立测试浏览器9个进程和监听端口已释放；下载的证据不含用户数据库或认证信息。
+- 最终包为 `dist/MathPhysics-server-20261009T065600Z-learning-service.tar.gz`，SHA256为 `627d69bf7007ffdd8a007fa16ce21cfee62a968aa372bac6ad9762b5d5e056d1`。GitHub main代码基准包含当前新增、修改和删除的源码；提交前按全部2941个发布文件验证Git索引与部署字节一致，保留固定资源原始字节。
+
+本次验收见 [2026-10-09更新验证](server-deployment-verification-20261009T065600Z-learning-service.json)。以下保留历史记录。
 
 ## 2026-10-06 更新结果
 
@@ -108,7 +120,7 @@
 
 在本地项目目录先执行 `npm run build:spatial`，再执行 `npm run build:server -- --release <新的唯一版本号>`、`npm test`。生成 `dist/MathPhysics-server-<版本号>.tar.gz` 与 SHA256 文件；包含最新源文件、生成资源、版本信息和逐文件校验清单，不包含密码、Git 元数据、node_modules 或本地测试环境。空间游戏284个固定上游源码文件（含13个原始字体资源）完整保留并检查覆盖，其他上游字体排除规则仍适用。
 
-上传后在服务器新建同名 release 目录，只解压至该目录。公开发布目录为0755、文件为0644；`server/`私有目录为root与mathphysics组可读，目录0750、文件0640；数据备份仍为0700。核对压缩包与 BUILD.json 文件哈希。使用专用Node 24.14.0检查完整应用题目录，重建 `build_spatial_soma.mjs`、`build_spatial_rush.mjs`、`build_assessment_catalog.mjs`、`build_spaceflight_core.mjs`，再运行发布脚本列出的六个Python构建入口及 `node --test tests/*.test.mjs`。测试会重写内部questions覆盖文档，须私有归档其结果并恢复清单中的原文件，重新核对完整清单后才切换。系统Node 18及meow运行时保留。完整数独/扫雷复建仍为明确步骤：数独执行 `node scripts/build_sudoku.mjs`（首次另执行 `--install-deps --deps-only`），扫雷执行 `python3 scripts/build_logic_games.py --minesweeper`。普通打包只校验已生成游戏，不自动联网安装；npm的用户/全局空配置使用两个不同路径。本轮两游戏构建输入未变，成品已校验。
+上传后在服务器新建同名 release 目录，只解压至该目录。公开发布目录为0755、文件为0644；`server/`私有目录为root与mathphysics组可读，目录0750、文件0640；数据备份仍为0700。核对压缩包与 BUILD.json 文件哈希。使用专用Node 24.14.0检查完整应用题目录，重建 `build_spatial_soma.mjs`、`build_spatial_rush.mjs`、`build_assessment_catalog.mjs`、`build_spaceflight_core.mjs`，再运行发布脚本列出的两个Python构建入口（`build_display_adapters.py`、`build_phet_theme.py`）及 `node --test tests/*.test.mjs`。测试会重写内部questions覆盖文档，须私有归档其结果并恢复清单中的原文件，重新核对完整清单后才切换。系统Node 18及meow运行时保留。完整数独/扫雷复建仍为明确步骤：数独执行 `node scripts/build_sudoku.mjs`（首次另执行 `--install-deps --deps-only`），扫雷执行 `python3 scripts/build_logic_games.py --minesweeper`。普通打包只校验已生成游戏，不自动联网安装；npm的用户/全局空配置使用两个不同路径。本轮两游戏构建输入未变，成品已校验。
 
 首次部署前保存 Nginx 配置和 meow 服务状态，并通过 SQLite backup API 在线备份数据库至权限为 0700 的 `/srv/mathphysics/backups/<版本号>`；不直接复制活动中的数据库主文件充当完整备份。备份只保留在服务器，禁止置于网站根目录。
 

@@ -4,26 +4,15 @@
 
 ## 开始使用
 
-下载包含资源的完整包并解压。Windows 安装 Python 3 后可运行 `START_WINDOWS.bat`，或在项目目录运行：
+安装 Node.js 24.14.0 后，Windows 双击 `START_WINDOWS.bat` 即可启动学习服务并打开考核页。Windows、Linux 也可在项目目录执行：
 
 ```powershell
-py -3 scripts/serve.py --open
+npm start -- --open
 ```
 
-Linux 使用 `python3 scripts/serve.py --open`。宿主使用本地静态服务，不要直接双击根目录 index.html。它不需要账号、CDN、数据库或 npm 运行依赖。局域网平板在启动命令后添加 `--host 0.0.0.0 --port 8000`，通过电脑的局域网 IP:8000 访问；只在可信网络使用此开发服务器。
+首次启动会引导创建学习账号并隐藏输入密码；已有账号时直接复用原数据。默认入口为 `http://127.0.0.1:8317/mathphysics/learning/`。本地与远程使用同一套考核服务，根路径自动进入考核页。课堂、实验和探索内容可从页面返回访问。
 
-安装了 Node.js 的开发环境可在 Windows 和 Linux 统一使用 `npm start -- --open`。所有 npm Python 任务与 Node 浏览器测试共用 `scripts/python.mjs`：Windows 依次检查 `python`、`py -3`、`python3`，Linux 依次检查 `python3`、`python`，只接受 Python 3，再使用其实际可执行文件路径。环境变量 `PYTHON` 可指定解释器完整路径；指定后不可用会直接报错。直接调用 Python 的示例以下使用 Linux 的 `python3`，Windows 可替换为 `py -3`；双击启动不要求 Node.js。
-
-独立课堂可以构建为无需静态服务的单文件 HTML：
-
-```bash
-python3 scripts/build_geometry_standalone.py
-python3 scripts/build_spaceflight_standalone.py
-python3 scripts/build_playground_standalone.py
-python3 scripts/build_primary_math_standalone.py
-```
-
-输出在 dist/：`MathPhysics-Geometry-Proofs.html`、`MathPhysics-Spaceflight.html`、`MathPhysics-Playground.html`、`MathPhysics-Tangram.html`、`MathPhysics-Primary-Math.html`。使用支持脚本的浏览器打开；文件预览器不等同于浏览器。
+终端保持打开，按 `Ctrl+C` 停止。数据库默认位于项目父目录的 `runtime/mathphysics.sqlite3`，不放入静态资源目录。`--port` 和 `--db` 可指定端口和数据路径。首次账号也可用 `npm run server:init -- --username family` 单独初始化；`npm run start:server` 供已有部署直接运行服务。
 
 ## 活动
 
@@ -57,7 +46,7 @@ Matter.js 的全部 **48个物理演示**合并为一个「物理验收」大模
 
 ## 本地档案与正式积分
 
-原静态课堂继续使用浏览器演示进度。需要账号、档案同步与正式考核时，使用 Node.js 24.14.0：初始化 `npm run server:init -- --username family`，随后 `npm run start:server -- --port 8317`，从 `http://127.0.0.1:8317/mathphysics/` 进入。密码由操作者隐藏输入，数据库放在静态目录外。服务端只按原始回答判分，练习、演示和旧记录导入不产生正式积分，同目标仅奖励历史最佳的提高部分。见 [本地服务说明](docs/server-learning-operation.md)。
+本地和远程默认打开考核页，登录后选择目标即可开始。结果页的“再次考核”会签发新试卷并保留原答卷；同一目标、年级、难度和兼容规则取最高成绩，积分只增加最高成绩提高的部分。课堂学习进度与正式成绩分别保存。见 [本地服务说明](docs/server-learning-operation.md)。
 
 生活应用题按基础池、综合池和数量关系分类加入“数与生活”。目录分别记录中文复核候选、隔离项及正式批准数量；候选不冒充已批准考核题。来源、复核边界与全量映射见 [整合说明](docs/word-problems-integration.md)。
 
@@ -71,9 +60,9 @@ Matter.js 的全部 **48个物理演示**合并为一个「物理验收」大模
 
 生成题的讲解随本题实际参数变化。提示每次只展开一步，查看过程仍按原规则计入“查看答案”。动手理解及其模型代码已删除，固定应用题改为普通练习。
 
-通过静态服务访问`lessons/primary-math/index.html`；旧的`lessons/question-bank/index.html`及旧活动链接进入统一课堂。页面取消练习名称输入，随机种子仅用于内部保存与复现。练习继续使用`mathphysics.question-bank.v1`存储，旧配方仍按旧算法恢复。支持解析、打印以及题目和练习设置的导入导出。
+通过学习服务访问`lessons/primary-math/index.html`；旧的`lessons/question-bank/index.html`及旧活动链接进入统一课堂。页面取消练习名称输入，随机种子仅用于内部保存与复现。练习继续使用`mathphysics.question-bank.v1`存储，旧配方仍按旧算法恢复。支持解析、打印以及题目和练习设置的导入导出。
 
-[中英文检索、年级分类与覆盖范围](docs/singapore-primary-curriculum.md)记录依据、核验限制、各年级分层目标和未覆盖的细项。运行`npm run test:curriculum`检查算法与兼容，`npm run test:curriculum:browser`检查实际课堂、旧入口和离线版；`npm run build:primary`构建统一的单文件课堂。原引擎命令行说明见[练习引擎文档](docs/question-bank.md)。
+[中英文检索、年级分类与覆盖范围](docs/singapore-primary-curriculum.md)记录依据、核验限制、各年级分层目标和未覆盖的细项。运行`npm run test:curriculum`检查算法与兼容，`npm run test:curriculum:browser`检查实际课堂与旧入口。原引擎命令行说明见[练习引擎文档](docs/question-bank.md)。
 
 `npm run test:questions:learning`检查48个固定题、77种兼容模板和49知识点；`npm run test:practice`另检查新版分层题目、9种补充题型及全部134个入口的可达性。`npm run test:questions:learning:browser`检查86种生成模板、48道固定题和49个知识点的提示；`npm run test:questions:failure`实测断言失败的退出码与服务清理。题库 CI 和本地使用同一统一页面测试，日志管道保留失败状态。
 

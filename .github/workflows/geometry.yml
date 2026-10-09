@@ -30,7 +30,7 @@ jobs:
           python-version: '3.12'
       - run: npm install --ignore-scripts
       - run: npm test
-      - run: npm run standalone:geometry
+      - run: node scripts/python.mjs scripts/build_geometry_standalone.py
       - run: npx playwright install --with-deps chromium
       - run: node tests/geometry-browser.mjs
       - uses: actions/upload-artifact@v4

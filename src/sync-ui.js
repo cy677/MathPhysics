@@ -3,7 +3,7 @@
   const scriptURL=document.currentScript?.src;
   const rootURL=scriptURL?new URL('../',scriptURL):null;
   if(scriptURL&&!document.querySelector('link[data-mp-sync-style]')){const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('sync-ui.css',scriptURL);css.dataset.mpSyncStyle='';document.head.append(css);}
-  const messages={demo:'本机演示副本 · 0分',expired:'登录已过期 · 请重新登录',offline:'离线副本已保留 · 待联网同步',failed:'同步失败 · 内容保留在本机',conflict:'版本冲突 · 请选择保留哪一版',queued:'本机已保存 · 等待同步',saving:'正在同步 · 尚未确认',saved:'服务器已确认存档'};
+  const messages={'signed-out':'登录后记录考核与成长',connecting:'正在连接学习服务',unavailable:'学习服务未连接',expired:'登录已过期 · 请重新登录',offline:'离线副本已保留 · 待联网同步',failed:'同步失败 · 内容保留在本机',conflict:'版本冲突 · 请选择保留哪一版',queued:'本机已保存 · 等待同步',saving:'正在同步 · 尚未确认',saved:'服务器已确认存档'};
   const labels={host:'探索首页','question-bank':'当前练习单','primary-math':'数与生活','primary-math-view':'数与生活入口偏好','word-problems':'中文应用题预览','geometry-proofs':'几何证明','jsxgraph-playground':'图形画板','tangram-flat':'七巧板','spaceflight':'航天课堂','physics-demos':'物理演示'};
   const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
   const button=(text,fn,cls)=>{const n=el('button',text,cls);n.type='button';n.onclick=fn;return n;};
@@ -14,7 +14,7 @@
     // The surrounding host owns account controls and status for its classroom.
     if(parent!==window)return;
     const bar=el('div',undefined,'mp-sync-bar');bar.setAttribute('aria-label','档案与同步');
-    const mode=el('span',document.body.dataset.mpLearning?'家庭学习':'演示练习 · 0分','mp-sync-mode'),name=el('strong'),status=el('span',undefined,'mp-sync-status');status.setAttribute('role','status');
+    const mode=el('span',document.body.dataset.mpLearning?'考核与成长':'学习内容','mp-sync-mode'),name=el('strong'),status=el('span',undefined,'mp-sync-status');status.setAttribute('role','status');
     const open=button('账号与档案',()=>dialog.showModal());
     bar.append(mode,name,status,open);
     if(rootURL&&location.protocol!=='file:'){const a=el('a',document.body.dataset.mpLearning?'返回探索':'去考核 / 成长');a.href=new URL(document.body.dataset.mpLearning?'index.html':'learning/index.html',rootURL);a.target=parent!==window?'_top':'_self';bar.append(a);}
@@ -33,17 +33,16 @@
     const run=async(fn)=>{alert.textContent='';try{await fn();}catch(e){if(e.name!=='AbortError')alert.textContent=e.message||'暂时无法完成，请重试。';}};
     function render(state){
       name.textContent=state.account?(state.profile?.label||'请选择档案'):'未登录';
-      bar.dataset.status=state.status;if(playerAccount){playerAccount.textContent='演示0分 · '+(state.profile?.label||'档案与同步');playerAccount.title=messages[state.status];}
+      bar.dataset.status=state.status;if(playerAccount){playerAccount.textContent=state.profile?.label||'档案与同步';playerAccount.title=messages[state.status];}
       status.textContent=messages[state.status]+(state.queued?`（${state.queued}项）`:'');
       if(state.status==='saved'&&!state.serverConfirmed)status.textContent='同步已就绪';
-      if(!state.account&&state.connection==='offline')status.textContent='离线演示 · 本机副本 · 0分';
       const renderKey=JSON.stringify([state.account,state.profiles,state.profileId,state.conflicts.map(c=>[c.moduleId,c.conflict.server?.revision]),sync.recoveryCopies().length,state.connection,state.status==='expired']);
       if(renderKey===renderedKey)return;renderedKey=renderKey;content.replaceChildren();
       if(!state.account){
         if(state.pendingLogout)content.append(el('p','本机已退出账号。联网后会先撤销旧服务器会话，再登录或继续。','mp-notice'));
-        const localOnly=state.connection==='standalone'||state.connection==='demo'&&state.available===false;
-        content.append(el('p',localOnly?'当前是本机演示，可继续零分练习。正式考核结果才能计入成长积分。':'登录家庭账号后选择学习档案。档案只用昵称，不需要真实姓名或生日。'));
-        if(!localOnly){
+        content.append(el('p','登录家庭账号后选择学习档案，开始考核并查看自己的最高成绩。'));
+        if(!state.available)content.append(button('重新连接学习服务',()=>run(()=>sync.reconnect())));
+        {
           const form=el('form'),user=el('input'),pass=el('input');user.name='username';user.autocomplete='username';user.required=true;user.maxLength=80;pass.type='password';pass.name='password';pass.autocomplete='current-password';pass.required=true;
           for(const [text,input]of[['账号',user],['密码',pass]]){const l=el('label',text);l.append(input);form.append(l);}
           const submit=el('button','登录','mp-primary');submit.type='submit';form.append(submit);form.onsubmit=e=>{e.preventDefault();submit.disabled=true;const username=user.value,password=pass.value;pass.value='';run(async()=>{if(!sync.snapshot().available)await sync.refreshSession();await sync.login(username,password);}).finally(()=>submit.disabled=false);};content.append(form);
@@ -56,7 +55,7 @@
       const select=el('select');select.setAttribute('aria-label','选择学习档案');for(const p of state.profiles){const o=el('option',p.label);o.value=p.id;select.append(o);}select.value=state.profileId;select.onchange=()=>run(()=>sync.selectProfile(select.value));const label=el('label','当前学习档案');label.append(select);content.append(label);
       const form=el('form'),input=el('input');input.placeholder='例如：小橙';input.maxLength=40;input.required=true;input.setAttribute('aria-label','新档案昵称');const submit=el('button','新建档案');submit.type='submit';form.append(input,submit);form.onsubmit=e=>{e.preventDefault();submit.disabled=true;run(()=>sync.createProfile(input.value.trim())).finally(()=>submit.disabled=false);};content.append(form);
       const actions=el('div',undefined,'mp-actions');actions.append(button('重试连接 / 同步',()=>run(()=>sync.reconnect())),button('退出账号',()=>run(()=>sync.logout())));content.append(actions);
-      content.append(el('p','完成演示只是练习存档，不产生积分。正式成绩由服务器交卷判定。','mp-notice'));
+      content.append(el('p','同一目标、难度可多次考核，成长记录保留最高成绩。','mp-notice'));
       if(state.errorMessage)content.append(el('p',state.errorMessage));
       if(state.conflicts.length){content.append(el('h3','需要你决定的版本'));for(const e of state.conflicts){
         const card=el('section',undefined,'mp-conflict');card.append(el('strong',labels[e.moduleId]||e.moduleId),el('p',`服务器版本 ${e.conflict.server?.revision||0}，本地待同步内容仍保留。选择前两份都会另存为恢复副本。`));

@@ -148,14 +148,14 @@ function answerFor(item,definition){const u=item.publicInput,g=item.grading;
 const answers=definition=>Object.fromEntries(definition.items.map(i=>[i.id,answerFor(i,definition)]));
 function wrongAnswer(item,definition){if(item.type==='text')return '-99999';if(item.type==='choice')return (answerFor(item,definition)+1)%item.publicInput.choices.length;if(item.type==='points')return Array.from({length:item.publicInput.count},()=>({x:0,y:0}));if(item.type==='cells')return [];if(item.type==='fraction-pieces')return {pieces:[]};if(item.type==='fraction-cards')return {numerator:0,denominator:item.publicInput.cards.find(c=>c.value>0).value};if(item.type==='pairs')return [];if(item.type==='molecule'){const x=answerFor(item,definition);x.atoms[0].element=x.atoms[0].element==='H'?'O':'H';return x;}if(item.type==='tangram'){const x=answerFor(item,definition);x.pieces.forEach(p=>{if(!item.publicInput.givenPieces.some(g=>g.id===p.id)){p.x=0;p.y=0;p.rotation=0;}});return x;}throw Error(item.type);}
 
-test('all current actual modules have explicit capabilities, demos have no reward objectives',()=>{
+test('all current modules reference assessment capabilities without a demonstration mode',()=>{
   const actual=[...JSON.parse(readFileSync(new URL('../config/inventory.json',import.meta.url))).activities,...JSON.parse(readFileSync(new URL('../config/local-activities.json',import.meta.url))).activities];
   assert.equal(catalogData.modules.length,actual.length);assert.deepEqual(catalogData.modules.map(m=>m.id).sort(),actual.map(m=>m.id).sort());assert.equal(new Set(catalogData.modules.map(m=>m.id)).size,actual.length);assert.equal(objectives.length,204);
   for(const id of ['minesweeper','sudoku','spatial-soma','spatial-rush','spatial-merge','spatial-escape'])assert.equal(catalogData.modules.find(m=>m.id===id).supportsAssessment,false);
-  for(const m of catalogData.modules){assert.ok(m.reason);assert.equal(m.supportsAssessment,m.objectives.length>0);if(!m.supportsAssessment){assert.equal(m.progressMode,'demonstration');assert.ok(catalogData.demonstrations.some(d=>d.moduleId===m.id));assert.throws(()=>issue(m.id),AssessmentError);}}
+  for(const m of catalogData.modules){assert.equal(m.supportsAssessment,m.objectives.length>0);assert.equal(Object.hasOwn(m,'nativeMode'),false);assert.equal(Object.hasOwn(m,'progressMode'),false);if(!m.supportsAssessment)assert.throws(()=>issue(m.id),AssessmentError);}
   assert.equal(catalogData.modules.filter(m=>m.id.startsWith('matter-')).length,48);
   for(const id of ['physics-demos','tangram','forces-and-motion-basics','energy-skate-park-basics','vector-addition','circuit-construction-kit-dc','states-of-matter-basics'])assert.equal(catalogData.modules.find(m=>m.id===id).supportsAssessment,false);
-  assert.equal(catalogData.demonstrations.filter(d=>d.id.startsWith('spaceflight/lab/')).length,9);
+  assert.equal(Object.hasOwn(catalogData,'demonstrations'),false);
 });
 test('all 77 canonical templates, 49 units, molecule collection families and 16 flight aliases resolve without duplicate pools',()=>{
   assert.equal(objectives.filter(o=>o.kind==='generated').length,77);assert.equal(catalogData.curriculumUnits.length,49);

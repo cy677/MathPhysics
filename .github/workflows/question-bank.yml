@@ -45,8 +45,8 @@ jobs:
           python-version: '3.12'
       - name: Install browser test tools
         run: npx playwright install --with-deps chromium
-      - name: Build unified offline classroom
-        run: npm run build:primary
+      - name: Build classroom regression fixture
+        run: node scripts/python.mjs scripts/build_primary_math_standalone.py
       - name: Confirm assertion failures propagate and release browser resources
         run: npm run test:questions:failure
       - name: Unified classroom browser checks

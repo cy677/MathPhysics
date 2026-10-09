@@ -7,7 +7,7 @@ import assert from 'node:assert/strict';
 import {LESSONS} from '../lessons/geometric-proofs/catalog.js';
 import {findPython} from '../scripts/python.mjs';
 import {displayActivities} from '../src/catalog.js';
-const server=spawn(findPython(),['scripts/serve.py','--port','8768'],{stdio:'ignore',windowsHide:true}),base='http://127.0.0.1:8768/';
+const server=spawn(process.execPath,['server/cli.mjs','serve','--db',':memory:','--port','8768'],{stdio:'ignore',windowsHide:true}),base='http://127.0.0.1:8768/mathphysics/';
 const upstreamCatalog=JSON.parse(await fs.readFile('config/inventory.json','utf8'));
 const localCatalog=JSON.parse(await fs.readFile('config/local-activities.json','utf8'));
 const presentation=JSON.parse(await fs.readFile('config/presentation.json','utf8'));
@@ -35,7 +35,7 @@ try{
   record(l.id,{checks:['all three steps','slider extremes','answer validation','stale feedback invalidated']});
  }
  for(const name of ['square-sum','triangle-ratio','circle','sphere']){await page.goto(base+'lessons/geometric-proofs/index.html?lesson='+name);await page.locator('[data-step="2"]').click();await page.screenshot({path:shots+'/'+name+'.png',fullPage:true});}
- await page.goto(base);await page.waitForSelector('[data-activity]');assert.equal(await page.locator('[data-activity]').count(),activityCount);
+ await page.goto(base+'index.html');await page.waitForSelector('[data-activity]');assert.equal(await page.locator('[data-activity]').count(),activityCount);
  assert.equal(await page.locator('#teacher-open, #teacher-dialog, #only-open, button.locked').count(),0);
  await page.locator('[data-launch="geometry-proofs"]').click();await page.waitForFunction(()=>document.getElementById('loading').hidden);
  assert.equal(await page.frameLocator('#stage iframe').locator('[data-lesson]').count(),24);await page.locator('#player-back').click();assert.equal(await page.locator('iframe').count(),0);

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Regression coverage for selectively integrated learning-content features."""
-import json, os, subprocess, sys, time, urllib.request
+import json, os, shutil, subprocess, sys, time, urllib.request
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
-base='http://127.0.0.1:8791/'
-server=subprocess.Popen([sys.executable,'scripts/serve.py','--port','8791'],cwd=ROOT,stdout=subprocess.DEVNULL)
+base='http://127.0.0.1:8791/mathphysics/'
+server=subprocess.Popen([shutil.which('node'),'server/cli.mjs','serve','--db',':memory:','--port','8791'],cwd=ROOT,stdout=subprocess.DEVNULL,creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
 results=[]
 try:
  for _ in range(60):

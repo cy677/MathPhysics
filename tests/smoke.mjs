@@ -10,8 +10,8 @@ const local=JSON.parse(await fs.readFile('config/local-activities.json','utf8'))
 inventory.activities.push(...local.activities);
 const presentation=JSON.parse(await fs.readFile('config/presentation.json','utf8'));
 const visibleActivities=displayActivities(inventory.activities,presentation);
-const server=spawn(findPython(),['scripts/serve.py','--port','8765'],{stdio:'ignore',windowsHide:true});
-const base='http://127.0.0.1:8765/';
+const server=spawn(process.execPath,['server/cli.mjs','serve','--db',':memory:','--port','8765'],{stdio:'ignore',windowsHide:true});
+const base='http://127.0.0.1:8765/mathphysics/';
 let browser;
 const report={suite:'Chromium offline network-blocked integration smoke',results:[],limitations:['Not an exhaustive pedagogical or every randomized problem test.','Touch emulation is not a physical iPad Safari test.','Original simulations keep their own navigation; host records visits, not completion.']};
 function record(value){report.results.push(value);console.log('RESULT',JSON.stringify(value));}
@@ -34,7 +34,7 @@ try{
   await fs.mkdir('docs/screenshots',{recursive:true});
   let page=await context.newPage();const hostErrors=[];page.on('pageerror',e=>hostErrors.push(e.message));
   try{
-    await page.goto(base);await page.waitForSelector('[data-activity]');assert.equal(await page.locator('[data-activity]').count(),visibleActivities.length);
+    await page.goto(base+'index.html');await page.waitForSelector('[data-activity]');assert.equal(await page.locator('[data-activity]').count(),visibleActivities.length);
     assert.equal(await page.locator('#teacher-open, #teacher-dialog, #only-open, button.locked').count(),0);
     await page.screenshot({path:'docs/screenshots/home-desktop.png',fullPage:true});
     await page.screenshot({path:'docs/screenshots/home-overview.png'});
@@ -65,7 +65,7 @@ try{
   const touch=await browser.newContext({viewport:{width:1024,height:768},hasTouch:true,isMobile:true});
   await touch.route('**/*',route=>new URL(route.request().url()).origin===new URL(base).origin?route.continue():route.abort());page=await touch.newPage();
   try{
-    await page.goto(base);await page.waitForSelector('[data-activity]');await page.locator('[data-zone="geometry"]').first().tap();assert.ok(await page.locator('[data-activity="area-builder"]').isVisible());
+    await page.goto(base+'index.html');await page.waitForSelector('[data-activity]');await page.locator('[data-zone="geometry"]').first().tap();assert.ok(await page.locator('[data-activity="area-builder"]').isVisible());
     await page.screenshot({path:'docs/screenshots/tablet.png',fullPage:true});record({id:'tablet-host-navigation',passed:true});
   }catch(e){await captureFailure(page,'tablet-host-navigation',e);}
   await touch.close();

@@ -44,33 +44,13 @@ def delivery_allowed(relative: Path) -> bool:
             and relative.suffix.lower() not in EXCLUDED_SUFFIXES)
 
 
-STUDENT_ROOT_FILES = {'index.html', 'README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md',
-                      'START_WINDOWS.bat', '.nojekyll'}
-STUDENT_DIRECTORIES = {'src', 'lessons', 'modules', 'vendor', 'config', 'learning'}
-STUDENT_SCRIPT_FILES = {'scripts/serve.py', 'scripts/clear_records.html', 'scripts/clear_records.js'}
-STUDENT_DOC_FILES = {'docs/primary-math-curriculum.md', 'docs/primary-math-catalog.md',
-                     'docs/question-bank.md', 'docs/singapore-primary-curriculum.md', 'docs/sync-adapters.md'}
-PRIVATE_SOURCE_PARTS = {'private', 'provenance', 'word-problems-private', 'source-audits',
-                        'sourceaudits', 'chinese-drafts', 'chinesedrafts', 'teacher-review', 'review-exports'}
-
-
-def student_delivery_allowed(relative: Path) -> bool:
-    name = relative.as_posix()
-    return (not any(part.lower() in PRIVATE_SOURCE_PARTS for part in relative.parts)
-            and (name in STUDENT_ROOT_FILES or name in STUDENT_SCRIPT_FILES or name in STUDENT_DOC_FILES
-                 or bool(relative.parts) and relative.parts[0] in STUDENT_DIRECTORIES))
-
-
-def collect_files(root: Path, *, audience: str = 'administrator'):
-    if audience not in {'administrator', 'student'}:
-        raise ValueError('Unknown delivery audience')
+def collect_files(root: Path):
     files = {}
     for name in SOURCE_ROOTS:
         source = root / name
         for path in ([source] if source.is_file() else sorted(source.rglob('*'))):
             relative = path.relative_to(root)
-            if (path.is_file() and delivery_allowed(relative)
-                    and (audience == 'administrator' or student_delivery_allowed(relative))):
+            if path.is_file() and delivery_allowed(relative):
                 files[relative.as_posix()] = path
     return [files[name] for name in sorted(files)]
 

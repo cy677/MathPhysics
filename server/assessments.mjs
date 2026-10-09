@@ -1,5 +1,5 @@
 /* Formal companion assessments. All issuance and grading run on the server.
- * Ordinary lessons remain public practice/demonstration; their scores are never
+ * Classroom learning progress stays separate from submitted assessment scores,
  * accepted here. Tangram reference geometry retains its GPL-3.0 provenance.
  */
 import {readFileSync} from 'node:fs';
@@ -110,33 +110,23 @@ const ALIASES = freeze({
   'question-bank':'primary-math', 'jsx-triangle':'jsxgraph-playground', 'jsx-mirror':'jsxgraph-playground', 'jsx-rotation':'jsxgraph-playground', 'jsx-scale':'jsxgraph-playground', 'jsx-vectors':'jsxgraph-playground', 'jsx-linear':'jsxgraph-playground'
 });
 const ALIAS_MODES = {'jsx-triangle':'triangle','jsx-mirror':'mirror','jsx-rotation':'rotate','jsx-scale':'scale','jsx-vectors':'vectors','jsx-linear':'linear'};
-const FREE_REASON = '自由观察、参数变化或访问记录没有固定题目和可复算的客观终点；只保存探索，不发放考核积分。';
-const NATIVE_REASON = '原生界面是公开的练习和演示；客户端完成、分数、数量、位置槽或题卡身份不是可信考核证据。正式考核使用服务器另发的配套题。';
 
-/** The catalog includes every actual launchable activity and explicit demo scopes. */
+/** Available assessment objectives and their classroom module references. */
 export function catalog() {
   const objectives = [...registry.values()].map(clone);
   const wordProblemSources=getWordProblemSources([...registry.values()]);
   const modules = ACTIVITIES.map(activity => {
     const canonicalModuleId = activity.id==='word-problems'?'primary-math':ALIASES[activity.id] ?? activity.id;
     const ids = activity.id==='word-problems'?[...new Set(wordProblemSources.assessmentSelections.filter(s=>s.available).map(s=>s.objectiveId))]:objectives.filter(o => o.moduleId === canonicalModuleId && (!ALIAS_MODES[activity.id] || o.mode === ALIAS_MODES[activity.id])).map(o=>o.id);
-    const companion = activity.adapter === 'phet';
-    return {id:activity.id,title:activity.title,canonicalModuleId,supportsAssessment:ids.length>0,progressMode:ids.length?(companion?'companion-assessment':'assessment'):'demonstration',nativeMode:'demonstration',reason:ids.length?(companion?NATIVE_REASON:'正式题目另行发行；原活动的提示、解析和本地完成记录只用于练习。'):FREE_REASON,objectives:ids};
+    return {id:activity.id,title:activity.title,canonicalModuleId,supportsAssessment:ids.length>0,objectives:ids};
   });
-  const demonstrations = [];
-  for (const module of modules) {
-    if (!module.supportsAssessment) demonstrations.push({id:module.id,moduleId:module.id,title:module.title,mode:'demonstration',reason:module.reason});
-    else demonstrations.push({id:module.id+'/free-practice',moduleId:module.id,title:module.title+'：原生活动与自由练习',mode:'demonstration',reason:module.reason});
-  }
-  for (const id of ['thrust','staging','orbit','dock','power','freefall','entry','chute','launch']) demonstrations.push({id:'spaceflight/lab/'+id,moduleId:'spaceflight',title:'航天自由实验：'+id,mode:'demonstration',reason:'不改动既有状态驱动科学模型；未定义服务器控制的实验初态和操作序列，自报参数或模拟状态不计考核分。'});
-  for (const lesson of LESSONS) demonstrations.push({id:'geometry-proofs/reasoning/'+lesson.id,moduleId:'geometry-proofs',title:lesson.title+'：口头解释与观察',mode:'demonstration',reason:'数值题可判分；自由口头证明、观察和反思没有自动评分规则。'});
   return {
     assessmentVersion:ASSESSMENT_VERSION,ruleVersion:GRADING_RULE_VERSION,compatibilityVersion:COMPATIBILITY_VERSION,rewardVersion:REWARD_VERSION,
-    modules,objectives,wordProblemSources,responseSchemas:clone(RESPONSE_SCHEMAS),demonstrations,nativeLevelReferences:nativeLevelReferences(),
+    modules,objectives,wordProblemSources,responseSchemas:clone(RESPONSE_SCHEMAS),nativeLevelReferences:nativeLevelReferences(),
     curriculumUnits:UNITS.map(u=>({id:u.id,title:u.title,grade:u.grade,version:CURRICULUM_VERSION,objectiveIds:u.templateIds.map(id=>'math/'+id),fixedObjectiveIds:u.questionIds.map(id=>'math/fixed/'+id),note:'课程入口共用模板目标。正式范围以该目标标明的年级与难度为准。'})),
     flightChecks:REFERENCES.flightQuestions.map(q=>({missionId:q.missionId,stepId:q.stepId,objectiveId:'space/'+q.stepId})),
     moleculeCollections:['single-molecule','multiple-molecules'].map(mode=>({family:'build-a-molecule/'+mode+'/collection',objectiveIds:REFERENCES.molecules.map(r=>'molecule/cid-'+r.cid)})),
-    aliases:clone(ALIASES),notice:'正式题目独立发行、一次交卷后定稿并提供解析。公开演示仍可学习；这不是防作弊考试系统。'
+    aliases:clone(ALIASES),notice:'选择目标即可开始考核。每次交卷后提供解析，可再次考核并保留最高成绩。'
   };
 }
 
@@ -290,7 +280,7 @@ function moleculeItems(objective,difficulty,rng) {
 export function issueAssessment(options = {}) {
   if(!keysOnly(options,['objectiveId','difficulty','seed','sourceSelector']))throw new AssessmentError('考核配方含不支持的字段。');
   const objective=registry.get(options.objectiveId);
-  if(!objective)throw new AssessmentError('未知或仅供演示的目标。','unknown_objective');
+  if(!objective)throw new AssessmentError('未注册此考核目标。','unknown_objective');
   const difficulty=options.difficulty===undefined?objective.difficulties[0]:options.difficulty;
   if(!objective.difficulties.includes(difficulty))throw new AssessmentError('该目标不支持此难度。','unsupported_difficulty');
   const seed=options.seed===undefined?randomBytes(24).toString('hex'):options.seed;

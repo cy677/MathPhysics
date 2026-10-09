@@ -18,7 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
 parser.add_argument('--release', default=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ'))
-parser.add_argument('--check-only', action='store_true', help='Validate the static package file set without rebuilding or writing an archive')
+parser.add_argument('--check-only', action='store_true', help='Validate the learning service file set without rebuilding or writing an archive')
 args = parser.parse_args()
 if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}', args.release):
     parser.error('release must be a safe directory name')
@@ -36,8 +36,7 @@ if not args.check_only:
     subprocess.run([node, str(ROOT / 'scripts/build_assessment_catalog.mjs')], cwd=ROOT, check=True)
     subprocess.run([node, str(ROOT / 'scripts/build_spaceflight_core.mjs')], cwd=ROOT, check=True)
 
-    for script in ['build_display_adapters.py', 'build_phet_theme.py', 'build_geometry_standalone.py',
-                   'build_spaceflight_standalone.py', 'build_playground_standalone.py', 'build_primary_math_standalone.py']:
+    for script in ['build_display_adapters.py', 'build_phet_theme.py']:
         subprocess.run([sys.executable, str(ROOT / 'scripts' / script)], cwd=ROOT, check=True)
 
 inventory = json.loads((ROOT / 'config/inventory.json').read_text(encoding='utf-8'))

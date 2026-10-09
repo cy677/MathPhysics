@@ -1,4 +1,4 @@
-/* Local completion checkpoints shared by hosted and standalone classrooms. MIT. */
+/* Classroom learning checkpoints and resumable progress. MIT. */
 (() => {
   'use strict';
   const prefix = 'mathphysics.progress.v1.';
@@ -35,7 +35,7 @@
         status.dataset.saved = String(!failed);
         status.textContent = `已完成 ${Object.keys(state.completed).length} / ${allowed.size}` +
           (state.completed[current] ? ' · 本关已完成' : '') +
-          (failed ? ' · 浏览器未能保存，进度仅在本页有效' : state.checkpoint ? ' · 演示练习已存档（0分）' : ' · 演示完成后存档（0分）');
+          (failed ? ' · 浏览器未能保存，进度仅在本页有效' : state.checkpoint ? ' · 学习进度已存档' : ' · 完成后保存学习进度');
       }
     }
     function write() {
