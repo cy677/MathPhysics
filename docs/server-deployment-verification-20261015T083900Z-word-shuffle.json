@@ -1,0 +1,331 @@
+{
+  "releaseId": "20261015T083900Z-word-shuffle",
+  "verifiedAtUTC": "2026-10-15T08:57:57.941Z",
+  "url": "https://124.70.198.189/mathphysics/",
+  "accountsEnabled": false,
+  "change": "Grade-one word matching replaces the cleared pair and automatically reshuffles surviving tiles while the pending bank has words; the final board is cleared without further refill reshuffles",
+  "sourceIdentity": "Latest working-tree source rebuilt on Linux; every release file matches local archive, public BUILD and Git index before main publication",
+  "archiveSHA256": "07cd1db06cd084b2f878d6dd4d8f294fe8bc848cfddd1a64c8b6e29972c6599d",
+  "manifestFileCount": 2999,
+  "source": {
+    "releaseId": "20261015T083900Z-word-shuffle",
+    "checkedAtUTC": "2026-10-15T08:56:50.820Z",
+    "archiveSHA256": "07cd1db06cd084b2f878d6dd4d8f294fe8bc848cfddd1a64c8b6e29972c6599d",
+    "publicManifestSHA256": "d4b8d4d121007550aeb7b58efd28cdd25313dfc51b6b860a72ffe2e03acb0b60",
+    "manifestFiles": 2999,
+    "workingTreeMatchesRelease": true,
+    "publicManifestMatchesRelease": true,
+    "gitIndexMatchesRelease": true,
+    "gitlinks": 0,
+    "passed": true
+  },
+  "localTests": {
+    "tests": 917,
+    "pass": 913,
+    "fail": 0,
+    "skipped": 4
+  },
+  "server": {
+    "activation": {
+      "releaseId": "20261015T083900Z-word-shuffle",
+      "current": "/srv/mathphysics/releases/20261015T083900Z-word-shuffle",
+      "nginxSnippetUpdated": false,
+      "meowServiceUnchanged": true,
+      "learningService": "mathphysics-learning.service",
+      "learningData": "/srv/mathphysics/runtime/mathphysics.sqlite3",
+      "learningEnabled": true,
+      "serviceSourceRoot": "/srv/mathphysics/releases/20261015T083900Z-word-shuffle",
+      "accountsEnabled": false
+    },
+    "cleanup": {
+      "temporaryUploadsRemoved": true,
+      "releaseRetained": "/srv/mathphysics/releases/20261015T083900Z-word-shuffle",
+      "backupRetained": "/srv/mathphysics/backups/20261015T083900Z-word-shuffle"
+    },
+    "database-final": {
+      "databaseTables": 12,
+      "changedTables": [],
+      "databaseUnchanged": true,
+      "snapshotIntegrity": "ok",
+      "checkedAtUTC": "2026-10-15T08:54:45.771030+00:00"
+    },
+    "learning-final": {
+      "integrity": "ok",
+      "databaseOutsideRelease": true,
+      "privateBackupCreated": true,
+      "factsPreserved": true,
+      "factTablesChecked": 16,
+      "accountsEnabled": false,
+      "registeredAccountCount": 0,
+      "browserDeviceCount": 3,
+      "checkedAtUTC": "2026-10-15T08:54:45.792000+00:00"
+    },
+    "learning-preservation": {
+      "existingRowsPreserved": true,
+      "tables": {
+        "accounts": {
+          "previousRows": 3,
+          "currentRows": 3
+        },
+        "assessment_definitions": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "attempts": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "bucket_best": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "completions": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "grade_items": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "grade_revisions": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "idempotency": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "ledger": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "legacy_imports": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "legacy_records": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "profiles": {
+          "previousRows": 3,
+          "currentRows": 3
+        },
+        "question_snapshots": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "save_revisions": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "saves": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "schema_migrations": {
+          "previousRows": 1,
+          "currentRows": 1
+        }
+      },
+      "allowsNewBrowserDeviceRecords": true
+    },
+    "public-permissions": {
+      "directoryMode": "0755",
+      "fileMode": "0644",
+      "nginxUserCanRead": true,
+      "scope": "new release only"
+    },
+    "release-state.final": {
+      "releaseId": "20261015T083900Z-word-shuffle",
+      "current": "/srv/mathphysics/releases/20261015T083900Z-word-shuffle",
+      "releaseDirectoriesRetained": [
+        "20260930T061500Z",
+        "20261001T005739Z-965c72c",
+        "20261001T113119Z-965c72c",
+        "20261002T071617Z-e5764f0",
+        "20261003T105809Z-e5764f0",
+        "20261005T094051Z-help-tiers",
+        "20261005T100552Z-help-tiers",
+        "20261006T091933Z-learning-sync",
+        "20261006T094706Z-learning-sync",
+        "20261009T065600Z-learning-service",
+        "20261015T080900Z-subjects",
+        "20261015T083900Z-word-shuffle"
+      ],
+      "backup": "/srv/mathphysics/backups/20261015T083900Z-word-shuffle",
+      "backupDirectoryMode": "0700",
+      "meowService": {
+        "MainPID": "3283709",
+        "ExecMainStartTimestamp": "Wed 2026-09-30 20:04:20 CST",
+        "ActiveState": "active",
+        "FragmentPath": "/etc/systemd/system/meow-pet.service",
+        "ActiveEnterTimestamp": "Wed 2026-09-30 20:04:20 CST"
+      },
+      "learningService": {
+        "MainPID": "3186967",
+        "ExecMainStartTimestamp": "Thu 2026-10-15 16:52:36 CST",
+        "ActiveState": "active",
+        "FragmentPath": "/etc/systemd/system/mathphysics-learning.service",
+        "ActiveEnterTimestamp": "Thu 2026-10-15 16:52:36 CST"
+      },
+      "learningData": "/srv/mathphysics/runtime/mathphysics.sqlite3",
+      "incomingFiles": [],
+      "userDatabasePreserved": true,
+      "databaseFinalUnchanged": true,
+      "learningFactsPreserved": true,
+      "accountsEnabled": false
+    },
+    "server-delivery-report": {
+      "startedAtUTC": "2026-10-15T08:51:55.995Z",
+      "releaseId": "20261015T083900Z-word-shuffle",
+      "checks": [
+        {
+          "name": "extracted-service-auth-and-static-private-boundary"
+        },
+        {
+          "name": "release-raw-scoring-idempotency-ledger-and-fixed-bucket",
+          "credits": 10000,
+          "points": 100,
+          "attempts": 2
+        },
+        {
+          "name": "actual-extracted-disk-sqlite-restart-restores-save-and-ledger"
+        },
+        {
+          "name": "default-no-login-browser-history-is-isolated-and-old-account-saves-retained"
+        },
+        {
+          "name": "default-browser-cookie-restores-assessment-history-after-service-restart"
+        }
+      ],
+      "passed": true,
+      "scope": "Synthetic account in separate temporary database; no production accounts or saves accessed",
+      "finishedAtUTC": "2026-10-15T08:51:56.657Z"
+    },
+    "stage": {
+      "releaseId": "20261015T083900Z-word-shuffle",
+      "archiveSHA256": "07cd1db06cd084b2f878d6dd4d8f294fe8bc848cfddd1a64c8b6e29972c6599d",
+      "deltaSHA256": "2a656195d9b0d3fc52d6b8c12c7c89f4cf537f212002f62d3939fec8109e6051",
+      "uploadMethod": "verified-previous-source-copy-plus-delta",
+      "baseReleaseId": "20261015T080900Z-subjects",
+      "copiedUnchangedSourceFiles": 2994,
+      "verifiedFiles": 2999,
+      "sourceCommit": null,
+      "activityCount": 81,
+      "serverRebuildMatchesLocal": true,
+      "nodeVersion": "v24.14.0",
+      "tests": {
+        "tests": 917,
+        "pass": 913,
+        "fail": 0,
+        "skipped": 4
+      },
+      "deliveryChecks": 5,
+      "ready": true
+    },
+    "verification": {
+      "releaseId": "20261015T083900Z-word-shuffle",
+      "verifiedFiles": 2999,
+      "activityCount": 81,
+      "entryChecks": 36,
+      "servedResourceHashesMatch": 399,
+      "javascriptModuleMimeChecks": 20,
+      "publicReferenceChecks": 5,
+      "cacheRefreshReturns200": true,
+      "privatePathsHidden": true,
+      "privatePathChecks": 20,
+      "licenseChecks": 20,
+      "sudokuXMLConfigServed": true,
+      "learningServiceEnabled": true,
+      "learningDataOutsideRelease": true,
+      "learningIntegrity": "ok",
+      "learningFactsPreserved": true,
+      "learningFactTablesChecked": 16,
+      "accountCount": 3,
+      "registeredAccountCount": 0,
+      "accountsEnabled": false,
+      "defaultEntryRedirectsToSubjects": true,
+      "productionAPIProbe": "read-only capabilities only",
+      "apiSessionProductionProbeSkipped": true,
+      "browserDeviceSessionVerifiedInIsolatedDatabase": true,
+      "spaceflightProfileAdapterServed": true,
+      "sudokuPWAScopeConfined": true,
+      "meowServiceUnchanged": true,
+      "meowFilesUnchanged": true,
+      "meowHomeUnchanged": true,
+      "meowServiceConfigUnchanged": true,
+      "nginxOtherFilesUnchanged": true,
+      "databaseTables": 12,
+      "dataPreserved": true,
+      "databaseUnchanged": true,
+      "databaseChangedTables": [],
+      "backupIntegrity": "ok",
+      "backup": "/srv/mathphysics/backups/20261015T083900Z-word-shuffle",
+      "passed": true,
+      "databaseFinalUnchanged": true,
+      "finalDatabaseChangedTables": []
+    }
+  },
+  "localBrowser": {
+    "passed": true,
+    "cases": 10,
+    "checks": [
+      "语文目录、搜索、一年级筛选和四类练习入口正常",
+      "两个单字组成词语；每次15对30字，补入2字后整个牌面自动打乱",
+      "点错不加星，提示、洗牌、讲解与宿主重玩正常",
+      "83个原文例词完整通关，补充至题库抽完，再消除剩余卡片才完成",
+      "综合题量与屏幕卡数独立；其他词语类别补充并通关正常",
+      "配对动画中切换类别，旧队列不会污染新练习",
+      "拼音、泡泡、偏旁、原文资料和字形许可保留",
+      "平板与手机无横向溢出、补充正常，全屏可退出，星星记录刷新保留",
+      "魔法实验室仍是数学下的群论，原24个小游戏保留",
+      "整合后的单HTML可通过file协议独立离线打开"
+    ],
+    "errors": [],
+    "missing": []
+  },
+  "publicBrowser": {
+    "releaseId": "20261015T083900Z-word-shuffle",
+    "passed": true,
+    "checks": [
+      "Latest deployed home and all five pre-update browser save keys are preserved",
+      "Updated classroom opens from the Chinese subject and restores actual old-version score statistics",
+      "A real correct pair adds two tiles and reshuffles the surviving board order",
+      "Old scores increase once and remain saved after a full host reload",
+      "390px layout fits and unrelated progress plus old account caches remain intact"
+    ],
+    "errors": [],
+    "failedResources": [],
+    "apiIsolation": "Session responses are synthetic; only read-only capabilities can reach the production API; all other API calls are blocked",
+    "shuffle": {
+      "bankSize": 83,
+      "tiles": 30,
+      "replacementTiles": 2,
+      "survivorOrderChanged": true
+    }
+  },
+  "browserCleanup": {
+    "checkedAtUTC": "2026-10-15T08:55:36.9459886Z",
+    "processesBefore": 9,
+    "remainingProcesses": [],
+    "remainingListeners": [],
+    "localAcceptancePort": 60565,
+    "passed": true
+  },
+  "backup": "/srv/mathphysics/backups/20261015T083900Z-word-shuffle",
+  "dataPreservation": {
+    "meowTablesUnchanged": 12,
+    "existingLearningFactTablesPreserved": 16,
+    "originalBrowserFixtureKeys": 5,
+    "productionVerificationUsesOnlyReadOnlyAPI": true,
+    "productionTestRecordsCreated": 0
+  },
+  "limitations": [
+    "Public browser session responses are isolated; only read-only capabilities reaches the production API",
+    "Session and assessment writes plus service restart restoration use a separate temporary database",
+    "Grade-one Chinese saves stars and category statistics; unfinished boards are not a persisted feature",
+    "Chromium mobile viewport checks do not cover a physical iPad/Safari device"
+  ],
+  "passed": true
+}

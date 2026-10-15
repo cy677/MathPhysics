@@ -49,10 +49,18 @@ try {
   });
   const playPair = async () => {
     const pair = await livePair();assert.ok(pair);
-    const before = await frame.evaluate(() => YuwenApp.state.c.donePairs);
+    const before = await frame.evaluate(() => {
+      const c = YuwenApp.state.c;
+      return {done: c.donePairs, autoShuffle: c.wordMode && c.pending.length > 0, ids: c.tiles.map(t => t.id)};
+    });
     await frame.locator(`[data-tile="${pair[0]}"]`).click();
     await frame.locator(`[data-tile="${pair[1]}"]`).click();
-    await frame.waitForFunction(done => YuwenApp.state.c.donePairs === done + 1 && !YuwenApp.state.c.locked, before);
+    await frame.waitForFunction(done => YuwenApp.state.c.donePairs === done + 1 && !YuwenApp.state.c.locked, before.done);
+    if (before.autoShuffle) {
+      const afterIds = await frame.locator('[data-tile]').evaluateAll(nodes => nodes.map(n => n.dataset.tile));
+      const beforeSet = new Set(before.ids), afterSet = new Set(afterIds);
+      assert.notDeepEqual(afterIds.filter(id => beforeSet.has(id)), before.ids.filter(id => afterSet.has(id)), '补入新字后整个牌面自动打乱');
+    }
   };
   const beforeIds = await frame.locator('[data-tile]').evaluateAll(nodes => nodes.map(n => n.dataset.tile));
   await playPair();
@@ -61,7 +69,7 @@ try {
   assert.equal(afterIds.filter(id => !beforeIds.includes(id)).length, 2);
   await page.screenshot({path: path.join(output, 'shape-refilled-desktop.png')});
   assert.match(await frame.locator('#matchFeedback').textContent(), /组词成功：.+ → /);
-  record('两个单字组成词语；每次15对30字，消除2字后自动补入2字');
+  record('两个单字组成词语；每次15对30字，补入2字后整个牌面自动打乱');
 
   const wrong = await frame.evaluate(() => {
     const c = YuwenApp.state.c, a = c.tiles[0], b = c.tiles.find(t => t.id !== a.id && !c.edges.has([a.key,t.key].sort().join('~~~')));

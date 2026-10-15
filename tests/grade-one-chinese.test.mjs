@@ -100,8 +100,16 @@ for (const type of ['shape', 'poly', 'AAB', 'AABB', 'ABCC', 'ABB', 'quant', 'ver
         app.alignMatchPair(board, chosen, mate, record);
         board.cleared.add(chosen.id);board.cleared.add(mate.id);board.donePairs++;
         const unchanged = board.tiles.map((t, index) => ({t, index})).filter(({t}) => !board.cleared.has(t.id));
+        const hadPending = board.pending.length > 0;
         app.refillBoard(board);
-        if (board.tiles.length === capacity) for (const {t, index} of unchanged) assert.equal(board.tiles[index].id, t.id);
+        if (type !== 'shape' && board.tiles.length === capacity) for (const {t, index} of unchanged) assert.equal(board.tiles[index].id, t.id);
+        if (type === 'shape') {
+          const survivors = new Set(unchanged.map(({t}) => t.id));
+          const beforeOrder = unchanged.map(({t}) => t.id);
+          const afterOrder = Array.from(board.tiles, t => t.id).filter(id => survivors.has(id));
+          if (hadPending) assert.notDeepEqual(afterOrder, beforeOrder, '组词补入新字后重新打乱当前牌面');
+          else assert.deepEqual(afterOrder, beforeOrder, '题库抽完后只消除余牌');
+        }
         if (type === 'shape') assert.equal(board.tiles.length, Math.min(30, (total-board.donePairs)*2));
         assert.ok(board.donePairs === total || board.tiles.length > 0);
       }
