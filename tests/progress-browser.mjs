@@ -109,7 +109,7 @@ try {
 
   const hostState={schemaVersion:1,openIds:['primary-math'],visited:{spaceflight:12345},teacherPreview:false};
   await page.evaluate(s=>localStorage.setItem('mathphysics.state.v1',JSON.stringify(s)),hostState);
-  await page.goto(base);await page.waitForSelector('[data-launch="primary-math"]');await page.locator('[data-launch="primary-math"]').click();await page.waitForFunction(()=>document.querySelector('#loading').hidden);
+  await page.goto(base+'#library');await page.waitForSelector('[data-launch="primary-math"]');await page.locator('[data-launch="primary-math"]').click();await page.waitForFunction(()=>document.querySelector('#loading').hidden);
   let frame=page.frames().find(f=>f.url().includes('lessons/primary-math/'));assert.equal(await frame.locator('#question').inputValue(),'pm-48');await page.locator('#player-back').click();await page.locator('[data-launch="primary-math"]').click();await page.waitForFunction(()=>document.querySelector('#loading').hidden);
   frame=page.frames().find(f=>f.url().includes('lessons/primary-math/'));assert.equal(await frame.locator('#question').inputValue(),'pm-48');const retained=await page.evaluate(()=>JSON.parse(localStorage.getItem('mathphysics.state.v1')));assert.deepEqual(retained.openIds,hostState.openIds);assert.equal(retained.visited.spaceflight,12345);record('host iframe close/reopen restores progress and retains teacher settings and previous visits');
 

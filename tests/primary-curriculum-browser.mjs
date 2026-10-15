@@ -106,7 +106,7 @@ try{
     const hostContext=await browser.newContext({viewport:{width:1440,height:900}});
     await hostContext.addInitScript(({key,value})=>localStorage.setItem(key,JSON.stringify(value)),{key:STORAGE_KEY,value:{schemaVersion:1,openIds,visited:{spaceflight:12345},teacherPreview:false}});
     const host=await hostContext.newPage(),errors=[];host.on('pageerror',e=>errors.push(e.message));
-    await host.goto(base,{waitUntil:'domcontentloaded'});await host.waitForSelector('[data-launch="primary-math"]');
+    await host.goto(base+'#library',{waitUntil:'domcontentloaded'});await host.waitForSelector('[data-launch="primary-math"]');
     const current=JSON.parse(await host.evaluate(k=>localStorage.getItem(k),STORAGE_KEY));
     check(`Host ${name} legacy data and visits are retained`,JSON.stringify(current.openIds)===JSON.stringify(openIds)&&current.visited.spaceflight===12345,current);
     check(`Host ${name} legacy settings allow direct primary access`,await host.locator('[data-launch="primary-math"]').isEnabled()&&await host.locator('#teacher-open, #teacher-dialog, #only-open').count()===0);
@@ -135,7 +135,7 @@ try{
   const triangle=local.activities.find(a=>a.id==='jsx-triangle');
   check('Single-grade card displays 5年级 without a redundant range',!!triangle&&triangle.grades.length===1&&triangle.grades[0]===5);
   const hostContext=await browser.newContext({viewport:{width:1440,height:900}}),home=await hostContext.newPage();
-  await home.goto(base,{waitUntil:'domcontentloaded'});await home.waitForSelector('[data-activity="jsx-triangle"]');
+  await home.goto(base+'#library',{waitUntil:'domcontentloaded'});await home.waitForSelector('[data-activity="jsx-triangle"]');
   const label=await home.locator('[data-activity="jsx-triangle"] .grade-tag').textContent();
   check('Homepage renders the grade-five single-grade label correctly',label?.trim()==='5年级',label);
   await hostContext.close();

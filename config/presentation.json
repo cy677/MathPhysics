@@ -23,12 +23,15 @@
     "states-of-matter-basics",
     "build-a-molecule",
     "primary-math",
+    "group-theory",
     "jsx-triangle",
     "jsx-mirror",
     "jsx-rotation",
     "jsx-scale",
     "jsx-vectors",
-    "jsx-linear"
+    "jsx-linear",
+    "grade-one-chinese",
+    "idiom-match"
   ],
   "activities": {
     "physics-demos": {

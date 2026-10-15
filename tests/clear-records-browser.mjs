@@ -62,6 +62,7 @@ try {
   report.cases.push('Click clears visits, all six activity saves and legacy answers while preserving unrelated data');
 
   await page.locator('#back-home').click();
+  await page.goto(new URL('#library', page.url()).href);
   await page.waitForSelector('[data-activity]');
   const readJson = async file => JSON.parse(await fs.readFile(path.join(root, file), 'utf8'));
   const [upstream, local, presentation] = await Promise.all(['config/inventory.json', 'config/local-activities.json', 'config/presentation.json'].map(readJson));

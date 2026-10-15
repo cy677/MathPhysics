@@ -12,7 +12,7 @@ const runtime=path.join(output,'runtime-'+randomUUID());
 await fs.mkdir(runtime,{recursive:true});
 const report={passed:false,scope:[2,5,6],startedAt:new Date().toISOString(),checks:[],screenshots:[],pageErrors:[],excluded:['full-bank answer/schema checks','five-type assessment suite','simplest-ratio grading suite','pre-submission answer exposure suite']};
 const record=name=>{report.checks.push(name);console.log('PASS',name);};
-const app=await createApplication({databasePath:path.join(runtime,'local-test.sqlite3'),staticRoot:root});
+const app=await createApplication({accountsEnabled:true,databasePath:path.join(runtime,'local-test.sqlite3'),staticRoot:root});
 const username='word-scoped-256',password='Scoped-'+randomUUID();
 const own=await createAccount(app.db,{username,password,label:'甲档案'});
 const profileB=app.store.addProfile(own.account.id,{label:'乙档案'}).profile;

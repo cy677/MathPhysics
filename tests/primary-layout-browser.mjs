@@ -37,7 +37,7 @@ try{
 
   const hostContext=await browser.newContext({viewport:{width:768,height:1024}});
   await hostContext.addInitScript(({key})=>localStorage.setItem(key,JSON.stringify({schemaVersion:1,openIds:['primary-math'],visited:{},teacherPreview:false})),{key:STORAGE_KEY});
-  const host=await hostContext.newPage(),hostErrors=[];host.on('pageerror',e=>hostErrors.push(e.message));await host.goto(base,{waitUntil:'domcontentloaded'});await host.waitForSelector('[data-launch="primary-math"]');
+  const host=await hostContext.newPage(),hostErrors=[];host.on('pageerror',e=>hostErrors.push(e.message));await host.goto(base+'#library',{waitUntil:'domcontentloaded'});await host.waitForSelector('[data-launch="primary-math"]');
   await host.locator('[data-launch="primary-math"]').click();await host.waitForFunction(()=>!document.getElementById('player').hidden&&document.getElementById('loading').hidden,null,{timeout:45000});
   const frame=host.frames().find(f=>f.url().includes('/lessons/primary-math/index.html'));check('Host primary iframe reaches ready page',!!frame&&await frame.evaluate(()=>window.__mpReady===true));
   for(const size of sizes){

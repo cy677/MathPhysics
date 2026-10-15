@@ -21,9 +21,9 @@ try {
   context.on('request',request=>{if(!request.url().startsWith(origin+'/')&&!/^(blob:|data:)/.test(request.url()))remotes.push(request.url());});
   await context.addInitScript(()=>{if(!localStorage.getItem('mathphysics.state.v1'))localStorage.setItem('mathphysics.state.v1',JSON.stringify({schemaVersion:1,openIds:['spaceflight'],visited:{spaceflight:123}}));});
   const page=await context.newPage();page.on('pageerror',error=>errors.push(error.message));
-  await page.goto(base);await page.locator('[data-activity=minesweeper]').waitFor();
+  await page.goto(base+'#subject/math');await page.locator('[data-activity=minesweeper]').waitFor();
   check('both logic games are visible despite an existing saved teaching selection',await page.locator('[data-activity=minesweeper],[data-activity=sudoku]').count()===2);
-  await page.locator('.island[data-zone=logic]').click();
+  await page.locator('#zone-filter [data-zone=logic]').click();
   check('logic theme shows the two existing and four new game cards',await page.locator('#cards .activity-card').count()===6);
   check('game cards use the local original SVG covers',await page.locator('#cards .activity-illustration[src$="-cover.svg"]').count()===6);
   check('mobile home page has no horizontal overflow',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
@@ -56,8 +56,8 @@ try {
   check('host restart clears Sudoku edits and preserves the current original puzzle',reset.status==='RUNNING'&&reset.collection===initial.collection&&reset.index===initial.index&&!reset.notesMode);
   await page.locator('#player-back').click();
   check('existing host preferences and earlier visits survive adding the two games',await page.evaluate(()=>{const state=JSON.parse(localStorage.getItem('mathphysics.state.v1'));return JSON.stringify(state.openIds)==='["spaceflight"]'&&state.visited.spaceflight===123&&state.visited.minesweeper>0&&state.visited.sudoku>0;}));
-  await page.setViewportSize({width:1280,height:800});await page.locator('.islands').scrollIntoViewIfNeeded();
-  check('desktop logic theme occupies a compact full-width second row',await page.evaluate(()=>{const themes=[...document.querySelectorAll('.islands>.island')],first=themes[0].getBoundingClientRect(),fourth=themes[3].getBoundingClientRect(),logic=themes[4].getBoundingClientRect();return Math.abs(first.left-logic.left)<1&&Math.abs(fourth.right-logic.right)<1&&logic.top>=first.bottom&&logic.height<first.height;}));
+  await page.setViewportSize({width:1280,height:800});await page.locator('[data-home].library-back').click();await page.locator('.islands').scrollIntoViewIfNeeded();
+  check('desktop home has exactly three subject cards on one row',await page.evaluate(()=>{const themes=[...document.querySelectorAll('.islands>.island')];return themes.length===3&&themes.every(card=>Math.abs(card.getBoundingClientRect().top-themes[0].getBoundingClientRect().top)<1);}));
   await page.screenshot({path:path.join(output,'logic-host-desktop.png'),fullPage:true});
   check('no remote runtime requests or uncaught browser errors',!remotes.length&&!errors.length);
   await fs.writeFile(path.join(output,'logic-host-browser.json'),JSON.stringify({results,errors,remotes},null,2));

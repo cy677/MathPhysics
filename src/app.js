@@ -3,15 +3,16 @@ import {isReady} from './readiness.js';
 import {isLocalActivityEntry,displayActivities} from './catalog.js';
 import {resolveActivityEntry} from './activity-entry.js';
 import {MATTER_MODULE_ID} from './matter-catalog.js';
+import {SUBJECTS,activitySubject,filterActivities} from './subjects.js';
 import './activity-learning.js';
 import './phet/question-learning.js';
 import './phet/molecule-question-learning.js';
 const $=id=>document.getElementById(id);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let storage;
-const zones={geometry:'几何工坊',physics:'动力车间',vectors:'箭头港口',science:'微观天地',numbers:'数与生活',logic:'逻辑乐园'};
+const zones={geometry:'几何工坊',physics:'动力车间',vectors:'箭头港口',science:'微观天地',numbers:'数与生活',logic:'逻辑乐园',language:'识字与词语'};
 const kinds={game:'趣味挑战',simulation:'互动实验',puzzle:'拼图探索',example:'物理游乐场',collection:'分类演示',proof:'几何证明题集',mission:'太空任务',construction:'拖动几何',practice:'数学练习'};
-const art={geometry:'△ ◇ ○',physics:'● ↗ ▰',vectors:'↗ ＋ →',science:'● ○ ●',numbers:'＋ − × ÷',logic:'▦ 1 2 3'};
+const art={geometry:'△ ◇ ○',physics:'● ↗ ▰',vectors:'↗ ＋ →',science:'● ○ ●',numbers:'＋ − × ÷',logic:'▦ 1 2 3',language:'字 · 词'};
 const phetTips={
   'forces-and-motion-basics':'拔河：把两队的小伙伴拖到绳结上，再点“开始”。推箱子：拖动推力滑块，观察方向和速度；试着更换物体和路面。',
   'energy-skate-park-basics':'把滑板小伙伴拖到轨道高处，松手看他滑行。打开能量图，比较高处和低处；暂停后可以一步一步观察。',
@@ -19,7 +20,7 @@ const phetTips={
   'vector-addition':'把箭头拖到坐标图中，拖动箭头尖改变方向和长度。打开“合向量”或分量，看看几个方向怎样合起来。'
 };
 const workbenchActivities=new Set(['vector-addition','states-of-matter-basics','build-a-molecule']);
-let inventory,state,ids,activities,zone='all',grade='all',query='',current=null,frame=null,generation=0,timer,toastTimer,learningPanel=null,questionPanel=null;
+let inventory,state,ids,activities,subject='all',zone='all',grade='all',query='',current=null,frame=null,generation=0,timer,toastTimer,learningPanel=null,questionPanel=null;
 const learningStyle=document.createElement('link');learningStyle.rel='stylesheet';learningStyle.href='src/learning.css';document.head.append(learningStyle);
 const helpPopup=window.MathPhysicsHelp.create({title:'实验引导与提示',content:$('player-tip'),trigger:$('player-help'),parent:$('player'),id:'player-help-dialog'});
 function toast(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,4000);}
@@ -27,6 +28,8 @@ function persist(){if(!saveState(storage,state))toast('浏览器未能保存设�
 function gradesLabel(a){const first=Math.min(...a.grades),last=Math.max(...a.grades);return a.grades.length===6?'全年级':first===last?first+'年级':first+'—'+last+'年级';}
 
 function sourceName(a){
+  if(a.adapter==='grade-one-chinese')return '语文小星球';
+  if(a.adapter==='group-theory')return '三角形魔法实验室';
   if(a.adapter==='spatial-games')return {'spatial-soma':'Soma · Ruben Berenguel','spatial-rush':'rush · Michael Fogleman','spatial-merge':'2048 · Gabriele Cirulli','spatial-escape':'escape-run · abhas9'}[a.id]||'MathPhysics';
   if(a.adapter==='phet')return 'PhET';
   if(a.adapter==='matter'||a.adapter==='matter-library')return 'Matter.js';
@@ -41,6 +44,9 @@ function cardArt(a){
  if(a.adapter==='spatial-games')return '<img class="activity-illustration" src="src/assets/spatial/'+id.replace('spatial-','')+'-cover.svg" alt="" aria-hidden="true">';
  if(id==='minesweeper'||id==='sudoku')return '<img class="activity-illustration" src="src/assets/logic/'+id+'-cover.svg" alt="" aria-hidden="true">';
  const shapes={
+  'grade-one-chinese':'<path d="M30 27Q61 17 95 30Q129 17 160 27V94Q128 84 95 97Q62 84 30 94Z" fill="#fffef9" stroke="#719c83" stroke-width="2.5" stroke-linejoin="round"/><path d="M95 30V97" stroke="#719c83" stroke-width="2"/><text x="62" y="50" fill="#b49749" text-anchor="middle" font-size="15">pīn</text><text x="62" y="77" fill="#315d4b" text-anchor="middle" font-size="27" font-family="serif">字</text><text x="128" y="69" fill="#315d4b" text-anchor="middle" font-size="29" font-family="serif">文</text>',
+  'group-theory':'<path d="M95 22L43 91H147Z" fill="#e7eddf" stroke="#719c83" stroke-width="2.5" stroke-dasharray="5 4"/><circle cx="95" cy="22" r="13" fill="#d39177"/><circle cx="43" cy="91" r="13" fill="#7d9dac"/><circle cx="147" cy="91" r="13" fill="#719c83"/><path d="M126 24Q156 38 157 65M150 58L157 67L164 57" fill="none" stroke="#b49749" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>',
+  'idiom-match':'<rect x="28" y="23" width="62" height="67" rx="10" fill="#e7eddf" stroke="#719c83" stroke-width="2"/><rect x="101" y="23" width="62" height="67" rx="10" fill="#faf0d5" stroke="#b49749" stroke-width="2"/><g text-anchor="middle" font-family="serif" font-size="22" font-weight="700"><text x="59" y="63" fill="#315d4b">一心</text><text x="132" y="63" fill="#77552a">一意</text></g><path d="M85 99L94 105L108 94" fill="none" stroke="#719c83" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>',
   'question-bank':'<rect x="39" y="15" width="100" height="88" rx="10" fill="#fffef9" stroke="#719c83" stroke-width="2.5"/><path d="M57 37H89M57 53H116M57 69H100" stroke="#a6bea0" stroke-width="3" stroke-linecap="round"/><path d="M57 87L63 93L75 80" fill="none" stroke="#315d4b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M112 87L148 34L158 41L122 94L109 101Z" fill="#efc66b" stroke="#b49749" stroke-width="2" stroke-linejoin="round"/><path d="M148 34L153 27Q155 24 159 27L163 30Q166 33 164 36L158 41" fill="#d39177" stroke="#b49749" stroke-width="2"/><path d="M109 101L113 91L120 96Z" fill="#315d4b"/>',
   'fractions-intro':'<circle cx="61" cy="57" r="32" fill="#fffef9" stroke="#6d9476" stroke-width="2.5"/><path d="M61 57V25A32 32 0 0 1 93 57Z" fill="#e4bc67"/><path d="M61 25V89M29 57H93" stroke="#6d9476" stroke-width="2"/><rect x="113" y="33" width="48" height="48" rx="4" fill="#fffef9" stroke="#6d9476" stroke-width="2.5"/><path d="M115 35H137V79H115Z" fill="#a6bea0"/><path d="M137 33V81M113 57H161" stroke="#6d9476" stroke-width="2"/>',
   'fraction-matcher':'<rect x="24" y="27" width="51" height="57" rx="7" fill="#fffef9" stroke="#6d9476" stroke-width="2"/><circle cx="49" cy="55" r="17" fill="#fffef9" stroke="#6d9476" stroke-width="2"/><path d="M49 38A17 17 0 0 1 49 72Z" fill="#e4bc67"/><path d="M49 38V72M88 50H102M88 61H102" stroke="#6d9476" stroke-width="2.5"/><rect x="115" y="27" width="51" height="57" rx="7" fill="#fffef9" stroke="#6d9476" stroke-width="2"/><text x="140" y="50" text-anchor="middle" fill="#315d4b" font-size="19">1</text><path d="M130 56H150" stroke="#315d4b" stroke-width="2"/><text x="140" y="76" text-anchor="middle" fill="#315d4b" font-size="19">2</text>',
@@ -69,14 +75,41 @@ function cardArt(a){
 }
 
 function draw(){
-  $('stats').innerHTML=`<span><b>${activities.length}</b>个活动</span><span><b>${activities.filter(a=>state.visited[a.id]).length}</b>已探索</span>`;
+  const selected=activities.filter(a=>subject==='all'||activitySubject(a)===subject);
+  $('stats').innerHTML=`<span><b>${selected.length}</b>个活动</span><span><b>${selected.filter(a=>state.visited[a.id]).length}</b>已探索</span>`;
+  for(const id of Object.keys(SUBJECTS))$('subject-count-'+id).textContent=activities.filter(a=>activitySubject(a)===id).length+' 个活动';
+  document.querySelectorAll('#subject-filter button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.subject===subject)));
+  document.querySelectorAll('#zone-filter button').forEach(b=>{b.hidden=b.dataset.zone!=='all'&&subject!=='all'&&!SUBJECTS[subject].zones.includes(b.dataset.zone);});
   document.querySelectorAll('#zone-filter button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.zone===zone)));
   document.querySelectorAll('#grade-filter button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.grade===grade)));
-  const shown=activities.filter(a=>(zone==='all'||a.zone===zone)&&(grade==='all'||a.grades.includes(Number(grade)))&&(!query||(a.title+' '+a.id+' '+a.description+' '+a.content.join(' ')).toLowerCase().includes(query)));
+  const shown=filterActivities(activities,{subject,zone,grade,query});
   $('cards').innerHTML=shown.map(a=>`<article class="activity-card ${escape(a.zone)}" data-activity="${escape(a.id)}"><div class="card-art"><span class="card-badge">${escape(kinds[a.kind])}${a.teacherRecommended?' · 进阶':''}</span>${cardArt(a)}${state.visited[a.id]?'<span class="visited">✓ 已探索</span>':''}</div><div class="card-body"><div class="card-title"><h3>${escape(a.title)}</h3><span class="grade-tag">${gradesLabel(a)}</span></div><p>${escape(a.description)}</p><div class="card-foot"><span>${escape(sourceName(a))}</span><button data-launch="${escape(a.id)}">进入探索 ↗</button></div></div></article>`).join('');
   $('empty').hidden=shown.length!==0;
 }
 function setZone(value){if(value!=='all'&&!zones[value])return;zone=value;draw();}
+function showLibrary(value='all',updateURL=true){
+  if(value!=='all'&&!SUBJECTS[value])return;
+  subject=value;zone='all';grade='all';query='';$('search').value='';
+  $('library').hidden=false;document.body.classList.add('browsing');
+  $('library-title').textContent=SUBJECTS[value]?.title||'全部活动';
+  $('library-eyebrow').textContent=SUBJECTS[value]?.english||"EXPLORER'S LIBRARY";
+  $('library-description').textContent=SUBJECTS[value]?.description||'选一个学科，找到今天想探索的内容。';
+  if(updateURL)history.pushState(null,'',value==='all'?'#library':'#subject/'+value);
+  draw();window.scrollTo(0,0);$('library-title').focus({preventScroll:true});
+}
+function showHome(updateURL=true){
+  if(current)closeActivity(false);
+  $('library').hidden=true;document.body.classList.remove('browsing');
+  if(updateURL)history.pushState(null,'','#subjects');
+  window.scrollTo(0,0);$('home-title').focus({preventScroll:true});
+}
+function route(){
+  if(location.hash.startsWith('#activity/')){openActivity(decodeURIComponent(location.hash.slice(10)));return;}
+  if(current)closeActivity(false);
+  if(location.hash.startsWith('#subject/'))showLibrary(location.hash.slice(9),false);
+  else if(location.hash==='#library')showLibrary('all',false);
+  else{showHome(false);if(location.hash==='#subjects')$('subjects').scrollIntoView();}
+}
 function validateInventory(value){
   if(!value||value.schemaVersion!==1||!Array.isArray(value.activities))throw Error('内容清单格式不正确');
   const unique=new Set();
@@ -89,10 +122,14 @@ function validateInventory(value){
 }
 function setAttribution(a){
   const source=typeof a.source==='string'&&a.source.startsWith('https://github.com/')?a.source:'#';
-  if(a.adapter==='phet'){
+  if(a.adapter==='grade-one-chinese'){
+    $('attribution').textContent='一年级练习 · 语文小星球 · 用户提供的互动页面';
+  }else if(a.adapter==='group-theory'){
+    $('attribution').textContent='群论 · 三角形魔法实验室 · 用户提供的数学互动页面';
+  }else if(a.adapter==='phet'){
     $('attribution').innerHTML='模拟：<a href="https://phet.colorado.edu" target="_blank" rel="noopener">PhET Interactive Simulations · University of Colorado Boulder</a> · CC BY-NC 4.0 · 视觉改编：科学小岛 · <a href="'+escape(source)+'" target="_blank" rel="noopener">原项目源码</a>';
   }else{
-    $('attribution').innerHTML=escape(sourceName(a))+' · '+(a.adapter.startsWith('tangram')?'GPL-3.0':'MIT')+' · <a href="'+escape(source)+'" target="_blank" rel="noopener">源码与许可</a>';
+    $('attribution').innerHTML=a.adapter==='idiom-match'?'成语消消乐 · MathPhysics · 词频数据：THUOCL（MIT） · <a href="lessons/idiom-match/research/THUOCL_LICENSE.txt" target="_blank" rel="noopener">数据来源与许可</a>':escape(sourceName(a))+' · '+(a.adapter.startsWith('tangram')?'GPL-3.0':'MIT')+' · <a href="'+escape(source)+'" target="_blank" rel="noopener">源码与许可</a>';
   }
 }
 function markReady(token){
@@ -107,12 +144,13 @@ async function openActivity(id){
   else if(inventory.activities.some(a=>a.id===id&&a.adapter==='matter'))example=id.slice(7);
   if(example&&!inventory.activities.some(a=>a.id==='matter-'+example&&a.adapter==='matter'))return;
   const a=activities.find(x=>x.id===(example?MATTER_MODULE_ID:id));if(!a)return;
+  if($('library').hidden||(subject!=='all'&&activitySubject(a)!==subject))showLibrary(activitySubject(a),false);
   const isWorkbench=workbenchActivities.has(a.id);
   window.MathPhysicsSync?.captureAll();
   const token=++generation;clearTimeout(timer);frame?.remove();frame=null;current=a;
   $('player').hidden=false;document.body.classList.add('playing');$('player-title').textContent=a.title;
   $('player').dataset.workbench=String(isWorkbench);
-  $('player-subtitle').textContent=zones[a.zone]+' / '+kinds[a.kind]+' / '+gradesLabel(a);
+  $('player-subtitle').textContent=SUBJECTS[activitySubject(a)].title+' / '+zones[a.zone]+' / '+gradesLabel(a);
   helpPopup.close();
   $('player-tip').textContent=(a.adapter==='phet'?phetTips[a.id]:null)||a.playHint||'试着拖动物体，改变条件，看看会发生什么。';
   learningPanel?.destroy();learningPanel=null;questionPanel?.dispose();questionPanel=null;window.__mpQuestionPanel=null;
@@ -132,18 +170,20 @@ async function openActivity(id){
     $('stage').append(f);timer=setTimeout(check,150);
   }catch(error){if(token!==generation)return;$('loading').textContent=error.message;$('loading').className='error';}
 }
-function closeActivity(){window.MathPhysicsSync?.captureAll();helpPopup.close();if(document.fullscreenElement)document.exitFullscreen();++generation;clearTimeout(timer);frame?.remove();frame=null;current=null;learningPanel?.destroy();learningPanel=null;questionPanel?.dispose();questionPanel=null;window.__mpQuestionPanel=null;$('player-tip').replaceChildren();$('player').hidden=true;delete $('player').dataset.workbench;document.body.classList.remove('playing');history.replaceState(null,'','#library');$('library').scrollIntoView();$('search').focus({preventScroll:true});}
+function closeActivity(navigate=true){window.MathPhysicsSync?.captureAll();helpPopup.close();if(document.fullscreenElement)document.exitFullscreen();++generation;clearTimeout(timer);frame?.remove();frame=null;current=null;learningPanel?.destroy();learningPanel=null;questionPanel?.dispose();questionPanel=null;window.__mpQuestionPanel=null;$('player-tip').replaceChildren();$('player').hidden=true;delete $('player').dataset.workbench;document.body.classList.remove('playing');if(navigate){history.replaceState(null,'',subject==='all'?'#library':'#subject/'+subject);$('library').scrollIntoView();$('search').focus({preventScroll:true});}}
 function wire(){
   document.addEventListener('click',event=>{
+    const home=event.target.closest('[data-home]');if(home){event.preventDefault();showHome();return;}
     const launch=event.target.closest('[data-launch]');if(launch){openActivity(launch.dataset.launch);return;}
+    const s=event.target.closest('[data-subject]');if(s){showLibrary(s.dataset.subject);return;}
     const z=event.target.closest('[data-zone]');if(z){setZone(z.dataset.zone);if(z.classList.contains('island'))$('library').scrollIntoView();return;}
     const g=event.target.closest('[data-grade]');if(g){grade=g.dataset.grade;draw();return;}
     const close=event.target.closest('[data-close]');if(close)$(close.dataset.close).close();
   });
   $('search').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();draw();});
   $('about-open').onclick=()=>$('about-dialog').showModal();
-  $('player-back').onclick=closeActivity;
-  $('player-reset').onclick=()=>{if(['matter-library','minesweeper','sudoku','spatial-games'].includes(current?.adapter)&&frame)frame.contentWindow.postMessage({type:'mp-reset'},location.origin);else if(current)openActivity(current.id);};
+  $('player-back').onclick=()=>closeActivity();
+  $('player-reset').onclick=()=>{if(['matter-library','minesweeper','sudoku','spatial-games','idiom-match','group-theory','grade-one-chinese'].includes(current?.adapter)&&frame)frame.contentWindow.postMessage({type:'mp-reset'},location.origin);else if(current)openActivity(current.id);};
   document.addEventListener('fullscreenchange',()=>{const compact=!!document.fullscreenElement;$('player-fullscreen').textContent=compact?'退出全屏':'全屏';frame?.contentWindow.postMessage({type:'mp-compact',value:compact},location.origin);});
   $('player-fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if($('player').requestFullscreen)await $('player').requestFullscreen();else toast('当前浏览器不支持网页全屏，请横屏查看。');}catch{toast('当前浏览器未允许网页全屏，请横屏查看。');}};
   window.addEventListener('message',e=>{if(!frame||e.source!==frame.contentWindow||e.origin!==location.origin)return;if(e.data?.type==='mp-question-learning'&&questionPanel&&current?.adapter==='phet'&&e.data.id===current.id){questionPanel.update(e.data.question);return;}if(e.data?.type==='mp-learning'&&learningPanel&&current?.adapter==='phet'&&e.data.id===current.id){const guide=window.MathPhysicsLearning.PHET_GUIDES[current.id],next=e.data.screen===null?guide:guide.screens[e.data.screen];if(next)learningPanel.update(next);return;}if(e.data?.type==='mp-close'){closeActivity();return;}if(e.data?.type==='mp-ready'){
@@ -155,7 +195,7 @@ function wire(){
     markReady(generation);
   }if(e.data?.type==='mp-error'){clearTimeout(timer);$('loading').hidden=false;$('loading').className='error';$('loading').textContent='活动启动失败：'+String(e.data.message);}});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&current&&!document.querySelector('dialog[open]'))closeActivity();});
-  window.addEventListener('hashchange',()=>{if(location.hash.startsWith('#activity/'))openActivity(decodeURIComponent(location.hash.slice(10)));else if(current)closeActivity();});
+  window.addEventListener('hashchange',route);
 }
 async function init(){
   await window.MathPhysicsSync?.ready;
@@ -180,6 +220,6 @@ async function init(){
   state=loadState(storage,ids,[]);saveState(storage,state);wire();draw();
   window.addEventListener('mathphysics:before-scope-change',()=>{if(current)closeActivity();});
   window.addEventListener('mathphysics:scope-change',()=>{storage=window.MathPhysicsSync.createStorage();state=loadState(storage,ids,[]);draw();});
-  if(location.hash.startsWith('#activity/'))await openActivity(decodeURIComponent(location.hash.slice(10)));
+  route();
 }
 init().catch(error=>{$('cards').textContent=error.message;$('stats').textContent='内容库未就绪';console.error(error);});

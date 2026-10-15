@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light">
+<title>群论 · 科学小岛</title>
+<meta name="description" content="从三角形的旋转与镜像探索群论，保留集合、数量、运算、图形与规律等24个数学游戏。">
+<style>
+:root{--ink:#22314c;--muted:#75839a;--line:#e7eaf2;--accent:#6658da;--accent-soft:#eeebff;--green:#189e79;--gold:#eda837;--paper:#fff;--bg:#f5f7fc;--shadow:0 10px 32px rgba(42,60,105,.055);font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*,*:before,*:after{box-sizing:border-box} [hidden]{display:none!important} body{margin:0;color:var(--ink);background:radial-gradient(ellipse 46% 33% at 100% 0%,#eaeafd 0%,transparent 100%),var(--bg)}button{font:inherit;cursor:pointer}button:disabled{cursor:not-allowed;opacity:.35}button:focus-visible,a:focus-visible{outline:3px solid #e8a744;outline-offset:3px}button:active:not(:disabled){transform:translateY(1px)}
+.app{height:100dvh;min-height:610px;max-width:1600px;margin:auto;padding:16px 18px 17px;display:flex;flex-direction:column;gap:12px}.top{min-height:61px;display:flex;justify-content:space-between;align-items:center;gap:18px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.brandmark{height:48px;width:48px;flex-shrink:0;border-radius:16px;background:linear-gradient(142deg,#7766ed,#575ad7);display:grid;place-items:center;color:#fff;font-size:26px;box-shadow:0 6px 18px #675adb25}.brand h1{font-size:clamp(20px,1.65vw,27px);font-weight:900;letter-spacing:-.9px;margin:0;white-space:nowrap}.brand p{font-size:12px;color:#8792a5;margin:3px 0 0}.top-actions{display:flex;align-items:center;gap:9px}.top-pill{background:#f0ecff;color:#6a59c3;font-weight:800;padding:9px 12px;border-radius:999px;font-size:12px}.top-progress{display:flex;gap:9px;align-items:center;border-radius:999px;background:#fff;border:1px solid var(--line);padding:8px 12px;font-weight:800;font-size:12px;white-space:nowrap}.mini-progress{height:7px;width:85px;background:#e9ebf3;border-radius:99px;overflow:hidden}.mini-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#8877ea,#30b69b);border-radius:99px;transition:width .35s}.plain-button{background:#fff;border:1px solid var(--line);border-radius:11px;padding:10px 12px;color:#5c6982;font-size:12px;font-weight:850;white-space:nowrap}.layout{flex:1;min-height:0;display:grid;grid-template-columns:243px minmax(0,1fr) 247px;gap:13px}.panel{background:#fff;border:1px solid #e9edf5;border-radius:21px;box-shadow:var(--shadow);min-height:0}.sidebar{padding:16px 11px;display:flex;flex-direction:column;min-width:0}.side-head{padding:5px 10px 13px;border-bottom:1px solid var(--line)}.overline{letter-spacing:2px;color:#a0a9bb;font-size:10px;font-weight:900}.side-head h2{margin:5px 0 0;font-size:18px}.filter{display:flex;gap:6px;margin:12px 6px 5px}.filter button{flex:1;border:1px solid #e9eaf2;background:#f7f8fb;border-radius:9px;padding:7px 2px;font-size:11px;font-weight:800;color:#8490a4}.filter button.active{color:#6453cb;background:#eeebff;border-color:#dfd8ff}.navscroll{overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;scrollbar-color:#dce0ed transparent;padding:0 3px 3px;flex:1}.nav-group{margin:14px 7px 7px;font-size:11px;letter-spacing:.6px;font-weight:900;color:#a1aaba;display:flex;justify-content:space-between}.navitem{width:100%;display:flex;text-align:left;align-items:center;gap:10px;background:transparent;border:1px solid transparent;padding:8px 9px;border-radius:13px;min-height:53px}.navitem:hover{background:#f8f8ff}.navitem.active{background:#f2efff;border-color:#dcd5fb}.navnum{width:34px;height:34px;display:grid;place-items:center;background:#f1f3f9;border-radius:10px;color:#8793a8;font-size:11px;font-weight:850;flex-shrink:0}.navitem.active .navnum{background:#7160e1;color:#fff}.navitem.done:not(.active) .navnum{background:#dff7ee;color:#16866c}.navtxt{min-width:0;flex:1}.navtxt strong{display:block;font-size:12.5px;font-weight:870;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.navtxt small{display:block;font-size:10.5px;color:#9aa4b3;margin-top:3px}.navcheck{font-size:13px;color:#20aa85;font-weight:900}.side-footer{font-size:11px;color:#99a4b6;padding:9px 6px 0;border-top:1px solid #f0f1f6;margin-top:8px}.content{display:flex;flex-direction:column;overflow:hidden}.lessonhead{flex-shrink:0;padding:22px 23px 9px;display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.stage-tag{font-size:10px;color:#725fce;font-weight:900;letter-spacing:1px}.lessonhead h2{font-size:clamp(23px,2.25vw,31px);letter-spacing:-.8px;margin:5px 0 5px;line-height:1.22}.lessonhead p{margin:0;color:#77869d;font-size:12.5px;line-height:1.6}.chapter-badge{margin-top:1px;border-radius:12px;background:#eaf8f1;color:#218762;font-weight:850;font-size:11px;padding:8px 10px;flex-shrink:0}.chapter-badge.bonus{background:#fff4de;color:#a57419}.arena{margin:7px 16px 0;border-radius:18px;border:1px solid #e9eef8;background:radial-gradient(ellipse 70% 50% at 50% 42%,#fff 0%,#f9fbff 76%,#f4f8ff 100%);min-height:0;flex:1;overflow:auto;display:flex;flex-direction:column;position:relative}.arena:before{content:"";position:absolute;inset:0;opacity:.34;background-image:radial-gradient(#d1dced 1px,transparent 1px);background-size:20px 20px;pointer-events:none}.play-stage{position:relative;z-index:1;flex:1;min-height:220px;padding:15px 16px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}.control-dock{position:relative;z-index:1;min-height:60px;border-top:1px solid #e8edf5;background:#ffffffc7;padding:10px 13px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}.game-button{border:1px solid #dbe0ed;border-radius:11px;background:#fff;padding:10px 15px;color:#53637c;font-size:13px;font-weight:850;display:inline-flex;align-items:center;gap:7px;justify-content:center;transition:transform .12s,background .15s}.game-button.primary{color:#fff;background:#6758d9;border-color:#6758d9;box-shadow:0 4px 10px #6758d924}.game-button.secondary{background:#ecf9f5;color:#147f66;border-color:#d0eee3}.game-button.selected{background:#e9e4ff;border-color:#b2a4f3;color:#5c48bb;box-shadow:0 0 0 1px #c3b9ed}.game-button.wrong{background:#fff0ef;border-color:#ffc9c3}.game-button.small{font-size:12px;padding:9px 11px}.status{flex-shrink:0;min-height:57px;padding:10px 21px;display:flex;align-items:center;justify-content:space-between;gap:12px}.status-main{font-size:12.5px;line-height:1.6;font-weight:750;color:#748299;display:flex;gap:10px;align-items:center}.status-dot{display:grid;place-items:center;width:26px;height:26px;flex-shrink:0;border-radius:9px;background:#efecff;color:#7567cf;font-size:14px}.status.good .status-main{color:#128464}.status.good .status-dot{background:#ddf7eb;color:#15916e}.status.bad .status-main{color:#b96b31}.status.bad .status-dot{background:#fff2e5;color:#be7e31}.status-actions{display:flex;align-items:center;gap:6px}.reset-btn{background:#f5f6fa;color:#7b879b;border:1px solid #edf0f5;border-radius:9px;font-size:11.5px;font-weight:800;padding:8px 10px;white-space:nowrap}.next-btn{background:#e8f6f0;color:#218364;border:1px solid #cfebdd;border-radius:9px;font-size:11.5px;font-weight:800;padding:8px 10px;white-space:nowrap}.right{display:flex;flex-direction:column;padding:19px 17px 15px;gap:14px;overflow:auto}.right-title{font-size:17px;font-weight:900;margin:0}.right-desc{font-size:12px;color:#8a97aa;line-height:1.7;margin:3px 0 0}.concept{border:1px solid #eee9ff;background:#f8f6ff;border-radius:15px;padding:15px}.concept span{font-size:11px;color:#8473c8;font-weight:850}.concept strong{display:block;font-size:19px;margin:8px 0 3px}.concept p{font-size:12px;color:#766c9a;line-height:1.75;margin:0}.discovery{background:#f2faf7;border:1px solid #dbf2e7;padding:14px;border-radius:15px}.discovery label{font-size:11px;color:#359374;font-weight:850}.discovery p{color:#50806e;font-size:12.5px;line-height:1.75;margin:8px 0 0}.questions{border-top:1px solid #edf0f6;padding-top:15px}.questions h3{font-size:13px;margin:0 0 9px}.questions p{color:#758297;font-size:12px;line-height:1.85;margin:0}.tiny-info{margin-top:auto;padding-top:10px;font-size:10px;color:#a7aebe;line-height:1.5}.foot{display:flex;justify-content:center;color:#a3aec0;font-size:10px;letter-spacing:.2px;min-height:13px;align-items:center}
+/* stage widgets */
+.scene-title{font-size:15px;font-weight:900;text-align:center;line-height:1.4}.scene-caption{font-size:12px;line-height:1.6;text-align:center;color:#8190a6}.big-number{font-size:clamp(37px,4.3vw,63px);font-weight:950;letter-spacing:-2px;line-height:1.1}.piece-grid{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;max-width:580px}.shape-choice,.symbol-piece{display:flex;align-items:center;justify-content:center;min-width:72px;min-height:70px;border:1.5px solid #e2e8f3;background:#fff;border-radius:15px;box-shadow:0 4px 10px #4d69a009;position:relative}.shape-choice.picked{background:#f0edff;border:2px solid #8876e6}.shape-choice.picked:after{content:'✓';position:absolute;top:-7px;right:-5px;color:#fff;background:#22b190;border-radius:50%;width:19px;height:19px;display:grid;place-items:center;font-size:12px}.symbol-piece{font-size:31px;min-width:53px;min-height:54px}.option-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.option{border:2px solid #e0e6f1;background:#fff;color:#344563;border-radius:14px;min-width:57px;min-height:54px;padding:8px 13px;font-size:21px;font-weight:900}.option:hover,.shape-choice:hover{border-color:#9d8ff0}.option.picked{background:#eeeaff;color:#6554ce;border-color:#9586ee}.dot{height:20px;width:20px;border-radius:100%;display:inline-block;box-shadow:inset -2px -2px 3px #00000016}.dot.red{background:#ef755c}.dot.blue{background:#5c9de7}.dot.green{background:#3ebc90}.dot.yellow{background:#f3be53}.token{border-radius:50%;height:34px;width:34px;display:grid;place-items:center;color:#fff;font-size:15px;font-weight:900;background:#ec8f72;box-shadow:0 3px 7px #22222212}.token.blue{background:#68a1e8}.token.purple{background:#8b7de1}.token.green{background:#43bb9c}.token.ghost{opacity:.2}.wide-rule{height:2px;background:#d9e2f0;width:100%;max-width:410px}.mini-label{font-size:11px;font-weight:850;color:#8795ab}.columns{display:flex;gap:17px;align-items:stretch;justify-content:center;max-width:100%}.column-box{border:1px solid #e5eaf3;background:#fff;border-radius:15px;padding:14px 16px;text-align:center;min-width:155px;max-width:310px;box-shadow:0 5px 13px #111c3108}.column-box h3{margin:0 0 10px;font-size:13px}.column-box .symbols{display:flex;justify-content:center;flex-wrap:wrap;gap:6px}.columns .operator{font-size:32px;font-weight:850;color:#8b80d8;align-self:center}.pair-container{display:flex;gap:24px;align-items:center;justify-content:center}.pair-stack{display:flex;flex-direction:column;gap:5px;min-width:88px}.pair-stack .pair-item{font-size:22px;width:72px;height:41px;border:1px solid #e4e9f4;background:#fff;border-radius:10px}.pair-stack .pair-item.on{background:#edeaff;border-color:#9989e1}.pair-stack .pair-item.matched{background:#dff7ee;border-color:#b7e9d9}.pair-lines{font-size:14px;color:#74bc9e;font-weight:800;min-width:65px;min-height:38px;text-align:center}.numberline{width:min(620px,96%);position:relative;margin:12px auto 4px;display:grid;grid-template-columns:repeat(11,minmax(0,1fr));border-bottom:3px solid #b9c7e1;padding-bottom:13px;gap:0}.line-n{position:relative;border:0;background:transparent;color:#8594aa;font-size:13px;font-weight:850;padding:21px 0 0}.line-n:before{content:"";position:absolute;height:11px;width:2px;top:13px;left:50%;background:#b9c7e1;transform:translateX(-50%)}.line-n.current{color:#6756cd}.line-n.current:after{content:"🐸";position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-size:26px}.line-n.goal{color:#e18e37}.line-n.goal:not(.current):after{content:"⭐";position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-size:25px}.ten-box{display:flex;flex-wrap:wrap;gap:5px;width:180px;justify-content:flex-start;background:#fff;border:1px solid #e0e8f3;border-radius:12px;padding:12px}.ten-box .dot{width:22px;height:22px}.bundle{width:38px;height:73px;background:repeating-linear-gradient(0deg,#60a3e9 0,#60a3e9 5px,#e9f3fe 6px,#e9f3fe 8px);border:2px solid #5b96d6;position:relative;border-radius:9px;box-shadow:0 3px 7px #26427313}.bundle:after{content:'10';position:absolute;top:43%;left:-3px;right:-3px;text-align:center;color:#fff;font-weight:900;text-shadow:0 1px 2px #3a6497;background:#4d8acae8;padding:2px 0}.unit{width:21px;height:41px;border-radius:7px;background:linear-gradient(#fdca76,#efa64c);border:2px solid #efa94e}.rods{display:flex;justify-content:center;gap:7px;align-items:end;flex-wrap:wrap;max-width:500px}.rodpanel{display:flex;gap:8px;align-items:center;justify-content:center;min-width:130px;min-height:90px}.large-formula{display:flex;align-items:center;gap:14px;font-size:clamp(26px,3.1vw,45px);font-weight:900;white-space:nowrap}.big-operator{color:#8b7ddd}.countframe{display:grid;grid-template-columns:repeat(5,29px);gap:5px;padding:9px;background:#fff;border:2px solid #dfebfa;border-radius:11px}.countframe i{width:27px;height:27px;border-radius:50%;background:#eff2fa;border:1px solid #d6ddea}.countframe i.on{background:#f38e70;border-color:#e77a59}.countframe.blue i.on{background:#5598e5;border-color:#5598e5}.shape-grid{display:grid;grid-template-columns:repeat(4,85px);gap:10px;justify-content:center}.balance{display:flex;align-items:center;justify-content:space-around;gap:18px;width:min(560px,100%)}.balance .pan{flex:1;max-width:220px;min-height:155px;background:#fff;border:2px solid #e4e9f4;border-bottom:6px solid #aca3e9;border-radius:16px;display:flex;flex-direction:column;justify-content:space-around;align-items:center;padding:12px 4px}.pan .pan-n{font-size:35px;font-weight:900}.pan .small-circles{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;min-height:25px}.equality{font-size:32px;color:#8275d4;font-weight:900}.triangle-wrap{width:clamp(200px,30vw,360px);height:clamp(145px,23vh,210px);position:relative}.triangle-wrap svg{width:100%;height:100%;overflow:visible}.triangle-wrap .orb{transition:all .22s;stroke:#fff;stroke-width:5;filter:drop-shadow(0 5px 4px #0000001a)}.triangle-wrap text{font-size:19px;fill:white;font-weight:900;text-anchor:middle;dominant-baseline:central}.measure{width:min(560px,100%);padding:18px;background:#fff;border:1px solid #e4eaf3;border-radius:16px}.measure-target{height:37px;background:linear-gradient(90deg,#dfe7ff,#f1eeff);border:2px solid #a0a8e5;border-radius:8px;position:relative;margin-bottom:13px}.measure-target span{position:absolute;right:6px;top:7px;font-size:11px;color:#6659bd;font-weight:850}.measure-units{display:flex;gap:0;min-height:39px}.measure-units>span{flex:1;min-width:0;border:1px solid #cdd5e9;background:#f8faff;height:38px;display:grid;place-items:center;color:#8e9bb3;font-size:11px;font-weight:800}.measure-units>span.filled{background:#6f61df;color:#fff;border-color:#695ad2}.bars{display:flex;align-items:end;gap:24px;justify-content:center;height:180px;padding:3px 8px 0}.bar-wrap{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:7px;font-size:12px;font-weight:800}.bar{width:70px;background:linear-gradient(#b7b1f1,#7569df);border-radius:9px 9px 3px 3px;border:1px solid #7a6fd6;display:grid;align-items:start;justify-content:center;padding-top:6px;color:#fff;font-weight:900;font-size:13px}.bag{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:center;background:#fff;border:2px solid #ddd7ff;border-radius:22px 22px 45px 45px;padding:19px;width:220px;min-height:135px}.choice-note{display:inline-flex;align-items:center;gap:7px;border-radius:99px;background:#fff;padding:7px 12px;border:1px solid #e9eaf3;color:#738096;font-size:11.5px;font-weight:850}.source-overlay{position:fixed;inset:0;z-index:8;background:#1e284f70;display:grid;place-items:center;padding:16px}.source-modal{width:min(650px,100%);max-height:88vh;overflow:auto;background:#fff;border-radius:20px;padding:27px;box-shadow:0 24px 85px #121a3326}.source-modal h2{font-size:23px;margin:0 0 12px}.source-modal h3{font-size:14px;margin:19px 0 8px}.source-modal p,.source-modal li{font-size:13px;line-height:1.9;color:#65728a}.source-modal a{color:#6a56d4}.source-modal .close{float:right}.sources-label{font-size:11px;color:#988cc5}.menu-toggle{display:none}
+@media(max-width:1220px){.layout{grid-template-columns:218px minmax(0,1fr) 207px;gap:10px}.sidebar{padding:12px 8px}.right{padding:17px 12px}.app{padding:12px;gap:9px}.column-box{min-width:110px;padding:10px}.shape-choice{min-width:62px;min-height:60px}.shape-grid{grid-template-columns:repeat(4,70px);gap:7px}.play-stage{padding:10px}.lessonhead{padding:17px 18px 8px}}
+@media(max-width:990px){.layout{grid-template-columns:200px minmax(0,1fr)}.right{display:none}.app{min-height:580px}.brand p{display:none}.top-pill{display:none}}
+@media(max-width:690px){.app{min-height:100dvh;height:auto;padding:9px;gap:8px}.top{min-height:55px}.brandmark{width:39px;height:39px;border-radius:12px;font-size:20px}.brand h1{font-size:19px}.top-progress{display:none}.layout{display:flex;flex-direction:column}.sidebar{max-height:275px;overflow:hidden}.sidebar.compact{max-height:52px;padding-top:4px;padding-bottom:4px}.sidebar.compact .navscroll,.sidebar.compact .filter,.sidebar.compact .side-footer{display:none}.side-head{padding:6px 10px}.side-head h2{font-size:15px}.sidebar .navscroll{min-height:120px}.menu-toggle{display:inline-flex}.content{min-height:530px}.lessonhead h2{font-size:24px}.arena{min-height:340px}.play-stage{min-height:230px}.column-box{min-width:108px}.shape-grid{grid-template-columns:repeat(4,66px)}.shape-choice{min-width:59px;min-height:60px}.game-button{padding:10px 11px}.right{display:none}.foot{display:none}}
+@media(max-height:750px) and (min-width:691px){.app{min-height:570px;padding-top:9px;padding-bottom:8px;gap:9px}.top{min-height:50px}.brandmark{width:40px;height:40px}.sidebar{padding-top:10px}.lessonhead{padding-top:14px}.play-stage{min-height:192px;gap:8px}.status{min-height:49px}.control-dock{min-height:55px;padding:6px}.right{gap:9px}.concept,.discovery{padding:10px}.bars{height:148px}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+/* 本题家长讲解：保留游戏布局，只在主动打开时展示。 */
+.lesson-tools{display:flex;flex-direction:column;align-items:flex-end;gap:9px;flex-shrink:0}
+.parent-guide-button{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#eeebff;border:1px solid #d7cff9;border-radius:11px;padding:10px 12px;color:#5c4ac2;font-size:12px;font-weight:850;white-space:nowrap;min-height:41px}
+.parent-guide-button:hover{background:#e5dfff;border-color:#b9a9ed}
+.parent-guide-dialog{width:min(860px,calc(100vw - 36px));max-width:none;max-height:min(92dvh,940px);padding:0;border:1px solid #e4dff5;border-radius:23px;background:#fff;color:var(--ink);box-shadow:0 28px 100px #1720393b;overflow:hidden}
+.parent-guide-dialog[open]{display:flex;flex-direction:column}
+.parent-guide-dialog::backdrop{background:rgba(29,38,61,.48);backdrop-filter:blur(3px)}
+.guide-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;padding:22px 26px 17px;border-bottom:1px solid #eeeaf5;flex-shrink:0}
+.guide-eyebrow{display:flex;align-items:center;gap:8px;color:#8171b7;font-size:10px;font-weight:850;letter-spacing:1px;margin-bottom:6px}
+.guide-live{display:inline-flex;align-items:center;gap:4px;font-size:10px;color:#28846c;background:#eaf8f0;padding:3px 7px;border-radius:99px;letter-spacing:0}
+.guide-live:before{content:'';height:5px;width:5px;border-radius:100%;background:#2aa788}
+.guide-head h2{margin:0;font-size:22px;line-height:1.4;letter-spacing:-.6px}
+.guide-close{background:#f5f5fa;border:1px solid #e7e7ef;color:#7c8198;border-radius:10px;min-height:40px;min-width:40px;font-size:22px;line-height:1}
+.guide-scroll{padding:19px 26px 21px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#d6cfeb transparent;min-height:0}
+.guide-current{background:#f7f6fd;border:1px solid #e7e2f6;border-radius:14px;padding:14px 16px;margin-bottom:18px}
+.guide-current-label{font-size:10px;font-weight:850;letter-spacing:1px;color:#8d80ac;margin-bottom:6px}
+.guide-current-question{font-size:15px;font-weight:850;line-height:1.65;margin:0}
+.guide-state{font-size:12px;color:#7b7194;line-height:1.7;margin:7px 0 0}
+.guide-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:20px}
+.guide-section{margin-bottom:19px}
+.guide-section:last-child{margin-bottom:0}
+.guide-section h3{font-size:13px;line-height:1.5;display:flex;align-items:center;gap:7px;margin:0 0 9px;color:#4a5373;font-weight:850}
+.guide-section h3 .guide-section-num{display:grid;place-items:center;width:21px;height:21px;border-radius:7px;color:#6c5abd;background:#efeafa;font-size:11px}
+.guide-speech{margin:0;padding:13px 15px;background:#faf8f2;border-left:3px solid #d8b767;border-radius:0 10px 10px 0;font-size:14px;line-height:1.9;color:#685835}
+.guide-steps{padding:0;margin:0;list-style:none;counter-reset:guideSteps;display:grid;gap:10px}
+.guide-steps li{counter-increment:guideSteps;display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;font-size:13px;line-height:1.8;color:#66718b}
+.guide-steps li:before{content:counter(guideSteps);font-size:10px;font-weight:900;color:#897aaa;background:#f2eff9;border-radius:50%;height:19px;width:19px;margin-top:2px;display:grid;place-items:center}
+.guide-side{padding-left:18px;border-left:1px solid #eeeaf4}
+.guide-question-text{margin:0;font-size:13px;line-height:1.9;color:#477564;background:#f0f9f5;border:1px solid #dceee5;border-radius:11px;padding:12px}
+.guide-concept-text{font-size:12px;line-height:1.9;color:#80899c;margin:0}
+.guide-answer{border:1px solid #e5e2f0;border-radius:13px;margin-top:20px;overflow:hidden}
+.guide-answer summary{display:flex;justify-content:space-between;align-items:center;gap:9px;list-style:none;padding:12px 15px;cursor:pointer;background:#faf9fd;color:#6d6190;font-size:12px;font-weight:850;min-height:44px}
+.guide-answer summary::-webkit-details-marker{display:none}
+.guide-answer summary:after{content:'＋';font-size:17px;font-weight:500;color:#9383b5}
+.guide-answer[open] summary:after{content:'－'}
+.guide-answer summary:focus-visible{outline:3px solid #d8b767;outline-offset:-3px}
+.guide-answer-content{padding:14px 15px;font-size:13px;color:#6d6a83;line-height:1.85}
+.guide-answer-content p{margin:0 0 11px}
+.guide-answer-content p:last-child{margin-bottom:0}
+.guide-answer-content strong{font-size:11px;color:#8a749e;display:block;margin-bottom:3px}
+.guide-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #eeeaf4;padding:13px 26px;background:#fff;flex-shrink:0}
+.guide-foot span{font-size:11px;color:#9799aa;line-height:1.5}
+.guide-foot .game-button{min-height:40px;font-size:12px;white-space:nowrap}
+body.parent-guide-open{overflow:hidden}
+@media(max-width:690px){.lesson-tools{gap:7px}.parent-guide-button{font-size:11px;padding:9px 10px}.parent-guide-button svg{width:15px;height:15px}.parent-guide-dialog{width:calc(100vw - 18px);max-height:94dvh;border-radius:17px}.guide-head{padding:17px 16px 14px}.guide-head h2{font-size:19px}.guide-scroll{padding:15px 16px 18px}.guide-grid{grid-template-columns:1fr;gap:18px}.guide-side{border-left:0;border-top:1px solid #eeeaf4;padding:17px 0 0}.guide-current{padding:12px}.guide-foot{padding:12px 16px}.guide-foot span{font-size:10px;max-width:58%}.guide-current-question{font-size:14px}.guide-speech{font-size:14px}}
+@media(max-height:680px) and (min-width:691px){.guide-head{padding-top:15px;padding-bottom:13px}.guide-scroll{padding-top:14px}.guide-current{margin-bottom:14px}.guide-foot{padding-top:10px;padding-bottom:10px}}
+
+</style>
+</head>
+<body>
+<div class="app">
+ <header class="top">
+  <div class="brand"><div class="brandmark" aria-hidden="true">△</div><div><h1>群论</h1><p>三角形魔法实验室 · 从游戏中发现数学结构</p></div></div>
+  <div class="top-actions"><span class="top-pill">小学一年级 · 亲子探索</span><div class="top-progress"><span>已探索 <b id="doneCount">0</b> / 24</span><div class="mini-progress"><span id="doneBar"></span></div></div><button class="plain-button menu-toggle" id="mobileNav">目录</button><button class="plain-button" id="sourceBtn">课程依据</button></div>
+ </header>
+ <div class="layout">
+  <aside class="panel sidebar" id="sidebar"><div class="side-head"><div class="overline">EXPERIMENT INDEX</div><h2>数学探索目录</h2></div><div class="filter" id="filters"><button data-filter="all" class="active">全部 24</button><button data-filter="core">基础</button><button data-filter="bonus">探索</button></div><nav class="navscroll" id="nav" aria-label="数学游戏关卡"></nav><div class="side-footer">每关约 3–8 分钟 · 可以自由选关</div></aside>
+  <main class="panel content"><section class="lessonhead"><div><div class="stage-tag" id="lessonTag"></div><h2 id="lessonTitle"></h2><p id="lessonDesc"></p></div><div class="lesson-tools"><div class="chapter-badge" id="chapterBadge"></div><button type="button" class="parent-guide-button" id="parentGuideBtn" aria-haspopup="dialog" aria-controls="parentGuide" title="根据本题和当前操作，查看家长讲解"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6c-3-2-7-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-2-1-6-1-9 1Z"/><path d="M12 6v14M6 9h3M15 9h3M6 12h3M15 12h3"/></svg>家长讲解</button></div></section><div class="arena" id="arena"><div class="play-stage" id="playStage"></div><div class="control-dock" id="controls"></div></div><div class="status" id="status"><div class="status-main"><span class="status-dot" id="statusIcon">✦</span><span id="statusText"></span></div><div class="status-actions"><button class="reset-btn" id="resetBtn">重来</button><button class="next-btn" id="nextBtn">换一题 →</button></div></div></main>
+  <aside class="panel right"><div><div class="overline">PARENT & CHILD</div><h2 class="right-title">今天的数学发现</h2><p class="right-desc">先玩、再说出规律，不急着记术语。</p></div><div class="concept"><span>背后的数学概念</span><strong id="conceptTitle"></strong><p id="conceptDesc"></p></div><div class="discovery"><label>孩子可以发现</label><p id="discovery"></p></div><div class="questions"><h3>家长可以这样提问</h3><p id="parentQ"></p></div><div class="tiny-info" id="topicSource"></div></aside>
+ </div>
+ <footer class="foot">依据 SMSG 1964 年一年级教材及教师手册整理 · 适龄改编，非历史教材原样复刻 · 可离线使用</footer>
+</div>
+<div class="source-overlay" id="sourceOverlay" hidden><section class="source-modal" role="dialog" aria-modal="true" aria-labelledby="sourceTitle"><button class="plain-button close" id="sourceClose">关闭 ×</button><div class="sources-label">CURRICULUM SOURCES</div><h2 id="sourceTitle">这套游戏从哪里来？</h2><p>20世纪50—70年代的“新数学运动”包含不同国家和项目，并不存在统一的一年级课程表。本页面以美国学校数学研究小组（SMSG）的一年级教材及教师用书为主线，把抽象概念改为低年龄儿童能亲手操作的游戏。</p><h3>原始一年级课程（页面标为「基础」）</h3><p>集合与数、数字与数轴、十个一组、加减法、认识几何图形、位值和记数、行列数组；教师材料还涉及图形比较、长度测量、等分与分数初步。</p><h3>拓展探索（页面标为「探索」）</h3><p>集合的交并、初级逻辑、非十进制、函数规则、周期与对称、规律、统计及概率直觉等，取材于更广泛的新数学思想及同时期小学课程改革，<strong>不能理解为全部列在1964年SMSG一年级学生课本中。</strong></p><h3>核对来源</h3><ul><li><a href="https://eric.ed.gov/?id=ED173088" target="_blank" rel="noopener">SMSG 1964，一年级学生用书，ERIC ED173088</a></li><li><a href="https://eric.ed.gov/?id=ED144836" target="_blank" rel="noopener">SMSG 一年级教师用书，ERIC ED144836</a></li><li><a href="https://eric.ed.gov/?id=ED173129" target="_blank" rel="noopener">SMSG 一年级教学指南，ERIC ED173129</a></li><li><a href="https://eric.ed.gov/?id=ED052970" target="_blank" rel="noopener">纽约市 1971 年一年级课程范围，ERIC ED052970</a></li></ul><p>建议：一次只玩一两关；孩子能说清自己的规律，比记住数学名词更重要。</p></section></div>
+<dialog class="parent-guide-dialog" id="parentGuide" aria-labelledby="parentGuideTitle" aria-describedby="guideCurrentQuestion">
+ <header class="guide-head">
+  <div><div class="guide-eyebrow"><span id="guideLessonLabel">家长讲解</span><span class="guide-live">跟随本题</span></div><h2 id="parentGuideTitle">这一题，可以这样讲</h2></div>
+  <button type="button" class="guide-close" id="parentGuideClose" aria-label="关闭家长讲解" autofocus>×</button>
+ </header>
+ <div class="guide-scroll" id="guideScroll">
+  <section class="guide-current"><div class="guide-current-label">当前题目</div><p class="guide-current-question" id="guideCurrentQuestion"></p><p class="guide-state" id="guideCurrentState"></p></section>
+  <div class="guide-grid">
+   <div>
+    <section class="guide-section"><h3><span class="guide-section-num">1</span>可以这样对孩子说</h3><blockquote class="guide-speech" id="guideSpeech"></blockquote></section>
+    <section class="guide-section"><h3><span class="guide-section-num">2</span>陪孩子一步一步做</h3><ol class="guide-steps" id="guideSteps"></ol></section>
+   </div>
+   <div class="guide-side">
+    <section class="guide-section"><h3><span class="guide-section-num">3</span>再问孩子一句</h3><p class="guide-question-text" id="guideQuestion"></p></section>
+    <section class="guide-section"><h3>这题在学什么</h3><p class="guide-concept-text" id="guideConcept"></p></section>
+   </div>
+  </div>
+  <details class="guide-answer" id="guideAnswerDetails"><summary>家长参考：答案、原因与易错提醒</summary><div class="guide-answer-content"><p><strong>本题答案与原因</strong><span id="guideAnswer"></span></p><p><strong>孩子卡住时</strong><span id="guidePitfall"></span></p></div></details>
+ </div>
+ <footer class="guide-foot"><span>先听孩子说，再一起操作。<br>查看讲解不会提交答案或改变进度。</span><button type="button" class="game-button primary" id="parentGuideReturn">回到游戏，试一试 →</button></footer>
+</dialog>
+
+<script>
+'use strict';
+const GROUPS={sets:'01 · 集合与数量',numbers:'02 · 数字的结构',ops:'03 · 运算与关系',geometry:'04 · 图形与空间',explore:'05 · 规律与世界'};
+const L=[
+{id:'sort',g:'sets',t:'分类进集合',d:'找出符合规则的所有小图形。',c:'集合与元素',cd:'用同一个规则收集对象，就得到一个集合。',dis:'同一个东西，可以同时属于好几个集合。',q:'为什么这一个应该进圈？还有没有漏掉的？',kind:'core'},
+{id:'count',g:'sets',t:'数一数有多少',d:'图案不同，但都能用数来描述数量。',c:'数与集合的大小',cd:'数字描述集合里有多少个成员，包括“0个”。',dis:'不同形状的物品，只要个数相同，数量就相同。',q:'如果全拿走了，还剩几个？',kind:'core'},
+{id:'pair',g:'sets',t:'一一配对',d:'一个对一个，谁多谁少就清楚了。',c:'一一对应',cd:'不必先数出总数，也能通过配对比较多少。',dis:'都配成对就是一样多；有剩下的一边更多。',q:'没数数字时，你是怎么知道哪边多的？',kind:'core'},
+{id:'venn',g:'sets',t:'集合交集与并集',d:'找“同时符合”和“至少符合一个”的图形。',c:'交集与并集',cd:'交集是两个规则都符合；并集是至少符合一个规则。',dis:'“并且”和“或者”会让选出的成员不同。',q:'一个红色的圆，会被选中几次？',kind:'bonus'},
+{id:'logic',g:'sets',t:'真假小侦探',d:'观察图形，判断一句话是不是正确。',c:'逻辑判断',cd:'判断“所有”“有一个”“没有”等语句的真假。',dis:'只找到一个反例，就能推翻“所有”的说法。',q:'你能找到一个例子证明这句话错了吗？',kind:'bonus'},
+{id:'numberline',g:'numbers',t:'青蛙数轴跳',d:'一步一步跳到星星处。',c:'数轴与顺序',cd:'每个整数在数轴上有自己的位置。',dis:'向右越跳越大，向左越跳越小。',q:'从4到7，需要向右走几步？',kind:'core'},
+{id:'tens',g:'numbers',t:'十个一捆',d:'把10颗散珠换成1捆。',c:'十个一组',cd:'十个“1”可以重新看成一个“10”。',dis:'13颗和1捆10颗加3颗，表示同样多。',q:'打包后珠子真的变少了吗？',kind:'core'},
+{id:'place',g:'numbers',t:'十位个位搭积木',d:'用整捆和单块做出目标数字。',c:'十进位值',cd:'十位表示有几个十，个位表示有几个一。',dis:'相同的数字，放在不同数位，大小不同。',q:'为什么一根十的积木相当于10小块？',kind:'core'},
+{id:'split',g:'numbers',t:'拆成两部分',d:'同一个数，能拆出许多组伙伴。',c:'数的分解',cd:'把一个集合分成两部分，重新合起来数量不变。',dis:'7可以是1和6，也可以是3和4。',q:'还能想出一种没出现过的拆法吗？',kind:'core'},
+{id:'binary',g:'numbers',t:'二进制灯光',d:'打开1、2、4三盏数值灯来凑数。',c:'其他进位制',cd:'用二进制位的1、2、4来表示数，属于拓展探索。',dis:'只用“亮、灭”两种状态，也能表示许多数字。',q:'为什么4和1两盏灯能够表示5？',kind:'bonus'},
+{id:'addition',g:'ops',t:'集合合在一起',d:'先看两堆，再把它们合起来。',c:'加法来自合并',cd:'不重复的两组物品合在一起，数量相加。',dis:'“3 + 4”的意思，可以是3颗和4颗并在一起。',q:'不用重新逐个数，有没有更快的方法？',kind:'core'},
+{id:'subtraction',g:'ops',t:'取走一些',d:'点击需要拿走的物品，观察剩下的数量。',c:'减法来自取走',cd:'从原有集合中移走一部分，剩下的数量变少。',dis:'总数 = 拿走的 + 剩下的。',q:'你怎么检查自己的答案？',kind:'core'},
+{id:'balance',g:'ops',t:'等号天平',d:'给右边加棋子，让等号两边一样多。',c:'相等关系',cd:'等号表示左右两边的值相同，不是“答案开始”的标记。',dis:'等式可以在两边做比较。',q:'哪边多？怎样让它们刚好一样？',kind:'core'},
+{id:'tenmake',g:'ops',t:'先凑成十',d:'把右边的珠子借给左边，凑整十。',c:'加法与十的分解',cd:'把加数拆开形成整十，有助于理解20以内加法。',dis:'8+5可以先变成10+3，结果不会变。',q:'为什么挪动位置没有改变总数量？',kind:'core'},
+{id:'function',g:'ops',t:'神奇数字机器',d:'机器对每个数执行相同的规则。',c:'函数规则萌芽',cd:'输入相同的数并按相同规则处理，就会得到固定的输出。',dis:'知道规则以后，可以预测没试过的数字。',q:'如果送进去5，会出来多少？',kind:'bonus'},
+{id:'shapes',g:'geometry',t:'寻找同一种图形',d:'找出所有符合题目要求的图形。',c:'几何图形识别',cd:'判断形状，应看它的边与角，而不是颜色和朝向。',dis:'三角形转个方向，依然是三角形。',q:'换成别的颜色，它还是这个图形吗？',kind:'core'},
+{id:'features',g:'geometry',t:'图形的秘密',d:'数边和角，发现形状真正的特征。',c:'图形属性比较',cd:'三角形有3条直边；四边形有4条直边；圆没有直边。',dis:'不能只靠颜色或大小来判断是什么形状。',q:'这个图形有几条直边？有没有角？',kind:'core'},
+{id:'symmetry',g:'geometry',t:'旋转与照镜子',d:'让三颗彩珠换位置，集齐6种队形。',c:'对称变换与群的直觉',cd:'三角形的3种旋转和3种反射，组合成六种对称变换。',dis:'转三次会回来，照两次镜子也会回来。',q:'两种魔法谁先做，结果会不一样吗？',kind:'bonus'},
+{id:'length',g:'geometry',t:'小小测量师',d:'用同样长的小尺拼满一条彩带。',c:'长度与单位',cd:'长度可以用重复、等长且无缝隙的单位来测量。',dis:'每次量的尺子必须一样长，不然数字不可比。',q:'如果尺子变短，要用的块数会怎样？',kind:'core'},
+{id:'pattern',g:'explore',t:'彩色规律接龙',d:'猜猜下一颗该是什么颜色。',c:'重复规律',cd:'寻找AB、AAB、ABC等重复序列中的结构。',dis:'看见重复单元，才能预测下一步。',q:'这一串最短的重复片段是什么？',kind:'bonus'},
+{id:'array',g:'explore',t:'点点排列队',d:'看一看有几行，每行几颗。',c:'行列数组',cd:'按相等行列排列物体，是乘法概念的直观起点。',dis:'3行每行4颗，与一共12颗之间有联系。',q:'不逐颗数，能不能按一行一行数？',kind:'core'},
+{id:'share',g:'explore',t:'平均分一分',d:'把糖果公平分给两个小朋友。',c:'等分与分数初步',cd:'公平分配需要两边同样多；一件物品也可以等分。',dis:'分成两份“相等”是关键，而不是随意切两刀。',q:'如果把一块饼平均切成两份，每份叫什么？',kind:'core'},
+{id:'chart',g:'explore',t:'看懂小图表',d:'看看投票最多和最少的是谁。',c:'简单统计图',cd:'用相同宽度、相同尺度的柱形表示不同类别的数量。',dis:'不用重复数所有物品，比较柱子的高低就知道多少。',q:'如果又来一个人投票，图表应该怎样变？',kind:'bonus'},
+{id:'chance',g:'explore',t:'神秘抽球袋',d:'袋子里有不同颜色的球，猜哪种更容易抽中。',c:'可能性与概率直觉',cd:'某颜色所占比例越大，随机抽中它的可能性通常越大；不是每次都一定。',dis:'“更容易发生”与“一定发生”完全不同。',q:'红球多，是不是每次抽到的一定是红球？',kind:'bonus'}
+];
+const TOTAL=L.length; let filter='all',current='symmetry',done=new Set();try{done=new Set(JSON.parse(localStorage.getItem('newmath-grade1-done')||'[]'))}catch(e){}
+const sessions={};function getS(){return sessions[current]||(sessions[current]={round:0,work:{},good:false,feedback:'',bad:false})}
+function fresh(){const s=getS();s.work={};s.good=false;s.feedback='';s.bad=false}function questionSet(id){return ({sort:[['红色的图形',x=>x.color==='red'],['三角形',x=>x.shape==='tri'],['蓝色的图形',x=>x.color==='blue'],['圆形',x=>x.shape==='circle']],venn:[['红色并且圆形',x=>x.color==='red'&&x.shape==='circle'],['红色或者圆形',x=>x.color==='red'||x.shape==='circle']],shapes:[['三角形',x=>x.shape==='tri'],['正方形',x=>x.shape==='square'],['圆形',x=>x.shape==='circle']]}[id]||[])}
+const SHAPES=[{shape:'circle',color:'red'},{shape:'tri',color:'blue'},{shape:'square',color:'red'},{shape:'circle',color:'blue'},{shape:'tri',color:'red'},{shape:'square',color:'blue'},{shape:'circle',color:'green'},{shape:'tri',color:'green'}];
+const SHAPES2=[...SHAPES,{shape:'rect',color:'green'},{shape:'square',color:'green'}];
+const COLOR={red:'#f27662',blue:'#5f9ce8',green:'#43ba92',yellow:'#f3c15c'};
+
+// 所有题面、答案判断和家长讲解共享这些题目参数。
+const QUESTIONS={
+ count:[['🍎',6],['⭐',4],['🍓',8],['🐟',5],['🌼',0],['🐳',7]],
+ pair:[[5,3],[4,4],[3,6],[6,5]],
+ logic:[
+  {claim:'所有圆形都是红色的。',arr:SHAPES,truth:false},
+  {claim:'至少有一个蓝色三角形。',arr:SHAPES,truth:true},
+  {claim:'没有绿色圆形。',arr:SHAPES,truth:false},
+  {claim:'每个正方形都不是绿色的。',arr:SHAPES,truth:true}
+ ],
+ numberline:[[2,7],[8,3],[1,6],[4,10]],
+ tens:[13,17,24,29], place:[16,23,31,42,19], split:[7,9,6,10],
+ binary:[5,6,3,7], addition:[[3,4],[5,2],[6,3],[7,5]],
+ subtraction:[[8,3],[7,2],[9,4],[10,6]],
+ balance:[[3,2,4],[4,3,5],[6,1,3],[5,4,7]],
+ tenmake:[[8,5],[9,4],[7,6],[8,7]],
+ function:[[3,2],[5,1],[2,3],[4,2]],
+ features:[['三角形',3,{shape:'tri',color:'red'}],['正方形',4,{shape:'square',color:'blue'}],['圆',0,{shape:'circle',color:'green'}],['长方形',4,{shape:'rect',color:'red'}]],
+ length:[7,5,9,6],
+ pattern:[
+  [['red','blue','red','blue','red'],'blue',['red','blue']],
+  [['red','red','blue','red','red'],'blue',['red','red','blue']],
+  [['blue','green','yellow','blue','green'],'yellow',['blue','green','yellow']],
+  [['green','green','yellow','green','green'],'yellow',['green','green','yellow']]
+ ],
+ array:[[3,4],[2,5],[4,3],[3,3]], share:[6,8,10,4],
+ chart:[[4,2,6],[3,6,4],[5,2,4],[2,4,5]],
+ chance:[[4,1],[2,5],[5,2],[1,4]]
+};
+function questionData(id=current,round=getS().round){
+ const questions=QUESTIONS[id];
+ return questions?questions[round%questions.length]:null;
+}
+
+const $=id=>document.getElementById(id);
+function qConfig(){const s=getS();return s.round}
+function txt(v){return String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;')}
+function makeShape(x,size=45){const color=COLOR[x.color]||COLOR.blue;let el='';if(x.shape==='circle')el=`<circle cx="28" cy="28" r="19" fill="${color}"/>`;else if(x.shape==='square')el=`<rect x="10" y="10" width="36" height="36" rx="3" fill="${color}" transform="rotate(${x.rotate||0} 28 28)"/>`;else if(x.shape==='rect')el=`<rect x="7" y="15" width="42" height="26" rx="2" fill="${color}" transform="rotate(${x.rotate||0} 28 28)"/>`;else el=`<polygon points="28,7 50,47 6,47" fill="${color}" transform="rotate(${x.rotate||0} 28 28)"/>`;return `<svg width="${size}" height="${size}" viewBox="0 0 56 56" aria-hidden="true">${el}</svg>`}
+function btn(label,cmd,val='',klass=''){return `<button type="button" class="game-button ${klass}" data-cmd="${cmd}" data-val="${txt(val)}">${label}</button>`}
+function opts(arr,cmd='answer'){return `<div class="option-row">${arr.map(n=>`<button type="button" class="option" data-cmd="${cmd}" data-val="${txt(n)}">${txt(n)}</button>`).join('')}</div>`}
+function shapesPick(list,pickKey,selected){return `<div class="piece-grid">${list.map((x,i)=>`<button type="button" aria-label="图形${i+1}" aria-pressed="${selected.includes(i)}" class="shape-choice ${selected.includes(i)?'picked':''}" data-cmd="${pickKey}" data-val="${i}">${makeShape(x)}</button>`).join('')}</div>`}
+function symbols(icon,n,blue=false){return Array.from({length:n},()=>`<span class="token ${blue?'blue':''}">${icon}</span>`).join('')}
+function countDots(n,col='red'){return `<div class="piece-grid">${Array.from({length:n},()=>`<span class="dot ${col}"></span>`).join('')}</div>`}
+function frame(n,blue){return `<div class="countframe ${blue?'blue':''}">${Array.from({length:10},(_,i)=>`<i class="${i<n?'on':''}"></i>`).join('')}</div>`}
+function gameHtml(id){const s=getS(),w=s.work,r=s.round;let stage='',controls='',defaultMsg='试一试，你能发现什么规律？';
+switch(id){
+case 'sort':case 'venn':{
+ const rules=questionSet(id),[name,check]=rules[r%rules.length],sel=w.selected||(w.selected=[]);stage=`<div class="scene-title">${id==='venn'?'选出：':'把这些图形中'}<span style="color:#6758da">${name}</span>${id==='venn'?'':'全部找出来'}</div>${id==='venn'?`<svg width="190" height="76" viewBox="0 0 190 76" aria-label="红色集合和圆形集合的交并示意图"><defs><clipPath id="vennClip"><circle cx="77" cy="39" r="30"/></clipPath></defs><circle cx="77" cy="39" r="30" fill="#f4aaa2" fill-opacity=".35" stroke="#e88b87" stroke-width="2"/><circle cx="113" cy="39" r="30" fill="#8ebdf3" fill-opacity=".35" stroke="#76a4e6" stroke-width="2"/>${r%2===0?'<circle cx="113" cy="39" r="30" clip-path="url(#vennClip)" fill="#8161d8" fill-opacity=".8"/>':''}<text x="54" y="41" font-size="11" fill="#a85353" font-weight="800" text-anchor="middle">红色</text><text x="136" y="41" font-size="11" fill="#4871a8" font-weight="800" text-anchor="middle">圆形</text></svg>`:''}${shapesPick(SHAPES,'pick-shape',sel)}<div class="scene-caption">点击图形选择或取消 · 共 ${SHAPES.length} 个</div>`;controls=btn('检查我的分类','check','','primary');defaultMsg='选完后点击“检查我的分类”。';break;
+}
+case 'count':{
+ const data=questionData('count',r),[symbol,n]=data;stage=`<div class="scene-title">数一数，这个集合里有多少个？</div><div class="piece-grid" style="max-width:490px;gap:11px;min-height:77px">${n?Array.from({length:n},()=>`<span style="font-size:43px;line-height:1.3">${symbol}</span>`).join(''):'<span style="font-size:23px;color:#9aa9be;padding:10px">（这里什么也没有）</span>'}</div>${opts([...new Set([n,Math.max(0,n-2),n+1,n===0?2:n-1])].slice(0,4).sort((a,b)=>a-b))}`;defaultMsg='点击你认为正确的数字。';break;
+}
+case 'pair':{
+ const [nl,nr]=questionData('pair',r);w.pairs=w.pairs||[];let leftused=w.pairs.map(p=>p[0]),rightused=w.pairs.map(p=>p[1]);stage=`<div class="scene-title">先点一颗左边的星星，再点一颗右边的月亮</div><div class="pair-container"><div class="pair-stack">${Array.from({length:nl},(_,i)=>`<button class="pair-item ${leftused.includes(i)?'matched':w.start===i?'on':''}" data-cmd="pair-left" data-val="${i}" ${leftused.includes(i)?'disabled':''}>⭐</button>`).join('')}</div><div class="pair-lines">${w.pairs.map(()=>'✓ 配成一对<br>').join('')||'⇄<br>一对一'}</div><div class="pair-stack">${Array.from({length:nr},(_,i)=>`<button class="pair-item ${rightused.includes(i)?'matched':''}" data-cmd="pair-right" data-val="${i}" ${rightused.includes(i)?'disabled':''}>🌙</button>`).join('')}</div></div><div class="scene-caption">已经配成 ${w.pairs.length} 对</div>`;if(w.pairs.length===Math.min(nl,nr))controls=`<span class="mini-label">配完了，谁更多？</span>${btn('星星多','answer','left')}${btn('一样多','answer','same')}${btn('月亮多','answer','right')}`;else controls='<span class="mini-label">把左右两边的物品配成一对一对</span>';defaultMsg='不需要先数总数，试试按一对一对来配。';break;
+}
+case 'logic':{
+ const c=questionData('logic',r);stage=`<div class="scene-title">这句话是真的吗？</div><div style="background:#fff;border:1px solid #e4e7f2;border-radius:15px;padding:15px 23px;font-size:19px;font-weight:900;text-align:center">“${c.claim}”</div><div class="piece-grid">${c.arr.map(x=>`<span class="shape-choice" style="min-width:59px;min-height:56px">${makeShape(x,43)}</span>`).join('')}</div>`;controls=btn('是真的','answer','true')+btn('是假的','answer','false');defaultMsg='观察每一个图形，找找有没有反例。';break;
+}
+case 'numberline':{
+ const [start,goal]=questionData('numberline',r);if(w.pos===undefined)w.pos=start;stage=`<div class="scene-title">让小青蛙从 ${start} 跳到 ⭐ ${goal}</div><div class="numberline">${Array.from({length:11},(_,i)=>`<div class="line-n ${i===w.pos?'current':''} ${i===goal?'goal':''}">${i}</div>`).join('')}</div><div class="choice-note">当前位置 <strong>${w.pos}</strong> · 目标 <strong>${goal}</strong></div>`;controls=btn('← 退1步','jump','-1')+btn('进1步 →','jump','1','primary')+btn('进2步 ⇉','jump','2');defaultMsg='观察数轴的位置，每向右一步数字加1。';break;
+}
+case 'tens':{
+ const n=questionData('tens',r);if(w.single===undefined){w.single=n;w.tens=0}stage=`<div class="scene-title">一共有 <span style="color:#6658da">${n}</span> 颗珠子。每10颗打成一捆！</div><div class="columns"><div class="column-box"><h3>十颗一捆 · ${w.tens} 捆</h3><div class="symbols" style="min-height:87px;align-items:center">${Array.from({length:w.tens},()=>'<span class="bundle"></span>').join('')||'<span class="scene-caption">还没打包</span>'}</div></div><div class="column-box"><h3>散珠 · ${w.single} 颗</h3><div class="symbols" style="max-width:240px;min-height:87px;align-items:center">${Array.from({length:w.single},()=>'<span class="dot red"></span>').join('')||'<span class="scene-caption">没有散珠</span>'}</div></div></div><div class="choice-note">${w.tens} 个十 + ${w.single} 个一 = ${n}</div>`;controls=btn('将10颗散珠打包','bundle','', 'primary')+btn('拆开1捆','unbundle');defaultMsg='打包不减少总数量，它只改变数数的方法。';break;
+}
+case 'place':{
+ const n=questionData('place',r);w.tens=w.tens||0;w.units=w.units||0;const sum=w.tens*10+w.units;stage=`<div class="scene-title">用十位积木和个位积木拼出数字</div><div class="big-number" style="color:#6453d0">${n}</div><div class="rods"><div class="rodpanel">${Array.from({length:w.tens},()=>'<span class="bundle"></span>').join('')||'<span class="scene-caption">0捆</span>'}</div><span class="big-operator">+</span><div class="rodpanel">${Array.from({length:w.units},()=>'<span class="unit"></span>').join('')||'<span class="scene-caption">0个</span>'}</div></div><div class="choice-note">你拼的是 ${w.tens} 个十 + ${w.units} 个一 = <strong>${sum}</strong></div>`;controls=btn('＋一捆（10）','place','10','primary')+btn('＋一块（1）','place','1')+btn('－一捆','place','-10','small')+btn('－一块','place','-1','small');defaultMsg='先拼十位，再拼个位，会更快。';break;
+}
+case 'split':{
+ const n=questionData('split',r);if(w.left===undefined)w.left=0;w.seen=w.seen||[];stage=`<div class="scene-title">把 ${n} 个彩珠拆成两份，记录3种不同拆法</div><div class="columns"><div class="column-box"><h3>左边</h3>${countDots(w.left,'red')}<div class="big-number" style="margin-top:9px">${w.left}</div></div><div class="column-box"><h3>右边</h3>${countDots(n-w.left,'blue')}<div class="big-number" style="margin-top:9px">${n-w.left}</div></div></div><div class="scene-caption">已经记录 ${w.seen.length}/3 种：${w.seen.map(x=>`${x} + ${n-x}`).join('、')||'还没有记录'}</div>`;controls=btn('← 左边少1','split','-1')+btn('左边多1 →','split','1')+btn('记录这一种','record','', 'primary');defaultMsg='改变分法，不改变总数。';break;
+}
+case 'binary':{
+ const goal=questionData('binary',r);w.bits=w.bits||[false,false,false];const currentV=[4,2,1].reduce((a,v,i)=>a+(w.bits[i]?v:0),0);stage=`<div class="scene-title">只用3盏灯表示数字 <b style="color:#6556cf">${goal}</b></div><div class="columns">${[4,2,1].map((v,i)=>`<button class="column-box" style="min-width:93px;cursor:pointer;border-color:${w.bits[i]?'#b7acf4':'#e5eaf3'};background:${w.bits[i]?'#f3f0ff':'#fff'}" data-cmd="bit" data-val="${i}"><div style="font-size:31px">${w.bits[i]?'💡':'⚪'}</div><h3 style="font-size:21px;margin:5px 0">${v}</h3><div class="mini-label">${w.bits[i]?'已打开':'点击打开'}</div></button>`).join('')}</div><div class="big-number">${currentV}</div><div class="scene-caption">只有亮/灭两种状态。现在是 ${w.bits.map(b=>b?'1':'0').join('')}（二进制）。</div>`;controls=btn('全部关灯','clearbits');defaultMsg='想要5，试试4和1两盏灯一起亮。';break;
+}
+case 'addition':{
+ const [a,b]=questionData('addition',r);stage=`<div class="scene-title">两堆彩珠放在一起，一共有多少颗？</div><div class="columns"><div class="column-box"><h3>第一堆 · ${a}</h3><div class="symbols">${symbols('●',a)}</div></div><span class="operator">+</span><div class="column-box"><h3>第二堆 · ${b}</h3><div class="symbols">${symbols('●',b,true)}</div></div></div>${w.merged?`<div class="scene-caption">合在一起就是 ${a} + ${b}，请选总数。</div>${opts([...new Set([a+b,a+b-2,a+b+1])].sort((x,y)=>x-y))}`:'<div class="scene-caption">先观察，再按按钮把它们合在一起。</div>'}`;controls=w.merged?btn('重新分开','togglemerge'):btn('把两堆合起来','togglemerge','', 'primary');defaultMsg='合并前后，总数不变。';break;
+}
+case 'subtraction':{
+ const [total,take]=questionData('subtraction',r);w.removed=w.removed||[];stage=`<div class="scene-title">有 ${total} 个苹果，要取走 ${take} 个，剩下多少个？</div><div class="piece-grid">${Array.from({length:total},(_,i)=>`<button class="symbol-piece" data-cmd="remove" data-val="${i}" style="opacity:${w.removed.includes(i)?'.25':'1'};background:${w.removed.includes(i)?'#f2f2f5':'#fff'}">🍎</button>`).join('')}</div><div class="scene-caption">已取走 ${w.removed.length}/${take} 个 ${w.removed.length===take?'· 请选还剩多少个':'· 点击苹果取走，重复点击可以放回'}</div>${w.removed.length===take?opts([...new Set([total-take,total-take+1,Math.max(0,total-take-2)])].sort((a,b)=>a-b)):''}`;defaultMsg='先按要求取走苹果，再回答剩下多少。';break;
+}
+case 'balance':{
+ const [a,b,other]=questionData('balance',r);w.extra=w.extra||0;const lhs=a+b,rhs=other+w.extra;stage=`<div class="scene-title">怎样让等号左右两边一样多？</div><div class="balance"><div class="pan"><div class="mini-label">左边</div><div class="pan-n">${a} + ${b}</div><div class="small-circles">${Array.from({length:lhs},()=>'<span class="dot red"></span>').join('')}</div></div><div class="equality">${lhs===rhs?'=':'?='}</div><div class="pan"><div class="mini-label">右边</div><div class="pan-n">${other} + <span style="color:#6658da">${w.extra}</span></div><div class="small-circles">${Array.from({length:rhs},()=>'<span class="dot blue"></span>').join('')}</div></div></div>`;controls=btn('右边＋1','extra','1','primary')+btn('右边－1','extra','-1');defaultMsg='不是数哪边的式子长，而是比较数量是否相等。';break;
+}
+case 'tenmake':{
+ const [a,b]=questionData('tenmake',r);w.moved=w.moved||0;const left=a+w.moved,right=b-w.moved;stage=`<div class="scene-title">不重新数一遍，试着把左边先凑成10</div><div class="large-formula"><span>${a}</span><span class="big-operator">+</span><span>${b}</span><span class="big-operator">=</span><span style="color:#6756d4">${a+b}</span></div><div class="columns"><div class="column-box"><h3>左边 ${left}</h3>${frame(left,false)}</div><div class="column-box"><h3>右边 ${right}</h3>${frame(right,true)}</div></div><div class="scene-caption">挪动后：${left} + ${right} = ${a+b}</div>`;controls=btn('从右边挪1颗 → 左边','moveten','1','primary')+btn('退回1颗','moveten','-1');defaultMsg='想一想，从右边借几颗，左边就变成10？';break;
+}
+case 'function':{
+ const input=questionData('function',r)[0],add=questionData('function',r)[1];stage=`<div class="scene-title">机器规则：每次 <span style="color:#6757d3">加 ${add}</span></div><div class="large-formula"><span style="background:#e8f3ff;color:#447cbe;padding:15px 23px;border-radius:15px">${input}</span><span style="font-size:25px">→</span><span style="font-size:19px;background:#eeeaff;color:#6757d3;padding:20px;border-radius:18px">⚙ +${add}</span><span style="font-size:25px">→</span><span style="color:#a3aabb">？</span></div><div class="scene-caption">输入 ${input}，出来会是多少？</div>${opts([...new Set([input+add,input+add-1,input+add+2])].sort((a,b)=>a-b))}`;defaultMsg='机器只做同一种操作，换个输入试试看。';break;
+}
+case 'shapes':{
+ const items=SHAPES2.map((x,i)=>({...x,rotate:i===4?65:i===8?35:0})),[name,fn]=questionSet('shapes')[r%3];w.selected=w.selected||[];stage=`<div class="scene-title">请找出所有 <span style="color:#6658da">${name}</span></div>${shapesPick(items,'pick-shape',w.selected)}<div class="scene-caption">方向和大小变了，也要仔细观察形状。</div>`;controls=btn('检查找得对不对','check','','primary');defaultMsg='不要用颜色来判断图形。';break;
+}
+case 'features':{
+ const cs=questionData('features',r);stage=`<div class="scene-title">${cs[0]} 有几条直边？</div><div style="display:grid;place-items:center;width:164px;height:140px;border:1px solid #e2e9f3;background:#fff;border-radius:20px">${makeShape(cs[2],117)}</div>${opts([0,3,4])}`;defaultMsg='只数笔直的边，圆形没有直边。';break;
+}
+case 'symmetry':{
+ if(!w.state)w.state='RBG';if(!w.seen)w.seen=['RBG'];let p=w.state,pc={R:'#f17966',B:'#5c9de8',G:'#42b995'};stage=`<div class="scene-title">把6种不同队形全部找出来！</div><div class="triangle-wrap"><svg viewBox="0 0 360 225"><path d="M180 34L82 187L278 187Z" fill="none" stroke="#cbd9ed" stroke-width="3" stroke-dasharray="9 9"/>${[[180,34],[82,187],[278,187]].map(([x,y],i)=>`<circle class="orb" cx="${x}" cy="${y}" r="29" fill="${pc[p[i]]}"/><text x="${x}" y="${y+1}">${{R:'红',B:'蓝',G:'绿'}[p[i]]}</text>`).join('')}</svg></div><div class="scene-caption">已发现 ${w.seen.length}/6 种队形 ${w.seen.map(x=>`<b style="color:#7160d6">●</b>`).join(' ')}</div>`;controls=btn('↻ 转一步','rotate','', 'primary')+btn('⇆ 照镜子','mirror');defaultMsg='转三次回到起点；照两次也回到起点。';break;
+}
+case 'length':{
+ const n=questionData('length',r);w.meter=w.meter||0;stage=`<div class="scene-title">用一样长的“小尺子”量这条彩带</div><div class="measure"><div class="measure-target" style="width:${Math.min(100,n/9*100)}%"><span>要量的彩带</span></div><div class="measure-units" style="width:${Math.min(100,n/9*100)}%">${Array.from({length:n},(_,i)=>`<span class="${i<w.meter?'filled':''}">${i<w.meter?'✓':''}</span>`).join('')}</div></div><div class="big-number">${w.meter} <span style="font-size:15px;letter-spacing:0;color:#8d99ac">个单位</span></div>`;controls=btn('放一块小尺子','meter','1','primary')+btn('拿走一块','meter','-1');defaultMsg='每一小块要一样长，不能留下空隙。';break;
+}
+case 'pattern':{
+ const [seq,correct]=questionData('pattern',r);stage=`<div class="scene-title">? 位置应该放哪一种颜色？</div><div class="piece-grid" style="align-items:center">${seq.map(col=>`<span class="dot ${col}" style="width:42px;height:42px"></span>`).join('')}<span style="font-weight:900;font-size:38px;color:#6556d5;margin-left:4px">?</span></div><div class="scene-caption">找一找前面哪里开始重复。</div>`;controls=['red','blue','green','yellow'].map(col=>`<button type="button" class="game-button" data-cmd="color-answer" data-val="${col}"><span class="dot ${col}"></span> ${ {red:'红色',blue:'蓝色',green:'绿色',yellow:'黄色'}[col] }</button>`).join('');defaultMsg='观察最短的重复片段，然后猜接下来是什么。';break;
+}
+case 'array':{
+ const [rows,cols]=questionData('array',r);w.phase=w.phase||0;const shownPhase=Math.min(w.phase,2);let ask=w.phase>=3?`全部完成：说说你怎样数出总数`:[`这里有几行？`,`每一行有几颗？`,`合起来一共有几颗？`][shownPhase];stage=`<div class="scene-title">${ask}</div><div style="display:grid;grid-template-columns:repeat(${cols},32px);gap:11px;background:#fff;border:1px solid #e4eaf4;border-radius:16px;padding:21px 24px">${Array.from({length:rows*cols},()=>'<span class="dot blue" style="width:32px;height:32px"></span>').join('')}</div><div class="scene-caption">${w.phase>=3?'3/3 步已完成':'第 '+(shownPhase+1)+'/3 步'} · 一行一行地观察</div>${opts([...new Set([rows,cols,rows*cols,rows+cols,2])].sort((a,b)=>a-b))}`;defaultMsg='先数几行，再看一行几颗，最后算总数。';break;
+}
+case 'share':{
+ const n=questionData('share',r);w.left=w.left||0;w.right=w.right||0;let rest=n-w.left-w.right;stage=`<div class="scene-title">把 ${n} 颗糖公平分给两个小朋友</div><div class="columns"><div class="column-box"><h3>👧 左边的小朋友</h3><div class="symbols" style="min-height:57px">${Array.from({length:w.left},()=>'<span style="font-size:26px">🍬</span>').join('')}</div><div class="big-number">${w.left}</div></div><div class="column-box"><h3>👦 右边的小朋友</h3><div class="symbols" style="min-height:57px">${Array.from({length:w.right},()=>'<span style="font-size:26px">🍬</span>').join('')}</div><div class="big-number">${w.right}</div></div></div><div class="scene-caption">篮子里还剩 ${rest} 颗糖 · 每个人要一样多哦</div>`;controls=btn('给左边一颗','share-left','1','primary')+btn('给右边一颗','share-right','1','primary')+btn('收回左边一颗','share-left','-1','small')+btn('收回右边一颗','share-right','-1','small');defaultMsg='尽量公平，不够平均也可以重新分配。';break;
+}
+case 'chart':{
+ const d=questionData('chart',r);let min=r%2===1;let ask=min?'谁得到的票数最少？':'谁得到的票数最多？';stage=`<div class="scene-title">${ask}</div><div class="bars">${d.map((v,i)=>`<button class="bar-wrap" style="background:transparent;border:0" data-cmd="vote" data-val="${i}"><span class="bar" style="height:${v*21+12}px;background:${['linear-gradient(#f7bbaf,#ee8b7d)','linear-gradient(#a5cafa,#639ce6)','linear-gradient(#a6e3cf,#48b496)'][i]}">${v}</span><span>${['🍎 苹果','🍐 梨子','🍇 葡萄'][i]}</span></button>`).join('')}</div><div class="scene-caption">点击你认为正确的那一根柱子。</div>`;defaultMsg='柱子越高，表示数量越多。';break;
+}
+case 'chance':{
+ const [red,blue]=questionData('chance',r);w.draws=w.draws||[];stage=`<div class="scene-title">随手从袋子里摸一个球，哪个颜色更容易出现？</div><div class="bag">${Array.from({length:red},()=>'<span class="dot red" style="height:30px;width:30px"></span>').join('')}${Array.from({length:blue},()=>'<span class="dot blue" style="height:30px;width:30px"></span>').join('')}</div><div class="scene-caption">袋子里有 ${red} 个红球，${blue} 个蓝球。</div>${s.good?`<div class="scene-caption">模拟抽球：${w.draws.map(v=>`<span class="dot ${v}" style="height:14px;width:14px;margin:0 2px"></span>`).join('')||'可以点击下方“试着抽一球”'}</div>`:''}`;controls=s.good?btn('试着抽一球','draw','','secondary'):btn('红色更容易','answer','red')+btn('蓝色更容易','answer','blue')+btn('一样容易','answer','same');defaultMsg='容易发生，不代表每次都一定发生。';break;
+}
+}
+return {stage,controls,defaultMsg};
+}
+function rememberGood(msg){const s=getS();s.good=true;s.bad=false;s.feedback=msg;done.add(current);try{localStorage.setItem('newmath-grade1-done',JSON.stringify([...done]))}catch(e){} }
+function feedback(msg){const s=getS();s.bad=true;s.feedback=msg}
+function info(){const l=L.find(x=>x.id===current);$('lessonTag').textContent=GROUPS[l.g]+' · 第 '+(L.indexOf(l)+1)+' / '+TOTAL+' 关';$('lessonTitle').textContent=l.t;$('lessonDesc').textContent=l.d;$('chapterBadge').textContent=l.kind==='core'?'教材基础':'拓展探索';$('chapterBadge').className='chapter-badge'+(l.kind==='bonus'?' bonus':'');$('conceptTitle').textContent=l.c;$('conceptDesc').textContent=l.cd;$('discovery').textContent=l.dis;$('parentQ').textContent=l.q;$('topicSource').textContent=l.kind==='core'?'课程属性：SMSG 一年级教材／教师手册对应主题（游戏为改编）':'课程属性：新数学结构思想与同时期小学数学内容的适龄拓展';}
+function navRender(){let groups={},html='';for(const l of L){if(filter!=='all'&&l.kind!==filter)continue;(groups[l.g]||(groups[l.g]=[])).push(l)}for(const [key,ls] of Object.entries(groups)){html+=`<div class="nav-group">${GROUPS[key]} <span>${ls.length}关</span></div>`;for(const l of ls){const idx=L.indexOf(l)+1;html+=`<button type="button" class="navitem ${current===l.id?'active':''} ${done.has(l.id)?'done':''}" data-lesson="${l.id}"><span class="navnum">${String(idx).padStart(2,'0')}</span><span class="navtxt"><strong>${l.t}</strong><small>${l.kind==='core'?'教材基础':'延伸探索'} · ${l.c}</small></span>${done.has(l.id)?'<span class="navcheck">✓</span>':''}</button>`}}
+$('nav').innerHTML=html;document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter===filter));$('doneCount').textContent=done.size;$('doneBar').style.width=(done.size/TOTAL*100)+'%';}
+function render(){info();navRender();const s=getS(),g=gameHtml(current);$('playStage').innerHTML=g.stage;$('controls').innerHTML=g.controls;$('status').className='status'+(s.good?' good':s.bad?' bad':'');$('statusIcon').textContent=s.good?'✓':s.bad?'!':'✦';$('statusText').textContent=s.feedback||(s.good?'本关完成！你可以再玩一题或试试下一关。':g.defaultMsg);$('nextBtn').textContent=s.good?'再玩一题 →':'换一题 →';if($('parentGuide').open)renderParentGuide();}
+function toggleSelection(w,index){w.selected=w.selected||[];const i=w.selected.indexOf(index);if(i>=0)w.selected.splice(i,1);else w.selected.push(index)}
+function checkSort(){const s=getS(),w=s.work;const rules=questionSet(current),fn=rules[s.round%rules.length][1],items=current==='shapes'?SHAPES2:SHAPES,selected=w.selected||[],correct=items.map((x,i)=>fn(x)?i:-1).filter(x=>x>=0);if(correct.length===selected.length&&correct.every(x=>selected.includes(x)))rememberGood(`找对了！${correct.length}个图形都符合要求。`);else feedback(`还不对哦。你选了${selected.length}个，正确应该有${correct.length}个。检查一下有没有多选或漏选。`)}
+function handle(cmd,val){const s=getS(),w=s.work,r=s.round,n=Number(val);if(s.good&&cmd!=='draw'){s.feedback='本题已经完成，可以点击“再玩一题”继续探索。';render();return}
+s.bad=false;s.feedback='';switch(current){
+case 'sort':case 'venn':case 'shapes':if(cmd==='pick-shape')toggleSelection(w,n);else if(cmd==='check')checkSort();break;
+case 'count':if(cmd==='answer'){const target=questionData('count',r)[1];if(n===target)rememberGood(`答对啦！这个集合有 ${target} 个成员。`);else feedback('再点着它们数一数，别着急。')}break;
+case 'pair':{
+const [a,b]=questionData('pair',r);w.pairs=w.pairs||[];if(cmd==='pair-left'&& !w.pairs.some(p=>p[0]===n))w.start=n;else if(cmd==='pair-right'){if(w.start===undefined){feedback('先选左边的一颗星星。');break;}if(!w.pairs.some(p=>p[1]===n)){w.pairs.push([w.start,n]);w.start=undefined}}else if(cmd==='answer'){let correct=a===b?'same':a>b?'left':'right';if(val===correct)rememberGood(`配对成功！${a===b?'左右一样多':(a>b?'星星':'月亮')+'更多'}。`);else feedback('看一看是哪一边有没配上的物品。')}break}
+case 'logic':if(cmd==='answer'){let truth=questionData('logic',r).truth;if((val==='true')===truth)rememberGood('发现得真好！你能找到证据解释吗？');else feedback('再找一找有没有一个反例。')}break;
+case 'numberline':if(cmd==='jump'){const [start,goal]=questionData('numberline',r);w.pos=Math.max(0,Math.min(10,(w.pos??start)+n));if(w.pos===goal)rememberGood(`到达 ${goal} 啦！你顺着数轴找到了正确位置。`)}break;
+case 'tens':if(cmd==='bundle'&&w.single>=10){w.single-=10;w.tens++;if(w.single<10)rememberGood(`完成！${w.tens}个十和${w.single}个一，数量始终不变。`)}else if(cmd==='unbundle'&&w.tens>0){w.single+=10;w.tens--}else if(cmd==='bundle')feedback('散珠不足10颗，不能再打成一捆。');break;
+case 'place':if(cmd==='place'){let [t,u]=[w.tens||0,w.units||0];if(n===10)t++;if(n===1)u++;if(n===-10)t=Math.max(0,t-1);if(n===-1)u=Math.max(0,u-1);if(t<=5&&u<=9){w.tens=t;w.units=u};let goal=questionData('place',r);if(t*10+u===goal)rememberGood(`正确！${goal}就是${t}个十和${u}个一。`)}break;
+case 'split':{const target=questionData('split',r);w.left=w.left||0;w.seen=w.seen||[];if(cmd==='split')w.left=Math.max(0,Math.min(target,w.left+n));else if(cmd==='record'){if(!w.seen.includes(w.left))w.seen.push(w.left);else feedback('这种拆分记录过啦，换一种吧。');if(w.seen.length>=3)rememberGood(`你发现了${w.seen.length}种拆分！它们的和都等于${target}。`)}break}
+case 'binary':if(cmd==='bit'){w.bits=w.bits||[false,false,false];w.bits[n]=!w.bits[n];let total=[4,2,1].reduce((a,v,i)=>a+(w.bits[i]?v:0),0);if(total===questionData('binary',r))rememberGood(`点亮正确！${total}可以用3盏开关灯来表示。`)}else if(cmd==='clearbits')w.bits=[false,false,false];break;
+case 'addition':{const [a,b]=questionData('addition',r);if(cmd==='togglemerge')w.merged=!w.merged;else if(cmd==='answer'){if(n===a+b)rememberGood(`一共${a+b}颗！${a}+${b}=${a+b}。`);else feedback('把两堆的数量接着数一数。')}break}
+case 'subtraction':{const [total,take]=questionData('subtraction',r);w.removed=w.removed||[];if(cmd==='remove'){let idx=w.removed.indexOf(n);if(idx>=0)w.removed.splice(idx,1);else if(w.removed.length<take)w.removed.push(n);else feedback(`只需要拿走${take}个，可以先点一个已拿走的放回。`)}else if(cmd==='answer'){if(n===total-take)rememberGood(`正确！${total}-${take}=${total-take}。`);else feedback('数数没有变淡的苹果还有几颗。')}break}
+case 'balance':if(cmd==='extra'){w.extra=Math.max(0,Math.min(12,(w.extra||0)+n));const [a,b,c]=questionData('balance',r);if(a+b===c+w.extra)rememberGood(`天平平衡了！${a}+${b} = ${c}+${w.extra}。`)}break;
+case 'tenmake':if(cmd==='moveten'){let [a,b]=questionData('tenmake',r);w.moved=Math.max(0,Math.min(b,(w.moved||0)+n));if(a+w.moved===10)rememberGood(`凑成十啦！${a}+${b}=10+${b-w.moved}=${a+b}。`)}break;
+case 'function':if(cmd==='answer'){let x=questionData('function',r)[0],a=questionData('function',r)[1];if(n===x+a)rememberGood(`成功！机器每次加${a}，${x}就会变成${x+a}。`);else feedback(`试着从${x}开始，再往后数${a}步。`)}break;
+case 'features':if(cmd==='answer'){let goal=questionData('features',r)[1];if(n===goal)rememberGood(`没错！这个图形有${goal}条直边。`);else feedback('用手指沿着图形的直边数一圈看看。')}break;
+case 'symmetry':if(cmd==='rotate'||cmd==='mirror'){if(!w.state)w.state='RBG';w.state=cmd==='rotate'?w.state[1]+w.state[2]+w.state[0]:w.state[0]+w.state[2]+w.state[1];w.seen=w.seen||['RBG'];if(!w.seen.includes(w.state))w.seen.push(w.state);if(w.seen.length===6)rememberGood('全部6种队形都找到了！这就是三角形对称变换的游戏。')}break;
+case 'length':if(cmd==='meter'){const goal=questionData('length',r);w.meter=Math.max(0,Math.min(goal,(w.meter||0)+n));if(w.meter===goal)rememberGood(`量好了！彩带长${goal}个单位。`)}break;
+case 'pattern':if(cmd==='color-answer'){const goal=questionData('pattern',r)[1];if(val===goal)rememberGood('接龙成功！你发现重复的规律了。');else feedback('再从头找找最短的重复片段。')}break;
+case 'array':if(cmd==='answer'){let [rows,cols]=questionData('array',r);w.phase=w.phase||0;const answer=[rows,cols,rows*cols][w.phase];if(n===answer){w.phase++;if(w.phase===3)rememberGood(`全部答对！${rows}行，每行${cols}颗，总共${rows*cols}颗。`);else s.feedback='对啦！现在接着看下一问。'}else feedback('慢慢数行和列，不用急。')}break;
+case 'share':if(cmd==='share-left'||cmd==='share-right'){const goal=questionData('share',r);let key=cmd==='share-left'?'left':'right',other=key==='left'?'right':'left';w.left=w.left||0;w.right=w.right||0;if(n<0)w[key]=Math.max(0,w[key]-1);else if(w.left+w.right<goal)w[key]++;if(w.left+w.right===goal&&w.left===w.right)rememberGood(`分得真公平！两边各有${goal/2}颗，也就是每人一半。`);else if(w.left+w.right===goal)feedback('糖分完了，但两边不一样多。试试收回重新分。')}break;
+case 'chart':if(cmd==='vote'){const d=questionData('chart',r),v=(r%2===1?Math.min(...d):Math.max(...d));if(d[n]===v)rememberGood('找到了！从柱子高度能看出哪个数量更多或更少。');else feedback('再比较一下每根柱子的高度。')}break;
+case 'chance':{const [a,b]=questionData('chance',r);if(cmd==='answer'){if(val===(a>b?'red':'blue'))rememberGood(`答对了！${a>b?'红':'蓝'}球更多，所以抽中的机会更大，但并不是一定。`);else feedback('球多的颜色通常更容易抽到。')}else if(cmd==='draw'){w.draws=w.draws||[];if(w.draws.length>=14)w.draws=[];const ball=Math.random()*(a+b)<a?'red':'blue';w.draws.push(ball);s.feedback=`抽到了${ball==='red'?'红':'蓝'}球！每次抽之前都把球放回袋子。` }break}
+}
+render();}
+function chooseLesson(id){if(!L.some(l=>l.id===id))return;current=id;const l=L.find(x=>x.id===id);if(filter!=='all'&&l.kind!==filter)filter='all';render();if(window.innerWidth<691)$('sidebar').classList.add('compact');}
+$('nav').addEventListener('click',e=>{const b=e.target.closest('[data-lesson]');if(b)chooseLesson(b.dataset.lesson)});
+$('filters').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;filter=b.dataset.filter;if(filter!=='all'&&L.find(l=>l.id===current).kind!==filter)current=L.find(l=>l.kind===filter).id;render()});
+$('arena').addEventListener('click',e=>{const b=e.target.closest('[data-cmd]');if(b&&!b.disabled)handle(b.dataset.cmd,b.dataset.val)});
+$('resetBtn').addEventListener('click',()=>{fresh();render()});$('nextBtn').addEventListener('click',()=>{getS().round++;fresh();render()});
+$('sourceBtn').addEventListener('click',()=>{$('sourceOverlay').hidden=false});$('sourceClose').addEventListener('click',()=>{$('sourceOverlay').hidden=true});$('sourceOverlay').addEventListener('click',e=>{if(e.target===$('sourceOverlay'))$('sourceOverlay').hidden=true});document.addEventListener('keydown',e=>{if(e.key==='Escape')$('sourceOverlay').hidden=true});
+// 家长讲解只读取当前题目与 session，不操作游戏、不记录通关。
+const GUIDE_COLORS={red:'红色',blue:'蓝色',green:'绿色',yellow:'黄色'};
+const GUIDE_SHAPES={circle:'圆形',tri:'三角形',square:'正方形',rect:'长方形'};
+function guideShapeName(x){return GUIDE_COLORS[x.color]+GUIDE_SHAPES[x.shape]}
+function guideRange(from,to){return Array.from({length:Math.max(0,to-from+1)},(_,i)=>from+i).join('、')}
+function guideFormation(s){const names={R:'红',B:'蓝',G:'绿'};return `上面${names[s[0]]}、左下${names[s[1]]}、右下${names[s[2]]}`}
+function guideSymmetryPath(state,seen){
+ // 六个状态的广度优先搜索，给出从“现在”继续收集的示例，而非固定答案。
+ const states=['RBG','RGB','BRG','BGR','GRB','GBR'];
+ const bit=x=>1<<states.indexOf(x);
+ const startMask=[...seen,state].reduce((a,x)=>a|bit(x),0);
+ const queue=[{state,mask:startMask,path:[]}],visited=new Set([state+':'+startMask]);
+ for(let i=0;i<queue.length;i++){
+  const node=queue[i];if(node.mask===63)return node.path;
+  for(const [label,next] of [['转一步',node.state[1]+node.state[2]+node.state[0]],['照镜子',node.state[0]+node.state[2]+node.state[1]]]){
+   const mask=node.mask|bit(next),key=next+':'+mask;
+   if(!visited.has(key)){visited.add(key);queue.push({state:next,mask,path:[...node.path,label]})}
+  }
+ }
+ return [];
+}
+function getParentGuide(){
+ const lesson=L.find(l=>l.id===current),s=getS(),w=s.work,r=s.round,q=questionData(current,r);
+ let g={state:'',say:'',steps:[],ask:'',answer:'',pitfall:'',concept:lesson.c+'：'+lesson.cd};
+ switch(current){
+ case 'sort':case 'venn':case 'shapes':{
+  const [rule,check]=questionSet(current)[r%questionSet(current).length];
+  const items=current==='shapes'?SHAPES2:SHAPES,chosen=w.selected||[];
+  const correct=items.map((x,i)=>check(x)?i:-1).filter(i=>i>=0);
+  const answer=correct.map(i=>`第${i+1}个（${guideShapeName(items[i])}）`).join('、');
+  g.state=`本题规则：${rule}；目前已选 ${chosen.length} 个，共 ${items.length} 个图形。`;
+  if(current==='venn'){
+   const both=r%2===0;
+   g.say=both?'我们给图形发入场券。要进来，既要是红色，又要是圆形，两个条件都得满足。我们一个一个检查，好吗？':'我们给图形发入场券。是红色的可以来，是圆形的也可以来；两样都是的也欢迎，但同一个图形只收一次。';
+   g.steps=[`先请孩子说出两个要求：红色、圆形。指出本题的连接词是“${both?'并且':'或者'}”。`,both?'逐个问：“它是红色吗？它是圆形吗？”只有两次都回答“是”，才点选。':'逐个问：“它是红色吗？它是圆形吗？”只要有一次回答“是”，就可以点选。',`目前选了${chosen.length}个。一起复查已选和未选的图形；再点一次可以取消，最后点“检查我的分类”。`];
+   g.ask=both?'红色正方形满足了一个要求，为什么还不能选？':'红色圆形同时满足两个要求，要点选一次还是两次？';
+   g.pitfall=both?'把“并且”误解成只满足一个条件时，让孩子对同一图形分别回答两个问题，不用先讲“交集”这个名词。':'这里的“或者”包括“两条都满足”，不是“只能满足一条”。红色圆形不排除，也不能重复计算。';
+  }else if(current==='shapes'){
+   g.say=`今天我们找所有的${rule}。不要只看颜色，转歪了也没关系，沿着它的轮廓看一看，它是什么形状？`;
+   g.steps=[`先读清楚：这次找“${rule}”，不是找某种颜色。`,rule==='圆形'?'用手指沿图形轮廓走一圈，看看是不是圆形。':'让孩子沿着边走一圈，数一数边和角，再辨认形状。',`让孩子检查目前选的${chosen.length}个，再看有没有漏掉；最后点“检查找得对不对”。`];
+   g.ask=`把一个${rule}换种颜色或转个方向，它还算${rule}吗？为什么？`;
+   g.pitfall='不要把朝向、颜色当作形状的定义。长方形和正方形都有4条直边，辨认正方形还要看4条边一样长、4个角都是直角；这些特征可以用指一指、比一比来讲。';
+  }else{
+   g.say=`今天的收集规则是“${rule}”。我们只把符合这条规则的图形选出来。你来决定每一个能不能进来，再告诉我理由。`;
+   g.steps=[`先让孩子用自己的话复述“${rule}”这条规则。`,'从左到右、从上到下看，一个图形只检查一次；符合就点，不符合先留着。',`目前选了${chosen.length}个。复查有没有漏选或多选，再点“检查我的分类”。`];
+   g.ask=`挑一个选中的，再挑一个没有选中的：它们为什么分别符合、不符合“${rule}”？`;
+   g.pitfall='孩子只盯着一个显眼图形时，陪她按固定顺序扫一遍。换一题后先重新读规则，不要沿用上一题的颜色或形状。';
+  }
+  g.answer=`应选${correct.length}个：${answer}。编号按画面从左到右、从上到下排列。每个被选中的图形都满足本题规则，其余不满足。`;
+  break;
+ }
+ case 'count':{
+  const [icon,n]=q,object=({'🍎':'苹果','⭐':'星星','🍓':'草莓','🐟':'小鱼','🌼':'小花','🐳':'小鲸鱼'})[icon];
+  g.state=n?`这一题要数画面上的${object}。`:'这一题的集合是空的，画面没有物品。';
+  g.say=n?`我们给这些${object}点名吧。手指点到一个，嘴里就数一个数字。最后数到几，就说明一共有几个。`:'这里原本可以放东西，可是现在一样也没有。我们用哪个数字表示“一个也没有”呢？';
+  g.steps=n?['从一边开始，一个接一个地点，不跳过，也不回头重复数。','数完后停一下，问：“最后数到几？所以一共有几个？”','让孩子自己点击对应数字。再换个起点数一遍，看总数是否改变。']:['请孩子确认画面里确实没有物品，不要把边框或文字当成要数的东西。','用生活例子帮助理解：盘子里的水果都吃完了，现在有几个？','请孩子点击表示“没有”的那个数字。'];
+  g.ask=n?'如果把这些物品的位置重新排一排，不添也不拿走，数量会变吗？':'“0个”和“1个”有什么不一样？';
+  g.answer=`答案是${n}。${n?`依次点数为${guideRange(1,n)}；最后读到${n}，所以一共有${n}个${object}。`:'0表示这个集合里没有物品；不是“没有答案”。'}`;
+  g.pitfall='避免让嘴巴数得比手指快。孩子重复点数时，可以让她每数完一个，就把手指明确移到下一个。';
+  break;
+ }
+ case 'pair':{
+  const [left,right]=q,pairs=(w.pairs||[]).length,remaining=Math.min(left,right)-pairs;
+  g.state=`左边${left}颗星星，右边${right}颗月亮；已配成${pairs}对，还能配${remaining}对。`;
+  g.say='星星和月亮要两人一组做朋友。一颗星星只找一颗月亮，不抢朋友，也不重复找。等配完了，看哪一边还落单。';
+  g.steps=[remaining===0?'配对已经结束，不需要再找朋友。先看看哪边还有没配上的物品。':w.start!==undefined?'你已经点了一颗星星。接着点一颗还没配对的月亮，完成这一对。':'先点左边一颗还没配对的星星，再点右边一颗还没配对的月亮。',remaining?`继续把能配的配完，现在还能配${remaining}对；已配好的按钮会变绿。`:'已经不能再配了。一起看看有没有没配上的星星或月亮。','最后才回答谁多：有剩下的一边多；都不剩，就是一样多。'];
+  g.ask='不用先数出两边各有几个，你能只凭“有没有落单”判断谁多吗？';
+  g.answer=`可配${Math.min(left,right)}对。${left===right?'两边都没有剩下，所以一样多。':`${left>right?'星星':'月亮'}剩下${Math.abs(left-right)}个，所以${left>right?'星星多':'月亮多'}。`}`;
+  g.pitfall='每个物品只能配一次。孩子按“排得更长的一边更多”来判断时，提醒她先看配对结果，而不是图案大小或摆放间距。';
+  break;
+ }
+ case 'logic':{
+  const kind=r%4;
+  g.state=`要判断的话是：“${q.claim}”`;
+  g.say=`今天你是小侦探。有人说：“${q.claim}”我们先不猜真或假，看看图形里能找到什么证据。`;
+  const steps=[
+   ['先圈定要看的对象：只看所有圆形，暂时不管三角形和正方形。','逐个检查圆形的颜色。问：“有没有一个圆形不是红色？”','让孩子指出证据，再点“是真的”或“是假的”。'],
+   ['解释“至少有一个”：找到一个就够了，不要求每一个都符合。','一起寻找同时满足“蓝色”和“三角形”的图形。','找到证据后，让孩子自己判断这句话。'],
+   ['把“没有”换成孩子的话：“一个也找不到。”','在图形里找一找，有没有同时是绿色、又是圆形的成员。','先让孩子指证据，再判断原来的话。'],
+   ['先找出所有正方形，不用把别的形状也算进去。','逐个查看这些正方形是不是绿色；“每个”需要全部检查。','让孩子说明检查了哪些，再判断这句话。']
+  ];
+  g.steps=steps[kind];
+  g.ask=['只要发现一个不是红色的圆，还能说“所有圆形都是红色”吗？','找到一个蓝色三角形后，还需要所有三角形都变成蓝色吗？','找到一个绿色圆形，还能说“没有绿色圆形”吗？','只检查一个正方形，就能确定“每个正方形”都符合吗？'][kind];
+  g.answer=[
+   '是假的。第4个是蓝色圆形，第7个是绿色圆形；其中任何一个，就足以推翻“所有圆形都是红色”。',
+   '是真的。第2个图形就是蓝色三角形，已经满足“至少有一个”。',
+   '是假的。第7个图形就是绿色圆形，所以不能说“没有”。',
+   '是真的。本题只有第3个红色正方形和第6个蓝色正方形，两者都不是绿色。'
+  ][kind];
+  g.pitfall='先把“所有”“至少有一个”“没有”讲成日常话。证明“所有都对”要逐个检查；推翻“所有都对”，找到一个不符合的例子就够了。';
+  break;
+ }
+ case 'numberline':{
+  const [start,goal]=q,pos=w.pos??start,delta=goal-pos,dir=delta>0?'右':'左';
+  g.state=`本题起点${start}，目标${goal}；青蛙现在站在${pos}。`;
+  g.say=`小青蛙要去数字${goal}找星星，现在它在${pos}。先看看星星在左边还是右边，再一格一格地跳过去。`;
+  g.steps=[`先请孩子指认当前位置${pos}和目标${goal}。`,delta?`星星在${dir}边。先只用“${delta>0?'进1步 →':'← 退1步'}”，每按一次读出新落点。`:'现在已经站在星星的位置。请孩子回想刚才从哪边跳来。','到达后再回顾跳了几格。熟悉一步一跳以后，才尝试“进2步”，它相当于连续两次进1步。'];
+  g.ask=`从${start}到${goal}，要跳过多少个小间隔？起点要不要算一次“跳”？`;
+  g.answer=`从起点${start}到${goal}，沿最直接方向需要向${goal>start?'右':'左'}跳${Math.abs(goal-start)}次1步。${delta?`从现在的${pos}继续，需要向${dir}跳${Math.abs(delta)}次1步。`:'现在已经到达，不需要再跳。'}`;
+  g.pitfall='数的是“跨过的间隔”，不是沿途数字的个数。站在起点还没有跳，不能算作第1步；向左一步减1，向右一步加1。';
+  break;
+ }
+ case 'tens':{
+  const total=q,t=w.tens||0,loose=w.single??total,more=Math.floor(loose/10);
+  g.state=`总共${total}颗；现在${t}捆、${loose}颗散珠，还可以打包${more}次。`;
+  g.say=`这里有${total}颗珠子，我们把每10颗装成一捆，好数一些。装起来只是换个样子，珠子可没有被吃掉。`;
+  g.steps=['先点着散珠数10颗，让孩子知道“一捆”里面装的还是10颗。',more?`点一次“将10颗散珠打包”，观察散珠少10颗、整捆多1捆。目前还可以打包${more}次。`:'现在散珠不足10颗，已经不能再打包；让孩子说说为什么。','把整捆和散珠合起来说：几个十，再加几个一，总数还是原来的数量。'];
+  g.ask=`原来是${total}颗，打成捆后总数量会减少吗？一捆拆开会看到多少颗？`;
+  g.answer=`${total} = ${Math.floor(total/10)}个十 + ${total%10}个一。打包完成时应有${Math.floor(total/10)}捆和${total%10}颗散珠；10个一换成1个十，数量不变。`;
+  g.pitfall='“1捆”不是“1颗”。完成前可用“拆开1捆”对照观察；完成后要重新演示，先点“重来”。';
+  break;
+ }
+ case 'place':{
+  const goal=q,t=w.tens||0,u=w.units||0,gt=Math.floor(goal/10),gu=goal%10;
+  g.state=`目标${goal}；已搭${t}个十和${u}个一，共${10*t+u}。`;
+  g.say=`我们要搭出${goal}。整捆积木一捆代表10，单块积木一块代表1。先看看需要几捆，再看看还差几小块。`;
+  g.steps=[`先读目标${goal}，用手指分辨十位和个位，解释它们分别数“捆”和“单块”。`,t===gt?`目前${t}捆已经合适，不用再调整整捆。`:`目前有${t}捆，可以用“${t<gt?'＋一捆（10）':'－一捆'}”调整。每变1捆，总数改变10。`,u===gu?`目前${u}块单块已经合适，一起核对总数。`:`目前有${u}块单块，再用“${u<gu?'＋一块（1）':'－一块'}”调整，并核对总数是否是${goal}。`];
+  g.ask=`在${goal}里，左边的${gt}代表${gt}个什么？右边的${gu}又代表什么？`;
+  g.answer=`${goal} = ${gt}×10 + ${gu}，即${gt}个十和${gu}个一。相对当前，需要${t===gt?'保留整捆数量':(t<gt?'增加':'拿走')+Math.abs(gt-t)+'捆'}，${u===gu?'保留单块数量':(u<gu?'增加':'拿走')+Math.abs(gu-u)+'个单块'}。`;
+  g.pitfall='不要只读成“左边一个数字、右边一个数字”，要连着单位说“几个十、几个一”。画面最多保留9个单块，十位需要用整捆表示。';
+  break;
+ }
+ case 'split':{
+  const total=q,left=w.left??0,seen=w.seen||[],need=Math.max(0,3-seen.length);
+  const examples=[left,...Array.from({length:total+1},(_,i)=>i)].filter((v,i,a)=>a.indexOf(v)===i&&!seen.includes(v)).slice(0,need);
+  g.state=`总数${total}；现在左${left}、右${total-left}，已记录${seen.length}/3种拆法。`;
+  g.say=`${total}颗珠子要分住两个房间。我们只搬家，不添珠子也不拿走珠子。试试看，两个房间可以怎样分？`;
+  g.steps=[`先一起说出现在的分法：左边${left}颗，右边${total-left}颗。`,'用“左边多1”或“左边少1”挪一颗，看看另一边怎样跟着变化。',`找到没记录过的分法，就点“记录这一种”。目前还需记录${need}种；重复的分法不会重复计数。`];
+  g.ask='为什么左边多1颗，右边就会少1颗？两边加起来还是原来的数量吗？';
+  g.answer=`每一种都满足“左边 + 右边 = ${total}”。${examples.length?`从当前记录继续，可再记录：${examples.map(x=>`${x}+${total-x}`).join('、')}；这只是示例，不是唯一答案。`:'已经记录了3种不同分法，达到本题目标。'}`;
+  g.pitfall='允许一边是0颗。“记录”前要先检查是否出现过；左右交换在页面里算不同的分配，但总数相同。';
+  break;
+ }
+ case 'binary':{
+  const goal=q,bits=w.bits||[false,false,false],weights=[4,2,1],target=weights.map(v=>Boolean(goal&v));
+  const sum=weights.reduce((a,v,i)=>a+(bits[i]?v:0),0),changed=weights.filter((v,i)=>bits[i]!==target[i]);
+  g.state=`目标${goal}；现在${weights.map((v,i)=>v+'号灯'+(bits[i]?'亮':'灭')).join('、')}，合起来是${sum}。`;
+  g.say=`三盏灯各有一个本领：亮起来就分别送出4、2、1。灭着不送数。我们能不能让亮灯送出的数加起来正好是${goal}？`;
+  g.steps=['先认灯下面的4、2、1：这些是每盏灯的数值，不是要按几次。',`让孩子试着开关灯，边开边把亮着的数加起来，与目标${goal}比较。`,'凑对后，再指着下方的0和1说：“1表示这盏亮了，0表示这盏灭了。”'];
+  g.ask=`目标是${goal}，打开一盏数值更大的灯，和打开一盏小灯，对总数的影响一样吗？`;
+  g.answer=`${goal} = ${weights.filter((v,i)=>target[i]).join(' + ')}。从左到右应为${target.map(v=>v?'1':'0').join('')}。${changed.length?`相对当前，点击${changed.map(v=>v+'号灯').join('、')}各一次即可。`:'当前灯光已经符合目标。'}`;
+  g.pitfall='先玩“亮灯凑数”，不要求一年级孩子背二进制定义。下方三个0/1是按4、2、1三个位置读开关状态，不能按普通三位十进制数来读。';
+  break;
+ }
+ case 'addition':{
+  const [a,b]=q;
+  g.state=`第一堆${a}颗，第二堆${b}颗；${w.merged?'已经进入选择总数的步骤':'还没有点“把两堆合起来”'}。`;
+  g.say=`这里一堆${a}颗，另一堆${b}颗。现在把两堆看成一大家子，不添也不丢，一共会有多少颗呢？`;
+  g.steps=[w.merged?'已经可以选总数了。先请孩子指着两堆，说明每颗都只算一次。':'先确认两堆各有多少，再点“把两堆合起来”。',`可以从1重新数，也可以把${a}记在心里，再接着数另一堆的${b}颗。`,'让孩子自己选总数，然后把自己的数法讲一遍。'];
+  g.ask=`已知第一堆有${a}颗，能不能不从1重数，接着把另一堆数完？`;
+  g.answer=`${a}+${b}=${a+b}。从${a}接着数${b}次：${guideRange(a+1,a+b)}。两堆没有重合的珠子，每颗只计一次。`;
+  g.pitfall=`接着数时，${a}已经代表第一堆，不要把第二堆的第一颗又读成${a}；应该从${a+1}开始。画面不同颜色只用于区分原来的两堆。`;
+  break;
+ }
+ case 'subtraction':{
+  const [total,take]=q,removed=(w.removed||[]).length;
+  g.state=`原有${total}个，要取走${take}个；已取走${removed}个，现在仍亮着${total-removed}个。`;
+  g.say=`篮子里有${total}个苹果，要送走${take}个。我们把送走的点一下，让它变淡。最后只数留在篮子里的。`;
+  g.steps=[removed<take?`还要点${take-removed}个亮着的苹果，把取走的数量补足到${take}个。`:`已经取走${take}个，不需要再拿；变淡的是已送走的。`,'只点数没有变淡的苹果，不能把送走的再算进来。','点击剩下的数量，再把“剩下的”和“取走的”合起来核对原来的总数。'];
+  g.ask=`剩下的苹果和送走的${take}个放回一起，能不能回到原来的${total}个？`;
+  g.answer=`${total}−${take}=${total-take}，所以还剩${total-take}个。检查：${total-take}+${take}=${total}。`;
+  g.pitfall='变淡的苹果仍画在页面上，但已表示取走，不能再数。误点了可以再次点击变淡苹果，把它放回。';
+  break;
+ }
+ case 'balance':{
+  const [a,b,other]=q,extra=w.extra||0,lhs=a+b,rhs=other+extra,diff=lhs-rhs;
+  g.state=`左边${a}+${b}=${lhs}；右边${other}+${extra}=${rhs}。`;
+  g.say=`等号在问：“两边是不是一样多？”左边是${a}加${b}，右边现在是${other}加${extra}。我们只调整右边，让它们刚好一样。`;
+  g.steps=['先分别数出两边的珠子，比较数量，不比较式子的长短。',diff?`右边现在${diff>0?'少':'多'}一些。用“右边${diff>0?'＋1':'－1'}”一次调整一颗，每次再比较。`:'两边已经一样多。让孩子指出画面中的等号，并解释它的意思。','出现等号后，请孩子把两边分别算一遍，确认结果相同。'];
+  g.ask=`为什么${a}+${b}和${other}+${lhs-other}写得不同，仍然可以放在等号两边？`;
+  g.answer=`右边空缺处应是${lhs-other}，因为${a}+${b}=${other}+${lhs-other}=${lhs}。${diff?`从当前继续，右边需${diff>0?'增加':'减少'}${Math.abs(diff)}颗。`:'当前已经平衡。'}`;
+  g.pitfall='等号不是“接下来写答案”的标记，而是说两边数量相等。加过头时用“右边－1”调整，不必重新开始。';
+  break;
+ }
+ case 'tenmake':{
+  const [a,b]=q,moved=w.moved||0,left=a+moved,right=b-moved,need=10-left;
+  g.state=`原题${a}+${b}；已挪${moved}颗，现在左${left}、右${right}。`;
+  g.say=`左边这个十格盒子，装满刚好是10颗。我们从右边搬一点过去，先把左边装满。只搬家，不增加也不拿走，总数会怎样？`;
+  g.steps=[`先观察现在左边${left}颗、右边${right}颗，看看左边离10差多少。`,need>0?`点“从右边挪1颗 → 左边”，一颗一颗搬，到左边刚好10时停。`:need<0?'左边超过10了，用“退回1颗”把多搬的送回去，直到刚好10。':'左边已经凑成10。现在只需把10和右边剩下的数合起来。','让孩子说出新的“10加几”，再比较新旧两种摆法的总数。'];
+  g.ask=`把右边的珠子搬到左边以后，为什么总数仍然是${a+b}？`;
+  g.answer=`左边原来${a}颗，需从右边挪${10-a}颗；右边剩${b-(10-a)}颗。因此${a}+${b}=10+${a+b-10}=${a+b}。${need>0?`从当前还要挪${need}颗。`:need<0?`当前多挪了${-need}颗，需要退回。`:'当前已经凑成10。'}`;
+  g.pitfall='这不是新增珠子，也不是搬过去后再算一遍。页面用“挪”来观察数的拆分；左边装满10就停。';
+  break;
+ }
+ case 'function':{
+  const [input,add]=q;
+  g.state=`本题输入${input}，机器规则是“加${add}”。`;
+  g.say=`这台机器只会做一件事：收到一个数，就给它再加${add}。现在送进去${input}，你猜出来会是多少？`;
+  g.steps=[`先让孩子读一遍本题规则：“每次加${add}。”`,`用${input}个手指、棋子或心里的小点表示输入，再添${add}个。`,'让孩子预测输出，选完后再用相同规则口头试一个别的输入。'];
+  g.ask=`这道题的机器规则不变，如果送进去${input+1}，出来的数比刚才多几？`;
+  g.answer=`本题输出${input+add}，因为${input}+${add}=${input+add}。同一规则下输入${input+1}，输出${input+1+add}，相应多1。`;
+  g.pitfall='“加几”是本题规则，不是永远固定的。换题后要重新看机器上的规则；先不用“自变量、函数”等术语。';
+  break;
+ }
+ case 'features':{
+  const [name,edges]=q;
+  g.state=`本题图形是${name}，问的是“直边”的条数。`;
+  g.say=`我们沿着${name}的外边走一圈。直直的一段才算一条直边，弯弯的地方不能当作直边。你来当小向导，带我数一数。`;
+  g.steps=[edges?'先选一个角做起点，用手指沿一条直边走到下一个角。':'用手指沿着圆的轮廓走，感受它一直在弯。',edges?'每走完一条直边就数一次，回到起点后停，不把第一条再数一遍。':'问孩子：“有哪一段是笔直的吗？”区分“有轮廓”和“有直边”。','最后选直边的条数，并让孩子说明是怎样数的。'];
+  g.ask=edges?`换一种颜色，${name}的直边条数会改变吗？`:'圆有轮廓，为什么它仍然没有直边？';
+  g.answer=`${name}有${edges}条直边。${edges===0?'圆的边界是弯曲的，没有直边，答案是0。':`沿轮廓依次可数到${guideRange(1,edges)}，回到起点即停止。`}`;
+  g.pitfall='本题问“直边”，不是所有轮廓线段。正方形和长方形都有4条直边，仅凭边数不能区分它们。';
+  break;
+ }
+ case 'symmetry':{
+  const state=w.state||'RBG',seen=w.seen||['RBG'],path=guideSymmetryPath(state,seen);
+  g.state=`当前${guideFormation(state)}；已收集${seen.length}/6种队形。`;
+  g.say='三个朋友站在固定的三个位置。转一步时，大家同时顺时针搬到下一个位置；照镜子时，上面的不动，左下和右下交换。看看能发现几种不同队形。';
+  g.steps=[`先记住现在的队形：${guideFormation(state)}。选一颗珠子，用手指跟着它移动。`,'点“转一步”，观察：上面到右下、右下到左下、左下到上面。三颗珠子都一起动。','再试“照镜子”：顶部不动，底下两颗互换。出现没收集过的队形时，计数会增加。'];
+  g.ask='连续转3步为什么会回来？连续照2次镜子呢？先转后照，和先照后转会一样吗？';
+  g.answer=`一共有6种队形。${path.length?`从当前状态继续，一种可行顺序是：${path.join(' → ')}。`:'6种队形已经全部收集到了。'}每次“转一步”是转120°，不是转完整一圈；3步才回到原位。照镜子两次也回原位。比较两种先后顺序时，应分别从同一起点开始。`;
+  g.pitfall='比较顺序要分别点“重来”回到同一起点，不是在前一次结果上直接接着比。群论研究的是这里的整体变换；六种队形用于显示变换效果，不要求孩子背公理或术语。';
+  g.concept='对称与可逆操作：操作可以接着操作，有些操作能把变化恢复。这里的6种整体变换构成三角形的对称群；先让孩子发现循环、复原和先后顺序。';
+  break;
+ }
+ case 'length':{
+  const target=q,meter=w.meter||0;
+  g.state=`已经放了${meter}块等长小尺，尚未填满${target-meter}格。`;
+  g.say='我们不用大人的尺子，改用一样长的小尺块来量彩带。从彩带一头摆到另一头，看看要摆几块才刚好。';
+  g.steps=['先指认彩带起点，把小尺的起点和它对齐。',meter<target?'每点一次“放一块小尺子”，就紧接着摆下一块，一边摆一边数。':'小尺已经铺到彩带另一端，请孩子重新数一遍总块数。','刚好铺满就停，说“长几个小尺单位”，并检查没有空隙，也没有重叠。'];
+  g.ask='如果换成更短但彼此一样长的小尺，量同一条彩带，通常需要更多块还是更少块？';
+  g.answer=`彩带长${target}个本题的小尺单位，需放${target}块。现在已放${meter}块，还需${target-meter}块。这里没有规定每块是1厘米，因此不要直接说“${target}厘米”。`;
+  g.pitfall='小尺要一样长，首尾相接。留缝或重叠都会影响测量；数的是单位长度重复了几次。';
+  break;
+ }
+ case 'pattern':{
+  const [seq,correct,unit]=q,word=arr=>arr.map(x=>GUIDE_COLORS[x].replace('色','')).join('—');
+  g.state=`已给出的顺序：${word(seq)}；需要补第${seq.length+1}颗。`;
+  g.say='这些彩珠像在唱一小段反复的歌。我们把颜色读出来，找找哪一小段一直重复，再猜问号处该唱什么颜色。';
+  g.steps=[`和孩子一起读：${word(seq)}，先不急着看下面的选项。`,'试着把前面一小段当成一组，再看后面的颜色有没有按同样顺序重新开始。','从头按照同样的小组接着读，读到问号的位置，再点击对应颜色。'];
+  g.ask='你能说出反复出现的那一小组吗？补完这一颗，后面两颗又该是什么？';
+  const extended=[seq.length+1,seq.length+2].map(i=>unit[i%unit.length]);
+  g.answer=`本题按“${word(unit)}”一组重复，问号应是${GUIDE_COLORS[correct]}。补完后再接两颗，应是${word(extended)}。`;
+  g.pitfall='不要只看最后一颗就机械地换颜色。先找完整的重复小组；有的规律是两个一组，有的是三个一组。';
+  break;
+ }
+ case 'array':{
+  const [rows,cols]=q,phase=w.phase||0,steps=['几行','每行几颗','一共几颗'];
+  g.state=`点阵有${rows}行，每行${cols}颗；${phase>=3?'三问均已完成':`当前第${phase+1}/3问：${steps[phase]}`}。`;
+  g.say=phase===0?'这些点点排得真整齐。横着的一排叫一行。我们先不数所有点点，只看从上到下有几行。':phase===1?'刚才已经找到有几行了。现在只盯住其中横着的一行，看这一行有几颗点点。':`现在把每一行合起来数。不用急着背乘法，先看看每行一样多，能不能一行一行接着加。`;
+  g.steps=[phase===0?'用手指横着划过第一行，再往下移动一行；每经过一行数一次。':phase===1?'用手指从左到右点过同一行，每颗只数一次。':`先记住每行${cols}颗，从一行接着加下一行。`,'回答这一问后，注意题目会换成下一问；不要一直重复上一问的答案。',`最后把“${rows}行、每行${cols}颗”和总数连起来解释，不要求写乘法算式。`];
+  g.ask='为什么每一行一样多时，可以按一行一行来数，而不必每次都从头逐颗数？';
+  g.answer=`三问依次是${rows}、${cols}、${rows*cols}。总数可以用连加${Array.from({length:rows},()=>cols).join('+')}=${rows*cols}求出。${phase<3?`当前应回答${[rows,cols,rows*cols][phase]}。`:'本题三问已经全部答对。'}`;
+  g.pitfall='横向是一行，竖向是一列。要避免把“几行”“每行几个”“总共有几个”混成同一个问题；每答一次都重新读题。';
+  break;
+ }
+ case 'share':{
+  const total=q,left=w.left||0,right=w.right||0,rest=total-left-right,each=total/2;
+  const adjustments=[];
+  if(left>each)adjustments.push(`先从左边收回${left-each}颗`);
+  if(right>each)adjustments.push(`先从右边收回${right-each}颗`);
+  if(left<each)adjustments.push(`给左边补${each-left}颗`);
+  if(right<each)adjustments.push(`给右边补${each-right}颗`);
+  g.state=`总共${total}颗；左边${left}颗，右边${right}颗，篮子里还剩${rest}颗。`;
+  g.say=`这${total}颗糖要让两位小朋友都拿得一样多。我们一人一颗轮流发，全部发完后，再检查是不是公平。`;
+  g.steps=[`先看看当前左边${left}颗、右边${right}颗：少的一边可以先补；分多了也能收回。`,rest?'用“给左边一颗”和“给右边一颗”继续分，边分边比较两边。':'篮子里已经没有糖了。若两边还不一样多，要先从多的一边收回，再给少的一边。','两边一样多还不够，也要把篮子里的糖全部分完。最后把两边合起来核对总数。'];
+  g.ask='什么才算分得公平：两边的盘子一样大，还是每个人得到的糖一样多？';
+  g.answer=`每人应有${each}颗，${each}+${each}=${total}。${adjustments.length?`从当前继续，可${adjustments.join('，再')}。`:'两边已经同样多，所有糖也都分完了。'}每人得到总数的一半。`;
+  g.pitfall='“分完了”不一定是“平均分”。左右各有一些也不够，必须数量相等；当前如果分得不均，可用收回按钮调整。';
+  break;
+ }
+ case 'chart':{
+  const values=q,names=['苹果','梨子','葡萄'],min=r%2===1,word=min?'最少':'最多',best=(min?Math.min(...values):Math.max(...values)),i=values.indexOf(best);
+  g.state=`${names.map((n,j)=>n+values[j]+'票').join('，')}；本题找票数${word}的。`;
+  g.say=`这是大家给水果投票的记录。一根柱子代表一种水果，越高表示票越多。这一题要找“${word}”，先把这两个字记清楚。`;
+  g.steps=['先读每根柱子下面的水果名，知道三根柱子各代表什么。',`比较柱子高低。本题找${word}，就留意最${min?'矮':'高'}的那一根。`,'再看柱子上的票数，核对高低和数字是否一致，然后点击那根柱子。'];
+  g.ask=`找到${word}以后，再看看哪种水果票数${min?'最多':'最少'}，它们相差多少票？`;
+  g.answer=`应选${names[i]}，有${best}票，是三个数${values.join('、')}中${min?'最小':'最大'}的。最多与最少相差${Math.max(...values)-Math.min(...values)}票。`;
+  g.pitfall='这一类题会交替问“最多”和“最少”，不要每次都选最高。图表使用相同尺度时，柱子高低才可以直接比较。';
+  break;
+ }
+ case 'chance':{
+  const [red,blue]=q,draws=w.draws||[],reds=draws.filter(x=>x==='red').length,more=red>blue?'红':'蓝';
+  g.state=`袋内${red}个红球、${blue}个蓝球；${draws.length?`最近显示的${draws.length}次抽球：红${reds}次、蓝${draws.length-reds}次`:'还没有抽球记录'}。`;
+  g.say=`袋子里有${red}个红球和${blue}个蓝球。闭着眼睛随手摸一个，你觉得哪种颜色机会更大？我们说的是“更容易”，不是“保证每次”。`;
+  g.steps=[`先比较袋内两种颜色各有多少，让孩子说明自己的预测。`,s.good?'已经做过预测，可以点“试着抽一球”观察结果。':'先选自己认为更容易出现的颜色；答对以后会出现“试着抽一球”按钮。','每次抽完都放回再抽，袋内组成不变。即使抽到较少的颜色，也请孩子想一想：这会不会发生？'];
+  g.ask=`${more}球更多，就能保证下一次一定抽到${more}球吗？为什么也可能抽到另一种？`;
+  g.answer=`${more}色更容易：${red+blue}个球里有${Math.max(red,blue)}个是${more}色。假设每个球被抽到的机会相同，球多的颜色机会更大，但另一个颜色也可能出现。少量试抽不必恰好按袋内比例出现；模拟每次会把球放回。`;
+  g.pitfall='不要把“机会更大”说成“肯定会发生”，也不要因为刚抽到另一种颜色就说原来的判断错了。页面最多显示最近一组14次记录，再抽时会开始一组新记录。';
+  break;
+ }
+ default:throw new Error('缺少家长讲解：'+current);
+ }
+ if(s.good&&current!=='chance'){
+  g.steps=['这道题已经完成。先指着当前画面，请孩子复述刚才做了什么。',g.ask,'需要重演时，关闭讲解后点“重来”；要更换数字或规则，点“再玩一题”。'];
+ }
+ return g;
+}
+let guideViewKey='',guideOpener=null;
+function renderParentGuide(){
+ const l=L.find(x=>x.id===current),s=getS(),g=getParentGuide(),key=current+':'+s.round;
+ if(key!==guideViewKey){$('guideAnswerDetails').open=false;$('guideScroll').scrollTop=0;guideViewKey=key}
+ $('guideLessonLabel').textContent=`家长讲解 · ${l.t}`;
+ $('guideCurrentQuestion').textContent=$('playStage').querySelector('.scene-title')?.textContent.trim()||l.d;
+ $('guideCurrentState').textContent=(s.good?'本题已完成 · ':s.bad?'正在尝试 · ':'')+g.state;
+ $('guideSpeech').textContent='“'+g.say.replaceAll('“','‘').replaceAll('”','’')+'”';
+ $('guideSteps').innerHTML=g.steps.map(step=>'<li><span>'+txt(step)+'</span></li>').join('');
+ $('guideQuestion').textContent=g.ask;
+ $('guideConcept').textContent=g.concept;
+ $('guideAnswer').textContent=g.answer;
+ $('guidePitfall').textContent=g.pitfall;
+}
+function openParentGuide(){
+ const dialog=$('parentGuide');guideOpener=document.activeElement;
+ guideViewKey='';renderParentGuide();$('guideAnswerDetails').open=false;$('guideScroll').scrollTop=0;
+ $('sourceOverlay').hidden=true;
+ if(!dialog.open)dialog.showModal();
+ document.body.classList.add('parent-guide-open');
+ $('parentGuideClose').focus();
+}
+function closeParentGuide(){if($('parentGuide').open)$('parentGuide').close()}
+$('parentGuideBtn').addEventListener('click',openParentGuide);
+$('parentGuideClose').addEventListener('click',closeParentGuide);
+$('parentGuideReturn').addEventListener('click',closeParentGuide);
+$('parentGuide').addEventListener('close',()=>{document.body.classList.remove('parent-guide-open');if(guideOpener?.isConnected)guideOpener.focus()});
+// 只有在遮罩处按下并松开才关闭，避免拖动选中文字时误触。
+let guideBackdropDown=false;
+$('parentGuide').addEventListener('pointerdown',e=>{const b=e.currentTarget.getBoundingClientRect();guideBackdropDown=e.target===e.currentTarget&&(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)});
+$('parentGuide').addEventListener('click',e=>{const b=e.currentTarget.getBoundingClientRect();if(guideBackdropDown&&e.target===e.currentTarget&&(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom))closeParentGuide();guideBackdropDown=false});
+$('parentGuide').addEventListener('keydown',e=>{
+ if(e.key!=='Tab')return;
+ const dialog=e.currentTarget,focusable=[...dialog.querySelectorAll('button:not([disabled]), summary, a[href], input:not([disabled]), [tabindex="0"]')].filter(el=>el.getClientRects().length);
+ const first=focusable[0],last=focusable[focusable.length-1];
+ if(!first)return;
+ if(e.shiftKey&&(document.activeElement===first||!dialog.contains(document.activeElement))){e.preventDefault();last.focus()}
+ else if(!e.shiftKey&&(document.activeElement===last||!dialog.contains(document.activeElement))){e.preventDefault();first.focus()}
+});
+
+$('mobileNav').addEventListener('click',()=>{$('sidebar').classList.toggle('compact')});if(window.innerWidth<691)$('sidebar').classList.add('compact');render();
+// 接入科学小岛宿主；重玩当前关卡时保留已探索记录。
+window.addEventListener('message',e=>{
+ if(parent===window||e.source!==parent||e.origin!==location.origin)return;
+ if(e.data?.type==='mp-reset'){closeParentGuide();$('sourceOverlay').hidden=true;fresh();render()}
+});
+window.__mpReady=true;
+if(parent!==window)parent.postMessage({type:'mp-ready',id:'group-theory'},location.origin);
+</script>
+</body>
+</html>

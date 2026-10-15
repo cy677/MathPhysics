@@ -2,6 +2,8 @@
 const sync=window.MathPhysicsSync;
 await sync.ready;
 const $=id=>document.getElementById(id),copy=v=>JSON.parse(JSON.stringify(v));
+const tabIds=sync.snapshot().accountsEnabled?['assessment','growth','profiles']:['assessment','growth'];
+$('tab-profiles').hidden=!sync.snapshot().accountsEnabled;
 const node=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 const button=(text,fn,cls)=>{const e=node('button',text,cls);e.type='button';e.onclick=fn;return e;};
 const svgNode=(tag,attrs={},text)=>{const e=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const[k,v]of Object.entries(attrs))e.setAttribute(k,String(v));if(text!==undefined)e.textContent=text;return e;};
@@ -15,13 +17,14 @@ function moduleTitle(id){return catalog.modules.find(m=>m.id===id)?.title||id;}
 function objectiveTitle(id){return catalog.objectives.find(o=>o.id===id)?.title||id;}
 function matchesModule(objective,selected){return selected==='all'||(catalog.modules.find(m=>m.id===selected)?.objectives||[]).includes(objective.id)||objective.moduleId===selected;}
 function selectTab(name){
+ if(!tabIds.includes(name))name='assessment';
  currentTab=name;
  for(const id of ['assessment','growth','profiles']){const selected=id===name;$('tab-'+id).setAttribute('aria-selected',String(selected));$('tab-'+id).tabIndex=selected?0:-1;$('panel-'+id).hidden=!selected;}
  history.replaceState(null,'','#'+name);
  if(name==='growth')run(loadGrowth);if(name==='profiles')renderProfiles();
 }
 for(const id of ['assessment','growth','profiles'])$('tab-'+id).onclick=()=>selectTab(id);
-document.querySelector('.learning-tabs').onkeydown=e=>{const ids=['assessment','growth','profiles'],i=ids.indexOf(currentTab),next={ArrowRight:(i+1)%3,ArrowLeft:(i+2)%3,Home:0,End:2}[e.key];if(next!==undefined){e.preventDefault();selectTab(ids[next]);$('tab-'+ids[next]).focus();}};
+document.querySelector('.learning-tabs').onkeydown=e=>{const ids=tabIds,i=ids.indexOf(currentTab),next={ArrowRight:(i+1)%ids.length,ArrowLeft:(i+ids.length-1)%ids.length,Home:0,End:ids.length-1}[e.key];if(next!==undefined){e.preventDefault();selectTab(ids[next]);$('tab-'+ids[next]).focus();}};
 $('manage-profiles').onclick=()=>window.MathPhysicsSyncUI?.open();
 $('refresh-attempts').onclick=()=>run(loadAttempts);$('refresh-growth').onclick=()=>run(loadGrowth);
 $('module-filter').onchange=()=>{page=0;renderCatalog();};$('objective-search').oninput=()=>{page=0;renderCatalog();};
@@ -60,7 +63,7 @@ async function loadAttempts(){
  finally{loadingAttempts=false;renderAttempts();}
 }
 function renderAttempts(){
- const list=$('attempt-list');list.replaceChildren();if(!sync.snapshot().account){list.append(node('p','登录后可查看此账号自己的考核记录。','empty-card'));return;}
+ const list=$('attempt-list');list.replaceChildren();if(!sync.snapshot().account){list.append(node('p',sync.snapshot().accountsEnabled?'登录后可查看此账号自己的考核记录。':'连接学习服务后，可查看本机的考核记录。','empty-card'));return;}
  const records=new Map(remoteAttempts.map(a=>[a.id,{attempt:a,result:a.result}]));for(const d of sync.drafts())records.set(d.attempt.id,d);
  const drafts=[...records.values()].sort((a,b)=>new Date(b.attempt.createdAt)-new Date(a.attempt.createdAt));
  if(!drafts.length)list.append(node('p','还没有发放正式考核。上方选一个目标即可开始。','empty-card'));
@@ -210,11 +213,11 @@ function renderResult(result){
  }),'primary');repeat.id='repeat-assessment';repeat.disabled=sync.snapshot().connection!=='online';
  parent.append(repeat,button('查看成长记录',()=>selectTab('growth')));renderAttempts();
 }
-function renderProfiles(){const content=$('profile-content'),state=sync.snapshot();content.replaceChildren();if(!state.account){content.append(node('p','登录后查看自己的档案、考核成绩和成长记录。','empty-card'));return;}content.append(node('p','当前账号：'+(state.account.username||'此前登录的账号（离线副本）')));const list=node('div',undefined,'profile-list');for(const p of state.profiles){const b=button(p.label,()=>run(()=>sync.selectProfile(p.id)));b.setAttribute('aria-pressed',String(p.id===state.profileId));list.append(b);}content.append(list,node('p',state.connection==='online'?'档案归属由服务器会话确认。':'当前使用本机离线副本，联网后核对会话。','notice'));}
+function renderProfiles(){const content=$('profile-content'),state=sync.snapshot();content.replaceChildren();if(!state.accountsEnabled)return;if(!state.account){content.append(node('p','登录后查看自己的档案、考核成绩和成长记录。','empty-card'));return;}content.append(node('p','当前账号：'+(state.account.username||'此前登录的账号（离线副本）')));const list=node('div',undefined,'profile-list');for(const p of state.profiles){const b=button(p.label,()=>run(()=>sync.selectProfile(p.id)));b.setAttribute('aria-pressed',String(p.id===state.profileId));list.append(b);}content.append(list,node('p',state.connection==='online'?'档案归属由服务器会话确认。':'当前使用本机离线副本，联网后核对会话。','notice'));}
 function metric(label,value){const e=node('div');e.append(node('strong',value),node('span',label));return e;}
 async function loadGrowth(){
  const parent=$('growth-content'),state=sync.snapshot(),token=generation;
- if(!state.account){parent.replaceChildren(node('p','登录后可查看自己的正式考核与积分。没有测量记录时不会显示能力分数。','empty-card'),button('登录 / 选择档案',()=>window.MathPhysicsSyncUI?.open(),'primary'));return;}
+ if(!state.account){parent.replaceChildren(node('p',state.accountsEnabled?'登录后可查看自己的正式考核与积分。':'连接学习服务后，可查看本机的考核成绩与积分。','empty-card'));if(state.accountsEnabled)parent.append(button('登录 / 选择档案',()=>window.MathPhysicsSyncUI?.open(),'primary'));return;}
  if(state.connection!=='online'){if(!parent.children.length)parent.append(node('p','离线时无法取到新的服务器成长记录。待同步的答案尚未计分。','empty-card'));throw Error('当前离线，成长页保留上一次服务器确认的数据。');}
  const data=await sync.profileRequest('/growth');if(token!==generation)return;
  const sum=(data.ledger||[]).reduce((s,e)=>s+e.delta,0),moduleSum=(data.moduleContributions||[]).reduce((s,e)=>s+e.credits,0);if(sum!==data.totals.credits||moduleSum!==sum)throw Error('服务器积分总数与流水暂未一致，请重试。');
@@ -238,5 +241,5 @@ window.addEventListener('mathphysics:scope-change',()=>renderCatalog());
 window.addEventListener('online',()=>{renderCatalog();run(loadAttempts);});window.addEventListener('offline',renderCatalog);
 await run(loadCatalog);await run(loadAttempts);const hash=location.hash.slice(1);if(['growth','profiles'].includes(hash))selectTab(hash);
 const requestedAttempt=new URLSearchParams(location.search).get('attempt');
-if(requestedAttempt)await run(async()=>{if(!sync.snapshot().account)throw Error('登录原账号并选择发卷时的档案后，可以继续这次考核。');const saved=sync.drafts().find(d=>d.attempt.id===requestedAttempt);const attempt=sync.snapshot().connection==='online'?await sync.fetchAttempt(requestedAttempt):saved?.attempt;if(!attempt)throw Error('这次考核不在当前档案的本机副本中。');await openAttempt(attempt);});
+if(requestedAttempt)await run(async()=>{if(!sync.snapshot().account)throw Error(sync.snapshot().accountsEnabled?'登录原账号并选择发卷时的档案后，可以继续这次考核。':'请连接发放这次考核的学习服务后重试。');const saved=sync.drafts().find(d=>d.attempt.id===requestedAttempt);const attempt=sync.snapshot().connection==='online'?await sync.fetchAttempt(requestedAttempt):saved?.attempt;if(!attempt)throw Error('这次考核不在当前档案的本机副本中。');await openAttempt(attempt);});
 window.__mpLearningApp={get active(){return active;},get responses(){return copy(responses);},selectTab,openAttempt,loadGrowth};

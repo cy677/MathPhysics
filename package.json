@@ -3,7 +3,7 @@
   "version": "0.4.0",
   "private": true,
   "type": "module",
-  "description": "Interactive primary-school geometry, physics and spaceflight classroom",
+  "description": "Interactive primary-school mathematics, physics and Chinese learning island",
   "license": "MIT",
   "scripts": {
     "test:spatial": "node --test tests/spatial-*.test.mjs",
@@ -67,7 +67,14 @@
     "test:word-problems": "node --test tests/word-problems*.test.mjs",
     "test:word-problems:browser": "node tests/word-problems-browser.mjs",
     "build:assessment": "node scripts/build_assessment_catalog.mjs",
-    "build:word-problems": "node scripts/build_word_problem_catalog.mjs --require-all"
+    "build:word-problems": "node scripts/build_word_problem_catalog.mjs --require-all",
+    "build:idioms": "node scripts/python.mjs lessons/idiom-match/src/build.py",
+    "test:idioms": "node lessons/idiom-match/src/test_core.cjs",
+    "test:idioms:browser": "node tests/idiom-practice-browser.mjs",
+    "test:subjects:browser": "node tests/subjects-browser.mjs",
+    "test:group-theory:browser": "node tests/group-theory-browser.mjs",
+    "test:grade-one": "node --test tests/grade-one-chinese.test.mjs",
+    "test:grade-one:browser": "node tests/grade-one-chinese-browser.mjs"
   },
   "devDependencies": {
     "playwright": "1.56.0"

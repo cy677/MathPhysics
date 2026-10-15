@@ -49,7 +49,7 @@ try{
   const other=all.find(s=>s.collection!==chosen.collection&&s.objectiveId===chosen.objectiveId&&s.difficulty===chosen.difficulty)||chosen;
   const objective=current.objectives.find(o=>o.id===chosen.objectiveId);assert.equal(objective.fixedCount,3);
   record(2,'unchanged-204-objectives-and-125-math-goals',{objectiveId:objective.id,difficulty:chosen.difficulty,fixedCount:3,maximumCreditsPerExistingBucket:10000});
-  app=await createApplication({databasePath:dbPath,staticRoot:root});
+  app=await createApplication({accountsEnabled:true,databasePath:dbPath,staticRoot:root});
   const account=await createAccount(app.db,{username,password,label:'限定验收甲档案'}),address=await app.listen(0),api=apiFor('http://127.0.0.1:'+address.port);
   await api('/session');await api('/login',{method:'POST',data:{username,password}});
   const profile=account.profile.id,profileB=(await api('/profiles',{method:'POST',data:{label:'限定验收乙档案'},status:201})).profile.id;
@@ -89,7 +89,7 @@ try{
   // this deep Windows workspace's synthetic destination below MAX_PATH.
   const backupPath=join(evidence,'private','b-'+randomUUID().slice(0,8)+'.db'),restoredPath=join(evidence,'private','r-'+randomUUID().slice(0,8)+'.db');
   await backupDatabase(app.db,backupPath,{staticRoot:root});await restoreDatabase(backupPath,restoredPath,{staticRoot:root});
-  restoredApp=await createApplication({databasePath:restoredPath,staticRoot:root});const restoredAddress=await restoredApp.listen(0),restoredApi=apiFor('http://127.0.0.1:'+restoredAddress.port);
+  restoredApp=await createApplication({accountsEnabled:true,databasePath:restoredPath,staticRoot:root});const restoredAddress=await restoredApp.listen(0),restoredApi=apiFor('http://127.0.0.1:'+restoredAddress.port);
   await restoredApi('/session');await restoredApi('/login',{method:'POST',data:{username,password}});
   assert.equal((await restoredApi('/profiles/'+profile+'/growth')).totals.credits,10000);assert.equal((await restoredApi('/profiles/'+profileB+'/growth')).totals.credits,0);
   assert.equal((await restoredApi('/profiles/'+profile+'/saves/word-problems')).save.payload.notes,'甲档案待续玩草稿');

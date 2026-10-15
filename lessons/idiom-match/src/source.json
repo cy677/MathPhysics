@@ -1,0 +1,32 @@
+{
+  "source_id": "THUOCL_chengyu_2016",
+  "name": "THUOCL：清华大学开放中文词库 · 成语",
+  "repository": "https://github.com/thunlp/THUOCL",
+  "data_url": "https://github.com/thunlp/THUOCL/blob/master/data/THUOCL_chengyu.txt",
+  "raw_url": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_chengyu.txt",
+  "data_blob_sha": "44d91b3349753dc7f43b53e8cf64cda790c9ea22",
+  "source_rows": 8519,
+  "corpus": "新浪新闻",
+  "corpus_period": "2008-01 至 2016-11",
+  "corpus_documents": 8421097,
+  "source_release_date": "2016-12-24",
+  "retrieved_on": "2026-10-15",
+  "metric": "document_frequency",
+  "metric_definition": "出现该词的语料文档个数；不是该词总出现次数，不是百分比。",
+  "license": "MIT",
+  "citation": "韩世依，张钰晖，马云山，涂存超，郭志芃，刘知远，孙茂松．THUOCL：清华大学开放中文词库．2016．",
+  "ranking_scope": "仅对原游戏已有的1000条成语重新排序，并非所有汉语成语的全国前1000名。",
+  "ordering": "先按精确匹配到的DF降序，同值按原id升序；无精确匹配者附于末尾并按原id升序。",
+  "missing_value": "未匹配到来源词条时df=null，不赋零、不借用异形词数值，也不推断其实际低频。",
+  "coverage": {
+    "total": 1000,
+    "exact_matches": 937,
+    "not_matched": 63
+  },
+  "limitations": [
+    "新闻语料具有文体和年代偏向，不是2026年的实时使用频率。",
+    "使用频率不等于儿童理解难度；五档是词库范围，不是教育部规定的年级分级。",
+    "前200、400、600、800档均有同来源DF；1000档含63条无精确匹配的补充词条。",
+    "原有拼音与入门简释沿用原游戏，不由THUOCL提供，也不代表经过该项目审定。"
+  ]
+}

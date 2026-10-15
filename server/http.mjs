@@ -6,6 +6,8 @@ import {acquireServerLock} from './integrity.mjs';
 import {LearningStore} from './domain.mjs';
 import {ApiError, exactKeys, fail} from './validation.mjs';
 import {normalizeUsername, newSession, readSession, requireAuth, requireCsrf, reserveLogin, sessionCookie, sessionInfo, verifyPassword} from './auth.mjs';
+import {cookies, DEVICE_COOKIE_NAME, readDeviceSession, newDeviceSession, deviceSessionInfo} from './auth.mjs';
+import {runtimeConfig} from './runtime.mjs';
 
 const PREFIX = '/mathphysics/api';
 const BODY_LIMIT = 1048576;
@@ -89,9 +91,11 @@ function safeRequestOrigin(req, publicOrigin, boundHost) {
 }
 
 export async function createApplication({databasePath, staticRoot, registry, production = false, publicOrigin = null,
-  now = Date.now, sessionTtlMs = 12 * 3600000, anonymousTtlMs = 30 * 60000, loginLimits = {}, faultInjector = null, host = '127.0.0.1', onError = null} = {}) {
+  now = Date.now, sessionTtlMs = 12 * 3600000, anonymousTtlMs = 30 * 60000, deviceTtlMs = 365 * 86400000,
+  accountsEnabled, loginLimits = {}, faultInjector = null, host = '127.0.0.1', onError = null} = {}) {
   if (!databasePath || !staticRoot) throw new Error('databasePath and staticRoot are required');
   const root = realpathSync(resolve(staticRoot));
+  accountsEnabled ??= runtimeConfig(root).accountsEnabled;
   if (production && !['127.0.0.1','::1','localhost'].includes(host)) throw new Error('Production API must bind to a loopback host behind the reverse proxy');
   if (publicOrigin) {
     const configured = new URL(publicOrigin);
@@ -112,7 +116,7 @@ export async function createApplication({databasePath, staticRoot, registry, pro
       const expectedOrigin = safeRequestOrigin(req, publicOrigin, host);
       const url = new URL(req.url, expectedOrigin), pathname = url.pathname;
       if (pathname !== PREFIX && !pathname.startsWith(`${PREFIX}/`)) {
-        if (['/', '/mathphysics', '/mathphysics/'].includes(pathname) && (req.method === 'GET' || req.method === 'HEAD')) { res.writeHead(302, {Location:'/mathphysics/learning/'}); res.end(); return; }
+        if (['/', '/mathphysics', '/mathphysics/'].includes(pathname) && (req.method === 'GET' || req.method === 'HEAD')) { res.writeHead(302, {Location:'/mathphysics/index.html'}); res.end(); return; }
         if (req.method !== 'GET' && req.method !== 'HEAD') fail(405, 'method_not_allowed');
         const file = publicFile(root, pathname);
         if (!file) fail(404, 'not_found');
@@ -126,15 +130,23 @@ export async function createApplication({databasePath, staticRoot, registry, pro
         return;
       }
       const parts = pathname.slice(PREFIX.length).split('/').filter(Boolean).map(part => { try { return decodeURIComponent(part); } catch { fail(400, 'invalid_path'); } });
-      const time = now(); let session = readSession(db, req.headers.cookie, time);
+      const time = now(); let session = accountsEnabled ? readSession(db, req.headers.cookie, time) : readDeviceSession(db, req.headers.cookie, time);
       if (req.method === 'GET' && parts.length === 1 && parts[0] === 'session') {
+        if (!accountsEnabled) {
+          let token = cookies(req.headers.cookie).get(DEVICE_COOKIE_NAME);
+          if (!session) { const created = newDeviceSession(db, time, deviceTtlMs); session = created.session; token = created.token; }
+          else db.prepare('UPDATE sessions SET expires_at=? WHERE token_hash=?').run(time + deviceTtlMs, session.token_hash);
+          res.setHeader('Set-Cookie', sessionCookie(token, {secure: production, ttl: deviceTtlMs, name: DEVICE_COOKIE_NAME}));
+          response(res, 200, deviceSessionInfo(db, session)); return;
+        }
         if (!session) {
           const created = newSession(db, null, time, anonymousTtlMs); session = created.session;
           res.setHeader('Set-Cookie', sessionCookie(created.token, {secure: production, ttl: anonymousTtlMs}));
         }
-        response(res, 200, sessionInfo(db, session)); return;
+        response(res, 200, {...sessionInfo(db, session), accountsEnabled: true}); return;
       }
       if (req.method === 'GET' && parts.length === 1 && parts[0] === 'capabilities') { response(res, 200, store.publicCatalog()); return; }
+      if (!accountsEnabled && (['login', 'logout'].includes(parts[0]) || (parts[0] === 'profiles' && parts.length === 1 && req.method !== 'GET') || parts[2] === 'legacy-import')) fail(403, 'accounts_disabled');
       if (!['GET', 'POST', 'PUT'].includes(req.method)) fail(405, 'method_not_allowed');
       if (req.method !== 'GET') requireCsrf(req, session, expectedOrigin);
       if (req.method === 'POST' && parts.length === 1 && parts[0] === 'login') {

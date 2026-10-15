@@ -54,7 +54,7 @@ try {
   const matterFrame = () => page.frames().find(frame => frame.url().includes('/src/adapters/matter.html'));
   const noOverflow = async scope => assert.ok(await scope.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'Horizontal overflow');
 
-  await page.goto(base);
+  await page.goto(base+'#library');
   await page.waitForSelector(`[data-activity="${MATTER_MODULE_ID}"]`);
   assert.equal(await page.locator('[data-activity^="matter-"]').count(), 0);
   assert.equal(await page.locator('[data-activity]').count(), shown.length);
@@ -87,7 +87,7 @@ try {
   }
 
   // Legacy bookmarks and saved visits survive without restricting access.
-  await page.goto(base);
+  await page.goto(base+'#library');
   await page.evaluate(({key}) => localStorage.setItem(key, JSON.stringify({schemaVersion: 1, openIds: ['matter-bridge', 'primary-math'], visited: {'matter-bridge': 123}})), {key: STORAGE_KEY});
   await page.goto(base + '#activity/matter-bridge');
   await page.reload();
@@ -176,7 +176,7 @@ try {
   report.checks.push('Canvas drag still selects physics bodies');
 
   await page.setViewportSize({width: 390, height: 844});
-  await page.goto(base);await page.waitForSelector('[data-activity]');await noOverflow(page);
+  await page.goto(base+'#library');await page.waitForSelector('[data-activity]');await noOverflow(page);
   assert.equal(await page.locator('[data-activity]').count(), shown.length);
   await page.screenshot({path: path.join(output, 'home-mobile.png'), fullPage: true});
   await page.goto(base + 'src/adapters/matter.html');await ready(page, {mode: 'catalog'});await noOverflow(page);

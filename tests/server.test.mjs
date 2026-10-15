@@ -36,7 +36,7 @@ async function fixture(t,options={}) {
   const directory=mkdtempSync(join(tmpdir(),'mathphysics-server-'));
   const databasePath=join(directory,'learning.sqlite3');
   let clock=Date.now(), fault=null;
-  const application=await createApplication({databasePath,staticRoot:ROOT,registry:FIXTURE,now:()=>clock++,faultInjector:name=>{if(fault===name)throw new Error('Synthetic transaction fault');},...options});
+  const application=await createApplication({accountsEnabled:true,databasePath,staticRoot:ROOT,registry:FIXTURE,now:()=>clock++,faultInjector:name=>{if(fault===name)throw new Error('Synthetic transaction fault');},...options});
   const address=await application.listen(0); let base=`http://127.0.0.1:${address.port}`;
   const password=`Synthetic-${randomUUID()}`;
   const first=await createAccount(application.db,{username:'synthetic-one',password,now:clock});
@@ -110,11 +110,11 @@ test('persistent login limit and account/profile/attempt UUID authorization',asy
 test('login failure limits survive restart and production requires HTTPS origin plus loopback binding',async t=>{
   const limits={perIdentity:2,perIp:10,windowMs:900000},f=await fixture(t,{loginLimits:limits}),c=client(f);await c.request('/session');
   for(let index=0;index<2;index++)assert.equal((await c.request('/login',{method:'POST',data:{username:'synthetic-one',password:'Synthetic-wrong-password'}})).status,401);
-  await f.application.close();const restarted=await createApplication({databasePath:f.databasePath,staticRoot:ROOT,registry:FIXTURE,loginLimits:limits});const address=await restarted.listen(0);f.setBase(`http://127.0.0.1:${address.port}`);
+  await f.application.close();const restarted=await createApplication({accountsEnabled:true,databasePath:f.databasePath,staticRoot:ROOT,registry:FIXTURE,loginLimits:limits});const address=await restarted.listen(0);f.setBase(`http://127.0.0.1:${address.port}`);
   try{assert.equal((await c.request('/login',{method:'POST',data:{username:'synthetic-one',password:f.password}})).status,429);}finally{await restarted.close();}
-  await assert.rejects(createApplication({databasePath:f.databasePath,staticRoot:ROOT,registry:FIXTURE,production:true}),/requires explicit HTTPS/);
-  await assert.rejects(createApplication({databasePath:f.databasePath,staticRoot:ROOT,registry:FIXTURE,production:true,publicOrigin:'http://classroom.example'}),/must use HTTPS/);
-  await assert.rejects(createApplication({databasePath:f.databasePath,staticRoot:ROOT,registry:FIXTURE,production:true,publicOrigin:'https://classroom.example',host:'0.0.0.0'}),/loopback/);
+  await assert.rejects(createApplication({accountsEnabled:true,databasePath:f.databasePath,staticRoot:ROOT,registry:FIXTURE,production:true}),/requires explicit HTTPS/);
+  await assert.rejects(createApplication({accountsEnabled:true,databasePath:f.databasePath,staticRoot:ROOT,registry:FIXTURE,production:true,publicOrigin:'http://classroom.example'}),/must use HTTPS/);
+  await assert.rejects(createApplication({accountsEnabled:true,databasePath:f.databasePath,staticRoot:ROOT,registry:FIXTURE,production:true,publicOrigin:'https://classroom.example',host:'0.0.0.0'}),/loopback/);
 });
 
 test('JSON transport and storage enforce size bounds without partially writing',async t=>{
@@ -260,7 +260,7 @@ test('append-only regrade reversals, fact rebuild, WAL backup/restore and server
   await assert.rejects(restoreDatabase(backupPath,restoredPath,{staticRoot:ROOT,replace:true,beforePublish:()=>{throw new Error('Synthetic publish fault');}}),/Synthetic publish fault/);
   const rollbackDb=openDatabase(restoredPath,{staticRoot:ROOT,readOnly:true});try{assert.equal(verifyDatabase(rollbackDb).ok,true);assert.equal(new LearningStore(rollbackDb,FIXTURE).total(profile),10000);}finally{rollbackDb.close();}
   assert.equal((await restoreDatabase(backupPath,restoredPath,{staticRoot:ROOT,replace:true})).ok,true);
-  await f.application.close();const restarted=await createApplication({databasePath:f.databasePath,staticRoot:ROOT,registry:FIXTURE});const address=await restarted.listen(0);f.setBase(`http://127.0.0.1:${address.port}`);
+  await f.application.close();const restarted=await createApplication({accountsEnabled:true,databasePath:f.databasePath,staticRoot:ROOT,registry:FIXTURE});const address=await restarted.listen(0);f.setBase(`http://127.0.0.1:${address.port}`);
   try{const growth=await c.request(path(profile,'/growth'));assert.equal(growth.status,200);assert.equal(growth.value.totals.credits,10000);assert.equal(verifyDatabase(restarted.db).ok,true);}finally{await restarted.close();}
 });
 

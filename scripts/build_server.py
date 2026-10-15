@@ -36,6 +36,8 @@ if not args.check_only:
     subprocess.run([node, str(ROOT / 'scripts/build_assessment_catalog.mjs')], cwd=ROOT, check=True)
     subprocess.run([node, str(ROOT / 'scripts/build_spaceflight_core.mjs')], cwd=ROOT, check=True)
 
+    subprocess.run([sys.executable, str(ROOT / 'lessons/idiom-match/src/build.py')], cwd=ROOT, check=True)
+
     for script in ['build_display_adapters.py', 'build_phet_theme.py']:
         subprocess.run([sys.executable, str(ROOT / 'scripts' / script)], cwd=ROOT, check=True)
 

@@ -551,7 +551,7 @@ async function persistenceChecks(page, base) {
   report.interactions.autosaveReload = true;
   report.interactions.legacyCourseCheckpoint = {question: legacyQuestion.id, recommendedGrade: legacyQuestion.grade};
 
-  await page.goto(`${base}index.html`);
+  await page.goto(`${base}index.html#library`);
   await page.locator('[data-launch="primary-math"]').click();
   await page.waitForFunction(() => document.querySelector('#loading')?.hidden === true &&
     document.querySelector('iframe')?.contentWindow?.__mpReady === true);

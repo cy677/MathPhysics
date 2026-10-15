@@ -5,10 +5,10 @@ import vm from 'node:vm';
 import {randomUUID} from 'node:crypto';
 const source=readFileSync(new URL('../src/sync-client.js',import.meta.url),'utf8');
 const clone=v=>JSON.parse(JSON.stringify(v));
-async function harness({protocol='http:',pathname='/mathphysics/',legacy={},authenticated=true,handler}={}){
+async function harness({protocol='http:',pathname='/mathphysics/',legacy={},authenticated=true,accountsEnabled=true,handler}={}){
  const disk=new Map(Object.entries(legacy)),calls=[],events=new Map(),docEvents=new Map();
  const storage={getItem:k=>disk.get(k)??null,setItem:(k,v)=>disk.set(k,String(v)),removeItem:k=>disk.delete(k)};
- const session={account:authenticated?{id:'a1',username:'synthetic'}:null,profiles:authenticated?[{id:'p1',label:'小橙'},{id:'p2',label:'小蓝'}]:[],csrfToken:'synthetic-csrf'};
+ const session={accountsEnabled,account:authenticated?{id:'a1',username:'synthetic'}:null,profiles:authenticated?[{id:'p1',label:'小橙'},{id:'p2',label:'小蓝'}]:[],csrfToken:'synthetic-csrf'};
  const window={localStorage:storage,crypto:{randomUUID},addEventListener:(n,f)=>{const a=events.get(n)||[];a.push(f);events.set(n,a);},dispatchEvent:e=>{for(const f of events.get(e.type)||[])f(e);}};
  window.document={hidden:false,addEventListener:(n,f)=>docEvents.set(n,f),removeEventListener:()=>{}};
  const context=vm.createContext({window,parent:window,document:window.document,location:{protocol,pathname,origin:'http://localhost'},crypto:{randomUUID},AbortController,CustomEvent:class{constructor(type,options){this.type=type;this.detail=options?.detail;}},setTimeout:()=>1,clearTimeout:()=>{},fetch:async(url,opts)=>{const call={path:url.replace('/mathphysics/api',''),method:opts.method,body:opts.body?JSON.parse(opts.body):null,csrf:opts.headers['X-CSRF-Token']};calls.push(call);const answer=await(handler?.(call,session)||({data:call.path==='/session'?session:call.path==='/login'?session:call.path.includes('/saves')?{saves:[]}:{ok:true}}));return{ok:!answer.status||answer.status<400,status:answer.status||200,json:async()=>answer.data};}});
@@ -87,4 +87,19 @@ test('unsigned classroom cache survives removal of its former mode without impor
 test('a finalized attempt displays official server responses while retaining the unsubmitted local copy',async()=>{
  const attempt={id:'same-attempt',status:'issued',assessment:{items:[{id:'i01',type:'choice'}]}};const official={...attempt,status:'submitted',responses:{i01:1},result:{items:[{id:'i01',correct:true}]}};
  const h=await harness({handler:call=>call.path.endsWith('/same-attempt')?{data:{attempt:official}}:null});h.sync.saveDraft(attempt,{i01:2});h.window.dispatchEvent({type:'offline'});await h.sync.submitAttempt(attempt.id,{i01:2});await h.sync.fetchAttempt(attempt.id);const draft=h.sync.drafts()[0];assert.equal(draft.responses.i01,1);assert.equal(draft.localSubmission.responses.i01,2);assert.equal(draft.result.items[0].correct,true);
+});
+
+
+test('account-free sessions keep local saves, preserve suspended account copies and skip login and sync writes',async()=>{
+ const oldSession=JSON.stringify({account:{id:'old-user'},profiles:[{id:'old-profile',label:'old'}],profileId:'old-profile'});
+ const h=await harness({accountsEnabled:false,legacy:{'mathphysics.state.v1':'old-visit','mathphysics.sync.v1.session':oldSession,'mathphysics.sync.v1.signed-out':'{"pending":true}'}});
+ assert.equal(h.sync.snapshot().accountsEnabled,false);
+ const storage=h.sync.createStorage();assert.equal(storage.getItem('mathphysics.state.v1'),'old-visit');
+ storage.setItem('mathphysics.state.v1','new-visit');await h.sync.flush();
+ assert.equal(h.disk.get('mathphysics.state.v1'),'new-visit');
+ assert.equal(h.disk.get('mathphysics.sync.v1.session'),oldSession);
+ assert.equal(h.calls.some(call=>call.path.includes('/saves')||call.path==='/logout'),false);
+ assert.equal(h.sync.snapshot().queued,0);
+ await assert.rejects(h.sync.login('name','password'),/暂未启用/);
+ await assert.rejects(h.sync.createProfile('name'),/暂未启用/);
 });

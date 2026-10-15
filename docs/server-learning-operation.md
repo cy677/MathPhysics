@@ -6,7 +6,7 @@
 
 学习服务使用 Node.js 24.14.0 及其内置 SQLite 3.51.2，HTTP、密码派生和数据库均使用 Node 内置模块。Python 3 继续负责静态服务与构建。Playwright 仅为测试依赖。
 
-`npm start` 和 `START_WINDOWS.bat` 统一启动 Node 学习服务。默认端口为8317，根路径及 `/mathphysics/` 自动进入 `/mathphysics/learning/` 考核页。本地与远程使用同一套发题、判题和最高分规则，已取消静态演示服务器和静态目录回退。
+`npm start` 和 `START_WINDOWS.bat` 统一启动 Node 学习服务。默认端口为8317，根路径及 `/mathphysics/` 自动进入 `/mathphysics/index.html` 三学科首页。本地与远程使用同一套发题、判题和最高分规则，已取消静态演示服务器和静态目录回退。
 
 数据库默认位于项目父目录的 `runtime/mathphysics.sqlite3`。桌面项目的默认位置是 `C:\Users\cheng\Desktop\runtime\mathphysics.sqlite3`，不在静态根目录内。可以用 `--db` 指定另一个明确的外部路径。SQLite 主文件、WAL、SHM、服务锁和备份不进入源码或交付包。
 
@@ -19,13 +19,17 @@ node --version
 node server/cli.mjs help
 ```
 
-Windows 双击 `START_WINDOWS.bat` 即可启动并打开考核页；首次启动会询问账号名，再隐藏输入并确认密码。也可以在终端执行：
+Windows 双击 `START_WINDOWS.bat` 即可启动并打开三学科首页，无需账号或密码。也可以在终端执行：
 
 ```powershell
 npm start -- --open
 ```
 
-从“账号与档案”登录后即可开始考核。已有账号时启动会直接复用原数据库。密码至少12个字符；没有预置密码。终端保持打开，按 `Ctrl+C` 停止服务。远程部署也可先执行 `npm run server:init -- --username family --label "学习档案"`，随后由服务管理器运行 `serve`。
+点击“开始考核”即可直接选择目标、交卷和查看成长记录。练习进度使用本浏览器存档；服务通过独立浏览器会话保存考核记录，不把所有访问者合并到一个公共档案。终端保持打开，按 `Ctrl+C` 停止服务。
+
+## 保留的账户模式（当前停用）
+
+`config/runtime.json` 的 `accountsEnabled` 当前为 `false`。原账户、会话、练习、考核和积分均保留，不迁移到公共浏览器记录。未来可将开关设为 `true` 并重启，或在单次启动时加入 `--accounts`；账户模式首次启动才会引导创建账号、隐藏输入密码。
 
 已有账号时 `init` 拒绝再次初始化，不覆盖档案。需要第二个账号可执行 `node server/cli.mjs account-add --username family2`。服务默认仅监听回环地址，关闭后再启动继续保留原数据库内容。
 
@@ -38,9 +42,11 @@ npm run start:server -- --db ..\runtime\family.sqlite3 --port 8317
 
 服务会拒绝在静态根目录及其真实符号链接或 junction 下存放数据库和备份。
 
-## 同步、冲突和正式积分
+## 本机存档、同步和正式积分
 
-浏览器先读取会话，再登录或切换档案。写入使用同源会话 Cookie、Origin 与 CSRF token。离线或登录过期时保留待同步副本，不能显示为已经保存到服务器。
+账户关闭时，不显示账户工具条或档案管理，练习不上传账户同步接口。考核仍由服务器签发、判题并保存；浏览器使用独立的 HttpOnly 会话，持续访问时延长有效期。
+
+以下账户同步行为仅在显式恢复账户模式后启用：浏览器先读取会话，再登录或切换档案。写入使用同源会话 Cookie、Origin 与 CSRF token。离线或登录过期时保留待同步副本，不能显示为已经保存到服务器。
 
 存档提交携带 `expectedRevision` 和 `mutationId`。修订不一致返回 `409 revision_conflict`，界面同时保留服务器版本与本地待同步版本，让操作者选择采用服务器或上传本地。相同幂等键用于不同内容返回 `409 idempotency_conflict`。档案切换使旧请求与旧存储句柄失效，防止跨档案串写。
 

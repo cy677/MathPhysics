@@ -213,7 +213,7 @@ try{
   const preserved=['geometry-proofs','spaceflight','jsxgraph-playground','tangram-flat'];
   await hostContext.addInitScript(({key,openIds})=>localStorage.setItem(key,JSON.stringify({schemaVersion:1,openIds,visited:{spaceflight:12345},teacherPreview:false})),{key:STORAGE_KEY,openIds:preserved});
   const host=await hostContext.newPage(),hostErrors=[];host.on('pageerror',e=>hostErrors.push(e.message));
-  await host.goto(base,{waitUntil:'domcontentloaded'});await host.waitForSelector('[data-activity="geometry-proofs"]');
+  await host.goto(base+'#library',{waitUntil:'domcontentloaded'});await host.waitForSelector('[data-activity="geometry-proofs"]');
   await host.locator('#search').fill('转一转图形');
   const singleGradeLabel=await host.locator('[data-activity="jsx-rotation"] .grade-tag').textContent();
   check('Host displays a single grade as one grade label',singleGradeLabel.trim()==='四年级',singleGradeLabel);

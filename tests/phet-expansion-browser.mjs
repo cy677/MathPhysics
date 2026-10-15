@@ -53,7 +53,7 @@ try{
   });
   const host=await context.newPage();
   host.on('pageerror',error=>report.pageErrors.push({source:'host',message:error.message}));
-  await host.goto(base);
+  await host.goto(base+'#library');
   await host.waitForSelector('[data-activity="build-a-molecule"]');
   assert.deepEqual((await host.locator('[data-activity]').evaluateAll(cards=>cards.map(card=>card.dataset.activity))).sort(),
     displayed.map(activity=>activity.id).sort());

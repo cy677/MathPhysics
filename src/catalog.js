@@ -13,7 +13,10 @@ const lessonEntries = {
   'question-bank': 'lessons/question-bank/index.html',
   'matter-library': 'src/adapters/matter.html',
   minesweeper: 'lessons/minesweeper/index.html',
-  sudoku: 'lessons/sudoku/index.html'
+  sudoku: 'lessons/sudoku/index.html',
+  'idiom-match': 'lessons/idiom-match/index.html',
+  'grade-one-chinese': 'lessons/grade-one-chinese/index.html',
+  'group-theory': 'lessons/group-theory/index.html'
 };
 const spatialEntries = new Set(['soma', 'rush', 'merge', 'escape'].map(game => `lessons/spatial-games/index.html?game=${game}`));
 

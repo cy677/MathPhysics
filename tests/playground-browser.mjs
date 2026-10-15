@@ -245,7 +245,7 @@ try {
     }
     record('viewport-'+size.width,{modes:6});
   }
-  await page.setViewportSize({width:1024,height:768});await page.goto(base+'index.html');await page.waitForSelector('[data-activity]');
+  await page.setViewportSize({width:1024,height:768});await page.goto(base+'index.html#library');await page.waitForSelector('[data-activity]');
   const {displayActivities}=await import('../src/catalog.js');
   const [upstream,local,presentation]=await Promise.all(['config/inventory.json','config/local-activities.json','config/presentation.json'].map(async file=>JSON.parse(await fs.readFile(path.join(root,file),'utf8'))));
   const visibleActivities=displayActivities([...upstream.activities,...local.activities],presentation);

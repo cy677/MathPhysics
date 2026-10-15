@@ -1,8 +1,15 @@
 {
   "version": 1,
   "basePath": "/mathphysics/api",
+  "accessMode": {
+    "accountsEnabledByDefault": false,
+    "configuration": "config/runtime.json; explicit CLI --accounts restores account mode",
+    "deviceSession": "GET /session returns accountsEnabled:false and an opaque per-browser owner/profile. Uses independent mathphysics_device HttpOnly SameSite=Strict cookie, renewed for one year. Existing mathphysics_session and account data remain isolated and retained.",
+    "practiceStorage": "local browser records; no account save synchronization while disabled",
+    "disabledRoutes": "login, logout, new profiles and legacy account imports return 403 accounts_disabled; assessments and growth remain available to the owning browser"
+  },
   "authentication": {
-    "session": "GET /session returns {account:null|{id,username},profiles:[{id,label,createdAt}],csrfToken}; the first request creates an anonymous HttpOnly SameSite=Strict cookie",
+    "session": "In account mode, GET /session returns {accountsEnabled:true,account:null|{id,username},profiles:[{id,label,createdAt}],csrfToken}; the first request creates an anonymous HttpOnly SameSite=Strict cookie",
     "mutationHeaders": {
       "Content-Type": "application/json",
       "X-CSRF-Token": "current session csrfToken",

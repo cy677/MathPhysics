@@ -205,7 +205,7 @@ try {
   // Verify that mapped adapters are also reached through the real parent iframe.
   const host=await context.newPage();
   try {
-    await host.goto(base,{waitUntil:'domcontentloaded'});await host.waitForSelector('[data-launch]');
+    await host.goto(base+'#library',{waitUntil:'domcontentloaded'});await host.waitForSelector('[data-launch]');
     check('Every catalog activity is open without a teacher workspace',await host.locator('[data-launch]').count()===visibleActivities.length&&await host.locator('#teacher-open, #teacher-dialog, #only-open, button.locked').count()===0);
     for(const activity of visibleActivities){
       const id=activity.id;

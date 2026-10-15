@@ -26,7 +26,7 @@ try{
  context.on('page',p=>p.on('pageerror',e=>errors.push(e.message)));
  const page=await context.newPage();
  const open=async(game,level)=>{await page.goto(`${base}lessons/spatial-games/index.html?game=${game}${level?'&level='+level:''}`);await page.waitForFunction(()=>window.__mpReady===true);};
- await page.goto(base);await page.locator('[data-launch=spatial-soma]').waitFor();await page.locator('.island[data-zone=logic]').click();
+ await page.goto(base+'#library');await page.locator('[data-launch=spatial-soma]').waitFor();await page.locator('#zone-filter [data-zone=logic]').click();
  check('all six logic games are present with four new SVG covers',await page.locator('#cards .activity-card').count()===6&&await page.locator('img[src*="assets/spatial/"]').count()===4);
  await page.screenshot({path:path.join(output,'host-desktop.png'),fullPage:true});
  for(const game of ['soma','rush','merge','escape']){await page.locator(`[data-launch=spatial-${game}]`).click();await page.waitForFunction(()=>document.querySelector('#stage iframe')?.contentWindow.__mpReady&&!document.querySelector('#loading').hidden===false);const frame=page.frames().find(f=>f.url().includes('/spatial-games/'));check(`${game} launches in host`,!!frame);await frame.locator('.level-card:not(:disabled)').first().click();await page.locator('#player-reset').click();check(`${game} accepts host restart`,(await state(frame)).screen==='playing');await page.locator('#player-back').click();}

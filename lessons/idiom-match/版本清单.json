@@ -1,0 +1,15 @@
+{
+  "version": "2.0",
+  "html_sha256": "8b2e96e07e02a03a1038457c95de8667d7e30a6a151dd3bea6c6422441419846",
+  "word_counts": [
+    200,
+    400,
+    600,
+    800,
+    1000
+  ],
+  "tests": {
+    "core_games": 1620,
+    "browser_checks": 57
+  }
+}

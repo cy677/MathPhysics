@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2c725a"><meta name="description" content="五档成语词库与图片练习词库，自选玩法难度；练习词库每局全部出现。可离线游玩。">
+<title>成语消消乐 · 随机难度版</title>
+<style>__STYLE__</style>
+</head>
+<body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v15M12 5C8 2 4 3 2 4v15c3-1 7-1 10 1 3-2 7-2 10-1V4c-2-1-6-2-10 1Z"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 3C9 2 3 7 4 14c0 4 5 7 9 5 6-3 7-11 7-16Z"/><path d="M3 22C6 14 10 10 16 7"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m8 4 8 8-8 8"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+<symbol id="i-hint" viewBox="0 0 24 24"><path d="M8 17c0-4-3-4-3-8a7 7 0 0 1 14 0c0 4-3 4-3 8M8 17h8M9 20h6M10 23h4"/><path d="M9 9c0-2 1-3 3-3"/></symbol>
+<symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 5h3c5 0 6 14 11 14h4M17 15l4 4-4 4M3 19h3c2 0 4-4 5-7M14 7c1-2 2-2 3-2h4M17 1l4 4-4 4"/></symbol>
+<symbol id="i-undo" viewBox="0 0 24 24"><path d="M4 9h9a7 7 0 0 1 0 14M8 4 3 9l5 5" transform="translate(0 -2)"/></symbol>
+<symbol id="i-restart" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 2 9M3 4v6h6"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 0 1 6 0c0 2-3 2-3 4M12 17h.01"/></symbol>
+<symbol id="i-full" viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5V4ZM15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/></symbol>
+<symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="2.5" fill="var(--paper)"/><circle cx="16" cy="12" r="2.5" fill="var(--paper)"/><circle cx="10" cy="18" r="2.5" fill="var(--paper)"/></symbol>
+<symbol id="i-next" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+</svg>
+<main class="app">
+<header class="top">
+ <div class="brand"><span class="seal" aria-hidden="true">成</span><div><h1>成语消消乐</h1><div class="subtitle">两字成牌 · 四字成趣</div></div></div>
+ <div class="top-right">
+  <button class="collection" id="collectionBtn" title="打开已收集的成语"><svg class="icon"><use href="#i-leaf"/></svg><span class="collection-label">已收集</span><span><b id="seenCount">0</b> / <span id="totalWords">1000</span></span></button>
+  <button class="textbtn" id="bookBtn"><svg class="icon"><use href="#i-book"/></svg>成语本</button>
+  <button class="iconbtn active" id="pinyinBtn" aria-label="显示拼音" aria-pressed="true" title="显示 / 隐藏拼音（P）" style="font-family:var(--serif);font-size:19px;font-weight:700">拼</button>
+  <button class="iconbtn" id="settingsBtn" aria-label="游戏设置" title="设置"><svg class="icon"><use href="#i-settings"/></svg></button>
+  <button class="iconbtn" id="helpBtn" aria-label="玩法说明" title="玩法说明"><svg class="icon"><use href="#i-help"/></svg></button>
+  <button class="iconbtn fullscreen-btn" id="fullscreenBtn" aria-label="全屏" title="全屏"><svg class="icon"><use href="#i-full"/></svg></button>
+ </div>
+</header>
+<section class="roundbar" aria-label="随机对局设置与进度">
+ <button class="round-title" id="roundsBtn" title="选择词库、难度和本局数量"><span class="round-stamp" aria-hidden="true"><svg class="icon"><use href="#i-settings"/></svg></span><span class="round-caption"><strong id="roundName">轻松 · 200 词库</strong><span id="roundCaption">10 个成语 / 20 张牌 · 随机抽取</span></span><svg class="icon chevron"><use href="#i-chevron"/></svg></button>
+ <div class="round-progress"><span class="p-label">本局</span><div class="progress-track" role="progressbar" aria-label="本局消除进度" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="progressTrack"><div class="progress-fill" id="progressFill"></div></div><span class="round-count"><span id="matchedCount">0</span> / <span id="targetCount">10</span></span></div>
+ <button class="tool primary new-round" id="newRoundBtn"><svg class="icon"><use href="#i-shuffle"/></svg>换一组</button>
+</section>
+<section class="board-shell" id="boardShell" aria-label="成语牌桌"><div class="board" id="board" role="grid" aria-label="选择两张牌，拼成四字成语"></div><svg id="connection" aria-hidden="true"></svg></section>
+<section class="feedback" id="feedback" aria-live="polite" aria-atomic="true"></section>
+<footer class="bottom"><div class="bottom-note"><span class="timer"><svg class="icon"><use href="#i-clock"/></svg><span id="timer">00:00</span></span><span class="saved-label">已完成 <b id="roundsCount">0</b> 局 · 自动保存</span><span class="storage-note">本次进度暂无法保存</span></div><div class="tools"><button class="tool" id="hintBtn"><svg class="icon"><use href="#i-hint"/></svg>提示<span class="key">H</span></button><button class="tool" id="shuffleBtn"><svg class="icon"><use href="#i-shuffle"/></svg>洗牌<span class="key">S</span></button><button class="tool" id="undoBtn" disabled><svg class="icon"><use href="#i-undo"/></svg>撤销<span class="key">U</span></button><button class="tool" id="restartBtn" title="重玩本局"><svg class="icon"><use href="#i-restart"/></svg><span class="restart-label">重玩</span></button><button class="tool book-tool" id="roundBookBtn"><svg class="icon"><use href="#i-book"/></svg>本局成语</button></div></footer>
+</main>
+<div class="notice" id="notice" role="status" aria-live="polite"></div>
+<dialog id="roundDialog" class="round-dialog" aria-labelledby="roundTitle">
+ <div class="modal-head"><div><h2 id="roundTitle">你的牌局</h2><p>选择词库与难度；练习词库每局全部出现</p></div><button class="iconbtn" data-close="roundDialog" aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button></div>
+ <div class="modal-body config-body">
+  <div class="config-field"><label for="poolSelect"><span class="config-step">01</span>选择词库</label><select id="poolSelect"><option value="practice">练习词库 · 图片词语全部出现</option><option value="200">200 条 · 高频优先</option><option value="400">400 条 · 扩充词库</option><option value="600">600 条 · 继续拓展</option><option value="800">800 条 · 广泛积累</option><option value="1000">1000 条 · 完整词库</option></select><p class="field-note" id="poolNote">小词库包含在大词库中，按公开新闻语料的文档频次排序。</p></div>
+  <div class="config-field"><label for="difficultySelect"><span class="config-step">02</span>选择难度</label><select id="difficultySelect"><option value="easy">轻松 · 自由配对，前后分色</option><option value="normal">标准 · 直线配对，可拖动牌组</option><option value="hard">挑战 · 直线配对，不标前后段</option></select><p class="field-note">切换到挑战难度时默认隐藏拼音，可随时手动开启。</p></div>
+  <div class="config-field" id="countField"><label for="countInput"><span class="config-step">03</span>每局成语数量</label><div class="count-editor"><input id="countInput" type="number" min="4" max="30" step="1" value="10" inputmode="numeric" aria-describedby="countNote"><span>个成语</span><span class="count-range">4—30，任意整数</span></div><div class="count-presets" role="group" aria-label="常用数量"><button data-count="6">6 个</button><button data-count="10" class="active">10 个</button><button data-count="15">15 个</button><button data-count="20">20 个</button><button data-count="30">30 个</button></div><p class="field-note" id="countNote">每个成语拆成两张牌。同一局不重复抽取同一个成语。</p></div>
+  <div class="config-preview" id="configPreview"></div><div class="config-actions"><button class="source-link" id="sourceBtn">词频依据与说明</button><button class="tool primary" id="startRoundBtn"><span id="startRoundLabel">随机开局</span><svg class="icon"><use href="#i-next"/></svg></button></div>
+ </div>
+</dialog>
+<dialog id="bookDialog" aria-labelledby="bookTitle"><div class="modal-head"><div><h2 id="bookTitle">我的成语本</h2><p id="bookSubtitle">每一次正确配对，都留下一个新收获</p></div><button class="iconbtn" data-close="bookDialog" aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button></div><div class="modal-body" id="bookBody"><div class="book-controls"><input id="bookSearch" class="search" type="search" placeholder="搜索成语、拼音或释义" aria-label="搜索成语"><select id="bookGroup" aria-label="选择主题"><option value="">全部主题</option></select></div><div class="book-tabs"><button data-book-tab="round">本局成语</button><button data-book-tab="pool" class="active">分档词库</button><button data-book-tab="all">全部词语</button><button data-book-tab="seen">已收集</button></div><div class="book-source-row"><label for="bookPool">词库范围</label><select id="bookPool"><option value="practice">练习词库 · 32 个</option><option value="200">200 条</option><option value="400">400 条</option><option value="600">600 条</option><option value="800">800 条</option><option value="1000">1000 条</option></select><button class="source-link" id="bookSourceBtn">查看词频依据</button></div><div class="word-list" id="wordList"></div><div class="pagination" id="bookPages"></div></div></dialog>
+<dialog id="helpDialog" aria-labelledby="helpTitle"><div class="modal-head"><div><h2 id="helpTitle">把成语找回来</h2><p>两字成牌，四字成趣；每局都是一组新成语</p></div><button class="iconbtn" data-close="helpDialog" aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button></div><div class="modal-body">
+ <div class="rule-block"><span class="rule-number">一</span><div><h3>轻松：两张点对，就消除</h3><p>点选两张牌，或从一张拖到另一张。绿色「上」牌与棕色「下」牌合成词库中的成语就消除，不受位置限制，先选后半段也可以。</p><div class="rule-example"><span class="mini-tile">一心</span>＋<span class="mini-tile tail">一意</span>＝<strong>一心一意</strong></div></div></div>
+ <div class="rule-block"><span class="rule-number">二</span><div><h3>标准：成语正确，直线畅通</h3><p>两张牌须在同一行或同一列，中间没有其他牌。上下左右拖牌时，同方向相邻的牌会一起移动；移动后形成新的可消除配对才有效，否则复原。不使用转弯连线。</p></div></div>
+ <div class="rule-block"><span class="rule-number">三</span><div><h3>挑战：自己判断前后段</h3><p>沿用标准难度的直线与拖牌规则，但不再用颜色和「上／下」标记提示前后段。切换到此难度默认关闭拼音，仍可手动打开。</p></div></div>
+ <div class="rule-block"><span class="rule-number">四</span><div><h3>选择词库，开始练习</h3><p>练习词库包含图片中的全部 32 个词语，每局全部出现，不选择数量。五档成语词库仍可随机抽取 4—30 个成语。「换一组」开始新牌局；「重玩」保留本局词语；「洗牌」只改变剩余牌的位置。不限时，没有步骤时自动重排剩余牌。</p></div></div>
+ <div class="rule-note">键盘：方向键移动焦点，回车选牌；H 提示，S 洗牌，U 撤销，P 切换拼音。标准／挑战难度选牌后，Alt＋方向键可尝试有效拖动。<br>随机抽题会避开可能留下无法配完残局的交叉组合；同一局不重复抽题，不保证不同局完全不重复。<br>拼音沿用词典本调标注；简释呈现主要常见含义。词频档位不等于年级或理解难度，不是学校指定必背表。</div>
+</div></dialog>
+<dialog id="sourceDialog" class="source-dialog" aria-labelledby="sourceTitle"><div class="modal-head"><div><h2 id="sourceTitle">词频从哪里来？</h2><p>同一来源、同一指标，保留缺失值</p></div><button class="iconbtn" data-close="sourceDialog" aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button></div><div class="modal-body source-body">
+ <div class="source-summary"><div><b>937</b><span>精确匹配到词频</span></div><div><b>63</b><span>未匹配到来源词条</span></div></div>
+ <h3>清华大学开放中文词库 THUOCL</h3><p>使用其中成语词表的 DF（Document Frequency）：<strong>含有这个词的文档个数</strong>，不是该词总出现次数，也不是百分比。</p>
+ <dl class="source-facts"><div><dt>语料范围</dt><dd>新浪新闻 · 2008年1月—2016年11月</dd></div><div><dt>文档数量</dt><dd>8,421,097 篇</dd></div><div><dt>成语源词表</dt><dd>8,519 条 · 标注更新日期 2016-12-24</dd></div><div><dt>本次使用</dt><dd>仅重排原游戏的 1000 条，不是全国成语前 1000 名</dd></div></dl>
+ <h3>五档词库，逐级包含</h3><p>200 ⊂ 400 ⊂ 600 ⊂ 800 ⊂ 1000。937 条按 DF 从高到低排序；数值相同时按原词条编号排序。63 条没有精确匹配的词条附于完整词库末尾，DF 留空，不视为低频或零频。</p><p>200、400、600、800 档全部有同来源 DF；1000 档另外保留未匹配词条。成语本中的“库内序号”只是本游戏的排列位置。</p>
+ <div class="rule-note">新闻语料存在文体和年代偏向，不能代表2026年的实时使用频率，也不能代表儿童熟悉程度。词库大小与玩法难度分别设置。原有拼音和入门简释不是 THUOCL 提供的内容。</div>
+ <p class="source-attribution">韩世依、张钰晖、马云山、涂存超、郭志芃、刘知远、孙茂松．THUOCL：清华大学开放中文词库．2016．数据核对：2026-10-15。</p>
+ <p class="external-links"><a href="https://github.com/thunlp/THUOCL" target="_blank" rel="noopener noreferrer">项目与指标说明 ↗</a><a href="https://github.com/thunlp/THUOCL/blob/master/data/THUOCL_chengyu.txt" target="_blank" rel="noopener noreferrer">原始成语词频表 ↗</a></p><details><summary>数据许可（MIT）</summary><pre class="license-text">__LICENSE__</pre></details>
+</div></dialog>
+<dialog id="settingsDialog" aria-labelledby="settingsTitle"><div class="modal-head"><div><h2 id="settingsTitle">游戏设置</h2><p>少一点干扰，多一点乐趣</p></div><button class="iconbtn" data-close="settingsDialog" aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button></div><div class="modal-body"><label class="setting-row"><span><strong>拼音辅助</strong><small>在每个汉字上方显示拼音</small></span><input type="checkbox" id="settingPinyin" checked></label><label class="setting-row"><span><strong>消除音效</strong><small>轻柔的点击与配对提示音</small></span><input type="checkbox" id="settingSound"></label><label class="setting-row"><span><strong>自动朗读成语</strong><small>使用设备已有的离线中文语音；无语音时仍可正常游戏</small></span><input type="checkbox" id="settingSpeech"></label><div class="rule-note" style="margin-top:18px">进度保存在当前浏览器的本机存储中。更换设备、浏览器或移动 HTML 文件后，原进度可能无法自动读取；清除浏览器数据也会删除进度。可在这里导出进度备份。</div><div class="settings-actions"><button class="tool" id="exportProgressBtn">导出进度</button><button class="tool" id="importProgressBtn">导入进度</button><input id="importProgressFile" type="file" accept="application/json,.json" hidden></div></div></dialog>
+<dialog id="victoryDialog" class="victory-dialog" aria-labelledby="victoryTitle"><div class="victory-body" id="victoryBody"></div></dialog>
+<dialog id="confirmDialog" class="confirm-dialog" aria-labelledby="confirmTitle"><h2 id="confirmTitle">重新开始？</h2><p id="confirmText"></p><div class="confirm-actions"><button class="tool" id="confirmNo">取消</button><button class="tool primary" id="confirmYes">确定</button></div></dialog>
+<noscript><p style="padding:30px;text-align:center">这个游戏需要启用 JavaScript。请在浏览器中打开文件。</p></noscript>
+<script id="idiomData" type="application/json">__DATA__</script>
+<script id="practiceData" type="application/json">__PRACTICE__</script>
+<script id="groupData" type="application/json">__GROUPS__</script>
+<script id="sourceData" type="application/json">__SOURCE__</script>
+<script>__CORE__</script>
+<script>__APP__</script>
+</body></html>

@@ -13,7 +13,7 @@ mkdirSync(output,{recursive:true});mkdirSync(runtime,{recursive:true});
 const hashes=()=>Object.fromEntries(readdirSync(join(root,'lessons/spaceflight')).filter(name=>/\.(?:js|css|html)$/.test(name)).map(name=>[name,createHash('sha256').update(readFileSync(join(root,'lessons/spaceflight',name))).digest('hex')]));
 const before=hashes(),report={passed:false,cases:[],pageErrors:[],screenshots:[]};
 const record=name=>{report.cases.push(name);console.log('PASS '+name);};
-const app=await createApplication({databasePath:join(runtime,'synthetic.sqlite3'),staticRoot:root});
+const app=await createApplication({accountsEnabled:true,databasePath:join(runtime,'synthetic.sqlite3'),staticRoot:root});
 const password='Synthetic-'+randomUUID();
 const own=await createAccount(app.db,{username:'current-sync-synthetic',password,label:'甲档案'});
 const profileB=app.store.addProfile(own.account.id,{label:'乙档案'}).profile;
@@ -67,7 +67,7 @@ try {
   assert.equal(await page.locator('#notes').inputValue(),'甲档案离线草稿');assert.equal(await page.evaluate(()=>MathPhysicsSync.snapshot().connection),'offline');
   assert(await page.evaluate(()=>MathPhysicsSync.snapshot().queued)>0);record('API离线重载仍恢复同账号档案草稿与待同步队列，保留当前科学资源');
 
-  await page.goto(base+'index.html');await page.waitForSelector('[data-launch="spaceflight"]');await openSpace(page);
+  await page.goto(base+'index.html#library');await page.waitForSelector('[data-launch="spaceflight"]');await openSpace(page);
   await page.evaluate(async pid=>{
     const child=document.querySelector('#stage iframe').contentWindow;
     window.retiredStore=child.MathPhysicsSync.createStorage();

@@ -11,6 +11,8 @@
   const BASE = '/mathphysics/api';
   const PREFIX = 'mathphysics.sync.v1.';
   const SESSION = PREFIX + 'session';
+  const DEVICE_SESSION = PREFIX + 'device-session';
+  const ACCESS_MODE = PREFIX + 'accounts-enabled';
   const SIGNOUT = PREFIX + 'signed-out';
   const copy = value => value === undefined ? undefined : JSON.parse(JSON.stringify(value));
   const same = (a,b) => JSON.stringify(a) === JSON.stringify(b);
@@ -21,25 +23,27 @@
   const listeners = new Set(), providers = new Set(), controllers = new Set(), inflight = new Set();
   const nativeStorage = window.localStorage;
   const local = {getItem:key=>nativeStorage.getItem(key),setItem:(key,value)=>nativeStorage.setItem(key,value),removeItem:key=>nativeStorage.removeItem(key)};
-  let account = null, profiles = [], profileId = null, csrfToken = '', epoch = 0, available = false, connection = 'connecting', expired = false, errorMessage = '', cache = {modules:{},attempts:{}}, timer, replaying = false, storageFailed = false;
+  let account = null, profiles = [], profileId = null, accountsEnabled = false, csrfToken = '', epoch = 0, available = false, connection = 'connecting', expired = false, errorMessage = '', cache = {modules:{},attempts:{}}, timer, replaying = false, storageFailed = false;
+  try { accountsEnabled = local.getItem(ACCESS_MODE) === 'true'; } catch {}
   function read(key, fallback) { try { const v = JSON.parse(local.getItem(key)); return object(v) ? v : fallback; } catch { return fallback; } }
-  function cacheKey() { return PREFIX + 'scope.' + (account ? encodeURIComponent(account.id) + '.' + encodeURIComponent(profileId || 'none') : 'guest'); }
+  function cacheKey() { return PREFIX + 'scope.' + (accountsEnabled && account ? encodeURIComponent(account.id) + '.' + encodeURIComponent(profileId || 'none') : 'guest'); }
   function persist() {
     try { local.setItem(cacheKey(), JSON.stringify(cache)); storageFailed = false; return true; }
     catch { storageFailed = true; errorMessage = '浏览器无法保存离线副本，请保持此页打开。'; return false; }
   }
   function cacheSession() {
     try {
-      if (account) local.setItem(SESSION,JSON.stringify({account:{id:account.id},profiles,profileId})); else local.removeItem(SESSION);
+      const key = accountsEnabled ? SESSION : DEVICE_SESSION;
+      if (account) local.setItem(key,JSON.stringify({account:{id:account.id},profiles,profileId,accountsEnabled})); else local.removeItem(key);
     } catch { /* A usable live session does not require browser persistence. */ }
   }
   function emit() { const state = snapshot(); for (const fn of [...listeners]) { try { fn(state); } catch { /* Subscriber owns its UI. */ } } }
   function snapshot() {
     const entries = Object.values(cache.modules), drafts = Object.values(cache.attempts);
     const conflicts = entries.filter(e=>e.conflict).map(e=>copy(e));
-    const queued = entries.filter(e=>e.pending).length + drafts.filter(d=>d.submission && !d.result).length;
+    const queued = (accountsEnabled ? entries.filter(e=>e.pending).length : 0) + drafts.filter(d=>d.submission && !d.result).length;
     let status = expired ? 'expired' : !account ? (connection === 'connecting' ? 'connecting' : connection !== 'online' || !available ? 'unavailable' : errorMessage ? 'failed' : 'signed-out') : conflicts.length ? 'conflict' : storageFailed ? 'failed' : connection === 'offline' ? 'offline' : connection !== 'online' ? 'failed' : inflight.size ? 'saving' : errorMessage ? 'failed' : queued ? 'queued' : 'saved';
-    return {account:copy(account),profiles:copy(profiles),profileId,profile:copy(profiles.find(p=>p.id===profileId)||null),connection,status,queued,conflicts,errorMessage,storageFailed,pendingLogout:read(SIGNOUT,{}).pending===true,serverConfirmed:entries.some(e=>e.server?.revision>0)||drafts.some(d=>d.result),scope:cacheKey(),epoch,available};
+    return {account:copy(account),profiles:copy(profiles),profileId,accountsEnabled,profile:copy(profiles.find(p=>p.id===profileId)||null),connection,status,queued,conflicts,errorMessage,storageFailed,pendingLogout:accountsEnabled&&read(SIGNOUT,{}).pending===true,serverConfirmed:entries.some(e=>e.server?.revision>0)||drafts.some(d=>d.result),scope:cacheKey(),epoch,available};
   }
   function subscribe(fn) { listeners.add(fn); fn(snapshot()); return ()=>listeners.delete(fn); }
   function switchBoundary() {
@@ -70,8 +74,8 @@
       if (token!==epoch) throw Object.assign(Error('档案已切换。'),{name:'AbortError'});
       available=response.status!==404;connection='online';
       if (!response.ok) {
-        if (response.status===401 && (account||read(SESSION,{}).account)) expire();
-        throw Object.assign(Error(data.message || ({401:'登录已过期，请重新登录。',403:'会话验证失败，请刷新会话后重试。',429:'尝试过于频繁，请稍后再试。'}[response.status]) || '服务器暂时不能完成此操作。'),{status:response.status,code:data.code||'request_failed',data});
+        if (response.status===401 && (account||read(accountsEnabled?SESSION:DEVICE_SESSION,{}).account)) expire();
+        throw Object.assign(Error(data.message || ({401:accountsEnabled?'登录已过期，请重新登录。':'学习会话已过期，请刷新页面后重试。',403:'会话验证失败，请刷新会话后重试。',429:'尝试过于频繁，请稍后再试。'}[response.status]) || '服务器暂时不能完成此操作。'),{status:response.status,code:data.code||'request_failed',data});
       }
       errorMessage='';return data;
     } catch (error) {
@@ -82,7 +86,8 @@
     } finally {controllers.delete(controller);}
   }
   async function adoptSession(data) {
-    switchBoundary();account=data.account||null;profiles=data.profiles||[];csrfToken=data.csrfToken||'';expired=false;
+    switchBoundary();accountsEnabled=data.accountsEnabled!==false;account=data.account||null;profiles=data.profiles||[];csrfToken=data.csrfToken||'';expired=false;
+    try{local.setItem(ACCESS_MODE,String(accountsEnabled));}catch{}
     const remembered=account?read(PREFIX+'selection.'+encodeURIComponent(account.id),{}).id:null;
     profileId=profiles.some(p=>p.id===remembered)?remembered:profiles[0]?.id||null;
     useCache();cacheSession();
@@ -91,11 +96,12 @@
   }
   async function entrySession(){
     let data=await request('/session');
-    if(read(SIGNOUT,{}).pending){csrfToken=data.csrfToken||'';if(data.account)await request('/logout',{method:'POST',body:{}});data=await request('/session');try{local.removeItem(SIGNOUT);}catch{}}
+    if(data.accountsEnabled!==false&&read(SIGNOUT,{}).pending){csrfToken=data.csrfToken||'';if(data.account)await request('/logout',{method:'POST',body:{}});data=await request('/session');try{local.removeItem(SIGNOUT);}catch{}}
     return data;
   }
   async function refreshSession() { const data=await entrySession();await adoptSession(data);return snapshot(); }
   async function login(username,password) {
+    if(!accountsEnabled)throw Error('账户功能暂未启用。');
     if(!csrfToken||read(SIGNOUT,{}).pending){const session=await entrySession();csrfToken=session.csrfToken||'';}
     let data;
     try{data=await request('/login',{method:'POST',body:{username,password}});}
@@ -109,12 +115,14 @@
     await adoptSession(data);return snapshot();
   }
   async function logout() {
+    if(!accountsEnabled)throw Error('账户功能暂未启用。');
     captureAll();try{local.setItem(SIGNOUT,JSON.stringify({pending:true}));}catch{}
     try{await request('/logout',{method:'POST',body:{}});try{local.removeItem(SIGNOUT);}catch{}}catch{ /* Local sign-out also works while disconnected. */ }
     await adoptSession({account:null,profiles:[],csrfToken:''});
     if(connection==='online')try{const data=await entrySession();csrfToken=data.csrfToken||'';}catch{}return snapshot();
   }
   async function selectProfile(id) {
+    if(!accountsEnabled)throw Error('账户功能暂未启用。');
     if(!account||!profiles.some(p=>p.id===id))throw Error('此档案不属于当前账号。');
     if(profileId===id)return;
     switchBoundary();profileId=id;
@@ -124,6 +132,7 @@
     window.dispatchEvent(new CustomEvent('mathphysics:scope-change'));emit();schedule();
   }
   async function createProfile(label) {
+    if(!accountsEnabled)throw Error('账户功能暂未启用。');
     const data=await request('/profiles',{method:'POST',body:{label}});profiles.push(data.profile);cacheSession();await selectProfile(data.profile.id);return data.profile;
   }
   function entry(moduleId) {
@@ -132,12 +141,12 @@
   function update(moduleId,payload,boundEpoch=epoch) {
     if(boundEpoch!==epoch)return false;
     const e=entry(moduleId);if(same(e.payload,payload))return true;
-    e.payload=copy(payload);e.pending={expectedRevision:e.revision,schemaVersion:1,payload:copy(payload),mutationId:uuid()};
+    e.payload=copy(payload);e.pending=accountsEnabled?{expectedRevision:e.revision,schemaVersion:1,payload:copy(payload),mutationId:uuid()}:null;
     if(e.conflict)e.conflict.local=copy(payload);
     const ok=persist();emit();schedule();return ok;
   }
   function createStorage(boundEpoch=epoch) {
-    const guest=!account;
+    const guest=!account||!accountsEnabled;
     return {
       getItem(key){if(boundEpoch!==epoch)return null;const id=keyModule(key);if(!id)return null;if(guest){try{return local.getItem(key);}catch{return null;}}return entry(id).payload.records?.[key]??null;},
       setItem(key,value){if(boundEpoch!==epoch)return;const id=keyModule(key);if(!id)throw Error('未登记的课堂存档键。');if(guest)local.setItem(key,String(value));const e=entry(id),payload=copy(e.payload);payload.records ||= {};payload.records[key]=String(value);if(!update(id,payload,boundEpoch))throw Error('浏览器存档不可用。');},
@@ -146,7 +155,7 @@
   }
   function getSnapshot(moduleId,boundEpoch=epoch){
     if(boundEpoch!==epoch)return null;const e=entry(moduleId);
-    if(!account){for(const key of LEGACY_KEYS)if(keyModule(key)===moduleId||(moduleId==='primary-math'&&['question-bank','primary-math-view'].includes(keyModule(key)))){try{if(local.getItem(key)!==(entry(keyModule(key)).payload.records?.[key]??null))return null;}catch{return null;}}}
+    if(!account||!accountsEnabled){for(const key of LEGACY_KEYS)if(keyModule(key)===moduleId||(moduleId==='primary-math'&&['question-bank','primary-math-view'].includes(keyModule(key)))){try{if(local.getItem(key)!==(entry(keyModule(key)).payload.records?.[key]??null))return null;}catch{return null;}}}
     return copy(e.payload.snapshot);
   }
   function setSnapshot(moduleId,value,boundEpoch=epoch){if(boundEpoch!==epoch)return false;const payload=copy(entry(moduleId).payload);payload.snapshot=copy(value);return update(moduleId,payload,boundEpoch);}
@@ -161,7 +170,7 @@
   function capture(p){if(p.boundEpoch!==epoch)return;try{setSnapshot(p.moduleId,p.readSnapshot(),p.boundEpoch);}catch{}}
   function captureAll(){for(const p of providers)capture(p);}
   async function pull(){
-    if(!account||!profileId)return;
+    if(!account||!profileId||!accountsEnabled)return;
     captureAll();
     const data=await request('/profiles/'+encodeURIComponent(profileId)+'/saves');
     // Include changes made while the GET was in flight. A clean remote update
@@ -183,7 +192,7 @@
     if(!account||!profileId||connection!=='online')return;
     const token=epoch,pid=profileId;
     for(const e of Object.values(cache.modules)){
-      if(!e.pending||e.conflict||inflight.has(e.moduleId))continue;
+      if(!accountsEnabled||!e.pending||e.conflict||inflight.has(e.moduleId))continue;
       const sent=copy(e.pending);inflight.add(e.moduleId);emit();
       try{
         const data=await request('/profiles/'+encodeURIComponent(pid)+'/saves/'+encodeURIComponent(e.moduleId),{method:'PUT',body:sent});
@@ -200,7 +209,7 @@
       }finally{inflight.delete(e.moduleId);emit();}
     }
     if(token===epoch)await replaySubmissions();
-    if(Object.values(cache.modules).some(e=>e.pending&&!e.conflict)&&connection==='online'&&!errorMessage)schedule();
+    if(accountsEnabled&&Object.values(cache.modules).some(e=>e.pending&&!e.conflict)&&connection==='online'&&!errorMessage)schedule();
   }
   function preserveConflict(e){
     const key=PREFIX+'recovery.'+encodeURIComponent(account?.id||'guest')+'.'+encodeURIComponent(profileId||'guest')+'.'+uuid();
@@ -272,11 +281,11 @@
       finally{inflight.delete('attempt:'+d.attempt.id);emit();}
     }}finally{replaying=false;}
   }
-  function profileRequest(path,options){if(!account||!profileId)return Promise.reject(Error('请先登录并选择档案。'));return request('/profiles/'+encodeURIComponent(profileId)+path,options);}
+  function profileRequest(path,options){if(!account||!profileId)return Promise.reject(Error(accountsEnabled?'请先登录并选择档案。':'学习服务尚未就绪，请刷新页面后重试。'));return request('/profiles/'+encodeURIComponent(profileId)+path,options);}
   async function reconnect(){
     const previous=account?.id,pid=profileId;
     const data=await entrySession();
-    if(data.account?.id!==previous||!data.profiles?.some(p=>p.id===pid)){await adoptSession(data);return;}
+    if((data.accountsEnabled!==false)!==accountsEnabled||data.account?.id!==previous||!data.profiles?.some(p=>p.id===pid)){await adoptSession(data);return;}
     account=data.account;csrfToken=data.csrfToken||'';profiles=data.profiles||[];expired=false;cacheSession();await pull();await flush();emit();
   }
   function createClient(){
@@ -287,10 +296,13 @@
   window.MathPhysicsSync=api;
   api.ready=(async()=>{
     useCache();
-    try{await refreshSession();}
+    try{
+      if(window.navigator?.locks?.request)await window.navigator.locks.request('mathphysics-session',refreshSession);
+      else await refreshSession();
+    }
     catch(error){
       if(connection==='offline'){
-        const saved=read(SESSION,{});if(saved.account&&Array.isArray(saved.profiles)&&saved.profiles.some(p=>p.id===saved.profileId)){account=saved.account;profiles=saved.profiles;profileId=saved.profileId;useCache();}
+        const saved=read(accountsEnabled?SESSION:DEVICE_SESSION,{});if(saved.account&&Array.isArray(saved.profiles)&&saved.profiles.some(p=>p.id===saved.profileId)){account=saved.account;profiles=saved.profiles;profileId=saved.profileId;useCache();}
       }else connection='unavailable';emit();
     }
     return snapshot();

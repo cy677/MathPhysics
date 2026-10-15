@@ -24,19 +24,20 @@ async function launch(t,databasePath,args=[],password=''){
   return {child,origin:`http://127.0.0.1:${port}`,output:()=>output,stop:async()=>{if(child.exitCode===null&&child.signalCode===null){child.kill();await once(child,'exit');}}};
 }
 
-test('first launch sets up one account, serves assessments, and later launches reuse its data',async t=>{
+test('first launch sets up one account, opens the subject home, and later launches reuse its data',async t=>{
   const directory=mkdtempSync(join(tmpdir(),'mathphysics-start-')),databasePath=join(directory,'learning.sqlite3');
   t.after(()=>rmSync(directory,{recursive:true,force:true}));
   const username='synthetic-start',password='Synthetic-'+randomUUID();
-  const first=await launch(t,databasePath,['--username',username,'--password-stdin'],password+'\n');
+  const first=await launch(t,databasePath,['--accounts','--username',username,'--password-stdin'],password+'\n');
   for(const entry of ['/','/mathphysics','/mathphysics/']){
-    const response=await fetch(first.origin+entry,{redirect:'manual'});assert.equal(response.status,302);assert.equal(response.headers.get('location'),'/mathphysics/learning/');
+    const response=await fetch(first.origin+entry,{redirect:'manual'});assert.equal(response.status,302);assert.equal(response.headers.get('location'),'/mathphysics/index.html');
   }
+  const home=await fetch(first.origin+'/mathphysics/index.html');assert.equal(home.status,200);assert.match(await home.text(),/data-subject="chinese"/);
   const response=await fetch(first.origin+'/mathphysics/learning/');assert.equal(response.status,200);assert.match(await response.text(),/多次考核 · 保留最高分/);
   assert.equal((await fetch(first.origin+'/mathphysics/api/capabilities')).status,200);
   assert.equal(first.output().includes(password),false);
   await first.stop();
-  const second=await launch(t,databasePath);
+  const second=await launch(t,databasePath,['--accounts']);
   const db=openDatabase(databasePath,{staticRoot:root,readOnly:true});
   try{assert.equal(db.prepare('SELECT COUNT(*) AS count FROM accounts').get().count,1);assert.equal(db.prepare('SELECT username FROM accounts').get().username,username);}finally{db.close();}
   assert.equal((await fetch(second.origin+'/mathphysics/api/session')).status,200);
@@ -47,4 +48,15 @@ test('first launch sets up one account, serves assessments, and later launches r
 test('Windows batch enters the Node launcher and supports help without starting a browser', {skip:process.platform!=='win32'},()=>{
   const output=execFileSync('cmd.exe',['/d','/c',join(root,'START_WINDOWS.bat'),'--help'],{cwd:root,encoding:'utf8',windowsHide:true,timeout:10000});
   assert.match(output,/start \[--open\]/);assert.match(output,/8317/);
+});
+
+test('default first launch opens the home without prompting for account or password', async t => {
+  const directory=mkdtempSync(join(tmpdir(),'mathphysics-start-')),databasePath=join(directory,'learning.sqlite3');
+  const service=await launch(t,databasePath);
+  t.after(async()=>{await service.stop();rmSync(directory,{recursive:true,force:true});});
+  const session=await fetch(service.origin+'/mathphysics/api/session');
+  assert.equal(session.status,200);assert.equal((await session.json()).accountsEnabled,false);
+  assert.equal(service.output().includes('account created'),false);
+  assert.equal(service.output().includes('Password'),false);
+  await service.stop();
 });

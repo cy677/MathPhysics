@@ -36,7 +36,7 @@ const registry={...assessments,catalog(){const original=assessments.catalog();re
    items:word.issue(objective,1,options.seed).map((item,i)=>({id:'i'+String(i+1).padStart(2,'0'),...item,questionVersion:item.version}))});
   delete definition.definitionId;definition.definitionId=createHash('sha256').update(JSON.stringify(definition)).digest('hex');return definition;
  }};
-const app=await createApplication({databasePath:join(runtime,'synthetic.sqlite3'),staticRoot:root,registry});
+const app=await createApplication({accountsEnabled:true,databasePath:join(runtime,'synthetic.sqlite3'),staticRoot:root,registry});
 const password='Synthetic-'+randomUUID(),own=await createAccount(app.db,{username:'tuple-ui-synthetic',password,label:'合成分项验收'});
 const address=await app.listen(0),base=`http://127.0.0.1:${address.port}/mathphysics/`;
 const report={passed:false,cases:[],pageErrors:[],screenshots:[],rawSubmissions:[]};let browser;

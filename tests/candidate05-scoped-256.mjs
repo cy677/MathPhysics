@@ -58,7 +58,7 @@ try{
   const short=simple.find(s=>s.objectiveId===chosen.objectiveId&&s.difficulty===chosen.difficulty&&s.availableQuestions<3);assert.ok(short);
   const objective=current.objectives.find(o=>o.id===chosen.objectiveId);
   record('1391-published-existing-204-and-125-goals-no-partition-or-family-gate',{mapped:registry.content.mapped.length,pending:registry.content.unmapped.length,objectiveId:objective.id,difficulty:chosen.difficulty,newGoals:0});
-  app=await createApplication({databasePath:dbPath,staticRoot:root});
+  app=await createApplication({accountsEnabled:true,databasePath:dbPath,staticRoot:root});
   const account=await createAccount(app.db,{username,password,label:'积分验收甲'}),address=await app.listen(0),api=apiFor('http://127.0.0.1:'+address.port);
   await api('/session');await api('/login',{method:'POST',data:{username,password}});const profile=account.profile.id;
   const profileB=(await api('/profiles',{method:'POST',data:{label:'积分验收乙'},status:201})).profile.id;

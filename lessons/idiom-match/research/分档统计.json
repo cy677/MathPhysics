@@ -1,0 +1,42 @@
+[
+  {
+    "size": 200,
+    "matched": 200,
+    "unmatched": 0,
+    "first": "全力以赴",
+    "last": "岌岌可危",
+    "min_known_df": 4089
+  },
+  {
+    "size": 400,
+    "matched": 400,
+    "unmatched": 0,
+    "first": "全力以赴",
+    "last": "专心致志",
+    "min_known_df": 1823
+  },
+  {
+    "size": 600,
+    "matched": 600,
+    "unmatched": 0,
+    "first": "全力以赴",
+    "last": "顺水推舟",
+    "min_known_df": 864
+  },
+  {
+    "size": 800,
+    "matched": 800,
+    "unmatched": 0,
+    "first": "全力以赴",
+    "last": "宽宏大量",
+    "min_known_df": 298
+  },
+  {
+    "size": 1000,
+    "matched": 937,
+    "unmatched": 63,
+    "first": "全力以赴",
+    "last": "薪火相传",
+    "min_known_df": 22
+  }
+]

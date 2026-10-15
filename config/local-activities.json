@@ -516,6 +516,89 @@
       "progressMode": "local-score",
       "difficultyCount": 3,
       "lessonCount": 24
+    },
+    {
+      "id": "idiom-match",
+      "title": "成语消消乐",
+      "description": "把两张字牌拼成成语，读拼音、看释义，在随机牌局中积累词语。",
+      "playHint": "点击两张牌拼成四字词语。点牌桌上方选择词库与难度；练习词库每局包含图片全部32词，其余词库可选择数量。",
+      "zone": "language",
+      "kind": "game",
+      "adapter": "idiom-match",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content": [
+        "成语配对",
+        "拼音与释义",
+        "1000条成语",
+        "200至1000条五档词库",
+        "轻松、标准、挑战三种难度",
+        "普通词库每局4至30个成语",
+        "32词练习词库，每局全部出现",
+        "收集与存档"
+      ],
+      "entry": "lessons/idiom-match/index.html",
+      "source": "https://github.com/cy677/MathPhysics",
+      "license": "MIT (original code); THUOCL frequency data: MIT",
+      "origin": "original",
+      "completeUpstream": false,
+      "progressMode": "visit-only",
+      "wordCount": 1000
+    },
+    {
+      "id": "group-theory",
+      "title": "群论",
+      "description": "转动三角形、交换彩珠，发现六种对称变换；还可自由探索集合、数量与规律等24个小游戏。",
+      "playHint": "先试试“转一步”和“照镜子”，集齐六种队形。左侧目录可切换24个数学游戏；家长讲解会跟随当前题目。",
+      "zone": "geometry",
+      "kind": "game",
+      "adapter": "group-theory",
+      "grades": [1, 2, 3, 4, 5, 6],
+      "content": ["群论", "三角形魔法实验室", "对称群", "旋转与照镜子", "六种队形", "集合与数量", "运算与关系", "图形与空间", "规律与世界", "新数学", "家长讲解"],
+      "entry": "lessons/group-theory/index.html",
+      "source": "三角形魔法实验室.html",
+      "license": "User-provided HTML; source terms unspecified",
+      "origin": "user-provided",
+      "completeUpstream": false,
+      "progressMode": "visit-only",
+      "lessonCount": 24
+    },
+    {
+      "id": "grade-one-chinese",
+      "title": "一年级练习",
+      "description": "练拼音、打词语泡泡、用两个字组词，再当偏旁小侦探。",
+      "playHint": "选择拼音、词语泡泡、词语消消乐或偏旁侦探。组词每次展示15对（30个字），两个字组成词语后消除并自动补充，直到全部消除。",
+      "zone": "language",
+      "kind": "game",
+      "adapter": "grade-one-chinese",
+      "grades": [
+        1
+      ],
+      "content": [
+        "一年级上册",
+        "拼音",
+        "声母与韵母",
+        "标声调",
+        "近义词与反义词",
+        "形近字例词组词",
+        "多音字",
+        "叠词",
+        "词语搭配",
+        "偏旁部首"
+      ],
+      "entry": "lessons/grade-one-chinese/index.html",
+      "source": "一年级语文互动练习_修订版.html",
+      "license": "User-provided HTML; includes Arphic Public License glyph outlines (license embedded)",
+      "origin": "user-provided",
+      "completeUpstream": false,
+      "progressMode": "visit-only",
+      "lessonCount": 4
     }
   ]
 }

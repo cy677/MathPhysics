@@ -7,6 +7,8 @@ const scrypt = promisify(scryptCallback);
 const cost = {N: 32768, r: 8, p: 1, maxmem: 64 * 1024 * 1024};
 const DUMMY_SALT = randomBytes(32).toString('base64url');
 export const COOKIE_NAME = 'mathphysics_session';
+export const DEVICE_COOKIE_NAME = 'mathphysics_device';
+export const DEVICE_ACCOUNT_MARKER = 'browser-device-only';
 
 export function normalizeUsername(value) {
   string(value, 'username', 2, 64);
@@ -34,7 +36,7 @@ export async function createAccount(db, {username, password, label = '默认学�
   string(label, 'label', 1, 80);
   const encoded = await hashPassword(password);
   return transaction(db, () => {
-    if (firstOnly && db.prepare('SELECT COUNT(*) AS count FROM accounts').get().count) fail(409, 'already_initialized');
+    if (firstOnly && db.prepare('SELECT COUNT(*) AS count FROM accounts WHERE password_hash<>?').get(DEVICE_ACCOUNT_MARKER).count) fail(409, 'already_initialized');
     if (db.prepare('SELECT id FROM accounts WHERE username=?').get(name)) fail(409, 'username_exists');
     const account = {id: randomUUID(), username: name, createdAt: now};
     const profile = {id: randomUUID(), label, createdAt: now};
@@ -51,8 +53,8 @@ export function cookies(header) {
   }
   return result;
 }
-export function readSession(db, cookie, now) {
-  const token = cookies(cookie).get(COOKIE_NAME);
+export function readSession(db, cookie, now, cookieName = COOKIE_NAME) {
+  const token = cookies(cookie).get(cookieName);
   if (!token || !/^[A-Za-z0-9_-]{43}$/.test(token)) return null;
   const session = db.prepare('SELECT s.*,a.username,a.disabled FROM sessions s LEFT JOIN accounts a ON a.id=s.account_id WHERE token_hash=?').get(digest(token));
   if (!session || session.expires_at <= now || session.disabled) return null;
@@ -65,8 +67,27 @@ export function newSession(db, accountId, now, ttl) {
   db.prepare('INSERT INTO sessions(token_hash,account_id,csrf_token,created_at,expires_at) VALUES(?,?,?,?,?)').run(session.token_hash, accountId, session.csrf_token, now, session.expires_at);
   return {token, session};
 }
-export function sessionCookie(token, {secure, ttl}) {
-  return `${COOKIE_NAME}=${token}; Path=/mathphysics/; HttpOnly; SameSite=Strict; Max-Age=${Math.max(0, Math.floor(ttl / 1000))}${secure ? '; Secure' : ''}`;
+export function sessionCookie(token, {secure, ttl, name = COOKIE_NAME}) {
+  return `${name}=${token}; Path=/mathphysics/; HttpOnly; SameSite=Strict; Max-Age=${Math.max(0, Math.floor(ttl / 1000))}${secure ? '; Secure' : ''}`;
+}
+// A browser gets its own assessment history without a name, password or login.
+// Separate cookies keep suspended account sessions and their data untouched.
+export function readDeviceSession(db, cookie, now) {
+  const session = readSession(db, cookie, now, DEVICE_COOKIE_NAME);
+  return session && db.prepare('SELECT id FROM accounts WHERE id=? AND password_hash=?').get(session.account_id, DEVICE_ACCOUNT_MARKER) ? session : null;
+}
+export function newDeviceSession(db, now, ttl) {
+  return transaction(db, () => {
+    const owner = randomUUID(), profile = randomUUID();
+    db.prepare('INSERT INTO accounts(id,username,password_hash,created_at) VALUES(?,?,?,?)').run(owner, 'device-' + owner, DEVICE_ACCOUNT_MARKER, now);
+    db.prepare('INSERT INTO profiles(id,account_id,label,created_at) VALUES(?,?,?,?)').run(profile, owner, '本机学习记录', now);
+    return newSession(db, owner, now, ttl);
+  });
+}
+export function deviceSessionInfo(db, session) {
+  return {accountsEnabled: false, account: {id: session.account_id},
+    profiles: db.prepare('SELECT id,label,created_at AS createdAt FROM profiles WHERE account_id=? ORDER BY created_at,id').all(session.account_id),
+    csrfToken: session.csrf_token};
 }
 export function sessionInfo(db, session) {
   const account = session?.account_id ? db.prepare('SELECT id,username FROM accounts WHERE id=? AND disabled=0').get(session.account_id) : null;

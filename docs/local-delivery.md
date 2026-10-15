@@ -1,6 +1,6 @@
 # 学习服务的本地交付
 
-本地与远程统一使用 Node.js 24.14.0 学习服务。Windows 双击 `START_WINDOWS.bat`，或执行 `npm start -- --open`，首次启动引导创建账号，随后打开考核页。默认端口8317，根路径及 `/mathphysics/` 自动进入 `/mathphysics/learning/`。启动、数据库路径和恢复步骤见 [运行说明](server-learning-operation.md)。
+本地与远程统一使用 Node.js 24.14.0 学习服务。Windows 双击 `START_WINDOWS.bat`，或执行 `npm start -- --open`，无需账号、密码，直接打开三学科首页。默认端口8317，根路径及 `/mathphysics/` 自动进入 `/mathphysics/index.html`。启动、数据库路径和恢复步骤见 [运行说明](server-learning-operation.md)。
 
 静态演示服务器、静态目录回退和演示模式标识已移除。课程、实验及探索页面仍通过学习服务访问。考核页只展示已注册目标，由服务签发试卷并按原始答案判题。已签发试卷的断网续答与待同步队列继续保留。
 

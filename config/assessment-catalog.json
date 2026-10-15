@@ -901,6 +901,27 @@
       "canonicalModuleId": "spatial-escape",
       "supportsAssessment": false,
       "objectives": []
+    },
+    {
+      "id": "idiom-match",
+      "title": "成语消消乐",
+      "canonicalModuleId": "idiom-match",
+      "supportsAssessment": false,
+      "objectives": []
+    },
+    {
+      "id": "group-theory",
+      "title": "群论",
+      "canonicalModuleId": "group-theory",
+      "supportsAssessment": false,
+      "objectives": []
+    },
+    {
+      "id": "grade-one-chinese",
+      "title": "一年级练习",
+      "canonicalModuleId": "grade-one-chinese",
+      "supportsAssessment": false,
+      "objectives": []
     }
   ],
   "objectives": [

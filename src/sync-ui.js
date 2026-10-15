@@ -4,7 +4,7 @@
   const rootURL=scriptURL?new URL('../',scriptURL):null;
   if(scriptURL&&!document.querySelector('link[data-mp-sync-style]')){const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('sync-ui.css',scriptURL);css.dataset.mpSyncStyle='';document.head.append(css);}
   const messages={'signed-out':'登录后记录考核与成长',connecting:'正在连接学习服务',unavailable:'学习服务未连接',expired:'登录已过期 · 请重新登录',offline:'离线副本已保留 · 待联网同步',failed:'同步失败 · 内容保留在本机',conflict:'版本冲突 · 请选择保留哪一版',queued:'本机已保存 · 等待同步',saving:'正在同步 · 尚未确认',saved:'服务器已确认存档'};
-  const labels={host:'探索首页','question-bank':'当前练习单','primary-math':'数与生活','primary-math-view':'数与生活入口偏好','word-problems':'中文应用题预览','geometry-proofs':'几何证明','jsxgraph-playground':'图形画板','tangram-flat':'七巧板','spaceflight':'航天课堂','physics-demos':'物理演示'};
+  const labels={host:'探索首页','question-bank':'当前练习单','primary-math':'数与生活','primary-math-view':'数与生活入口偏好','word-problems':'中文应用题预览','geometry-proofs':'几何证明','jsxgraph-playground':'图形画板','tangram-flat':'七巧板','spaceflight':'航天课堂','idiom-match':'成语消消乐','physics-demos':'物理演示'};
   const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
   const button=(text,fn,cls)=>{const n=el('button',text,cls);n.type='button';n.onclick=fn;return n;};
   async function start(){
@@ -13,6 +13,15 @@
     const sync=window.MathPhysicsSync;if(!sync)return;await sync.ready;
     // The surrounding host owns account controls and status for its classroom.
     if(parent!==window)return;
+    if(!sync.snapshot().accountsEnabled){
+      if(document.body.dataset.mpHost&&rootURL){
+        const actions=document.querySelector('#player .player-actions'),entry=el('a','去考核');
+        entry.href=new URL('learning/index.html',rootURL);
+        entry.onclick=()=>{const url=new URL('learning/index.html',rootURL),match=location.hash.match(/^#activity\/(.+)$/);if(match)url.searchParams.set('module',decodeURIComponent(match[1]));entry.href=url;};
+        actions?.append(entry);
+      }
+      return;
+    }
     const bar=el('div',undefined,'mp-sync-bar');bar.setAttribute('aria-label','档案与同步');
     const mode=el('span',document.body.dataset.mpLearning?'考核与成长':'学习内容','mp-sync-mode'),name=el('strong'),status=el('span',undefined,'mp-sync-status');status.setAttribute('role','status');
     const open=button('账号与档案',()=>dialog.showModal());

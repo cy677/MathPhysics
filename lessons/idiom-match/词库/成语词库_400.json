@@ -1,0 +1,6061 @@
+{
+  "version": "2.0",
+  "size": 400,
+  "description": "原游戏1000条范围内按公开DF排序的前400条，逐级包含。",
+  "source": {
+    "source_id": "THUOCL_chengyu_2016",
+    "name": "THUOCL：清华大学开放中文词库 · 成语",
+    "repository": "https://github.com/thunlp/THUOCL",
+    "data_url": "https://github.com/thunlp/THUOCL/blob/master/data/THUOCL_chengyu.txt",
+    "raw_url": "https://raw.githubusercontent.com/thunlp/THUOCL/master/data/THUOCL_chengyu.txt",
+    "data_blob_sha": "44d91b3349753dc7f43b53e8cf64cda790c9ea22",
+    "source_rows": 8519,
+    "corpus": "新浪新闻",
+    "corpus_period": "2008-01 至 2016-11",
+    "corpus_documents": 8421097,
+    "source_release_date": "2016-12-24",
+    "retrieved_on": "2026-10-15",
+    "metric": "document_frequency",
+    "metric_definition": "出现该词的语料文档个数；不是该词总出现次数，不是百分比。",
+    "license": "MIT",
+    "citation": "韩世依，张钰晖，马云山，涂存超，郭志芃，刘知远，孙茂松．THUOCL：清华大学开放中文词库．2016．",
+    "ranking_scope": "仅对原游戏已有的1000条成语重新排序，并非所有汉语成语的全国前1000名。",
+    "ordering": "先按精确匹配到的DF降序，同值按原id升序；无精确匹配者附于末尾并按原id升序。",
+    "missing_value": "未匹配到来源词条时df=null，不赋零、不借用异形词数值，也不推断其实际低频。",
+    "coverage": {
+      "total": 1000,
+      "exact_matches": 937,
+      "not_matched": 63
+    },
+    "limitations": [
+      "新闻语料具有文体和年代偏向，不是2026年的实时使用频率。",
+      "使用频率不等于儿童理解难度；五档是词库范围，不是教育部规定的年级分级。",
+      "前200、400、600、800档均有同来源DF；1000档含63条无精确匹配的补充词条。",
+      "原有拼音与入门简释沿用原游戏，不由THUOCL提供，也不代表经过该项目审定。"
+    ]
+  },
+  "groups": [
+    "数字趣味",
+    "山川风景",
+    "四季天气",
+    "动物世界",
+    "花木色彩",
+    "心情表情",
+    "动作神态",
+    "学习思考",
+    "勤奋坚持",
+    "友爱相处",
+    "说话表达",
+    "人物品格",
+    "生活百态",
+    "时间变化",
+    "寓言智慧",
+    "经典故事",
+    "方法做事",
+    "观察比较",
+    "处境选择",
+    "综合进阶"
+  ],
+  "idioms": [
+    {
+      "id": 413,
+      "word": "全力以赴",
+      "pinyin": "quán lì yǐ fù",
+      "meaning": "把全部力量投入进去。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 36156,
+        "status": "exact_match"
+      },
+      "rank": 1,
+      "minimumPool": 200
+    },
+    {
+      "id": 793,
+      "word": "脱颖而出",
+      "pinyin": "tuō yǐng ér chū",
+      "meaning": "本领显露出来，从众人中突出。",
+      "group": 15,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 31974,
+        "status": "exact_match"
+      },
+      "rank": 2,
+      "minimumPool": 200
+    },
+    {
+      "id": 396,
+      "word": "实事求是",
+      "pinyin": "shí shì qiú shì",
+      "meaning": "从实际情况出发，正确认识和处理问题。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 31565,
+        "status": "exact_match"
+      },
+      "rank": 3,
+      "minimumPool": 200
+    },
+    {
+      "id": 893,
+      "word": "众所周知",
+      "pinyin": "zhòng suǒ zhōu zhī",
+      "meaning": "大家都知道。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 29469,
+        "status": "exact_match"
+      },
+      "rank": 4,
+      "minimumPool": 200
+    },
+    {
+      "id": 801,
+      "word": "因地制宜",
+      "pinyin": "yīn dì zhì yí",
+      "meaning": "根据当地的实际情况，采用合适的办法。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 27805,
+        "status": "exact_match"
+      },
+      "rank": 5,
+      "minimumPool": 200
+    },
+    {
+      "id": 47,
+      "word": "千方百计",
+      "pinyin": "qiān fāng bǎi jì",
+      "meaning": "想尽各种办法。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 27561,
+        "status": "exact_match"
+      },
+      "rank": 6,
+      "minimumPool": 200
+    },
+    {
+      "id": 817,
+      "word": "当务之急",
+      "pinyin": "dāng wù zhī jí",
+      "meaning": "当前最急着要办的事。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 22965,
+        "status": "exact_match"
+      },
+      "rank": 7,
+      "minimumPool": 200
+    },
+    {
+      "id": 567,
+      "word": "见义勇为",
+      "pinyin": "jiàn yì yǒng wéi",
+      "meaning": "遇到合乎正义的事，勇敢去做。",
+      "group": 11,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 21157,
+        "status": "exact_match"
+      },
+      "rank": 8,
+      "minimumPool": 200
+    },
+    {
+      "id": 979,
+      "word": "名不虚传",
+      "pinyin": "míng bù xū chuán",
+      "meaning": "名声与实际相符，确实很好。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 20236,
+        "status": "exact_match"
+      },
+      "rank": 9,
+      "minimumPool": 200
+    },
+    {
+      "id": 980,
+      "word": "名副其实",
+      "pinyin": "míng fù qí shí",
+      "meaning": "名声或名称与实际情况相符合。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 20015,
+        "status": "exact_match"
+      },
+      "rank": 10,
+      "minimumPool": 200
+    },
+    {
+      "id": 401,
+      "word": "坚持不懈",
+      "pinyin": "jiān chí bù xiè",
+      "meaning": "坚持到底，一点也不松懈。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 19818,
+        "status": "exact_match"
+      },
+      "rank": 11,
+      "minimumPool": 200
+    },
+    {
+      "id": 606,
+      "word": "络绎不绝",
+      "pinyin": "luò yì bù jué",
+      "meaning": "人、车等往来不断。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 19137,
+        "status": "exact_match"
+      },
+      "rank": 12,
+      "minimumPool": 200
+    },
+    {
+      "id": 578,
+      "word": "弄虚作假",
+      "pinyin": "nòng xū zuò jiǎ",
+      "meaning": "制造虚假的事情欺骗人。",
+      "group": 11,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 19010,
+        "status": "exact_match"
+      },
+      "rank": 13,
+      "minimumPool": 200
+    },
+    {
+      "id": 952,
+      "word": "不可思议",
+      "pinyin": "bù kě sī yì",
+      "meaning": "难以想象，难以理解。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 18980,
+        "status": "exact_match"
+      },
+      "rank": 14,
+      "minimumPool": 200
+    },
+    {
+      "id": 841,
+      "word": "小心翼翼",
+      "pinyin": "xiǎo xīn yì yì",
+      "meaning": "十分谨慎，丝毫不敢大意。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 18841,
+        "status": "exact_match"
+      },
+      "rank": 15,
+      "minimumPool": 200
+    },
+    {
+      "id": 854,
+      "word": "一目了然",
+      "pinyin": "yī mù liǎo rán",
+      "meaning": "一眼就看得清清楚楚。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 17310,
+        "status": "exact_match"
+      },
+      "rank": 16,
+      "minimumPool": 200
+    },
+    {
+      "id": 856,
+      "word": "显而易见",
+      "pinyin": "xiǎn ér yì jiàn",
+      "meaning": "非常明显，容易看出来。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 17273,
+        "status": "exact_match"
+      },
+      "rank": 17,
+      "minimumPool": 200
+    },
+    {
+      "id": 402,
+      "word": "持之以恒",
+      "pinyin": "chí zhī yǐ héng",
+      "meaning": "长久地坚持做下去。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 16953,
+        "status": "exact_match"
+      },
+      "rank": 18,
+      "minimumPool": 200
+    },
+    {
+      "id": 857,
+      "word": "可想而知",
+      "pinyin": "kě xiǎng ér zhī",
+      "meaning": "不用详细说明，就能想见。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 16264,
+        "status": "exact_match"
+      },
+      "rank": 19,
+      "minimumPool": 200
+    },
+    {
+      "id": 617,
+      "word": "安居乐业",
+      "pinyin": "ān jū lè yè",
+      "meaning": "生活安定，工作愉快。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 16133,
+        "status": "exact_match"
+      },
+      "rank": 20,
+      "minimumPool": 200
+    },
+    {
+      "id": 452,
+      "word": "齐心协力",
+      "pinyin": "qí xīn xié lì",
+      "meaning": "大家同心，共同努力。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 15972,
+        "status": "exact_match"
+      },
+      "rank": 21,
+      "minimumPool": 200
+    },
+    {
+      "id": 487,
+      "word": "不约而同",
+      "pinyin": "bù yuē ér tóng",
+      "meaning": "没有约定，却做出同样的行动。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 15230,
+        "status": "exact_match"
+      },
+      "rank": 22,
+      "minimumPool": 200
+    },
+    {
+      "id": 37,
+      "word": "五花八门",
+      "pinyin": "wǔ huā bā mén",
+      "meaning": "种类很多，各不相同。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 15109,
+        "status": "exact_match"
+      },
+      "rank": 23,
+      "minimumPool": 200
+    },
+    {
+      "id": 886,
+      "word": "触目惊心",
+      "pinyin": "chù mù jīng xīn",
+      "meaning": "看到后内心受到很大震动。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 14766,
+        "status": "exact_match"
+      },
+      "rank": 24,
+      "minimumPool": 200
+    },
+    {
+      "id": 290,
+      "word": "心有余悸",
+      "pinyin": "xīn yǒu yú jì",
+      "meaning": "危险过去后，心里仍然害怕。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 13820,
+        "status": "exact_match"
+      },
+      "rank": 25,
+      "minimumPool": 200
+    },
+    {
+      "id": 669,
+      "word": "前所未有",
+      "pinyin": "qián suǒ wèi yǒu",
+      "meaning": "过去从来没有过。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 13620,
+        "status": "exact_match"
+      },
+      "rank": 26,
+      "minimumPool": 200
+    },
+    {
+      "id": 935,
+      "word": "雪上加霜",
+      "pinyin": "xuě shàng jiā shuāng",
+      "meaning": "已经很困难，又遇到新的困难。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 13570,
+        "status": "exact_match"
+      },
+      "rank": 27,
+      "minimumPool": 200
+    },
+    {
+      "id": 945,
+      "word": "迫在眉睫",
+      "pinyin": "pò zài méi jié",
+      "meaning": "事情已到眼前，必须马上处理。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 13502,
+        "status": "exact_match"
+      },
+      "rank": 28,
+      "minimumPool": 200
+    },
+    {
+      "id": 411,
+      "word": "脚踏实地",
+      "pinyin": "jiǎo tà shí dì",
+      "meaning": "做事踏实认真，不浮躁。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 13433,
+        "status": "exact_match"
+      },
+      "rank": 29,
+      "minimumPool": 200
+    },
+    {
+      "id": 860,
+      "word": "错综复杂",
+      "pinyin": "cuò zōng fù zá",
+      "meaning": "各种因素交错，情况很复杂。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 13132,
+        "status": "exact_match"
+      },
+      "rank": 30,
+      "minimumPool": 200
+    },
+    {
+      "id": 368,
+      "word": "举一反三",
+      "pinyin": "jǔ yī fǎn sān",
+      "meaning": "从一个例子推知同类的其他情况。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 13004,
+        "status": "exact_match"
+      },
+      "rank": 31,
+      "minimumPool": 200
+    },
+    {
+      "id": 371,
+      "word": "循序渐进",
+      "pinyin": "xún xù jiàn jìn",
+      "meaning": "按顺序逐步深入或提高。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 12875,
+        "status": "exact_match"
+      },
+      "rank": 32,
+      "minimumPool": 200
+    },
+    {
+      "id": 415,
+      "word": "不遗余力",
+      "pinyin": "bù yí yú lì",
+      "meaning": "毫无保留地付出力量。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 12844,
+        "status": "exact_match"
+      },
+      "rank": 33,
+      "minimumPool": 200
+    },
+    {
+      "id": 855,
+      "word": "不言而喻",
+      "pinyin": "bù yán ér yù",
+      "meaning": "不用说就能明白。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 12652,
+        "status": "exact_match"
+      },
+      "rank": 34,
+      "minimumPool": 200
+    },
+    {
+      "id": 867,
+      "word": "截然不同",
+      "pinyin": "jié rán bù tóng",
+      "meaning": "两者完全不同。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 12326,
+        "status": "exact_match"
+      },
+      "rank": 35,
+      "minimumPool": 200
+    },
+    {
+      "id": 676,
+      "word": "记忆犹新",
+      "pinyin": "jì yì yóu xīn",
+      "meaning": "过去的事仍记得很清楚。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 12263,
+        "status": "exact_match"
+      },
+      "rank": 36,
+      "minimumPool": 200
+    },
+    {
+      "id": 614,
+      "word": "家喻户晓",
+      "pinyin": "jiā yù hù xiǎo",
+      "meaning": "每家每户都知道。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 12098,
+        "status": "exact_match"
+      },
+      "rank": 37,
+      "minimumPool": 200
+    },
+    {
+      "id": 450,
+      "word": "日新月异",
+      "pinyin": "rì xīn yuè yì",
+      "meaning": "每天每月都有新的变化，发展很快。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 12066,
+        "status": "exact_match"
+      },
+      "rank": 38,
+      "minimumPool": 200
+    },
+    {
+      "id": 951,
+      "word": "莫名其妙",
+      "pinyin": "mò míng qí miào",
+      "meaning": "不知道其中的道理，感到奇怪。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 11999,
+        "status": "exact_match"
+      },
+      "rank": 39,
+      "minimumPool": 200
+    },
+    {
+      "id": 981,
+      "word": "名列前茅",
+      "pinyin": "míng liè qián máo",
+      "meaning": "名次排在前面。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 11993,
+        "status": "exact_match"
+      },
+      "rank": 40,
+      "minimumPool": 200
+    },
+    {
+      "id": 420,
+      "word": "奋发有为",
+      "pinyin": "fèn fā yǒu wéi",
+      "meaning": "精神振作，努力有所作为。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 11859,
+        "status": "exact_match"
+      },
+      "rank": 41,
+      "minimumPool": 200
+    },
+    {
+      "id": 667,
+      "word": "史无前例",
+      "pinyin": "shǐ wú qián lì",
+      "meaning": "历史上没有过先例。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 11636,
+        "status": "exact_match"
+      },
+      "rank": 42,
+      "minimumPool": 200
+    },
+    {
+      "id": 18,
+      "word": "一模一样",
+      "pinyin": "yī mú yī yàng",
+      "meaning": "样子完全相同。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 11401,
+        "status": "exact_match"
+      },
+      "rank": 43,
+      "minimumPool": 200
+    },
+    {
+      "id": 913,
+      "word": "铤而走险",
+      "pinyin": "tǐng ér zǒu xiǎn",
+      "meaning": "走投无路时，冒险做危险的事。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 11292,
+        "status": "exact_match"
+      },
+      "rank": 44,
+      "minimumPool": 200
+    },
+    {
+      "id": 418,
+      "word": "再接再厉",
+      "pinyin": "zài jiē zài lì",
+      "meaning": "一次又一次地继续努力。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 11218,
+        "status": "exact_match"
+      },
+      "rank": 45,
+      "minimumPool": 200
+    },
+    {
+      "id": 697,
+      "word": "翻天覆地",
+      "pinyin": "fān tiān fù dì",
+      "meaning": "形容变化十分巨大。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 11138,
+        "status": "exact_match"
+      },
+      "rank": 46,
+      "minimumPool": 200
+    },
+    {
+      "id": 976,
+      "word": "非同寻常",
+      "pinyin": "fēi tóng xún cháng",
+      "meaning": "不同于平常，很特别。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 11077,
+        "status": "exact_match"
+      },
+      "rank": 47,
+      "minimumPool": 200
+    },
+    {
+      "id": 810,
+      "word": "统筹兼顾",
+      "pinyin": "tǒng chóu jiān gù",
+      "meaning": "统一计划，照顾到各个方面。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 10847,
+        "status": "exact_match"
+      },
+      "rank": 48,
+      "minimumPool": 200
+    },
+    {
+      "id": 946,
+      "word": "刻不容缓",
+      "pinyin": "kè bù róng huǎn",
+      "meaning": "一刻也不能拖延。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 10797,
+        "status": "exact_match"
+      },
+      "rank": 49,
+      "minimumPool": 200
+    },
+    {
+      "id": 693,
+      "word": "焕然一新",
+      "pinyin": "huàn rán yī xīn",
+      "meaning": "呈现出全新的面貌。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 10740,
+        "status": "exact_match"
+      },
+      "rank": 50,
+      "minimumPool": 200
+    },
+    {
+      "id": 846,
+      "word": "有条不紊",
+      "pinyin": "yǒu tiáo bù wěn",
+      "meaning": "有条理，不紊乱。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 10326,
+        "status": "exact_match"
+      },
+      "rank": 51,
+      "minimumPool": 200
+    },
+    {
+      "id": 49,
+      "word": "万无一失",
+      "pinyin": "wàn wú yī shī",
+      "meaning": "十分稳妥，不会出差错。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 10222,
+        "status": "exact_match"
+      },
+      "rank": 52,
+      "minimumPool": 200
+    },
+    {
+      "id": 24,
+      "word": "一视同仁",
+      "pinyin": "yī shì tóng rén",
+      "meaning": "对不同的人同样看待。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 10136,
+        "status": "exact_match"
+      },
+      "rank": 53,
+      "minimumPool": 200
+    },
+    {
+      "id": 998,
+      "word": "相辅相成",
+      "pinyin": "xiāng fǔ xiāng chéng",
+      "meaning": "互相配合、补充，共同成就。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 10077,
+        "status": "exact_match"
+      },
+      "rank": 54,
+      "minimumPool": 200
+    },
+    {
+      "id": 694,
+      "word": "耳目一新",
+      "pinyin": "ěr mù yī xīn",
+      "meaning": "听到看到的都很新鲜。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 9971,
+        "status": "exact_match"
+      },
+      "rank": 55,
+      "minimumPool": 200
+    },
+    {
+      "id": 892,
+      "word": "有目共睹",
+      "pinyin": "yǒu mù gòng dǔ",
+      "meaning": "大家都能看见，事实十分明显。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 9788,
+        "status": "exact_match"
+      },
+      "rank": 56,
+      "minimumPool": 200
+    },
+    {
+      "id": 421,
+      "word": "自强不息",
+      "pinyin": "zì qiáng bù xī",
+      "meaning": "不断努力提高自己。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 9753,
+        "status": "exact_match"
+      },
+      "rank": 57,
+      "minimumPool": 200
+    },
+    {
+      "id": 995,
+      "word": "继往开来",
+      "pinyin": "jì wǎng kāi lái",
+      "meaning": "继承过去，开创未来。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 9625,
+        "status": "exact_match"
+      },
+      "rank": 58,
+      "minimumPool": 200
+    },
+    {
+      "id": 889,
+      "word": "赞不绝口",
+      "pinyin": "zàn bù jué kǒu",
+      "meaning": "不停地称赞。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 9602,
+        "status": "exact_match"
+      },
+      "rank": 59,
+      "minimumPool": 200
+    },
+    {
+      "id": 568,
+      "word": "义不容辞",
+      "pinyin": "yì bù róng cí",
+      "meaning": "道义上应当承担，不能推辞。",
+      "group": 11,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 9525,
+        "status": "exact_match"
+      },
+      "rank": 60,
+      "minimumPool": 200
+    },
+    {
+      "id": 850,
+      "word": "未雨绸缪",
+      "pinyin": "wèi yǔ chóu móu",
+      "meaning": "在事情发生之前，先做好准备。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 9508,
+        "status": "exact_match"
+      },
+      "rank": 61,
+      "minimumPool": 200
+    },
+    {
+      "id": 806,
+      "word": "对症下药",
+      "pinyin": "duì zhèng xià yào",
+      "meaning": "针对问题的症结，采取有效办法。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 9363,
+        "status": "exact_match"
+      },
+      "rank": 62,
+      "minimumPool": 200
+    },
+    {
+      "id": 3,
+      "word": "四面八方",
+      "pinyin": "sì miàn bā fāng",
+      "meaning": "周围各个方向。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 9346,
+        "status": "exact_match"
+      },
+      "rank": 63,
+      "minimumPool": 200
+    },
+    {
+      "id": 175,
+      "word": "马不停蹄",
+      "pinyin": "mǎ bù tíng tí",
+      "meaning": "不停歇地赶路或工作。",
+      "group": 3,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 9283,
+        "status": "exact_match"
+      },
+      "rank": 64,
+      "minimumPool": 200
+    },
+    {
+      "id": 448,
+      "word": "精益求精",
+      "pinyin": "jīng yì qiú jīng",
+      "meaning": "已经很好，还追求做得更好。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 9158,
+        "status": "exact_match"
+      },
+      "rank": 65,
+      "minimumPool": 200
+    },
+    {
+      "id": 414,
+      "word": "竭尽全力",
+      "pinyin": "jié jìn quán lì",
+      "meaning": "用尽全部力量。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 9085,
+        "status": "exact_match"
+      },
+      "rank": 66,
+      "minimumPool": 200
+    },
+    {
+      "id": 268,
+      "word": "哭笑不得",
+      "pinyin": "kū xiào bù dé",
+      "meaning": "觉得又好笑又为难，不知如何是好。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8991,
+        "status": "exact_match"
+      },
+      "rank": 67,
+      "minimumPool": 200
+    },
+    {
+      "id": 918,
+      "word": "不知所措",
+      "pinyin": "bù zhī suǒ cuò",
+      "meaning": "不知道该怎么办。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8956,
+        "status": "exact_match"
+      },
+      "rank": 68,
+      "minimumPool": 200
+    },
+    {
+      "id": 610,
+      "word": "座无虚席",
+      "pinyin": "zuò wú xū xí",
+      "meaning": "座位都有人，没有空座。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8908,
+        "status": "exact_match"
+      },
+      "rank": 69,
+      "minimumPool": 200
+    },
+    {
+      "id": 649,
+      "word": "琳琅满目",
+      "pinyin": "lín láng mǎn mù",
+      "meaning": "精美的东西很多，让人看不过来。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8857,
+        "status": "exact_match"
+      },
+      "rank": 70,
+      "minimumPool": 200
+    },
+    {
+      "id": 798,
+      "word": "卷土重来",
+      "pinyin": "juǎn tǔ chóng lái",
+      "meaning": "失败以后重新组织力量再来。",
+      "group": 15,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8835,
+        "status": "exact_match"
+      },
+      "rank": 71,
+      "minimumPool": 200
+    },
+    {
+      "id": 529,
+      "word": "理直气壮",
+      "pinyin": "lǐ zhí qì zhuàng",
+      "meaning": "理由充分，说话有气势。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8788,
+        "status": "exact_match"
+      },
+      "rank": 72,
+      "minimumPool": 200
+    },
+    {
+      "id": 277,
+      "word": "忧心忡忡",
+      "pinyin": "yōu xīn chōng chōng",
+      "meaning": "心里非常忧虑。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8741,
+        "status": "exact_match"
+      },
+      "rank": 73,
+      "minimumPool": 200
+    },
+    {
+      "id": 944,
+      "word": "燃眉之急",
+      "pinyin": "rán méi zhī jí",
+      "meaning": "像眉毛着火一样，非常紧迫的事情。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8700,
+        "status": "exact_match"
+      },
+      "rank": 74,
+      "minimumPool": 200
+    },
+    {
+      "id": 626,
+      "word": "津津乐道",
+      "pinyin": "jīn jīn lè dào",
+      "meaning": "很感兴趣地谈论某事。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8638,
+        "status": "exact_match"
+      },
+      "rank": 75,
+      "minimumPool": 200
+    },
+    {
+      "id": 691,
+      "word": "与日俱增",
+      "pinyin": "yǔ rì jù zēng",
+      "meaning": "随着时间一天天增长。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8529,
+        "status": "exact_match"
+      },
+      "rank": 76,
+      "minimumPool": 200
+    },
+    {
+      "id": 831,
+      "word": "急功近利",
+      "pinyin": "jí gōng jìn lì",
+      "meaning": "急着追求眼前的功效和利益。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8454,
+        "status": "exact_match"
+      },
+      "rank": 77,
+      "minimumPool": 200
+    },
+    {
+      "id": 218,
+      "word": "根深蒂固",
+      "pinyin": "gēn shēn dì gù",
+      "meaning": "根基牢固，不容易改变。",
+      "group": 4,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8431,
+        "status": "exact_match"
+      },
+      "rank": 78,
+      "minimumPool": 200
+    },
+    {
+      "id": 887,
+      "word": "惊心动魄",
+      "pinyin": "jīng xīn dòng pò",
+      "meaning": "使人非常震撼或紧张。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8380,
+        "status": "exact_match"
+      },
+      "rank": 79,
+      "minimumPool": 200
+    },
+    {
+      "id": 463,
+      "word": "相得益彰",
+      "pinyin": "xiāng dé yì zhāng",
+      "meaning": "互相配合，使各自的优点更突出。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8298,
+        "status": "exact_match"
+      },
+      "rank": 80,
+      "minimumPool": 200
+    },
+    {
+      "id": 968,
+      "word": "别开生面",
+      "pinyin": "bié kāi shēng miàn",
+      "meaning": "开创新的局面或形式。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8221,
+        "status": "exact_match"
+      },
+      "rank": 81,
+      "minimumPool": 200
+    },
+    {
+      "id": 917,
+      "word": "无能为力",
+      "pinyin": "wú néng wéi lì",
+      "meaning": "没有足够的力量或能力办成。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8154,
+        "status": "exact_match"
+      },
+      "rank": 82,
+      "minimumPool": 200
+    },
+    {
+      "id": 954,
+      "word": "匪夷所思",
+      "pinyin": "fěi yí suǒ sī",
+      "meaning": "事情离奇，超出一般人的想象。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 8046,
+        "status": "exact_match"
+      },
+      "rank": 83,
+      "minimumPool": 200
+    },
+    {
+      "id": 953,
+      "word": "难以置信",
+      "pinyin": "nán yǐ zhì xìn",
+      "meaning": "很难相信。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7977,
+        "status": "exact_match"
+      },
+      "rank": 84,
+      "minimumPool": 200
+    },
+    {
+      "id": 985,
+      "word": "寥寥无几",
+      "pinyin": "liáo liáo wú jǐ",
+      "meaning": "非常少，没有几个。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7709,
+        "status": "exact_match"
+      },
+      "rank": 85,
+      "minimumPool": 200
+    },
+    {
+      "id": 232,
+      "word": "顺藤摸瓜",
+      "pinyin": "shùn téng mō guā",
+      "meaning": "沿着线索追查，找到事情的根源。",
+      "group": 4,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7679,
+        "status": "exact_match"
+      },
+      "rank": 86,
+      "minimumPool": 200
+    },
+    {
+      "id": 491,
+      "word": "助人为乐",
+      "pinyin": "zhù rén wéi lè",
+      "meaning": "把帮助别人当作快乐。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7647,
+        "status": "exact_match"
+      },
+      "rank": 87,
+      "minimumPool": 200
+    },
+    {
+      "id": 643,
+      "word": "欢聚一堂",
+      "pinyin": "huān jù yī táng",
+      "meaning": "大家高兴地聚在一起。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7632,
+        "status": "exact_match"
+      },
+      "rank": 88,
+      "minimumPool": 200
+    },
+    {
+      "id": 523,
+      "word": "直言不讳",
+      "pinyin": "zhí yán bù huì",
+      "meaning": "坦率说话，不加隐瞒。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7616,
+        "status": "exact_match"
+      },
+      "rank": 89,
+      "minimumPool": 200
+    },
+    {
+      "id": 911,
+      "word": "义无反顾",
+      "pinyin": "yì wú fǎn gù",
+      "meaning": "为了正义勇往直前，不回头犹豫。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7610,
+        "status": "exact_match"
+      },
+      "rank": 90,
+      "minimumPool": 200
+    },
+    {
+      "id": 920,
+      "word": "力不从心",
+      "pinyin": "lì bù cóng xīn",
+      "meaning": "心里想做，能力却达不到。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7593,
+        "status": "exact_match"
+      },
+      "rank": 91,
+      "minimumPool": 200
+    },
+    {
+      "id": 624,
+      "word": "家常便饭",
+      "pinyin": "jiā cháng biàn fàn",
+      "meaning": "平常饭菜，也比喻常见的事情。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7568,
+        "status": "exact_match"
+      },
+      "rank": 92,
+      "minimumPool": 200
+    },
+    {
+      "id": 279,
+      "word": "心急如焚",
+      "pinyin": "xīn jí rú fén",
+      "meaning": "急得心里像着了火。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7540,
+        "status": "exact_match"
+      },
+      "rank": 93,
+      "minimumPool": 200
+    },
+    {
+      "id": 897,
+      "word": "眼花缭乱",
+      "pinyin": "yǎn huā liáo luàn",
+      "meaning": "看到复杂、纷繁的东西，不知看哪里。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7483,
+        "status": "exact_match"
+      },
+      "rank": 94,
+      "minimumPool": 200
+    },
+    {
+      "id": 492,
+      "word": "雪中送炭",
+      "pinyin": "xuě zhōng sòng tàn",
+      "meaning": "在别人急需时给予帮助。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7479,
+        "status": "exact_match"
+      },
+      "rank": 95,
+      "minimumPool": 200
+    },
+    {
+      "id": 373,
+      "word": "深入浅出",
+      "pinyin": "shēn rù qiǎn chū",
+      "meaning": "道理深刻，表达却通俗易懂。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7338,
+        "status": "exact_match"
+      },
+      "rank": 96,
+      "minimumPool": 200
+    },
+    {
+      "id": 823,
+      "word": "顺理成章",
+      "pinyin": "shùn lǐ chéng zhāng",
+      "meaning": "符合道理，自然得到相应的结果。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7282,
+        "status": "exact_match"
+      },
+      "rank": 97,
+      "minimumPool": 200
+    },
+    {
+      "id": 486,
+      "word": "不谋而合",
+      "pinyin": "bù móu ér hé",
+      "meaning": "事先没商量，想法或行动却一致。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7221,
+        "status": "exact_match"
+      },
+      "rank": 98,
+      "minimumPool": 200
+    },
+    {
+      "id": 284,
+      "word": "提心吊胆",
+      "pinyin": "tí xīn diào dǎn",
+      "meaning": "十分担心或害怕。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7205,
+        "status": "exact_match"
+      },
+      "rank": 99,
+      "minimumPool": 200
+    },
+    {
+      "id": 403,
+      "word": "锲而不舍",
+      "pinyin": "qiè ér bù shě",
+      "meaning": "比喻坚持不懈，不轻易放弃。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7144,
+        "status": "exact_match"
+      },
+      "rank": 100,
+      "minimumPool": 200
+    },
+    {
+      "id": 456,
+      "word": "同舟共济",
+      "pinyin": "tóng zhōu gòng jì",
+      "meaning": "比喻团结合作，共同渡过难关。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7107,
+        "status": "exact_match"
+      },
+      "rank": 101,
+      "minimumPool": 200
+    },
+    {
+      "id": 407,
+      "word": "兢兢业业",
+      "pinyin": "jīng jīng yè yè",
+      "meaning": "做事谨慎认真，十分负责。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 7041,
+        "status": "exact_match"
+      },
+      "rank": 102,
+      "minimumPool": 200
+    },
+    {
+      "id": 61,
+      "word": "波澜壮阔",
+      "pinyin": "bō lán zhuàng kuò",
+      "meaning": "水势浩大，也比喻规模宏伟。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6922,
+        "status": "exact_match"
+      },
+      "rank": 103,
+      "minimumPool": 200
+    },
+    {
+      "id": 916,
+      "word": "无可奈何",
+      "pinyin": "wú kě nài hé",
+      "meaning": "没有办法，只好如此。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6862,
+        "status": "exact_match"
+      },
+      "rank": 104,
+      "minimumPool": 200
+    },
+    {
+      "id": 587,
+      "word": "品学兼优",
+      "pinyin": "pǐn xué jiān yōu",
+      "meaning": "品德和学业都很优秀。",
+      "group": 11,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6815,
+        "status": "exact_match"
+      },
+      "rank": 105,
+      "minimumPool": 200
+    },
+    {
+      "id": 914,
+      "word": "束手无策",
+      "pinyin": "shù shǒu wú cè",
+      "meaning": "一点办法也没有。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6734,
+        "status": "exact_match"
+      },
+      "rank": 106,
+      "minimumPool": 200
+    },
+    {
+      "id": 947,
+      "word": "争分夺秒",
+      "pinyin": "zhēng fēn duó miǎo",
+      "meaning": "一点时间也不浪费，抓紧行动。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6615,
+        "status": "exact_match"
+      },
+      "rank": 107,
+      "minimumPool": 200
+    },
+    {
+      "id": 393,
+      "word": "集思广益",
+      "pinyin": "jí sī guǎng yì",
+      "meaning": "集中大家的想法，获得更好的办法。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6592,
+        "status": "exact_match"
+      },
+      "rank": 108,
+      "minimumPool": 200
+    },
+    {
+      "id": 849,
+      "word": "有的放矢",
+      "pinyin": "yǒu dì fàng shǐ",
+      "meaning": "做事有明确目标，针对实际问题。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6587,
+        "status": "exact_match"
+      },
+      "rank": 109,
+      "minimumPool": 200
+    },
+    {
+      "id": 601,
+      "word": "人山人海",
+      "pinyin": "rén shān rén hǎi",
+      "meaning": "人聚集得非常多。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6535,
+        "status": "exact_match"
+      },
+      "rank": 110,
+      "minimumPool": 200
+    },
+    {
+      "id": 179,
+      "word": "蛛丝马迹",
+      "pinyin": "zhū sī mǎ jì",
+      "meaning": "可以用来寻找线索的细微痕迹。",
+      "group": 3,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6448,
+        "status": "exact_match"
+      },
+      "rank": 111,
+      "minimumPool": 200
+    },
+    {
+      "id": 859,
+      "word": "扑朔迷离",
+      "pinyin": "pū shuò mí lí",
+      "meaning": "事情错综复杂，难以辨清。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6434,
+        "status": "exact_match"
+      },
+      "rank": 112,
+      "minimumPool": 200
+    },
+    {
+      "id": 604,
+      "word": "熙熙攘攘",
+      "pinyin": "xī xī rǎng rǎng",
+      "meaning": "人来人往，热闹拥挤。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6433,
+        "status": "exact_match"
+      },
+      "rank": 113,
+      "minimumPool": 200
+    },
+    {
+      "id": 84,
+      "word": "大江南北",
+      "pinyin": "dà jiāng nán běi",
+      "meaning": "指很广大的地区。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6408,
+        "status": "exact_match"
+      },
+      "rank": 114,
+      "minimumPool": 200
+    },
+    {
+      "id": 984,
+      "word": "屈指可数",
+      "pinyin": "qū zhǐ kě shǔ",
+      "meaning": "扳着手指就能数完，数量很少。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6404,
+        "status": "exact_match"
+      },
+      "rank": 115,
+      "minimumPool": 200
+    },
+    {
+      "id": 481,
+      "word": "一拍即合",
+      "pinyin": "yī pāi jí hé",
+      "meaning": "双方想法相同，很快达成一致。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6388,
+        "status": "exact_match"
+      },
+      "rank": 116,
+      "minimumPool": 200
+    },
+    {
+      "id": 19,
+      "word": "一丝不苟",
+      "pinyin": "yī sī bù gǒu",
+      "meaning": "做事认真，连细小的地方也不马虎。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6383,
+        "status": "exact_match"
+      },
+      "rank": 117,
+      "minimumPool": 200
+    },
+    {
+      "id": 934,
+      "word": "迎刃而解",
+      "pinyin": "yíng rèn ér jiě",
+      "meaning": "比喻问题随着关键被突破而顺利解决。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6334,
+        "status": "exact_match"
+      },
+      "rank": 118,
+      "minimumPool": 200
+    },
+    {
+      "id": 808,
+      "word": "量力而行",
+      "pinyin": "liàng lì ér xíng",
+      "meaning": "按照自己的能力去做。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6240,
+        "status": "exact_match"
+      },
+      "rank": 119,
+      "minimumPool": 200
+    },
+    {
+      "id": 317,
+      "word": "高瞻远瞩",
+      "pinyin": "gāo zhān yuǎn zhǔ",
+      "meaning": "看得远，比喻眼光长远。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6196,
+        "status": "exact_match"
+      },
+      "rank": 120,
+      "minimumPool": 200
+    },
+    {
+      "id": 827,
+      "word": "适得其反",
+      "pinyin": "shì dé qí fǎn",
+      "meaning": "得到的结果恰好与希望相反。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6145,
+        "status": "exact_match"
+      },
+      "rank": 121,
+      "minimumPool": 200
+    },
+    {
+      "id": 325,
+      "word": "跃跃欲试",
+      "pinyin": "yuè yuè yù shì",
+      "meaning": "很想试一试。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6108,
+        "status": "exact_match"
+      },
+      "rank": 122,
+      "minimumPool": 200
+    },
+    {
+      "id": 353,
+      "word": "聚精会神",
+      "pinyin": "jù jīng huì shén",
+      "meaning": "集中精神，认真注意。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6100,
+        "status": "exact_match"
+      },
+      "rank": 123,
+      "minimumPool": 200
+    },
+    {
+      "id": 996,
+      "word": "承前启后",
+      "pinyin": "chéng qián qǐ hòu",
+      "meaning": "承接前面的，开启后面的。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 6092,
+        "status": "exact_match"
+      },
+      "rank": 124,
+      "minimumPool": 200
+    },
+    {
+      "id": 409,
+      "word": "吃苦耐劳",
+      "pinyin": "chī kǔ nài láo",
+      "meaning": "能承受辛苦和劳累。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5983,
+        "status": "exact_match"
+      },
+      "rank": 125,
+      "minimumPool": 200
+    },
+    {
+      "id": 868,
+      "word": "大相径庭",
+      "pinyin": "dà xiāng jìng tíng",
+      "meaning": "彼此差别很大，很不相同。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5975,
+        "status": "exact_match"
+      },
+      "rank": 126,
+      "minimumPool": 200
+    },
+    {
+      "id": 285,
+      "word": "惊慌失措",
+      "pinyin": "jīng huāng shī cuò",
+      "meaning": "慌张得不知怎么办。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5868,
+        "status": "exact_match"
+      },
+      "rank": 127,
+      "minimumPool": 200
+    },
+    {
+      "id": 1,
+      "word": "一心一意",
+      "pinyin": "yī xīn yī yì",
+      "meaning": "心思专一，不分心。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5847,
+        "status": "exact_match"
+      },
+      "rank": 128,
+      "minimumPool": 200
+    },
+    {
+      "id": 848,
+      "word": "井然有序",
+      "pinyin": "jǐng rán yǒu xù",
+      "meaning": "整齐有秩序。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5815,
+        "status": "exact_match"
+      },
+      "rank": 129,
+      "minimumPool": 200
+    },
+    {
+      "id": 26,
+      "word": "二话不说",
+      "pinyin": "èr huà bù shuō",
+      "meaning": "不多说话，马上行动。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5735,
+        "status": "exact_match"
+      },
+      "rank": 130,
+      "minimumPool": 200
+    },
+    {
+      "id": 416,
+      "word": "尽心尽力",
+      "pinyin": "jìn xīn jìn lì",
+      "meaning": "用尽心思和力量。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5669,
+        "status": "exact_match"
+      },
+      "rank": 131,
+      "minimumPool": 200
+    },
+    {
+      "id": 389,
+      "word": "恍然大悟",
+      "pinyin": "huǎng rán dà wù",
+      "meaning": "一下子完全明白了。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5657,
+        "status": "exact_match"
+      },
+      "rank": 132,
+      "minimumPool": 200
+    },
+    {
+      "id": 602,
+      "word": "人来人往",
+      "pinyin": "rén lái rén wǎng",
+      "meaning": "来往的人很多，十分热闹。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5626,
+        "status": "exact_match"
+      },
+      "rank": 133,
+      "minimumPool": 200
+    },
+    {
+      "id": 52,
+      "word": "青山绿水",
+      "pinyin": "qīng shān lǜ shuǐ",
+      "meaning": "青翠的山，碧绿的水。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5619,
+        "status": "exact_match"
+      },
+      "rank": 134,
+      "minimumPool": 200
+    },
+    {
+      "id": 46,
+      "word": "百花齐放",
+      "pinyin": "bǎi huā qí fàng",
+      "meaning": "各种花一起开放，也比喻发展多样。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5578,
+        "status": "exact_match"
+      },
+      "rank": 135,
+      "minimumPool": 200
+    },
+    {
+      "id": 482,
+      "word": "志同道合",
+      "pinyin": "zhì tóng dào hé",
+      "meaning": "志向和信念一致。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5565,
+        "status": "exact_match"
+      },
+      "rank": 136,
+      "minimumPool": 200
+    },
+    {
+      "id": 982,
+      "word": "首屈一指",
+      "pinyin": "shǒu qū yī zhǐ",
+      "meaning": "居于首位，十分出色。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5537,
+        "status": "exact_match"
+      },
+      "rank": 137,
+      "minimumPool": 200
+    },
+    {
+      "id": 440,
+      "word": "水到渠成",
+      "pinyin": "shuǐ dào qú chéng",
+      "meaning": "条件具备后，事情自然成功。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5530,
+        "status": "exact_match"
+      },
+      "rank": 138,
+      "minimumPool": 200
+    },
+    {
+      "id": 511,
+      "word": "语重心长",
+      "pinyin": "yǔ zhòng xīn cháng",
+      "meaning": "话语恳切，情意深长。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5502,
+        "status": "exact_match"
+      },
+      "rank": 139,
+      "minimumPool": 200
+    },
+    {
+      "id": 586,
+      "word": "德才兼备",
+      "pinyin": "dé cái jiān bèi",
+      "meaning": "品德和才能都具备。",
+      "group": 11,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5488,
+        "status": "exact_match"
+      },
+      "rank": 140,
+      "minimumPool": 200
+    },
+    {
+      "id": 261,
+      "word": "乐此不疲",
+      "pinyin": "lè cǐ bù pí",
+      "meaning": "喜欢做某件事，不觉得疲倦。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5477,
+        "status": "exact_match"
+      },
+      "rank": 141,
+      "minimumPool": 200
+    },
+    {
+      "id": 4,
+      "word": "五颜六色",
+      "pinyin": "wǔ yán liù sè",
+      "meaning": "颜色多种多样。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5445,
+        "status": "exact_match"
+      },
+      "rank": 142,
+      "minimumPool": 200
+    },
+    {
+      "id": 209,
+      "word": "锦上添花",
+      "pinyin": "jǐn shàng tiān huā",
+      "meaning": "使美好的事物更加美好。",
+      "group": 4,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5428,
+        "status": "exact_match"
+      },
+      "rank": 143,
+      "minimumPool": 200
+    },
+    {
+      "id": 966,
+      "word": "推陈出新",
+      "pinyin": "tuī chén chū xīn",
+      "meaning": "去掉陈旧的，创造新的。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5426,
+        "status": "exact_match"
+      },
+      "rank": 144,
+      "minimumPool": 200
+    },
+    {
+      "id": 964,
+      "word": "独树一帜",
+      "pinyin": "dú shù yī zhì",
+      "meaning": "自成一家，有独特风格。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5419,
+        "status": "exact_match"
+      },
+      "rank": 145,
+      "minimumPool": 200
+    },
+    {
+      "id": 921,
+      "word": "无济于事",
+      "pinyin": "wú jì yú shì",
+      "meaning": "对解决事情没有帮助。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5412,
+        "status": "exact_match"
+      },
+      "rank": 146,
+      "minimumPool": 200
+    },
+    {
+      "id": 410,
+      "word": "埋头苦干",
+      "pinyin": "mái tóu kǔ gàn",
+      "meaning": "专心踏实地努力工作。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5372,
+        "status": "exact_match"
+      },
+      "rank": 147,
+      "minimumPool": 200
+    },
+    {
+      "id": 219,
+      "word": "郁郁葱葱",
+      "pinyin": "yù yù cōng cōng",
+      "meaning": "草木茂盛，也形容生气蓬勃。",
+      "group": 4,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5371,
+        "status": "exact_match"
+      },
+      "rank": 148,
+      "minimumPool": 200
+    },
+    {
+      "id": 824,
+      "word": "事半功倍",
+      "pinyin": "shì bàn gōng bèi",
+      "meaning": "花一半力气，收到加倍成效。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5360,
+        "status": "exact_match"
+      },
+      "rank": 149,
+      "minimumPool": 200
+    },
+    {
+      "id": 969,
+      "word": "别出心裁",
+      "pinyin": "bié chū xīn cái",
+      "meaning": "想出与众不同的办法。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5333,
+        "status": "exact_match"
+      },
+      "rank": 150,
+      "minimumPool": 200
+    },
+    {
+      "id": 289,
+      "word": "惊魂未定",
+      "pinyin": "jīng hún wèi dìng",
+      "meaning": "受惊后的心情还没有平静下来。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5301,
+        "status": "exact_match"
+      },
+      "rank": 151,
+      "minimumPool": 200
+    },
+    {
+      "id": 386,
+      "word": "深思熟虑",
+      "pinyin": "shēn sī shú lǜ",
+      "meaning": "反复深入地考虑。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5252,
+        "status": "exact_match"
+      },
+      "rank": 152,
+      "minimumPool": 200
+    },
+    {
+      "id": 178,
+      "word": "车水马龙",
+      "pinyin": "chē shuǐ mǎ lóng",
+      "meaning": "车马来往不断，形容热闹繁华。",
+      "group": 3,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5196,
+        "status": "exact_match"
+      },
+      "rank": 153,
+      "minimumPool": 200
+    },
+    {
+      "id": 397,
+      "word": "学以致用",
+      "pinyin": "xué yǐ zhì yòng",
+      "meaning": "把学到的知识用于实际。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5143,
+        "status": "exact_match"
+      },
+      "rank": 154,
+      "minimumPool": 200
+    },
+    {
+      "id": 35,
+      "word": "五湖四海",
+      "pinyin": "wǔ hú sì hǎi",
+      "meaning": "指各地，也比喻范围很广。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5124,
+        "status": "exact_match"
+      },
+      "rank": 155,
+      "minimumPool": 200
+    },
+    {
+      "id": 519,
+      "word": "一针见血",
+      "pinyin": "yī zhēn jiàn xuè",
+      "meaning": "一下就说中要害。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5076,
+        "status": "exact_match"
+      },
+      "rank": 156,
+      "minimumPool": 200
+    },
+    {
+      "id": 33,
+      "word": "四通八达",
+      "pinyin": "sì tōng bā dá",
+      "meaning": "道路通向各个方向。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5075,
+        "status": "exact_match"
+      },
+      "rank": 157,
+      "minimumPool": 200
+    },
+    {
+      "id": 101,
+      "word": "春暖花开",
+      "pinyin": "chūn nuǎn huā kāi",
+      "meaning": "春天气候温暖，花朵开放。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5052,
+        "status": "exact_match"
+      },
+      "rank": 158,
+      "minimumPool": 200
+    },
+    {
+      "id": 547,
+      "word": "一言不发",
+      "pinyin": "yī yán bù fā",
+      "meaning": "一句话也不说。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5036,
+        "status": "exact_match"
+      },
+      "rank": 159,
+      "minimumPool": 200
+    },
+    {
+      "id": 59,
+      "word": "水落石出",
+      "pinyin": "shuǐ luò shí chū",
+      "meaning": "比喻事情的真相显露出来。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5018,
+        "status": "exact_match"
+      },
+      "rank": 160,
+      "minimumPool": 200
+    },
+    {
+      "id": 896,
+      "word": "大开眼界",
+      "pinyin": "dà kāi yǎn jiè",
+      "meaning": "看到了新鲜事物，增长了见识。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 5006,
+        "status": "exact_match"
+      },
+      "rank": 161,
+      "minimumPool": 200
+    },
+    {
+      "id": 853,
+      "word": "了如指掌",
+      "pinyin": "liǎo rú zhǐ zhǎng",
+      "meaning": "对情况十分清楚，像看自己的手掌一样。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4987,
+        "status": "exact_match"
+      },
+      "rank": 162,
+      "minimumPool": 200
+    },
+    {
+      "id": 675,
+      "word": "历历在目",
+      "pinyin": "lì lì zài mù",
+      "meaning": "往事或景物清清楚楚地出现在眼前。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4974,
+        "status": "exact_match"
+      },
+      "rank": 163,
+      "minimumPool": 200
+    },
+    {
+      "id": 861,
+      "word": "千丝万缕",
+      "pinyin": "qiān sī wàn lǚ",
+      "meaning": "联系很多，牵连复杂。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4944,
+        "status": "exact_match"
+      },
+      "rank": 164,
+      "minimumPool": 200
+    },
+    {
+      "id": 12,
+      "word": "一清二楚",
+      "pinyin": "yī qīng èr chǔ",
+      "meaning": "十分清楚明白。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4858,
+        "status": "exact_match"
+      },
+      "rank": 165,
+      "minimumPool": 200
+    },
+    {
+      "id": 454,
+      "word": "众志成城",
+      "pinyin": "zhòng zhì chéng chéng",
+      "meaning": "大家意志一致，力量就很强大。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4857,
+        "status": "exact_match"
+      },
+      "rank": 166,
+      "minimumPool": 200
+    },
+    {
+      "id": 900,
+      "word": "不计其数",
+      "pinyin": "bù jì qí shù",
+      "meaning": "数量多得难以计算。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4829,
+        "status": "exact_match"
+      },
+      "rank": 167,
+      "minimumPool": 200
+    },
+    {
+      "id": 698,
+      "word": "脱胎换骨",
+      "pinyin": "tuō tāi huàn gǔ",
+      "meaning": "比喻发生根本性的改变。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4823,
+        "status": "exact_match"
+      },
+      "rank": 168,
+      "minimumPool": 200
+    },
+    {
+      "id": 468,
+      "word": "真心实意",
+      "pinyin": "zhēn xīn shí yì",
+      "meaning": "心意真实诚恳。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4814,
+        "status": "exact_match"
+      },
+      "rank": 169,
+      "minimumPool": 200
+    },
+    {
+      "id": 130,
+      "word": "狂风暴雨",
+      "pinyin": "kuáng fēng bào yǔ",
+      "meaning": "猛烈的风雨，也比喻激烈的冲击。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4789,
+        "status": "exact_match"
+      },
+      "rank": 170,
+      "minimumPool": 200
+    },
+    {
+      "id": 661,
+      "word": "日复一日",
+      "pinyin": "rì fù yī rì",
+      "meaning": "一天又一天。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4788,
+        "status": "exact_match"
+      },
+      "rank": 171,
+      "minimumPool": 200
+    },
+    {
+      "id": 51,
+      "word": "山清水秀",
+      "pinyin": "shān qīng shuǐ xiù",
+      "meaning": "山水秀丽，景色优美。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4776,
+        "status": "exact_match"
+      },
+      "rank": 172,
+      "minimumPool": 200
+    },
+    {
+      "id": 888,
+      "word": "叹为观止",
+      "pinyin": "tàn wéi guān zhǐ",
+      "meaning": "赞叹所见的事物好到了极点。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4764,
+        "status": "exact_match"
+      },
+      "rank": 173,
+      "minimumPool": 200
+    },
+    {
+      "id": 462,
+      "word": "取长补短",
+      "pinyin": "qǔ cháng bǔ duǎn",
+      "meaning": "吸取别人的长处，弥补自己的不足。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4747,
+        "status": "exact_match"
+      },
+      "rank": 174,
+      "minimumPool": 200
+    },
+    {
+      "id": 836,
+      "word": "偷工减料",
+      "pinyin": "tōu gōng jiǎn liào",
+      "meaning": "为了省力省钱，降低应有的质量。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4639,
+        "status": "exact_match"
+      },
+      "rank": 175,
+      "minimumPool": 200
+    },
+    {
+      "id": 625,
+      "word": "津津有味",
+      "pinyin": "jīn jīn yǒu wèi",
+      "meaning": "吃得香或看、听得很有兴趣。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4636,
+        "status": "exact_match"
+      },
+      "rank": 176,
+      "minimumPool": 200
+    },
+    {
+      "id": 695,
+      "word": "改头换面",
+      "pinyin": "gǎi tóu huàn miàn",
+      "meaning": "只改表面形式，实质并没有改变。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4634,
+        "status": "exact_match"
+      },
+      "rank": 177,
+      "minimumPool": 200
+    },
+    {
+      "id": 882,
+      "word": "大同小异",
+      "pinyin": "dà tóng xiǎo yì",
+      "meaning": "主要方面相同，只有小的差别。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4618,
+        "status": "exact_match"
+      },
+      "rank": 178,
+      "minimumPool": 200
+    },
+    {
+      "id": 779,
+      "word": "刮目相看",
+      "pinyin": "guā mù xiāng kàn",
+      "meaning": "用新的眼光看待有进步的人。",
+      "group": 15,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4613,
+        "status": "exact_match"
+      },
+      "rank": 179,
+      "minimumPool": 200
+    },
+    {
+      "id": 308,
+      "word": "目瞪口呆",
+      "pinyin": "mù dèng kǒu dāi",
+      "meaning": "吃惊得瞪大眼睛，张着嘴说不出话。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4603,
+        "status": "exact_match"
+      },
+      "rank": 180,
+      "minimumPool": 200
+    },
+    {
+      "id": 143,
+      "word": "风雨无阻",
+      "pinyin": "fēng yǔ wú zǔ",
+      "meaning": "不受风雨阻碍，坚持行动。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4586,
+        "status": "exact_match"
+      },
+      "rank": 181,
+      "minimumPool": 200
+    },
+    {
+      "id": 768,
+      "word": "江郎才尽",
+      "pinyin": "jiāng láng cái jìn",
+      "meaning": "比喻原有的才思衰退、用尽了。",
+      "group": 15,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4577,
+        "status": "exact_match"
+      },
+      "rank": 182,
+      "minimumPool": 200
+    },
+    {
+      "id": 845,
+      "word": "三令五申",
+      "pinyin": "sān lìng wǔ shēn",
+      "meaning": "多次命令和告诫。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4545,
+        "status": "exact_match"
+      },
+      "rank": 183,
+      "minimumPool": 200
+    },
+    {
+      "id": 804,
+      "word": "因人而异",
+      "pinyin": "yīn rén ér yì",
+      "meaning": "根据不同的人而有所不同。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4514,
+        "status": "exact_match"
+      },
+      "rank": 184,
+      "minimumPool": 200
+    },
+    {
+      "id": 10,
+      "word": "万众一心",
+      "pinyin": "wàn zhòng yī xīn",
+      "meaning": "大家团结起来，心往一处想。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4456,
+        "status": "exact_match"
+      },
+      "rank": 185,
+      "minimumPool": 200
+    },
+    {
+      "id": 524,
+      "word": "开门见山",
+      "pinyin": "kāi mén jiàn shān",
+      "meaning": "一开始就说主要内容。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4425,
+        "status": "exact_match"
+      },
+      "rank": 186,
+      "minimumPool": 200
+    },
+    {
+      "id": 997,
+      "word": "承上启下",
+      "pinyin": "chéng shàng qǐ xià",
+      "meaning": "承接上文，引出下文。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4410,
+        "status": "exact_match"
+      },
+      "rank": 187,
+      "minimumPool": 200
+    },
+    {
+      "id": 100,
+      "word": "风起云涌",
+      "pinyin": "fēng qǐ yún yǒng",
+      "meaning": "比喻事物接连兴起，声势很大。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4406,
+        "status": "exact_match"
+      },
+      "rank": 188,
+      "minimumPool": 200
+    },
+    {
+      "id": 662,
+      "word": "年复一年",
+      "pinyin": "nián fù yī nián",
+      "meaning": "一年又一年。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4388,
+        "status": "exact_match"
+      },
+      "rank": 189,
+      "minimumPool": 200
+    },
+    {
+      "id": 394,
+      "word": "各抒己见",
+      "pinyin": "gè shū jǐ jiàn",
+      "meaning": "各自发表自己的意见。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4325,
+        "status": "exact_match"
+      },
+      "rank": 190,
+      "minimumPool": 200
+    },
+    {
+      "id": 326,
+      "word": "蠢蠢欲动",
+      "pinyin": "chǔn chǔn yù dòng",
+      "meaning": "比喻准备行动，多含贬义。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4304,
+        "status": "exact_match"
+      },
+      "rank": 191,
+      "minimumPool": 200
+    },
+    {
+      "id": 73,
+      "word": "世外桃源",
+      "pinyin": "shì wài táo yuán",
+      "meaning": "远离纷扰、安宁美好的地方。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4290,
+        "status": "exact_match"
+      },
+      "rank": 192,
+      "minimumPool": 200
+    },
+    {
+      "id": 502,
+      "word": "滔滔不绝",
+      "pinyin": "tāo tāo bù jué",
+      "meaning": "说话接连不断。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4284,
+        "status": "exact_match"
+      },
+      "rank": 193,
+      "minimumPool": 200
+    },
+    {
+      "id": 423,
+      "word": "勇往直前",
+      "pinyin": "yǒng wǎng zhí qián",
+      "meaning": "勇敢地一直向前。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4231,
+        "status": "exact_match"
+      },
+      "rank": 194,
+      "minimumPool": 200
+    },
+    {
+      "id": 898,
+      "word": "目不暇接",
+      "pinyin": "mù bù xiá jiē",
+      "meaning": "东西太多，眼睛看不过来。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4217,
+        "status": "exact_match"
+      },
+      "rank": 195,
+      "minimumPool": 200
+    },
+    {
+      "id": 949,
+      "word": "时不我待",
+      "pinyin": "shí bù wǒ dài",
+      "meaning": "时间不会等待人，必须抓紧。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4164,
+        "status": "exact_match"
+      },
+      "rank": 196,
+      "minimumPool": 200
+    },
+    {
+      "id": 21,
+      "word": "一成不变",
+      "pinyin": "yī chéng bù biàn",
+      "meaning": "一旦形成就不再改变。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4161,
+        "status": "exact_match"
+      },
+      "rank": 197,
+      "minimumPool": 200
+    },
+    {
+      "id": 545,
+      "word": "支支吾吾",
+      "pinyin": "zhī zhī wú wú",
+      "meaning": "说话含混躲闪，不肯说清楚。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4136,
+        "status": "exact_match"
+      },
+      "rank": 198,
+      "minimumPool": 200
+    },
+    {
+      "id": 961,
+      "word": "别具一格",
+      "pinyin": "bié jù yī gé",
+      "meaning": "另有一种独特的风格。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4121,
+        "status": "exact_match"
+      },
+      "rank": 199,
+      "minimumPool": 200
+    },
+    {
+      "id": 942,
+      "word": "岌岌可危",
+      "pinyin": "jí jí kě wēi",
+      "meaning": "处境非常危险，快要维持不住。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4089,
+        "status": "exact_match"
+      },
+      "rank": 200,
+      "minimumPool": 200
+    },
+    {
+      "id": 11,
+      "word": "一举两得",
+      "pinyin": "yī jǔ liǎng dé",
+      "meaning": "做一件事，得到两种好处。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4054,
+        "status": "exact_match"
+      },
+      "rank": 201,
+      "minimumPool": 400
+    },
+    {
+      "id": 251,
+      "word": "兴高采烈",
+      "pinyin": "xìng gāo cǎi liè",
+      "meaning": "兴致高，情绪热烈。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4052,
+        "status": "exact_match"
+      },
+      "rank": 202,
+      "minimumPool": 400
+    },
+    {
+      "id": 503,
+      "word": "侃侃而谈",
+      "pinyin": "kǎn kǎn ér tán",
+      "meaning": "自信而从容地发表意见。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4035,
+        "status": "exact_match"
+      },
+      "rank": 203,
+      "minimumPool": 400
+    },
+    {
+      "id": 865,
+      "word": "天壤之别",
+      "pinyin": "tiān rǎng zhī bié",
+      "meaning": "像天和地之间那么大的差别。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 4017,
+        "status": "exact_match"
+      },
+      "rank": 204,
+      "minimumPool": 400
+    },
+    {
+      "id": 526,
+      "word": "直截了当",
+      "pinyin": "zhí jié liǎo dàng",
+      "meaning": "表达或做事干脆、明确。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3997,
+        "status": "exact_match"
+      },
+      "rank": 205,
+      "minimumPool": 400
+    },
+    {
+      "id": 243,
+      "word": "白手起家",
+      "pinyin": "bái shǒu qǐ jiā",
+      "meaning": "没有原有基础，靠努力创立事业。",
+      "group": 4,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3989,
+        "status": "exact_match"
+      },
+      "rank": 206,
+      "minimumPool": 400
+    },
+    {
+      "id": 309,
+      "word": "瞠目结舌",
+      "pinyin": "chēng mù jié shé",
+      "meaning": "惊讶得眼睛瞪大，说不出话。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3969,
+        "status": "exact_match"
+      },
+      "rank": 207,
+      "minimumPool": 400
+    },
+    {
+      "id": 590,
+      "word": "严于律己",
+      "pinyin": "yán yú lǜ jǐ",
+      "meaning": "严格要求自己。",
+      "group": 11,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3955,
+        "status": "exact_match"
+      },
+      "rank": 208,
+      "minimumPool": 400
+    },
+    {
+      "id": 433,
+      "word": "始终如一",
+      "pinyin": "shǐ zhōng rú yī",
+      "meaning": "从开始到结束都一样，不改变。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3928,
+        "status": "exact_match"
+      },
+      "rank": 209,
+      "minimumPool": 400
+    },
+    {
+      "id": 269,
+      "word": "啼笑皆非",
+      "pinyin": "tí xiào jiē fēi",
+      "meaning": "既不好哭，也不好笑，处境尴尬。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3927,
+        "status": "exact_match"
+      },
+      "rank": 210,
+      "minimumPool": 400
+    },
+    {
+      "id": 872,
+      "word": "不相上下",
+      "pinyin": "bù xiāng shàng xià",
+      "meaning": "水平或程度差不多。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3910,
+        "status": "exact_match"
+      },
+      "rank": 211,
+      "minimumPool": 400
+    },
+    {
+      "id": 182,
+      "word": "打草惊蛇",
+      "pinyin": "dǎ cǎo jīng shé",
+      "meaning": "行动不慎，使对方先有了警觉。",
+      "group": 3,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3900,
+        "status": "exact_match"
+      },
+      "rank": 212,
+      "minimumPool": 400
+    },
+    {
+      "id": 460,
+      "word": "守望相助",
+      "pinyin": "shǒu wàng xiāng zhù",
+      "meaning": "相互照应，彼此帮助。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3898,
+        "status": "exact_match"
+      },
+      "rank": 213,
+      "minimumPool": 400
+    },
+    {
+      "id": 919,
+      "word": "手足无措",
+      "pinyin": "shǒu zú wú cuò",
+      "meaning": "慌得不知怎样行动。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3844,
+        "status": "exact_match"
+      },
+      "rank": 214,
+      "minimumPool": 400
+    },
+    {
+      "id": 255,
+      "word": "喜出望外",
+      "pinyin": "xǐ chū wàng wài",
+      "meaning": "遇到意料之外的好事而特别高兴。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3841,
+        "status": "exact_match"
+      },
+      "rank": 215,
+      "minimumPool": 400
+    },
+    {
+      "id": 988,
+      "word": "不可多得",
+      "pinyin": "bù kě duō dé",
+      "meaning": "很难得到，十分可贵。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3841,
+        "status": "exact_match"
+      },
+      "rank": 216,
+      "minimumPool": 400
+    },
+    {
+      "id": 431,
+      "word": "不甘示弱",
+      "pinyin": "bù gān shì ruò",
+      "meaning": "不愿表现得比别人差。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3784,
+        "status": "exact_match"
+      },
+      "rank": 217,
+      "minimumPool": 400
+    },
+    {
+      "id": 153,
+      "word": "亡羊补牢",
+      "pinyin": "wáng yáng bǔ láo",
+      "meaning": "出了问题后补救，避免继续受损。",
+      "group": 3,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3783,
+        "status": "exact_match"
+      },
+      "rank": 218,
+      "minimumPool": 400
+    },
+    {
+      "id": 324,
+      "word": "摩拳擦掌",
+      "pinyin": "mó quán cā zhǎng",
+      "meaning": "准备行动，充满斗志。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3777,
+        "status": "exact_match"
+      },
+      "rank": 219,
+      "minimumPool": 400
+    },
+    {
+      "id": 864,
+      "word": "千差万别",
+      "pinyin": "qiān chā wàn bié",
+      "meaning": "差别很多，很大。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3776,
+        "status": "exact_match"
+      },
+      "rank": 220,
+      "minimumPool": 400
+    },
+    {
+      "id": 540,
+      "word": "自相矛盾",
+      "pinyin": "zì xiāng máo dùn",
+      "meaning": "自己的言行前后互相冲突。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3765,
+        "status": "exact_match"
+      },
+      "rank": 221,
+      "minimumPool": 400
+    },
+    {
+      "id": 644,
+      "word": "喜气洋洋",
+      "pinyin": "xǐ qì yáng yáng",
+      "meaning": "到处充满欢喜的气氛。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3732,
+        "status": "exact_match"
+      },
+      "rank": 222,
+      "minimumPool": 400
+    },
+    {
+      "id": 885,
+      "word": "大惊小怪",
+      "pinyin": "dà jīng xiǎo guài",
+      "meaning": "对不足为奇的事情过分惊讶。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3700,
+        "status": "exact_match"
+      },
+      "rank": 223,
+      "minimumPool": 400
+    },
+    {
+      "id": 928,
+      "word": "转危为安",
+      "pinyin": "zhuǎn wēi wéi ān",
+      "meaning": "从危险转为安全。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3695,
+        "status": "exact_match"
+      },
+      "rank": 224,
+      "minimumPool": 400
+    },
+    {
+      "id": 603,
+      "word": "人声鼎沸",
+      "pinyin": "rén shēng dǐng fèi",
+      "meaning": "人的声音嘈杂，像水沸腾一样。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3667,
+        "status": "exact_match"
+      },
+      "rank": 225,
+      "minimumPool": 400
+    },
+    {
+      "id": 370,
+      "word": "融会贯通",
+      "pinyin": "róng huì guàn tōng",
+      "meaning": "把各种知识和道理联系起来理解。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3655,
+        "status": "exact_match"
+      },
+      "rank": 226,
+      "minimumPool": 400
+    },
+    {
+      "id": 990,
+      "word": "不可磨灭",
+      "pinyin": "bù kě mó miè",
+      "meaning": "永远不会消失或被忘记。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3632,
+        "status": "exact_match"
+      },
+      "rank": 227,
+      "minimumPool": 400
+    },
+    {
+      "id": 906,
+      "word": "犹豫不决",
+      "pinyin": "yóu yù bù jué",
+      "meaning": "迟迟不能下定决心。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3624,
+        "status": "exact_match"
+      },
+      "rank": 228,
+      "minimumPool": 400
+    },
+    {
+      "id": 512,
+      "word": "苦口婆心",
+      "pinyin": "kǔ kǒu pó xīn",
+      "meaning": "反复耐心地劝说。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3611,
+        "status": "exact_match"
+      },
+      "rank": 229,
+      "minimumPool": 400
+    },
+    {
+      "id": 722,
+      "word": "游刃有余",
+      "pinyin": "yóu rèn yǒu yú",
+      "meaning": "经验充足，做事轻松自如。",
+      "group": 14,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3604,
+        "status": "exact_match"
+      },
+      "rank": 230,
+      "minimumPool": 400
+    },
+    {
+      "id": 142,
+      "word": "风吹草动",
+      "pinyin": "fēng chuī cǎo dòng",
+      "meaning": "比喻细微的动静或变化。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3516,
+        "status": "exact_match"
+      },
+      "rank": 231,
+      "minimumPool": 400
+    },
+    {
+      "id": 117,
+      "word": "秋高气爽",
+      "pinyin": "qiū gāo qì shuǎng",
+      "meaning": "秋天天空高远，空气清爽。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3513,
+        "status": "exact_match"
+      },
+      "rank": 232,
+      "minimumPool": 400
+    },
+    {
+      "id": 715,
+      "word": "掩人耳目",
+      "pinyin": "yǎn rén ěr mù",
+      "meaning": "用假象遮掩真相，欺骗别人。",
+      "group": 14,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3500,
+        "status": "exact_match"
+      },
+      "rank": 233,
+      "minimumPool": 400
+    },
+    {
+      "id": 826,
+      "word": "事与愿违",
+      "pinyin": "shì yǔ yuàn wéi",
+      "meaning": "事情的发展和愿望相反。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3493,
+        "status": "exact_match"
+      },
+      "rank": 234,
+      "minimumPool": 400
+    },
+    {
+      "id": 987,
+      "word": "凤毛麟角",
+      "pinyin": "fèng máo lín jiǎo",
+      "meaning": "比喻珍贵而稀少的人或事物。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3480,
+        "status": "exact_match"
+      },
+      "rank": 235,
+      "minimumPool": 400
+    },
+    {
+      "id": 641,
+      "word": "天伦之乐",
+      "pinyin": "tiān lún zhī lè",
+      "meaning": "家庭亲人团聚相处的乐趣。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3462,
+        "status": "exact_match"
+      },
+      "rank": 236,
+      "minimumPool": 400
+    },
+    {
+      "id": 664,
+      "word": "千载难逢",
+      "pinyin": "qiān zǎi nán féng",
+      "meaning": "一千年也难遇到，形容机会很难得。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3457,
+        "status": "exact_match"
+      },
+      "rank": 237,
+      "minimumPool": 400
+    },
+    {
+      "id": 342,
+      "word": "精神抖擞",
+      "pinyin": "jīng shén dǒu sǒu",
+      "meaning": "精神振奋，充满活力。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3444,
+        "status": "exact_match"
+      },
+      "rank": 238,
+      "minimumPool": 400
+    },
+    {
+      "id": 474,
+      "word": "朝夕相处",
+      "pinyin": "zhāo xī xiāng chǔ",
+      "meaning": "从早到晚生活在一起，关系密切。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3438,
+        "status": "exact_match"
+      },
+      "rank": 239,
+      "minimumPool": 400
+    },
+    {
+      "id": 449,
+      "word": "日积月累",
+      "pinyin": "rì jī yuè lěi",
+      "meaning": "一天一天、一个月一个月地积累。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3408,
+        "status": "exact_match"
+      },
+      "rank": 240,
+      "minimumPool": 400
+    },
+    {
+      "id": 680,
+      "word": "旷日持久",
+      "pinyin": "kuàng rì chí jiǔ",
+      "meaning": "耗费时日，拖得很久。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3398,
+        "status": "exact_match"
+      },
+      "rank": 241,
+      "minimumPool": 400
+    },
+    {
+      "id": 802,
+      "word": "因材施教",
+      "pinyin": "yīn cái shī jiào",
+      "meaning": "根据学习者的不同特点进行教育。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3368,
+        "status": "exact_match"
+      },
+      "rank": 242,
+      "minimumPool": 400
+    },
+    {
+      "id": 327,
+      "word": "手忙脚乱",
+      "pinyin": "shǒu máng jiǎo luàn",
+      "meaning": "忙乱得不知怎样安排。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3366,
+        "status": "exact_match"
+      },
+      "rank": 243,
+      "minimumPool": 400
+    },
+    {
+      "id": 816,
+      "word": "轻重缓急",
+      "pinyin": "qīng zhòng huǎn jí",
+      "meaning": "事情有轻重、缓急的不同。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3361,
+        "status": "exact_match"
+      },
+      "rank": 244,
+      "minimumPool": 400
+    },
+    {
+      "id": 899,
+      "word": "应接不暇",
+      "pinyin": "yìng jiē bù xiá",
+      "meaning": "事物或来人太多，来不及应付。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3360,
+        "status": "exact_match"
+      },
+      "rank": 245,
+      "minimumPool": 400
+    },
+    {
+      "id": 432,
+      "word": "矢志不渝",
+      "pinyin": "shǐ zhì bù yú",
+      "meaning": "立下志向，始终不改变。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3355,
+        "status": "exact_match"
+      },
+      "rank": 246,
+      "minimumPool": 400
+    },
+    {
+      "id": 883,
+      "word": "异曲同工",
+      "pinyin": "yì qǔ tóng gōng",
+      "meaning": "做法不同，却取得同样好的效果。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3343,
+        "status": "exact_match"
+      },
+      "rank": 247,
+      "minimumPool": 400
+    },
+    {
+      "id": 260,
+      "word": "乐在其中",
+      "pinyin": "lè zài qí zhōng",
+      "meaning": "在做某件事时感到快乐。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3322,
+        "status": "exact_match"
+      },
+      "rank": 248,
+      "minimumPool": 400
+    },
+    {
+      "id": 296,
+      "word": "心平气和",
+      "pinyin": "xīn píng qì hé",
+      "meaning": "心情平静，态度温和。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3300,
+        "status": "exact_match"
+      },
+      "rank": 249,
+      "minimumPool": 400
+    },
+    {
+      "id": 803,
+      "word": "因势利导",
+      "pinyin": "yīn shì lì dǎo",
+      "meaning": "顺着事物发展的趋势加以引导。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3264,
+        "status": "exact_match"
+      },
+      "rank": 250,
+      "minimumPool": 400
+    },
+    {
+      "id": 585,
+      "word": "德高望重",
+      "pinyin": "dé gāo wàng zhòng",
+      "meaning": "品德高尚，声望很高。",
+      "group": 11,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3263,
+        "status": "exact_match"
+      },
+      "rank": 251,
+      "minimumPool": 400
+    },
+    {
+      "id": 211,
+      "word": "昙花一现",
+      "pinyin": "tán huā yī xiàn",
+      "meaning": "美好的事物出现不久就消失。",
+      "group": 4,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3245,
+        "status": "exact_match"
+      },
+      "rank": 252,
+      "minimumPool": 400
+    },
+    {
+      "id": 983,
+      "word": "数一数二",
+      "pinyin": "shǔ yī shǔ èr",
+      "meaning": "排在前面，属于最好的几个。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3206,
+        "status": "exact_match"
+      },
+      "rank": 253,
+      "minimumPool": 400
+    },
+    {
+      "id": 122,
+      "word": "天寒地冻",
+      "pinyin": "tiān hán dì dòng",
+      "meaning": "天气非常寒冷。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3187,
+        "status": "exact_match"
+      },
+      "rank": 254,
+      "minimumPool": 400
+    },
+    {
+      "id": 408,
+      "word": "任劳任怨",
+      "pinyin": "rèn láo rèn yuàn",
+      "meaning": "不怕辛苦，也不埋怨。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3173,
+        "status": "exact_match"
+      },
+      "rank": 255,
+      "minimumPool": 400
+    },
+    {
+      "id": 726,
+      "word": "纸上谈兵",
+      "pinyin": "zhǐ shàng tán bīng",
+      "meaning": "只会空谈理论，不能解决实际问题。",
+      "group": 14,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3153,
+        "status": "exact_match"
+      },
+      "rank": 256,
+      "minimumPool": 400
+    },
+    {
+      "id": 605,
+      "word": "川流不息",
+      "pinyin": "chuān liú bù xī",
+      "meaning": "像水流一样，接连不断。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3143,
+        "status": "exact_match"
+      },
+      "rank": 257,
+      "minimumPool": 400
+    },
+    {
+      "id": 650,
+      "word": "美不胜收",
+      "pinyin": "měi bù shèng shōu",
+      "meaning": "美好的东西太多，看不过来。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3139,
+        "status": "exact_match"
+      },
+      "rank": 258,
+      "minimumPool": 400
+    },
+    {
+      "id": 216,
+      "word": "枝繁叶茂",
+      "pinyin": "zhī fán yè mào",
+      "meaning": "枝叶长得繁密茂盛。",
+      "group": 4,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3136,
+        "status": "exact_match"
+      },
+      "rank": 259,
+      "minimumPool": 400
+    },
+    {
+      "id": 435,
+      "word": "善始善终",
+      "pinyin": "shàn shǐ shàn zhōng",
+      "meaning": "开头做得好，结尾也做得好。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3136,
+        "status": "exact_match"
+      },
+      "rank": 260,
+      "minimumPool": 400
+    },
+    {
+      "id": 116,
+      "word": "汗流浃背",
+      "pinyin": "hàn liú jiā bèi",
+      "meaning": "汗水湿透了背上的衣服。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3083,
+        "status": "exact_match"
+      },
+      "rank": 261,
+      "minimumPool": 400
+    },
+    {
+      "id": 39,
+      "word": "七嘴八舌",
+      "pinyin": "qī zuǐ bā shé",
+      "meaning": "许多人同时说话。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3078,
+        "status": "exact_match"
+      },
+      "rank": 262,
+      "minimumPool": 400
+    },
+    {
+      "id": 815,
+      "word": "本末倒置",
+      "pinyin": "běn mò dào zhì",
+      "meaning": "把根本和枝节、主要和次要弄颠倒了。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3076,
+        "status": "exact_match"
+      },
+      "rank": 263,
+      "minimumPool": 400
+    },
+    {
+      "id": 903,
+      "word": "左右为难",
+      "pinyin": "zuǒ yòu wéi nán",
+      "meaning": "无论怎样做，都有难处。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3067,
+        "status": "exact_match"
+      },
+      "rank": 264,
+      "minimumPool": 400
+    },
+    {
+      "id": 63,
+      "word": "风平浪静",
+      "pinyin": "fēng píng làng jìng",
+      "meaning": "没有风浪，比喻平静无事。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3063,
+        "status": "exact_match"
+      },
+      "rank": 265,
+      "minimumPool": 400
+    },
+    {
+      "id": 23,
+      "word": "一落千丈",
+      "pinyin": "yī luò qiān zhàng",
+      "meaning": "地位、成绩等下降得很厉害。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 3041,
+        "status": "exact_match"
+      },
+      "rank": 266,
+      "minimumPool": 400
+    },
+    {
+      "id": 901,
+      "word": "进退两难",
+      "pinyin": "jìn tuì liǎng nán",
+      "meaning": "前进和后退都有困难。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2995,
+        "status": "exact_match"
+      },
+      "rank": 267,
+      "minimumPool": 400
+    },
+    {
+      "id": 830,
+      "word": "急于求成",
+      "pinyin": "jí yú qiú chéng",
+      "meaning": "急着想取得成功。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2978,
+        "status": "exact_match"
+      },
+      "rank": 268,
+      "minimumPool": 400
+    },
+    {
+      "id": 45,
+      "word": "百折不挠",
+      "pinyin": "bǎi zhé bù náo",
+      "meaning": "遇到许多挫折也不退缩。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2970,
+        "status": "exact_match"
+      },
+      "rank": 269,
+      "minimumPool": 400
+    },
+    {
+      "id": 347,
+      "word": "大显身手",
+      "pinyin": "dà xiǎn shēn shǒu",
+      "meaning": "充分显示自己的本领。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2968,
+        "status": "exact_match"
+      },
+      "rank": 270,
+      "minimumPool": 400
+    },
+    {
+      "id": 404,
+      "word": "孜孜不倦",
+      "pinyin": "zī zī bù juàn",
+      "meaning": "勤奋努力，不知疲倦。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2943,
+        "status": "exact_match"
+      },
+      "rank": 271,
+      "minimumPool": 400
+    },
+    {
+      "id": 978,
+      "word": "闻名遐迩",
+      "pinyin": "wén míng xiá ěr",
+      "meaning": "远近都知道，名声很大。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2942,
+        "status": "exact_match"
+      },
+      "rank": 272,
+      "minimumPool": 400
+    },
+    {
+      "id": 349,
+      "word": "指手画脚",
+      "pinyin": "zhǐ shǒu huà jiǎo",
+      "meaning": "随意指点或批评，常含贬义。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2939,
+        "status": "exact_match"
+      },
+      "rank": 273,
+      "minimumPool": 400
+    },
+    {
+      "id": 473,
+      "word": "如影随形",
+      "pinyin": "rú yǐng suí xíng",
+      "meaning": "像影子跟着身体一样，关系紧密。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2931,
+        "status": "exact_match"
+      },
+      "rank": 274,
+      "minimumPool": 400
+    },
+    {
+      "id": 137,
+      "word": "风调雨顺",
+      "pinyin": "fēng tiáo yǔ shùn",
+      "meaning": "风雨适时适量，有利于农作物生长。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2927,
+        "status": "exact_match"
+      },
+      "rank": 275,
+      "minimumPool": 400
+    },
+    {
+      "id": 177,
+      "word": "走马观花",
+      "pinyin": "zǒu mǎ guān huā",
+      "meaning": "比喻观察得粗略、不深入。",
+      "group": 3,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2912,
+        "status": "exact_match"
+      },
+      "rank": 276,
+      "minimumPool": 400
+    },
+    {
+      "id": 561,
+      "word": "廉洁奉公",
+      "pinyin": "lián jié fèng gōng",
+      "meaning": "不贪私利，认真办理公事。",
+      "group": 11,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2883,
+        "status": "exact_match"
+      },
+      "rank": 277,
+      "minimumPool": 400
+    },
+    {
+      "id": 135,
+      "word": "晴天霹雳",
+      "pinyin": "qíng tiān pī lì",
+      "meaning": "比喻突然发生的惊人坏消息。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2867,
+        "status": "exact_match"
+      },
+      "rank": 278,
+      "minimumPool": 400
+    },
+    {
+      "id": 687,
+      "word": "瞬息万变",
+      "pinyin": "shùn xī wàn biàn",
+      "meaning": "短时间里变化很多。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2857,
+        "status": "exact_match"
+      },
+      "rank": 279,
+      "minimumPool": 400
+    },
+    {
+      "id": 90,
+      "word": "翻山越岭",
+      "pinyin": "fān shān yuè lǐng",
+      "meaning": "越过许多山岭。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2829,
+        "status": "exact_match"
+      },
+      "rank": 280,
+      "minimumPool": 400
+    },
+    {
+      "id": 282,
+      "word": "忐忑不安",
+      "pinyin": "tǎn tè bù ān",
+      "meaning": "心里不安，放不下心。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2827,
+        "status": "exact_match"
+      },
+      "rank": 281,
+      "minimumPool": 400
+    },
+    {
+      "id": 890,
+      "word": "赞叹不已",
+      "pinyin": "zàn tàn bù yǐ",
+      "meaning": "不断地赞美和感叹。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2819,
+        "status": "exact_match"
+      },
+      "rank": 282,
+      "minimumPool": 400
+    },
+    {
+      "id": 430,
+      "word": "不屈不挠",
+      "pinyin": "bù qū bù náo",
+      "meaning": "不向压力和困难低头。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2816,
+        "status": "exact_match"
+      },
+      "rank": 283,
+      "minimumPool": 400
+    },
+    {
+      "id": 392,
+      "word": "灵机一动",
+      "pinyin": "líng jī yī dòng",
+      "meaning": "突然想出一个办法。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2803,
+        "status": "exact_match"
+      },
+      "rank": 284,
+      "minimumPool": 400
+    },
+    {
+      "id": 496,
+      "word": "礼尚往来",
+      "pinyin": "lǐ shàng wǎng lái",
+      "meaning": "重视礼节，有来有往。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2803,
+        "status": "exact_match"
+      },
+      "rank": 285,
+      "minimumPool": 400
+    },
+    {
+      "id": 723,
+      "word": "熟视无睹",
+      "pinyin": "shú shì wú dǔ",
+      "meaning": "经常看见，却像没看见一样不重视。",
+      "group": 14,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2798,
+        "status": "exact_match"
+      },
+      "rank": 286,
+      "minimumPool": 400
+    },
+    {
+      "id": 891,
+      "word": "交口称赞",
+      "pinyin": "jiāo kǒu chēng zàn",
+      "meaning": "大家一同称赞。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2792,
+        "status": "exact_match"
+      },
+      "rank": 287,
+      "minimumPool": 400
+    },
+    {
+      "id": 799,
+      "word": "老生常谈",
+      "pinyin": "lǎo shēng cháng tán",
+      "meaning": "听过很多次、没有新意的话。",
+      "group": 15,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2777,
+        "status": "exact_match"
+      },
+      "rank": 288,
+      "minimumPool": 400
+    },
+    {
+      "id": 144,
+      "word": "风雨同舟",
+      "pinyin": "fēng yǔ tóng zhōu",
+      "meaning": "比喻共同面对困难。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2763,
+        "status": "exact_match"
+      },
+      "rank": 289,
+      "minimumPool": 400
+    },
+    {
+      "id": 273,
+      "word": "心灰意冷",
+      "pinyin": "xīn huī yì lěng",
+      "meaning": "失望之后，失去了热情和信心。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2760,
+        "status": "exact_match"
+      },
+      "rank": 290,
+      "minimumPool": 400
+    },
+    {
+      "id": 844,
+      "word": "三缄其口",
+      "pinyin": "sān jiān qí kǒu",
+      "meaning": "比喻谨慎少言，或闭口不说。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2749,
+        "status": "exact_match"
+      },
+      "rank": 291,
+      "minimumPool": 400
+    },
+    {
+      "id": 847,
+      "word": "井井有条",
+      "pinyin": "jǐng jǐng yǒu tiáo",
+      "meaning": "条理清楚，安排整齐。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2731,
+        "status": "exact_match"
+      },
+      "rank": 292,
+      "minimumPool": 400
+    },
+    {
+      "id": 412,
+      "word": "稳扎稳打",
+      "pinyin": "wěn zhā wěn dǎ",
+      "meaning": "稳步前进，工作有把握地开展。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2719,
+        "status": "exact_match"
+      },
+      "rank": 293,
+      "minimumPool": 400
+    },
+    {
+      "id": 941,
+      "word": "危在旦夕",
+      "pinyin": "wēi zài dàn xī",
+      "meaning": "危险迫在眉睫，随时可能发生。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2714,
+        "status": "exact_match"
+      },
+      "rank": 294,
+      "minimumPool": 400
+    },
+    {
+      "id": 467,
+      "word": "开诚布公",
+      "pinyin": "kāi chéng bù gōng",
+      "meaning": "坦诚地表达意见，不隐瞒私心。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2708,
+        "status": "exact_match"
+      },
+      "rank": 295,
+      "minimumPool": 400
+    },
+    {
+      "id": 977,
+      "word": "举世闻名",
+      "pinyin": "jǔ shì wén míng",
+      "meaning": "全世界都很有名。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2683,
+        "status": "exact_match"
+      },
+      "rank": 296,
+      "minimumPool": 400
+    },
+    {
+      "id": 552,
+      "word": "光明正大",
+      "pinyin": "guāng míng zhèng dà",
+      "meaning": "行为正当，没有不可告人的地方。",
+      "group": 11,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2682,
+        "status": "exact_match"
+      },
+      "rank": 297,
+      "minimumPool": 400
+    },
+    {
+      "id": 428,
+      "word": "坚韧不拔",
+      "pinyin": "jiān rèn bù bá",
+      "meaning": "意志坚定，难以动摇。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2663,
+        "status": "exact_match"
+      },
+      "rank": 298,
+      "minimumPool": 400
+    },
+    {
+      "id": 352,
+      "word": "全神贯注",
+      "pinyin": "quán shén guàn zhù",
+      "meaning": "全部精神集中在一件事上。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2661,
+        "status": "exact_match"
+      },
+      "rank": 299,
+      "minimumPool": 400
+    },
+    {
+      "id": 25,
+      "word": "一马当先",
+      "pinyin": "yī mǎ dāng xiān",
+      "meaning": "走在最前面，带头行动。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2654,
+        "status": "exact_match"
+      },
+      "rank": 300,
+      "minimumPool": 400
+    },
+    {
+      "id": 441,
+      "word": "厚积薄发",
+      "pinyin": "hòu jī bó fā",
+      "meaning": "充分积累后，有节制地显露才能。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2653,
+        "status": "exact_match"
+      },
+      "rank": 301,
+      "minimumPool": 400
+    },
+    {
+      "id": 908,
+      "word": "当机立断",
+      "pinyin": "dāng jī lì duàn",
+      "meaning": "在关键时刻立即作出决定。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2647,
+        "status": "exact_match"
+      },
+      "rank": 302,
+      "minimumPool": 400
+    },
+    {
+      "id": 65,
+      "word": "一望无际",
+      "pinyin": "yī wàng wú jì",
+      "meaning": "一眼望不到边。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2639,
+        "status": "exact_match"
+      },
+      "rank": 303,
+      "minimumPool": 400
+    },
+    {
+      "id": 189,
+      "word": "门可罗雀",
+      "pinyin": "mén kě luó què",
+      "meaning": "门前冷清，来往的人很少。",
+      "group": 3,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2629,
+        "status": "exact_match"
+      },
+      "rank": 304,
+      "minimumPool": 400
+    },
+    {
+      "id": 348,
+      "word": "大摇大摆",
+      "pinyin": "dà yáo dà bǎi",
+      "meaning": "走路神气，旁若无人。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2629,
+        "status": "exact_match"
+      },
+      "rank": 305,
+      "minimumPool": 400
+    },
+    {
+      "id": 406,
+      "word": "勤勤恳恳",
+      "pinyin": "qín qín kěn kěn",
+      "meaning": "做事认真踏实，任劳任怨。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2624,
+        "status": "exact_match"
+      },
+      "rank": 306,
+      "minimumPool": 400
+    },
+    {
+      "id": 299,
+      "word": "心旷神怡",
+      "pinyin": "xīn kuàng shén yí",
+      "meaning": "心情开阔，精神愉快。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2623,
+        "status": "exact_match"
+      },
+      "rank": 307,
+      "minimumPool": 400
+    },
+    {
+      "id": 485,
+      "word": "心照不宣",
+      "pinyin": "xīn zhào bù xuān",
+      "meaning": "彼此心里明白，不必说出来。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2614,
+        "status": "exact_match"
+      },
+      "rank": 308,
+      "minimumPool": 400
+    },
+    {
+      "id": 436,
+      "word": "半途而废",
+      "pinyin": "bàn tú ér fèi",
+      "meaning": "事情还没做完就停止。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2611,
+        "status": "exact_match"
+      },
+      "rank": 309,
+      "minimumPool": 400
+    },
+    {
+      "id": 915,
+      "word": "无计可施",
+      "pinyin": "wú jì kě shī",
+      "meaning": "没有办法可以使用。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2601,
+        "status": "exact_match"
+      },
+      "rank": 310,
+      "minimumPool": 400
+    },
+    {
+      "id": 797,
+      "word": "东山再起",
+      "pinyin": "dōng shān zài qǐ",
+      "meaning": "失势或失败后，重新兴起。",
+      "group": 15,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2584,
+        "status": "exact_match"
+      },
+      "rank": 311,
+      "minimumPool": 400
+    },
+    {
+      "id": 777,
+      "word": "一鼓作气",
+      "pinyin": "yī gǔ zuò qì",
+      "meaning": "趁最初的干劲，一口气把事情做完。",
+      "group": 15,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2565,
+        "status": "exact_match"
+      },
+      "rank": 312,
+      "minimumPool": 400
+    },
+    {
+      "id": 862,
+      "word": "千头万绪",
+      "pinyin": "qiān tóu wàn xù",
+      "meaning": "头绪很多，事情纷繁。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2565,
+        "status": "exact_match"
+      },
+      "rank": 313,
+      "minimumPool": 400
+    },
+    {
+      "id": 123,
+      "word": "冰天雪地",
+      "pinyin": "bīng tiān xuě dì",
+      "meaning": "到处都是冰雪，十分寒冷。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2559,
+        "status": "exact_match"
+      },
+      "rank": 314,
+      "minimumPool": 400
+    },
+    {
+      "id": 843,
+      "word": "谨言慎行",
+      "pinyin": "jǐn yán shèn xíng",
+      "meaning": "说话和行动都很谨慎。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2546,
+        "status": "exact_match"
+      },
+      "rank": 315,
+      "minimumPool": 400
+    },
+    {
+      "id": 139,
+      "word": "烟消云散",
+      "pinyin": "yān xiāo yún sàn",
+      "meaning": "像烟云散去一样，完全消失。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2530,
+        "status": "exact_match"
+      },
+      "rank": 316,
+      "minimumPool": 400
+    },
+    {
+      "id": 390,
+      "word": "豁然开朗",
+      "pinyin": "huò rán kāi lǎng",
+      "meaning": "突然开阔明亮，也比喻一下想明白。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2519,
+        "status": "exact_match"
+      },
+      "rank": 317,
+      "minimumPool": 400
+    },
+    {
+      "id": 295,
+      "word": "义愤填膺",
+      "pinyin": "yì fèn tián yīng",
+      "meaning": "胸中充满因不公而产生的愤怒。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2517,
+        "status": "exact_match"
+      },
+      "rank": 318,
+      "minimumPool": 400
+    },
+    {
+      "id": 837,
+      "word": "敷衍了事",
+      "pinyin": "fū yǎn liǎo shì",
+      "meaning": "办事不认真，随便应付过去。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2510,
+        "status": "exact_match"
+      },
+      "rank": 319,
+      "minimumPool": 400
+    },
+    {
+      "id": 774,
+      "word": "高枕无忧",
+      "pinyin": "gāo zhěn wú yōu",
+      "meaning": "安心睡觉，不必忧虑。",
+      "group": 15,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2508,
+        "status": "exact_match"
+      },
+      "rank": 320,
+      "minimumPool": 400
+    },
+    {
+      "id": 671,
+      "word": "今非昔比",
+      "pinyin": "jīn fēi xī bǐ",
+      "meaning": "现在与过去大不相同。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2499,
+        "status": "exact_match"
+      },
+      "rank": 321,
+      "minimumPool": 400
+    },
+    {
+      "id": 305,
+      "word": "手舞足蹈",
+      "pinyin": "shǒu wǔ zú dǎo",
+      "meaning": "高兴得手脚都舞动起来。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2486,
+        "status": "exact_match"
+      },
+      "rank": 322,
+      "minimumPool": 400
+    },
+    {
+      "id": 476,
+      "word": "相濡以沫",
+      "pinyin": "xiāng rú yǐ mò",
+      "meaning": "在困境中彼此支持和帮助。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2475,
+        "status": "exact_match"
+      },
+      "rank": 323,
+      "minimumPool": 400
+    },
+    {
+      "id": 9,
+      "word": "千军万马",
+      "pinyin": "qiān jūn wàn mǎ",
+      "meaning": "形容军队雄壮，声势浩大。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2452,
+        "status": "exact_match"
+      },
+      "rank": 324,
+      "minimumPool": 400
+    },
+    {
+      "id": 576,
+      "word": "阳奉阴违",
+      "pinyin": "yáng fèng yīn wéi",
+      "meaning": "表面遵从，暗地里却违背。",
+      "group": 11,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2449,
+        "status": "exact_match"
+      },
+      "rank": 325,
+      "minimumPool": 400
+    },
+    {
+      "id": 548,
+      "word": "沉默寡言",
+      "pinyin": "chén mò guǎ yán",
+      "meaning": "不爱说话，话很少。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2445,
+        "status": "exact_match"
+      },
+      "rank": 326,
+      "minimumPool": 400
+    },
+    {
+      "id": 417,
+      "word": "尽力而为",
+      "pinyin": "jìn lì ér wéi",
+      "meaning": "在自己的能力范围内尽力去做。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2424,
+        "status": "exact_match"
+      },
+      "rank": 327,
+      "minimumPool": 400
+    },
+    {
+      "id": 539,
+      "word": "自圆其说",
+      "pinyin": "zì yuán qí shuō",
+      "meaning": "使自己的说法前后能解释得通。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2416,
+        "status": "exact_match"
+      },
+      "rank": 328,
+      "minimumPool": 400
+    },
+    {
+      "id": 811,
+      "word": "面面俱到",
+      "pinyin": "miàn miàn jù dào",
+      "meaning": "各方面都照顾到了。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2379,
+        "status": "exact_match"
+      },
+      "rank": 329,
+      "minimumPool": 400
+    },
+    {
+      "id": 77,
+      "word": "天涯海角",
+      "pinyin": "tiān yá hǎi jiǎo",
+      "meaning": "极其遥远的地方。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2378,
+        "status": "exact_match"
+      },
+      "rank": 330,
+      "minimumPool": 400
+    },
+    {
+      "id": 517,
+      "word": "言简意赅",
+      "pinyin": "yán jiǎn yì gāi",
+      "meaning": "语言简练，意思完整。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2354,
+        "status": "exact_match"
+      },
+      "rank": 331,
+      "minimumPool": 400
+    },
+    {
+      "id": 111,
+      "word": "鸟语花香",
+      "pinyin": "niǎo yǔ huā xiāng",
+      "meaning": "鸟鸣悦耳，花香四溢。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2350,
+        "status": "exact_match"
+      },
+      "rank": 332,
+      "minimumPool": 400
+    },
+    {
+      "id": 147,
+      "word": "风尘仆仆",
+      "pinyin": "fēng chén pú pú",
+      "meaning": "形容旅途奔波、劳累的样子。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2338,
+        "status": "exact_match"
+      },
+      "rank": 333,
+      "minimumPool": 400
+    },
+    {
+      "id": 645,
+      "word": "张灯结彩",
+      "pinyin": "zhāng dēng jié cǎi",
+      "meaning": "挂灯笼，系彩绸，装点喜庆场面。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2332,
+        "status": "exact_match"
+      },
+      "rank": 334,
+      "minimumPool": 400
+    },
+    {
+      "id": 708,
+      "word": "南辕北辙",
+      "pinyin": "nán yuán běi zhé",
+      "meaning": "行动与目标完全相反。",
+      "group": 14,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2324,
+        "status": "exact_match"
+      },
+      "rank": 335,
+      "minimumPool": 400
+    },
+    {
+      "id": 457,
+      "word": "同甘共苦",
+      "pinyin": "tóng gān gòng kǔ",
+      "meaning": "共同享受幸福，也共同承担困难。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2282,
+        "status": "exact_match"
+      },
+      "rank": 336,
+      "minimumPool": 400
+    },
+    {
+      "id": 405,
+      "word": "孜孜以求",
+      "pinyin": "zī zī yǐ qiú",
+      "meaning": "勤奋、不停地追求。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2270,
+        "status": "exact_match"
+      },
+      "rank": 337,
+      "minimumPool": 400
+    },
+    {
+      "id": 962,
+      "word": "独具匠心",
+      "pinyin": "dú jù jiàng xīn",
+      "meaning": "在构思和设计上有独到之处。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2263,
+        "status": "exact_match"
+      },
+      "rank": 338,
+      "minimumPool": 400
+    },
+    {
+      "id": 215,
+      "word": "争奇斗艳",
+      "pinyin": "zhēng qí dòu yàn",
+      "meaning": "竞相展示奇特和艳丽。",
+      "group": 4,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2244,
+        "status": "exact_match"
+      },
+      "rank": 339,
+      "minimumPool": 400
+    },
+    {
+      "id": 227,
+      "word": "盘根错节",
+      "pinyin": "pán gēn cuò jié",
+      "meaning": "根节交错，比喻事情复杂，关系纠缠。",
+      "group": 4,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2242,
+        "status": "exact_match"
+      },
+      "rank": 340,
+      "minimumPool": 400
+    },
+    {
+      "id": 313,
+      "word": "目不转睛",
+      "pinyin": "mù bù zhuǎn jīng",
+      "meaning": "眼睛一直盯着看。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2232,
+        "status": "exact_match"
+      },
+      "rank": 341,
+      "minimumPool": 400
+    },
+    {
+      "id": 57,
+      "word": "峰回路转",
+      "pinyin": "fēng huí lù zhuǎn",
+      "meaning": "山路曲折，也比喻事情出现转机。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2218,
+        "status": "exact_match"
+      },
+      "rank": 342,
+      "minimumPool": 400
+    },
+    {
+      "id": 894,
+      "word": "闻所未闻",
+      "pinyin": "wén suǒ wèi wén",
+      "meaning": "听到了过去从未听说过的事。",
+      "group": 17,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2217,
+        "status": "exact_match"
+      },
+      "rank": 343,
+      "minimumPool": 400
+    },
+    {
+      "id": 528,
+      "word": "据理力争",
+      "pinyin": "jù lǐ lì zhēng",
+      "meaning": "依据道理，尽力争辩。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2216,
+        "status": "exact_match"
+      },
+      "rank": 344,
+      "minimumPool": 400
+    },
+    {
+      "id": 972,
+      "word": "出类拔萃",
+      "pinyin": "chū lèi bá cuì",
+      "meaning": "品德、才能等超出同类。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2209,
+        "status": "exact_match"
+      },
+      "rank": 345,
+      "minimumPool": 400
+    },
+    {
+      "id": 489,
+      "word": "有求必应",
+      "pinyin": "yǒu qiú bì yìng",
+      "meaning": "只要有人请求，就给予回应和帮助。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2206,
+        "status": "exact_match"
+      },
+      "rank": 346,
+      "minimumPool": 400
+    },
+    {
+      "id": 102,
+      "word": "春意盎然",
+      "pinyin": "chūn yì àng rán",
+      "meaning": "春天的气息十分浓厚。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2199,
+        "status": "exact_match"
+      },
+      "rank": 347,
+      "minimumPool": 400
+    },
+    {
+      "id": 720,
+      "word": "杞人忧天",
+      "pinyin": "qǐ rén yōu tiān",
+      "meaning": "为没有根据或不必担心的事忧虑。",
+      "group": 14,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2192,
+        "status": "exact_match"
+      },
+      "rank": 348,
+      "minimumPool": 400
+    },
+    {
+      "id": 315,
+      "word": "东张西望",
+      "pinyin": "dōng zhāng xī wàng",
+      "meaning": "向四处张望。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2181,
+        "status": "exact_match"
+      },
+      "rank": 349,
+      "minimumPool": 400
+    },
+    {
+      "id": 115,
+      "word": "挥汗如雨",
+      "pinyin": "huī hàn rú yǔ",
+      "meaning": "汗流得很多，像下雨一样。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2156,
+        "status": "exact_match"
+      },
+      "rank": 350,
+      "minimumPool": 400
+    },
+    {
+      "id": 193,
+      "word": "如鱼得水",
+      "pinyin": "rú yú dé shuǐ",
+      "meaning": "得到适合自己的环境或帮助。",
+      "group": 3,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2151,
+        "status": "exact_match"
+      },
+      "rank": 351,
+      "minimumPool": 400
+    },
+    {
+      "id": 257,
+      "word": "欣喜若狂",
+      "pinyin": "xīn xǐ ruò kuáng",
+      "meaning": "高兴得几乎控制不住自己。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2142,
+        "status": "exact_match"
+      },
+      "rank": 352,
+      "minimumPool": 400
+    },
+    {
+      "id": 943,
+      "word": "千钧一发",
+      "pinyin": "qiān jūn yī fà",
+      "meaning": "情况像极细的头发吊着重物一样危险。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2130,
+        "status": "exact_match"
+      },
+      "rank": 353,
+      "minimumPool": 400
+    },
+    {
+      "id": 419,
+      "word": "奋发图强",
+      "pinyin": "fèn fā tú qiáng",
+      "meaning": "振作精神，努力使自己强大。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2127,
+        "status": "exact_match"
+      },
+      "rank": 354,
+      "minimumPool": 400
+    },
+    {
+      "id": 253,
+      "word": "喜笑颜开",
+      "pinyin": "xǐ xiào yán kāi",
+      "meaning": "心里高兴，笑容满面。",
+      "group": 5,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2119,
+        "status": "exact_match"
+      },
+      "rank": 355,
+      "minimumPool": 400
+    },
+    {
+      "id": 106,
+      "word": "春风化雨",
+      "pinyin": "chūn fēng huà yǔ",
+      "meaning": "比喻良好的教育和熏陶。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2113,
+        "status": "exact_match"
+      },
+      "rank": 356,
+      "minimumPool": 400
+    },
+    {
+      "id": 607,
+      "word": "摩肩接踵",
+      "pinyin": "mó jiān jiē zhǒng",
+      "meaning": "肩碰肩，脚碰脚，形容人很多。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2110,
+        "status": "exact_match"
+      },
+      "rank": 357,
+      "minimumPool": 400
+    },
+    {
+      "id": 767,
+      "word": "胸有成竹",
+      "pinyin": "xiōng yǒu chéng zhú",
+      "meaning": "做事之前已有完整的考虑和把握。",
+      "group": 15,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2107,
+        "status": "exact_match"
+      },
+      "rank": 358,
+      "minimumPool": 400
+    },
+    {
+      "id": 166,
+      "word": "虎视眈眈",
+      "pinyin": "hǔ shì dān dān",
+      "meaning": "凶狠地盯着，伺机夺取。",
+      "group": 3,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2104,
+        "status": "exact_match"
+      },
+      "rank": 359,
+      "minimumPool": 400
+    },
+    {
+      "id": 565,
+      "word": "舍己救人",
+      "pinyin": "shě jǐ jiù rén",
+      "meaning": "为救助别人，不顾自身安危。",
+      "group": 11,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2100,
+        "status": "exact_match"
+      },
+      "rank": 360,
+      "minimumPool": 400
+    },
+    {
+      "id": 929,
+      "word": "化险为夷",
+      "pinyin": "huà xiǎn wéi yí",
+      "meaning": "把危险转变为平安。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2092,
+        "status": "exact_match"
+      },
+      "rank": 361,
+      "minimumPool": 400
+    },
+    {
+      "id": 628,
+      "word": "大快朵颐",
+      "pinyin": "dà kuài duǒ yí",
+      "meaning": "痛快地享用食物。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2090,
+        "status": "exact_match"
+      },
+      "rank": 362,
+      "minimumPool": 400
+    },
+    {
+      "id": 1000,
+      "word": "相映成趣",
+      "pinyin": "xiāng yìng chéng qù",
+      "meaning": "互相映衬，显得很有趣味。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2084,
+        "status": "exact_match"
+      },
+      "rank": 363,
+      "minimumPool": 400
+    },
+    {
+      "id": 743,
+      "word": "按图索骥",
+      "pinyin": "àn tú suǒ jì",
+      "meaning": "按线索寻找，也比喻机械地照着做。",
+      "group": 14,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2080,
+        "status": "exact_match"
+      },
+      "rank": 364,
+      "minimumPool": 400
+    },
+    {
+      "id": 91,
+      "word": "天翻地覆",
+      "pinyin": "tiān fān dì fù",
+      "meaning": "形容变化巨大，也形容闹得很厉害。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2061,
+        "status": "exact_match"
+      },
+      "rank": 365,
+      "minimumPool": 400
+    },
+    {
+      "id": 228,
+      "word": "披荆斩棘",
+      "pinyin": "pī jīng zhǎn jí",
+      "meaning": "比喻克服前进路上的种种困难。",
+      "group": 4,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2046,
+        "status": "exact_match"
+      },
+      "rank": 366,
+      "minimumPool": 400
+    },
+    {
+      "id": 438,
+      "word": "前功尽弃",
+      "pinyin": "qián gōng jìn qì",
+      "meaning": "以前付出的努力完全白费。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2034,
+        "status": "exact_match"
+      },
+      "rank": 367,
+      "minimumPool": 400
+    },
+    {
+      "id": 959,
+      "word": "千姿百态",
+      "pinyin": "qiān zī bǎi tài",
+      "meaning": "姿态、形状各种各样。",
+      "group": 19,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2023,
+        "status": "exact_match"
+      },
+      "rank": 368,
+      "minimumPool": 400
+    },
+    {
+      "id": 7,
+      "word": "十全十美",
+      "pinyin": "shí quán shí měi",
+      "meaning": "各方面都非常完美。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2018,
+        "status": "exact_match"
+      },
+      "rank": 369,
+      "minimumPool": 400
+    },
+    {
+      "id": 835,
+      "word": "不劳而获",
+      "pinyin": "bù láo ér huò",
+      "meaning": "自己不劳动，却得到成果。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2015,
+        "status": "exact_match"
+      },
+      "rank": 370,
+      "minimumPool": 400
+    },
+    {
+      "id": 461,
+      "word": "互通有无",
+      "pinyin": "hù tōng yǒu wú",
+      "meaning": "相互交换各自拥有的东西。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 2002,
+        "status": "exact_match"
+      },
+      "rank": 371,
+      "minimumPool": 400
+    },
+    {
+      "id": 493,
+      "word": "扶危济困",
+      "pinyin": "fú wēi jì kùn",
+      "meaning": "帮助处于危险或困苦中的人。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1996,
+        "status": "exact_match"
+      },
+      "rank": 372,
+      "minimumPool": 400
+    },
+    {
+      "id": 665,
+      "word": "百年不遇",
+      "pinyin": "bǎi nián bù yù",
+      "meaning": "很长时间才遇到一次。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1996,
+        "status": "exact_match"
+      },
+      "rank": 373,
+      "minimumPool": 400
+    },
+    {
+      "id": 13,
+      "word": "一干二净",
+      "pinyin": "yī gān èr jìng",
+      "meaning": "一点也不剩。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1987,
+        "status": "exact_match"
+      },
+      "rank": 374,
+      "minimumPool": 400
+    },
+    {
+      "id": 453,
+      "word": "同仇敌忾",
+      "pinyin": "tóng chóu dí kài",
+      "meaning": "大家怀着共同的愤怒，一起对敌。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1983,
+        "status": "exact_match"
+      },
+      "rank": 375,
+      "minimumPool": 400
+    },
+    {
+      "id": 54,
+      "word": "崇山峻岭",
+      "pinyin": "chóng shān jùn lǐng",
+      "meaning": "高大而陡峭的山岭。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1980,
+        "status": "exact_match"
+      },
+      "rank": 376,
+      "minimumPool": 400
+    },
+    {
+      "id": 627,
+      "word": "回味无穷",
+      "pinyin": "huí wèi wú qióng",
+      "meaning": "事后反复体会，觉得意味深长。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1978,
+        "status": "exact_match"
+      },
+      "rank": 377,
+      "minimumPool": 400
+    },
+    {
+      "id": 245,
+      "word": "颠倒黑白",
+      "pinyin": "diān dǎo hēi bái",
+      "meaning": "把是非歪曲，好的说成坏的。",
+      "group": 4,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1965,
+        "status": "exact_match"
+      },
+      "rank": 378,
+      "minimumPool": 400
+    },
+    {
+      "id": 611,
+      "word": "门庭若市",
+      "pinyin": "mén tíng ruò shì",
+      "meaning": "门前像市场一样热闹，来客很多。",
+      "group": 12,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1963,
+        "status": "exact_match"
+      },
+      "rank": 379,
+      "minimumPool": 400
+    },
+    {
+      "id": 28,
+      "word": "两败俱伤",
+      "pinyin": "liǎng bài jù shāng",
+      "meaning": "争斗的双方都受到损失。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1959,
+        "status": "exact_match"
+      },
+      "rank": 380,
+      "minimumPool": 400
+    },
+    {
+      "id": 516,
+      "word": "动之以情",
+      "pinyin": "dòng zhī yǐ qíng",
+      "meaning": "用真挚的情感打动对方。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1941,
+        "status": "exact_match"
+      },
+      "rank": 381,
+      "minimumPool": 400
+    },
+    {
+      "id": 152,
+      "word": "守株待兔",
+      "pinyin": "shǒu zhū dài tù",
+      "meaning": "不主动努力，只等偶然的好运。",
+      "group": 3,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1931,
+        "status": "exact_match"
+      },
+      "rank": 382,
+      "minimumPool": 400
+    },
+    {
+      "id": 458,
+      "word": "患难与共",
+      "pinyin": "huàn nàn yǔ gòng",
+      "meaning": "一起经历困难和危险。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1931,
+        "status": "exact_match"
+      },
+      "rank": 383,
+      "minimumPool": 400
+    },
+    {
+      "id": 472,
+      "word": "形影不离",
+      "pinyin": "xíng yǐng bù lí",
+      "meaning": "像身体和影子一样，总在一起。",
+      "group": 9,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1923,
+        "status": "exact_match"
+      },
+      "rank": 384,
+      "minimumPool": 400
+    },
+    {
+      "id": 68,
+      "word": "湖光山色",
+      "pinyin": "hú guāng shān sè",
+      "meaning": "湖水与山峦相映的美景。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1921,
+        "status": "exact_match"
+      },
+      "rank": 385,
+      "minimumPool": 400
+    },
+    {
+      "id": 679,
+      "word": "长年累月",
+      "pinyin": "cháng nián lěi yuè",
+      "meaning": "经历许多年和月。",
+      "group": 13,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1920,
+        "status": "exact_match"
+      },
+      "rank": 386,
+      "minimumPool": 400
+    },
+    {
+      "id": 756,
+      "word": "背水一战",
+      "pinyin": "bèi shuǐ yī zhàn",
+      "meaning": "处在没有退路的情况下，决一胜负。",
+      "group": 15,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1913,
+        "status": "exact_match"
+      },
+      "rank": 387,
+      "minimumPool": 400
+    },
+    {
+      "id": 522,
+      "word": "一语道破",
+      "pinyin": "yī yǔ dào pò",
+      "meaning": "用一句话揭示了真相。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1909,
+        "status": "exact_match"
+      },
+      "rank": 388,
+      "minimumPool": 400
+    },
+    {
+      "id": 531,
+      "word": "振振有词",
+      "pinyin": "zhèn zhèn yǒu cí",
+      "meaning": "自认为有理，说个不停，常含贬义。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1906,
+        "status": "exact_match"
+      },
+      "rank": 389,
+      "minimumPool": 400
+    },
+    {
+      "id": 109,
+      "word": "风和日丽",
+      "pinyin": "fēng hé rì lì",
+      "meaning": "微风和煦，阳光明丽。",
+      "group": 2,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1886,
+        "status": "exact_match"
+      },
+      "rank": 390,
+      "minimumPool": 400
+    },
+    {
+      "id": 424,
+      "word": "一往无前",
+      "pinyin": "yī wǎng wú qián",
+      "meaning": "无所畏惧地一直前进。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1878,
+        "status": "exact_match"
+      },
+      "rank": 391,
+      "minimumPool": 400
+    },
+    {
+      "id": 339,
+      "word": "温文尔雅",
+      "pinyin": "wēn wén ěr yǎ",
+      "meaning": "态度温和，举止文雅。",
+      "group": 6,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1867,
+        "status": "exact_match"
+      },
+      "rank": 392,
+      "minimumPool": 400
+    },
+    {
+      "id": 939,
+      "word": "内忧外患",
+      "pinyin": "nèi yōu wài huàn",
+      "meaning": "内部的忧患和外部的威胁。",
+      "group": 18,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1866,
+        "status": "exact_match"
+      },
+      "rank": 393,
+      "minimumPool": 400
+    },
+    {
+      "id": 829,
+      "word": "操之过急",
+      "pinyin": "cāo zhī guò jí",
+      "meaning": "处理事情过于急躁。",
+      "group": 16,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1864,
+        "status": "exact_match"
+      },
+      "rank": 394,
+      "minimumPool": 400
+    },
+    {
+      "id": 93,
+      "word": "顶天立地",
+      "pinyin": "dǐng tiān lì dì",
+      "meaning": "形容气概雄伟，光明磊落。",
+      "group": 1,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1848,
+        "status": "exact_match"
+      },
+      "rank": 395,
+      "minimumPool": 400
+    },
+    {
+      "id": 550,
+      "word": "言行一致",
+      "pinyin": "yán xíng yī zhì",
+      "meaning": "说的和做的一样。",
+      "group": 10,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1842,
+        "status": "exact_match"
+      },
+      "rank": 396,
+      "minimumPool": 400
+    },
+    {
+      "id": 27,
+      "word": "两全其美",
+      "pinyin": "liǎng quán qí měi",
+      "meaning": "让两方面都得到好结果。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1841,
+        "status": "exact_match"
+      },
+      "rank": 397,
+      "minimumPool": 400
+    },
+    {
+      "id": 20,
+      "word": "一尘不染",
+      "pinyin": "yī chén bù rǎn",
+      "meaning": "非常干净，也比喻品行纯洁。",
+      "group": 0,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1832,
+        "status": "exact_match"
+      },
+      "rank": 398,
+      "minimumPool": 400
+    },
+    {
+      "id": 437,
+      "word": "功亏一篑",
+      "pinyin": "gōng kuī yī kuì",
+      "meaning": "事情快成功时，因最后一点不足而失败。",
+      "group": 8,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1829,
+        "status": "exact_match"
+      },
+      "rank": 399,
+      "minimumPool": 400
+    },
+    {
+      "id": 351,
+      "word": "专心致志",
+      "pinyin": "zhuān xīn zhì zhì",
+      "meaning": "把心思全部集中在一件事上。",
+      "group": 7,
+      "frequency": {
+        "source_id": "THUOCL_chengyu_2016",
+        "metric": "document_frequency",
+        "df": 1823,
+        "status": "exact_match"
+      },
+      "rank": 400,
+      "minimumPool": 400
+    }
+  ]
+}

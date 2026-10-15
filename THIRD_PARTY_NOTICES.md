@@ -104,3 +104,13 @@ Source: https://github.com/exiztinz/rocket-launch-simulator, pinned commit b8b57
 | GSM8K，openai/grade-school-math | `3101c7d5072418e28b9008a6636bde82a006892c` | MIT，© 2021 OpenAI |
 
 完整 MIT 声明与 ASDiv 署名资料随学生包保留在 `lessons/word-problems/licenses/`；完整源仓库 README 与来源审读链保留在受控管理员包的 `server/word-problems-private/provenance/licenses/`。ASDiv 的 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 许可声明保留在其 README。中文题面、单位与情境改编和讲解逐题记录 `adaptation`，原始 `Source` 与来源ID保持可追溯。项目根MIT只覆盖原创加载、判题适配及界面代码，不覆盖ASDiv题文或未澄清的SVAMP原题血缘。更多内容见管理员本地 [整合说明](docs/word-problems-integration.md)。
+
+## 成语消消乐（2026-10-15 本地整合）
+
+原 `成语消消乐_随机难度版` 完整迁入 `lessons/idiom-match/`，保留1000条成语、拼音、入门简释和五档词库。词频数据来自清华大学开放中文词库 THUOCL 的成语 DF 表，采用 MIT 许可；完整许可保留于 `lessons/idiom-match/research/THUOCL_LICENSE.txt`，来源元数据见 `lessons/idiom-match/src/source.json`。游戏内继续提供来源说明。该许可针对 THUOCL 词频数据；拼音和简释沿用原游戏。
+
+## 一年级语文互动练习与三角形魔法实验室（2026-10-15）
+
+用户提供的一年级语文 HTML 整合到 `lessons/grade-one-chinese/index.html`，原题库、PDF 对照图片、SVG 字形与内嵌许可全部保留。字形轮廓沿用来源页面的 Arphic Public License 声明，可在页面「题库与原文 → 使用说明」查看全文。原始题文与图片的授权范围沿用用户材料，不由根目录 MIT 扩展。组词配对、滚动补充逻辑及宿主适配在项目内修改。
+
+用户提供的三角形页面已整合为 `lessons/group-theory/index.html`，保留24个小游戏和本机记录，数学目录继续以「群论」展示；原入口 ID `group-theory` 保持兼容。

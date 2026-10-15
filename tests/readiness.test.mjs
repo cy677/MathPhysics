@@ -16,7 +16,7 @@ test('PhET splash graphics cannot count as a successfully explored activity', ()
 
 test('SVG classroom adapters finish loading without a canvas', () => {
   const w = {document: {querySelector: () => null}, __mpReady: false};
-  for (const adapter of ['jsxgraph', 'tangram-flat', 'matter-library', 'minesweeper', 'sudoku']) {
+  for (const adapter of ['jsxgraph', 'tangram-flat', 'matter-library', 'minesweeper', 'sudoku', 'idiom-match', 'group-theory', 'grade-one-chinese']) {
     w.__mpReady = false;
     assert.equal(isReady(adapter, w), false);
     w.__mpReady = true;

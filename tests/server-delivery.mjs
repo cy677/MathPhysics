@@ -53,7 +53,7 @@ print(json.dumps({'files':len(members)}))
   const {createApplication} = await import(pathToFileURL(path.join(extracted,'server','http.mjs')).href);
   const {createAccount} = await import(pathToFileURL(path.join(extracted,'server','auth.mjs')).href);
   const databasePath = path.join(work,'private','release.sqlite3');
-  app = await createApplication({databasePath,staticRoot:extracted});
+  app = await createApplication({accountsEnabled:true,databasePath,staticRoot:extracted});
   const username='release-'+randomUUID().slice(0,8);
   const password=randomBytes(24).toString('base64url');
   await createAccount(app.db,{username,password,label:'合成验收档案',firstOnly:true});
@@ -111,7 +111,7 @@ print(json.dumps({'files':len(members)}))
   record('release-raw-scoring-idempotency-ledger-and-fixed-bucket',{credits:10000,points:100,attempts:2});
 
   await app.close();app=null;
-  app=await createApplication({databasePath,staticRoot:extracted});
+  app=await createApplication({accountsEnabled:true,databasePath,staticRoot:extracted});
   const restarted=await app.listen(0);origin='http://127.0.0.1:'+restarted.port;cookie='';csrf='';
   await api('/session');await api('/login',{method:'POST',data:{username,password}});
   assert.deepEqual((await api('/profiles/'+profile+'/saves/spaceflight')).save.payload,payload);

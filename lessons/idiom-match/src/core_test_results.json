@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "generated_games": 1620,
+  "matched_words": 27540,
+  "practice": {
+    "generated_games": 60,
+    "words": 32,
+    "tiles": 64
+  },
+  "automatic_rearrangements": 568,
+  "slide_moves": 9432,
+  "coverage": {
+    "pools": [
+      200,
+      400,
+      600,
+      800,
+      1000
+    ],
+    "counts": "all integers 4-30",
+    "modes": [
+      "free",
+      "mahjong"
+    ],
+    "aspects": [
+      0.65,
+      1.3,
+      2.4
+    ],
+    "seeds_per_combination": 2
+  },
+  "frequency": {
+    "matched": 937,
+    "unmatched": 63
+  },
+  "elapsed_ms": 15171,
+  "sampling_ms": 72
+}
