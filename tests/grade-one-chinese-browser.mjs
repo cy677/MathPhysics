@@ -24,11 +24,11 @@ try {
   page.on('response', r => {if (r.status() >= 400) report.missing.push(r.url());});
   await page.goto(base);
   await page.getByRole('button', {name: '进入语文', exact: true}).click();
-  assert.equal(await page.locator('[data-activity]').count(), 2);
+  assert.equal(await page.locator('[data-activity]').count(), 3);
   await page.locator('#grade-filter [data-grade="2"]').click();
   assert.equal(await page.locator('[data-activity="grade-one-chinese"]').count(), 0);
   await page.locator('#grade-filter [data-grade="1"]').click();
-  await page.locator('#search').fill('一年级');
+  await page.locator('#search').fill('一年级练习');
   assert.equal(await page.locator('[data-activity]').count(), 1);
   await page.screenshot({path: path.join(output, 'chinese-entry.png')});
   await page.locator('[data-launch="grade-one-chinese"]').click();

@@ -29,6 +29,7 @@ function gradesLabel(a){const first=Math.min(...a.grades),last=Math.max(...a.gra
 
 function sourceName(a){
   if(a.adapter==='grade-one-chinese')return '语文小星球';
+  if(a.adapter==='hanzi-explorer')return '汉字探险家';
   if(a.adapter==='group-theory')return '三角形魔法实验室';
   if(a.adapter==='spatial-games')return {'spatial-soma':'Soma · Ruben Berenguel','spatial-rush':'rush · Michael Fogleman','spatial-merge':'2048 · Gabriele Cirulli','spatial-escape':'escape-run · abhas9'}[a.id]||'MathPhysics';
   if(a.adapter==='phet')return 'PhET';
@@ -44,6 +45,7 @@ function cardArt(a){
  if(a.adapter==='spatial-games')return '<img class="activity-illustration" src="src/assets/spatial/'+id.replace('spatial-','')+'-cover.svg" alt="" aria-hidden="true">';
  if(id==='minesweeper'||id==='sudoku')return '<img class="activity-illustration" src="src/assets/logic/'+id+'-cover.svg" alt="" aria-hidden="true">';
  const shapes={
+  'hanzi-explorer':'<rect x="32" y="22" width="63" height="66" rx="12" fill="#fffef9" stroke="#719c83" stroke-width="2"/><path d="M40 55H87M64 29V81" stroke="#d8ded3" stroke-dasharray="3 3"/><text x="64" y="69" fill="#315d4b" text-anchor="middle" font-size="39" font-family="KaiTi,serif">字</text><circle cx="125" cy="57" r="23" fill="#faf0d5" stroke="#c6a358" stroke-width="3"/><path d="m143 76 20 18" stroke="#719c83" stroke-width="9" stroke-linecap="round"/><text x="125" y="64" fill="#927637" text-anchor="middle" font-size="21" font-family="KaiTi,serif">词</text>',
   'grade-one-chinese':'<path d="M30 27Q61 17 95 30Q129 17 160 27V94Q128 84 95 97Q62 84 30 94Z" fill="#fffef9" stroke="#719c83" stroke-width="2.5" stroke-linejoin="round"/><path d="M95 30V97" stroke="#719c83" stroke-width="2"/><text x="62" y="50" fill="#b49749" text-anchor="middle" font-size="15">pīn</text><text x="62" y="77" fill="#315d4b" text-anchor="middle" font-size="27" font-family="serif">字</text><text x="128" y="69" fill="#315d4b" text-anchor="middle" font-size="29" font-family="serif">文</text>',
   'group-theory':'<path d="M95 22L43 91H147Z" fill="#e7eddf" stroke="#719c83" stroke-width="2.5" stroke-dasharray="5 4"/><circle cx="95" cy="22" r="13" fill="#d39177"/><circle cx="43" cy="91" r="13" fill="#7d9dac"/><circle cx="147" cy="91" r="13" fill="#719c83"/><path d="M126 24Q156 38 157 65M150 58L157 67L164 57" fill="none" stroke="#b49749" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>',
   'idiom-match':'<rect x="28" y="23" width="62" height="67" rx="10" fill="#e7eddf" stroke="#719c83" stroke-width="2"/><rect x="101" y="23" width="62" height="67" rx="10" fill="#faf0d5" stroke="#b49749" stroke-width="2"/><g text-anchor="middle" font-family="serif" font-size="22" font-weight="700"><text x="59" y="63" fill="#315d4b">一心</text><text x="132" y="63" fill="#77552a">一意</text></g><path d="M85 99L94 105L108 94" fill="none" stroke="#719c83" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>',
@@ -124,6 +126,8 @@ function setAttribution(a){
   const source=typeof a.source==='string'&&a.source.startsWith('https://github.com/')?a.source:'#';
   if(a.adapter==='grade-one-chinese'){
     $('attribution').textContent='一年级练习 · 语文小星球 · 用户提供的互动页面';
+  }else if(a.adapter==='hanzi-explorer'){
+    $('attribution').textContent='汉字探险家 · 课本字表与 PDF 补充字形';
   }else if(a.adapter==='group-theory'){
     $('attribution').textContent='群论 · 三角形魔法实验室 · 用户提供的数学互动页面';
   }else if(a.adapter==='phet'){
@@ -183,7 +187,7 @@ function wire(){
   $('search').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();draw();});
   $('about-open').onclick=()=>$('about-dialog').showModal();
   $('player-back').onclick=()=>closeActivity();
-  $('player-reset').onclick=()=>{if(['matter-library','minesweeper','sudoku','spatial-games','idiom-match','group-theory','grade-one-chinese'].includes(current?.adapter)&&frame)frame.contentWindow.postMessage({type:'mp-reset'},location.origin);else if(current)openActivity(current.id);};
+  $('player-reset').onclick=()=>{if(['matter-library','minesweeper','sudoku','spatial-games','idiom-match','group-theory','grade-one-chinese','hanzi-explorer'].includes(current?.adapter)&&frame)frame.contentWindow.postMessage({type:'mp-reset'},location.origin);else if(current)openActivity(current.id);};
   document.addEventListener('fullscreenchange',()=>{const compact=!!document.fullscreenElement;$('player-fullscreen').textContent=compact?'退出全屏':'全屏';frame?.contentWindow.postMessage({type:'mp-compact',value:compact},location.origin);});
   $('player-fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if($('player').requestFullscreen)await $('player').requestFullscreen();else toast('当前浏览器不支持网页全屏，请横屏查看。');}catch{toast('当前浏览器未允许网页全屏，请横屏查看。');}};
   window.addEventListener('message',e=>{if(!frame||e.source!==frame.contentWindow||e.origin!==location.origin)return;if(e.data?.type==='mp-question-learning'&&questionPanel&&current?.adapter==='phet'&&e.data.id===current.id){questionPanel.update(e.data.question);return;}if(e.data?.type==='mp-learning'&&learningPanel&&current?.adapter==='phet'&&e.data.id===current.id){const guide=window.MathPhysicsLearning.PHET_GUIDES[current.id],next=e.data.screen===null?guide:guide.screens[e.data.screen];if(next)learningPanel.update(next);return;}if(e.data?.type==='mp-close'){closeActivity();return;}if(e.data?.type==='mp-ready'){

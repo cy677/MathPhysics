@@ -74,7 +74,9 @@
     "test:subjects:browser": "node tests/subjects-browser.mjs",
     "test:group-theory:browser": "node tests/group-theory-browser.mjs",
     "test:grade-one": "node --test tests/grade-one-chinese.test.mjs",
-    "test:grade-one:browser": "node tests/grade-one-chinese-browser.mjs"
+    "test:grade-one:browser": "node tests/grade-one-chinese-browser.mjs",
+    "test:hanzi": "node --test tests/hanzi-explorer.test.mjs",
+    "test:hanzi:browser": "node tests/hanzi-explorer-browser.mjs"
   },
   "devDependencies": {
     "playwright": "1.56.0"

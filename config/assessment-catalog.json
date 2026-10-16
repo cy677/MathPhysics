@@ -922,6 +922,13 @@
       "canonicalModuleId": "grade-one-chinese",
       "supportsAssessment": false,
       "objectives": []
+    },
+    {
+      "id": "hanzi-explorer",
+      "title": "汉字探险家",
+      "canonicalModuleId": "hanzi-explorer",
+      "supportsAssessment": false,
+      "objectives": []
     }
   ],
   "objectives": [

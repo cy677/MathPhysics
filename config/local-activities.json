@@ -599,6 +599,29 @@
       "completeUpstream": false,
       "progressMode": "visit-only",
       "lessonCount": 4
+    },
+    {
+      "id": "hanzi-explorer",
+      "title": "汉字探险家",
+      "description": "认笔画、分偏旁、看图猜字，在六种互动练习中发现汉字的秘密。",
+      "playHint": "左侧选择六类汉字练习。偏旁分类可拖动，也可先点汉字再点分类框；四档难度可自由切换。课本与 PDF 字形已合并，答错的题可以放进错题本再练。",
+      "zone": "language",
+      "kind": "game",
+      "adapter": "hanzi-explorer",
+      "grades": [1],
+      "content": ["一年级上册", "笔画", "笔顺", "偏旁部首", "偏旁分类", "图画猜汉字", "造字法", "古字", "课内字词字形", "错题本"],
+      "entry": "lessons/hanzi-explorer/index.html",
+      "source": "汉字探险家_六类互动练习_偏旁进阶美化版.html；一年级上册语文全册知识点汇总（12页）.pdf",
+      "license": "User-provided HTML and PDF; original source references retained in the lesson",
+      "origin": "user-provided",
+      "completeUpstream": false,
+      "progressMode": "visit-only",
+      "lessonCount": 6,
+      "glyphCount": 425,
+      "addedGlyphCount": 145,
+      "strokeGlyphCount": 109,
+      "radicalCount": 29,
+      "radicalExampleCount": 120
     }
   ]
 }

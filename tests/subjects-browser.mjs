@@ -34,7 +34,7 @@ try {
     assert.equal(response.headers.get('location'), '/mathphysics/index.html');
   }
   await page.goto(base);
-  await page.waitForFunction(() => document.getElementById('subject-count-chinese').textContent === '2 个活动');
+  await page.waitForFunction(() => document.getElementById('subject-count-chinese').textContent === '3 个活动');
   assert.equal(page.url(), base + 'index.html');
   assert.deepEqual(await page.locator('.islands h2').allTextContents(), ['数学', '物理', '语文']);
   assert.equal(await page.locator('#library').isVisible(), false);

@@ -38,7 +38,7 @@ test('Integration: existing local activities are retained while grade metadata m
  const {readFile}=await import('node:fs/promises');
  const data=JSON.parse(await readFile(new URL('../config/local-activities.json',import.meta.url),'utf8'));
  const expected=['geometry-proofs','spaceflight','jsxgraph-playground','tangram-flat','jsx-triangle','jsx-mirror','jsx-rotation','jsx-scale','jsx-vectors','jsx-linear'];
- assert.equal(data.activities.length,22);assert.equal(data.activities[0].id,'physics-demos');const retained=data.activities.slice(1);assert.deepEqual(retained.slice(0,10).map(a=>a.id),expected);assert.equal(retained[10].id,'primary-math');assert.equal(retained[10].lessonCount,48);assert.deepEqual(data.activities.slice(13,15).map(a=>a.id),['minesweeper','sudoku']);
+ assert.equal(data.activities.length,23);assert.equal(data.activities[0].id,'physics-demos');const retained=data.activities.slice(1);assert.deepEqual(retained.slice(0,10).map(a=>a.id),expected);assert.equal(retained[10].id,'primary-math');assert.equal(retained[10].lessonCount,48);assert.deepEqual(data.activities.slice(13,15).map(a=>a.id),['minesweeper','sudoku']);
  for(const a of retained.slice(0,10)){assert.ok(a.entry&&a.source&&a.license);assert.ok(a.grades.length>0);}
 });
 test('Integration: strict entry whitelist',async()=>{

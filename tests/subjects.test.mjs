@@ -20,7 +20,7 @@ test('three subjects partition every activity without changing pinned upstream t
   for (const id of ['physics-demos', 'spaceflight', 'forces-and-motion-basics', 'balancing-act', 'states-of-matter-basics', 'build-a-molecule']) {
     assert.equal(activitySubject(activities.find(a => a.id === id)), 'physics', id);
   }
-  assert.deepEqual(filterActivities(activities, {subject: 'chinese'}).map(a => a.id), ['grade-one-chinese', 'idiom-match']);
+  assert.deepEqual(filterActivities(activities, {subject: 'chinese'}).map(a => a.id), ['grade-one-chinese', 'hanzi-explorer', 'idiom-match']);
 });
 
 test('subject, topic, grade and text filters combine without leaking other subjects', () => {
