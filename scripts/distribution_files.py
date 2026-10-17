@@ -7,7 +7,7 @@ from pathlib import Path
 
 SOURCE_ROOTS = [
     'index.html', 'README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md',
-    'START_WINDOWS.bat', 'package.json', 'package-lock.json', '.node-version',
+    'START_WINDOWS.bat', 'WINDOWS_README.txt', 'package.json', 'package-lock.json', '.node-version',
     '.gitignore', '.nojekyll',
     'src', 'lessons', 'learning', 'server', 'config', 'vendor', 'scripts', 'tests',
     'deploy', 'modules', 'GET_PHET_WINDOWS.bat', 'get_phet.sh',

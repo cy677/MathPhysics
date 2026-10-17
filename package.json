@@ -24,6 +24,7 @@
     "test:playground": "node tests/playground-browser.mjs",
     "test:geometry": "node --test tests/geometry.test.mjs",
     "package": "node scripts/python.mjs scripts/package.py",
+    "package:windows": "node scripts/python.mjs scripts/package_windows.py",
     "test:spaceflight": "node scripts/python.mjs tests/spaceflight-browser.py",
     "build:spaceflight": "node scripts/build_spaceflight_core.mjs",
     "test:classroom": "node scripts/python.mjs tests/classroom-browser.py",

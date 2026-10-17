@@ -10,6 +10,8 @@
 npm start -- --open
 ```
 
+Windows 10/11 64 位免安装包由 `npm run package:windows` 生成，内含固定版本的 Node.js 和当前源码、课堂资源。完整解压后双击最外层 `START_WINDOWS.bat`，无需安装 Node.js、Python 或 npm。考核数据首次启动后保存在包内、源码目录之外的 `runtime/`；详见 `WINDOWS_README.txt`。打包命令需要开发机已有 Node.js 24.14.0（Windows x64）及 Python 3。
+
 当前暂停账户制度，启动后无需注册、登录或输入密码。默认入口为 `http://127.0.0.1:8317/mathphysics/`，打开数学、物理、语文三学科首页。点击学科进入活动目录；“开始考核”进入原有学习考核页。
 
 终端保持打开，按 `Ctrl+C` 停止。数据库默认位于项目父目录的 `runtime/mathphysics.sqlite3`，不放入静态资源目录。`--port` 和 `--db` 可指定端口和数据路径。`npm run start:server` 可直接运行服务。账户开关位于 `config/runtime.json`，目前为关闭；原账户及其数据保留。

@@ -6,7 +6,7 @@
 <aside aria-label="练习导航">
  <div class="brand"><span class="brand-logo" aria-hidden="true">字</span><div><h1>汉字探险家</h1><small>发现汉字的小秘密</small></div></div>
  <div><div class="section-label">汉字与字词 · 一年级</div><nav class="nav" id="nav"></nav></div>
- <div class="side-bottom"><div class="harvest"><div class="label">已经收集的学习星</div><div class="harvest-value"><span class="star">✦</span><span id="totalStars">0</span><small>颗</small></div><p>不计时，慢慢想。每完成一题，收下一颗。</p></div><div class="side-note">练习用字 425 字 · 写字表 100 字<br>课本字表 + PDF 补充字形</div></div>
+ <div class="side-bottom"><div class="harvest"><div class="label">已经收集的学习星</div><div class="harvest-value"><span class="star">✦</span><span id="totalStars">0</span><small>颗</small></div><p>每完成一题，收下一颗。综合练习记录正确率和用时。</p></div><div class="side-note">练习用字 425 字 · 写字表 100 字<br>课本字表 + PDF 补充字形</div></div>
 </aside>
 <main class="main">
  <header class="topbar"><a class="back-link" id="homeLink" href="../../index.html#subject/chinese">← 返回语文</a><div class="breadcrumb"><strong>发现 · 思考 · 练习</strong>一年级汉字工坊</div><div class="tools">
@@ -19,13 +19,14 @@
  <section class="config" aria-label="练习设置">
  <label>用字范围<select id="scopeSelect"><option value="all">全部用字 425 字</option><option value="write">只用写字表 100 字</option></select></label>
  <label>每次练习<select id="batchSelect"><option value="10">10 题</option><option value="20">20 题</option><option value="30">30 题</option><option value="0">自由练习</option></select></label>
- <label id="choiceConfig">选择数量<select id="choiceSelect"><option value="2">2 个</option><option value="3" selected>3 个</option></select></label>
+ <label id="choiceConfig">选择数量<select id="choiceSelect"><option value="2">2 个</option><option value="3">3 个</option><option value="4" selected>4 个</option></select></label>
  <label id="tileConfig">每组字数<select id="tileSelect"><option value="5">5 个</option><option value="6" selected>6 个</option></select></label>
  <div class="config-end"><button class="link-btn hidden" id="randomQuestionBtn" type="button"><span data-icon="shuffle"></span>随机换题</button><button class="link-btn" id="restartBtn" type="button">重新开始本组</button></div>
  </section>
  <section class="difficulty-panel hidden" id="radicalDifficulty" aria-label="偏旁分类难度"><span class="difficulty-caption">偏旁难度</span><div class="level-switch" id="levelSwitch" role="group" aria-label="选择偏旁分类难度"></div></section>
  <section class="workspace" id="workspace" aria-label="当前练习">
  <div class="question-meta"><div class="eyebrow" id="questionType"></div><div class="round-meta"><span id="roundLabel">第 1 题 / 10</span><div class="progress-track" role="progressbar" aria-label="本组进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="progressFill"></i></div></div></div>
+ <div class="round-stats hidden" id="roundStats"><span>正确率 <strong id="accuracyValue">—</strong><small>（一次答对）</small></span><span>用时 <strong id="elapsedValue">00:00</strong></span></div>
  <h3 class="question-title" id="questionTitle" tabindex="-1"></h3><p class="question-sub" id="questionSub"></p>
  <div class="question-content" id="questionContent"></div>
  <div class="feedback" id="feedback" role="status" aria-live="polite"><span class="feedback-icon">?</span><span>认真看一看，再选出你的答案。</span></div>

@@ -64,22 +64,60 @@ test('PDF 补充字进入原有第几笔练习，写字表范围仍为100字', (
   const core=script.slice(script.indexOf('function allowed('),script.indexOf('function makeFormation('));
   const names=Object.fromEntries(Object.values(D.strokes).flat().map(s=>[s,true]));
   for(const scope of ['all','write']) {
-    const state={scope,pools:{}};
+    const state={scope,pools:{},choices:2};
     const context=vm.createContext({D,state,STROKES:names,CONFUSABLE:{},...randomHelpers(58)});
     vm.runInContext(core,context);
-    const chars=scope==='write'?D.writeChars:D.strokeChars;
+    const chars=(scope==='write'?D.writeChars:D.strokeChars).filter(c=>new Set(D.strokes[c]).size>=2);
     const total=chars.reduce((n,c)=>n+D.strokes[c].length,0);
     const seen=new Set(),ids=new Set();
     for(let i=0;i<total;i++) {
       const q=context.makeQuestion('stroke');seen.add(q.char);ids.add(q.id);
       assert.equal(q.correct,D.strokes[q.char][q.index]);
-      assert.equal(q.options.length,2);
-      assert.equal(new Set(q.options).size,2);
+      assert.equal(q.options.length,Math.min(4,new Set(D.strokes[q.char]).size));
+      assert.equal(new Set(q.options).size,q.options.length);
+      assert.ok(q.options.every(s=>D.strokes[q.char].includes(s)));
       assert.ok(q.options.includes(q.correct));
     }
     assert.equal(seen.size,chars.length);
     assert.equal(ids.size,total);
   }
+});
+
+test('笔顺题固定三种本字写法，含一个正确项和两个不同的错误项', () => {
+  const script=fs.readFileSync(new URL('../lessons/hanzi-explorer/app.js',import.meta.url),'utf8');
+  const core=script.slice(script.indexOf('function allowed('),script.indexOf('function makeFormation('));
+  for(const choices of [2,3,4]) {
+    const state={scope:'all',pools:{},choices};
+    const context=vm.createContext({D,state,...randomHelpers(25)});
+    vm.runInContext(core,context);
+    const seen=new Set();
+    for(let i=0;i<D.rules.length;i++) {
+      const q=context.makeQuestion('rule');
+      seen.add(q.char);
+      assert.equal(q.options.length,3);
+      assert.equal(new Set(q.options).size,3);
+      assert.equal(q.options.filter(o=>o===q.correct).length,1);
+      assert.ok(q.options.every(o=>o.startsWith(`写“${q.char}”时，`)));
+    }
+    assert.equal(seen.size,D.rules.length);
+  }
+});
+
+test('旧错题重练会更新笔画选项和笔顺写法', () => {
+  const script=fs.readFileSync(new URL('../lessons/hanzi-explorer/app.js',import.meta.url),'utf8');
+  const core=script.slice(script.indexOf('function allowed('),script.indexOf('function makeFormation('));
+  const normalize=script.slice(script.indexOf('function normalizeSavedQuestion('),script.indexOf('function mixedTypes('));
+  const context=vm.createContext({D,state:{scope:'all',pools:{},choices:2},copy:structuredClone,...randomHelpers(11)});
+  vm.runInContext(core+normalize,context);
+  const stroke=context.normalizeSavedQuestion({type:'stroke',char:'木',index:0,id:'stroke:木:0',correct:'横',options:['横','提']});
+  assert.equal(stroke.options.length,4);
+  assert.ok(stroke.options.every(s=>D.strokes.木.includes(s)));
+  const rule=context.normalizeSavedQuestion({type:'rule',char:'人',id:'rule:人',correct:'撇写在捺的前面',options:['撇写在捺的前面','先把捺写完再写横']});
+  assert.equal(rule.options.length,3);
+  assert.ok(rule.options.every(o=>o.startsWith('写“人”时，')));
+  const single=context.normalizeSavedQuestion({type:'stroke',char:'一',index:0,id:'stroke:一:0'});
+  assert.equal(single.id,'stroke:一:0');
+  assert.ok(single.options.length>=2&&single.options.every(s=>D.strokes[single.char].includes(s)));
 });
 
 test('四档偏旁、5/6 字、2/3 框均可解，新增字不会产生多重归属', () => {

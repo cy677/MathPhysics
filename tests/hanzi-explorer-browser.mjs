@@ -105,16 +105,78 @@ try {
   await frame.locator('#closeModal').click();
   record('PDF 去重字形、偏旁合并字例、补充笔画与六张原图正常');
 
+  await frame.locator('[data-mode="meaning"]').click();
+  await frame.locator('#choiceSelect').selectOption('2');
+  await frame.locator('[data-mode="formation"]').click();
+  await frame.locator('#tileSelect').selectOption('5');
   await frame.locator('#batchSelect').selectOption('0');
+  await frame.locator('#scopeSelect').selectOption('write');
   await frame.locator('[data-mode="mixed"]').click();
+  assert.equal(await frame.locator('#batchSelect').inputValue(),'10');
+  assert.equal(await frame.evaluate(()=>HanziExplorer.state.scope),'all');
+  assert.ok(await frame.locator('#choiceConfig').isHidden());
+  assert.ok(await frame.locator('#tileConfig').isHidden());
+  assert.ok(await frame.locator('#radicalDifficulty').isHidden());
+  assert.ok(await frame.locator('#roundStats').isVisible());
   const types = new Set();
-  for (let i = 0; i < 6; i++) {
-    types.add(await frame.evaluate(() => HanziExplorer.state.q.type));
-    await frame.locator('#revealBtn').click();
+  await frame.waitForFunction(()=>document.getElementById('elapsedValue').textContent!=='00:00');
+  for (let i = 0; i < 10; i++) {
+    q=await frame.evaluate(()=>structuredClone(HanziExplorer.state.q));
+    types.add(q.type);
+    assert.equal((await frame.locator('#questionType').textContent()).trim(),'✦综合练习');
+    assert.ok(await frame.locator('#radicalDifficulty').isHidden());
+    assert.ok(await frame.locator('#randomQuestionBtn').isHidden());
+    if(q.options){
+      const max=q.type==='stroke'?Math.min(4,new Set(await frame.evaluate(c=>HanziExplorer.D.strokes[c],q.char)).size):q.type==='rule'?3:4;
+      assert.equal(q.options.length,max);
+      if(q.type==='stroke')assert.ok(await frame.evaluate(()=>HanziExplorer.state.q.options.every(o=>HanziExplorer.D.strokes[HanziExplorer.state.q.char].includes(o))));
+      if(q.type==='rule')assert.ok(q.options.every(o=>o.includes(q.char)));
+    }else{
+      assert.equal(q.cards.length,6);
+      assert.equal(q.bins.length,q.type==='radical'?3:4);
+    }
+    if(i===0){
+      await frame.locator('#revealBtn').click();
+    }else{
+      if(q.options){
+        if(i===1)await frame.locator('[data-choice="'+q.options.findIndex(o=>o!==q.correct)+'"]').click();
+        await frame.locator('[data-choice="'+q.options.indexOf(q.correct)+'"]').click();
+      }else{
+        for(const char of q.cards){
+          await frame.locator('[data-tile="'+char+'"]').click();
+          const target=i===1?q.bins.find(b=>b.id!==q.targets[char]).id:q.targets[char];
+          await frame.locator('[data-bin="'+target+'"]').click();
+        }
+        await frame.locator('#nextBtn').click();
+        if(i===1){
+          for(const char of q.cards){
+            await frame.locator('[data-tile="'+char+'"]').click();
+            await frame.locator('[data-bin="'+q.targets[char]+'"]').click();
+          }
+          await frame.locator('#nextBtn').click();
+        }
+      }
+    }
     assert.ok(await frame.locator('#answerDetails').isVisible());
-    if (i < 5) await frame.locator('#nextBtn').click();
+    if(i===8)await page.screenshot({path:path.join(output,'mixed-desktop.png')});
+    await frame.locator('#nextBtn').click();
   }
   assert.deepEqual([...types].sort(), ['ancient','formation','meaning','radical','rule','stroke']);
+  assert.equal(await frame.locator('#summaryAccuracy').textContent(),'80%');
+  assert.equal(await frame.locator('#accuracyValue').textContent(),'80%');
+  const elapsed=await frame.locator('#elapsedValue').textContent();
+  assert.equal(await frame.locator('#summaryElapsed').textContent(),elapsed);
+  assert.equal(await frame.evaluate(()=>HanziExplorer.state.roundTimer),null);
+  await page.screenshot({path:path.join(output,'mixed-summary.png')});
+  await frame.locator('#againBtn').click();
+  assert.equal(await frame.locator('#accuracyValue').textContent(),'—');
+  assert.equal(await frame.locator('#elapsedValue').textContent(),'00:00');
+  await frame.locator('#batchSelect').selectOption('20');
+  assert.equal(await frame.locator('#roundLabel').textContent(),'第 1 题 / 20');
+  await frame.locator('#batchSelect').selectOption('30');
+  assert.equal(await frame.locator('#roundLabel').textContent(),'第 1 题 / 30');
+  await frame.locator('#batchSelect').selectOption('10');
+  record('综合练习默认10题、可选题量、六类混合、最大选项和字卡、80%正确率与计时停止/重置正常');
   await page.locator('#player-reset').click();
   await frame.waitForFunction(() => HanziExplorer.state.done === 0);
   assert.equal(await frame.evaluate(() => HanziExplorer.state.mode), 'mixed');
@@ -148,7 +210,32 @@ try {
   await standalone.screenshot({path: path.join(output, 'radical-mobile-full.png'), fullPage: true});
   assert.ok(await standalone.locator('#homeLink').isVisible());
   await standalone.locator('[data-mode="stroke"]').click();
+  await standalone.evaluate(()=>{
+    for(let i=0;i<200&&HanziExplorer.state.q.options.length!==4;i++)HanziExplorer.nextQuestion();
+  });
+  assert.equal(await standalone.locator('[data-choice]').count(),4);
   await standalone.screenshot({path: path.join(output, 'stroke-mobile-full.png'), fullPage: true});
+  const fourth=await standalone.evaluate(()=>HanziExplorer.state.q.options[3]);
+  await standalone.locator('#questionTitle').focus();
+  await standalone.keyboard.press('4');
+  assert.ok(await standalone.evaluate(o=>HanziExplorer.state.solved||HanziExplorer.state.rejected.includes(o),fourth));
+  await standalone.locator('[data-mode="rule"]').click();
+  assert.equal(await standalone.locator('[data-choice]').count(),3);
+  assert.ok(await standalone.locator('#choiceConfig').isHidden());
+  await standalone.screenshot({path:path.join(output,'rule-mobile-full.png'),fullPage:true});
+  await standalone.locator('[data-mode="ancient"]').click();
+  await standalone.locator('#choiceSelect').selectOption('4');
+  await standalone.setViewportSize({width:320,height:844});
+  assert.equal(await standalone.locator('[data-choice]').count(),4);
+  assert.equal(await standalone.locator('.char-options').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length),2);
+  await standalone.screenshot({path:path.join(output,'four-options-mobile.png'),fullPage:true});
+  await standalone.locator('[data-mode="mixed"]').click();
+  for(const width of [320,390]){
+    await standalone.setViewportSize({width,height:844});
+    assert.ok(await standalone.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+    assert.ok(await standalone.locator('#roundStats').isVisible());
+    await standalone.screenshot({path:path.join(output,'mixed-mobile-'+width+'.png'),fullPage:true});
+  }
   await standalone.locator('#homeLink').click();
   await standalone.waitForSelector('[data-activity="hanzi-explorer"]');
   await standalone.close();

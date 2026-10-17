@@ -114,3 +114,7 @@ Source: https://github.com/exiztinz/rocket-launch-simulator, pinned commit b8b57
 用户提供的一年级语文 HTML 整合到 `lessons/grade-one-chinese/index.html`，原题库、PDF 对照图片、SVG 字形与内嵌许可全部保留。字形轮廓沿用来源页面的 Arphic Public License 声明，可在页面「题库与原文 → 使用说明」查看全文。原始题文与图片的授权范围沿用用户材料，不由根目录 MIT 扩展。组词配对、滚动补充逻辑及宿主适配在项目内修改。
 
 用户提供的三角形页面已整合为 `lessons/group-theory/index.html`，保留24个小游戏和本机记录，数学目录继续以「群论」展示；原入口 ID `group-theory` 保持兼容。
+
+## Windows 包附带的 Node.js 运行时（2026-10-16）
+
+Windows x64 免安装包附带官方 Node.js 24.14.0 `node.exe`。运行时版权归 Node.js contributors / OpenJS Foundation，Node.js 采用 MIT，附带依赖各自的许可全文保存在包内 `node/LICENSE` 与源码 `vendor/nodejs/LICENSE`。官方分发地址、SHA-256 和许可来源固定于 `vendor/nodejs/runtime-lock.json`。

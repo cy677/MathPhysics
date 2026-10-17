@@ -886,3 +886,10 @@ aside{background:var(--mp-surface);border-color:var(--mp-line);gap:17px;overflow
 .group-row .hanzi{overflow-wrap:anywhere}.ref-item small{overflow-wrap:anywhere}
 @media(min-width:761px) and (max-height:800px){aside{padding-top:16px;padding-bottom:16px;gap:12px}.nav-item{padding:8px 10px}.harvest{padding:10px 14px}.harvest p,.side-note{display:none}}
 @media(max-width:760px){aside{overflow:visible;padding:17px 18px 0;gap:13px}.nav-item{padding:8px 12px}.topbar .breadcrumb{display:none}.topbar{margin-bottom:15px}.tools{gap:5px}.tool-btn{padding:7px 9px;font-size:11px}.config-end{width:100%}.ref-intro{font-size:12px}}
+
+.round-stats{display:flex;flex-wrap:wrap;gap:10px 24px;margin:14px 0;color:#63765b;font-size:13px}
+.round-stats strong{color:var(--green);font-variant-numeric:tabular-nums;font-size:18px;margin-left:5px}
+.round-stats small{font-size:11px}
+.summary-stats{flex-wrap:wrap;gap:20px 30px}
+
+.char-options[data-count="2"],.char-options[data-count="4"]{grid-template-columns:repeat(2,minmax(0,1fr))}

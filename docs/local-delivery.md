@@ -10,6 +10,8 @@
 
 `npm run package` 与 `npm run build:server` 均生成 Node 学习服务归档，包含服务、课堂资源和固定的判题资料；不再生成学生静态离线ZIP或在打包中构建单文件课堂。单文件构建工具仅用于现有课堂的回归测试夹具。
 
+`npm run package:windows` 另生成 Windows 10/11 x64 源码与运行时 ZIP。顶层 `START_WINDOWS.bat` 优先使用随包 Node.js 24.14.0，源码位于 `app/`，数据库首次启动后创建于独立的 `runtime/`。该命令校验官方运行时哈希与现有资源，不自动重建课堂；`--node` 可指定现有官方 Windows x64 `node.exe`。包内 `BUILD.json` 和 ZIP 旁的 `.sha256` 分别记录文件及归档校验值，使用说明见 `WINDOWS_README.txt`。
+
 数据库、WAL/SHM、账号资料、备份、凭证、缓存及本地审核输出不进入归档。Node HTTP只提供公开学习资源，不公开 `server/` 和私有判题资料。原资源、字体、音频和许可证随固定来源保留。
 
 本次修改在本地工作区完成；构建归档本身不执行远程发布。

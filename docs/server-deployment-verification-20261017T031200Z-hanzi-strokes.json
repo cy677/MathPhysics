@@ -1,0 +1,392 @@
+{
+  "releaseId": "20261017T031200Z-hanzi-strokes",
+  "verifiedAtUTC": "2026-10-17T03:24:14.140Z",
+  "url": "https://124.70.198.189/mathphysics/",
+  "accountsEnabled": false,
+  "change": "Update Hanzi Explorer stroke choices and fixed three-option writing-order questions; add mixed-practice length, first-try accuracy and timing, preserve old wrong-book entries and statistics, and include current Windows packaging sources",
+  "sourceIdentity": "Current working-tree code rebuilt on Linux; all release file bytes match the local archive, public BUILD and Git index before main publication",
+  "archiveSHA256": "a272375cd33bb0319164519ebf4c4d32bfcb0151264782802c58f40d5310665b",
+  "manifestFileCount": 3015,
+  "source": {
+    "releaseId": "20261017T031200Z-hanzi-strokes",
+    "checkedAtUTC": "2026-10-17T03:24:13.908Z",
+    "archiveSHA256": "a272375cd33bb0319164519ebf4c4d32bfcb0151264782802c58f40d5310665b",
+    "publicManifestSHA256": "6264fd4685790aa7db88626e39e72d59da82a5299f6aa8bd384552c53bcd29e8",
+    "manifestFiles": 3015,
+    "workingTreeMatchesRelease": true,
+    "publicManifestMatchesRelease": true,
+    "gitIndexMatchesRelease": true,
+    "gitlinks": 0,
+    "passed": true
+  },
+  "localTests": {
+    "tests": 923,
+    "pass": 919,
+    "fail": 0,
+    "skipped": 4
+  },
+  "server": {
+    "activation": {
+      "releaseId": "20261017T031200Z-hanzi-strokes",
+      "current": "/srv/mathphysics/releases/20261017T031200Z-hanzi-strokes",
+      "nginxSnippetUpdated": false,
+      "meowServiceUnchanged": true,
+      "learningService": "mathphysics-learning.service",
+      "learningData": "/srv/mathphysics/runtime/mathphysics.sqlite3",
+      "learningEnabled": true,
+      "serviceSourceRoot": "/srv/mathphysics/releases/20261017T031200Z-hanzi-strokes",
+      "accountsEnabled": false
+    },
+    "cleanup": {
+      "temporaryUploadsRemoved": true,
+      "releaseRetained": "/srv/mathphysics/releases/20261017T031200Z-hanzi-strokes",
+      "backupRetained": "/srv/mathphysics/backups/20261017T031200Z-hanzi-strokes"
+    },
+    "database-final": {
+      "databaseTables": 12,
+      "changedTables": [],
+      "databaseUnchanged": true,
+      "snapshotIntegrity": "ok",
+      "checkedAtUTC": "2026-10-17T03:22:24.238065+00:00"
+    },
+    "learning-final": {
+      "integrity": "ok",
+      "databaseOutsideRelease": true,
+      "privateBackupCreated": true,
+      "factsPreserved": true,
+      "factTablesChecked": 16,
+      "accountsEnabled": false,
+      "registeredAccountCount": 0,
+      "browserDeviceCount": 6,
+      "checkedAtUTC": "2026-10-17T03:22:24.246422+00:00"
+    },
+    "learning-preservation": {
+      "existingRowsPreserved": true,
+      "tables": {
+        "accounts": {
+          "previousRows": 6,
+          "currentRows": 6
+        },
+        "assessment_definitions": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "attempts": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "bucket_best": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "completions": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "grade_items": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "grade_revisions": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "idempotency": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "ledger": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "legacy_imports": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "legacy_records": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "profiles": {
+          "previousRows": 6,
+          "currentRows": 6
+        },
+        "question_snapshots": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "save_revisions": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "saves": {
+          "previousRows": 0,
+          "currentRows": 0
+        },
+        "schema_migrations": {
+          "previousRows": 1,
+          "currentRows": 1
+        }
+      },
+      "allowsNewBrowserDeviceRecords": true
+    },
+    "public-permissions": {
+      "directoryMode": "0755",
+      "fileMode": "0644",
+      "nginxUserCanRead": true,
+      "scope": "new release only"
+    },
+    "release-state.final": {
+      "releaseId": "20261017T031200Z-hanzi-strokes",
+      "current": "/srv/mathphysics/releases/20261017T031200Z-hanzi-strokes",
+      "releaseDirectoriesRetained": [
+        "20260930T061500Z",
+        "20261001T005739Z-965c72c",
+        "20261001T113119Z-965c72c",
+        "20261002T071617Z-e5764f0",
+        "20261003T105809Z-e5764f0",
+        "20261005T094051Z-help-tiers",
+        "20261005T100552Z-help-tiers",
+        "20261006T091933Z-learning-sync",
+        "20261006T094706Z-learning-sync",
+        "20261009T065600Z-learning-service",
+        "20261015T080900Z-subjects",
+        "20261015T083900Z-word-shuffle",
+        "20261016T034500Z-hanzi-explorer",
+        "20261017T031200Z-hanzi-strokes"
+      ],
+      "backup": "/srv/mathphysics/backups/20261017T031200Z-hanzi-strokes",
+      "backupDirectoryMode": "0700",
+      "meowService": {
+        "MainPID": "3283709",
+        "ExecMainStartTimestamp": "Wed 2026-09-30 20:04:20 CST",
+        "ActiveState": "active",
+        "FragmentPath": "/etc/systemd/system/meow-pet.service",
+        "ActiveEnterTimestamp": "Wed 2026-09-30 20:04:20 CST"
+      },
+      "learningService": {
+        "MainPID": "3675140",
+        "ExecMainStartTimestamp": "Sat 2026-10-17 11:20:26 CST",
+        "ActiveState": "active",
+        "FragmentPath": "/etc/systemd/system/mathphysics-learning.service",
+        "ActiveEnterTimestamp": "Sat 2026-10-17 11:20:26 CST"
+      },
+      "learningData": "/srv/mathphysics/runtime/mathphysics.sqlite3",
+      "incomingFiles": [],
+      "userDatabasePreserved": true,
+      "databaseFinalUnchanged": true,
+      "learningFactsPreserved": true,
+      "accountsEnabled": false
+    },
+    "server-delivery-report": {
+      "startedAtUTC": "2026-10-17T03:19:54.365Z",
+      "releaseId": "20261017T031200Z-hanzi-strokes",
+      "checks": [
+        {
+          "name": "extracted-service-auth-and-static-private-boundary"
+        },
+        {
+          "name": "release-raw-scoring-idempotency-ledger-and-fixed-bucket",
+          "credits": 10000,
+          "points": 100,
+          "attempts": 2
+        },
+        {
+          "name": "actual-extracted-disk-sqlite-restart-restores-save-and-ledger"
+        },
+        {
+          "name": "default-no-login-browser-history-is-isolated-and-old-account-saves-retained"
+        },
+        {
+          "name": "default-browser-cookie-restores-assessment-history-after-service-restart"
+        }
+      ],
+      "passed": true,
+      "scope": "Synthetic account in separate temporary database; no production accounts or saves accessed",
+      "finishedAtUTC": "2026-10-17T03:19:55.032Z"
+    },
+    "stage": {
+      "releaseId": "20261017T031200Z-hanzi-strokes",
+      "archiveSHA256": "a272375cd33bb0319164519ebf4c4d32bfcb0151264782802c58f40d5310665b",
+      "deltaSHA256": "9f77346ffe5c94ce80910abfe193100c3bb8e21a8fdff5211a37031044e1a270",
+      "uploadMethod": "verified-previous-source-copy-plus-delta",
+      "baseReleaseId": "20261016T034500Z-hanzi-explorer",
+      "copiedUnchangedSourceFiles": 2999,
+      "verifiedFiles": 3015,
+      "sourceCommit": null,
+      "activityCount": 82,
+      "serverRebuildMatchesLocal": true,
+      "nodeVersion": "v24.14.0",
+      "tests": {
+        "tests": 923,
+        "pass": 919,
+        "fail": 0,
+        "skipped": 4
+      },
+      "deliveryChecks": 5,
+      "ready": true
+    },
+    "verification": {
+      "releaseId": "20261017T031200Z-hanzi-strokes",
+      "verifiedFiles": 3015,
+      "activityCount": 82,
+      "entryChecks": 37,
+      "servedResourceHashesMatch": 409,
+      "javascriptModuleMimeChecks": 20,
+      "publicReferenceChecks": 5,
+      "cacheRefreshReturns200": true,
+      "privatePathsHidden": true,
+      "privatePathChecks": 20,
+      "licenseChecks": 21,
+      "sudokuXMLConfigServed": true,
+      "learningServiceEnabled": true,
+      "learningDataOutsideRelease": true,
+      "learningIntegrity": "ok",
+      "learningFactsPreserved": true,
+      "learningFactTablesChecked": 16,
+      "accountCount": 6,
+      "registeredAccountCount": 0,
+      "accountsEnabled": false,
+      "defaultEntryRedirectsToSubjects": true,
+      "productionAPIProbe": "read-only capabilities only",
+      "apiSessionProductionProbeSkipped": true,
+      "browserDeviceSessionVerifiedInIsolatedDatabase": true,
+      "spaceflightProfileAdapterServed": true,
+      "sudokuPWAScopeConfined": true,
+      "meowServiceUnchanged": true,
+      "meowFilesUnchanged": true,
+      "meowHomeUnchanged": true,
+      "meowServiceConfigUnchanged": true,
+      "nginxOtherFilesUnchanged": true,
+      "databaseTables": 12,
+      "dataPreserved": true,
+      "databaseUnchanged": true,
+      "databaseChangedTables": [],
+      "backupIntegrity": "ok",
+      "backup": "/srv/mathphysics/backups/20261017T031200Z-hanzi-strokes",
+      "passed": true,
+      "databaseFinalUnchanged": true,
+      "finalDatabaseChangedTables": []
+    }
+  },
+  "windowsPackaging": {
+    "mode": "check-only",
+    "package": "windows-x64",
+    "sourceFiles": 3015,
+    "nodeSha256": "63c259c81e5d472b5f11c8d506070130cb04a1ecf84b80377a34ed6ec9048088",
+    "archiveBuiltThisRun": false
+  },
+  "localBrowsers": {
+    "hanzi-explorer": {
+      "passed": true,
+      "cases": 7,
+      "checks": [
+        "语文入口、搜索、一年级筛选、共享风格与六类题型正常",
+        "鼠标拖动、点选分类、多余字与空框判定正常",
+        "答错记录、独立重练消除错题与学习星刷新保存正常",
+        "PDF 去重字形、偏旁合并字例、补充笔画与六张原图正常",
+        "综合练习默认10题、可选题量、六类混合、最大选项和字卡、80%正确率与计时停止/重置正常",
+        "综合练习仅轮换原六类，宿主重玩与100字范围正常",
+        "320/390手机与768/1024平板无横向溢出，古字显示与返回语文正常"
+      ],
+      "errors": [],
+      "missing": []
+    },
+    "subjects": {
+      "passed": true,
+      "cases": 7,
+      "checks": [
+        "服务默认进入三学科首页，活动目录在选科后打开",
+        "数学、物理、语文归类完整，学科链接刷新后保留",
+        "学科内的主题、年级、搜索与空结果正常，切科会清空旧筛选",
+        "成语玩法、词库和难度配置、宿主重玩、返回后恢复牌局正常",
+        "无需登录或账户入口，本机牌局刷新恢复，不同浏览器独立保存",
+        "电脑、平板和手机的首页与成语课堂无横向溢出",
+        "旧活动深链接正常，考核、交卷、成长记录及刷新恢复均无需登录"
+      ],
+      "errors": [],
+      "missing": []
+    }
+  },
+  "localBrowserCases": 14,
+  "publicBrowser": {
+    "releaseId": "20261017T031200Z-hanzi-strokes",
+    "passed": true,
+    "checks": [
+      "Latest 3015-file release is live and all six pre-update storage values are preserved before classroom actions",
+      "Actual old-version grade-one stars and word-matching statistics restore",
+      "Old Hanzi stars, completion counters and both full wrong-question records restore unchanged",
+      "Both old wrong questions use the new choices, clear only after correct retry, and retain earned results after host reload",
+      "Live mixed practice covers all six types in ten questions with maximum choices and sorting cards",
+      "Accuracy is 80%, completed time freezes, a new round resets both, and 10/20/30 question settings work",
+      "Old and newly earned Hanzi statistics plus new wrong-book entries persist across a full host reload",
+      "All original images and glyphs load, four choices fit phone/tablet, and unrelated old saves remain preserved"
+    ],
+    "errors": [],
+    "failedResources": [],
+    "productionTestRecordsCreated": 0,
+    "apiIsolation": "Synthetic session response; only read-only capabilities reaches production; every other API request is blocked",
+    "legacyPreservation": {
+      "originalStars": 1,
+      "originalFinished": 1,
+      "originalFirst": 1,
+      "originalWrongEntries": 2,
+      "allRestoredBeforePractice": true
+    },
+    "mixedPractice": {
+      "types": [
+        "ancient",
+        "formation",
+        "meaning",
+        "radical",
+        "rule",
+        "stroke"
+      ],
+      "questions": 10,
+      "firstTryAccuracy": "80%",
+      "assisted": 1,
+      "correctedMistakes": 1,
+      "elapsed": "00:02",
+      "timerStopsAtSummary": true,
+      "newRoundResets": true,
+      "questionSizes": [
+        10,
+        20,
+        30
+      ]
+    }
+  },
+  "browserCleanup": {
+    "checkedAtUTC": "2026-10-17T03:22:40.3272978Z",
+    "session": "mathphysics-hanzi-20261017",
+    "browserClosed": true,
+    "processesChecked": 9,
+    "remainingProcesses": [],
+    "remainingListeners": [],
+    "passed": true
+  },
+  "localServiceCleanup": {
+    "checkedAtUTC": "2026-10-17T03:18:40.7940038Z",
+    "browserTestPorts": [
+      65318,
+      50230
+    ],
+    "listeningPorts": [],
+    "passed": true
+  },
+  "backup": "/srv/mathphysics/backups/20261017T031200Z-hanzi-strokes",
+  "dataPreservation": {
+    "meowTablesUnchanged": 12,
+    "existingLearningFactTablesPreserved": 16,
+    "originalBrowserFixtureKeys": 6,
+    "productionVerificationUsesOnlyReadOnlyAPI": true,
+    "productionTestRecordsCreated": 0
+  },
+  "limitations": [
+    "Public browser session responses are synthetic; only read-only capabilities reaches the production API",
+    "Backend save, assessment and restart restoration are checked in a separate temporary database",
+    "The browser fixtures are isolated synthetic records; real user browser saves stay on their own devices",
+    "Chromium viewport checks do not cover a physical iPad/Safari device"
+  ],
+  "passed": true
+}

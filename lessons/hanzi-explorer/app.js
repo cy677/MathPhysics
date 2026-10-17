@@ -10,18 +10,17 @@ const ICONS={shuffle:'M3 6h3c5 0 6 12 11 12h4 M17 14l4 4-4 4 M3 18h3c2 0 3-2 4-4
 function icon(name){return `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="${ICONS[name]||ICONS.star}"/></svg>`}
 function hydrateIcons(root=document){$$('[data-icon]',root).forEach(e=>e.innerHTML=icon(e.dataset.icon))}
 const MODES=[
-{id:'stroke',num:'01',title:'笔画小侦探',short:'第几笔',intro:'在心里写一写，找出指定的那一笔。',tag:'写字表与 PDF 字例 · 二选一'},
+{id:'stroke',num:'01',title:'笔画小侦探',short:'第几笔',intro:'在心里写一写，找出指定的那一笔。',tag:'字内笔画 · 2～4 个选项'},
 {id:'radical',num:'02',title:'偏旁分分家',short:'按偏旁分类',intro:'先看偏旁，再给汉字分类；难度可以自由选择。',tag:'5～6 个字 · 2～3 个偏旁 · 4 档难度'},
 {id:'rule',num:'03',title:'笔顺有规矩',short:'笔顺写法',intro:'哪一种写法对？想一想先写哪儿、后写哪儿。',tag:'46 道规则与易错写法'},
 {id:'meaning',num:'04',title:'图画猜汉字',short:'看图识意',intro:'看看图，听听线索，把汉字认出来。',tag:'50 道图形与含义题'},
 {id:'formation',num:'05',title:'造字小工坊',short:'四种造字法',intro:'随机抽取汉字，按象形、形声、会意、指事分类。',tag:'48 个字例随机抽题 · 不固定每类字数'},
 {id:'ancient',num:'06',title:'古字时光机',short:'古今字配对',intro:'穿过时间，认一认汉字从前的模样。',tag:'12 幅有出处的甲骨文字形'},
-{id:'mixed',num:'✦',title:'综合练习',short:'六类随机练',intro:'六种题型轮流出现，每一次都有新发现。',tag:'随机轮换 · 不设关卡'}];
+{id:'mixed',num:'✦',title:'综合练习',short:'混合练习',intro:'六种题型混合出题，记录本组正确率和用时。',tag:'默认 10 题 · 可设置题量'}];
 const STROKES={
 '横':'M16 43 L82 40','竖':'M49 14 L48 86','撇':'M73 17 Q61 56 24 83','点':'M37 31 Q54 42 61 59','捺':'M25 17 Q48 64 81 80','提':'M21 70 L76 29','横折':'M21 24 L75 24 L69 81','横撇':'M22 24 L76 24 Q62 60 25 82','横钩':'M18 43 L82 37 L71 51','竖折':'M28 18 L28 77 L79 73','竖弯':'M29 17 L27 60 Q27 77 43 78 L78 78','竖提':'M38 16 L35 82 L76 60','竖钩':'M53 14 L53 76 Q53 85 35 69','撇折':'M60 17 L27 60 L76 48','撇点':'M57 16 L29 57 Q56 61 77 78','弯钩':'M39 17 Q65 47 54 79 Q50 88 34 71','斜钩':'M34 16 Q40 67 76 84 Q86 88 82 65','卧钩':'M21 36 Q31 69 63 75 Q78 79 77 59','横折折':'M22 24 L69 24 L57 48 L81 48','横折弯':'M19 25 L60 25 L57 62 Q59 81 85 79','横折提':'M20 22 L66 22 L64 77 L83 59','横折钩':'M20 24 L77 24 L73 76 Q70 89 54 71','横斜钩':'M15 24 L56 21 Q55 65 80 84 Q87 84 84 65','竖折折':'M26 15 L26 44 L74 44 L62 81','竖折撇':'M31 15 L28 41 L69 38 Q68 66 30 83','竖弯钩':'M30 18 L28 63 Q29 82 60 80 L77 80 L80 61','横折折折':'M15 32 L47 32 L47 55 L76 55 L75 81','横折折撇':'M19 23 L58 23 L43 49 L77 45 Q66 71 31 88','横折弯钩':'M15 35 L57 30 L53 64 Q53 85 74 81 Q83 78 82 61','横撇弯钩':'M18 22 L66 22 L49 46 Q86 64 61 84 L48 70','竖折折钩':'M29 15 L24 46 L78 46 L71 80 Q69 88 54 73','横折折折钩':'M15 25 L49 25 L38 46 L77 46 L68 79 Q64 90 50 73'};
 const STROKE_EXAMPLES=['一十','上木','手八','火头','火人','虫我','口五','了水','你','牙山','西四','比长','可小','去云','女妈','手子','我','心','凹','船','话','用刀','风','鼎','专','七儿','凸','及','九几','那','马鸟','奶'];
 function strokeSvg(name,cls=''){return `<svg class="stroke-svg ${cls}" viewBox="0 0 100 100" aria-hidden="true"><path d="${STROKES[name]||STROKES['横']}"/></svg>`}
-const CONFUSABLE={'横':['提','竖'],'竖':['竖钩','撇'],'撇':['捺','点'],'点':['捺','撇'],'捺':['点','撇'],'提':['横','撇'],'横折':['横折钩','横撇'],'横撇':['横折','横钩'],'横钩':['横折钩','横撇'],'竖折':['竖弯','竖提'],'竖弯':['竖弯钩','竖折'],'竖提':['竖钩','竖弯钩'],'竖钩':['弯钩','竖'],'撇折':['撇点','横撇'],'撇点':['撇折','捺'],'弯钩':['竖钩','卧钩'],'斜钩':['卧钩','竖弯钩'],'卧钩':['斜钩','竖弯钩'],'横折钩':['横折','横折弯钩'],'横斜钩':['横折弯钩','横折钩'],'竖弯钩':['竖弯','卧钩'],'横折弯钩':['横斜钩','横折钩'],'竖折折钩':['横折钩','竖弯钩']};
 const FORM_TYPES=['象形','形声','会意','指事'];
 const FORM_INTRO={'象形':'画出事物的形状','形声':'一部分表义，一部分提示读音','会意':'把部件的意思合起来','指事':'用符号或标记指出意思'};
 // These are four independent difficulty settings, not sequential levels.
@@ -114,6 +113,8 @@ function validWrong(w){
  if(w?.q?.source&&!/^https:\/\//.test(w.q.source))return false;
  if(!w||typeof w.key!=='string'||!w.q||!MODES.some(m=>m.id===w.q.type)||w.q.type==='mixed')return false;
  const q=w.q;
+ if(q.type==='stroke'&&(!D.strokes[q.char]||!Number.isInteger(q.index)||q.index<0||q.index>=D.strokes[q.char].length))return false;
+ if(q.type==='rule'&&!D.rules.some(r=>r.char===q.char))return false;
  if(['radical','formation'].includes(q.type)){
   return Array.isArray(q.cards)&&q.cards.length>0&&q.cards.every(c=>D.readChars.includes(c))&&
    new Set(q.cards).size===q.cards.length&&Array.isArray(q.bins)&&q.bins.length>1&&q.bins.length<=4&&
@@ -123,20 +124,37 @@ function validWrong(w){
  return D.readChars.includes(q.char)&&Array.isArray(q.options)&&q.options.includes(q.correct);
 }
 const saved=loadStore();
-const state={mode:'radical',q:null,solved:false,failed:false,assisted:false,wrongThis:false,done:0,first:0,assists:0,scope:['all','write'].includes(saved.settings.scope)?saved.settings.scope:'all',batch:[0,10,20,30].includes(saved.settings.batch)?saved.settings.batch:10,choices:[2,3].includes(saved.settings.choices)?saved.settings.choices:3,tiles:[5,6].includes(saved.settings.tiles)?saved.settings.tiles:6,radicalLevel:RADICAL_LEVELS.some(l=>l.id===saved.settings.radicalLevel)?saved.settings.radicalLevel:'basic',sound:false,selected:null,assign:{},rejected:[],badTiles:[],review:null,reviewPos:0,pools:{},mix:[],lastModalFocus:null,stepTimer:null,toastTimer:null};
+const state={mode:'radical',q:null,solved:false,failed:false,assisted:false,wrongThis:false,done:0,first:0,assists:0,scope:['all','write'].includes(saved.settings.scope)?saved.settings.scope:'all',batch:[0,10,20,30].includes(saved.settings.batch)?saved.settings.batch:10,mixedBatch:[10,20,30].includes(saved.settings.mixedBatch)?saved.settings.mixedBatch:10,choices:[2,3,4].includes(saved.settings.choices)?saved.settings.choices:4,tiles:[5,6].includes(saved.settings.tiles)?saved.settings.tiles:6,radicalLevel:RADICAL_LEVELS.some(l=>l.id===saved.settings.radicalLevel)?saved.settings.radicalLevel:'basic',sound:false,selected:null,assign:{},rejected:[],badTiles:[],review:null,reviewPos:0,pools:{},mix:[],lastModalFocus:null,stepTimer:null,toastTimer:null,roundStarted:null,roundEnded:null,roundTimer:null};
 state.scope='all';
 let storageWarned=false;
-function saveStore(){saved.settings={scope:state.scope,batch:state.batch,choices:state.choices,tiles:state.tiles,radicalLevel:state.radicalLevel};try{localStorage.setItem(STORE_KEY,JSON.stringify(saved))}catch{if(!storageWarned){toast('浏览器未允许保存记录；本次仍可正常练习。');storageWarned=true}}updateCounters()}
+function saveStore(){saved.settings={scope:state.scope,batch:state.batch,mixedBatch:state.mixedBatch,choices:state.choices,tiles:state.tiles,radicalLevel:state.radicalLevel};try{localStorage.setItem(STORE_KEY,JSON.stringify(saved))}catch{if(!storageWarned){toast('浏览器未允许保存记录；本次仍可正常练习。');storageWarned=true}}updateCounters()}
 function updateCounters(){$('#totalStars').textContent=saved.stars;$('#wrongCount').textContent=saved.wrong.length}
 function allowed(c){return state.scope==='all'||D.writeChars.includes(c)}
 function take(key,pool){if(!pool.length)throw Error('题库为空：'+key);const k=key+'-'+state.scope;if(!state.pools[k]||!state.pools[k].length)state.pools[k]=shuffle(pool);return state.pools[k].pop()}
 function optionChars(correct,preferred,count=3){const all=state.scope==='write'?D.writeChars:D.readChars;let others=shuffle(preferred.filter(c=>c!==correct&&all.includes(c)));if(others.length<count-1)others=[...others,...shuffle(all.filter(c=>c!==correct&&!others.includes(c)))];return shuffle([correct,...others.slice(0,count-1)])}
+function roundSize(){return state.review?state.review.length:state.mode==='mixed'?state.mixedBatch:state.batch}
+function choiceCount(){return state.mode==='mixed'?4:state.choices}
+function makeStrokeQuestion(c,i){
+ const correct=D.strokes[c][i],others=[...new Set(D.strokes[c])].filter(s=>s!==correct);
+ return {type:'stroke',id:`stroke:${c}:${i}`,char:c,index:i,correct,
+  options:shuffle([correct,...shuffle(others).slice(0,3)]),
+  title:`“${c}”的第 ${i+1} 笔是什么？`,sub:'选项都是这个字中的笔画。找出指定的那一笔。',
+  explain:`“${c}”共 ${D.strokes[c].length} 笔，第 ${i+1} 笔是${correct}。`,source:D.strokeSources[c]||D.sources[1].url};
+}
+function makeRuleQuestion(r){
+ return {type:'rule',id:'rule:'+r.char,char:r.char,correct:r.correct,options:shuffle([r.correct,...r.wrong]),
+  title:`“${r.char}”怎样写才正确？`,sub:'三种写法中，只有一种正确。',explain:r.explain,source:D.sources[1].url};
+}
 function makeQuestion(type){
- if(type==='stroke'){const positions=D.strokeChars.filter(allowed).flatMap(c=>D.strokes[c].map((_,i)=>({c,i})));const {c,i}=take('stroke',positions);const correct=D.strokes[c][i],wrong=pick(CONFUSABLE[correct]||Object.keys(STROKES).filter(n=>n!==correct));return {type,id:`stroke:${c}:${i}`,char:c,index:i,correct,options:shuffle([correct,wrong]),title:`“${c}”的第 ${i+1} 笔是什么？`,sub:'只选一个。转折或带钩的笔画，也可能是一笔写成。',explain:`“${c}”共 ${D.strokes[c].length} 笔，第 ${i+1} 笔是${correct}。`,source:D.strokeSources[c]||D.sources[1].url}}
- if(type==='rule'){const r=take('rule',D.rules.filter(x=>allowed(x.char)));return {type,id:'rule:'+r.char,char:r.char,correct:r.correct,options:shuffle([r.correct,...shuffle(r.wrong).slice(0,state.choices-1)]),title:`“${r.char}”怎样写才正确？`,sub:r.kind+' · 选出正确的描述',explain:r.explain,source:D.sources[1].url}}
- if(type==='meaning'){const m=take('meaning',D.meanings.filter(x=>allowed(x.char)));return {type,id:'meaning:'+m.char,char:m.char,correct:m.char,options:optionChars(m.char,m.options,state.choices),title:'看图和线索，猜一个字',sub:'可以点“读题”，听一听文字线索。',clue:m.clue,art:m.art,explain:m.explain}}
- if(type==='ancient'){const c=take('ancient',Object.keys(D.ancient).filter(allowed)),a=D.ancient[c];const others=Object.keys(D.ancient).filter(x=>x!==c);return {type,id:'ancient:'+c,char:c,correct:c,options:optionChars(c,others,state.choices),title:'它变成了今天的哪个字？',sub:'观察字形轮廓，不用猜它的年代。',explain:a.explain,source:a.source}}
- if(type==='radical')return makeRadical();
+ if(type==='stroke'){
+  const positions=D.strokeChars.filter(c=>allowed(c)&&new Set(D.strokes[c]).size>=2).flatMap(c=>D.strokes[c].map((_,i)=>({c,i})));
+  const {c,i}=take('stroke',positions);
+  return makeStrokeQuestion(c,i);
+ }
+ if(type==='rule')return makeRuleQuestion(take('rule',D.rules.filter(x=>allowed(x.char))));
+ if(type==='meaning'){const m=take('meaning',D.meanings.filter(x=>allowed(x.char)));return {type,id:'meaning:'+m.char,char:m.char,correct:m.char,options:optionChars(m.char,m.options,choiceCount()),title:'看图和线索，猜一个字',sub:'可以点“读题”，听一听文字线索。',clue:m.clue,art:m.art,explain:m.explain}}
+ if(type==='ancient'){const c=take('ancient',Object.keys(D.ancient).filter(allowed)),a=D.ancient[c];const others=Object.keys(D.ancient).filter(x=>x!==c);return {type,id:'ancient:'+c,char:c,correct:c,options:optionChars(c,others,choiceCount()),title:'它变成了今天的哪个字？',sub:'观察字形轮廓，不用猜它的年代。',explain:a.explain,source:a.source}}
+ if(type==='radical')return makeRadical(state.mode==='mixed'?{count:6,binCount:3,level:pick(RADICAL_LEVELS).id}:{});
  if(type==='formation')return makeFormation();
  throw Error('未知题型');
 }
@@ -146,7 +164,7 @@ function makeFormation(){
  const chosen=[];
  // Shuffled bag: vary both characters and category counts; never repeat a card
  // within one question and do not force every category to appear every time.
- while(chosen.length<state.tiles){
+ while(chosen.length<(state.mode==='mixed'?6:state.tiles)){
   if(!state.pools[key]?.length)state.pools[key]=shuffle(pool.filter(f=>!chosen.some(c=>c.char===f.char)));
   const f=state.pools[key].pop();
   if(f&&!chosen.some(c=>c.char===f.char))chosen.push(f);
@@ -159,6 +177,11 @@ function makeFormation(){
 }
 function normalizeSavedQuestion(q){
  const n=copy(q);
+ if(n.type==='stroke'){
+  if(new Set(D.strokes[n.char]).size<2)return {...makeQuestion('stroke'),id:n.id,legacyAdjusted:true};
+  return makeStrokeQuestion(n.char,n.index);
+ }
+ if(n.type==='rule')return makeRuleQuestion(D.rules.find(r=>r.char===n.char));
  if(n.type==='formation')n.bins=FORM_TYPES.map(t=>({id:t,title:t,hint:FORM_INTRO[t]}));
  if(n.type==='radical'){
   if(![2,3].includes(n.bins?.length)||![5,6].includes(n.cards?.length)){
@@ -174,25 +197,39 @@ function normalizeSavedQuestion(q){
  }
  return n;
 }
-function mixedTypes(){return MODES.slice(0,6).map(m=>m.id).filter(id=>state.scope!=='write'||id!=='radical')}
-function setMode(id){stopSpeech();stopSteps();const scopeChanged=id==='radical'&&state.scope==='write';if(scopeChanged)state.scope='all';state.mode=id;state.review=null;resetRound();renderNav();updateSettingsUI();updateModeIntro();nextQuestion();saveStore();if(scopeChanged)toast('偏旁分类使用课本与 PDF 补充字库，随机出现5～6个字和2～3个偏旁框。')}
-function resetRound(){state.done=0;state.first=0;state.assists=0;state.pools={};state.mix=[];state.reviewPos=0}
+function mixedTypes(){return MODES.slice(0,6).map(m=>m.id)}
+function setMode(id){stopSpeech();stopSteps();const scopeChanged=['radical','mixed'].includes(id)&&state.scope==='write';if(scopeChanged)state.scope='all';state.mode=id;state.review=null;resetRound();renderNav();updateSettingsUI();updateModeIntro();nextQuestion();saveStore();if(scopeChanged&&id==='radical')toast('偏旁分类使用课本与 PDF 补充字库，随机出现5～6个字和2～3个偏旁框。')}
+function resetRound(){stopRoundTimer();state.roundStarted=null;state.roundEnded=null;state.done=0;state.first=0;state.assists=0;state.pools={};state.mix=[];state.reviewPos=0}
 function nextQuestion(){stopSpeech();stopSteps();$('#parentBox').open=false;
  if(state.review){if(state.reviewPos>=state.review.length){showSummary();return}state.q=normalizeSavedQuestion(state.review[state.reviewPos++]);if(state.q.options)state.q.options=shuffle(state.q.options);if(state.q.cards)state.q.cards=shuffle(state.q.cards)}
- else{if(state.batch&&state.done>=state.batch){showSummary();return}let t=state.mode;if(t==='mixed'){if(!state.mix.length)state.mix=shuffle(mixedTypes());t=state.mix.pop()}state.q=makeQuestion(t)}
- state.solved=false;state.failed=false;state.assisted=false;state.wrongThis=false;state.rejected=[];state.selected=null;state.assign={};state.badTiles=[];renderQuestion();
+ else{if(roundSize()&&state.done>=roundSize()){showSummary();return}let t=state.mode;if(t==='mixed'){if(!state.mix.length)state.mix=shuffle(mixedTypes());t=state.mix.pop()}state.q=makeQuestion(t)}
+ state.solved=false;state.failed=false;state.assisted=false;state.wrongThis=false;state.rejected=[];state.selected=null;state.assign={};state.badTiles=[];startRoundTimer();renderQuestion();
 }
 function renderNav(){$('#nav').innerHTML=MODES.map(m=>`<button class="nav-item ${m.id==='mixed'?'mixed':''} ${state.mode===m.id&&!state.review?'active':''}" type="button" data-mode="${m.id}" ${state.mode===m.id&&!state.review?'aria-current="page"':''}><span class="num">${m.num}</span><span>${m.title}<small>${m.short}</small></span></button>`).join('');$$('[data-mode]').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));requestAnimationFrame(()=>{const n=$('#nav'),a=$('.nav-item.active',n);if(a&&n.scrollWidth>n.clientWidth)n.scrollLeft+=a.getBoundingClientRect().left-n.getBoundingClientRect().left+a.clientWidth/2-n.clientWidth/2})}
-function updateModeIntro(){const m=MODES.find(m=>m.id===state.mode);$('#modeTitle').textContent=state.review?'错题再发现':m.title;$('#modeIntro').textContent=state.review?'这是独立的再练习。一次答对后，这道题会从错题本移出。':m.intro;$('#scopeTag').textContent=state.review?'按原题内容复习，不受当前用字范围限制':m.tag;if(!state.review&&state.mode==='mixed'&&state.scope==='write'){$('#modeIntro').textContent='写字表范围内随机练习；偏旁分类需使用课本与 PDF 补充字库。';$('#scopeTag').textContent='5 类随机 · 不补入表外字'}}
+function updateModeIntro(){const m=MODES.find(m=>m.id===state.mode);$('#modeTitle').textContent=state.review?'错题再发现':m.title;$('#modeIntro').textContent=state.review?'这是独立的再练习。一次答对后，这道题会从错题本移出。':m.intro;$('#scopeTag').textContent=state.review?'按原题内容复习，不受当前用字范围限制':m.tag}
 function renderDifficulty(){
- const show=state.mode==='radical'||state.mode==='mixed'||state.q?.type==='radical';
+ const show=state.review?state.q?.type==='radical':state.mode==='radical';
  $('#radicalDifficulty').classList.toggle('hidden',!show);
  const active=state.review&&state.q?.type==='radical'?(state.q.level||'basic'):state.radicalLevel;
  $('#levelSwitch').innerHTML=RADICAL_LEVELS.map(l=>`<button type="button" class="level-option ${l.id===active?'active':''}" data-level-select="${l.id}" aria-pressed="${l.id===active}" title="${esc(l.instruction)}" ${state.review?'disabled':''}><span class="level-number">${l.number}</span><span class="level-name">${l.title}<small>${l.short}</small></span></button>`).join('');
  $$('[data-level-select]').forEach(b=>b.addEventListener('click',()=>{if(state.radicalLevel===b.dataset.levelSelect)return;onSetting('radicalLevel',b.dataset.levelSelect)}));
 }
-function updateSettingsUI(){$('#scopeSelect').value=state.scope;$('#scopeSelect option[value="write"]').disabled=state.mode==='radical';$('#scopeSelect').title=state.mode==='radical'?'偏旁分类使用课本与 PDF 补充字库，以组成每题5～6个字、2～3个分类框。':'';$('#batchSelect').value=state.batch;$('#choiceSelect').value=state.choices;$('#tileSelect').value=state.tiles;$('#choiceConfig').classList.toggle('hidden',['stroke','radical','formation'].includes(state.mode));$('#tileConfig').classList.toggle('hidden',!['formation','mixed'].includes(state.mode));renderDifficulty()}
-function renderQuestion(){cancelActiveRadicalDrag?.();const q=state.q;$('#workspace').dataset.kind=q.type;renderDifficulty();const m=MODES.find(x=>x.id===q.type);$('#randomQuestionBtn').classList.toggle('hidden',!isSort(q)||Boolean(state.review));$('#questionType').innerHTML=`<b>${m.num}</b>${esc(m.title)}${state.review?' · 错题重练':''}`;$('#questionTitle').textContent=q.title;$('#questionSub').textContent=q.sub;$('#questionActions').classList.remove('hidden');$('#parentBox').classList.remove('hidden');$('#questionContent').innerHTML='';$('#answerDetails').innerHTML='';$('#answerDetails').className='answer-details';$('#nextBtn').disabled=true;$('#revealBtn').disabled=false;$('#revealBtn').textContent='看答案';
+function updateSettingsUI(){
+ const mixed=state.mode==='mixed'&&!state.review;
+ $('#scopeSelect').value=state.scope;
+ $('#scopeSelect').closest('label').classList.toggle('hidden',mixed);
+ $('#scopeSelect option[value="write"]').disabled=state.mode==='radical';
+ $('#batchSelect').value=roundSize();
+ $('#batchSelect').disabled=Boolean(state.review);
+ $('#batchSelect option[value="0"]').hidden=mixed;
+ $('#batchSelect option[value="0"]').disabled=mixed;
+ $('#choiceSelect').value=mixed?4:state.choices;
+ $('#tileSelect').value=mixed?6:state.tiles;
+ $('#choiceConfig').classList.toggle('hidden',!['meaning','ancient'].includes(state.mode)||Boolean(state.review));
+ $('#tileConfig').classList.toggle('hidden',state.mode!=='formation'||Boolean(state.review));
+ renderDifficulty();
+}
+function renderQuestion(){cancelActiveRadicalDrag?.();const q=state.q;$('#workspace').dataset.kind=q.type;renderDifficulty();const m=MODES.find(x=>x.id===q.type);$('#randomQuestionBtn').classList.toggle('hidden',!isSort(q)||Boolean(state.review)||state.mode==='mixed');$('#questionType').innerHTML=`<b>${state.mode==='mixed'&&!state.review?'✦':m.num}</b>${state.mode==='mixed'&&!state.review?'综合练习':esc(m.title)}${state.review?' · 错题重练':''}`;$('#questionTitle').textContent=q.title;$('#questionSub').textContent=q.sub;$('#questionActions').classList.remove('hidden');$('#parentBox').classList.remove('hidden');$('#questionContent').innerHTML='';$('#answerDetails').innerHTML='';$('#answerDetails').className='answer-details';$('#nextBtn').disabled=true;$('#revealBtn').disabled=false;$('#revealBtn').textContent='看答案';
  if(q.type==='stroke'||q.type==='rule')renderWritten(q);
  else if(q.type==='meaning')renderMeaning(q);
  else if(q.type==='ancient')renderAncient(q);
@@ -206,10 +243,10 @@ function charGrid(c){return `<div class="grid-char"><span class="hanzi">${esc(c)
 function choiceHTML(q,charChoices=false){return q.options.map((o,i)=>`<button class="choice-btn ${q.type==='stroke'?'stroke-option':''} ${state.solved&&o===q.correct?'correct':''} ${state.rejected.includes(o)?'incorrect':''}" data-choice="${i}" type="button" ${state.solved||state.rejected.includes(o)?'disabled':''}><span class="choice-letter">${state.solved&&o===q.correct?'✓':state.rejected.includes(o)?'×':String.fromCharCode(65+i)}</span>${q.type==='stroke'?strokeSvg(o):''}<span class="${charChoices?'hanzi':'choice-label'}">${esc(o)}</span></button>`).join('')}
 function bindChoices(){$$('[data-choice]').forEach(b=>b.addEventListener('click',()=>answerChoice(Number(b.dataset.choice))))}
 function renderWritten(q){$('#questionContent').innerHTML=`<div class="split-question"><div class="character-zone ${q.type==='rule'?'rule-hero':''}">${charGrid(q.char)}<span class="char-caption">${D.writeChars.includes(q.char)?'写字表里的字':'PDF 补充字形'} · 共 ${D.strokes[q.char].length} 笔</span></div><div class="choice-list ${q.type==='stroke'?'stroke-options':''}">${choiceHTML(q)}</div></div>`;bindChoices()}
-function renderMeaning(q){$('#questionContent').innerHTML=`<div class="picture-zone" aria-label="图画线索">${picture(q.art)}</div><p class="picture-clue">${esc(q.clue)}</p><div class="choice-list char-options">${choiceHTML(q,true)}</div>`;bindChoices()}
+function renderMeaning(q){$('#questionContent').innerHTML=`<div class="picture-zone" aria-label="图画线索">${picture(q.art)}</div><p class="picture-clue">${esc(q.clue)}</p><div class="choice-list char-options" data-count="${q.options.length}">${choiceHTML(q,true)}</div>`;bindChoices()}
 function ancientSvg(c,cl=''){const a=D.ancient[c];return `<svg class="ancient-svg ${cl}" viewBox="${a.viewBox}" aria-label="待识别的古文字形" role="img"><g class="ancient-content">${a.body}</g></svg>`}
 function fitAncient(root=document){$$('.ancient-svg',root).forEach(s=>{try{const b=s.querySelector('.ancient-content').getBBox();if(b.width>0&&b.height>0){const p=Math.max(b.width,b.height)*.09;s.setAttribute('viewBox',`${b.x-p} ${b.y-p} ${b.width+2*p} ${b.height+2*p}`)}}catch{}})}
-function renderAncient(q){$('#questionContent').innerHTML=`<div class="picture-zone ancient-zone">${ancientSvg(q.char)}</div><p class="ancient-mark">甲骨文字形 · 现代矢量摹本</p><div class="choice-list char-options">${choiceHTML(q,true)}</div>`;fitAncient($('#questionContent'));bindChoices()}
+function renderAncient(q){$('#questionContent').innerHTML=`<div class="picture-zone ancient-zone">${ancientSvg(q.char)}</div><p class="ancient-mark">甲骨文字形 · 现代矢量摹本</p><div class="choice-list char-options" data-count="${q.options.length}">${choiceHTML(q,true)}</div>`;fitAncient($('#questionContent'));bindChoices()}
 function tileHTML(c){
  const q=state.q,isRadical=q?.type==='radical',assigned=state.assign[c];
  const place=assigned===OUTSIDE_ID?'不属于这些偏旁区':q.bins.find(b=>b.id===assigned)?.title;
@@ -306,7 +343,7 @@ function renderSort(q){
  html+=`<div class="sort-tray" id="sortTray" style="--cards:${q.cards.length}" aria-label="待分类字卡">${pending.length?pending.map(tileHTML).join(''):`<span class="tray-complete">${icon('check')}字卡都放好了，检查一下吧。</span>`}</div>`;
  const selectedText=state.selected?`已选“${esc(state.selected)}”，点击要放入的区域；也可以拖拽。`:radical?'按住字卡拖动 · 放错了可以换框，也能拖回上方':'点字卡 → 点家；已经放好的字也能重新移动。';
  html+=`<div class="sort-selected" id="sortSelected" aria-live="polite">${selectedText}</div>`;
- if(radical)html+=`<div class="stage-heading destinations-heading"><span class="stage-label"><i aria-hidden="true">2</i>按偏旁分类 <small>${q.bins.length} 个偏旁框</small></span><span class="level-chip">${esc(level.title)}</span></div>`;
+ if(radical)html+=`<div class="stage-heading destinations-heading"><span class="stage-label"><i aria-hidden="true">2</i>按偏旁分类 <small>${q.bins.length} 个偏旁框</small></span>${state.mode==='mixed'&&!state.review?'':`<span class="level-chip">${esc(level.title)}</span>`}</div>`;
  html+=`<div class="bins" style="--bins:${q.bins.length}">${q.bins.map(b=>{
   const placed=q.cards.filter(c=>state.assign[c]===b.id);
   const emptyCorrect=radical&&state.solved&&!q.cards.some(c=>q.targets[c]===b.id);
@@ -361,11 +398,27 @@ function checkSort(){
  if(!bad.length){complete(false);renderSort(q);showExplanation()}
  else{state.failed=true;state.badTiles=bad;recordWrong(q);beep(false);renderSort(q);setFeedback(`有 ${bad.length} 个字需要再想想，已经用橙色标出来了。移动以后再检查。`,'retry');updateParent()}
 }
-function complete(assisted){if(state.solved)return;const clean=!state.failed&&!assisted;state.solved=true;state.assisted=assisted;state.done++;saved.finished++;saved.stars++;if(clean){state.first++;saved.first++;if(state.review)saved.wrong=saved.wrong.filter(w=>w.key!==state.q.id)}if(assisted){state.assists++;recordWrong(state.q)}$('#nextBtn').disabled=false;$('#nextBtn').innerHTML=(isLast()?'本组小结':'下一题')+' '+icon('arrow');$('#revealBtn').disabled=true;$('#revealBtn').textContent='已揭晓';saveStore();updateProgress();setFeedback(assisted?'先认识正确答案，再独立练一次。这道题已放进错题本。':clean?'答对了！找到一个汉字的小秘密，收下 1 颗学习星。':'这次改对了！收下 1 颗学习星，稍后可以在错题本再练。',assisted?'info':'success');beep(true);updateParent()}
-function isLast(){return state.review?state.reviewPos>=state.review.length:state.batch>0&&state.done>=state.batch}
+function complete(assisted){if(state.solved)return;const clean=!state.failed&&!assisted;state.solved=true;state.assisted=assisted;state.done++;saved.finished++;saved.stars++;if(clean){state.first++;saved.first++;if(state.review)saved.wrong=saved.wrong.filter(w=>w.key!==state.q.id)}if(assisted){state.assists++;recordWrong(state.q)}$('#nextBtn').disabled=false;$('#nextBtn').innerHTML=(isLast()?'本组小结':'下一题')+' '+icon('arrow');$('#revealBtn').disabled=true;$('#revealBtn').textContent='已揭晓';if(isLast())stopRoundTimer();saveStore();updateProgress();setFeedback(assisted?'先认识正确答案，再独立练一次。这道题已放进错题本。':clean?'答对了！找到一个汉字的小秘密，收下 1 颗学习星。':'这次改对了！收下 1 颗学习星，稍后可以在错题本再练。',assisted?'info':'success');beep(true);updateParent()}
+function isLast(){return roundSize()>0&&state.done>=roundSize()}
 function recordWrong(q){if(state.wrongThis)return;state.wrongThis=true;const w=saved.wrong.find(w=>w.key===q.id);if(w){w.misses=(Number(w.misses)||0)+1;w.at=Date.now();w.q=copy(q)}else saved.wrong.unshift({key:q.id,q:copy(q),misses:1,at:Date.now()});saved.wrong=saved.wrong.slice(0,300);saveStore()}
 function reveal(){if(!state.q||state.solved)return;state.failed=true;if(isSort())state.assign={...state.q.targets};complete(true);if(isSort())renderSort(state.q);else if(['stroke','rule'].includes(state.q.type))renderWritten(state.q);else if(state.q.type==='meaning')renderMeaning(state.q);else renderAncient(state.q);showExplanation()}
-function updateProgress(){const total=state.review?state.review.length:state.batch;const display=state.solved?state.done:state.done+1;$('#roundLabel').textContent=total?`第 ${Math.min(display,total)} 题 / ${total}`:`已完成 ${state.done} 题`;const p=total?Math.min(100,state.done/total*100):state.done%10*10;$('#progressFill').style.width=p+'%';$('.progress-track').setAttribute('aria-valuenow',Math.round(p))}
+function roundElapsed(){return state.roundStarted===null?0:Math.max(0,(state.roundEnded??performance.now())-state.roundStarted)}
+function formatElapsed(ms){const seconds=Math.floor(ms/1000);return String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0')}
+function accuracy(){return state.done?Math.round(state.first/state.done*100)+'%':'—'}
+function updateRoundStats(){
+ $('#roundStats').classList.toggle('hidden',state.mode!=='mixed'||Boolean(state.review));
+ $('#accuracyValue').textContent=accuracy();
+ $('#elapsedValue').textContent=formatElapsed(roundElapsed());
+}
+function startRoundTimer(){
+ if(state.roundStarted===null){state.roundStarted=performance.now();state.roundEnded=null}
+ if(state.roundTimer===null)state.roundTimer=setInterval(updateRoundStats,1000);
+}
+function stopRoundTimer(){
+ if(state.roundStarted!==null&&state.roundEnded===null)state.roundEnded=performance.now();
+ clearInterval(state.roundTimer);state.roundTimer=null;
+}
+function updateProgress(){const total=roundSize();const display=state.solved?state.done:state.done+1;$('#roundLabel').textContent=total?`第 ${Math.min(display,total)} 题 / ${total}`:`已完成 ${state.done} 题`;const p=total?Math.min(100,state.done/total*100):state.done%10*10;$('#progressFill').style.width=p+'%';$('.progress-track').setAttribute('aria-valuenow',Math.round(p));updateRoundStats()}
 function setFeedback(text,kind=''){const el=$('#feedback');el.className='feedback'+(kind?' '+kind:'');el.innerHTML=`<span class="feedback-icon">${kind==='success'?'✓':kind==='retry'?'↻':kind==='info'?'i':'?'}</span><span>${esc(text)}</span>`}
 function strokeStrip(c,target=-1){return `<div class="stroke-strip" data-strip="${esc(c)}">${D.strokes[c].map((s,i)=>`<div class="stroke-step ${i===target?'target':''}" data-step="${i}"><small>第 ${i+1} 笔</small>${strokeSvg(s)}<span>${esc(s)}</span></div>`).join('')}</div>`}
 function showExplanation(){const q=state.q;let body=`<h4>一起看看为什么</h4>`;
@@ -382,7 +435,7 @@ function showExplanation(){const q=state.q;let body=`<h4>一起看看为什么</
 }
 function stopSteps(){if(state.stepTimer){clearInterval(state.stepTimer);state.stepTimer=null}$$('.stroke-step.current').forEach(e=>e.classList.remove('current'));const b=$('#playSteps');if(b)b.textContent='按顺序看笔画'}
 function playSteps(c){if(state.stepTimer){stopSteps();return}let i=0,steps=$$('.stroke-step',$('#answerDetails'));const b=$('#playSteps');if(!steps.length)return;b.textContent='停止演示';steps[0].classList.add('current');state.stepTimer=setInterval(()=>{steps.forEach(x=>x.classList.remove('current'));i++;if(i>=steps.length){stopSteps();return}steps[i].classList.add('current')},850)}
-function updateParent(){const q=state.q;if(!q)return;let text='';if(q.type==='stroke'){text=`请孩子先把“${q.char}”完整地在空中写一遍，再慢慢数到第 ${q.index+1} 笔。提醒她：<strong>从落笔到提笔才算一笔</strong>，带转折不一定要分开。先让她说说两个选项的形状哪里不同。`;if(state.solved)text+=`<br>本题答案是“${esc(q.correct)}”。可以让她按下方笔画序列再数一次，不需要反复抄写整页。`}
+function updateParent(){const q=state.q;if(!q)return;let text='';if(q.type==='stroke'){text=`请孩子先把“${q.char}”完整地在空中写一遍，再慢慢数到第 ${q.index+1} 笔。提醒她：<strong>从落笔到提笔才算一笔</strong>，带转折不一定要分开。先让她说说这些选项的形状哪里不同。`;if(state.solved)text+=`<br>本题答案是“${esc(q.correct)}”。可以让她按下方笔画序列再数一次，不需要反复抄写整页。`}
  else if(q.type==='radical'){
   const hasEmpty=q.bins.some(b=>!q.cards.some(c=>q.targets[c]===b.id));
   text=`本题给出<strong>${q.bins.length}个偏旁框</strong>和<strong>${q.cards.length}个汉字</strong>。先和孩子一起读出偏旁名称，再观察每个字的对应偏旁及其位置，让孩子说说为什么这样分类。`;
@@ -391,13 +444,13 @@ function updateParent(){const q=state.q;if(!q)return;let text='';if(q.type==='st
   if(!q.allowOutside&&!hasEmpty)text+='<br>基础题中，每个字都与给出的某一个偏旁对应，每个偏旁框至少有一个字；但每个框里的字数不一定相同。';
   if(state.solved)text+='<br>核对时先讲孩子的判断依据，再看每个字的归属。偏旁可以提供线索，不表示带同一偏旁的字意思都一样。';
  }
- else if(q.type==='rule'){text=`先读两个或三个选项，不急着作答。让孩子用手指写“${q.char}”，边写边说先后顺序，再对照哪个描述一致。<strong>笔顺口诀有适用条件</strong>，不能把一条口诀套到所有汉字。`;if(state.solved)text+='<br>'+esc(q.explain)}
+ else if(q.type==='rule'){text=`先读三个选项，不急着作答。让孩子用手指写“${q.char}”，边写边说先后顺序，再对照哪个描述一致。<strong>笔顺口诀有适用条件</strong>，不能把一条口诀套到所有汉字。`;if(state.solved)text+='<br>'+esc(q.explain)}
  else if(q.type==='meaning'){text='先让孩子说“图里画了什么”或“它在什么位置”，再读文字线索，最后比较选项。<strong>根据这一题的意思选字</strong>，不是看到一个相似形状就选。';if(state.solved)text+=`<br>本题的字是“${q.char}”。${esc(q.explain)}`}
  else if(q.type==='formation'){text='按这四类来讲：<strong>象形——画样子；形声——一部分表义，一部分提示读音；会意——把意思合起来；指事——用符号或标记指出意思</strong>。本题的字是随机抽取的，不一定四类都有；不要因为某个框是空的就硬放一个字。先请孩子解释为什么想放在某一类，再检查。这个活动适合亲子讨论，不必要求一年级孩子独立背完全部分类。';if(state.solved)text+='<br>按本题逐字讲解来核对。不要把好记的拆字故事当成真实字源，也不要认为声旁今天一定和整字同音。'}
  else{text='先问：“你看到了什么线条？哪些部分像某个东西？”先观察整体，再比较选项，不用先告诉现代字。<strong>古字不是每一笔都与今天相同</strong>，同一个字也会有不同古代写法。';if(state.solved)text+=`<br>本题是“${q.char}”。${esc(q.explain)}`}
  $('#parentBody').innerHTML=text;
 }
-function showSummary(){stopSpeech();stopSteps();$('#randomQuestionBtn').classList.add('hidden');$('#questionContent').innerHTML=`<div class="summary-view"><div class="summary-medal">✦</div><h3>这一组，认真完成啦</h3><p>不用比速度。多看懂一个字，就是一次发现。</p><div class="summary-stats"><div><strong>${state.done}</strong><span>完成题目</span></div><div><strong>${state.first}</strong><span>一次答对</span></div><div><strong>${state.done}</strong><span>收集学习星</span></div></div><div class="summary-actions"><button class="btn primary" id="againBtn" type="button">再来一组</button><button class="btn" id="summaryWrong" type="button">看看错题本</button></div></div>`;$('#questionTitle').textContent='本组小结';$('#questionSub').textContent=state.assists?`其中 ${state.assists} 题看过答案，可以之后独立再练。`:'继续保持自己的节奏。';$('#questionActions').classList.add('hidden');$('#answerDetails').className='answer-details';$('#answerDetails').innerHTML='';$('#parentBox').classList.add('hidden');setFeedback('学习星记录完成次数；“一次答对”才表示没有试错或看答案。','info');$('#againBtn').addEventListener('click',()=>setMode(state.review?'mixed':state.mode));$('#summaryWrong').addEventListener('click',openWrong);state.q=null}
+function showSummary(){stopSpeech();stopSteps();stopRoundTimer();updateRoundStats();$('#randomQuestionBtn').classList.add('hidden');$('#questionContent').innerHTML=`<div class="summary-view"><div class="summary-medal">✦</div><h3>这一组，认真完成啦</h3><p>不用比速度。多看懂一个字，就是一次发现。</p><div class="summary-stats"><div><strong>${state.done}</strong><span>完成题目</span></div><div><strong>${state.first}</strong><span>一次答对</span></div><div><strong id="summaryAccuracy">${accuracy()}</strong><span>正确率（一次答对）</span></div><div><strong id="summaryElapsed">${formatElapsed(roundElapsed())}</strong><span>本组用时</span></div></div><div class="summary-actions"><button class="btn primary" id="againBtn" type="button">再来一组</button><button class="btn" id="summaryWrong" type="button">看看错题本</button></div></div>`;$('#questionTitle').textContent='本组小结';$('#questionSub').textContent=state.assists?`其中 ${state.assists} 题看过答案，可以之后独立再练。`:'继续保持自己的节奏。';$('#questionActions').classList.add('hidden');$('#answerDetails').className='answer-details';$('#answerDetails').innerHTML='';$('#parentBox').classList.add('hidden');setFeedback('学习星记录完成次数；“一次答对”才表示没有试错或看答案。','info');$('#againBtn').addEventListener('click',()=>setMode(state.review?'mixed':state.mode));$('#summaryWrong').addEventListener('click',openWrong);state.q=null}
 function toast(s){$('#toast').textContent=s;$('#toast').classList.add('show');clearTimeout(state.toastTimer);state.toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3000)}
 let audio=null;
 function beep(good){if(!state.sound)return;try{audio=audio||new(window.AudioContext||window.webkitAudioContext)();audio.resume();const t=audio.currentTime;[0,.12].forEach((dt,i)=>{const o=audio.createOscillator(),g=audio.createGain();o.type='sine';o.frequency.value=good?[660,880][i]:[390,330][i];g.gain.setValueAtTime(0,t+dt);g.gain.linearRampToValueAtTime(.035,t+dt+.015);g.gain.exponentialRampToValueAtTime(.001,t+dt+.16);o.connect(g);g.connect(audio.destination);o.start(t+dt);o.stop(t+dt+.17)})}catch{toast('当前浏览器暂时不能播放音效。')}}
@@ -453,7 +506,7 @@ function renderSourceTab(tab){$$('[data-tab]').forEach(b=>b.classList.toggle('ac
   h=`<p class="ref-intro">《${esc(D.pdf.title)}》</p><p class="ref-intro">四、课内重点字词归纳（第2—4页）；八、偏旁部首及代表字（第6—7页）。提取字词中的汉字，按字形去重；偏旁字例与原课本合并。</p><div class="coverage-grid"><div class="coverage-card"><strong>${D.pdf.addedReadChars} 字</strong><span>新补充字形</span></div><div class="coverage-card"><strong>${D.readChars.length} 字</strong><span>合并后用字</span></div><div class="coverage-card"><strong>${RADICAL_CHAR_POOL.length} 字</strong><span>偏旁分类代表字</span></div></div><h4>新增字形</h4><div class="pdf-char-grid">${D.pdf.addedChars.map(c=>`<span class="hanzi">${esc(c)}</span>`).join('')}</div>`;
  }
  else if(tab==='strokes'){
-  h='<div class="notice">名称沿用照片。下列线条为笔形示意，不是字帖里的精确笔锋。偏旁分类根据课本称呼和在字中的位置进行；不把“偏旁”“部件”和字典检字部首混成同一回事。</div><h4>32 种笔画</h4><div class="ref-grid">'+Object.keys(STROKES).map((s,i)=>`<div class="ref-item">${strokeSvg(s)}<div><strong>${s}</strong><small class="hanzi">${STROKE_EXAMPLES[i]}</small></div></div>`).join('')+'</div><h4>29 种常用偏旁</h4><div class="ref-grid">'+D.radicals.map(r=>`<div class="ref-item"><span class="hanzi symbol">${r.symbol}</span><div><strong>${r.name}</strong><small class="hanzi">${r.chars.join(' ')}</small></div></div>`).join('')+'</div><p class="notice" style="margin-top:18px">偏旁分类先随机给出2或3个偏旁，再按所选难度生成5或6个不同汉字。基础分类保证每字有归属、每框有对应字；另有找多余字、判断空框、综合挑战三档。多余字必须放进独立的“不属于这些偏旁”区；该区域不计入2～3个偏旁框。所有汉字仍取自课本与 PDF 补充字库。只用写字表100字时，同旁字例不足，不通过增加分类框凑字数；写字表范围的综合练习不含本题型。</p>';
+  h='<div class="notice">名称沿用照片。下列线条为笔形示意，不是字帖里的精确笔锋。偏旁分类根据课本称呼和在字中的位置进行；不把“偏旁”“部件”和字典检字部首混成同一回事。</div><h4>32 种笔画</h4><div class="ref-grid">'+Object.keys(STROKES).map((s,i)=>`<div class="ref-item">${strokeSvg(s)}<div><strong>${s}</strong><small class="hanzi">${STROKE_EXAMPLES[i]}</small></div></div>`).join('')+'</div><h4>29 种常用偏旁</h4><div class="ref-grid">'+D.radicals.map(r=>`<div class="ref-item"><span class="hanzi symbol">${r.symbol}</span><div><strong>${r.name}</strong><small class="hanzi">${r.chars.join(' ')}</small></div></div>`).join('')+'</div><p class="notice" style="margin-top:18px">偏旁分类先随机给出2或3个偏旁，再按所选难度生成5或6个不同汉字。基础分类保证每字有归属、每框有对应字；另有找多余字、判断空框、综合挑战三档。多余字必须放进独立的“不属于这些偏旁”区；该区域不计入2～3个偏旁框。所有汉字仍取自课本与 PDF 补充字库。只用写字表100字时，同旁字例不足，不通过增加分类框凑字数；综合练习统一使用全部用字。</p>';
  }
  else if(tab==='formation'){
   h='<div class="notice">本练习按<strong>象形、形声、会意、指事</strong>四类归类，用于观察汉字怎么构成，不要求把字库里的每个字都硬分成四类。这里按所选字的形义来源作入门归类；没有把现代简化字的形状随意解释成字源。古文字学也有兼类和不同解释，本练习不把争议例字设成唯一判断题。</div>';
@@ -481,9 +534,9 @@ function startReview(qs){if(!qs.length)return;closeModal();resetRound();state.re
 function exportStats(){const o={format:'hanzi-explorer-records',version:1,exported:new Date().toISOString(),data:saved};const blob=new Blob([JSON.stringify(o,null,2)],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='汉字探险家_学习记录.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
 async function importStats(e){const file=e.target.files?.[0];if(!file)return;try{if(file.size>2000000)throw Error('记录文件过大');const o=JSON.parse(await file.text());if(o.format!=='hanzi-explorer-records'||o.version!==1||!o.data||!Array.isArray(o.data.wrong))throw Error('不是本页面导出的学习记录');if(o.data.wrong.some(w=>!validWrong(w)))throw Error('记录含有无法识别的题目');if(!confirm('用这份记录替换当前浏览器的学习星、完成次数和错题？'))return;for(const k of ['stars','finished','first'])saved[k]=Number.isFinite(o.data[k])?Math.max(0,Math.floor(o.data[k])):0;saved.wrong=o.data.wrong.slice(0,300);saveStore();renderWrong();toast('记录已导入。')}catch(err){toast('导入未成功：'+err.message)}}
 async function fullScreen(){try{if(document.fullscreenElement)await document.exitFullscreen();else if(document.documentElement.requestFullscreen)await document.documentElement.requestFullscreen();else toast('此浏览器不支持网页全屏，可横屏使用或隐藏浏览器工具栏。')}catch{toast('浏览器未允许进入全屏；仍可正常练习。')}}
-function onSetting(kind,value){state[kind]=Number.isFinite(Number(value))&&kind!=='scope'?Number(value):value;saveStore();setMode(state.mode)}
-function init(){$('#randomQuestionBtn').addEventListener('click',()=>{if(!state.q||state.review||!isSort())return;nextQuestion();toast('已随机换题；跳过的题目不计完成次数。')});hydrateIcons();renderNav();updateSettingsUI();updateModeIntro();updateCounters();$('#scopeSelect').addEventListener('change',e=>onSetting('scope',e.target.value));$('#batchSelect').addEventListener('change',e=>onSetting('batch',e.target.value));$('#choiceSelect').addEventListener('change',e=>onSetting('choices',e.target.value));$('#tileSelect').addEventListener('change',e=>onSetting('tiles',e.target.value));$('#restartBtn').addEventListener('click',()=>{if(state.done||state.failed){if(!confirm('重新开始这一组？已获得的学习星和错题仍会保留。'))return}setMode(state.mode)});$('#nextBtn').addEventListener('click',()=>{if(isSort()&&!state.solved)checkSort();else if(state.solved)nextQuestion()});$('#revealBtn').addEventListener('click',reveal);$('#readBtn').addEventListener('click',speakQuestion);$('#sourceBtn').addEventListener('click',()=>openSources());$('#wrongBtn').addEventListener('click',openWrong);$('#closeModal').addEventListener('click',closeModal);$('#modalBackdrop').addEventListener('click',e=>{if(e.target===$('#modalBackdrop'))closeModal()});$('#soundBtn').addEventListener('click',()=>{state.sound=!state.sound;$('#soundBtn').setAttribute('aria-pressed',String(state.sound));$('#soundLabel').textContent=state.sound?'音效开':'音效关';if(state.sound)beep(true)});$('#fullBtn').addEventListener('click',fullScreen);
- document.addEventListener('keydown',e=>{if(e.key==='Escape'&&cancelActiveRadicalDrag){cancelActiveRadicalDrag();return}const modalOpen=$('#modalBackdrop').classList.contains('open');if(e.key==='Escape'&&modalOpen){closeModal();return}if(modalOpen&&e.key==='Tab'){const a=$$('button:not(:disabled),a[href],input:not([type=hidden]),select,[tabindex="0"]',$('.modal')).filter(x=>x.offsetParent!==null);if(!a.length)return;const first=a[0],last=a[a.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}return}if(modalOpen||/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;if(['1','2','3'].includes(e.key)&&state.q?.options&&!state.solved){answerChoice(Number(e.key)-1);e.preventDefault()}});
+function onSetting(kind,value){if(kind==='batch'&&state.mode==='mixed')kind='mixedBatch';state[kind]=Number.isFinite(Number(value))&&kind!=='scope'?Number(value):value;saveStore();setMode(state.mode)}
+function init(){$('#randomQuestionBtn').addEventListener('click',()=>{if(!state.q||state.review||state.mode==='mixed'||!isSort())return;nextQuestion();toast('已随机换题；跳过的题目不计完成次数。')});hydrateIcons();renderNav();updateSettingsUI();updateModeIntro();updateCounters();$('#scopeSelect').addEventListener('change',e=>onSetting('scope',e.target.value));$('#batchSelect').addEventListener('change',e=>onSetting('batch',e.target.value));$('#choiceSelect').addEventListener('change',e=>onSetting('choices',e.target.value));$('#tileSelect').addEventListener('change',e=>onSetting('tiles',e.target.value));$('#restartBtn').addEventListener('click',()=>{if(state.done||state.failed){if(!confirm('重新开始这一组？已获得的学习星和错题仍会保留。'))return}setMode(state.mode)});$('#nextBtn').addEventListener('click',()=>{if(isSort()&&!state.solved)checkSort();else if(state.solved)nextQuestion()});$('#revealBtn').addEventListener('click',reveal);$('#readBtn').addEventListener('click',speakQuestion);$('#sourceBtn').addEventListener('click',()=>openSources());$('#wrongBtn').addEventListener('click',openWrong);$('#closeModal').addEventListener('click',closeModal);$('#modalBackdrop').addEventListener('click',e=>{if(e.target===$('#modalBackdrop'))closeModal()});$('#soundBtn').addEventListener('click',()=>{state.sound=!state.sound;$('#soundBtn').setAttribute('aria-pressed',String(state.sound));$('#soundLabel').textContent=state.sound?'音效开':'音效关';if(state.sound)beep(true)});$('#fullBtn').addEventListener('click',fullScreen);
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&cancelActiveRadicalDrag){cancelActiveRadicalDrag();return}const modalOpen=$('#modalBackdrop').classList.contains('open');if(e.key==='Escape'&&modalOpen){closeModal();return}if(modalOpen&&e.key==='Tab'){const a=$$('button:not(:disabled),a[href],input:not([type=hidden]),select,[tabindex="0"]',$('.modal')).filter(x=>x.offsetParent!==null);if(!a.length)return;const first=a[0],last=a[a.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}return}if(modalOpen||/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;if(['1','2','3','4'].includes(e.key)&&state.q?.options&&!state.solved){answerChoice(Number(e.key)-1);e.preventDefault()}});
  document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelActiveRadicalDrag?.();stopSpeech();stopSteps()}});window.addEventListener('resize',()=>fitAncient());nextQuestion();
 }
 init();
